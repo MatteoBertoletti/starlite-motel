@@ -116,7 +116,11 @@ export function buildWorld(scene) {
   const extM = M(PAL.wall);
   box(6, 0.1, 6, floorM, -6, 0.05, 1, off);
   box(6.4, 0.3, 6.4, roofM, -6, 3.35, 1, off);
-  box(0.2, 3.2, 6, panelM, -9.1, 1.6, 1, off); box(0.2, 3.2, 6, panelM, -2.9, 1.6, 1, off); box(6, 3.2, 0.2, panelM, -6, 1.6, -2.1, off);
+  box(0.2, 3.2, 6, panelM, -9.1, 1.6, 1, off); box(6, 3.2, 0.2, panelM, -6, 1.6, -2.1, off);
+  const ew = (z0, z1, y0, y1) => box(0.2, y1 - y0, z1 - z0, panelM, -2.9, (y0 + y1) / 2, (z0 + z1) / 2, off);
+  ew(-2.1, 0.3, 0, 3.2); ew(2.7, 4.2, 0, 3.2); ew(0.3, 2.7, 0, 0.9); ew(0.3, 2.7, 2.4, 3.2);
+  [[0.3, 2.7, 0.9], [0.3, 2.7, 2.4]].forEach(([a, b, y]) => box(0.3, 0.08, b - a + 0.16, trimM, -2.9, y, (a + b) / 2, off));
+  [0.3, 2.7].forEach(z => box(0.3, 1.5, 0.08, trimM, -2.9, 1.65, z, off)); box(0.06, 1.5, 0.05, trimM, -2.9, 1.65, 1.5, off);
   // front wall at z=4 with a real window hole (-8.4..-5.8, 0.9..2.5) and a door hole (-5.0..-4.0, 0..2.15)
   const fw = (x0, x1, y0, y1) => box(x1 - x0, y1 - y0, 0.2, panelM, (x0 + x1) / 2, (y0 + y1) / 2, 4.1, off);
   fw(-9.2, -8.4, 0, 3.2); fw(-5.8, -5.0, 0, 3.2); fw(-4.0, -2.8, 0, 3.2);
@@ -132,14 +136,22 @@ export function buildWorld(scene) {
   box(0.08, 2.2, 0.3, trimM, -5.04, 1.1, 4.1, off); box(0.08, 2.2, 0.3, trimM, -3.96, 1.1, 4.1, off); box(1.16, 0.08, 0.3, trimM, -4.5, 2.19, 4.1, off);
   // office door with peephole + mail slot
   const offDoor = new THREE.Group(); offDoor.position.set(-4.98, 0, 4.1); off.add(offDoor); W.offDoor = offDoor;
-  box(0.96, 2.0, 0.07, M(0x3f2c22), 0.48, 1.15, 0, offDoor);
-  const ph = cyl(0.03, 0.03, 0.09, 12, M(0xb8924a, { metalness: 0.8, roughness: 0.3 }), 0.48, 1.62, 0, offDoor); ph.rotation.x = Math.PI / 2;
-  box(0.34, 0.07, 0.09, M(0xb8924a, { metalness: 0.8, roughness: 0.3 }), 0.48, 1.0, 0, offDoor);
-  box(0.24, 0.025, 0.1, darkM, 0.48, 1.0, 0, offDoor, false);
+  const dm = M(0x3f2c22), brass = M(0xb8924a, { metalness: 0.8, roughness: 0.3 });
+  const dp = (x0, x1, y0, y1) => box(x1 - x0, y1 - y0, 0.07, dm, (x0 + x1) / 2, (y0 + y1) / 2, 0, offDoor);
+  dp(0, 0.96, 0.15, 0.985); dp(0, 0.36, 0.985, 1.015); dp(0.6, 0.96, 0.985, 1.015); dp(0, 0.96, 1.015, 1.605);
+  dp(0, 0.465, 1.605, 1.635); dp(0.495, 0.96, 1.605, 1.635); dp(0, 0.96, 1.635, 2.15);
+  [[0.48, 0.97, 0.34, 0.025], [0.48, 1.03, 0.34, 0.025]].forEach(([x, y, w, h]) => box(w, h, 0.09, brass, x, y, 0, offDoor, false));
+  [0.345, 0.615].forEach(x => box(0.03, 0.085, 0.09, brass, x, 1.0, 0, offDoor, false));
+  [[0.48, 1.65], [0.48, 1.59]].forEach(([x, y]) => box(0.07, 0.015, 0.09, brass, x, y, 0, offDoor, false));
+  [0.457, 0.503].forEach(x => box(0.015, 0.075, 0.09, brass, x, 1.62, 0, offDoor, false));
   // OFFICE sign over the door
   const offSign = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 0.36), new THREE.MeshStandardMaterial({ color: 0x000000, emissive: 0xffffff, emissiveIntensity: 1.2,
     emissiveMap: textTex((c, w, h) => { c.fillStyle = '#000'; c.fillRect(0, 0, w, h); c.font = 'bold 90px sans-serif'; c.fillStyle = '#ffcf8a'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText('OFFICE', w / 2, h / 2 + 4); }, 512, 128) }));
   offSign.position.set(-4.5, 2.7, 4.26); off.add(offSign); W.offSign = offSign;
+  W.porchM = E(0xffc27a, 2.2); box(0.14, 0.18, 0.1, W.porchM, -3.75, 2.35, 4.28, off, false);
+  const porch = new THREE.PointLight(0xffb36a, 6, 7, 2); porch.position.set(-3.8, 2.3, 4.7); off.add(porch); W.lights.porch = porch;
+  const kbL = new THREE.PointLight(0xffc38a, 6, 5, 2); kbL.position.set(-6.4, 2.65, -1.55); off.add(kbL); W.lights.kb = kbL;
+  box(0.3, 0.06, 0.12, M(0x2b2420), -6.4, 2.72, -1.92, off, false);
 
   // interior: counter, lamp, phone, answering machine, bell, key board
   const counter = new THREE.Group(); off.add(counter);
@@ -156,11 +168,14 @@ export function buildWorld(scene) {
   lampL.shadow.mapSize.set(1024, 1024); lampL.shadow.bias = -0.002; lampL.shadow.radius = 3; off.add(lampL); W.lights.lamp = lampL;
   // desk phone
   const phone = new THREE.Group(); phone.position.set(-7.35, 1.06, 1.85); counter.add(phone); W.phone = phone;
-  box(0.36, 0.08, 0.26, M(0xcabd9f), 0, 0.04, 0, phone); box(0.34, 0.06, 0.08, M(0xbfb294), 0, 0.11, -0.07, phone);
+  box(0.36, 0.08, 0.26, M(0xcabd9f), 0, 0.04, 0, phone);
+  const hs = new THREE.Group(); hs.position.set(0, 0.1, -0.06); phone.add(hs); W.handset = hs;
+  box(0.42, 0.05, 0.07, M(0xbfb294), 0, 0.02, 0, hs); [-0.19, 0.19].forEach(x => box(0.09, 0.07, 0.09, M(0xbfb294), x, 0.0, 0, hs));
+  [[-0.12, 0.05], [0, 0.05], [0.12, 0.05], [-0.12, 0.1], [0, 0.1], [0.12, 0.1]].forEach(([x, z]) => box(0.06, 0.015, 0.035, M(0xeee6d0), x, 0.085, z, phone, false));
   W.phoneLedM = E(0xff2020, 0); box(0.04, 0.02, 0.04, W.phoneLedM, 0.12, 0.09, 0.07, phone, false);
   // answering machine
   const am = new THREE.Group(); am.position.set(-8.15, 1.06, 1.85); counter.add(am); W.am = am;
-  box(0.3, 0.08, 0.22, M(0x1d1f22), 0, 0.04, 0, am); W.amLedM = E(0xff2020, 1.5); box(0.03, 0.02, 0.03, W.amLedM, 0.1, 0.085, 0.07, am, false);
+  box(0.3, 0.08, 0.22, M(0x1d1f22), 0, 0.04, 0, am); W.amLedM = E(0xff2020, 1.5); box(0.014, 0.01, 0.014, W.amLedM, 0.11, 0.083, 0.08, am, false);
   box(0.2, 0.012, 0.09, M(0x0d0e10, { roughness: 0.2 }), -0.02, 0.085, -0.03, am, false);
   W.reels = [-0.07, 0.03].map(x => { const g = new THREE.Group(); g.position.set(x, 0.093, -0.03); am.add(g);
     cyl(0.028, 0.028, 0.008, 14, M(0xd8d2c4), 0, 0, 0, g); [0, 1, 2].forEach(k => { const b = box(0.05, 0.01, 0.008, M(0x1d1f22), 0, 0.002, 0, g, false); b.rotation.y = k * Math.PI / 3; }); return g; });

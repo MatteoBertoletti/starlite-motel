@@ -1,0 +1,118 @@
+{
+ "bed": {
+  "url": "https://assets.mixkit.co/music/612/612.mp3",
+  "title": "Selpan (drone, Mixkit music)"
+ },
+ "room_tone": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2132/2132-preview.mp3",
+  "title": "Low electricity humming"
+ },
+ "rain": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1249/1249-preview.mp3",
+  "title": "Light rain looping"
+ },
+ "swish": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1461/1461-preview.mp3",
+  "title": "Short wind swoosh"
+ },
+ "door_shut": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/196/196-preview.mp3",
+  "title": "Door hard shut"
+ },
+ "whoosh": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1492/1492-preview.mp3",
+  "title": "Cinematic whoosh fast transition"
+ },
+ "slap": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2299/2299-preview.mp3",
+  "title": "Short bass hit"
+ },
+ "shop_bell": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/936/936-preview.mp3",
+  "title": "Wooden store door bell ring"
+ },
+ "creak_open": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/195/195-preview.mp3",
+  "title": "Creaky door open"
+ },
+ "creak_close": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/189/189-preview.mp3",
+  "title": "Creaky closing wood door"
+ },
+ "steps": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/543/543-preview.mp3",
+  "title": "Footsteps in a tunnel loop"
+ },
+ "ring": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1350/1350-preview.mp3",
+  "title": "Office telephone ring"
+ },
+ "tape_click": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2556/2556-preview.mp3",
+  "title": "Cassette player"
+ },
+ "hiss": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1041/1041-preview.mp3",
+  "title": "Radio waves glitch white noise"
+ },
+ "zap": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2595/2595-preview.mp3",
+  "title": "Small electric glitch"
+ },
+ "buzz": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2593/2593-preview.mp3",
+  "title": "Electricity buzz"
+ },
+ "glass_hit": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/677/677-preview.mp3",
+  "title": "Cinematic glass hit suspense"
+ },
+ "horn": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/720/720-preview.mp3",
+  "title": "Truck horn"
+ },
+ "drive_by": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1538/1538-preview.mp3",
+  "title": "Fast car drive by"
+ },
+ "crash": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1616/1616-preview.mp3",
+  "title": "Truck crash with explosion"
+ },
+ "shockwave": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2599/2599-preview.mp3",
+  "title": "Heavy electric shockwave impact"
+ },
+ "sparks": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2598/2598-preview.mp3",
+  "title": "Futuristic electricity sparks"
+ },
+ "power_down": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1811/1811-preview.mp3",
+  "title": "Electric kitchen mixer stop"
+ },
+ "fire": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1329/1329-preview.mp3",
+  "title": "Campfire burning crackles"
+ },
+ "knock": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/197/197-preview.mp3",
+  "title": "Knocking on a thick wooden door"
+ },
+ "heartbeat": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/494/494-preview.mp3",
+  "title": "Slow heartbeat"
+ },
+ "sting": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/565/565-preview.mp3",
+  "title": "Hard horror hit drum"
+ },
+ "boom": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3",
+  "title": "Cinematic whoosh deep impact"
+ },
+ "end_hit": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/498/498-preview.mp3",
+  "title": "Deep heartbeat impact"
+ }
+}

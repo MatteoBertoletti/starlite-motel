@@ -1,0 +1,95 @@
+name: render
+# Renders film.html frame by frame on many machines at once, then mixes the sound and encodes.
+on:
+  workflow_dispatch:
+    inputs:
+      shards: { description: 'Parallel machines', default: '16' }
+      scale:  { description: '1 = full 1080x1920, 0.5 = quick preview', default: '1' }
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, math
+          n = int(json.load(open('story/timing.json'))['duration'] * 30)
+          k = int('${{ inputs.shards }}'); step = math.ceil(n / k)
+          print('matrix=' + json.dumps([{'i': i, 'from': i * step, 'to': min(n, (i + 1) * step)} for i in range(k) if i * step < n]))
+          EOF
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci --no-audit --no-fund
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium
+      - run: sudo apt-get install -y -qq ffmpeg
+      - name: Render frames ${{ matrix.shard.from }}..${{ matrix.shard.to }}
+        run: |
+          mkdir -p out
+          python tools/render.py --from ${{ matrix.shard.from }} --to ${{ matrix.shard.to }} --scale ${{ inputs.scale }} \
+            --out out/seg_$(printf %02d ${{ matrix.shard.i }}).mp4 --events out/events.json
+      - uses: actions/upload-artifact@v4
+        with: { name: 'seg-${{ matrix.shard.i }}', path: out/, retention-days: 3 }
+
+  assemble:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile pillow
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'seg-*', path: segs, merge-multiple: true }
+      - name: Narration from the audio run + sound effects
+        run: |
+          git fetch -q --depth 1 origin +audio-out:refs/remotes/origin/audio-out
+          mkdir -p out/audio && git --work-tree=out/audio checkout origin/audio-out -- voice.wav timing.json
+          git reset -q
+          python tools/sfx_fetch.py --get
+      - name: Join the segments
+        run: |
+          ls segs/seg_*.mp4 | sort | sed "s#^#file '$PWD/#; s#\$#'#" > list.txt
+          ffmpeg -hide_banner -loglevel error -y -f concat -safe 0 -i list.txt -c copy out/video.mp4
+          ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames,duration -of csv=p=0 out/video.mp4
+      - name: Mix
+        run: python tools/mix.py --voice out/audio/voice.wav --events segs/events.json --sfx out/audio/sfx --out out/mix.wav
+      - name: Encode master + phone copy
+        run: |
+          mkdir -p final
+          ffmpeg -hide_banner -loglevel error -y -i out/video.mp4 -i out/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart final/starlite_day1_master.mp4
+          ffmpeg -hide_banner -loglevel error -y -i final/starlite_day1_master.mp4 -vf scale=1080:1920 -c:v libx264 -preset veryfast -crf 23 -maxrate 2.6M -bufsize 5M -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart final/starlite_day1_phone.mp4
+          for q in 25 27 29; do s=$(stat -c %s final/starlite_day1_phone.mp4); [ $s -lt 30000000 ] && break
+            ffmpeg -hide_banner -loglevel error -y -i final/starlite_day1_master.mp4 -c:v libx264 -preset veryfast -crf $q -maxrate 2.2M -bufsize 4M -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart final/starlite_day1_phone.mp4; done
+          ls -la final
+      - name: Contact sheet (1 frame per second)
+        run: |
+          ffmpeg -hide_banner -loglevel error -y -i final/starlite_day1_phone.mp4 -vf "fps=1,scale=216:384,tile=9x10" -frames:v 1 final/contact_sheet.jpg
+          cp out/mix_report.json segs/events.json final/
+      - uses: actions/upload-artifact@v4
+        with: { name: starlite_day1, path: final/ }
+      - name: Publish to the renders branch
+        run: |
+          mkdir -p /tmp/pub && cp final/* /tmp/pub/ && cd /tmp/pub
+          s=$(stat -c %s starlite_day1_master.mp4); [ $s -gt 95000000 ] && rm starlite_day1_master.mp4
+          git init -q && git checkout -q -b renders
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "render ${{ github.run_id }}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" renders

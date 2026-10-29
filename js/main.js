@@ -126,6 +126,7 @@ function worldState(t) {
   W.neonStar.emissiveIntensity = neonOn ? 2.4 : 0; W.neonMotel.emissiveIntensity = neonOn ? 1.6 : 0; W.neonStarTop.emissiveIntensity = neonOn ? 3 : 0;
   W.neonVac.emissiveIntensity = neonOn ? 3 : 0; W.lights.neon.intensity = neonOn ? 14 : 0; W.lights.neon2.intensity = neonOn ? 8 : 0;
   W.offSign.material.emissiveIntensity = powerOut ? 0 : 1.2;
+  W.porchM.emissiveIntensity = powerOut ? 0 : 2.2; W.lights.porch.intensity = powerOut ? 0 : 6; W.lights.kb.intensity = t >= T_LAMP_OUT ? 0 : 6;
   W.lights.moon.intensity = powerOut ? 1.7 : 1.25; W.lights.winFill.intensity = powerOut ? 45 : 30;
 
   // room 9: a wall until the guest walks to it
@@ -139,7 +140,8 @@ function worldState(t) {
   // phone + machine
   const ringing = t > T_RING0 && t < T_PICK, ringPh = ((t - T_RING0) / RING_P) % 1;
   W.phoneLedM.emissiveIntensity = ringing && ringPh < 0.55 ? 4 : 0;
-  W.amLedM.emissiveIntensity = t > T_PICK && t < cut(17) ? (Math.floor(t * 4) % 2 ? 3 : 0.3) : 1.5;
+  W.handset.position.y = 0.1 + (ringing && ringPh < 0.55 ? Math.abs(Math.sin(t * 60)) * 0.004 : 0);
+  W.amLedM.emissiveIntensity = t > T_PICK && t < cut(17) ? (Math.floor(t * 4) % 2 ? 2 : 0.2) : 0.8;
   const spin = t > T_PICK && t < cut(17) ? (t - T_PICK) * 5 : 0;
   W.reels.forEach((r, i) => r.rotation.y = -spin * (i ? 1.3 : 1));
 
@@ -147,9 +149,9 @@ function worldState(t) {
   const l2 = LN(2), ts = tok(2, 'slides'), tr = tok(2, 'rules');
   const slide = smooth((t - ts + 0.1) / 0.7), back = smooth((t - tr) / 0.5);
   W.card.visible = t > l2.start - 1 && t < cut(12);
-  W.card.position.x = lerp(-5.9, -6.75, slide); W.card.rotation.z = lerp(0.35, 0.06, slide);
+  W.card.position.x = lerp(-6.25, -6.9, slide); W.card.rotation.z = lerp(0.35, 0.06, slide);
   W.hand.visible = t > cut(2) - 0.2 && t < cut(3);
-  W.hand.position.x = lerp(-5.55, -6.43, slide) + back * 0.8;
+  W.hand.position.x = lerp(-5.9, -6.58, slide) + back * 0.8;
 
   // office door: the guest pushes it open, it swings shut behind him
   const dOpen = smooth((t - T_DOOR_IN) / 0.5) * (1 - smooth((t - (T_DOOR_IN + 1.6)) / 0.6));
@@ -215,8 +217,8 @@ function backgroundCast(t) {
     const n = darkCount(t), retreat = smooth((t - T_HOLD) / 2.2);
     them.forEach((s, i) => {
       s.mesh.visible = true;
-      const bx = -12 + i * 2.6 + (hash(i) - 0.5) * 1.2, bz = 21 + hash(i + 9) * 3;
-      const z = bz - n * 2.1 + retreat * (n * 2.1 + 1.5);
+      const bx = -9.6 + i * 0.95 + (hash(i) - 0.5) * 0.5, bz = 20 + hash(i + 9) * 3;
+      const z = bz - n * 2.7 + retreat * (n * 2.7 + 1.5); s.mesh.scale.setScalar(1.12);
       s.mesh.position.set(bx + (hash(i + 3) - 0.5) * n * 0.6, 0, z);
       s.pose = { face: 0, hip: [0, 1.05], lean: (hash(i + 5) - 0.5) * 0.1, headTilt: (hash(i + 7) - 0.5) * 0.4,
         arms: [{ sh: -0.08, el: 0.0 }, { sh: 0.08, el: 0.0 }], legs: [{ th: -0.06, kn: 0 }, { th: 0.06, kn: 0 }] };
@@ -251,17 +253,17 @@ SH[1] = { fn: (lt) => {
   lookCam(path.getPoint(Math.min(1, u)), at, lerp(38, 64, smooth(lt / (D * 0.7))));
 } };
 // 2 · the owner slides you a card — macro, top-down on the counter
-SH[2] = { fn: (lt, t) => {
+SH[2] = { lens: { exposure: 0.9 }, fn: (lt, t) => {
   const r = tok(2, 'rules') - cut(2);
-  if (lt < r - 0.05) lookCam(v3(-6.3 - lt * 0.03, 1.62, 2.25), v3(-6.45, 1.06, 1.93), 46);
-  else lookCam(v3(-6.74, 1.38 - (lt - r) * 0.03, 1.96), v3(-6.75, 1.06, 1.94), 40);   // the card itself
+  if (lt < r - 0.05) lookCam(v3(-6.75 - lt * 0.03, 1.72, 2.6), v3(-6.6, 1.06, 1.93), 44);
+  else lookCam(v3(-6.9, 1.4 - (lt - r) * 0.03, 2.02), v3(-6.9, 1.06, 1.94), 40);   // the card itself
 } };
 // 3 · RULE 1 — macro on the desk lamp
 SH[3] = { fn: (lt) => lookCam(v3(-4.95 - lt * 0.05, 1.24, 2.15 + lt * 0.02), v3(-5.95, 1.38, 1.92), 44), lens: { exposure: 0.7 }, sticker: STICK[1] };
 // 4 · RULE 2 — the key board: hooks 1..8, a gap, 10
-SH[4] = { fn: (lt) => lookCam(v3(-6.05 - lt * 0.06, 1.75, -0.95 - lt * 0.12), v3(-6.0, 1.68, -1.98), 50), lens: { exposure: 1.4 }, sticker: STICK[2] };
+SH[4] = { fn: (lt) => lookCam(v3(-6.0, 1.7, -0.45 - lt * 0.12), v3(-6.0, 1.95, -1.98), 58), lens: { exposure: 1.3 }, sticker: STICK[2] };
 // 5 · RULE 3 — the desk phone
-SH[5] = { fn: (lt) => lookCam(v3(-6.85 - lt * 0.04, 1.22, 2.55 - lt * 0.05), v3(-7.35, 1.12, 1.85), 46), lens: { exposure: 1.2 }, sticker: STICK[3] };
+SH[5] = { fn: (lt) => lookCam(v3(-7.0 - lt * 0.03, 1.42, 2.42 - lt * 0.05), v3(-7.33, 1.22, 1.85), 42), lens: { exposure: 1.1 }, sticker: STICK[3] };
 // 6 · RULE 4 — low angle on the office door, light leaking under it
 SH[6] = { fn: (lt) => lookCam(v3(-4.25, 0.32 + lt * 0.02, 2.6 - lt * 0.08), v3(-4.5, 1.15, 4.1), 62), lens: { exposure: 1.3 }, sticker: STICK[4] };
 // 7 · 12:31 — the guest walks in, soaking wet (third person, wide inside the office)
@@ -289,8 +291,8 @@ SH[9] = { fn: (lt, t) => {
 SH[10] = { fn: (lt, t) => {
   const D = cut(11) - cut(10), u = clamp01(lt / D);
   const x0 = 15.5, x1 = 15.5 + 1.25 * D, x = lerp(x0, x1, u);
-  guest.mesh.visible = true; guest.mesh.position.set(x, 0, 0.95);
-  lookCam(v3(11.5 + lt * 0.5, 6.3, 3.6), v3(x + 2.5, 0.6, 0.8), 52);
+  guest.mesh.visible = true; guest.mesh.position.set(x, 0, 2.7);
+  lookCam(v3(12.0 + lt * 0.7, 4.6, 7.2), v3(x + 1.4, 0.9, 2.7), 50);
   const right = v3(1, 0, 0).applyQuaternion(camera.quaternion);
   guest.pose = { ...walkPose((x - x0), right.x), wet: t };
 }, lens: { exposure: 1.2 } };
@@ -316,14 +318,14 @@ SH[15] = { fn: (lt, t) => {
 SH[16] = { fn: (lt, t) => {
   guest.mesh.visible = true; guest.mesh.position.set(28.2, 0, 1.4);
   guest.pose = { face: 0, hip: [0, 0.94], arms: [{ sh: -0.06, el: 0 }, { sh: 0.06, el: 0 }] };
-  lookCam(v3(-7.1, 1.7, 2.7), v3(28.2, 1.1, 1.4), lerp(9, 6.5, smooth(lt / 2)));
+  lookCam(v3(-3.6, 1.6, 1.0), v3(28.2, 1.15, 1.4), lerp(8, 5.5, smooth(lt / 2)));
 }, lens: { exposure: 1.6, chroma: 0.006 } };
 // 17 · 3:40 — the lamp flickers; something waits at the edge of the lot
 SH[17] = { fn: (lt) => lookCam(v3(-7.75, 1.45, 0.2 + lt * 0.05), v3(-6.6, 1.35, 4.2), 56), lens: { exposure: 1.3 } };
 // 18 · every time it goes dark, they're closer — POV through the window
-SH[18] = { fn: (lt) => lookCam(v3(-7.1, 1.66, 3.55), v3(-6.2, 1.1, 18), 44), lens: { exposure: 1.5 } };
+SH[18] = { fn: (lt) => lookCam(v3(-7.75, 1.66, 3.6), v3(-6.8, 1.2, 18), 34), lens: { exposure: 1.6 } };
 // 19 · when it holds, they back away
-SH[19] = { fn: (lt) => lookCam(v3(-7.1, 1.66, 3.55 + lt * 0.05), v3(-6.2, 1.1, 18), 44 - lt * 2), lens: { exposure: 1.5 } };
+SH[19] = { fn: (lt) => lookCam(v3(-7.75, 1.66, 3.6 + lt * 0.04), v3(-6.8, 1.2, 18), 34 + lt * 3), lens: { exposure: 1.6 } };
 // 20 · 4:44 — a truck takes the bend too fast (from the balcony, following it)
 SH[20] = { fn: (lt, t) => {
   const c = sampleCrash(crash, 'cab', Math.max(0, t - SIM0));
@@ -338,9 +340,9 @@ SH[21] = { fn: (lt) => {
 // 22 · and your light goes out
 SH[22] = { fn: (lt) => lookCam(v3(-6.25, 1.55, 2.75 - lt * 0.05), v3(-6.9, 1.45, 1.0), 50), lens: { exposure: 1.5 }, broken: true };
 // 23 · knock, knock — low on the door: a flashlight under the gap, two feet
-SH[23] = { fn: (lt) => lookCam(v3(-4.4, 0.24, 2.9), v3(-4.5, 0.55, 4.1), 64), lens: { exposure: 1.6 } };
+SH[23] = { fn: (lt) => lookCam(v3(-4.42, 0.16, 3.25), v3(-4.5, 0.2, 4.1), 52), lens: { exposure: 1.7 } };
 // 24 · "It's the owner…" — the mail slot, light pushing through
-SH[24] = { fn: (lt) => lookCam(v3(-4.52 + lt * 0.02, 1.08, 3.35 + lt * 0.1), v3(-4.5, 1.02, 4.1), 46), lens: { exposure: 1.6 } };
+SH[24] = { fn: (lt) => { owner.flashMode = 'slot'; lookCam(v3(-4.52 + lt * 0.02, 1.06, 3.3 + lt * 0.12), v3(-4.5, 1.0, 4.1), 46); }, lens: { exposure: 1.6 } };
 // 25 · through the peephole: the owner with a gas can
 SH[25] = { fn: (lt, t) => { owner.flashMode = 'face'; owner.mesh.position.set(-4.45, 0, 6.1 - lt * 0.35); owner.pose = ownerPeep(0); peepCam(); }, lens: PEEP };
 // 26 · he's wearing a red cap
@@ -378,8 +380,10 @@ window.seek = (t) => {
     if (owner.flashMode === 'face') {
       flash.position.copy(owner.world([-0.2, 1.42])); flash.target.position.copy(owner.world([0, 1.9])).add(v3(0, 0, -0.3)); flash.intensity = 6;
       flashGlow.position.copy(owner.world([-0.19, 1.5])); flashGlow.visible = true;
+    } else if (owner.flashMode === 'slot') {
+      flash.position.set(-4.4, 1.3, 5.2); flash.target.position.set(-4.5, 0.9, 3.0); flash.intensity = 3;
     } else {
-      flash.position.set(-4.35, 0.75, 5.3); flash.target.position.set(-4.5, 0.0, 3.6); flash.intensity = 14;
+      flash.position.set(-4.35, 0.75, 5.3); flash.target.position.set(-4.5, 0.0, 3.6); flash.intensity = 40;
     }
   }
   for (const st of CAST) if (st.mesh.visible) { st.face(camera); st.draw(st.pose || {}); st.update(); }
@@ -421,6 +425,7 @@ window.EVENTS = {
   flicker: [T_FLICK0, T_HOLD], steer: T_STEER, truckIn: SIM0, hit: T_HIT, blackout: T_BLACK, lampOut: T_LAMP_OUT,
   knocks: KNOCKS, peep: cut(25), capGone: T_GONE, choice: cut(28), end: cut(29), r9: T_R9,
   cuts: ORDER.map(cut),
+  darkOnsets: (() => { const o = []; let prev = false; for (let x = T_FLICK0; x <= T_HOLD; x += 1 / FLICK_HZ) { const d = lampDark(x + 0.001); if (d && !prev) o.push(Math.floor((x + 0.001) * FLICK_HZ) / FLICK_HZ); prev = d; } return o; })(),
 };
 window.SHOTS = ORDER.map(i => [i, cut(i)]);
 window.ready = true;

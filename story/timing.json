@@ -1,0 +1,2446 @@
+{
+ "duration": 81.096,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Imagine it's eleven fifty-eight P M, and you're the night clerk at an empty motel.",
+   "file": "out/audio/lines/01.wav",
+   "start": 0.25,
+   "dur": 5.16,
+   "end": 5.41,
+   "tokens": [
+    {
+     "w": "imagine",
+     "s": 0.25,
+     "e": 0.71
+    },
+    {
+     "w": "its",
+     "s": 0.71,
+     "e": 1.03
+    },
+    {
+     "w": "eleven",
+     "s": 1.03,
+     "e": 1.27
+    },
+    {
+     "w": "fifty",
+     "s": 1.27,
+     "e": 1.59
+    },
+    {
+     "w": "eight",
+     "s": 1.59,
+     "e": 2.01
+    },
+    {
+     "w": "p",
+     "s": 2.01,
+     "e": 2.23
+    },
+    {
+     "w": "m",
+     "s": 2.23,
+     "e": 2.53
+    },
+    {
+     "w": "and",
+     "s": 2.97,
+     "e": 3.25
+    },
+    {
+     "w": "youre",
+     "s": 3.25,
+     "e": 3.43
+    },
+    {
+     "w": "the",
+     "s": 3.43,
+     "e": 3.55
+    },
+    {
+     "w": "night",
+     "s": 3.55,
+     "e": 3.81
+    },
+    {
+     "w": "clerk",
+     "s": 3.81,
+     "e": 4.17
+    },
+    {
+     "w": "at",
+     "s": 4.17,
+     "e": 4.35
+    },
+    {
+     "w": "an",
+     "s": 4.35,
+     "e": 4.47
+    },
+    {
+     "w": "empty",
+     "s": 4.47,
+     "e": 4.81
+    },
+    {
+     "w": "motel",
+     "s": 4.81,
+     "e": 5.09
+    }
+   ],
+   "caps": [
+    {
+     "text": "IMAGINE",
+     "t": 0.25,
+     "tok": 0,
+     "end": 1.03
+    },
+    {
+     "text": "*11:58 *PM",
+     "t": 1.03,
+     "tok": 2,
+     "end": 3.55
+    },
+    {
+     "text": "NIGHT CLERK",
+     "t": 3.55,
+     "tok": 10,
+     "end": 4.47
+    },
+    {
+     "text": "EMPTY MOTEL",
+     "t": 4.47,
+     "tok": 14,
+     "end": 5.83
+    }
+   ],
+   "heard": "Imagine it's eleven fifty -eight P M, and you're the night clerk at an empty motel.",
+   "match": 1.0
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "The owner slides you a card. Four rules.",
+   "file": "out/audio/lines/02.wav",
+   "start": 5.69,
+   "dur": 2.84,
+   "end": 8.53,
+   "tokens": [
+    {
+     "w": "the",
+     "s": 5.69,
+     "e": 5.83
+    },
+    {
+     "w": "owner",
+     "s": 5.83,
+     "e": 6.09
+    },
+    {
+     "w": "slides",
+     "s": 6.09,
+     "e": 6.47
+    },
+    {
+     "w": "you",
+     "s": 6.47,
+     "e": 6.71
+    },
+    {
+     "w": "a",
+     "s": 6.71,
+     "e": 6.83
+    },
+    {
+     "w": "card",
+     "s": 6.83,
+     "e": 7.19
+    },
+    {
+     "w": "four",
+     "s": 7.59,
+     "e": 7.79
+    },
+    {
+     "w": "rules",
+     "s": 7.79,
+     "e": 8.21
+    }
+   ],
+   "caps": [
+    {
+     "text": "THE OWNER",
+     "t": 5.83,
+     "tok": 1,
+     "end": 6.83
+    },
+    {
+     "text": "A CARD",
+     "t": 6.83,
+     "tok": 5,
+     "end": 7.59
+    },
+    {
+     "text": "*4 *RULES",
+     "t": 7.59,
+     "tok": 6,
+     "end": 8.81
+    }
+   ],
+   "heard": "The owner slides you a card. Four rules.",
+   "match": 1.0
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Keep the office light on until six A M.",
+   "file": "out/audio/lines/03.wav",
+   "start": 8.81,
+   "dur": 2.42,
+   "end": 11.23,
+   "tokens": [
+    {
+     "w": "keep",
+     "s": 8.81,
+     "e": 9.01
+    },
+    {
+     "w": "the",
+     "s": 9.01,
+     "e": 9.17
+    },
+    {
+     "w": "office",
+     "s": 9.17,
+     "e": 9.51
+    },
+    {
+     "w": "light",
+     "s": 9.51,
+     "e": 9.79
+    },
+    {
+     "w": "on",
+     "s": 9.79,
+     "e": 10.03
+    },
+    {
+     "w": "until",
+     "s": 10.03,
+     "e": 10.27
+    },
+    {
+     "w": "six",
+     "s": 10.27,
+     "e": 10.63
+    },
+    {
+     "w": "a",
+     "s": 10.63,
+     "e": 10.87
+    },
+    {
+     "w": "m",
+     "s": 10.87,
+     "e": 11.05
+    }
+   ],
+   "caps": [
+    {
+     "text": "LIGHT ON",
+     "t": 8.81,
+     "tok": 0,
+     "end": 10.03
+    },
+    {
+     "text": "UNTIL *6 *AM",
+     "t": 10.03,
+     "tok": 5,
+     "end": 11.51
+    }
+   ],
+   "heard": "Keep the office light on until six A M.",
+   "match": 1.0
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "There is no Room Nine.",
+   "file": "out/audio/lines/04.wav",
+   "start": 11.51,
+   "dur": 1.31,
+   "end": 12.82,
+   "tokens": [
+    {
+     "w": "there",
+     "s": 11.51,
+     "e": 11.63
+    },
+    {
+     "w": "is",
+     "s": 11.63,
+     "e": 11.75
+    },
+    {
+     "w": "no",
+     "s": 11.75,
+     "e": 12.05
+    },
+    {
+     "w": "room",
+     "s": 12.05,
+     "e": 12.33
+    },
+    {
+     "w": "nine",
+     "s": 12.33,
+     "e": 12.65
+    }
+   ],
+   "caps": [
+    {
+     "text": "THERE IS NO",
+     "t": 11.51,
+     "tok": 0,
+     "end": 12.05
+    },
+    {
+     "text": "*ROOM *9",
+     "t": 12.05,
+     "tok": 3,
+     "end": 13.24
+    }
+   ],
+   "heard": "There is no Room Nine.",
+   "match": 1.0
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "If Room Nine calls, let it ring.",
+   "file": "out/audio/lines/05.wav",
+   "start": 13.1,
+   "dur": 1.88,
+   "end": 14.98,
+   "tokens": [
+    {
+     "w": "if",
+     "s": 13.1,
+     "e": 13.24
+    },
+    {
+     "w": "room",
+     "s": 13.24,
+     "e": 13.48
+    },
+    {
+     "w": "nine",
+     "s": 13.48,
+     "e": 13.76
+    },
+    {
+     "w": "calls",
+     "s": 13.76,
+     "e": 14.16
+    },
+    {
+     "w": "let",
+     "s": 14.48,
+     "e": 14.5
+    },
+    {
+     "w": "it",
+     "s": 14.5,
+     "e": 14.62
+    },
+    {
+     "w": "ring",
+     "s": 14.62,
+     "e": 14.86
+    }
+   ],
+   "caps": [
+    {
+     "text": "*ROOM *9 CALLS",
+     "t": 13.24,
+     "tok": 1,
+     "end": 14.48
+    },
+    {
+     "text": "LET IT RING",
+     "t": 14.48,
+     "tok": 4,
+     "end": 15.26
+    }
+   ],
+   "heard": "If Room Nine calls, let it ring.",
+   "match": 1.0
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "After three A M, never open the door.",
+   "file": "out/audio/lines/06.wav",
+   "start": 15.26,
+   "dur": 2.86,
+   "end": 18.12,
+   "tokens": [
+    {
+     "w": "after",
+     "s": 15.26,
+     "e": 15.56
+    },
+    {
+     "w": "three",
+     "s": 15.56,
+     "e": 15.94
+    },
+    {
+     "w": "a",
+     "s": 15.94,
+     "e": 16.2
+    },
+    {
+     "w": "m",
+     "s": 16.2,
+     "e": 16.5
+    },
+    {
+     "w": "never",
+     "s": 16.86,
+     "e": 17.18
+    },
+    {
+     "w": "open",
+     "s": 17.18,
+     "e": 17.56
+    },
+    {
+     "w": "the",
+     "s": 17.56,
+     "e": 17.76
+    },
+    {
+     "w": "door",
+     "s": 17.76,
+     "e": 18.0
+    }
+   ],
+   "caps": [
+    {
+     "text": "AFTER *3 *AM",
+     "t": 15.26,
+     "tok": 0,
+     "end": 16.86
+    },
+    {
+     "text": "*NEVER OPEN",
+     "t": 16.86,
+     "tok": 4,
+     "end": 17.76
+    },
+    {
+     "text": "THE DOOR",
+     "t": 17.76,
+     "tok": 7,
+     "end": 18.57
+    }
+   ],
+   "heard": "After three A M, never open the door.",
+   "match": 1.0
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Twelve thirty-one. A guest walks in, soaking wet.",
+   "file": "out/audio/lines/07.wav",
+   "start": 18.57,
+   "dur": 3.11,
+   "end": 21.68,
+   "tokens": [
+    {
+     "w": "twelve",
+     "s": 18.57,
+     "e": 18.79
+    },
+    {
+     "w": "thirty",
+     "s": 18.79,
+     "e": 19.11
+    },
+    {
+     "w": "one",
+     "s": 19.11,
+     "e": 19.49
+    },
+    {
+     "w": "a",
+     "s": 19.95,
+     "e": 19.99
+    },
+    {
+     "w": "guest",
+     "s": 19.99,
+     "e": 20.21
+    },
+    {
+     "w": "walks",
+     "s": 20.21,
+     "e": 20.51
+    },
+    {
+     "w": "in",
+     "s": 20.51,
+     "e": 20.89
+    },
+    {
+     "w": "soaking",
+     "s": 20.95,
+     "e": 21.23
+    },
+    {
+     "w": "wet",
+     "s": 21.23,
+     "e": 21.57
+    }
+   ],
+   "caps": [
+    {
+     "text": "*12:31 *AM",
+     "t": 18.57,
+     "tok": 0,
+     "end": 19.99
+    },
+    {
+     "text": "A GUEST",
+     "t": 19.99,
+     "tok": 4,
+     "end": 20.95
+    },
+    {
+     "text": "SOAKING WET",
+     "t": 20.95,
+     "tok": 7,
+     "end": 21.96
+    }
+   ],
+   "heard": "Twelve thirty -one. A guest walks in, soaking wet.",
+   "match": 1.0
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "He wants Room Nine.",
+   "file": "out/audio/lines/08.wav",
+   "start": 21.96,
+   "dur": 1.29,
+   "end": 23.25,
+   "tokens": [
+    {
+     "w": "he",
+     "s": 21.96,
+     "e": 22.08
+    },
+    {
+     "w": "wants",
+     "s": 22.08,
+     "e": 22.36
+    },
+    {
+     "w": "room",
+     "s": 22.36,
+     "e": 22.7
+    },
+    {
+     "w": "nine",
+     "s": 22.7,
+     "e": 23.06
+    }
+   ],
+   "caps": [
+    {
+     "text": "HE WANTS",
+     "t": 21.96,
+     "tok": 0,
+     "end": 22.36
+    },
+    {
+     "text": "*ROOM *9",
+     "t": 22.36,
+     "tok": 2,
+     "end": 23.53
+    }
+   ],
+   "heard": "He wants Room Nine.",
+   "match": 1.0
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "say": "You say what the card says. We're full.",
+   "file": "out/audio/lines/09.wav",
+   "start": 23.53,
+   "dur": 2.33,
+   "end": 25.86,
+   "tokens": [
+    {
+     "w": "you",
+     "s": 23.53,
+     "e": 23.67
+    },
+    {
+     "w": "say",
+     "s": 23.67,
+     "e": 23.89
+    },
+    {
+     "w": "what",
+     "s": 23.89,
+     "e": 24.05
+    },
+    {
+     "w": "the",
+     "s": 24.05,
+     "e": 24.19
+    },
+    {
+     "w": "card",
+     "s": 24.19,
+     "e": 24.43
+    },
+    {
+     "w": "says",
+     "s": 24.43,
+     "e": 24.77
+    },
+    {
+     "w": "were",
+     "s": 25.15,
+     "e": 25.31
+    },
+    {
+     "w": "full",
+     "s": 25.31,
+     "e": 25.59
+    }
+   ],
+   "caps": [
+    {
+     "text": "YOU SAY",
+     "t": 23.53,
+     "tok": 0,
+     "end": 25.15
+    },
+    {
+     "text": "WE'RE *FULL",
+     "t": 25.15,
+     "tok": 6,
+     "end": 26.14
+    }
+   ],
+   "heard": "You say what the card says. We're full.",
+   "match": 1.0
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "He doesn't argue. He walks out, down the row.",
+   "file": "out/audio/lines/10.wav",
+   "start": 26.14,
+   "dur": 2.56,
+   "end": 28.7,
+   "tokens": [
+    {
+     "w": "he",
+     "s": 26.14,
+     "e": 26.28
+    },
+    {
+     "w": "doesnt",
+     "s": 26.28,
+     "e": 26.58
+    },
+    {
+     "w": "argue",
+     "s": 26.58,
+     "e": 26.92
+    },
+    {
+     "w": "he",
+     "s": 27.32,
+     "e": 27.44
+    },
+    {
+     "w": "walks",
+     "s": 27.44,
+     "e": 27.64
+    },
+    {
+     "w": "out",
+     "s": 27.64,
+     "e": 27.92
+    },
+    {
+     "w": "down",
+     "s": 28.14,
+     "e": 28.18
+    },
+    {
+     "w": "the",
+     "s": 28.18,
+     "e": 28.34
+    },
+    {
+     "w": "row",
+     "s": 28.34,
+     "e": 28.56
+    }
+   ],
+   "caps": [
+    {
+     "text": "NO ARGUMENT",
+     "t": 26.14,
+     "tok": 0,
+     "end": 27.44
+    },
+    {
+     "text": "WALKS OUT",
+     "t": 27.44,
+     "tok": 4,
+     "end": 28.14
+    },
+    {
+     "text": "DOWN THE ROW",
+     "t": 28.14,
+     "tok": 6,
+     "end": 29.12
+    }
+   ],
+   "heard": "He doesn't argue. He walks out, down the row.",
+   "match": 1.0
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "And stops at a ninth door that wasn't there an hour ago.",
+   "file": "out/audio/lines/11.wav",
+   "start": 28.98,
+   "dur": 3.16,
+   "end": 32.14,
+   "tokens": [
+    {
+     "w": "and",
+     "s": 28.98,
+     "e": 29.12
+    },
+    {
+     "w": "stops",
+     "s": 29.12,
+     "e": 29.4
+    },
+    {
+     "w": "at",
+     "s": 29.4,
+     "e": 29.6
+    },
+    {
+     "w": "a",
+     "s": 29.6,
+     "e": 29.72
+    },
+    {
+     "w": "ninth",
+     "s": 29.72,
+     "e": 29.98
+    },
+    {
+     "w": "door",
+     "s": 29.98,
+     "e": 30.36
+    },
+    {
+     "w": "that",
+     "s": 30.36,
+     "e": 30.68
+    },
+    {
+     "w": "wasnt",
+     "s": 30.68,
+     "e": 31.0
+    },
+    {
+     "w": "there",
+     "s": 31.0,
+     "e": 31.18
+    },
+    {
+     "w": "an",
+     "s": 31.18,
+     "e": 31.38
+    },
+    {
+     "w": "hour",
+     "s": 31.38,
+     "e": 31.7
+    },
+    {
+     "w": "ago",
+     "s": 31.7,
+     "e": 32.02
+    }
+   ],
+   "caps": [
+    {
+     "text": "AND STOPS",
+     "t": 29.12,
+     "tok": 1,
+     "end": 29.72
+    },
+    {
+     "text": "A *NINTH DOOR",
+     "t": 29.72,
+     "tok": 4,
+     "end": 30.68
+    },
+    {
+     "text": "WASN'T THERE",
+     "t": 30.68,
+     "tok": 7,
+     "end": 31.38
+    },
+    {
+     "text": "AN HOUR AGO",
+     "t": 31.38,
+     "tok": 10,
+     "end": 32.59
+    }
+   ],
+   "heard": "And stops at a ninth door that wasn't there an hour ago.",
+   "match": 1.0
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Two ten. The phone lights up. Room Nine.",
+   "file": "out/audio/lines/12.wav",
+   "start": 32.59,
+   "dur": 2.56,
+   "end": 35.15,
+   "tokens": [
+    {
+     "w": "two",
+     "s": 32.59,
+     "e": 32.77
+    },
+    {
+     "w": "ten",
+     "s": 32.77,
+     "e": 33.09
+    },
+    {
+     "w": "the",
+     "s": 33.31,
+     "e": 33.37
+    },
+    {
+     "w": "phone",
+     "s": 33.37,
+     "e": 33.61
+    },
+    {
+     "w": "lights",
+     "s": 33.61,
+     "e": 33.91
+    },
+    {
+     "w": "up",
+     "s": 33.91,
+     "e": 34.21
+    },
+    {
+     "w": "room",
+     "s": 34.61,
+     "e": 34.67
+    },
+    {
+     "w": "nine",
+     "s": 34.67,
+     "e": 35.03
+    }
+   ],
+   "caps": [
+    {
+     "text": "*2:10 *AM",
+     "t": 32.59,
+     "tok": 0,
+     "end": 33.37
+    },
+    {
+     "text": "PHONE LIGHTS UP",
+     "t": 33.37,
+     "tok": 3,
+     "end": 34.61
+    },
+    {
+     "text": "*ROOM *9",
+     "t": 34.61,
+     "tok": 6,
+     "end": 35.43
+    }
+   ],
+   "heard": "Two ten. The phone lights up. Room Nine.",
+   "match": 1.0
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "say": "You let it ring.",
+   "file": "out/audio/lines/13.wav",
+   "start": 35.43,
+   "dur": 1.07,
+   "end": 36.5,
+   "tokens": [
+    {
+     "w": "you",
+     "s": 35.43,
+     "e": 35.63
+    },
+    {
+     "w": "let",
+     "s": 35.63,
+     "e": 35.85
+    },
+    {
+     "w": "it",
+     "s": 35.85,
+     "e": 36.01
+    },
+    {
+     "w": "ring",
+     "s": 36.01,
+     "e": 36.29
+    }
+   ],
+   "caps": [
+    {
+     "text": "LET IT *RING",
+     "t": 35.43,
+     "tok": 0,
+     "end": 36.78
+    }
+   ],
+   "heard": "You let it ring.",
+   "match": 1.0
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Nine rings. Then the machine picks up.",
+   "file": "out/audio/lines/14.wav",
+   "start": 36.78,
+   "dur": 2.3,
+   "end": 39.08,
+   "tokens": [
+    {
+     "w": "nine",
+     "s": 36.78,
+     "e": 37.12
+    },
+    {
+     "w": "rings",
+     "s": 37.12,
+     "e": 37.52
+    },
+    {
+     "w": "then",
+     "s": 37.86,
+     "e": 38.04
+    },
+    {
+     "w": "the",
+     "s": 38.04,
+     "e": 38.14
+    },
+    {
+     "w": "machine",
+     "s": 38.14,
+     "e": 38.44
+    },
+    {
+     "w": "picks",
+     "s": 38.44,
+     "e": 38.72
+    },
+    {
+     "w": "up",
+     "s": 38.72,
+     "e": 39.06
+    }
+   ],
+   "caps": [
+    {
+     "text": "*9 RINGS",
+     "t": 36.78,
+     "tok": 0,
+     "end": 38.14
+    },
+    {
+     "text": "THE MACHINE",
+     "t": 38.14,
+     "tok": 4,
+     "end": 38.44
+    },
+    {
+     "text": "PICKS UP",
+     "t": 38.44,
+     "tok": 5,
+     "end": 39.62
+    }
+   ],
+   "heard": "Nine rings. Then the machine picks up.",
+   "match": 1.0
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "And the voice on the tape... is yours.",
+   "file": "out/audio/lines/15.wav",
+   "start": 39.36,
+   "dur": 2.42,
+   "end": 41.78,
+   "tokens": [
+    {
+     "w": "and",
+     "s": 39.36,
+     "e": 39.5
+    },
+    {
+     "w": "the",
+     "s": 39.5,
+     "e": 39.62
+    },
+    {
+     "w": "voice",
+     "s": 39.62,
+     "e": 39.86
+    },
+    {
+     "w": "on",
+     "s": 39.86,
+     "e": 40.06
+    },
+    {
+     "w": "the",
+     "s": 40.06,
+     "e": 40.2
+    },
+    {
+     "w": "tape",
+     "s": 40.2,
+     "e": 41.02
+    },
+    {
+     "w": "is",
+     "s": 41.02,
+     "e": 41.06
+    },
+    {
+     "w": "yours",
+     "s": 41.06,
+     "e": 41.38
+    }
+   ],
+   "caps": [
+    {
+     "text": "THE VOICE",
+     "t": 39.62,
+     "tok": 2,
+     "end": 41.02
+    },
+    {
+     "text": "IS *YOURS",
+     "t": 41.02,
+     "tok": 6,
+     "end": 42.23
+    }
+   ],
+   "heard": "And the voice on the tape... is yours.",
+   "match": 1.0
+  },
+  {
+   "id": 16,
+   "who": "YOU",
+   "say": "Don't let him in.",
+   "file": "out/audio/lines/16.wav",
+   "start": 42.23,
+   "dur": 1.125,
+   "end": 43.355,
+   "tokens": [
+    {
+     "w": "dont",
+     "s": 42.23,
+     "e": 42.45
+    },
+    {
+     "w": "let",
+     "s": 42.45,
+     "e": 42.55
+    },
+    {
+     "w": "him",
+     "s": 42.55,
+     "e": 42.67
+    },
+    {
+     "w": "in",
+     "s": 42.67,
+     "e": 42.85
+    }
+   ],
+   "caps": [
+    {
+     "text": "DON'T",
+     "t": 42.23,
+     "tok": 0,
+     "end": 42.45
+    },
+    {
+     "text": "LET *HIM IN",
+     "t": 42.45,
+     "tok": 1,
+     "end": 44.055
+    }
+   ],
+   "heard": "Don't let him in.",
+   "match": 1.0
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Three forty. The lamp starts to flicker.",
+   "file": "out/audio/lines/17.wav",
+   "start": 44.055,
+   "dur": 2.52,
+   "end": 46.575,
+   "tokens": [
+    {
+     "w": "three",
+     "s": 44.055,
+     "e": 44.295
+    },
+    {
+     "w": "forty",
+     "s": 44.295,
+     "e": 44.715
+    },
+    {
+     "w": "the",
+     "s": 45.175,
+     "e": 45.255
+    },
+    {
+     "w": "lamp",
+     "s": 45.255,
+     "e": 45.515
+    },
+    {
+     "w": "starts",
+     "s": 45.515,
+     "e": 45.855
+    },
+    {
+     "w": "to",
+     "s": 45.855,
+     "e": 46.095
+    },
+    {
+     "w": "flicker",
+     "s": 46.095,
+     "e": 46.435
+    }
+   ],
+   "caps": [
+    {
+     "text": "*3:40 *AM",
+     "t": 44.055,
+     "tok": 0,
+     "end": 45.255
+    },
+    {
+     "text": "THE LAMP",
+     "t": 45.255,
+     "tok": 3,
+     "end": 46.095
+    },
+    {
+     "text": "*FLICKERS",
+     "t": 46.095,
+     "tok": 6,
+     "end": 46.855
+    }
+   ],
+   "heard": "Three forty. The lamp starts to flicker.",
+   "match": 1.0
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "say": "Every time it goes dark, they're closer.",
+   "file": "out/audio/lines/18.wav",
+   "start": 46.855,
+   "dur": 2.29,
+   "end": 49.145,
+   "tokens": [
+    {
+     "w": "every",
+     "s": 46.855,
+     "e": 47.135
+    },
+    {
+     "w": "time",
+     "s": 47.135,
+     "e": 47.375
+    },
+    {
+     "w": "it",
+     "s": 47.375,
+     "e": 47.535
+    },
+    {
+     "w": "goes",
+     "s": 47.535,
+     "e": 47.755
+    },
+    {
+     "w": "dark",
+     "s": 47.755,
+     "e": 48.175
+    },
+    {
+     "w": "theyre",
+     "s": 48.415,
+     "e": 48.695
+    },
+    {
+     "w": "closer",
+     "s": 48.695,
+     "e": 48.895
+    }
+   ],
+   "caps": [
+    {
+     "text": "EVERY TIME",
+     "t": 46.855,
+     "tok": 0,
+     "end": 47.535
+    },
+    {
+     "text": "IT GOES *DARK",
+     "t": 47.535,
+     "tok": 3,
+     "end": 48.415
+    },
+    {
+     "text": "THEY'RE *CLOSER",
+     "t": 48.415,
+     "tok": 5,
+     "end": 49.645
+    }
+   ],
+   "heard": "Every time it goes dark, they're closer.",
+   "match": 1.0
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "When it holds, they back away.",
+   "file": "out/audio/lines/19.wav",
+   "start": 49.425,
+   "dur": 1.55,
+   "end": 50.975,
+   "tokens": [
+    {
+     "w": "when",
+     "s": 49.425,
+     "e": 49.545
+    },
+    {
+     "w": "it",
+     "s": 49.545,
+     "e": 49.645
+    },
+    {
+     "w": "holds",
+     "s": 49.645,
+     "e": 50.025
+    },
+    {
+     "w": "they",
+     "s": 50.205,
+     "e": 50.245
+    },
+    {
+     "w": "back",
+     "s": 50.245,
+     "e": 50.465
+    },
+    {
+     "w": "away",
+     "s": 50.465,
+     "e": 50.785
+    }
+   ],
+   "caps": [
+    {
+     "text": "IT HOLDS",
+     "t": 49.645,
+     "tok": 2,
+     "end": 50.205
+    },
+    {
+     "text": "THEY *BACK AWAY",
+     "t": 50.205,
+     "tok": 3,
+     "end": 51.375
+    }
+   ],
+   "heard": "When it holds, they back away.",
+   "match": 1.0
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "say": "Four forty-four. A truck takes the bend too fast.",
+   "file": "out/audio/lines/20.wav",
+   "start": 51.375,
+   "dur": 3.21,
+   "end": 54.585,
+   "tokens": [
+    {
+     "w": "four",
+     "s": 51.375,
+     "e": 51.615
+    },
+    {
+     "w": "forty",
+     "s": 51.615,
+     "e": 51.955
+    },
+    {
+     "w": "four",
+     "s": 51.955,
+     "e": 52.275
+    },
+    {
+     "w": "a",
+     "s": 52.595,
+     "e": 52.755
+    },
+    {
+     "w": "truck",
+     "s": 52.755,
+     "e": 52.975
+    },
+    {
+     "w": "takes",
+     "s": 52.975,
+     "e": 53.275
+    },
+    {
+     "w": "the",
+     "s": 53.275,
+     "e": 53.495
+    },
+    {
+     "w": "bend",
+     "s": 53.495,
+     "e": 53.695
+    },
+    {
+     "w": "too",
+     "s": 53.695,
+     "e": 53.955
+    },
+    {
+     "w": "fast",
+     "s": 53.955,
+     "e": 54.315
+    }
+   ],
+   "caps": [
+    {
+     "text": "*4:44 *AM",
+     "t": 51.375,
+     "tok": 0,
+     "end": 52.755
+    },
+    {
+     "text": "A TRUCK",
+     "t": 52.755,
+     "tok": 4,
+     "end": 53.695
+    },
+    {
+     "text": "TOO *FAST",
+     "t": 53.695,
+     "tok": 8,
+     "end": 54.935
+    }
+   ],
+   "heard": "Four forty -four. A truck takes the bend too fast.",
+   "match": 1.0
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "It hits the pole.",
+   "file": "out/audio/lines/21.wav",
+   "start": 54.935,
+   "dur": 1.13,
+   "end": 56.065,
+   "tokens": [
+    {
+     "w": "it",
+     "s": 54.935,
+     "e": 55.075
+    },
+    {
+     "w": "hits",
+     "s": 55.075,
+     "e": 55.275
+    },
+    {
+     "w": "the",
+     "s": 55.275,
+     "e": 55.495
+    },
+    {
+     "w": "pole",
+     "s": 55.495,
+     "e": 55.795
+    }
+   ],
+   "caps": [
+    {
+     "text": "IT *HITS",
+     "t": 54.935,
+     "tok": 0,
+     "end": 55.495
+    },
+    {
+     "text": "THE POLE",
+     "t": 55.495,
+     "tok": 3,
+     "end": 56.825
+    }
+   ],
+   "heard": "It hits the pole.",
+   "match": 1.0
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "And your light goes out.",
+   "file": "out/audio/lines/22.wav",
+   "start": 56.665,
+   "dur": 1.32,
+   "end": 57.985,
+   "tokens": [
+    {
+     "w": "and",
+     "s": 56.665,
+     "e": 56.825
+    },
+    {
+     "w": "your",
+     "s": 56.825,
+     "e": 56.945
+    },
+    {
+     "w": "light",
+     "s": 56.945,
+     "e": 57.245
+    },
+    {
+     "w": "goes",
+     "s": 57.245,
+     "e": 57.525
+    },
+    {
+     "w": "out",
+     "s": 57.525,
+     "e": 57.845
+    }
+   ],
+   "caps": [
+    {
+     "text": "YOUR LIGHT",
+     "t": 56.825,
+     "tok": 1,
+     "end": 57.245
+    },
+    {
+     "text": "*GOES *OUT",
+     "t": 57.245,
+     "tok": 3,
+     "end": 58.885
+    }
+   ],
+   "heard": "And your light goes out.",
+   "match": 1.0
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Knock. Knock.",
+   "file": "out/audio/lines/23.wav",
+   "start": 58.885,
+   "dur": 0.93,
+   "end": 59.815,
+   "tokens": [
+    {
+     "w": "knock",
+     "s": 58.885,
+     "e": 59.225
+    },
+    {
+     "w": "knock",
+     "s": 59.385,
+     "e": 59.505
+    }
+   ],
+   "caps": [
+    {
+     "text": "*KNOCK",
+     "t": 58.885,
+     "tok": 0,
+     "end": 59.385
+    },
+    {
+     "text": "*KNOCK",
+     "t": 59.385,
+     "tok": 1,
+     "end": 60.165
+    }
+   ],
+   "heard": "Knock. Knock.",
+   "match": 1.0
+  },
+  {
+   "id": 24,
+   "who": "OWNER",
+   "say": "It's the owner. I've got fuel for the generator.",
+   "file": "out/audio/lines/24.wav",
+   "start": 60.165,
+   "dur": 3.621,
+   "end": 63.786,
+   "tokens": [
+    {
+     "w": "its",
+     "s": 60.165,
+     "e": 60.425
+    },
+    {
+     "w": "the",
+     "s": 60.425,
+     "e": 60.585
+    },
+    {
+     "w": "owner",
+     "s": 60.585,
+     "e": 60.985
+    },
+    {
+     "w": "ive",
+     "s": 61.525,
+     "e": 61.625
+    },
+    {
+     "w": "got",
+     "s": 61.625,
+     "e": 61.745
+    },
+    {
+     "w": "fuel",
+     "s": 61.745,
+     "e": 62.125
+    },
+    {
+     "w": "for",
+     "s": 62.125,
+     "e": 62.425
+    },
+    {
+     "w": "the",
+     "s": 62.425,
+     "e": 62.585
+    },
+    {
+     "w": "generator",
+     "s": 62.585,
+     "e": 63.025
+    }
+   ],
+   "caps": [
+    {
+     "text": "IT'S THE *OWNER",
+     "t": 60.165,
+     "tok": 0,
+     "end": 61.745
+    },
+    {
+     "text": "FUEL",
+     "t": 61.745,
+     "tok": 5,
+     "end": 62.585
+    },
+    {
+     "text": "FOR THE GENERATOR",
+     "t": 62.585,
+     "tok": 8,
+     "end": 64.066
+    }
+   ],
+   "heard": "It's the owner. I've got fuel for the generator.",
+   "match": 1.0
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "say": "Through the peephole: the owner, holding a gas can.",
+   "file": "out/audio/lines/25.wav",
+   "start": 64.066,
+   "dur": 3.14,
+   "end": 67.206,
+   "tokens": [
+    {
+     "w": "through",
+     "s": 64.066,
+     "e": 64.286
+    },
+    {
+     "w": "the",
+     "s": 64.286,
+     "e": 64.486
+    },
+    {
+     "w": "peephole",
+     "s": 64.486,
+     "e": 65.006
+    },
+    {
+     "w": "the",
+     "s": 65.466,
+     "e": 65.486
+    },
+    {
+     "w": "owner",
+     "s": 65.486,
+     "e": 65.806
+    },
+    {
+     "w": "holding",
+     "s": 65.926,
+     "e": 66.206
+    },
+    {
+     "w": "a",
+     "s": 66.206,
+     "e": 66.386
+    },
+    {
+     "w": "gas",
+     "s": 66.386,
+     "e": 66.646
+    },
+    {
+     "w": "can",
+     "s": 66.646,
+     "e": 67.046
+    }
+   ],
+   "caps": [
+    {
+     "text": "THE *PEEPHOLE",
+     "t": 64.066,
+     "tok": 0,
+     "end": 65.486
+    },
+    {
+     "text": "THE OWNER",
+     "t": 65.486,
+     "tok": 4,
+     "end": 66.386
+    },
+    {
+     "text": "GAS CAN",
+     "t": 66.386,
+     "tok": 7,
+     "end": 67.486
+    }
+   ],
+   "heard": "Through the peephole, the owner, holding a gas can.",
+   "match": 1.0
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "He's wearing a red cap.",
+   "file": "out/audio/lines/26.wav",
+   "start": 67.486,
+   "dur": 1.44,
+   "end": 68.926,
+   "tokens": [
+    {
+     "w": "hes",
+     "s": 67.486,
+     "e": 67.686
+    },
+    {
+     "w": "wearing",
+     "s": 67.686,
+     "e": 67.946
+    },
+    {
+     "w": "a",
+     "s": 67.946,
+     "e": 68.186
+    },
+    {
+     "w": "red",
+     "s": 68.186,
+     "e": 68.386
+    },
+    {
+     "w": "cap",
+     "s": 68.386,
+     "e": 68.726
+    }
+   ],
+   "caps": [
+    {
+     "text": "HE'S WEARING",
+     "t": 67.486,
+     "tok": 0,
+     "end": 68.186
+    },
+    {
+     "text": "A *RED *CAP",
+     "t": 68.186,
+     "tok": 3,
+     "end": 69.566
+    }
+   ],
+   "heard": "He's wearing a red cap.",
+   "match": 1.0
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "You reach for yours. It's gone.",
+   "file": "out/audio/lines/27.wav",
+   "start": 69.426,
+   "dur": 1.74,
+   "end": 71.166,
+   "tokens": [
+    {
+     "w": "you",
+     "s": 69.426,
+     "e": 69.566
+    },
+    {
+     "w": "reach",
+     "s": 69.566,
+     "e": 69.766
+    },
+    {
+     "w": "for",
+     "s": 69.766,
+     "e": 70.026
+    },
+    {
+     "w": "yours",
+     "s": 70.026,
+     "e": 70.326
+    },
+    {
+     "w": "its",
+     "s": 70.546,
+     "e": 70.726
+    },
+    {
+     "w": "gone",
+     "s": 70.726,
+     "e": 70.946
+    }
+   ],
+   "caps": [
+    {
+     "text": "YOU REACH",
+     "t": 69.566,
+     "tok": 1,
+     "end": 70.546
+    },
+    {
+     "text": "IT'S *GONE",
+     "t": 70.546,
+     "tok": 4,
+     "end": 71.766
+    }
+   ],
+   "heard": "You reach for yours. It's gone.",
+   "match": 1.0
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "Open the door and get the light back? Or stay in the dark... with them?",
+   "file": "out/audio/lines/28.wav",
+   "start": 71.766,
+   "dur": 4.04,
+   "end": 75.806,
+   "tokens": [
+    {
+     "w": "open",
+     "s": 71.766,
+     "e": 72.026
+    },
+    {
+     "w": "the",
+     "s": 72.026,
+     "e": 72.226
+    },
+    {
+     "w": "door",
+     "s": 72.226,
+     "e": 72.486
+    },
+    {
+     "w": "and",
+     "s": 72.486,
+     "e": 72.706
+    },
+    {
+     "w": "get",
+     "s": 72.706,
+     "e": 72.826
+    },
+    {
+     "w": "the",
+     "s": 72.826,
+     "e": 72.986
+    },
+    {
+     "w": "light",
+     "s": 72.986,
+     "e": 73.206
+    },
+    {
+     "w": "back",
+     "s": 73.206,
+     "e": 73.586
+    },
+    {
+     "w": "or",
+     "s": 73.906,
+     "e": 73.966
+    },
+    {
+     "w": "stay",
+     "s": 73.966,
+     "e": 74.246
+    },
+    {
+     "w": "in",
+     "s": 74.246,
+     "e": 74.406
+    },
+    {
+     "w": "the",
+     "s": 74.406,
+     "e": 74.526
+    },
+    {
+     "w": "dark",
+     "s": 74.526,
+     "e": 75.266
+    },
+    {
+     "w": "with",
+     "s": 75.266,
+     "e": 75.366
+    },
+    {
+     "w": "them",
+     "s": 75.366,
+     "e": 75.646
+    }
+   ],
+   "caps": [
+    {
+     "text": "*OPEN THE DOOR",
+     "t": 71.766,
+     "tok": 0,
+     "end": 72.706
+    },
+    {
+     "text": "LIGHT BACK?",
+     "t": 72.706,
+     "tok": 4,
+     "end": 73.906
+    },
+    {
+     "text": "OR STAY",
+     "t": 73.906,
+     "tok": 8,
+     "end": 74.526
+    },
+    {
+     "text": "IN THE *DARK",
+     "t": 74.526,
+     "tok": 12,
+     "end": 75.266
+    },
+    {
+     "text": "WITH *THEM?",
+     "t": 75.266,
+     "tok": 13,
+     "end": 76.306
+    }
+   ],
+   "heard": "Open the door and get the light back? Or stay in the dark... with them?",
+   "match": 1.0
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "say": "Comment below. Follow for Day Two.",
+   "file": "out/audio/lines/29.wav",
+   "start": 76.306,
+   "dur": 2.19,
+   "end": 78.496,
+   "tokens": [
+    {
+     "w": "comment",
+     "s": 76.306,
+     "e": 76.646
+    },
+    {
+     "w": "below",
+     "s": 76.646,
+     "e": 77.046
+    },
+    {
+     "w": "follow",
+     "s": 77.466,
+     "e": 77.586
+    },
+    {
+     "w": "for",
+     "s": 77.586,
+     "e": 77.846
+    },
+    {
+     "w": "day",
+     "s": 77.846,
+     "e": 78.046
+    },
+    {
+     "w": "two",
+     "s": 78.046,
+     "e": 78.366
+    }
+   ],
+   "caps": [
+    {
+     "text": "COMMENT BELOW",
+     "t": 76.306,
+     "tok": 0,
+     "end": 77.466
+    },
+    {
+     "text": "FOLLOW FOR",
+     "t": 77.466,
+     "tok": 2,
+     "end": 77.846
+    },
+    {
+     "text": "*DAY *2",
+     "t": 77.846,
+     "tok": 4,
+     "end": 80.446
+    }
+   ],
+   "heard": "Comment below. Follow for Day Two.",
+   "match": 1.0
+  }
+ ],
+ "captions": [
+  {
+   "text": "IMAGINE",
+   "t": 0.25,
+   "tok": 0,
+   "end": 1.03
+  },
+  {
+   "text": "*11:58 *PM",
+   "t": 1.03,
+   "tok": 2,
+   "end": 3.55
+  },
+  {
+   "text": "NIGHT CLERK",
+   "t": 3.55,
+   "tok": 10,
+   "end": 4.47
+  },
+  {
+   "text": "EMPTY MOTEL",
+   "t": 4.47,
+   "tok": 14,
+   "end": 5.83
+  },
+  {
+   "text": "THE OWNER",
+   "t": 5.83,
+   "tok": 1,
+   "end": 6.83
+  },
+  {
+   "text": "A CARD",
+   "t": 6.83,
+   "tok": 5,
+   "end": 7.59
+  },
+  {
+   "text": "*4 *RULES",
+   "t": 7.59,
+   "tok": 6,
+   "end": 8.81
+  },
+  {
+   "text": "LIGHT ON",
+   "t": 8.81,
+   "tok": 0,
+   "end": 10.03
+  },
+  {
+   "text": "UNTIL *6 *AM",
+   "t": 10.03,
+   "tok": 5,
+   "end": 11.51
+  },
+  {
+   "text": "THERE IS NO",
+   "t": 11.51,
+   "tok": 0,
+   "end": 12.05
+  },
+  {
+   "text": "*ROOM *9",
+   "t": 12.05,
+   "tok": 3,
+   "end": 13.24
+  },
+  {
+   "text": "*ROOM *9 CALLS",
+   "t": 13.24,
+   "tok": 1,
+   "end": 14.48
+  },
+  {
+   "text": "LET IT RING",
+   "t": 14.48,
+   "tok": 4,
+   "end": 15.26
+  },
+  {
+   "text": "AFTER *3 *AM",
+   "t": 15.26,
+   "tok": 0,
+   "end": 16.86
+  },
+  {
+   "text": "*NEVER OPEN",
+   "t": 16.86,
+   "tok": 4,
+   "end": 17.76
+  },
+  {
+   "text": "THE DOOR",
+   "t": 17.76,
+   "tok": 7,
+   "end": 18.57
+  },
+  {
+   "text": "*12:31 *AM",
+   "t": 18.57,
+   "tok": 0,
+   "end": 19.99
+  },
+  {
+   "text": "A GUEST",
+   "t": 19.99,
+   "tok": 4,
+   "end": 20.95
+  },
+  {
+   "text": "SOAKING WET",
+   "t": 20.95,
+   "tok": 7,
+   "end": 21.96
+  },
+  {
+   "text": "HE WANTS",
+   "t": 21.96,
+   "tok": 0,
+   "end": 22.36
+  },
+  {
+   "text": "*ROOM *9",
+   "t": 22.36,
+   "tok": 2,
+   "end": 23.53
+  },
+  {
+   "text": "YOU SAY",
+   "t": 23.53,
+   "tok": 0,
+   "end": 25.15
+  },
+  {
+   "text": "WE'RE *FULL",
+   "t": 25.15,
+   "tok": 6,
+   "end": 26.14
+  },
+  {
+   "text": "NO ARGUMENT",
+   "t": 26.14,
+   "tok": 0,
+   "end": 27.44
+  },
+  {
+   "text": "WALKS OUT",
+   "t": 27.44,
+   "tok": 4,
+   "end": 28.14
+  },
+  {
+   "text": "DOWN THE ROW",
+   "t": 28.14,
+   "tok": 6,
+   "end": 29.12
+  },
+  {
+   "text": "AND STOPS",
+   "t": 29.12,
+   "tok": 1,
+   "end": 29.72
+  },
+  {
+   "text": "A *NINTH DOOR",
+   "t": 29.72,
+   "tok": 4,
+   "end": 30.68
+  },
+  {
+   "text": "WASN'T THERE",
+   "t": 30.68,
+   "tok": 7,
+   "end": 31.38
+  },
+  {
+   "text": "AN HOUR AGO",
+   "t": 31.38,
+   "tok": 10,
+   "end": 32.59
+  },
+  {
+   "text": "*2:10 *AM",
+   "t": 32.59,
+   "tok": 0,
+   "end": 33.37
+  },
+  {
+   "text": "PHONE LIGHTS UP",
+   "t": 33.37,
+   "tok": 3,
+   "end": 34.61
+  },
+  {
+   "text": "*ROOM *9",
+   "t": 34.61,
+   "tok": 6,
+   "end": 35.43
+  },
+  {
+   "text": "LET IT *RING",
+   "t": 35.43,
+   "tok": 0,
+   "end": 36.78
+  },
+  {
+   "text": "*9 RINGS",
+   "t": 36.78,
+   "tok": 0,
+   "end": 38.14
+  },
+  {
+   "text": "THE MACHINE",
+   "t": 38.14,
+   "tok": 4,
+   "end": 38.44
+  },
+  {
+   "text": "PICKS UP",
+   "t": 38.44,
+   "tok": 5,
+   "end": 39.62
+  },
+  {
+   "text": "THE VOICE",
+   "t": 39.62,
+   "tok": 2,
+   "end": 41.02
+  },
+  {
+   "text": "IS *YOURS",
+   "t": 41.02,
+   "tok": 6,
+   "end": 42.23
+  },
+  {
+   "text": "DON'T",
+   "t": 42.23,
+   "tok": 0,
+   "end": 42.45
+  },
+  {
+   "text": "LET *HIM IN",
+   "t": 42.45,
+   "tok": 1,
+   "end": 44.055
+  },
+  {
+   "text": "*3:40 *AM",
+   "t": 44.055,
+   "tok": 0,
+   "end": 45.255
+  },
+  {
+   "text": "THE LAMP",
+   "t": 45.255,
+   "tok": 3,
+   "end": 46.095
+  },
+  {
+   "text": "*FLICKERS",
+   "t": 46.095,
+   "tok": 6,
+   "end": 46.855
+  },
+  {
+   "text": "EVERY TIME",
+   "t": 46.855,
+   "tok": 0,
+   "end": 47.535
+  },
+  {
+   "text": "IT GOES *DARK",
+   "t": 47.535,
+   "tok": 3,
+   "end": 48.415
+  },
+  {
+   "text": "THEY'RE *CLOSER",
+   "t": 48.415,
+   "tok": 5,
+   "end": 49.645
+  },
+  {
+   "text": "IT HOLDS",
+   "t": 49.645,
+   "tok": 2,
+   "end": 50.205
+  },
+  {
+   "text": "THEY *BACK AWAY",
+   "t": 50.205,
+   "tok": 3,
+   "end": 51.375
+  },
+  {
+   "text": "*4:44 *AM",
+   "t": 51.375,
+   "tok": 0,
+   "end": 52.755
+  },
+  {
+   "text": "A TRUCK",
+   "t": 52.755,
+   "tok": 4,
+   "end": 53.695
+  },
+  {
+   "text": "TOO *FAST",
+   "t": 53.695,
+   "tok": 8,
+   "end": 54.935
+  },
+  {
+   "text": "IT *HITS",
+   "t": 54.935,
+   "tok": 0,
+   "end": 55.495
+  },
+  {
+   "text": "THE POLE",
+   "t": 55.495,
+   "tok": 3,
+   "end": 56.825
+  },
+  {
+   "text": "YOUR LIGHT",
+   "t": 56.825,
+   "tok": 1,
+   "end": 57.245
+  },
+  {
+   "text": "*GOES *OUT",
+   "t": 57.245,
+   "tok": 3,
+   "end": 58.885
+  },
+  {
+   "text": "*KNOCK",
+   "t": 58.885,
+   "tok": 0,
+   "end": 59.385
+  },
+  {
+   "text": "*KNOCK",
+   "t": 59.385,
+   "tok": 1,
+   "end": 60.165
+  },
+  {
+   "text": "IT'S THE *OWNER",
+   "t": 60.165,
+   "tok": 0,
+   "end": 61.745
+  },
+  {
+   "text": "FUEL",
+   "t": 61.745,
+   "tok": 5,
+   "end": 62.585
+  },
+  {
+   "text": "FOR THE GENERATOR",
+   "t": 62.585,
+   "tok": 8,
+   "end": 64.066
+  },
+  {
+   "text": "THE *PEEPHOLE",
+   "t": 64.066,
+   "tok": 0,
+   "end": 65.486
+  },
+  {
+   "text": "THE OWNER",
+   "t": 65.486,
+   "tok": 4,
+   "end": 66.386
+  },
+  {
+   "text": "GAS CAN",
+   "t": 66.386,
+   "tok": 7,
+   "end": 67.486
+  },
+  {
+   "text": "HE'S WEARING",
+   "t": 67.486,
+   "tok": 0,
+   "end": 68.186
+  },
+  {
+   "text": "A *RED *CAP",
+   "t": 68.186,
+   "tok": 3,
+   "end": 69.566
+  },
+  {
+   "text": "YOU REACH",
+   "t": 69.566,
+   "tok": 1,
+   "end": 70.546
+  },
+  {
+   "text": "IT'S *GONE",
+   "t": 70.546,
+   "tok": 4,
+   "end": 71.766
+  },
+  {
+   "text": "*OPEN THE DOOR",
+   "t": 71.766,
+   "tok": 0,
+   "end": 72.706
+  },
+  {
+   "text": "LIGHT BACK?",
+   "t": 72.706,
+   "tok": 4,
+   "end": 73.906
+  },
+  {
+   "text": "OR STAY",
+   "t": 73.906,
+   "tok": 8,
+   "end": 74.526
+  },
+  {
+   "text": "IN THE *DARK",
+   "t": 74.526,
+   "tok": 12,
+   "end": 75.266
+  },
+  {
+   "text": "WITH *THEM?",
+   "t": 75.266,
+   "tok": 13,
+   "end": 76.306
+  },
+  {
+   "text": "COMMENT BELOW",
+   "t": 76.306,
+   "tok": 0,
+   "end": 77.466
+  },
+  {
+   "text": "FOLLOW FOR",
+   "t": 77.466,
+   "tok": 2,
+   "end": 77.846
+  },
+  {
+   "text": "*DAY *2",
+   "t": 77.846,
+   "tok": 4,
+   "end": 80.446
+  }
+ ],
+ "caption_check_failures": [
+  [
+   "FUEL",
+   61.745,
+   -42.0
+  ]
+ ]
+}
