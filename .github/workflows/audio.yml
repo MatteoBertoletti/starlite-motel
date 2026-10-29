@@ -1,0 +1,39 @@
+name: audio
+# Narrator (Kokoro, free, local), word timings (faster-whisper), sound effects (Mixkit).
+on:
+  workflow_dispatch:
+    inputs:
+      probe_sfx:
+        description: 'Scrape the Mixkit catalog (first run)'
+        default: 'true'
+permissions:
+  contents: write
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: System packages
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg
+      - name: Python packages
+        run: pip install -q "kokoro>=0.9.4" soundfile faster-whisper numpy
+      - name: Sound effects catalog
+        if: ${{ inputs.probe_sfx == 'true' }}
+        run: python tools/sfx_fetch.py --probe
+      - name: Sound effect picks
+        if: ${{ hashFiles('story/sfx.json') != '' }}
+        run: python tools/sfx_fetch.py --get
+      - name: Narration + word timings
+        run: python tools/voice.py story/script.json out/audio
+      - uses: actions/upload-artifact@v4
+        with: { name: audio, path: out/audio }
+      - name: Publish to the audio-out branch
+        run: |
+          mkdir -p /tmp/pub && cp -r out/audio/* /tmp/pub/ && cd /tmp/pub
+          git init -q && git checkout -q -b audio-out
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "audio run ${{ github.run_id }}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" audio-out
