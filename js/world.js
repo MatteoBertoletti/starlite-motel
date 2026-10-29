@@ -38,7 +38,8 @@ function noiseTex(base, amp, seed, size = 256, rep = 1) {
   t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep, rep); return t;
 }
 
-export function buildWorld(scene) {
+export function buildWorld(scene, opts = {}) {
+  const IT = opts.lang === 'it';
   const W = { lights: {}, groups: {}, mats: {}, doors: [], streetLights: [], doorLamps: [] };
   scene.background = new THREE.Color(PAL.sky);
   scene.fog = new THREE.FogExp2(PAL.fog, 0.011);
@@ -181,8 +182,8 @@ export function buildWorld(scene) {
     cyl(0.028, 0.028, 0.008, 14, M(0xd8d2c4), 0, 0, 0, g); [0, 1, 2].forEach(k => { const b = box(0.05, 0.01, 0.008, M(0x1d1f22), 0, 0.002, 0, g, false); b.rotation.y = k * Math.PI / 3; }); return g; });
   // bell
   const bell = new THREE.Mesh(new THREE.SphereGeometry(0.06, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2), M(0xc9a24a, { metalness: 0.9, roughness: 0.25 })); bell.position.set(-6.6, 1.06, 2.05); bell.castShadow = true; counter.add(bell);
-  const cardTex = textTex((c, w, h) => { c.fillStyle = '#efe7d2'; c.fillRect(0, 0, w, h); c.fillStyle = '#1a1a1a'; c.font = 'bold 70px serif'; c.fillText('RULES', 40, 90);
-    c.font = 'italic 44px serif'; ['1. light on till 6', '2. no room 9', '3. let 9 ring', '4. door shut after 3'].forEach((l, i) => c.fillText(l, 40, 170 + i * 70));
+  const cardTex = textTex((c, w, h) => { c.fillStyle = '#efe7d2'; c.fillRect(0, 0, w, h); c.fillStyle = '#1a1a1a'; c.font = 'bold 70px serif'; c.fillText(IT ? 'REGOLE' : 'RULES', 40, 90);
+    c.font = IT ? 'italic 37px serif' : 'italic 44px serif'; (IT ? ['1. luce accesa fino alle 6', '2. la stanza 9 non esiste', '3. lascia squillare la 9', '4. dopo le 3 non aprire'] : ['1. light on till 6', '2. no room 9', '3. let 9 ring', '4. door shut after 3']).forEach((l, i) => c.fillText(l, 40, 170 + i * 70));
     c.strokeStyle = '#a3261f'; c.lineWidth = 6; c.strokeRect(14, 14, w - 28, h - 28); }, 512, 480);
   W.card = new THREE.Mesh(new THREE.PlaneGeometry(0.2, 0.19), new THREE.MeshStandardMaterial({ map: cardTex, roughness: 0.9 }));
   W.card.rotation.x = -Math.PI / 2; W.card.position.set(-6.4, 1.065, 1.95); W.card.receiveShadow = true; W.card.castShadow = true; counter.add(W.card);

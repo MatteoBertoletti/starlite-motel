@@ -10,6 +10,7 @@ ap.add_argument('--from', dest='f0', type=int, default=0); ap.add_argument('--to
 ap.add_argument('--fps', type=int, default=30); ap.add_argument('--out', required=True)
 ap.add_argument('--scale', type=float, default=1.0); ap.add_argument('--events', default='')
 ap.add_argument('--root', default=os.getcwd()); ap.add_argument('--port', type=int, default=8765)
+ap.add_argument('--qs', default='', help='extra query, e.g. lang=it&aspect=169')
 A = ap.parse_args()
 
 async def main():
@@ -18,9 +19,9 @@ async def main():
     try:
         async with async_playwright() as p:
             b = await p.chromium.launch(args=['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-gpu-rasterization'])
-            pg = await b.new_page(viewport={'width': 1080, 'height': 1920})
+            pg = await b.new_page(viewport={'width': 1920, 'height': 1920})
             pg.on('pageerror', lambda e: print('[pageerror]', e, flush=True))
-            await pg.goto(f'http://127.0.0.1:{A.port}/film.html?scale={A.scale}')
+            await pg.goto(f'http://127.0.0.1:{A.port}/film.html?scale={A.scale}' + ('&' + A.qs if A.qs else ''))
             await pg.wait_for_function('window.ready === true', timeout=300000)
             ev = await pg.evaluate('window.EVENTS')
             if A.events: json.dump(ev, open(A.events, 'w'), indent=1)

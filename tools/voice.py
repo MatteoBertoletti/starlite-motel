@@ -130,10 +130,17 @@ for L in S['lines']:
     tt, score = align(toks, heard)
     dur = sf.info(final).duration
     # captions: anchor word -> its real start
+    # snap each caption to the real onset of its word in the final audio (whisper starts are often early)
+    yf, _ = sf.read(final, dtype='float32'); w10 = SR // 100
+    env = 20 * np.log10(np.sqrt(np.convolve(yf ** 2, np.ones(w10) / w10, mode='same')) + 1e-9); thr = env.max() - 32
+    def onset(a):
+        i0 = max(0, int((a - 0.06) * SR)); i1 = min(len(env), int((a + 0.45) * SR))
+        hit = np.where(env[i0:i1] > thr)[0]
+        return (i0 + hit[0]) / SR if len(hit) else a
     caps, k = [], 0
     for anchor, text in L['caps']:
         j = toks.index(anchor, k) if anchor in toks[k:] else k
-        caps.append({'text': text, 't': round(t + tt[j][0], 3), 'tok': j}); k = j + 1
+        caps.append({'text': text, 't': round(t + onset(tt[j][0]), 3), 'tok': j}); k = j + 1
     timeline.append({'id': L['id'], 'who': L['who'], 'say': L['say'], 'file': final, 'start': round(t, 3), 'dur': round(dur, 3),
                      'end': round(t + dur, 3), 'tokens': [{'w': w, 's': round(t + a, 3), 'e': round(t + b, 3)} for w, (a, b) in zip(toks, tt)],
                      'caps': caps, 'heard': ' '.join(w for w, _, _ in heard), 'match': round(score, 2)})

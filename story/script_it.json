@@ -2,7 +2,7 @@
   "title": "Lo Starlite Motel — Giorno 1",
   "lang": "it",
   "voices": {
-    "N":     { "voice": "im_nicola", "lang": "i", "speed": 0.95 },
+    "N":     { "voice": "im_nicola", "lang": "i", "speed": 1.0 },
     "YOU":   { "voice": "im_nicola", "lang": "i", "speed": 0.95, "pitch": 1.06, "fx": "tape" },
     "OWNER": { "voice": "im_nicola", "lang": "i", "speed": 0.9,  "pitch": 0.84, "fx": "door" }
   },
@@ -49,8 +49,8 @@
       "caps": [["non", "NON"], ["farlo", "FARLO *ENTRARE"]] },
     { "id": 17, "who": "N", "say": "Le tre e quaranta. La lampada comincia a sfarfallare.",
       "caps": [["le", "*03:40"], ["lampada", "LA LAMPADA"], ["sfarfallare", "*SFARFALLA"]] },
-    { "id": 18, "who": "N", "say": "Ogni volta che si spegne, sono più vicini.",
-      "caps": [["ogni", "OGNI VOLTA"], ["si", "SI *SPEGNE"], ["sono", "PIÙ *VICINI"]] },
+    { "id": 18, "who": "N", "say": "Quando si spegne, sono più vicini.",
+      "caps": [["quando", "QUANDO SI *SPEGNE"], ["sono", "PIÙ *VICINI"]] },
     { "id": 19, "who": "N", "say": "Quando resta accesa, indietreggiano.", "gap": 0.4,
       "caps": [["quando", "QUANDO RESTA"], ["indietreggiano", "*INDIETREGGIANO"]] },
     { "id": 20, "who": "N", "say": "Le quattro e quarantaquattro. Un camion prende la curva troppo veloce.", "gap": 0.35,

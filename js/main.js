@@ -10,10 +10,14 @@ import { bakeCrash, sampleCrash, CRASH } from './physics.js';
 import { LensShader } from './lens.js';
 import * as O from './overlay.js';
 
-const FW = 1080, FH = 1920, FPS = 30;
 const Q = new URLSearchParams(location.search);
+const LANG = Q.get('lang') || 'en';
+const LAND = Q.get('aspect') === '169';                   // 16:9 version
+const FW = LAND ? 1920 : 1080, FH = LAND ? 1080 : 1920, FPS = 30;
 const SCALE = parseFloat(Q.get('scale') || '1');          // preview renders at lower res
 const out = document.getElementById('film'), ctx = out.getContext('2d');
+out.width = FW; out.height = FH; out.style.width = FW + 'px'; out.style.height = FH + 'px';
+O.setSize(FW, FH);
 
 // ---------- fonts (local files only) ----------
 const fonts = [
@@ -23,12 +27,13 @@ const fonts = [
 await Promise.all(fonts.map(f => f.load().then(ff => document.fonts.add(ff))));
 
 // ---------- timing: real word times from the narration, or an estimate before it exists ----------
-const SCRIPT = await (await fetch('./story/script.json')).json();
+const SFX_ = LANG === 'en' ? '' : '_' + LANG;
+const SCRIPT = await (await fetch(`./story/script${SFX_}.json`)).json();
 let TIM = null;
-try { const r = await fetch('./story/timing.json', { cache: 'no-store' }); if (r.ok) TIM = await r.json(); } catch (e) { }
+try { const r = await fetch(`./story/timing${SFX_}.json`, { cache: 'no-store' }); if (r.ok) TIM = await r.json(); } catch (e) { }
 if (!TIM) TIM = estimateTiming(SCRIPT);
 function estimateTiming(S) {
-  const norm = s => s.toLowerCase().replace(/-/g, ' ').replace(/'/g, '').replace(/[^a-z ]/g, ' ').split(/\s+/).filter(Boolean);
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/-/g, ' ').replace(/'/g, '').replace(/[^a-z ]/g, ' ').split(/\s+/).filter(Boolean);
   let t = S.start_pad; const lines = [], caps = [];
   for (const L of S.lines) {
     const toks = norm(L.say), dur = 0.35 + toks.length * 0.3;
@@ -44,6 +49,8 @@ function estimateTiming(S) {
 const LN = id => TIM.lines.find(l => l.id === id);
 const tok = (id, w, n = 0) => { const ts = LN(id).tokens.filter(x => x.w === w); return (ts[n] || ts[0] || LN(id).tokens[0]).s; };
 const cut = id => id === 1 ? 0 : LN(id).start - 0.1;           // cut a hair before the voice
+const AN = SCRIPT.anchors;
+const tokA = (key, n = 0) => tok(AN[key][0], AN[key][1], n);
 const DUR = TIM.duration;
 
 // ---------- renderer ----------
@@ -53,12 +60,12 @@ renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, FW / FH, 0.02, 400);
-const W = buildWorld(scene);
+const W = buildWorld(scene, { lang: LANG });
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
 composer.addPass(new UnrealBloomPass(new THREE.Vector2(FW * SCALE / 2, FH * SCALE / 2), 0.75, 0.55, 0.82));
 composer.addPass(new OutputPass());
-const lens = new ShaderPass(LensShader); composer.addPass(lens);
+const lens = new ShaderPass(LensShader); composer.addPass(lens); lens.uniforms.uAspect.value = FW / FH;
 
 // ---------- cast ----------
 const you = new Stick({ cap: '#d8261f' });                               // the mark: a red cap
@@ -73,16 +80,16 @@ const flashGlow = new THREE.Mesh(new THREE.SphereGeometry(0.035, 10, 8), new THR
 
 // ---------- story events (all derived from word times) ----------
 const crash = bakeCrash(12, 120);
-const T_HIT = tok(21, 'hits');
+const T_HIT = tokA('hits');
 const SIM0 = T_HIT - crash.hitTime;
 const T_BLACK = T_HIT + 0.45;
-const T_LAMP_OUT = tok(22, 'goes');
+const T_LAMP_OUT = tokA('goes');
 const T_R9 = cut(11);
-const T_RING0 = tok(12, 'phone'), T_PICK = tok(14, 'picks');
+const T_RING0 = tokA('phone'), T_PICK = tokA('picks');
 const RING_P = (T_PICK - T_RING0) / 9;
-const T_FLICK0 = tok(17, 'flicker'), T_HOLD = tok(19, 'holds');
-const KNOCKS = [tok(23, 'knock', 0), tok(23, 'knock', 1)];
-const T_GONE = tok(27, 'gone'), T_REACH = tok(27, 'reach');
+const T_FLICK0 = tokA('flicker'), T_HOLD = tokA('holds');
+const KNOCKS = [tokA('knock', 0), tokA('knock', 1)];
+const T_GONE = tokA('gone'), T_REACH = tokA('reach');
 const T_DOOR_IN = cut(7) + 0.2;                                  // the guest pushes the office door
 const T_STEER = SIM0 + 1.6;
 
@@ -97,6 +104,20 @@ const FLICK_HZ = 7;
 const lampDark = t => t > T_FLICK0 && t < T_HOLD && hash(Math.floor(t * FLICK_HZ)) < 0.38;
 function darkCount(t) { let n = 0, prev = false; for (let x = T_FLICK0; x <= Math.min(t, T_HOLD); x += 1 / FLICK_HZ) { const d = lampDark(x + 0.001); if (d && !prev) n++; prev = d; } return n; }
 
+// ---------- words on screen ----------
+const STR = {
+  en: { day: 'DAY 1', rule: n => `RULE ${n}`, lcdRing: 'INCOMING · LINE 1', lcdIdle: 'LINE 1', room: 'RM 9', impossible: 'IMPOSSIBLE',
+        choiceTitle: 'WHAT DO YOU DO?', openA: 'OPEN IT', openB: 'get the light back', stayA: 'STAY IN THE DARK', stayB: 'with them', comment: 'COMMENT BELOW',
+        follow: 'FOLLOW', forDay: 'FOR DAY 2', title: 'THE STARLITE MOTEL', h24: false,
+        stick: { 1: [[{ w: 'LIGHT ON' }], [{ w: 'TILL' }, { w: '6 AM', k: 1 }]], 2: [[{ w: 'NO' }, { w: 'ROOM 9', k: 1 }]],
+                 3: [[{ w: 'IF' }, { w: '9', k: 1 }, { w: 'CALLS' }], [{ w: 'LET IT RING' }]], 4: [[{ w: 'AFTER' }, { w: '3 AM', k: 1 }], [{ w: 'NEVER OPEN' }]] } },
+  it: { day: 'GIORNO 1', rule: n => `REGOLA ${n}`, lcdRing: 'IN ARRIVO · LINEA 1', lcdIdle: 'LINEA 1', room: 'CAM 9', impossible: 'IMPOSSIBILE',
+        choiceTitle: 'COSA FAI?', openA: 'APRI', openB: 'riaccendi la luce', stayA: 'RESTA AL BUIO', stayB: 'con loro', comment: 'COMMENTA QUI SOTTO',
+        follow: 'SEGUI', forDay: 'PER IL GIORNO 2', title: 'LO STARLITE MOTEL', h24: true,
+        stick: { 1: [[{ w: 'LUCE ACCESA' }], [{ w: 'FINO ALLE' }, { w: '6', k: 1 }]], 2: [[{ w: 'LA' }, { w: 'STANZA 9', k: 1 }], [{ w: 'NON ESISTE' }]],
+                 3: [[{ w: 'SE CHIAMA LA' }, { w: '9', k: 1 }], [{ w: 'LASCIA SQUILLARE' }]], 4: [[{ w: 'DOPO LE' }, { w: '3', k: 1 }], [{ w: 'NON APRIRE' }]] } },
+}[LANG];
+
 // ---------- story clock ----------
 const CLOCK = [[0, 1438], [cut(7), 1471], [cut(12), 1570], [cut(17), 1660], [cut(20), 1724], [DUR, 1732]];
 function clockAt(t) {
@@ -107,6 +128,7 @@ function clockAt(t) {
       m = t >= b ? mb : (mb - ma <= 6 ? lerp(ma, mb, (t - a) / (b - a)) : (t < hold ? Math.min(ma + (t - a) / 5, mb) : lerp(base, mb, smooth((t - hold) / (b - hold))))); }
   }
   m = Math.floor(m) % 1440; const h = Math.floor(m / 60), mm = m % 60;
+  if (STR.h24) return `${String(h).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
   return `${((h + 11) % 12) + 1}:${String(mm).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`;
 }
 
@@ -146,7 +168,7 @@ function worldState(t) {
   W.reels.forEach((r, i) => r.rotation.y = -spin * (i ? 1.3 : 1));
 
   // the card slides in on "slides", the hand withdraws on "rules"
-  const l2 = LN(2), ts = tok(2, 'slides'), tr = tok(2, 'rules');
+  const l2 = LN(2), ts = tokA('slides'), tr = tokA('rules');
   const slide = smooth((t - ts + 0.1) / 0.7), back = smooth((t - tr) / 0.5);
   W.card.visible = t > l2.start - 1 && t < cut(12);
   W.card.position.x = lerp(-6.25, -6.9, slide); W.card.rotation.z = lerp(0.35, 0.06, slide);
@@ -234,15 +256,11 @@ function backgroundCast(t) {
 }
 
 // ---------- shots ----------
-const PEEP = { fish: 0.85, circle: 0.535, vig: 0.2, chroma: 0.006, exposure: 1.15 };
+const PEEP = { fish: 0.85, circle: LAND ? 0.93 : 0.535, vig: 0.2, chroma: 0.006, exposure: 1.15 };
 const SH = {};       // line id -> { fn(lt, t), lens }
-function lookCam(p, at, fov) { camera.position.copy(p); camera.fov = fov; camera.updateProjectionMatrix(); camera.lookAt(at); }
-const STICK = {
-  1: [1, [[{ w: 'LIGHT ON' }], [{ w: 'TILL' }, { w: '6 AM', k: 1 }]]],
-  2: [2, [[{ w: 'NO' }, { w: 'ROOM 9', k: 1 }]]],
-  3: [3, [[{ w: 'IF' }, { w: '9', k: 1 }, { w: 'CALLS' }], [{ w: 'LET IT RING' }]]],
-  4: [4, [[{ w: 'AFTER' }, { w: '3 AM', k: 1 }], [{ w: 'NEVER OPEN' }]]],
-};
+const LANDK = 0.62;     // 16:9: vertical lens = portrait lens squeezed, so subjects stay the same size and we see more sideways
+function lookCam(p, at, fov) { camera.position.copy(p); camera.fov = LAND ? 2 * Math.atan(Math.tan(fov * Math.PI / 360) * LANDK) * 180 / Math.PI : fov; camera.aspect = FW / FH; camera.updateProjectionMatrix(); camera.lookAt(at); }
+const STICK = { 1: [1, STR.stick[1]], 2: [2, STR.stick[2]], 3: [3, STR.stick[3]], 4: [4, STR.stick[4]] };
 
 // 1 · opener: tight on your face, pull out through the window
 SH[1] = { fn: (lt) => {
@@ -254,7 +272,7 @@ SH[1] = { fn: (lt) => {
 } };
 // 2 · the owner slides you a card — macro, top-down on the counter
 SH[2] = { lens: { exposure: 0.9 }, fn: (lt, t) => {
-  const r = tok(2, 'rules') - cut(2);
+  const r = tokA('rules') - cut(2);
   if (lt < r - 0.05) lookCam(v3(-6.75 - lt * 0.03, 1.72, 2.6), v3(-6.6, 1.06, 1.93), 44);
   else lookCam(v3(-6.9, 1.4 - (lt - r) * 0.03, 2.02), v3(-6.9, 1.06, 1.94), 40);   // the card itself
 } };
@@ -300,7 +318,7 @@ SH[10] = { fn: (lt, t) => {
 SH[11] = { fn: (lt, t) => {
   guest.mesh.visible = true; guest.mesh.position.set(28.2, 0, 0.85);
   guest.pose = { face: 'back', hip: [0, 0.94], arms: [{ sh: -0.12, el: 0.05 }, { sh: 0.12, el: -0.05 }], wet: t };
-  const u = smooth(clamp01((t - tok(11, 'hour')) / 1.4));
+  const u = smooth(clamp01((t - tokA('hour')) / 1.4));
   lookCam(v3(lerp(24.9, 27.2, u) + lt * 0.15, lerp(1.5, 1.66, u), lerp(5.6, 2.2, u) - lt * 0.1), v3(lerp(28.6, 28.2, u), lerp(1.4, 1.64, u), 0.3), lerp(52, 30, u));
 } };
 // 12 · POV: the phone lights up — Room 9
@@ -399,19 +417,21 @@ window.seek = (t) => {
   ctx.restore();
   if (cfg.phone) {
     const ringing = t > T_RING0 && t < T_PICK;
-    O.phonePOV(ctx, t - T_RING0, { ring: ringing && ((t - T_RING0) / RING_P) % 1 < 0.55, rings: Math.min(9, Math.max(1, Math.ceil((t - T_RING0) / RING_P))), pull: cfg.pull ? smooth(lt / 0.6) : 0 });
+    O.phonePOV(ctx, t - T_RING0, { ring: ringing && ((t - T_RING0) / RING_P) % 1 < 0.55, rings: Math.min(9, Math.max(1, Math.ceil((t - T_RING0) / RING_P))), pull: cfg.pull ? smooth(lt / 0.6) : 0,
+      lcdRing: STR.lcdRing, lcdIdle: STR.lcdIdle, label: STR.room });
   }
-  if (s.sticker) O.sticker(ctx, s.sticker[0], s.sticker[1], lt);
-  if (s.broken) O.brokenSticker(ctx, t - T_LAMP_OUT);
+  const SY = LAND ? 300 : 470, SS = LAND ? 0.62 : 1;
+  if (s.sticker) O.sticker(ctx, STR.rule(s.sticker[0]), s.sticker[1], lt, SY, -0.07, SS);
+  if (s.broken) O.brokenSticker(ctx, t - T_LAMP_OUT, STR, SY, SS);
   const showHud = !s.choice && !s.end;
-  if (showHud) O.hud(ctx, 1, clockAt(t), t);
-  if (s.choice) O.choice(ctx, lt);
-  if (s.end) O.endCard(ctx, lt);
+  if (showHud) O.hud(ctx, STR.day, clockAt(t), t);
+  if (s.choice) O.choice(ctx, lt, STR);
+  if (s.end) O.endCard(ctx, lt, STR);
   if (!s.choice && !s.end) {
     const c = TIM.captions.find(c => t >= c.t && t < c.end);
     if (c) {
       const words = c.text.split(' ').map(w => w.startsWith('*') ? { w: w.slice(1), k: 1 } : { w });
-      O.caption(ctx, words, t - c.t, cfg.phone ? 470 : (s.sticker ? 1500 : 1440));
+      O.caption(ctx, words, t - c.t, LAND ? (cfg.phone ? 150 : 960) : (cfg.phone ? 470 : (s.sticker ? 1500 : 1440)), LAND ? 112 : 132);
     }
   }
 };
@@ -419,7 +439,7 @@ window.seek = (t) => {
 // events for the sound mix (one sound per event), read by the renderer and saved next to the frames
 window.EVENTS = {
   duration: DUR, estimated: !!TIM.estimated,
-  stickers: [3, 4, 5, 6].map(i => cut(i)), slide: tok(2, 'slides'), doorShut: tok(2, 'rules') + 0.4,
+  stickers: [3, 4, 5, 6].map(i => cut(i)), slide: tokA('slides'), doorShut: tokA('rules') + 0.4,
   doorIn: T_DOOR_IN, doorClose: T_DOOR_IN + 2.0, steps10: [cut(10), cut(11)],
   ringStart: T_RING0, ringPeriod: RING_P, rings: 9, pick: T_PICK, tapeSpan: [T_PICK, cut(17)],
   flicker: [T_FLICK0, T_HOLD], steer: T_STEER, truckIn: SIM0, hit: T_HIT, blackout: T_BLACK, lampOut: T_LAMP_OUT,

@@ -10,7 +10,7 @@ async def main():
     try:
         async with async_playwright() as p:
             b = await p.chromium.launch(args=['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'])
-            pg = await b.new_page(viewport={'width': 1080, 'height': 1920})
+            pg = await b.new_page(viewport={'width': 1920, 'height': 1920})
             pg.on('console', lambda m: print('[console]', m.type, m.text) if m.type in ('error', 'warning') else None)
             pg.on('pageerror', lambda e: print('[pageerror]', e))
             await pg.goto('http://127.0.0.1:8765/film.html' + os.environ.get('QS',''))
