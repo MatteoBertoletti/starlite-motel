@@ -1,0 +1,32 @@
+ 1 N       0.25-  5.69  match=1.00  heard: Immagina, sono le ventitré e cinquantotto, e sei il portiere di notte di un motel vuoto.
+ 2 N       5.97-  9.11  match=1.00  heard: Il proprietario ti passa un biglietto. Quattro regole.
+ 3 N       9.39- 12.81  match=0.90  heard: Tieni accesa la luce dell 'ufficio fino alle sei del mattino.
+ 4 N      13.09- 14.93  match=1.00  heard: La stanza nove non esiste.
+ 5 N      15.21- 17.84  match=1.00  heard: Se chiama la stanza nove, lascia squillare.
+ 6 N      18.12- 20.36  match=1.00  heard: Dopo le tre, non aprire mai la porta.
+ 7 N      20.81- 23.89  match=1.00  heard: Mezzanotte e trentuno. Entra un cliente, fradicio.
+ 8 N      24.17- 25.77  match=1.00  heard: Vuole la stanza nove.
+ 9 N      26.05- 28.74  match=0.88  heard: Dici quello che c 'è scritto. Siamo al completo.
+10 N      29.02- 31.60  match=1.00  heard: Non discute. Esce, e cammina lungo le stanze.
+11 N      31.88- 35.32  match=0.85  heard: E si ferma davanti a una nona porta, che un 'ora fa non c 'era.
+12 N      35.77- 38.85  match=1.00  heard: Le due e dieci. Si accende il telefono. Stanza nove.
+13 N      39.13- 40.56  match=1.00  heard: Lo lasci squillare.
+14 N      40.84- 43.23  match=1.00  heard: Nove squilli. Poi parte la segreteria.
+15 N      43.51- 45.46  match=1.00  heard: E la voce sul nastro è la tua.
+16 YOU    45.91- 47.58  match=1.00  heard: Non farlo entrare.
+17 N      48.28- 51.51  match=1.00  heard: Le tre e quaranta. La lampada comincia a sfarfallare.
+18 N      51.79- 53.88  match=1.00  heard: Quando si spegne, sono più vicini.
+19 N      54.16- 56.50  match=1.00  heard: Quando resta accesa, indietreggiano.
+20 N      56.90- 61.23  match=1.00  heard: Le quattro e quarantaquattro. Un camion prende la curva troppo veloce.
+21 N      61.58- 62.70  match=1.00  heard: Centra il palo.
+22 N      63.30- 65.00  match=1.00  heard: E la tua luce si spegne.
+23 N      65.90- 66.65  match=1.00  heard: Toc. Toc.
+24 OWNER  67.00- 70.80  match=1.00  heard: Sono il proprietario. Ho la benzina per il generatore.
+25 N      71.08- 74.04  match=1.00  heard: Dallo spioncino il proprietario con una tanica.
+26 N      74.32- 76.06  match=1.00  heard: Porta un cappellino rosso.
+27 N      76.56- 78.70  match=0.89  heard: Ti tocchi la testa. Il tuo non c 'è più.
+28 N      79.30- 82.99  match=1.00  heard: Apri la porta e riaccendi la luce? O resti al buio... con loro?
+29 N      83.49- 86.18  match=1.00  heard: Commenta qui sotto. Segui per il giorno due.
+
+TOTAL 88.78s
+caption failures: []
