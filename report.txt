@@ -1,0 +1,32 @@
+ 1 N       0.25-  5.41  match=1.00  heard: Imagine it's eleven fifty -eight P M, and you're the night clerk at an empty motel.
+ 2 N       5.69-  8.53  match=1.00  heard: The owner slides you a card. Four rules.
+ 3 N       8.81- 11.23  match=1.00  heard: Keep the office light on until six A M.
+ 4 N      11.51- 12.82  match=1.00  heard: There is no Room Nine.
+ 5 N      13.10- 14.98  match=1.00  heard: If Room Nine calls, let it ring.
+ 6 N      15.26- 18.12  match=1.00  heard: After three A M, never open the door.
+ 7 N      18.57- 21.68  match=1.00  heard: Twelve thirty -one. A guest walks in, soaking wet.
+ 8 N      21.96- 23.25  match=1.00  heard: He wants Room Nine.
+ 9 N      23.53- 25.86  match=1.00  heard: You say what the card says. We're full.
+10 N      26.14- 28.70  match=1.00  heard: He doesn't argue. He walks out, down the row.
+11 N      28.98- 32.14  match=1.00  heard: And stops at a ninth door that wasn't there an hour ago.
+12 N      32.59- 35.15  match=1.00  heard: Two ten. The phone lights up. Room Nine.
+13 N      35.43- 36.50  match=1.00  heard: You let it ring.
+14 N      36.78- 39.08  match=1.00  heard: Nine rings. Then the machine picks up.
+15 N      39.36- 41.78  match=1.00  heard: And the voice on the tape... is yours.
+16 YOU    42.23- 43.36  match=1.00  heard: Don't let him in.
+17 N      44.06- 46.58  match=1.00  heard: Three forty. The lamp starts to flicker.
+18 N      46.86- 49.15  match=1.00  heard: Every time it goes dark, they're closer.
+19 N      49.43- 50.98  match=1.00  heard: When it holds, they back away.
+20 N      51.38- 54.59  match=1.00  heard: Four forty -four. A truck takes the bend too fast.
+21 N      54.94- 56.07  match=1.00  heard: It hits the pole.
+22 N      56.67- 57.99  match=1.00  heard: And your light goes out.
+23 N      58.89- 59.82  match=1.00  heard: Knock. Knock.
+24 OWNER  60.17- 63.79  match=1.00  heard: It's the owner. I've got fuel for the generator.
+25 N      64.07- 67.21  match=1.00  heard: Through the peephole, the owner, holding a gas can.
+26 N      67.49- 68.93  match=1.00  heard: He's wearing a red cap.
+27 N      69.43- 71.17  match=1.00  heard: You reach for yours. It's gone.
+28 N      71.77- 75.81  match=1.00  heard: Open the door and get the light back? Or stay in the dark... with them?
+29 N      76.31- 78.50  match=1.00  heard: Comment below. Follow for Day Two.
+
+TOTAL 81.10s
+caption failures: [('FUEL', 61.745, -42.0)]
