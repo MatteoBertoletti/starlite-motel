@@ -1,0 +1,2430 @@
+{
+ "duration": 88.776,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Immagina: sono le ventitr\u00e9 e cinquantotto, e sei il portiere di notte di un motel vuoto.",
+   "file": "out/audio/lines/01.wav",
+   "start": 0.25,
+   "dur": 5.44,
+   "end": 5.69,
+   "tokens": [
+    {
+     "w": "immagina",
+     "s": 0.61,
+     "e": 0.93
+    },
+    {
+     "w": "sono",
+     "s": 1.01,
+     "e": 1.17
+    },
+    {
+     "w": "le",
+     "s": 1.17,
+     "e": 1.29
+    },
+    {
+     "w": "ventitre",
+     "s": 1.29,
+     "e": 1.81
+    },
+    {
+     "w": "e",
+     "s": 1.81,
+     "e": 1.97
+    },
+    {
+     "w": "cinquantotto",
+     "s": 1.97,
+     "e": 2.79
+    },
+    {
+     "w": "e",
+     "s": 3.13,
+     "e": 3.25
+    },
+    {
+     "w": "sei",
+     "s": 3.25,
+     "e": 3.41
+    },
+    {
+     "w": "il",
+     "s": 3.41,
+     "e": 3.55
+    },
+    {
+     "w": "portiere",
+     "s": 3.55,
+     "e": 4.03
+    },
+    {
+     "w": "di",
+     "s": 4.03,
+     "e": 4.21
+    },
+    {
+     "w": "notte",
+     "s": 4.21,
+     "e": 4.61
+    },
+    {
+     "w": "di",
+     "s": 4.61,
+     "e": 4.71
+    },
+    {
+     "w": "un",
+     "s": 4.71,
+     "e": 4.79
+    },
+    {
+     "w": "motel",
+     "s": 4.79,
+     "e": 5.09
+    },
+    {
+     "w": "vuoto",
+     "s": 5.09,
+     "e": 5.55
+    }
+   ],
+   "caps": [
+    {
+     "text": "IMMAGINA",
+     "t": 0.55,
+     "tok": 0,
+     "end": 1.23
+    },
+    {
+     "text": "*23:58",
+     "t": 1.23,
+     "tok": 3,
+     "end": 3.49
+    },
+    {
+     "text": "PORTIERE DI NOTTE",
+     "t": 3.49,
+     "tok": 9,
+     "end": 4.73
+    },
+    {
+     "text": "MOTEL VUOTO",
+     "t": 4.73,
+     "tok": 14,
+     "end": 6.03
+    }
+   ],
+   "heard": "Immagina, sono le ventitr\u00e9 e cinquantotto, e sei il portiere di notte di un motel vuoto.",
+   "match": 1.0
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Il proprietario ti passa un biglietto. Quattro regole.",
+   "file": "out/audio/lines/02.wav",
+   "start": 5.97,
+   "dur": 3.14,
+   "end": 9.11,
+   "tokens": [
+    {
+     "w": "il",
+     "s": 5.97,
+     "e": 6.09
+    },
+    {
+     "w": "proprietario",
+     "s": 6.09,
+     "e": 6.81
+    },
+    {
+     "w": "ti",
+     "s": 6.81,
+     "e": 6.97
+    },
+    {
+     "w": "passa",
+     "s": 6.97,
+     "e": 7.25
+    },
+    {
+     "w": "un",
+     "s": 7.25,
+     "e": 7.43
+    },
+    {
+     "w": "biglietto",
+     "s": 7.43,
+     "e": 8.03
+    },
+    {
+     "w": "quattro",
+     "s": 8.09,
+     "e": 8.47
+    },
+    {
+     "w": "regole",
+     "s": 8.47,
+     "e": 8.93
+    }
+   ],
+   "caps": [
+    {
+     "text": "IL PROPRIETARIO",
+     "t": 6.03,
+     "tok": 1,
+     "end": 7.37
+    },
+    {
+     "text": "UN BIGLIETTO",
+     "t": 7.37,
+     "tok": 5,
+     "end": 8.03
+    },
+    {
+     "text": "*4 *REGOLE",
+     "t": 8.03,
+     "tok": 6,
+     "end": 9.416
+    }
+   ],
+   "heard": "Il proprietario ti passa un biglietto. Quattro regole.",
+   "match": 1.0
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Tieni accesa la luce dell'ufficio fino alle sei del mattino.",
+   "file": "out/audio/lines/03.wav",
+   "start": 9.39,
+   "dur": 3.42,
+   "end": 12.81,
+   "tokens": [
+    {
+     "w": "tieni",
+     "s": 9.39,
+     "e": 9.65
+    },
+    {
+     "w": "accesa",
+     "s": 9.65,
+     "e": 10.17
+    },
+    {
+     "w": "la",
+     "s": 10.17,
+     "e": 10.23
+    },
+    {
+     "w": "luce",
+     "s": 10.23,
+     "e": 10.51
+    },
+    {
+     "w": "dellufficio",
+     "s": 10.51,
+     "e": 11.17
+    },
+    {
+     "w": "fino",
+     "s": 11.17,
+     "e": 11.43
+    },
+    {
+     "w": "alle",
+     "s": 11.43,
+     "e": 11.69
+    },
+    {
+     "w": "sei",
+     "s": 11.69,
+     "e": 11.91
+    },
+    {
+     "w": "del",
+     "s": 11.91,
+     "e": 12.11
+    },
+    {
+     "w": "mattino",
+     "s": 12.11,
+     "e": 12.67
+    }
+   ],
+   "caps": [
+    {
+     "text": "LUCE ACCESA",
+     "t": 9.416,
+     "tok": 0,
+     "end": 11.11
+    },
+    {
+     "text": "FINO ALLE *6",
+     "t": 11.11,
+     "tok": 5,
+     "end": 13.17
+    }
+   ],
+   "heard": "Tieni accesa la luce dell 'ufficio fino alle sei del mattino.",
+   "match": 0.9
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "La stanza nove non esiste.",
+   "file": "out/audio/lines/04.wav",
+   "start": 13.09,
+   "dur": 1.84,
+   "end": 14.93,
+   "tokens": [
+    {
+     "w": "la",
+     "s": 13.09,
+     "e": 13.23
+    },
+    {
+     "w": "stanza",
+     "s": 13.23,
+     "e": 13.63
+    },
+    {
+     "w": "nove",
+     "s": 13.63,
+     "e": 13.91
+    },
+    {
+     "w": "non",
+     "s": 13.91,
+     "e": 14.11
+    },
+    {
+     "w": "esiste",
+     "s": 14.11,
+     "e": 14.73
+    }
+   ],
+   "caps": [
+    {
+     "text": "LA *STANZA *9",
+     "t": 13.17,
+     "tok": 1,
+     "end": 13.85
+    },
+    {
+     "text": "NON ESISTE",
+     "t": 13.85,
+     "tok": 3,
+     "end": 15.244
+    }
+   ],
+   "heard": "La stanza nove non esiste.",
+   "match": 1.0
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Se chiama la stanza nove, lascia squillare.",
+   "file": "out/audio/lines/05.wav",
+   "start": 15.21,
+   "dur": 2.63,
+   "end": 17.84,
+   "tokens": [
+    {
+     "w": "se",
+     "s": 15.21,
+     "e": 15.37
+    },
+    {
+     "w": "chiama",
+     "s": 15.37,
+     "e": 15.67
+    },
+    {
+     "w": "la",
+     "s": 15.67,
+     "e": 15.83
+    },
+    {
+     "w": "stanza",
+     "s": 15.83,
+     "e": 16.23
+    },
+    {
+     "w": "nove",
+     "s": 16.23,
+     "e": 16.53
+    },
+    {
+     "w": "lascia",
+     "s": 16.65,
+     "e": 17.01
+    },
+    {
+     "w": "squillare",
+     "s": 17.01,
+     "e": 17.65
+    }
+   ],
+   "caps": [
+    {
+     "text": "SE CHIAMA LA *9",
+     "t": 15.244,
+     "tok": 0,
+     "end": 16.59
+    },
+    {
+     "text": "LASCIA SQUILLARE",
+     "t": 16.59,
+     "tok": 5,
+     "end": 18.149
+    }
+   ],
+   "heard": "Se chiama la stanza nove, lascia squillare.",
+   "match": 1.0
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "Dopo le tre, non aprire mai la porta.",
+   "file": "out/audio/lines/06.wav",
+   "start": 18.12,
+   "dur": 2.24,
+   "end": 20.36,
+   "tokens": [
+    {
+     "w": "dopo",
+     "s": 18.12,
+     "e": 18.44
+    },
+    {
+     "w": "le",
+     "s": 18.44,
+     "e": 18.5
+    },
+    {
+     "w": "tre",
+     "s": 18.5,
+     "e": 18.76
+    },
+    {
+     "w": "non",
+     "s": 18.86,
+     "e": 18.96
+    },
+    {
+     "w": "aprire",
+     "s": 18.96,
+     "e": 19.32
+    },
+    {
+     "w": "mai",
+     "s": 19.32,
+     "e": 19.54
+    },
+    {
+     "w": "la",
+     "s": 19.54,
+     "e": 19.7
+    },
+    {
+     "w": "porta",
+     "s": 19.7,
+     "e": 20.02
+    }
+   ],
+   "caps": [
+    {
+     "text": "DOPO LE *3",
+     "t": 18.149,
+     "tok": 0,
+     "end": 18.8
+    },
+    {
+     "text": "*NON APRIRE",
+     "t": 18.8,
+     "tok": 3,
+     "end": 19.64
+    },
+    {
+     "text": "LA PORTA",
+     "t": 19.64,
+     "tok": 7,
+     "end": 20.842
+    }
+   ],
+   "heard": "Dopo le tre, non aprire mai la porta.",
+   "match": 1.0
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Mezzanotte e trentuno. Entra un cliente, fradicio.",
+   "file": "out/audio/lines/07.wav",
+   "start": 20.81,
+   "dur": 3.08,
+   "end": 23.89,
+   "tokens": [
+    {
+     "w": "mezzanotte",
+     "s": 20.81,
+     "e": 21.39
+    },
+    {
+     "w": "e",
+     "s": 21.39,
+     "e": 21.51
+    },
+    {
+     "w": "trentuno",
+     "s": 21.51,
+     "e": 22.05
+    },
+    {
+     "w": "entra",
+     "s": 22.19,
+     "e": 22.51
+    },
+    {
+     "w": "un",
+     "s": 22.51,
+     "e": 22.61
+    },
+    {
+     "w": "cliente",
+     "s": 22.61,
+     "e": 23.19
+    },
+    {
+     "w": "fradicio",
+     "s": 23.23,
+     "e": 23.71
+    }
+   ],
+   "caps": [
+    {
+     "text": "*00:31",
+     "t": 20.842,
+     "tok": 0,
+     "end": 22.13
+    },
+    {
+     "text": "UN CLIENTE",
+     "t": 22.13,
+     "tok": 3,
+     "end": 23.17
+    },
+    {
+     "text": "*FRADICIO",
+     "t": 23.17,
+     "tok": 6,
+     "end": 24.204
+    }
+   ],
+   "heard": "Mezzanotte e trentuno. Entra un cliente, fradicio.",
+   "match": 1.0
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "Vuole la stanza nove.",
+   "file": "out/audio/lines/08.wav",
+   "start": 24.17,
+   "dur": 1.6,
+   "end": 25.77,
+   "tokens": [
+    {
+     "w": "vuole",
+     "s": 24.17,
+     "e": 24.47
+    },
+    {
+     "w": "la",
+     "s": 24.47,
+     "e": 24.61
+    },
+    {
+     "w": "stanza",
+     "s": 24.61,
+     "e": 25.13
+    },
+    {
+     "w": "nove",
+     "s": 25.13,
+     "e": 25.43
+    }
+   ],
+   "caps": [
+    {
+     "text": "VUOLE",
+     "t": 24.204,
+     "tok": 0,
+     "end": 24.41
+    },
+    {
+     "text": "LA *STANZA *9",
+     "t": 24.41,
+     "tok": 1,
+     "end": 26.081
+    }
+   ],
+   "heard": "Vuole la stanza nove.",
+   "match": 1.0
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "say": "Dici quello che c'\u00e8 scritto. Siamo al completo.",
+   "file": "out/audio/lines/09.wav",
+   "start": 26.05,
+   "dur": 2.69,
+   "end": 28.74,
+   "tokens": [
+    {
+     "w": "dici",
+     "s": 26.05,
+     "e": 26.35
+    },
+    {
+     "w": "quello",
+     "s": 26.35,
+     "e": 26.57
+    },
+    {
+     "w": "che",
+     "s": 26.57,
+     "e": 26.77
+    },
+    {
+     "w": "ce",
+     "s": 26.77,
+     "e": 26.93
+    },
+    {
+     "w": "scritto",
+     "s": 26.93,
+     "e": 27.43
+    },
+    {
+     "w": "siamo",
+     "s": 27.55,
+     "e": 27.73
+    },
+    {
+     "w": "al",
+     "s": 27.73,
+     "e": 27.89
+    },
+    {
+     "w": "completo",
+     "s": 27.89,
+     "e": 28.29
+    }
+   ],
+   "caps": [
+    {
+     "text": "DICI",
+     "t": 26.081,
+     "tok": 0,
+     "end": 27.49
+    },
+    {
+     "text": "SIAMO AL *COMPLETO",
+     "t": 27.49,
+     "tok": 5,
+     "end": 29.05
+    }
+   ],
+   "heard": "Dici quello che c '\u00e8 scritto. Siamo al completo.",
+   "match": 0.88
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "Non discute. Esce, e cammina lungo le stanze.",
+   "file": "out/audio/lines/10.wav",
+   "start": 29.02,
+   "dur": 2.58,
+   "end": 31.6,
+   "tokens": [
+    {
+     "w": "non",
+     "s": 29.02,
+     "e": 29.16
+    },
+    {
+     "w": "discute",
+     "s": 29.16,
+     "e": 29.7
+    },
+    {
+     "w": "esce",
+     "s": 29.76,
+     "e": 30.02
+    },
+    {
+     "w": "e",
+     "s": 30.1,
+     "e": 30.16
+    },
+    {
+     "w": "cammina",
+     "s": 30.16,
+     "e": 30.46
+    },
+    {
+     "w": "lungo",
+     "s": 30.46,
+     "e": 30.78
+    },
+    {
+     "w": "le",
+     "s": 30.78,
+     "e": 30.84
+    },
+    {
+     "w": "stanze",
+     "s": 30.84,
+     "e": 31.44
+    }
+   ],
+   "caps": [
+    {
+     "text": "NON DISCUTE",
+     "t": 29.05,
+     "tok": 0,
+     "end": 29.7
+    },
+    {
+     "text": "ESCE",
+     "t": 29.7,
+     "tok": 2,
+     "end": 30.113
+    },
+    {
+     "text": "LUNGO LE STANZE",
+     "t": 30.113,
+     "tok": 4,
+     "end": 31.92
+    }
+   ],
+   "heard": "Non discute. Esce, e cammina lungo le stanze.",
+   "match": 1.0
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "E si ferma davanti a una nona porta, che un'ora fa non c'era.",
+   "file": "out/audio/lines/11.wav",
+   "start": 31.88,
+   "dur": 3.44,
+   "end": 35.32,
+   "tokens": [
+    {
+     "w": "e",
+     "s": 31.88,
+     "e": 31.98
+    },
+    {
+     "w": "si",
+     "s": 31.98,
+     "e": 32.1
+    },
+    {
+     "w": "ferma",
+     "s": 32.1,
+     "e": 32.5
+    },
+    {
+     "w": "davanti",
+     "s": 32.5,
+     "e": 32.9
+    },
+    {
+     "w": "a",
+     "s": 32.9,
+     "e": 32.98
+    },
+    {
+     "w": "una",
+     "s": 32.98,
+     "e": 33.08
+    },
+    {
+     "w": "nona",
+     "s": 33.08,
+     "e": 33.38
+    },
+    {
+     "w": "porta",
+     "s": 33.38,
+     "e": 33.72
+    },
+    {
+     "w": "che",
+     "s": 33.72,
+     "e": 34.04
+    },
+    {
+     "w": "unora",
+     "s": 34.04,
+     "e": 34.34
+    },
+    {
+     "w": "fa",
+     "s": 34.34,
+     "e": 34.54
+    },
+    {
+     "w": "non",
+     "s": 34.54,
+     "e": 34.7
+    },
+    {
+     "w": "cera",
+     "s": 34.7,
+     "e": 35.0
+    }
+   ],
+   "caps": [
+    {
+     "text": "SI FERMA",
+     "t": 31.92,
+     "tok": 1,
+     "end": 33.02
+    },
+    {
+     "text": "UNA *NONA PORTA",
+     "t": 33.02,
+     "tok": 6,
+     "end": 33.98
+    },
+    {
+     "text": "UN'ORA FA",
+     "t": 33.98,
+     "tok": 9,
+     "end": 34.48
+    },
+    {
+     "text": "NON C'ERA",
+     "t": 34.48,
+     "tok": 11,
+     "end": 35.795
+    }
+   ],
+   "heard": "E si ferma davanti a una nona porta, che un 'ora fa non c 'era.",
+   "match": 0.85
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Le due e dieci. Si accende il telefono. Stanza nove.",
+   "file": "out/audio/lines/12.wav",
+   "start": 35.77,
+   "dur": 3.08,
+   "end": 38.85,
+   "tokens": [
+    {
+     "w": "le",
+     "s": 35.77,
+     "e": 35.89
+    },
+    {
+     "w": "due",
+     "s": 35.89,
+     "e": 36.11
+    },
+    {
+     "w": "e",
+     "s": 36.11,
+     "e": 36.23
+    },
+    {
+     "w": "dieci",
+     "s": 36.23,
+     "e": 36.65
+    },
+    {
+     "w": "si",
+     "s": 36.65,
+     "e": 36.79
+    },
+    {
+     "w": "accende",
+     "s": 36.79,
+     "e": 37.17
+    },
+    {
+     "w": "il",
+     "s": 37.17,
+     "e": 37.31
+    },
+    {
+     "w": "telefono",
+     "s": 37.31,
+     "e": 37.85
+    },
+    {
+     "w": "stanza",
+     "s": 37.85,
+     "e": 38.33
+    },
+    {
+     "w": "nove",
+     "s": 38.33,
+     "e": 38.57
+    }
+   ],
+   "caps": [
+    {
+     "text": "*02:10",
+     "t": 35.795,
+     "tok": 0,
+     "end": 36.73
+    },
+    {
+     "text": "SI ACCENDE",
+     "t": 36.73,
+     "tok": 5,
+     "end": 37.79
+    },
+    {
+     "text": "*STANZA *9",
+     "t": 37.79,
+     "tok": 8,
+     "end": 39.163
+    }
+   ],
+   "heard": "Le due e dieci. Si accende il telefono. Stanza nove.",
+   "match": 1.0
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "say": "Lo lasci squillare.",
+   "file": "out/audio/lines/13.wav",
+   "start": 39.13,
+   "dur": 1.43,
+   "end": 40.56,
+   "tokens": [
+    {
+     "w": "lo",
+     "s": 39.13,
+     "e": 39.29
+    },
+    {
+     "w": "lasci",
+     "s": 39.29,
+     "e": 39.53
+    },
+    {
+     "w": "squillare",
+     "s": 39.53,
+     "e": 40.31
+    }
+   ],
+   "caps": [
+    {
+     "text": "LASCI *SQUILLARE",
+     "t": 39.163,
+     "tok": 0,
+     "end": 40.874
+    }
+   ],
+   "heard": "Lo lasci squillare.",
+   "match": 1.0
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Nove squilli. Poi parte la segreteria.",
+   "file": "out/audio/lines/14.wav",
+   "start": 40.84,
+   "dur": 2.39,
+   "end": 43.23,
+   "tokens": [
+    {
+     "w": "nove",
+     "s": 40.84,
+     "e": 41.06
+    },
+    {
+     "w": "squilli",
+     "s": 41.06,
+     "e": 41.6
+    },
+    {
+     "w": "poi",
+     "s": 41.66,
+     "e": 41.84
+    },
+    {
+     "w": "parte",
+     "s": 41.84,
+     "e": 42.12
+    },
+    {
+     "w": "la",
+     "s": 42.12,
+     "e": 42.34
+    },
+    {
+     "w": "segreteria",
+     "s": 42.34,
+     "e": 43.06
+    }
+   ],
+   "caps": [
+    {
+     "text": "*9 SQUILLI",
+     "t": 40.874,
+     "tok": 0,
+     "end": 41.6
+    },
+    {
+     "text": "POI PARTE",
+     "t": 41.6,
+     "tok": 2,
+     "end": 42.28
+    },
+    {
+     "text": "LA SEGRETERIA",
+     "t": 42.28,
+     "tok": 5,
+     "end": 43.65
+    }
+   ],
+   "heard": "Nove squilli. Poi parte la segreteria.",
+   "match": 1.0
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "E la voce sul nastro... \u00e8 la tua.",
+   "file": "out/audio/lines/15.wav",
+   "start": 43.51,
+   "dur": 1.95,
+   "end": 45.46,
+   "tokens": [
+    {
+     "w": "e",
+     "s": 43.51,
+     "e": 43.61
+    },
+    {
+     "w": "la",
+     "s": 43.61,
+     "e": 43.71
+    },
+    {
+     "w": "voce",
+     "s": 43.71,
+     "e": 43.97
+    },
+    {
+     "w": "sul",
+     "s": 43.97,
+     "e": 44.15
+    },
+    {
+     "w": "nastro",
+     "s": 44.15,
+     "e": 44.71
+    },
+    {
+     "w": "e",
+     "s": 44.71,
+     "e": 44.83
+    },
+    {
+     "w": "la",
+     "s": 44.83,
+     "e": 44.95
+    },
+    {
+     "w": "tua",
+     "s": 44.95,
+     "e": 45.29
+    }
+   ],
+   "caps": [
+    {
+     "text": "LA VOCE",
+     "t": 43.65,
+     "tok": 2,
+     "end": 44.65
+    },
+    {
+     "text": "\u00c8 LA *TUA",
+     "t": 44.65,
+     "tok": 5,
+     "end": 45.943
+    }
+   ],
+   "heard": "E la voce sul nastro \u00e8 la tua.",
+   "match": 1.0
+  },
+  {
+   "id": 16,
+   "who": "YOU",
+   "say": "Non farlo entrare.",
+   "file": "out/audio/lines/16.wav",
+   "start": 45.91,
+   "dur": 1.672,
+   "end": 47.582,
+   "tokens": [
+    {
+     "w": "non",
+     "s": 45.91,
+     "e": 46.05
+    },
+    {
+     "w": "farlo",
+     "s": 46.05,
+     "e": 46.49
+    },
+    {
+     "w": "entrare",
+     "s": 46.49,
+     "e": 47.09
+    }
+   ],
+   "caps": [
+    {
+     "text": "NON",
+     "t": 45.943,
+     "tok": 0,
+     "end": 45.99
+    },
+    {
+     "text": "FARLO *ENTRARE",
+     "t": 45.99,
+     "tok": 1,
+     "end": 48.308
+    }
+   ],
+   "heard": "Non farlo entrare.",
+   "match": 1.0
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Le tre e quaranta. La lampada comincia a sfarfallare.",
+   "file": "out/audio/lines/17.wav",
+   "start": 48.282,
+   "dur": 3.23,
+   "end": 51.512,
+   "tokens": [
+    {
+     "w": "le",
+     "s": 48.282,
+     "e": 48.402
+    },
+    {
+     "w": "tre",
+     "s": 48.402,
+     "e": 48.602
+    },
+    {
+     "w": "e",
+     "s": 48.602,
+     "e": 48.702
+    },
+    {
+     "w": "quaranta",
+     "s": 48.702,
+     "e": 49.302
+    },
+    {
+     "w": "la",
+     "s": 49.482,
+     "e": 49.562
+    },
+    {
+     "w": "lampada",
+     "s": 49.562,
+     "e": 49.982
+    },
+    {
+     "w": "comincia",
+     "s": 49.982,
+     "e": 50.522
+    },
+    {
+     "w": "a",
+     "s": 50.522,
+     "e": 50.642
+    },
+    {
+     "w": "sfarfallare",
+     "s": 50.642,
+     "e": 51.382
+    }
+   ],
+   "caps": [
+    {
+     "text": "*03:40",
+     "t": 48.308,
+     "tok": 0,
+     "end": 49.502
+    },
+    {
+     "text": "LA LAMPADA",
+     "t": 49.502,
+     "tok": 5,
+     "end": 50.582
+    },
+    {
+     "text": "*SFARFALLA",
+     "t": 50.582,
+     "tok": 8,
+     "end": 51.821
+    }
+   ],
+   "heard": "Le tre e quaranta. La lampada comincia a sfarfallare.",
+   "match": 1.0
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "say": "Quando si spegne, sono pi\u00f9 vicini.",
+   "file": "out/audio/lines/18.wav",
+   "start": 51.792,
+   "dur": 2.09,
+   "end": 53.882,
+   "tokens": [
+    {
+     "w": "quando",
+     "s": 51.792,
+     "e": 51.992
+    },
+    {
+     "w": "si",
+     "s": 51.992,
+     "e": 52.192
+    },
+    {
+     "w": "spegne",
+     "s": 52.192,
+     "e": 52.732
+    },
+    {
+     "w": "sono",
+     "s": 52.732,
+     "e": 52.912
+    },
+    {
+     "w": "piu",
+     "s": 52.912,
+     "e": 53.132
+    },
+    {
+     "w": "vicini",
+     "s": 53.132,
+     "e": 53.692
+    }
+   ],
+   "caps": [
+    {
+     "text": "QUANDO SI *SPEGNE",
+     "t": 51.821,
+     "tok": 0,
+     "end": 52.672
+    },
+    {
+     "text": "PI\u00d9 *VICINI",
+     "t": 52.672,
+     "tok": 3,
+     "end": 54.19
+    }
+   ],
+   "heard": "Quando si spegne, sono pi\u00f9 vicini.",
+   "match": 1.0
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "Quando resta accesa, indietreggiano.",
+   "file": "out/audio/lines/19.wav",
+   "start": 54.162,
+   "dur": 2.34,
+   "end": 56.502,
+   "tokens": [
+    {
+     "w": "quando",
+     "s": 54.162,
+     "e": 54.362
+    },
+    {
+     "w": "resta",
+     "s": 54.362,
+     "e": 54.802
+    },
+    {
+     "w": "accesa",
+     "s": 54.802,
+     "e": 55.402
+    },
+    {
+     "w": "indietreggiano",
+     "s": 55.442,
+     "e": 56.342
+    }
+   ],
+   "caps": [
+    {
+     "text": "QUANDO RESTA",
+     "t": 54.19,
+     "tok": 0,
+     "end": 55.382
+    },
+    {
+     "text": "*INDIETREGGIANO",
+     "t": 55.382,
+     "tok": 3,
+     "end": 56.937
+    }
+   ],
+   "heard": "Quando resta accesa, indietreggiano.",
+   "match": 1.0
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "say": "Le quattro e quarantaquattro. Un camion prende la curva troppo veloce.",
+   "file": "out/audio/lines/20.wav",
+   "start": 56.902,
+   "dur": 4.33,
+   "end": 61.232,
+   "tokens": [
+    {
+     "w": "le",
+     "s": 56.902,
+     "e": 57.022
+    },
+    {
+     "w": "quattro",
+     "s": 57.022,
+     "e": 57.422
+    },
+    {
+     "w": "e",
+     "s": 57.422,
+     "e": 57.482
+    },
+    {
+     "w": "quarantaquattro",
+     "s": 57.482,
+     "e": 58.502
+    },
+    {
+     "w": "un",
+     "s": 58.742,
+     "e": 58.862
+    },
+    {
+     "w": "camion",
+     "s": 58.862,
+     "e": 59.262
+    },
+    {
+     "w": "prende",
+     "s": 59.262,
+     "e": 59.702
+    },
+    {
+     "w": "la",
+     "s": 59.702,
+     "e": 59.802
+    },
+    {
+     "w": "curva",
+     "s": 59.802,
+     "e": 60.162
+    },
+    {
+     "w": "troppo",
+     "s": 60.162,
+     "e": 60.542
+    },
+    {
+     "w": "veloce",
+     "s": 60.542,
+     "e": 61.082
+    }
+   ],
+   "caps": [
+    {
+     "text": "*04:44",
+     "t": 56.937,
+     "tok": 0,
+     "end": 58.802
+    },
+    {
+     "text": "UN CAMION",
+     "t": 58.802,
+     "tok": 5,
+     "end": 60.102
+    },
+    {
+     "text": "TROPPO *VELOCE",
+     "t": 60.102,
+     "tok": 9,
+     "end": 61.615
+    }
+   ],
+   "heard": "Le quattro e quarantaquattro. Un camion prende la curva troppo veloce.",
+   "match": 1.0
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "Centra il palo.",
+   "file": "out/audio/lines/21.wav",
+   "start": 61.582,
+   "dur": 1.12,
+   "end": 62.702,
+   "tokens": [
+    {
+     "w": "centra",
+     "s": 61.582,
+     "e": 62.002
+    },
+    {
+     "w": "il",
+     "s": 62.002,
+     "e": 62.122
+    },
+    {
+     "w": "palo",
+     "s": 62.122,
+     "e": 62.602
+    }
+   ],
+   "caps": [
+    {
+     "text": "*CENTRA",
+     "t": 61.615,
+     "tok": 0,
+     "end": 62.062
+    },
+    {
+     "text": "IL PALO",
+     "t": 62.062,
+     "tok": 2,
+     "end": 63.362
+    }
+   ],
+   "heard": "Centra il palo.",
+   "match": 1.0
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "E la tua luce si spegne.",
+   "file": "out/audio/lines/22.wav",
+   "start": 63.302,
+   "dur": 1.7,
+   "end": 65.002,
+   "tokens": [
+    {
+     "w": "e",
+     "s": 63.302,
+     "e": 63.422
+    },
+    {
+     "w": "la",
+     "s": 63.422,
+     "e": 63.522
+    },
+    {
+     "w": "tua",
+     "s": 63.522,
+     "e": 63.682
+    },
+    {
+     "w": "luce",
+     "s": 63.682,
+     "e": 64.042
+    },
+    {
+     "w": "si",
+     "s": 64.042,
+     "e": 64.222
+    },
+    {
+     "w": "spegne",
+     "s": 64.222,
+     "e": 64.802
+    }
+   ],
+   "caps": [
+    {
+     "text": "LA TUA LUCE",
+     "t": 63.362,
+     "tok": 1,
+     "end": 63.982
+    },
+    {
+     "text": "SI *SPEGNE",
+     "t": 63.982,
+     "tok": 4,
+     "end": 65.932
+    }
+   ],
+   "heard": "E la tua luce si spegne.",
+   "match": 1.0
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Toc. Toc.",
+   "file": "out/audio/lines/23.wav",
+   "start": 65.902,
+   "dur": 0.75,
+   "end": 66.652,
+   "tokens": [
+    {
+     "w": "toc",
+     "s": 65.902,
+     "e": 66.182
+    },
+    {
+     "w": "toc",
+     "s": 66.262,
+     "e": 66.502
+    }
+   ],
+   "caps": [
+    {
+     "text": "*TOC",
+     "t": 65.932,
+     "tok": 0,
+     "end": 66.202
+    },
+    {
+     "text": "*TOC",
+     "t": 66.202,
+     "tok": 1,
+     "end": 67.096
+    }
+   ],
+   "heard": "Toc. Toc.",
+   "match": 1.0
+  },
+  {
+   "id": 24,
+   "who": "OWNER",
+   "say": "Sono il proprietario. Ho la benzina per il generatore.",
+   "file": "out/audio/lines/24.wav",
+   "start": 67.002,
+   "dur": 3.794,
+   "end": 70.796,
+   "tokens": [
+    {
+     "w": "sono",
+     "s": 67.002,
+     "e": 67.282
+    },
+    {
+     "w": "il",
+     "s": 67.282,
+     "e": 67.442
+    },
+    {
+     "w": "proprietario",
+     "s": 67.442,
+     "e": 68.302
+    },
+    {
+     "w": "ho",
+     "s": 68.462,
+     "e": 68.562
+    },
+    {
+     "w": "la",
+     "s": 68.562,
+     "e": 68.722
+    },
+    {
+     "w": "benzina",
+     "s": 68.722,
+     "e": 69.242
+    },
+    {
+     "w": "per",
+     "s": 69.242,
+     "e": 69.442
+    },
+    {
+     "w": "il",
+     "s": 69.442,
+     "e": 69.582
+    },
+    {
+     "w": "generatore",
+     "s": 69.582,
+     "e": 70.262
+    }
+   ],
+   "caps": [
+    {
+     "text": "SONO IL *PROPRIETARIO",
+     "t": 67.096,
+     "tok": 0,
+     "end": 68.662
+    },
+    {
+     "text": "BENZINA",
+     "t": 68.662,
+     "tok": 5,
+     "end": 69.182
+    },
+    {
+     "text": "PER IL GENERATORE",
+     "t": 69.182,
+     "tok": 6,
+     "end": 71.111
+    }
+   ],
+   "heard": "Sono il proprietario. Ho la benzina per il generatore.",
+   "match": 1.0
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "say": "Dallo spioncino: il proprietario, con una tanica.",
+   "file": "out/audio/lines/25.wav",
+   "start": 71.076,
+   "dur": 2.96,
+   "end": 74.036,
+   "tokens": [
+    {
+     "w": "dallo",
+     "s": 71.076,
+     "e": 71.296
+    },
+    {
+     "w": "spioncino",
+     "s": 71.296,
+     "e": 71.996
+    },
+    {
+     "w": "il",
+     "s": 71.996,
+     "e": 72.156
+    },
+    {
+     "w": "proprietario",
+     "s": 72.156,
+     "e": 72.936
+    },
+    {
+     "w": "con",
+     "s": 72.936,
+     "e": 73.136
+    },
+    {
+     "w": "una",
+     "s": 73.136,
+     "e": 73.336
+    },
+    {
+     "w": "tanica",
+     "s": 73.336,
+     "e": 73.876
+    }
+   ],
+   "caps": [
+    {
+     "text": "DALLO *SPIONCINO",
+     "t": 71.111,
+     "tok": 0,
+     "end": 71.936
+    },
+    {
+     "text": "IL PROPRIETARIO",
+     "t": 71.936,
+     "tok": 2,
+     "end": 72.876
+    },
+    {
+     "text": "UNA TANICA",
+     "t": 72.876,
+     "tok": 4,
+     "end": 74.342
+    }
+   ],
+   "heard": "Dallo spioncino il proprietario con una tanica.",
+   "match": 1.0
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "Porta un cappellino rosso.",
+   "file": "out/audio/lines/26.wav",
+   "start": 74.316,
+   "dur": 1.74,
+   "end": 76.056,
+   "tokens": [
+    {
+     "w": "porta",
+     "s": 74.316,
+     "e": 74.636
+    },
+    {
+     "w": "un",
+     "s": 74.636,
+     "e": 74.736
+    },
+    {
+     "w": "cappellino",
+     "s": 74.736,
+     "e": 75.336
+    },
+    {
+     "w": "rosso",
+     "s": 75.336,
+     "e": 75.896
+    }
+   ],
+   "caps": [
+    {
+     "text": "PORTA UN",
+     "t": 74.342,
+     "tok": 0,
+     "end": 74.676
+    },
+    {
+     "text": "*CAPPELLINO *ROSSO",
+     "t": 74.676,
+     "tok": 2,
+     "end": 76.59
+    }
+   ],
+   "heard": "Porta un cappellino rosso.",
+   "match": 1.0
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "Ti tocchi la testa. Il tuo non c'\u00e8 pi\u00f9.",
+   "file": "out/audio/lines/27.wav",
+   "start": 76.556,
+   "dur": 2.14,
+   "end": 78.696,
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 76.556,
+     "e": 76.676
+    },
+    {
+     "w": "tocchi",
+     "s": 76.676,
+     "e": 76.976
+    },
+    {
+     "w": "la",
+     "s": 76.976,
+     "e": 77.096
+    },
+    {
+     "w": "testa",
+     "s": 77.096,
+     "e": 77.536
+    },
+    {
+     "w": "il",
+     "s": 77.636,
+     "e": 77.736
+    },
+    {
+     "w": "tuo",
+     "s": 77.736,
+     "e": 77.976
+    },
+    {
+     "w": "non",
+     "s": 77.976,
+     "e": 78.056
+    },
+    {
+     "w": "ce",
+     "s": 78.056,
+     "e": 78.276
+    },
+    {
+     "w": "piu",
+     "s": 78.276,
+     "e": 78.456
+    }
+   ],
+   "caps": [
+    {
+     "text": "TI TOCCHI",
+     "t": 76.59,
+     "tok": 0,
+     "end": 77.576
+    },
+    {
+     "text": "IL TUO",
+     "t": 77.576,
+     "tok": 4,
+     "end": 77.916
+    },
+    {
+     "text": "*NON *C'\u00c8 PI\u00d9",
+     "t": 77.916,
+     "tok": 6,
+     "end": 79.331
+    }
+   ],
+   "heard": "Ti tocchi la testa. Il tuo non c '\u00e8 pi\u00f9.",
+   "match": 0.89
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "Apri la porta e riaccendi la luce? O resti al buio... con loro?",
+   "file": "out/audio/lines/28.wav",
+   "start": 79.296,
+   "dur": 3.69,
+   "end": 82.986,
+   "tokens": [
+    {
+     "w": "apri",
+     "s": 79.296,
+     "e": 79.556
+    },
+    {
+     "w": "la",
+     "s": 79.556,
+     "e": 79.676
+    },
+    {
+     "w": "porta",
+     "s": 79.676,
+     "e": 79.956
+    },
+    {
+     "w": "e",
+     "s": 79.956,
+     "e": 80.136
+    },
+    {
+     "w": "riaccendi",
+     "s": 80.136,
+     "e": 80.596
+    },
+    {
+     "w": "la",
+     "s": 80.596,
+     "e": 80.736
+    },
+    {
+     "w": "luce",
+     "s": 80.736,
+     "e": 81.096
+    },
+    {
+     "w": "o",
+     "s": 81.256,
+     "e": 81.336
+    },
+    {
+     "w": "resti",
+     "s": 81.336,
+     "e": 81.716
+    },
+    {
+     "w": "al",
+     "s": 81.716,
+     "e": 81.816
+    },
+    {
+     "w": "buio",
+     "s": 81.816,
+     "e": 82.316
+    },
+    {
+     "w": "con",
+     "s": 82.316,
+     "e": 82.436
+    },
+    {
+     "w": "loro",
+     "s": 82.436,
+     "e": 82.656
+    }
+   ],
+   "caps": [
+    {
+     "text": "*APRI LA PORTA",
+     "t": 79.331,
+     "tok": 0,
+     "end": 80.076
+    },
+    {
+     "text": "RIACCENDI LA LUCE?",
+     "t": 80.076,
+     "tok": 4,
+     "end": 81.23
+    },
+    {
+     "text": "O RESTI",
+     "t": 81.23,
+     "tok": 7,
+     "end": 81.656
+    },
+    {
+     "text": "AL *BUIO",
+     "t": 81.656,
+     "tok": 9,
+     "end": 82.256
+    },
+    {
+     "text": "CON *LORO?",
+     "t": 82.256,
+     "tok": 11,
+     "end": 83.521
+    }
+   ],
+   "heard": "Apri la porta e riaccendi la luce? O resti al buio... con loro?",
+   "match": 1.0
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "say": "Commenta qui sotto. Segui per il giorno due.",
+   "file": "out/audio/lines/29.wav",
+   "start": 83.486,
+   "dur": 2.69,
+   "end": 86.176,
+   "tokens": [
+    {
+     "w": "commenta",
+     "s": 83.486,
+     "e": 83.966
+    },
+    {
+     "w": "qui",
+     "s": 83.966,
+     "e": 84.126
+    },
+    {
+     "w": "sotto",
+     "s": 84.126,
+     "e": 84.466
+    },
+    {
+     "w": "segui",
+     "s": 84.646,
+     "e": 84.966
+    },
+    {
+     "w": "per",
+     "s": 84.966,
+     "e": 85.126
+    },
+    {
+     "w": "il",
+     "s": 85.126,
+     "e": 85.266
+    },
+    {
+     "w": "giorno",
+     "s": 85.266,
+     "e": 85.546
+    },
+    {
+     "w": "due",
+     "s": 85.546,
+     "e": 85.926
+    }
+   ],
+   "caps": [
+    {
+     "text": "COMMENTA QUI SOTTO",
+     "t": 83.521,
+     "tok": 0,
+     "end": 84.586
+    },
+    {
+     "text": "SEGUI PER IL",
+     "t": 84.586,
+     "tok": 3,
+     "end": 85.206
+    },
+    {
+     "text": "*GIORNO *2",
+     "t": 85.206,
+     "tok": 6,
+     "end": 87.806
+    }
+   ],
+   "heard": "Commenta qui sotto. Segui per il giorno due.",
+   "match": 1.0
+  }
+ ],
+ "captions": [
+  {
+   "text": "IMMAGINA",
+   "t": 0.55,
+   "tok": 0,
+   "end": 1.23
+  },
+  {
+   "text": "*23:58",
+   "t": 1.23,
+   "tok": 3,
+   "end": 3.49
+  },
+  {
+   "text": "PORTIERE DI NOTTE",
+   "t": 3.49,
+   "tok": 9,
+   "end": 4.73
+  },
+  {
+   "text": "MOTEL VUOTO",
+   "t": 4.73,
+   "tok": 14,
+   "end": 6.03
+  },
+  {
+   "text": "IL PROPRIETARIO",
+   "t": 6.03,
+   "tok": 1,
+   "end": 7.37
+  },
+  {
+   "text": "UN BIGLIETTO",
+   "t": 7.37,
+   "tok": 5,
+   "end": 8.03
+  },
+  {
+   "text": "*4 *REGOLE",
+   "t": 8.03,
+   "tok": 6,
+   "end": 9.416
+  },
+  {
+   "text": "LUCE ACCESA",
+   "t": 9.416,
+   "tok": 0,
+   "end": 11.11
+  },
+  {
+   "text": "FINO ALLE *6",
+   "t": 11.11,
+   "tok": 5,
+   "end": 13.17
+  },
+  {
+   "text": "LA *STANZA *9",
+   "t": 13.17,
+   "tok": 1,
+   "end": 13.85
+  },
+  {
+   "text": "NON ESISTE",
+   "t": 13.85,
+   "tok": 3,
+   "end": 15.244
+  },
+  {
+   "text": "SE CHIAMA LA *9",
+   "t": 15.244,
+   "tok": 0,
+   "end": 16.59
+  },
+  {
+   "text": "LASCIA SQUILLARE",
+   "t": 16.59,
+   "tok": 5,
+   "end": 18.149
+  },
+  {
+   "text": "DOPO LE *3",
+   "t": 18.149,
+   "tok": 0,
+   "end": 18.8
+  },
+  {
+   "text": "*NON APRIRE",
+   "t": 18.8,
+   "tok": 3,
+   "end": 19.64
+  },
+  {
+   "text": "LA PORTA",
+   "t": 19.64,
+   "tok": 7,
+   "end": 20.842
+  },
+  {
+   "text": "*00:31",
+   "t": 20.842,
+   "tok": 0,
+   "end": 22.13
+  },
+  {
+   "text": "UN CLIENTE",
+   "t": 22.13,
+   "tok": 3,
+   "end": 23.17
+  },
+  {
+   "text": "*FRADICIO",
+   "t": 23.17,
+   "tok": 6,
+   "end": 24.204
+  },
+  {
+   "text": "VUOLE",
+   "t": 24.204,
+   "tok": 0,
+   "end": 24.41
+  },
+  {
+   "text": "LA *STANZA *9",
+   "t": 24.41,
+   "tok": 1,
+   "end": 26.081
+  },
+  {
+   "text": "DICI",
+   "t": 26.081,
+   "tok": 0,
+   "end": 27.49
+  },
+  {
+   "text": "SIAMO AL *COMPLETO",
+   "t": 27.49,
+   "tok": 5,
+   "end": 29.05
+  },
+  {
+   "text": "NON DISCUTE",
+   "t": 29.05,
+   "tok": 0,
+   "end": 29.7
+  },
+  {
+   "text": "ESCE",
+   "t": 29.7,
+   "tok": 2,
+   "end": 30.113
+  },
+  {
+   "text": "LUNGO LE STANZE",
+   "t": 30.113,
+   "tok": 4,
+   "end": 31.92
+  },
+  {
+   "text": "SI FERMA",
+   "t": 31.92,
+   "tok": 1,
+   "end": 33.02
+  },
+  {
+   "text": "UNA *NONA PORTA",
+   "t": 33.02,
+   "tok": 6,
+   "end": 33.98
+  },
+  {
+   "text": "UN'ORA FA",
+   "t": 33.98,
+   "tok": 9,
+   "end": 34.48
+  },
+  {
+   "text": "NON C'ERA",
+   "t": 34.48,
+   "tok": 11,
+   "end": 35.795
+  },
+  {
+   "text": "*02:10",
+   "t": 35.795,
+   "tok": 0,
+   "end": 36.73
+  },
+  {
+   "text": "SI ACCENDE",
+   "t": 36.73,
+   "tok": 5,
+   "end": 37.79
+  },
+  {
+   "text": "*STANZA *9",
+   "t": 37.79,
+   "tok": 8,
+   "end": 39.163
+  },
+  {
+   "text": "LASCI *SQUILLARE",
+   "t": 39.163,
+   "tok": 0,
+   "end": 40.874
+  },
+  {
+   "text": "*9 SQUILLI",
+   "t": 40.874,
+   "tok": 0,
+   "end": 41.6
+  },
+  {
+   "text": "POI PARTE",
+   "t": 41.6,
+   "tok": 2,
+   "end": 42.28
+  },
+  {
+   "text": "LA SEGRETERIA",
+   "t": 42.28,
+   "tok": 5,
+   "end": 43.65
+  },
+  {
+   "text": "LA VOCE",
+   "t": 43.65,
+   "tok": 2,
+   "end": 44.65
+  },
+  {
+   "text": "\u00c8 LA *TUA",
+   "t": 44.65,
+   "tok": 5,
+   "end": 45.943
+  },
+  {
+   "text": "NON",
+   "t": 45.943,
+   "tok": 0,
+   "end": 45.99
+  },
+  {
+   "text": "FARLO *ENTRARE",
+   "t": 45.99,
+   "tok": 1,
+   "end": 48.308
+  },
+  {
+   "text": "*03:40",
+   "t": 48.308,
+   "tok": 0,
+   "end": 49.502
+  },
+  {
+   "text": "LA LAMPADA",
+   "t": 49.502,
+   "tok": 5,
+   "end": 50.582
+  },
+  {
+   "text": "*SFARFALLA",
+   "t": 50.582,
+   "tok": 8,
+   "end": 51.821
+  },
+  {
+   "text": "QUANDO SI *SPEGNE",
+   "t": 51.821,
+   "tok": 0,
+   "end": 52.672
+  },
+  {
+   "text": "PI\u00d9 *VICINI",
+   "t": 52.672,
+   "tok": 3,
+   "end": 54.19
+  },
+  {
+   "text": "QUANDO RESTA",
+   "t": 54.19,
+   "tok": 0,
+   "end": 55.382
+  },
+  {
+   "text": "*INDIETREGGIANO",
+   "t": 55.382,
+   "tok": 3,
+   "end": 56.937
+  },
+  {
+   "text": "*04:44",
+   "t": 56.937,
+   "tok": 0,
+   "end": 58.802
+  },
+  {
+   "text": "UN CAMION",
+   "t": 58.802,
+   "tok": 5,
+   "end": 60.102
+  },
+  {
+   "text": "TROPPO *VELOCE",
+   "t": 60.102,
+   "tok": 9,
+   "end": 61.615
+  },
+  {
+   "text": "*CENTRA",
+   "t": 61.615,
+   "tok": 0,
+   "end": 62.062
+  },
+  {
+   "text": "IL PALO",
+   "t": 62.062,
+   "tok": 2,
+   "end": 63.362
+  },
+  {
+   "text": "LA TUA LUCE",
+   "t": 63.362,
+   "tok": 1,
+   "end": 63.982
+  },
+  {
+   "text": "SI *SPEGNE",
+   "t": 63.982,
+   "tok": 4,
+   "end": 65.932
+  },
+  {
+   "text": "*TOC",
+   "t": 65.932,
+   "tok": 0,
+   "end": 66.202
+  },
+  {
+   "text": "*TOC",
+   "t": 66.202,
+   "tok": 1,
+   "end": 67.096
+  },
+  {
+   "text": "SONO IL *PROPRIETARIO",
+   "t": 67.096,
+   "tok": 0,
+   "end": 68.662
+  },
+  {
+   "text": "BENZINA",
+   "t": 68.662,
+   "tok": 5,
+   "end": 69.182
+  },
+  {
+   "text": "PER IL GENERATORE",
+   "t": 69.182,
+   "tok": 6,
+   "end": 71.111
+  },
+  {
+   "text": "DALLO *SPIONCINO",
+   "t": 71.111,
+   "tok": 0,
+   "end": 71.936
+  },
+  {
+   "text": "IL PROPRIETARIO",
+   "t": 71.936,
+   "tok": 2,
+   "end": 72.876
+  },
+  {
+   "text": "UNA TANICA",
+   "t": 72.876,
+   "tok": 4,
+   "end": 74.342
+  },
+  {
+   "text": "PORTA UN",
+   "t": 74.342,
+   "tok": 0,
+   "end": 74.676
+  },
+  {
+   "text": "*CAPPELLINO *ROSSO",
+   "t": 74.676,
+   "tok": 2,
+   "end": 76.59
+  },
+  {
+   "text": "TI TOCCHI",
+   "t": 76.59,
+   "tok": 0,
+   "end": 77.576
+  },
+  {
+   "text": "IL TUO",
+   "t": 77.576,
+   "tok": 4,
+   "end": 77.916
+  },
+  {
+   "text": "*NON *C'\u00c8 PI\u00d9",
+   "t": 77.916,
+   "tok": 6,
+   "end": 79.331
+  },
+  {
+   "text": "*APRI LA PORTA",
+   "t": 79.331,
+   "tok": 0,
+   "end": 80.076
+  },
+  {
+   "text": "RIACCENDI LA LUCE?",
+   "t": 80.076,
+   "tok": 4,
+   "end": 81.23
+  },
+  {
+   "text": "O RESTI",
+   "t": 81.23,
+   "tok": 7,
+   "end": 81.656
+  },
+  {
+   "text": "AL *BUIO",
+   "t": 81.656,
+   "tok": 9,
+   "end": 82.256
+  },
+  {
+   "text": "CON *LORO?",
+   "t": 82.256,
+   "tok": 11,
+   "end": 83.521
+  },
+  {
+   "text": "COMMENTA QUI SOTTO",
+   "t": 83.521,
+   "tok": 0,
+   "end": 84.586
+  },
+  {
+   "text": "SEGUI PER IL",
+   "t": 84.586,
+   "tok": 3,
+   "end": 85.206
+  },
+  {
+   "text": "*GIORNO *2",
+   "t": 85.206,
+   "tok": 6,
+   "end": 87.806
+  }
+ ],
+ "caption_check_failures": []
+}
