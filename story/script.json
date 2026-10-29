@@ -1,71 +1,597 @@
 {
-  "title": "The Starlite Motel — Day 1",
-  "voices": {
-    "N":     { "voice": "am_michael", "lang": "a", "speed": 0.95 },
-    "YOU":   { "voice": "am_puck",    "lang": "a", "speed": 0.92, "fx": "tape" },
-    "OWNER": { "voice": "bm_george",  "lang": "b", "speed": 0.88, "fx": "door" }
+ "title": "The Starlite Motel — Day 1",
+ "lang": "en",
+ "voices": {
+  "N": {
+   "voice": "am_michael",
+   "lang": "a",
+   "speed": 0.95
   },
-  "start_pad": 0.25,
-  "end_pad": 2.6,
-  "default_gap": 0.28,
-  "lines": [
-    { "id": 1,  "who": "N", "say": "Imagine it's eleven fifty-eight P M, and you're the night clerk at an empty motel.",
-      "caps": [["imagine", "IMAGINE"], ["eleven", "*11:58 *PM"], ["night", "NIGHT CLERK"], ["empty", "EMPTY MOTEL"]] },
-    { "id": 2,  "who": "N", "say": "The owner slides you a card. Four rules.",
-      "caps": [["owner", "THE OWNER"], ["card", "A CARD"], ["four", "*4 *RULES"]] },
-    { "id": 3,  "who": "N", "say": "Keep the office light on until six A M.",
-      "caps": [["keep", "LIGHT ON"], ["until", "UNTIL *6 *AM"]] },
-    { "id": 4,  "who": "N", "say": "There is no Room Nine.",
-      "caps": [["there", "THERE IS NO"], ["room", "*ROOM *9"]] },
-    { "id": 5,  "who": "N", "say": "If Room Nine calls, let it ring.",
-      "caps": [["room", "*ROOM *9 CALLS"], ["let", "LET IT RING"]] },
-    { "id": 6,  "who": "N", "say": "After three A M, never open the door.", "gap": 0.45,
-      "caps": [["after", "AFTER *3 *AM"], ["never", "*NEVER OPEN"], ["door", "THE DOOR"]] },
-    { "id": 7,  "who": "N", "say": "Twelve thirty-one. A guest walks in, soaking wet.",
-      "caps": [["twelve", "*12:31 *AM"], ["guest", "A GUEST"], ["soaking", "SOAKING WET"]] },
-    { "id": 8,  "who": "N", "say": "He wants Room Nine.",
-      "caps": [["he", "HE WANTS"], ["room", "*ROOM *9"]] },
-    { "id": 9,  "who": "N", "say": "You say what the card says. We're full.",
-      "caps": [["you", "YOU SAY"], ["were", "WE'RE *FULL"]] },
-    { "id": 10, "who": "N", "say": "He doesn't argue. He walks out, down the row.",
-      "caps": [["he", "NO ARGUMENT"], ["walks", "WALKS OUT"], ["down", "DOWN THE ROW"]] },
-    { "id": 11, "who": "N", "say": "And stops at a ninth door that wasn't there an hour ago.", "gap": 0.45,
-      "caps": [["stops", "AND STOPS"], ["ninth", "A *NINTH DOOR"], ["wasnt", "WASN'T THERE"], ["hour", "AN HOUR AGO"]] },
-    { "id": 12, "who": "N", "say": "Two ten. The phone lights up. Room Nine.",
-      "caps": [["two", "*2:10 *AM"], ["phone", "PHONE LIGHTS UP"], ["room", "*ROOM *9"]] },
-    { "id": 13, "who": "N", "say": "You let it ring.",
-      "caps": [["you", "LET IT *RING"]] },
-    { "id": 14, "who": "N", "say": "Nine rings. Then the machine picks up.",
-      "caps": [["nine", "*9 RINGS"], ["machine", "THE MACHINE"], ["picks", "PICKS UP"]] },
-    { "id": 15, "who": "N", "say": "And the voice on the tape... is yours.", "gap": 0.45,
-      "caps": [["voice", "THE VOICE"], ["is", "IS *YOURS"]] },
-    { "id": 16, "who": "YOU", "say": "Don't let him in.", "gap": 0.7,
-      "caps": [["dont", "DON'T"], ["let", "LET *HIM IN"]] },
-    { "id": 17, "who": "N", "say": "Three forty. The lamp starts to flicker.",
-      "caps": [["three", "*3:40 *AM"], ["lamp", "THE LAMP"], ["flicker", "*FLICKERS"]] },
-    { "id": 18, "who": "N", "say": "Every time it goes dark, they're closer.",
-      "caps": [["every", "EVERY TIME"], ["goes", "IT GOES *DARK"], ["theyre", "THEY'RE *CLOSER"]] },
-    { "id": 19, "who": "N", "say": "When it holds, they back away.", "gap": 0.4,
-      "caps": [["holds", "IT HOLDS"], ["they", "THEY *BACK AWAY"]] },
-    { "id": 20, "who": "N", "say": "Four forty-four. A truck takes the bend too fast.", "gap": 0.35,
-      "caps": [["four", "*4:44 *AM"], ["truck", "A TRUCK"], ["too", "TOO *FAST"]] },
-    { "id": 21, "who": "N", "say": "It hits the pole.", "gap": 0.6,
-      "caps": [["it", "IT *HITS"], ["pole", "THE POLE"]] },
-    { "id": 22, "who": "N", "say": "And your light goes out.", "gap": 0.9,
-      "caps": [["your", "YOUR LIGHT"], ["goes", "*GOES *OUT"]] },
-    { "id": 23, "who": "N", "say": "Knock. Knock.", "gap": 0.35,
-      "caps": [["knock", "*KNOCK"], ["knock", "*KNOCK"]] },
-    { "id": 24, "who": "OWNER", "say": "It's the owner. I've got fuel for the generator.",
-      "caps": [["its", "IT'S THE *OWNER"], ["fuel", "FUEL"], ["generator", "FOR THE GENERATOR"]] },
-    { "id": 25, "who": "N", "say": "Through the peephole: the owner, holding a gas can.",
-      "caps": [["through", "THE *PEEPHOLE"], ["owner", "THE OWNER"], ["gas", "GAS CAN"]] },
-    { "id": 26, "who": "N", "say": "He's wearing a red cap.", "gap": 0.5,
-      "caps": [["hes", "HE'S WEARING"], ["red", "A *RED *CAP"]] },
-    { "id": 27, "who": "N", "say": "You reach for yours. It's gone.", "gap": 0.6,
-      "caps": [["reach", "YOU REACH"], ["its", "IT'S *GONE"]] },
-    { "id": 28, "who": "N", "say": "Open the door and get the light back? Or stay in the dark... with them?", "gap": 0.5,
-      "caps": [["open", "*OPEN THE DOOR"], ["get", "LIGHT BACK?"], ["or", "OR STAY"], ["dark", "IN THE *DARK"], ["with", "WITH *THEM?"]] },
-    { "id": 29, "who": "N", "say": "Comment below. Follow for Day Two.",
-      "caps": [["comment", "COMMENT BELOW"], ["follow", "FOLLOW FOR"], ["day", "*DAY *2"]] }
+  "YOU": {
+   "voice": "am_puck",
+   "lang": "a",
+   "speed": 0.92,
+   "fx": "tape"
+  },
+  "OWNER": {
+   "voice": "bm_george",
+   "lang": "b",
+   "speed": 0.88,
+   "fx": "door"
+  }
+ },
+ "anchors": {
+  "slides": [
+   2,
+   "slides"
+  ],
+  "rules": [
+   2,
+   "rules"
+  ],
+  "hour": [
+   11,
+   "hour"
+  ],
+  "phone": [
+   12,
+   "phone"
+  ],
+  "picks": [
+   14,
+   "picks"
+  ],
+  "flicker": [
+   17,
+   "flicker"
+  ],
+  "holds": [
+   19,
+   "holds"
+  ],
+  "hits": [
+   21,
+   "hits"
+  ],
+  "goes": [
+   22,
+   "goes"
+  ],
+  "knock": [
+   23,
+   "knock"
+  ],
+  "reach": [
+   27,
+   "reach"
+  ],
+  "gone": [
+   27,
+   "gone"
   ]
+ },
+ "start_pad": 0.25,
+ "end_pad": 2.6,
+ "default_gap": 0.28,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Imagine it's eleven fifty-eight P M, and you're the night clerk at an empty motel.",
+   "caps": [
+    [
+     "imagine",
+     "IMAGINE"
+    ],
+    [
+     "eleven",
+     "*11:58 *PM"
+    ],
+    [
+     "night",
+     "NIGHT CLERK"
+    ],
+    [
+     "empty",
+     "EMPTY MOTEL"
+    ]
+   ]
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "The owner slides you a card. Four rules.",
+   "caps": [
+    [
+     "owner",
+     "THE OWNER"
+    ],
+    [
+     "card",
+     "A CARD"
+    ],
+    [
+     "four",
+     "*4 *RULES"
+    ]
+   ]
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Keep the office light on until six A M.",
+   "caps": [
+    [
+     "keep",
+     "LIGHT ON"
+    ],
+    [
+     "until",
+     "UNTIL *6 *AM"
+    ]
+   ]
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "There is no Room Nine.",
+   "caps": [
+    [
+     "there",
+     "THERE IS NO"
+    ],
+    [
+     "room",
+     "*ROOM *9"
+    ]
+   ]
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "If Room Nine calls, let it ring.",
+   "caps": [
+    [
+     "room",
+     "*ROOM *9 CALLS"
+    ],
+    [
+     "let",
+     "LET IT RING"
+    ]
+   ]
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "After three A M, never open the door.",
+   "gap": 0.45,
+   "caps": [
+    [
+     "after",
+     "AFTER *3 *AM"
+    ],
+    [
+     "never",
+     "*NEVER OPEN"
+    ],
+    [
+     "door",
+     "THE DOOR"
+    ]
+   ]
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Twelve thirty-one. A guest walks in, soaking wet.",
+   "caps": [
+    [
+     "twelve",
+     "*12:31 *AM"
+    ],
+    [
+     "guest",
+     "A GUEST"
+    ],
+    [
+     "soaking",
+     "SOAKING WET"
+    ]
+   ]
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "He wants Room Nine.",
+   "caps": [
+    [
+     "he",
+     "HE WANTS"
+    ],
+    [
+     "room",
+     "*ROOM *9"
+    ]
+   ]
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "say": "You say what the card says. We're full.",
+   "caps": [
+    [
+     "you",
+     "YOU SAY"
+    ],
+    [
+     "were",
+     "WE'RE *FULL"
+    ]
+   ]
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "He doesn't argue. He walks out, down the row.",
+   "caps": [
+    [
+     "he",
+     "NO ARGUMENT"
+    ],
+    [
+     "walks",
+     "WALKS OUT"
+    ],
+    [
+     "down",
+     "DOWN THE ROW"
+    ]
+   ]
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "And stops at a ninth door that wasn't there an hour ago.",
+   "gap": 0.45,
+   "caps": [
+    [
+     "stops",
+     "AND STOPS"
+    ],
+    [
+     "ninth",
+     "A *NINTH DOOR"
+    ],
+    [
+     "wasnt",
+     "WASN'T THERE"
+    ],
+    [
+     "hour",
+     "AN HOUR AGO"
+    ]
+   ]
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Two ten. The phone lights up. Room Nine.",
+   "caps": [
+    [
+     "two",
+     "*2:10 *AM"
+    ],
+    [
+     "phone",
+     "PHONE LIGHTS UP"
+    ],
+    [
+     "room",
+     "*ROOM *9"
+    ]
+   ]
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "say": "You let it ring.",
+   "caps": [
+    [
+     "you",
+     "LET IT *RING"
+    ]
+   ]
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Nine rings. Then the machine picks up.",
+   "caps": [
+    [
+     "nine",
+     "*9 RINGS"
+    ],
+    [
+     "machine",
+     "THE MACHINE"
+    ],
+    [
+     "picks",
+     "PICKS UP"
+    ]
+   ]
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "And the voice on the tape... is yours.",
+   "gap": 0.45,
+   "caps": [
+    [
+     "voice",
+     "THE VOICE"
+    ],
+    [
+     "is",
+     "IS *YOURS"
+    ]
+   ]
+  },
+  {
+   "id": 16,
+   "who": "YOU",
+   "say": "Don't let him in.",
+   "gap": 0.7,
+   "caps": [
+    [
+     "dont",
+     "DON'T"
+    ],
+    [
+     "let",
+     "LET *HIM IN"
+    ]
+   ]
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Three forty. The lamp starts to flicker.",
+   "caps": [
+    [
+     "three",
+     "*3:40 *AM"
+    ],
+    [
+     "lamp",
+     "THE LAMP"
+    ],
+    [
+     "flicker",
+     "*FLICKERS"
+    ]
+   ]
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "say": "Every time it goes dark, they're closer.",
+   "caps": [
+    [
+     "every",
+     "EVERY TIME"
+    ],
+    [
+     "goes",
+     "IT GOES *DARK"
+    ],
+    [
+     "theyre",
+     "THEY'RE *CLOSER"
+    ]
+   ]
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "When it holds, they back away.",
+   "gap": 0.4,
+   "caps": [
+    [
+     "holds",
+     "IT HOLDS"
+    ],
+    [
+     "they",
+     "THEY *BACK AWAY"
+    ]
+   ]
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "say": "Four forty-four. A truck takes the bend too fast.",
+   "gap": 0.35,
+   "caps": [
+    [
+     "four",
+     "*4:44 *AM"
+    ],
+    [
+     "truck",
+     "A TRUCK"
+    ],
+    [
+     "too",
+     "TOO *FAST"
+    ]
+   ]
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "It hits the pole.",
+   "gap": 0.6,
+   "caps": [
+    [
+     "it",
+     "IT *HITS"
+    ],
+    [
+     "pole",
+     "THE POLE"
+    ]
+   ]
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "And your light goes out.",
+   "gap": 0.9,
+   "caps": [
+    [
+     "your",
+     "YOUR LIGHT"
+    ],
+    [
+     "goes",
+     "*GOES *OUT"
+    ]
+   ]
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Knock. Knock.",
+   "gap": 0.35,
+   "caps": [
+    [
+     "knock",
+     "*KNOCK"
+    ],
+    [
+     "knock",
+     "*KNOCK"
+    ]
+   ]
+  },
+  {
+   "id": 24,
+   "who": "OWNER",
+   "say": "It's the owner. I've got fuel for the generator.",
+   "caps": [
+    [
+     "its",
+     "IT'S THE *OWNER"
+    ],
+    [
+     "fuel",
+     "FUEL"
+    ],
+    [
+     "generator",
+     "FOR THE GENERATOR"
+    ]
+   ]
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "say": "Through the peephole: the owner, holding a gas can.",
+   "caps": [
+    [
+     "through",
+     "THE *PEEPHOLE"
+    ],
+    [
+     "owner",
+     "THE OWNER"
+    ],
+    [
+     "gas",
+     "GAS CAN"
+    ]
+   ]
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "He's wearing a red cap.",
+   "gap": 0.5,
+   "caps": [
+    [
+     "hes",
+     "HE'S WEARING"
+    ],
+    [
+     "red",
+     "A *RED *CAP"
+    ]
+   ]
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "You reach for yours. It's gone.",
+   "gap": 0.6,
+   "caps": [
+    [
+     "reach",
+     "YOU REACH"
+    ],
+    [
+     "its",
+     "IT'S *GONE"
+    ]
+   ]
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "Open the door and get the light back? Or stay in the dark... with them?",
+   "gap": 0.5,
+   "caps": [
+    [
+     "open",
+     "*OPEN THE DOOR"
+    ],
+    [
+     "get",
+     "LIGHT BACK?"
+    ],
+    [
+     "or",
+     "OR STAY"
+    ],
+    [
+     "dark",
+     "IN THE *DARK"
+    ],
+    [
+     "with",
+     "WITH *THEM?"
+    ]
+   ]
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "say": "Comment below. Follow for Day Two.",
+   "caps": [
+    [
+     "comment",
+     "COMMENT BELOW"
+    ],
+    [
+     "follow",
+     "FOLLOW FOR"
+    ],
+    [
+     "day",
+     "*DAY *2"
+    ]
+   ]
+  }
+ ]
 }

@@ -5,7 +5,13 @@ on:
     inputs:
       probe_sfx:
         description: 'Scrape the Mixkit catalog (first run)'
-        default: 'true'
+        default: 'false'
+      script:
+        description: 'Script file'
+        default: 'story/script.json'
+      branch:
+        description: 'Branch to publish the audio to'
+        default: 'audio-out'
 permissions:
   contents: write
 jobs:
@@ -23,11 +29,8 @@ jobs:
       - name: Sound effects catalog
         if: ${{ inputs.probe_sfx == 'true' }}
         run: python tools/sfx_fetch.py --probe
-      - name: Sound effect picks
-        if: ${{ hashFiles('story/sfx.json') != '' }}
-        run: python tools/sfx_fetch.py --get
       - name: Narration + word timings
-        run: python tools/voice.py story/script.json out/audio
+        run: python tools/voice.py ${{ inputs.script }} out/audio
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: audio, path: out/audio }
@@ -35,7 +38,7 @@ jobs:
         if: always()
         run: |
           mkdir -p /tmp/pub && cp -r out/audio/* /tmp/pub/ && cd /tmp/pub
-          git init -q && git checkout -q -b audio-out
+          git init -q && git checkout -q -b ${{ inputs.branch }}
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A && git commit -qm "audio run ${{ github.run_id }}"
-          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" audio-out
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" ${{ inputs.branch }}

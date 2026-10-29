@@ -20,7 +20,32 @@ def n2w(n):
     if n < 20: return ONES[n]
     if n < 100: return TENS[n // 10] + ('' if n % 10 == 0 else ' ' + ONES[n % 10])
     return ' '.join(ONES[int(d)] for d in str(n))
+IT_UN = 'zero uno due tre quattro cinque sei sette otto nove dieci undici dodici tredici quattordici quindici sedici diciassette diciotto diciannove'.split()
+IT_TE = 'zero dieci venti trenta quaranta cinquanta sessanta settanta ottanta novanta'.split()
+def n2w_it(n):
+    n = int(n)
+    if n < 20: return IT_UN[n]
+    if n < 100:
+        t, u = IT_TE[n // 10], n % 10
+        if u == 0: return t
+        if u in (1, 8): t = t[:-1]
+        return t + IT_UN[u]
+    return ' '.join(IT_UN[int(d)] for d in str(n))
+LANG = S.get('lang', 'en')
+def strip_acc(t):
+    import unicodedata
+    return ''.join(ch for ch in unicodedata.normalize('NFD', t) if unicodedata.category(ch) != 'Mn')
 def norm(text):
+    if LANG == 'it': return norm_it(text)
+    return norm_en(text)
+def norm_it(text):
+    t = strip_acc(text.lower().replace('’', "'"))
+    t = re.sub(r'(\d{1,2})[:.](\d\d)', lambda m: ' ' + ('mezzanotte' if int(m.group(1)) == 0 else n2w_it(m.group(1))) + ' ' + n2w_it(m.group(2)) + ' ', t)
+    t = re.sub(r'\d+', lambda m: ' ' + n2w_it(m.group(0)) + ' ', t)
+    t = t.replace('-', ' ').replace("'", '')
+    t = re.sub(r'[^a-z ]', ' ', t)
+    return [w for w in t.split() if w != 'e' or True]
+def norm_en(text):
     t = text.lower().replace('’', "'")
     t = re.sub(r'(\d+):(\d\d)', lambda m: f' {n2w(m.group(1))} ' + ('' if m.group(2) == '00' else (f'oh {n2w(m.group(2)[1])}' if m.group(2)[0] == '0' else n2w(m.group(2)))) + ' ', t)
     t = re.sub(r'\b([ap])\.?\s?m\b\.?', r' \1 m ', t)
@@ -49,9 +74,9 @@ def trim(x, sr, thr_db=-46, pad=0.03):
     return x[a:b]
 
 from faster_whisper import WhisperModel
-wm = WhisperModel('small.en', device='cpu', compute_type='int8')
+wm = WhisperModel('small.en' if LANG == 'en' else 'small', device='cpu', compute_type='int8')
 def words(path, prompt):
-    segs, _ = wm.transcribe(path, word_timestamps=True, language='en', initial_prompt=prompt, beam_size=5, vad_filter=False)
+    segs, _ = wm.transcribe(path, word_timestamps=True, language=LANG, initial_prompt=prompt, beam_size=5, vad_filter=False)
     out = []
     for s in segs:
         for w in s.words: out.append((w.word.strip(), w.start, w.end))
@@ -95,6 +120,8 @@ for L in S['lines']:
     clean = f"{OUT}/lines/{L['id']:02d}_clean.wav"; ff(['-i', raw, '-ar', str(SR), '-ac', '1', clean])
     y, _ = sf.read(clean, dtype='float32'); y = trim(y, SR); sf.write(clean, y, SR)
     final = f"{OUT}/lines/{L['id']:02d}.wav"
+    if v.get('pitch'):
+        pr = v['pitch']; ff(['-i', clean, '-af', f'asetrate={int(SR * pr)},aresample={SR},atempo={1 / pr:.4f}', clean + '.p.wav']); os.replace(clean + '.p.wav', clean)
     if v.get('fx'): ff(['-i', clean, '-af', FX[v['fx']] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     # re-transcribe the final line (fx lines: transcribe the clean take, fx keeps timing)
