@@ -7,9 +7,11 @@ import json, re, sys, os, html, urllib.request, time
 OUT = 'out/audio'; os.makedirs(f'{OUT}/sfx', exist_ok=True); os.makedirs(f'{OUT}/pages', exist_ok=True)
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'}
 def get(url):
-    for k in range(3):
-        try: return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
-        except Exception as e: err = e; time.sleep(2)
+    for k in range(6):
+        try:
+            time.sleep(1.2)                       # be polite: Mixkit rate-limits bursts
+            return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
+        except Exception as e: err = e; time.sleep(8 * (k + 1))
     raise err
 
 PAGES = {s: f'https://mixkit.co/free-sound-effects/{s}/' for s in

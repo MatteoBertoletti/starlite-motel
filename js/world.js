@@ -132,7 +132,7 @@ export function buildWorld(scene) {
   box(0.08, 2.2, 0.3, trimM, -5.04, 1.1, 4.1, off); box(0.08, 2.2, 0.3, trimM, -3.96, 1.1, 4.1, off); box(1.16, 0.08, 0.3, trimM, -4.5, 2.19, 4.1, off);
   // office door with peephole + mail slot
   const offDoor = new THREE.Group(); offDoor.position.set(-4.98, 0, 4.1); off.add(offDoor); W.offDoor = offDoor;
-  box(0.96, 2.12, 0.07, M(0x3f2c22), 0.48, 1.07, 0, offDoor);
+  box(0.96, 2.0, 0.07, M(0x3f2c22), 0.48, 1.15, 0, offDoor);
   const ph = cyl(0.03, 0.03, 0.09, 12, M(0xb8924a, { metalness: 0.8, roughness: 0.3 }), 0.48, 1.62, 0, offDoor); ph.rotation.x = Math.PI / 2;
   box(0.34, 0.07, 0.09, M(0xb8924a, { metalness: 0.8, roughness: 0.3 }), 0.48, 1.0, 0, offDoor);
   box(0.24, 0.025, 0.1, darkM, 0.48, 1.0, 0, offDoor, false);
@@ -161,8 +161,20 @@ export function buildWorld(scene) {
   // answering machine
   const am = new THREE.Group(); am.position.set(-8.15, 1.06, 1.85); counter.add(am); W.am = am;
   box(0.3, 0.08, 0.22, M(0x1d1f22), 0, 0.04, 0, am); W.amLedM = E(0xff2020, 1.5); box(0.03, 0.02, 0.03, W.amLedM, 0.1, 0.085, 0.07, am, false);
+  box(0.2, 0.012, 0.09, M(0x0d0e10, { roughness: 0.2 }), -0.02, 0.085, -0.03, am, false);
+  W.reels = [-0.07, 0.03].map(x => { const g = new THREE.Group(); g.position.set(x, 0.093, -0.03); am.add(g);
+    cyl(0.028, 0.028, 0.008, 14, M(0xd8d2c4), 0, 0, 0, g); [0, 1, 2].forEach(k => { const b = box(0.05, 0.01, 0.008, M(0x1d1f22), 0, 0.002, 0, g, false); b.rotation.y = k * Math.PI / 3; }); return g; });
   // bell
   const bell = new THREE.Mesh(new THREE.SphereGeometry(0.06, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2), M(0xc9a24a, { metalness: 0.9, roughness: 0.25 })); bell.position.set(-6.6, 1.06, 2.05); bell.castShadow = true; counter.add(bell);
+  const cardTex = textTex((c, w, h) => { c.fillStyle = '#efe7d2'; c.fillRect(0, 0, w, h); c.fillStyle = '#1a1a1a'; c.font = 'bold 70px serif'; c.fillText('RULES', 40, 90);
+    c.font = 'italic 44px serif'; ['1. light on till 6', '2. no room 9', '3. let 9 ring', '4. door shut after 3'].forEach((l, i) => c.fillText(l, 40, 170 + i * 70));
+    c.strokeStyle = '#a3261f'; c.lineWidth = 6; c.strokeRect(14, 14, w - 28, h - 28); }, 512, 480);
+  W.card = new THREE.Mesh(new THREE.PlaneGeometry(0.2, 0.19), new THREE.MeshStandardMaterial({ map: cardTex, roughness: 0.9 }));
+  W.card.rotation.x = -Math.PI / 2; W.card.position.set(-6.4, 1.065, 1.95); W.card.receiveShadow = true; W.card.castShadow = true; counter.add(W.card);
+  const handTex = textTex((c, w, h) => { c.lineCap = 'round'; c.strokeStyle = '#121418'; c.lineWidth = 50; c.beginPath(); c.moveTo(w, h / 2); c.lineTo(60, h / 2); c.stroke();
+    c.strokeStyle = '#e6e0d2'; c.lineWidth = 28; c.beginPath(); c.moveTo(w, h / 2); c.lineTo(60, h / 2); c.stroke(); }, 512, 96);
+  W.hand = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.11), new THREE.MeshStandardMaterial({ map: handTex, alphaTest: 0.5, transparent: false, roughness: 0.9, emissive: 0xffffff, emissiveMap: handTex, emissiveIntensity: 0.12 }));
+  W.hand.rotation.x = -Math.PI / 2; W.hand.position.set(-6.0, 1.075, 1.95); W.hand.castShadow = true; counter.add(W.hand);
   // key board on back wall: hooks 1-8, gap, 10
   const kb = new THREE.Group(); kb.position.set(-6.4, 1.9, -1.98); off.add(kb); W.keyBoard = kb;
   box(2.0, 0.9, 0.04, M(0x3a2a1e), 0, 0, 0, kb);

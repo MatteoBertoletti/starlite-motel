@@ -130,7 +130,7 @@ sf.write(f'{OUT}/voice.wav', mix, SR)
 def active(tm):
     a = int(tm * SR); seg = mix[a:a + int(0.12 * SR)]
     return 20 * np.log10(np.sqrt(np.mean(seg ** 2)) + 1e-9)
-bad = [(c['text'], c['t'], round(active(c['t']), 1)) for c in allcaps if active(c['t']) < -40]
+bad = [(c['text'], float(c['t']), float(round(active(c['t']), 1))) for c in allcaps if active(c['t']) < -40]
 json.dump({'duration': round(total, 3), 'lines': timeline, 'captions': allcaps, 'caption_check_failures': bad}, open(f'{OUT}/timing.json', 'w'), indent=1)
 open(f'{OUT}/report.txt', 'w').write('\n'.join(report) + f'\n\nTOTAL {total:.2f}s\ncaption failures: {bad}\n')
 print('\n'.join(report)); print('TOTAL', round(total, 2), 'caption failures', bad)

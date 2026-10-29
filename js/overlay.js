@@ -125,3 +125,17 @@ export function endCard(c, lt) {
 }
 
 export function vignetteText(c, txt, y, col = '#fff') { c.save(); c.textAlign = 'center'; c.font = '90px Anton'; c.lineWidth = 14; c.strokeStyle = INK; c.strokeText(txt, 540, y); c.fillStyle = col; c.fillText(txt, 540, y); c.restore(); }
+
+// Rule 1 breaks: the sticker slaps on, then cracks and a red slash goes through it
+export function brokenSticker(c, lt) {
+  if (lt < 0) return;
+  sticker(c, 1, [[{ w: 'LIGHT ON' }], [{ w: 'TILL' }, { w: '6 AM', k: 1 }]], lt + 0.3, 470, -0.07);
+  const k = Math.min(1, lt / 0.25);
+  c.save(); c.translate(540, 470); c.rotate(-0.07);
+  c.strokeStyle = INK; c.lineWidth = 6; c.beginPath();
+  [[-60, -250], [-20, -120], [-70, -10], [-10, 90], [-50, 220]].slice(0, 1 + Math.floor(k * 4)).forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke();
+  c.strokeStyle = ACC; c.lineWidth = 34; c.lineCap = 'round'; c.beginPath(); c.moveTo(-430, 200); c.lineTo(-430 + 860 * k, 200 - 420 * k); c.stroke();
+  c.restore();
+  if (lt > 0.3) { c.save(); c.textAlign = 'center'; c.font = '96px Anton'; c.lineWidth = 16; c.strokeStyle = INK; c.lineJoin = 'round';
+    c.strokeText('IMPOSSIBLE', 540, 820); c.fillStyle = ACC; c.fillText('IMPOSSIBLE', 540, 820); c.restore(); }
+}
