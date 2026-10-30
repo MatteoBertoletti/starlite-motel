@@ -2,10 +2,10 @@
 Uses the free preview clips to measure pitch (no credits), adds the winner to the library,
 then renders one test line with two models. Output -> out/el/
 """
-import os, json, sys, subprocess, urllib.request, urllib.parse
+import os, json, sys, subprocess, urllib.request, urllib.parse, urllib.error
 import numpy as np
 
-KEY = os.environ['ELEVENLABS_API_KEY']; API = 'https://api.elevenlabs.io'
+KEY = os.environ.get('ELEVENLABS_API_KEY', '').strip(); API = 'https://api.elevenlabs.io'
 OUT = 'out/el'; os.makedirs(OUT, exist_ok=True)
 def req(method, path, body=None, raw=False):
     r = urllib.request.Request(API + path, method=method, headers={'xi-api-key': KEY, 'Content-Type': 'application/json'},
@@ -30,6 +30,10 @@ def f0_median(x, sr=16000):
     return float(np.median(f0s)) if len(f0s) > 20 else None
 
 log = {}
+print('key length', len(KEY), 'prefix', KEY[:3] + '…' if KEY else '(empty)')
+for path in ['/v1/user', '/v1/user/subscription', '/v1/models', '/v2/voices?page_size=1', '/v1/shared-voices?page_size=1']:
+    try: d = req('GET', path); print('OK ', path, str(d)[:160])
+    except urllib.error.HTTPError as e: print('ERR', path, e.code, e.read().decode()[:300])
 cands = {}
 for q in [dict(language='it', gender='male', age='middle_aged'), dict(language='it', gender='male', age='old'),
           dict(language='it', gender='male', use_cases='narrative_story'), dict(language='it', gender='male', search='profonda')]:
@@ -67,6 +71,7 @@ def score(r):
     return s
 rows.sort(key=score, reverse=True)
 for r in rows[:15]: print(f"{score(r):5.2f}  f0={r['f0']:6.1f}  {r['name'][:28]:28s} {r['age']} {r['accent']} {r['descr']} {r['use_case']} usage={r['usage_1y']}")
+if not rows: print('no candidates'); json.dump(log, open(f'{OUT}/pick.json', 'w'), default=str); sys.exit(1)
 win = rows[0]; log['winner'] = win; log['top'] = rows[:6]
 
 # add the winner to my library so the TTS endpoint can use it

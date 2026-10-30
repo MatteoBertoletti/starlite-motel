@@ -20,7 +20,7 @@ jobs:
         env: { ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}' }
         run: python tools/el_pick.py
       - name: Music analysis
-        if: ${{ inputs.music == 'true' }}
+        if: ${{ !cancelled() && inputs.music == 'true' }}
         run: python tools/music_pick.py
       - name: Publish
         if: always()
