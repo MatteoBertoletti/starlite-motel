@@ -1,0 +1,47 @@
+name: remix
+# New sound mix on an already-rendered video (no re-render): swaps the music bed, keeps the picture.
+on:
+  workflow_dispatch:
+    inputs:
+      bed:       { description: 'Music key in story/sfx.json', default: 'bed_calm' }
+      bed_under: { description: 'dB under the voice', default: '15' }
+      bed_lp:    { description: 'Low-pass on the bed (Hz, 0 = off)', default: '4000' }
+permissions:
+  contents: write
+jobs:
+  remix:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        v:
+          - { tag: en_916, render: renders, audio: audio-out, file: starlite_day1_phone.mp4 }
+          - { tag: it_169, render: renders-it_169, audio: audio-out-it, file: starlite_day1_phone_it_169.mp4 }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile
+      - name: Fetch the rendered video, events and narration
+        run: |
+          for b in ${{ matrix.v.render }} ${{ matrix.v.audio }}; do git fetch -q --depth 1 origin +$b:refs/remotes/origin/$b; done
+          mkdir -p in out/audio
+          git --work-tree=in checkout origin/${{ matrix.v.render }} -- ${{ matrix.v.file }} events.json
+          git --work-tree=out/audio checkout origin/${{ matrix.v.audio }} -- voice.wav
+          git reset -q
+          python tools/sfx_fetch.py --get
+      - name: Mix with the new bed
+        run: python tools/mix.py --voice out/audio/voice.wav --events in/events.json --sfx out/audio/sfx --out out/mix.wav --bed ${{ inputs.bed }} --bed-under ${{ inputs.bed_under }} --bed-lp ${{ inputs.bed_lp }}
+      - name: Swap the audio
+        run: |
+          mkdir -p final
+          ffmpeg -hide_banner -loglevel error -y -i in/${{ matrix.v.file }} -i out/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart final/v2_${{ matrix.v.file }}
+          cp out/mix_report.json final/mix_report_v2_${{ matrix.v.tag }}.json; ls -la final
+      - uses: actions/upload-artifact@v4
+        with: { name: 'remix_${{ matrix.v.tag }}', path: final/ }
+      - name: Publish next to the original render
+        run: |
+          git fetch -q --depth 1 origin +${{ matrix.v.render }}:refs/remotes/origin/${{ matrix.v.render }}
+          git worktree add -q --detach /tmp/rb origin/${{ matrix.v.render }} && cp final/* /tmp/rb/ && cd /tmp/rb
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "remix ${{ github.run_id }}" && git push -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.v.render }}

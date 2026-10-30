@@ -8,6 +8,7 @@ import numpy as np, soundfile as sf
 ap = argparse.ArgumentParser()
 ap.add_argument('--voice', required=True); ap.add_argument('--events', required=True)
 ap.add_argument('--sfx', required=True); ap.add_argument('--out', required=True)
+ap.add_argument('--bed', default='bed'); ap.add_argument('--bed-under', type=float, default=13.0); ap.add_argument('--bed-lp', type=float, default=0)
 A = ap.parse_args()
 SR = 48000
 
@@ -80,8 +81,12 @@ place('sting', E['capGone'] - 0.03, -6)
 place('boom', E['choice'] - 0.05, -6); place('end_hit', E['end'] - 0.03, -8)
 
 # drone bed, 13 LU under the voice, with dips before the big moments
-bed = clip('bed'); bed = np.tile(bed, int(np.ceil(N / len(bed))) + 1)[:N]
-bed *= 10 ** ((lufs(V) - 13 - lufs(bed[: int(60 * SR)])) / 20)
+bed = clip(A.bed)
+if A.bed_lp:                                     # darken the bed so it sits under the voice
+    sf.write('/tmp/_b.wav', bed, SR); subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', '/tmp/_b.wav', '-af', f'lowpass=f={A.bed_lp},highpass=f=45', '/tmp/_b2.wav'], check=True)
+    bed, _ = sf.read('/tmp/_b2.wav', dtype='float32')
+bed = np.tile(bed, int(np.ceil(N / len(bed))) + 1)[:N]
+bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: int(60 * SR)])) / 20)
 g = np.ones(N, np.float32)
 def ramp(t0, t1, a, b):
     i0, i1 = int(t0 * SR), int(t1 * SR); g[i0:i1] = np.linspace(a, b, max(1, i1 - i0)); return i1

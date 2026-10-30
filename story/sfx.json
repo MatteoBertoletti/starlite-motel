@@ -114,5 +114,9 @@
  "end_hit": {
   "url": "https://assets.mixkit.co/active_storage/sfx/498/498-preview.mp3",
   "title": "Deep heartbeat impact"
+ },
+ "bed_calm": {
+  "url": "https://assets.mixkit.co/music/584/584.mp3",
+  "title": "Rest Now (Mixkit music) - steady pad, no hits"
  }
 }
