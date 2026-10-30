@@ -34,7 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add episodes/${{ inputs.ep }}/timing.json && git commit -qm "Timings for ${{ inputs.ep }}" && git pull -q --rebase && git push -q
           mkdir -p /tmp/pub && cp -r out/voice/* /tmp/pub/ && cd /tmp/pub && rm -f lines/*_clean.wav
-          git init -q && git checkout -q -b voice-${{ inputs.ep }} && git add -A && git commit -qm "voice ${{ github.run_id }}"
+          git init -q && git checkout -q -b voice-${{ inputs.ep }} && git add -A && git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "voice ${{ github.run_id }}"
           git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" voice-${{ inputs.ep }}
       - uses: actions/upload-artifact@v4
         with: { name: 'voice_${{ inputs.ep }}', path: out/voice/ }
