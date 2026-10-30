@@ -1,0 +1,4943 @@
+{
+ "duration": 359.451,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.3,
+   "end": 5.79,
+   "dur": 5.49,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "immagina",
+     "s": 0.3,
+     "e": 0.9
+    },
+    {
+     "w": "sono",
+     "s": 1.24,
+     "e": 1.6
+    },
+    {
+     "w": "le",
+     "s": 1.6,
+     "e": 1.78
+    },
+    {
+     "w": "ventitre",
+     "s": 1.78,
+     "e": 2.34
+    },
+    {
+     "w": "e",
+     "s": 2.34,
+     "e": 2.42
+    },
+    {
+     "w": "quaranta",
+     "s": 2.42,
+     "e": 2.96
+    },
+    {
+     "w": "e",
+     "s": 3.36,
+     "e": 3.44
+    },
+    {
+     "w": "hai",
+     "s": 3.44,
+     "e": 3.6
+    },
+    {
+     "w": "appena",
+     "s": 3.6,
+     "e": 4.04
+    },
+    {
+     "w": "preso",
+     "s": 4.04,
+     "e": 4.44
+    },
+    {
+     "w": "le",
+     "s": 4.44,
+     "e": 4.52
+    },
+    {
+     "w": "chiavi",
+     "s": 4.52,
+     "e": 4.88
+    },
+    {
+     "w": "di",
+     "s": 4.88,
+     "e": 4.98
+    },
+    {
+     "w": "casa",
+     "s": 4.98,
+     "e": 5.2
+    },
+    {
+     "w": "nuova",
+     "s": 5.2,
+     "e": 5.62
+    }
+   ],
+   "match": 1.0,
+   "heard": "Immagina, sono le ventitré e quaranta, e hai appena preso le chiavi di casa nuova."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 6.11,
+   "end": 11.28,
+   "dur": 5.17,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "un",
+     "s": 6.11,
+     "e": 6.25
+    },
+    {
+     "w": "monolocale",
+     "s": 6.25,
+     "e": 6.83
+    },
+    {
+     "w": "al",
+     "s": 6.83,
+     "e": 6.99
+    },
+    {
+     "w": "quarto",
+     "s": 6.99,
+     "e": 7.23
+    },
+    {
+     "w": "piano",
+     "s": 7.23,
+     "e": 7.71
+    },
+    {
+     "w": "in",
+     "s": 7.93,
+     "e": 8.13
+    },
+    {
+     "w": "via",
+     "s": 8.13,
+     "e": 8.31
+    },
+    {
+     "w": "dei",
+     "s": 8.31,
+     "e": 8.51
+    },
+    {
+     "w": "glicini",
+     "s": 8.51,
+     "e": 8.97
+    },
+    {
+     "w": "nove",
+     "s": 8.97,
+     "e": 9.27
+    },
+    {
+     "w": "affitto",
+     "s": 9.73,
+     "e": 10.21
+    },
+    {
+     "w": "bassissimo",
+     "s": 10.21,
+     "e": 11.03
+    }
+   ],
+   "match": 1.0,
+   "heard": "Un monolocale al quarto piano, in via dei Glicini nove. Affitto bassissimo."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 11.6,
+   "end": 14.67,
+   "dur": 3.07,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "troppo",
+     "s": 11.6,
+     "e": 11.9
+    },
+    {
+     "w": "basso",
+     "s": 11.6,
+     "e": 11.9
+    },
+    {
+     "w": "e",
+     "s": 11.6,
+     "e": 11.9
+    },
+    {
+     "w": "stanotte",
+     "s": 11.6,
+     "e": 11.9
+    },
+    {
+     "w": "capirai",
+     "s": 11.6,
+     "e": 11.9
+    },
+    {
+     "w": "perche",
+     "s": 11.6,
+     "e": 11.9
+    }
+   ],
+   "match": 0.0,
+   "heard": "Buon appetito!"
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 14.99,
+   "end": 18.74,
+   "dur": 3.75,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "sul",
+     "s": 14.99,
+     "e": 15.19
+    },
+    {
+     "w": "tavolo",
+     "s": 15.19,
+     "e": 15.71
+    },
+    {
+     "w": "c",
+     "s": 15.71,
+     "e": 15.93
+    },
+    {
+     "w": "e",
+     "s": 15.93,
+     "e": 15.97
+    },
+    {
+     "w": "un",
+     "s": 15.97,
+     "e": 16.07
+    },
+    {
+     "w": "biglietto",
+     "s": 16.07,
+     "e": 16.53
+    },
+    {
+     "w": "della",
+     "s": 16.53,
+     "e": 16.71
+    },
+    {
+     "w": "proprietaria",
+     "s": 16.71,
+     "e": 17.43
+    },
+    {
+     "w": "la",
+     "s": 17.65,
+     "e": 17.81
+    },
+    {
+     "w": "signora",
+     "s": 17.81,
+     "e": 18.19
+    },
+    {
+     "w": "bruni",
+     "s": 18.19,
+     "e": 18.57
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sul tavolo c 'è un biglietto della proprietaria, la signora Bruni."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 19.06,
+   "end": 23.65,
+   "dur": 4.59,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "sette",
+     "s": 19.06,
+     "e": 19.46
+    },
+    {
+     "w": "regole",
+     "s": 19.46,
+     "e": 19.94
+    },
+    {
+     "w": "scritte",
+     "s": 20.24,
+     "e": 20.88
+    },
+    {
+     "w": "a",
+     "s": 20.88,
+     "e": 21.04
+    },
+    {
+     "w": "mano",
+     "s": 21.04,
+     "e": 21.36
+    },
+    {
+     "w": "sottolineate",
+     "s": 21.88,
+     "e": 22.6
+    },
+    {
+     "w": "due",
+     "s": 22.6,
+     "e": 22.96
+    },
+    {
+     "w": "volte",
+     "s": 22.96,
+     "e": 23.4
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sette regole. Scritte a mano. Sottolineate due volte."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.97,
+   "end": 31.7,
+   "dur": 7.73,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "in",
+     "s": 23.97,
+     "e": 24.15
+    },
+    {
+     "w": "fondo",
+     "s": 24.15,
+     "e": 24.51
+    },
+    {
+     "w": "una",
+     "s": 24.91,
+     "e": 25.09
+    },
+    {
+     "w": "sola",
+     "s": 25.09,
+     "e": 25.35
+    },
+    {
+     "w": "frase",
+     "s": 25.35,
+     "e": 25.81
+    },
+    {
+     "w": "se",
+     "s": 26.37,
+     "e": 26.61
+    },
+    {
+     "w": "le",
+     "s": 26.61,
+     "e": 26.73
+    },
+    {
+     "w": "rispetti",
+     "s": 26.73,
+     "e": 27.39
+    },
+    {
+     "w": "resti",
+     "s": 27.63,
+     "e": 28.29
+    },
+    {
+     "w": "se",
+     "s": 28.55,
+     "e": 28.93
+    },
+    {
+     "w": "non",
+     "s": 28.93,
+     "e": 29.09
+    },
+    {
+     "w": "le",
+     "s": 29.09,
+     "e": 29.23
+    },
+    {
+     "w": "rispetti",
+     "s": 29.23,
+     "e": 30.53
+    },
+    {
+     "w": "resti",
+     "s": 30.53,
+     "e": 30.99
+    },
+    {
+     "w": "lo",
+     "s": 30.99,
+     "e": 31.09
+    },
+    {
+     "w": "stesso",
+     "s": 31.09,
+     "e": 31.33
+    }
+   ],
+   "match": 1.0,
+   "heard": "In fondo, una sola frase, se le rispetti, resti. Se non le rispetti… resti lo stesso."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 32.02,
+   "end": 35.76,
+   "dur": 3.74,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 32.02,
+     "e": 32.14
+    },
+    {
+     "w": "viene",
+     "s": 32.14,
+     "e": 32.36
+    },
+    {
+     "w": "da",
+     "s": 32.36,
+     "e": 32.56
+    },
+    {
+     "w": "ridere",
+     "s": 32.56,
+     "e": 33.0
+    },
+    {
+     "w": "lo",
+     "s": 33.5,
+     "e": 33.6
+    },
+    {
+     "w": "attacchi",
+     "s": 33.6,
+     "e": 34.0
+    },
+    {
+     "w": "al",
+     "s": 34.0,
+     "e": 34.1
+    },
+    {
+     "w": "frigo",
+     "s": 34.1,
+     "e": 34.54
+    },
+    {
+     "w": "e",
+     "s": 34.86,
+     "e": 34.92
+    },
+    {
+     "w": "vai",
+     "s": 34.92,
+     "e": 35.08
+    },
+    {
+     "w": "a",
+     "s": 35.08,
+     "e": 35.22
+    },
+    {
+     "w": "letto",
+     "s": 35.22,
+     "e": 35.64
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti viene da ridere. Lo attacchi al frigo, e vai a letto."
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 36.08,
+   "end": 39.38,
+   "dur": 3.3,
+   "file": "out/voice/lines/08.wav",
+   "tokens": [
+    {
+     "w": "mezzanotte",
+     "s": 36.08,
+     "e": 36.76
+    },
+    {
+     "w": "e",
+     "s": 36.76,
+     "e": 37.04
+    },
+    {
+     "w": "dodici",
+     "s": 37.04,
+     "e": 37.6
+    },
+    {
+     "w": "il",
+     "s": 37.92,
+     "e": 38.24
+    },
+    {
+     "w": "citofono",
+     "s": 38.24,
+     "e": 38.76
+    },
+    {
+     "w": "suona",
+     "s": 38.76,
+     "e": 39.2
+    }
+   ],
+   "match": 1.0,
+   "heard": "Mezzanotte e dodici. Il citofono suona."
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 39.7,
+   "end": 44.54,
+   "dur": 4.84,
+   "file": "out/voice/lines/09.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 39.7,
+     "e": 40.12
+    },
+    {
+     "w": "uno",
+     "s": 40.12,
+     "e": 40.4
+    },
+    {
+     "w": "se",
+     "s": 40.86,
+     "e": 41.0
+    },
+    {
+     "w": "il",
+     "s": 41.0,
+     "e": 41.14
+    },
+    {
+     "w": "citofono",
+     "s": 41.14,
+     "e": 41.64
+    },
+    {
+     "w": "suona",
+     "s": 41.64,
+     "e": 42.08
+    },
+    {
+     "w": "dopo",
+     "s": 42.08,
+     "e": 42.32
+    },
+    {
+     "w": "mezzanotte",
+     "s": 42.32,
+     "e": 43.08
+    },
+    {
+     "w": "non",
+     "s": 43.4,
+     "e": 43.58
+    },
+    {
+     "w": "rispondere",
+     "s": 43.58,
+     "e": 44.28
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola uno, se il citofono suona dopo mezzanotte, non rispondere."
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 44.86,
+   "end": 47.92,
+   "dur": 3.06,
+   "file": "out/voice/lines/10.wav",
+   "tokens": [
+    {
+     "w": "suona",
+     "s": 44.86,
+     "e": 45.26
+    },
+    {
+     "w": "una",
+     "s": 45.26,
+     "e": 45.44
+    },
+    {
+     "w": "volta",
+     "s": 45.44,
+     "e": 45.86
+    },
+    {
+     "w": "due",
+     "s": 46.5,
+     "e": 46.9
+    },
+    {
+     "w": "tre",
+     "s": 47.36,
+     "e": 47.68
+    }
+   ],
+   "match": 1.0,
+   "heard": "Suona una volta. Due. Tre."
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 48.24,
+   "end": 52.28,
+   "dur": 4.04,
+   "file": "out/voice/lines/11.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 48.24,
+     "e": 48.34
+    },
+    {
+     "w": "avvicini",
+     "s": 48.34,
+     "e": 48.86
+    },
+    {
+     "w": "al",
+     "s": 48.86,
+     "e": 49.0
+    },
+    {
+     "w": "videocitofono",
+     "s": 49.0,
+     "e": 49.9
+    },
+    {
+     "w": "lo",
+     "s": 50.3,
+     "e": 50.5
+    },
+    {
+     "w": "schermo",
+     "s": 50.5,
+     "e": 50.92
+    },
+    {
+     "w": "si",
+     "s": 50.92,
+     "e": 51.22
+    },
+    {
+     "w": "accende",
+     "s": 51.22,
+     "e": 51.62
+    },
+    {
+     "w": "da",
+     "s": 51.62,
+     "e": 51.78
+    },
+    {
+     "w": "solo",
+     "s": 51.78,
+     "e": 52.06
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti avvicini al videocitofono. Lo schermo si accende da solo."
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 52.6,
+   "end": 54.95,
+   "dur": 2.35,
+   "file": "out/voice/lines/12.wav",
+   "tokens": [
+    {
+     "w": "davanti",
+     "s": 52.6,
+     "e": 53.0
+    },
+    {
+     "w": "al",
+     "s": 53.0,
+     "e": 53.14
+    },
+    {
+     "w": "portone",
+     "s": 53.14,
+     "e": 53.7
+    },
+    {
+     "w": "non",
+     "s": 53.7,
+     "e": 54.0
+    },
+    {
+     "w": "c",
+     "s": 54.0,
+     "e": 54.16
+    },
+    {
+     "w": "e",
+     "s": 54.16,
+     "e": 54.26
+    },
+    {
+     "w": "nessuno",
+     "s": 54.26,
+     "e": 54.78
+    }
+   ],
+   "match": 1.0,
+   "heard": "Davanti al portone non c 'è nessuno."
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 55.27,
+   "end": 58.52,
+   "dur": 3.25,
+   "file": "out/voice/lines/13.wav",
+   "tokens": [
+    {
+     "w": "ma",
+     "s": 55.27,
+     "e": 55.39
+    },
+    {
+     "w": "la",
+     "s": 55.39,
+     "e": 55.51
+    },
+    {
+     "w": "cornetta",
+     "s": 55.51,
+     "e": 56.31
+    },
+    {
+     "w": "appesa",
+     "s": 56.43,
+     "e": 56.83
+    },
+    {
+     "w": "al",
+     "s": 56.83,
+     "e": 56.97
+    },
+    {
+     "w": "muro",
+     "s": 56.97,
+     "e": 57.37
+    },
+    {
+     "w": "sta",
+     "s": 57.57,
+     "e": 57.73
+    },
+    {
+     "w": "vibrando",
+     "s": 57.73,
+     "e": 58.27
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ma la cornetta, appesa al muro, sta vibrando."
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 58.84,
+   "end": 62.08,
+   "dur": 3.24,
+   "file": "out/voice/lines/14.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 58.84,
+     "e": 59.0
+    },
+    {
+     "w": "rispondi",
+     "s": 59.0,
+     "e": 59.8
+    },
+    {
+     "w": "al",
+     "s": 59.9,
+     "e": 60.22
+    },
+    {
+     "w": "settimo",
+     "s": 60.22,
+     "e": 60.64
+    },
+    {
+     "w": "squillo",
+     "s": 60.64,
+     "e": 61.16
+    },
+    {
+     "w": "smette",
+     "s": 61.42,
+     "e": 61.86
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non rispondi. Al settimo squillo, smette."
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 62.4,
+   "end": 67.94,
+   "dur": 5.54,
+   "file": "out/voice/lines/15.wav",
+   "tokens": [
+    {
+     "w": "sullo",
+     "s": 62.43,
+     "e": 62.68
+    },
+    {
+     "w": "schermo",
+     "s": 62.68,
+     "e": 63.26
+    },
+    {
+     "w": "per",
+     "s": 63.54,
+     "e": 63.62
+    },
+    {
+     "w": "un",
+     "s": 63.62,
+     "e": 63.78
+    },
+    {
+     "w": "attimo",
+     "s": 63.78,
+     "e": 64.24
+    },
+    {
+     "w": "compare",
+     "s": 64.46,
+     "e": 64.88
+    },
+    {
+     "w": "una",
+     "s": 64.88,
+     "e": 65.1
+    },
+    {
+     "w": "mano",
+     "s": 65.1,
+     "e": 65.48
+    },
+    {
+     "w": "appoggiata",
+     "s": 66.02,
+     "e": 66.58
+    },
+    {
+     "w": "al",
+     "s": 66.58,
+     "e": 66.74
+    },
+    {
+     "w": "vetro",
+     "s": 66.74,
+     "e": 67.06
+    },
+    {
+     "w": "del",
+     "s": 67.06,
+     "e": 67.2
+    },
+    {
+     "w": "portone",
+     "s": 67.2,
+     "e": 67.78
+    }
+   ],
+   "match": 0.92,
+   "heard": "Sulla schermo, per un attimo, compare una mano. Appoggiata al vetro del portone."
+  },
+  {
+   "id": 16,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 68.26,
+   "end": 69.62,
+   "dur": 1.36,
+   "file": "out/voice/lines/16.wav",
+   "tokens": [
+    {
+     "w": "dalla",
+     "s": 68.26,
+     "e": 68.54
+    },
+    {
+     "w": "parte",
+     "s": 68.54,
+     "e": 68.78
+    },
+    {
+     "w": "di",
+     "s": 68.78,
+     "e": 69.02
+    },
+    {
+     "w": "dentro",
+     "s": 69.02,
+     "e": 69.34
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dalla parte di dentro."
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 69.94,
+   "end": 75.83,
+   "dur": 5.89,
+   "file": "out/voice/lines/17.wav",
+   "tokens": [
+    {
+     "w": "l",
+     "s": 69.94,
+     "e": 70.12
+    },
+    {
+     "w": "una",
+     "s": 70.12,
+     "e": 70.28
+    },
+    {
+     "w": "e",
+     "s": 70.28,
+     "e": 70.42
+    },
+    {
+     "w": "mezza",
+     "s": 70.42,
+     "e": 70.86
+    },
+    {
+     "w": "il",
+     "s": 71.32,
+     "e": 71.52
+    },
+    {
+     "w": "frigo",
+     "s": 71.52,
+     "e": 71.94
+    },
+    {
+     "w": "e",
+     "s": 71.94,
+     "e": 72.16
+    },
+    {
+     "w": "vuoto",
+     "s": 72.16,
+     "e": 72.6
+    },
+    {
+     "w": "al",
+     "s": 73.1,
+     "e": 73.24
+    },
+    {
+     "w": "piano",
+     "s": 73.24,
+     "e": 73.42
+    },
+    {
+     "w": "terra",
+     "s": 73.42,
+     "e": 73.96
+    },
+    {
+     "w": "c",
+     "s": 73.96,
+     "e": 74.14
+    },
+    {
+     "w": "e",
+     "s": 74.14,
+     "e": 74.2
+    },
+    {
+     "w": "un",
+     "s": 74.2,
+     "e": 74.32
+    },
+    {
+     "w": "distributore",
+     "s": 74.32,
+     "e": 75.0
+    },
+    {
+     "w": "automatico",
+     "s": 75.0,
+     "e": 75.76
+    }
+   ],
+   "match": 1.0,
+   "heard": "L 'una e mezza. Il frigo è vuoto. Al piano terra c 'è un distributore automatico."
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 76.15,
+   "end": 81.29,
+   "dur": 5.14,
+   "file": "out/voice/lines/18.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 76.15,
+     "e": 76.57
+    },
+    {
+     "w": "due",
+     "s": 76.57,
+     "e": 76.83
+    },
+    {
+     "w": "dopo",
+     "s": 77.33,
+     "e": 77.83
+    },
+    {
+     "w": "le",
+     "s": 77.83,
+     "e": 77.91
+    },
+    {
+     "w": "due",
+     "s": 77.91,
+     "e": 78.19
+    },
+    {
+     "w": "non",
+     "s": 78.53,
+     "e": 78.73
+    },
+    {
+     "w": "prendere",
+     "s": 78.73,
+     "e": 79.29
+    },
+    {
+     "w": "l",
+     "s": 79.29,
+     "e": 79.39
+    },
+    {
+     "w": "ascensore",
+     "s": 79.39,
+     "e": 80.03
+    },
+    {
+     "w": "usa",
+     "s": 80.33,
+     "e": 80.63
+    },
+    {
+     "w": "le",
+     "s": 80.63,
+     "e": 80.73
+    },
+    {
+     "w": "scale",
+     "s": 80.73,
+     "e": 81.01
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola due. Dopo le due, non prendere l 'ascensore. Usa le scale."
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 81.61,
+   "end": 83.99,
+   "dur": 2.38,
+   "file": "out/voice/lines/19.wav",
+   "tokens": [
+    {
+     "w": "sono",
+     "s": 81.61,
+     "e": 81.89
+    },
+    {
+     "w": "l",
+     "s": 81.89,
+     "e": 82.07
+    },
+    {
+     "w": "una",
+     "s": 82.07,
+     "e": 82.23
+    },
+    {
+     "w": "e",
+     "s": 82.23,
+     "e": 82.33
+    },
+    {
+     "w": "trentuno",
+     "s": 82.33,
+     "e": 82.89
+    },
+    {
+     "w": "hai",
+     "s": 83.17,
+     "e": 83.43
+    },
+    {
+     "w": "tempo",
+     "s": 83.43,
+     "e": 83.87
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sono l 'una e trentuno. Hai tempo."
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 84.31,
+   "end": 88.34,
+   "dur": 4.03,
+   "file": "out/voice/lines/20.wav",
+   "tokens": [
+    {
+     "w": "prendi",
+     "s": 84.31,
+     "e": 84.61
+    },
+    {
+     "w": "l",
+     "s": 84.61,
+     "e": 84.67
+    },
+    {
+     "w": "ascensore",
+     "s": 84.67,
+     "e": 85.29
+    },
+    {
+     "w": "scendi",
+     "s": 85.69,
+     "e": 86.27
+    },
+    {
+     "w": "prendi",
+     "s": 86.71,
+     "e": 87.03
+    },
+    {
+     "w": "una",
+     "s": 87.03,
+     "e": 87.15
+    },
+    {
+     "w": "bottiglietta",
+     "s": 87.15,
+     "e": 87.79
+    },
+    {
+     "w": "d",
+     "s": 87.79,
+     "e": 87.87
+    },
+    {
+     "w": "acqua",
+     "s": 87.87,
+     "e": 88.21
+    }
+   ],
+   "match": 1.0,
+   "heard": "Prendi l 'ascensore. Scendi. Prendi una bottiglietta d 'acqua."
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 88.66,
+   "end": 93.37,
+   "dur": 4.71,
+   "file": "out/voice/lines/21.wav",
+   "tokens": [
+    {
+     "w": "quando",
+     "s": 88.66,
+     "e": 88.86
+    },
+    {
+     "w": "torni",
+     "s": 88.86,
+     "e": 89.54
+    },
+    {
+     "w": "le",
+     "s": 89.68,
+     "e": 89.76
+    },
+    {
+     "w": "porte",
+     "s": 89.76,
+     "e": 90.0
+    },
+    {
+     "w": "dell",
+     "s": 90.0,
+     "e": 90.24
+    },
+    {
+     "w": "ascensore",
+     "s": 90.24,
+     "e": 90.94
+    },
+    {
+     "w": "sono",
+     "s": 90.94,
+     "e": 91.22
+    },
+    {
+     "w": "gia",
+     "s": 91.22,
+     "e": 91.5
+    },
+    {
+     "w": "aperte",
+     "s": 91.5,
+     "e": 92.12
+    },
+    {
+     "w": "ti",
+     "s": 92.48,
+     "e": 92.6
+    },
+    {
+     "w": "aspettano",
+     "s": 92.6,
+     "e": 93.24
+    }
+   ],
+   "match": 1.0,
+   "heard": "Quando torni, le porte dell 'ascensore sono già aperte. Ti aspettano."
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 93.69,
+   "end": 96.82,
+   "dur": 3.13,
+   "file": "out/voice/lines/22.wav",
+   "tokens": [
+    {
+     "w": "sul",
+     "s": 93.69,
+     "e": 93.91
+    },
+    {
+     "w": "display",
+     "s": 93.91,
+     "e": 94.39
+    },
+    {
+     "w": "il",
+     "s": 94.67,
+     "e": 94.91
+    },
+    {
+     "w": "numero",
+     "s": 94.91,
+     "e": 95.19
+    },
+    {
+     "w": "del",
+     "s": 95.19,
+     "e": 95.39
+    },
+    {
+     "w": "piano",
+     "s": 95.39,
+     "e": 95.71
+    },
+    {
+     "w": "cambia",
+     "s": 95.71,
+     "e": 96.19
+    },
+    {
+     "w": "da",
+     "s": 96.19,
+     "e": 96.27
+    },
+    {
+     "w": "solo",
+     "s": 96.27,
+     "e": 96.61
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sul display, il numero del piano cambia da solo."
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 97.14,
+   "end": 99.84,
+   "dur": 2.7,
+   "file": "out/voice/lines/23.wav",
+   "tokens": [
+    {
+     "w": "quattro",
+     "s": 97.14,
+     "e": 97.72
+    },
+    {
+     "w": "sette",
+     "s": 97.96,
+     "e": 98.52
+    },
+    {
+     "w": "meno",
+     "s": 98.8,
+     "e": 99.34
+    },
+    {
+     "w": "uno",
+     "s": 99.34,
+     "e": 99.62
+    }
+   ],
+   "match": 1.0,
+   "heard": "Quattro. Sette. Meno uno."
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 100.16,
+   "end": 102.28,
+   "dur": 2.12,
+   "file": "out/voice/lines/24.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 100.16,
+     "e": 100.3
+    },
+    {
+     "w": "palazzo",
+     "s": 100.3,
+     "e": 100.92
+    },
+    {
+     "w": "ha",
+     "s": 100.92,
+     "e": 101.06
+    },
+    {
+     "w": "solo",
+     "s": 101.06,
+     "e": 101.4
+    },
+    {
+     "w": "sei",
+     "s": 101.4,
+     "e": 101.68
+    },
+    {
+     "w": "piani",
+     "s": 101.68,
+     "e": 102.12
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il palazzo ha solo sei piani."
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 102.6,
+   "end": 105.12,
+   "dur": 2.52,
+   "file": "out/voice/lines/25.wav",
+   "tokens": [
+    {
+     "w": "guardi",
+     "s": 102.6,
+     "e": 102.96
+    },
+    {
+     "w": "il",
+     "s": 102.96,
+     "e": 103.06
+    },
+    {
+     "w": "telefono",
+     "s": 103.06,
+     "e": 103.66
+    },
+    {
+     "w": "le",
+     "s": 103.9,
+     "e": 104.12
+    },
+    {
+     "w": "due",
+     "s": 104.12,
+     "e": 104.34
+    },
+    {
+     "w": "in",
+     "s": 104.34,
+     "e": 104.5
+    },
+    {
+     "w": "punto",
+     "s": 104.5,
+     "e": 104.88
+    }
+   ],
+   "match": 1.0,
+   "heard": "Guardi il telefono, le due in punto."
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 105.44,
+   "end": 110.93,
+   "dur": 5.49,
+   "file": "out/voice/lines/26.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 105.44,
+     "e": 105.56
+    },
+    {
+     "w": "porte",
+     "s": 105.56,
+     "e": 105.92
+    },
+    {
+     "w": "restano",
+     "s": 105.92,
+     "e": 106.6
+    },
+    {
+     "w": "aperte",
+     "s": 106.6,
+     "e": 107.14
+    },
+    {
+     "w": "dentro",
+     "s": 107.56,
+     "e": 108.16
+    },
+    {
+     "w": "la",
+     "s": 108.38,
+     "e": 108.48
+    },
+    {
+     "w": "luce",
+     "s": 108.48,
+     "e": 108.78
+    },
+    {
+     "w": "e",
+     "s": 108.78,
+     "e": 108.92
+    },
+    {
+     "w": "accesa",
+     "s": 108.92,
+     "e": 109.56
+    },
+    {
+     "w": "non",
+     "s": 109.86,
+     "e": 110.06
+    },
+    {
+     "w": "c",
+     "s": 110.06,
+     "e": 110.2
+    },
+    {
+     "w": "e",
+     "s": 110.2,
+     "e": 110.3
+    },
+    {
+     "w": "nessuno",
+     "s": 110.3,
+     "e": 110.76
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le porte restano aperte. Dentro, la luce è accesa. Non c 'è nessuno."
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 111.25,
+   "end": 116.97,
+   "dur": 5.72,
+   "file": "out/voice/lines/27.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 111.25,
+     "e": 111.59
+    },
+    {
+     "w": "piano",
+     "s": 111.91,
+     "e": 112.15
+    },
+    {
+     "w": "piano",
+     "s": 112.15,
+     "e": 112.45
+    },
+    {
+     "w": "la",
+     "s": 113.01,
+     "e": 113.11
+    },
+    {
+     "w": "cabina",
+     "s": 113.11,
+     "e": 113.47
+    },
+    {
+     "w": "si",
+     "s": 113.47,
+     "e": 113.63
+    },
+    {
+     "w": "abbassa",
+     "s": 113.63,
+     "e": 114.19
+    },
+    {
+     "w": "come",
+     "s": 114.55,
+     "e": 114.87
+    },
+    {
+     "w": "se",
+     "s": 114.87,
+     "e": 115.03
+    },
+    {
+     "w": "qualcuno",
+     "s": 115.03,
+     "e": 115.61
+    },
+    {
+     "w": "fosse",
+     "s": 115.61,
+     "e": 115.93
+    },
+    {
+     "w": "appena",
+     "s": 115.93,
+     "e": 116.31
+    },
+    {
+     "w": "salito",
+     "s": 116.31,
+     "e": 116.83
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi, piano piano, la cabina si abbassa. Come se qualcuno fosse appena salito."
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 117.29,
+   "end": 118.29,
+   "dur": 1.0,
+   "file": "out/voice/lines/28.wav",
+   "tokens": [
+    {
+     "w": "prendi",
+     "s": 117.29,
+     "e": 117.63
+    },
+    {
+     "w": "le",
+     "s": 117.63,
+     "e": 117.71
+    },
+    {
+     "w": "scale",
+     "s": 117.71,
+     "e": 118.01
+    }
+   ],
+   "match": 1.0,
+   "heard": "Prendi le scale."
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 118.61,
+   "end": 125.05,
+   "dur": 6.44,
+   "file": "out/voice/lines/29.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 118.61,
+     "e": 119.01
+    },
+    {
+     "w": "tre",
+     "s": 119.01,
+     "e": 119.27
+    },
+    {
+     "w": "la",
+     "s": 119.85,
+     "e": 119.99
+    },
+    {
+     "w": "luce",
+     "s": 119.99,
+     "e": 120.27
+    },
+    {
+     "w": "delle",
+     "s": 120.27,
+     "e": 120.47
+    },
+    {
+     "w": "scale",
+     "s": 120.47,
+     "e": 120.95
+    },
+    {
+     "w": "dura",
+     "s": 120.95,
+     "e": 121.45
+    },
+    {
+     "w": "sessanta",
+     "s": 121.45,
+     "e": 122.19
+    },
+    {
+     "w": "secondi",
+     "s": 122.19,
+     "e": 122.93
+    },
+    {
+     "w": "non",
+     "s": 123.29,
+     "e": 123.47
+    },
+    {
+     "w": "farti",
+     "s": 123.47,
+     "e": 123.97
+    },
+    {
+     "w": "trovare",
+     "s": 123.97,
+     "e": 124.39
+    },
+    {
+     "w": "al",
+     "s": 124.39,
+     "e": 124.51
+    },
+    {
+     "w": "buio",
+     "s": 124.51,
+     "e": 124.89
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola tre, la luce delle scale dura sessanta secondi. Non farti trovare al buio."
+  },
+  {
+   "id": 30,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 125.37,
+   "end": 129.16,
+   "dur": 3.79,
+   "file": "out/voice/lines/30.wav",
+   "tokens": [
+    {
+     "w": "premi",
+     "s": 125.37,
+     "e": 125.71
+    },
+    {
+     "w": "il",
+     "s": 125.71,
+     "e": 125.79
+    },
+    {
+     "w": "pulsante",
+     "s": 125.79,
+     "e": 126.41
+    },
+    {
+     "w": "clic",
+     "s": 126.91,
+     "e": 127.15
+    },
+    {
+     "w": "sessanta",
+     "s": 127.71,
+     "e": 128.43
+    },
+    {
+     "w": "secondi",
+     "s": 128.43,
+     "e": 129.09
+    }
+   ],
+   "match": 1.0,
+   "heard": "Premi il pulsante. Clic. Sessanta secondi."
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 129.48,
+   "end": 130.76,
+   "dur": 1.28,
+   "file": "out/voice/lines/31.wav",
+   "tokens": [
+    {
+     "w": "primo",
+     "s": 129.48,
+     "e": 129.74
+    },
+    {
+     "w": "piano",
+     "s": 129.74,
+     "e": 129.96
+    }
+   ],
+   "match": 1.0,
+   "heard": "Primo piano."
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 131.08,
+   "end": 131.85,
+   "dur": 0.77,
+   "file": "out/voice/lines/32.wav",
+   "tokens": [
+    {
+     "w": "secondo",
+     "s": 131.08,
+     "e": 131.74
+    }
+   ],
+   "match": 1.0,
+   "heard": "Secondo."
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 132.17,
+   "end": 137.8,
+   "dur": 5.63,
+   "file": "out/voice/lines/33.wav",
+   "tokens": [
+    {
+     "w": "al",
+     "s": 132.17,
+     "e": 132.33
+    },
+    {
+     "w": "terzo",
+     "s": 132.33,
+     "e": 132.69
+    },
+    {
+     "w": "piano",
+     "s": 132.69,
+     "e": 133.05
+    },
+    {
+     "w": "senti",
+     "s": 133.05,
+     "e": 133.69
+    },
+    {
+     "w": "dei",
+     "s": 133.69,
+     "e": 133.81
+    },
+    {
+     "w": "passi",
+     "s": 133.81,
+     "e": 134.71
+    },
+    {
+     "w": "sotto",
+     "s": 134.81,
+     "e": 135.53
+    },
+    {
+     "w": "di",
+     "s": 135.53,
+     "e": 135.73
+    },
+    {
+     "w": "te",
+     "s": 135.73,
+     "e": 135.95
+    },
+    {
+     "w": "stessa",
+     "s": 136.47,
+     "e": 137.05
+    },
+    {
+     "w": "velocita",
+     "s": 137.05,
+     "e": 137.61
+    }
+   ],
+   "match": 1.0,
+   "heard": "Al terzo piano senti dei passi. Sotto di te. Stessa velocità."
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 138.12,
+   "end": 140.27,
+   "dur": 2.15,
+   "file": "out/voice/lines/34.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 138.12,
+     "e": 138.26
+    },
+    {
+     "w": "fermi",
+     "s": 138.26,
+     "e": 138.8
+    },
+    {
+     "w": "si",
+     "s": 139.16,
+     "e": 139.54
+    },
+    {
+     "w": "fermano",
+     "s": 139.54,
+     "e": 140.12
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti fermi. Si fermano."
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 140.59,
+   "end": 142.72,
+   "dur": 2.13,
+   "file": "out/voice/lines/35.wav",
+   "tokens": [
+    {
+     "w": "riparti",
+     "s": 140.59,
+     "e": 141.23
+    },
+    {
+     "w": "ripartono",
+     "s": 141.75,
+     "e": 142.53
+    }
+   ],
+   "match": 1.0,
+   "heard": "Riparti. Ripartono."
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 143.04,
+   "end": 146.81,
+   "dur": 3.77,
+   "file": "out/voice/lines/36.wav",
+   "tokens": [
+    {
+     "w": "quarto",
+     "s": 143.04,
+     "e": 143.34
+    },
+    {
+     "w": "piano",
+     "s": 143.34,
+     "e": 143.7
+    },
+    {
+     "w": "le",
+     "s": 144.3,
+     "e": 144.48
+    },
+    {
+     "w": "chiavi",
+     "s": 144.48,
+     "e": 144.94
+    },
+    {
+     "w": "le",
+     "s": 145.28,
+     "e": 145.6
+    },
+    {
+     "w": "chiavi",
+     "s": 145.6,
+     "e": 145.96
+    },
+    {
+     "w": "non",
+     "s": 145.96,
+     "e": 146.1
+    },
+    {
+     "w": "entrano",
+     "s": 146.1,
+     "e": 146.64
+    }
+   ],
+   "match": 1.0,
+   "heard": "Quarto piano. Le chiavi. Le chiavi non entrano."
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 147.13,
+   "end": 149.07,
+   "dur": 1.94,
+   "file": "out/voice/lines/37.wav",
+   "tokens": [
+    {
+     "w": "tre",
+     "s": 147.13,
+     "e": 147.29
+    },
+    {
+     "w": "secondi",
+     "s": 147.29,
+     "e": 148.23
+    },
+    {
+     "w": "due",
+     "s": 148.23,
+     "e": 148.83
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tre secondi. Due."
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 149.39,
+   "end": 154.68,
+   "dur": 5.29,
+   "file": "out/voice/lines/38.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 149.39,
+     "e": 149.51
+    },
+    {
+     "w": "porta",
+     "s": 149.51,
+     "e": 149.79
+    },
+    {
+     "w": "si",
+     "s": 149.79,
+     "e": 150.03
+    },
+    {
+     "w": "apre",
+     "s": 150.03,
+     "e": 150.41
+    },
+    {
+     "w": "entri",
+     "s": 150.83,
+     "e": 151.43
+    },
+    {
+     "w": "e",
+     "s": 151.93,
+     "e": 152.09
+    },
+    {
+     "w": "fuori",
+     "s": 152.09,
+     "e": 152.57
+    },
+    {
+     "w": "le",
+     "s": 152.89,
+     "e": 153.01
+    },
+    {
+     "w": "scale",
+     "s": 153.01,
+     "e": 153.37
+    },
+    {
+     "w": "tornano",
+     "s": 153.37,
+     "e": 154.05
+    },
+    {
+     "w": "al",
+     "s": 154.05,
+     "e": 154.17
+    },
+    {
+     "w": "buio",
+     "s": 154.17,
+     "e": 154.55
+    }
+   ],
+   "match": 1.0,
+   "heard": "La porta si apre. Entri. E fuori, le scale tornano al buio."
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 155.0,
+   "end": 159.86,
+   "dur": 4.86,
+   "file": "out/voice/lines/39.wav",
+   "tokens": [
+    {
+     "w": "dietro",
+     "s": 155.0,
+     "e": 155.38
+    },
+    {
+     "w": "la",
+     "s": 155.38,
+     "e": 155.5
+    },
+    {
+     "w": "porta",
+     "s": 155.5,
+     "e": 155.92
+    },
+    {
+     "w": "i",
+     "s": 156.26,
+     "e": 156.36
+    },
+    {
+     "w": "passi",
+     "s": 156.36,
+     "e": 156.84
+    },
+    {
+     "w": "arrivano",
+     "s": 156.84,
+     "e": 157.32
+    },
+    {
+     "w": "al",
+     "s": 157.32,
+     "e": 157.46
+    },
+    {
+     "w": "tuo",
+     "s": 157.46,
+     "e": 157.7
+    },
+    {
+     "w": "pianerottolo",
+     "s": 157.7,
+     "e": 158.4
+    },
+    {
+     "w": "e",
+     "s": 158.4,
+     "e": 159.04
+    },
+    {
+     "w": "si",
+     "s": 159.04,
+     "e": 159.18
+    },
+    {
+     "w": "fermano",
+     "s": 159.18,
+     "e": 159.72
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dietro la porta, i passi arrivano al tuo pianerottolo e si fermano."
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 160.18,
+   "end": 163.5,
+   "dur": 3.32,
+   "file": "out/voice/lines/40.wav",
+   "tokens": [
+    {
+     "w": "qualcuno",
+     "s": 160.18,
+     "e": 160.7
+    },
+    {
+     "w": "preme",
+     "s": 160.7,
+     "e": 161.1
+    },
+    {
+     "w": "il",
+     "s": 161.1,
+     "e": 161.2
+    },
+    {
+     "w": "pulsante",
+     "s": 161.2,
+     "e": 161.7
+    },
+    {
+     "w": "della",
+     "s": 161.7,
+     "e": 162.0
+    },
+    {
+     "w": "luce",
+     "s": 162.0,
+     "e": 162.42
+    },
+    {
+     "w": "clic",
+     "s": 162.86,
+     "e": 163.16
+    }
+   ],
+   "match": 1.0,
+   "heard": "Qualcuno preme il pulsante della luce. Clic."
+  },
+  {
+   "id": 41,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 163.82,
+   "end": 169.12,
+   "dur": 5.3,
+   "file": "out/voice/lines/41.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 163.82,
+     "e": 163.96
+    },
+    {
+     "w": "luce",
+     "s": 163.96,
+     "e": 164.3
+    },
+    {
+     "w": "passa",
+     "s": 164.3,
+     "e": 164.7
+    },
+    {
+     "w": "sotto",
+     "s": 164.7,
+     "e": 165.06
+    },
+    {
+     "w": "la",
+     "s": 165.06,
+     "e": 165.28
+    },
+    {
+     "w": "porta",
+     "s": 165.28,
+     "e": 165.68
+    },
+    {
+     "w": "ma",
+     "s": 166.0,
+     "e": 166.54
+    },
+    {
+     "w": "non",
+     "s": 166.54,
+     "e": 166.68
+    },
+    {
+     "w": "c",
+     "s": 166.68,
+     "e": 166.84
+    },
+    {
+     "w": "e",
+     "s": 166.84,
+     "e": 166.92
+    },
+    {
+     "w": "nessuna",
+     "s": 166.92,
+     "e": 167.34
+    },
+    {
+     "w": "ombra",
+     "s": 167.34,
+     "e": 167.78
+    },
+    {
+     "w": "nessun",
+     "s": 168.22,
+     "e": 168.54
+    },
+    {
+     "w": "piede",
+     "s": 168.54,
+     "e": 169.02
+    }
+   ],
+   "match": 1.0,
+   "heard": "La luce passa sotto la porta. Ma non c 'è nessuna ombra. Nessun piede."
+  },
+  {
+   "id": 42,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 169.44,
+   "end": 172.09,
+   "dur": 2.65,
+   "file": "out/voice/lines/42.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 169.44,
+     "e": 169.6
+    },
+    {
+     "w": "due",
+     "s": 169.6,
+     "e": 169.88
+    },
+    {
+     "w": "e",
+     "s": 169.88,
+     "e": 170.16
+    },
+    {
+     "w": "quaranta",
+     "s": 170.16,
+     "e": 170.74
+    },
+    {
+     "w": "bussano",
+     "s": 171.36,
+     "e": 171.92
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le due e quaranta. Bussano."
+  },
+  {
+   "id": 43,
+   "who": "ADMIN",
+   "model": "eleven_v4",
+   "start": 172.41,
+   "end": 178.041,
+   "dur": 5.631,
+   "file": "out/voice/lines/43.wav",
+   "tokens": [
+    {
+     "w": "buonasera",
+     "s": 172.41,
+     "e": 172.95
+    },
+    {
+     "w": "amministrazione",
+     "s": 173.39,
+     "e": 174.05
+    },
+    {
+     "w": "del",
+     "s": 174.05,
+     "e": 174.23
+    },
+    {
+     "w": "condominio",
+     "s": 174.23,
+     "e": 174.85
+    },
+    {
+     "w": "c",
+     "s": 175.15,
+     "e": 175.35
+    },
+    {
+     "w": "e",
+     "s": 175.35,
+     "e": 175.43
+    },
+    {
+     "w": "una",
+     "s": 175.43,
+     "e": 175.59
+    },
+    {
+     "w": "perdita",
+     "s": 175.59,
+     "e": 175.99
+    },
+    {
+     "w": "d",
+     "s": 175.99,
+     "e": 176.13
+    },
+    {
+     "w": "acqua",
+     "s": 176.13,
+     "e": 176.49
+    },
+    {
+     "w": "dobbiamo",
+     "s": 176.65,
+     "e": 177.01
+    },
+    {
+     "w": "controllare",
+     "s": 177.01,
+     "e": 177.63
+    }
+   ],
+   "match": 1.0,
+   "heard": "Buonasera. Amministrazione del condominio. C 'è una perdita d 'acqua, dobbiamo controllare."
+  },
+  {
+   "id": 44,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 178.361,
+   "end": 184.261,
+   "dur": 5.9,
+   "file": "out/voice/lines/44.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 178.361,
+     "e": 178.781
+    },
+    {
+     "w": "quattro",
+     "s": 178.781,
+     "e": 179.401
+    },
+    {
+     "w": "l",
+     "s": 179.641,
+     "e": 179.821
+    },
+    {
+     "w": "amministrazione",
+     "s": 179.821,
+     "e": 180.761
+    },
+    {
+     "w": "non",
+     "s": 180.761,
+     "e": 181.121
+    },
+    {
+     "w": "esiste",
+     "s": 181.121,
+     "e": 181.681
+    },
+    {
+     "w": "non",
+     "s": 182.021,
+     "e": 182.261
+    },
+    {
+     "w": "aprire",
+     "s": 182.261,
+     "e": 182.741
+    },
+    {
+     "w": "a",
+     "s": 182.741,
+     "e": 183.061
+    },
+    {
+     "w": "chi",
+     "s": 183.061,
+     "e": 183.181
+    },
+    {
+     "w": "dice",
+     "s": 183.181,
+     "e": 183.441
+    },
+    {
+     "w": "di",
+     "s": 183.441,
+     "e": 183.601
+    },
+    {
+     "w": "esserlo",
+     "s": 183.601,
+     "e": 184.141
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola quattro. L 'amministrazione non esiste. Non aprire a chi dice di esserlo."
+  },
+  {
+   "id": 45,
+   "who": "ADMIN",
+   "model": "eleven_v4",
+   "start": 184.581,
+   "end": 188.472,
+   "dur": 3.891,
+   "file": "out/voice/lines/45.wav",
+   "tokens": [
+    {
+     "w": "signore",
+     "s": 184.581,
+     "e": 185.021
+    },
+    {
+     "w": "lo",
+     "s": 185.381,
+     "e": 185.701
+    },
+    {
+     "w": "so",
+     "s": 185.701,
+     "e": 185.901
+    },
+    {
+     "w": "che",
+     "s": 185.901,
+     "e": 186.061
+    },
+    {
+     "w": "e",
+     "s": 186.061,
+     "e": 186.141
+    },
+    {
+     "w": "in",
+     "s": 186.141,
+     "e": 186.181
+    },
+    {
+     "w": "casa",
+     "s": 186.181,
+     "e": 186.461
+    },
+    {
+     "w": "sento",
+     "s": 186.941,
+     "e": 187.281
+    },
+    {
+     "w": "il",
+     "s": 187.281,
+     "e": 187.421
+    },
+    {
+     "w": "suo",
+     "s": 187.421,
+     "e": 187.521
+    },
+    {
+     "w": "respiro",
+     "s": 187.521,
+     "e": 188.061
+    }
+   ],
+   "match": 1.0,
+   "heard": "Signore? Lo so che è in casa. Sento il suo respiro."
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 188.792,
+   "end": 190.602,
+   "dur": 1.81,
+   "file": "out/voice/lines/46.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 188.792,
+     "e": 188.912
+    },
+    {
+     "w": "copri",
+     "s": 188.912,
+     "e": 189.252
+    },
+    {
+     "w": "la",
+     "s": 189.252,
+     "e": 189.392
+    },
+    {
+     "w": "bocca",
+     "s": 189.392,
+     "e": 189.752
+    },
+    {
+     "w": "con",
+     "s": 189.752,
+     "e": 189.952
+    },
+    {
+     "w": "la",
+     "s": 189.952,
+     "e": 190.112
+    },
+    {
+     "w": "mano",
+     "s": 190.112,
+     "e": 190.392
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti copri la bocca con la mano."
+  },
+  {
+   "id": 47,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 190.922,
+   "end": 193.362,
+   "dur": 2.44,
+   "file": "out/voice/lines/47.wav",
+   "tokens": [
+    {
+     "w": "sotto",
+     "s": 190.922,
+     "e": 191.242
+    },
+    {
+     "w": "la",
+     "s": 191.242,
+     "e": 191.442
+    },
+    {
+     "w": "porta",
+     "s": 191.442,
+     "e": 191.862
+    },
+    {
+     "w": "scivola",
+     "s": 192.162,
+     "e": 192.622
+    },
+    {
+     "w": "un",
+     "s": 192.622,
+     "e": 192.722
+    },
+    {
+     "w": "foglio",
+     "s": 192.722,
+     "e": 193.222
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sotto la porta, scivola un foglio."
+  },
+  {
+   "id": 48,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 193.682,
+   "end": 199.972,
+   "dur": 6.29,
+   "file": "out/voice/lines/48.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 193.682,
+     "e": 193.802
+    },
+    {
+     "w": "un",
+     "s": 193.802,
+     "e": 193.922
+    },
+    {
+     "w": "verbale",
+     "s": 193.922,
+     "e": 194.482
+    },
+    {
+     "w": "interno",
+     "s": 194.882,
+     "e": 195.462
+    },
+    {
+     "w": "quattordici",
+     "s": 195.462,
+     "e": 196.282
+    },
+    {
+     "w": "perdita",
+     "s": 196.582,
+     "e": 197.042
+    },
+    {
+     "w": "grave",
+     "s": 197.042,
+     "e": 197.422
+    },
+    {
+     "w": "firmato",
+     "s": 197.842,
+     "e": 198.482
+    },
+    {
+     "w": "l",
+     "s": 198.482,
+     "e": 198.862
+    },
+    {
+     "w": "amministrazione",
+     "s": 198.862,
+     "e": 199.762
+    }
+   ],
+   "match": 1.0,
+   "heard": "È un verbale. Interno quattordici, perdita grave. Firmato l 'amministrazione."
+  },
+  {
+   "id": 49,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 200.292,
+   "end": 202.342,
+   "dur": 2.05,
+   "file": "out/voice/lines/49.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 200.292,
+     "e": 200.432
+    },
+    {
+     "w": "tuo",
+     "s": 200.432,
+     "e": 200.892
+    },
+    {
+     "w": "e",
+     "s": 200.892,
+     "e": 201.112
+    },
+    {
+     "w": "l",
+     "s": 201.112,
+     "e": 201.212
+    },
+    {
+     "w": "interno",
+     "s": 201.212,
+     "e": 201.672
+    },
+    {
+     "w": "tredici",
+     "s": 201.672,
+     "e": 202.152
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il tuo è l 'interno tredici."
+  },
+  {
+   "id": 50,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 202.662,
+   "end": 207.922,
+   "dur": 5.26,
+   "file": "out/voice/lines/50.wav",
+   "tokens": [
+    {
+     "w": "l",
+     "s": 202.662,
+     "e": 202.782
+    },
+    {
+     "w": "interno",
+     "s": 202.782,
+     "e": 203.182
+    },
+    {
+     "w": "quattordici",
+     "s": 203.182,
+     "e": 203.962
+    },
+    {
+     "w": "e",
+     "s": 203.962,
+     "e": 204.162
+    },
+    {
+     "w": "la",
+     "s": 204.162,
+     "e": 204.262
+    },
+    {
+     "w": "porta",
+     "s": 204.262,
+     "e": 204.482
+    },
+    {
+     "w": "accanto",
+     "s": 204.482,
+     "e": 205.082
+    },
+    {
+     "w": "quella",
+     "s": 205.322,
+     "e": 205.782
+    },
+    {
+     "w": "con",
+     "s": 205.782,
+     "e": 205.962
+    },
+    {
+     "w": "il",
+     "s": 205.962,
+     "e": 206.102
+    },
+    {
+     "w": "nastro",
+     "s": 206.102,
+     "e": 206.482
+    },
+    {
+     "w": "rosso",
+     "s": 206.482,
+     "e": 206.902
+    },
+    {
+     "w": "sulla",
+     "s": 206.902,
+     "e": 207.122
+    },
+    {
+     "w": "serratura",
+     "s": 207.122,
+     "e": 207.762
+    }
+   ],
+   "match": 1.0,
+   "heard": "L 'interno quattordici è la porta accanto. Quella con il nastro rosso sulla serratura."
+  },
+  {
+   "id": 51,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 208.242,
+   "end": 211.082,
+   "dur": 2.84,
+   "file": "out/voice/lines/51.wav",
+   "tokens": [
+    {
+     "w": "dall",
+     "s": 208.242,
+     "e": 208.482
+    },
+    {
+     "w": "altra",
+     "s": 208.482,
+     "e": 208.682
+    },
+    {
+     "w": "parte",
+     "s": 208.682,
+     "e": 208.982
+    },
+    {
+     "w": "del",
+     "s": 208.982,
+     "e": 209.242
+    },
+    {
+     "w": "muro",
+     "s": 209.242,
+     "e": 209.622
+    },
+    {
+     "w": "quella",
+     "s": 209.842,
+     "e": 210.062
+    },
+    {
+     "w": "porta",
+     "s": 210.062,
+     "e": 210.342
+    },
+    {
+     "w": "si",
+     "s": 210.342,
+     "e": 210.602
+    },
+    {
+     "w": "apre",
+     "s": 210.602,
+     "e": 210.942
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dall 'altra parte del muro, quella porta si apre."
+  },
+  {
+   "id": 52,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 211.402,
+   "end": 212.892,
+   "dur": 1.49,
+   "file": "out/voice/lines/52.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 211.402,
+     "e": 211.722
+    },
+    {
+     "w": "silenzio",
+     "s": 211.942,
+     "e": 212.782
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi, silenzio."
+  },
+  {
+   "id": 53,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 213.792,
+   "end": 217.612,
+   "dur": 3.82,
+   "file": "out/voice/lines/53.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 213.792,
+     "e": 213.972
+    },
+    {
+     "w": "tre",
+     "s": 213.972,
+     "e": 214.232
+    },
+    {
+     "w": "e",
+     "s": 214.232,
+     "e": 214.412
+    },
+    {
+     "w": "dieci",
+     "s": 214.412,
+     "e": 214.912
+    },
+    {
+     "w": "una",
+     "s": 215.312,
+     "e": 215.592
+    },
+    {
+     "w": "voce",
+     "s": 215.592,
+     "e": 216.112
+    },
+    {
+     "w": "dietro",
+     "s": 216.112,
+     "e": 216.752
+    },
+    {
+     "w": "la",
+     "s": 216.752,
+     "e": 216.852
+    },
+    {
+     "w": "tua",
+     "s": 216.852,
+     "e": 217.032
+    },
+    {
+     "w": "porta",
+     "s": 217.032,
+     "e": 217.352
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le tre e dieci. Una voce dietro la tua porta."
+  },
+  {
+   "id": 54,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 217.932,
+   "end": 223.572,
+   "dur": 5.64,
+   "file": "out/voice/lines/54.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 217.932,
+     "e": 218.372
+    },
+    {
+     "w": "cinque",
+     "s": 218.372,
+     "e": 218.892
+    },
+    {
+     "w": "se",
+     "s": 219.292,
+     "e": 219.452
+    },
+    {
+     "w": "senti",
+     "s": 219.452,
+     "e": 219.892
+    },
+    {
+     "w": "il",
+     "s": 219.892,
+     "e": 219.972
+    },
+    {
+     "w": "tuo",
+     "s": 219.972,
+     "e": 220.212
+    },
+    {
+     "w": "nome",
+     "s": 220.212,
+     "e": 220.372
+    },
+    {
+     "w": "dietro",
+     "s": 220.372,
+     "e": 220.752
+    },
+    {
+     "w": "la",
+     "s": 220.752,
+     "e": 220.872
+    },
+    {
+     "w": "porta",
+     "s": 220.872,
+     "e": 221.292
+    },
+    {
+     "w": "non",
+     "s": 221.612,
+     "e": 221.812
+    },
+    {
+     "w": "guardare",
+     "s": 221.812,
+     "e": 222.492
+    },
+    {
+     "w": "dallo",
+     "s": 222.492,
+     "e": 222.772
+    },
+    {
+     "w": "spioncino",
+     "s": 222.772,
+     "e": 223.432
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola cinque, se senti il tuo nome dietro la porta, non guardare dallo spioncino."
+  },
+  {
+   "id": 55,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 223.892,
+   "end": 228.062,
+   "dur": 4.17,
+   "file": "out/voice/lines/55.wav",
+   "tokens": [
+    {
+     "w": "dice",
+     "s": 223.892,
+     "e": 224.212
+    },
+    {
+     "w": "il",
+     "s": 224.212,
+     "e": 224.372
+    },
+    {
+     "w": "tuo",
+     "s": 224.372,
+     "e": 224.632
+    },
+    {
+     "w": "nome",
+     "s": 224.632,
+     "e": 224.892
+    },
+    {
+     "w": "piano",
+     "s": 225.432,
+     "e": 225.952
+    },
+    {
+     "w": "come",
+     "s": 226.352,
+     "e": 226.672
+    },
+    {
+     "w": "si",
+     "s": 226.672,
+     "e": 226.852
+    },
+    {
+     "w": "sveglia",
+     "s": 226.852,
+     "e": 227.312
+    },
+    {
+     "w": "un",
+     "s": 227.312,
+     "e": 227.392
+    },
+    {
+     "w": "bambino",
+     "s": 227.392,
+     "e": 227.872
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dice il tuo nome. Piano. Come si sveglia un bambino."
+  },
+  {
+   "id": 56,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 228.382,
+   "end": 229.852,
+   "dur": 1.47,
+   "file": "out/voice/lines/56.wav",
+   "tokens": [
+    {
+     "w": "con",
+     "s": 228.382,
+     "e": 228.502
+    },
+    {
+     "w": "la",
+     "s": 228.502,
+     "e": 228.662
+    },
+    {
+     "w": "voce",
+     "s": 228.662,
+     "e": 228.962
+    },
+    {
+     "w": "di",
+     "s": 228.962,
+     "e": 229.082
+    },
+    {
+     "w": "tua",
+     "s": 229.082,
+     "e": 229.242
+    },
+    {
+     "w": "madre",
+     "s": 229.242,
+     "e": 229.502
+    }
+   ],
+   "match": 1.0,
+   "heard": "Con la voce di tua madre."
+  },
+  {
+   "id": 57,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 230.172,
+   "end": 233.022,
+   "dur": 2.85,
+   "file": "out/voice/lines/57.wav",
+   "tokens": [
+    {
+     "w": "tua",
+     "s": 230.172,
+     "e": 230.352
+    },
+    {
+     "w": "madre",
+     "s": 230.352,
+     "e": 230.732
+    },
+    {
+     "w": "vive",
+     "s": 230.732,
+     "e": 231.072
+    },
+    {
+     "w": "a",
+     "s": 231.072,
+     "e": 231.312
+    },
+    {
+     "w": "seicento",
+     "s": 231.312,
+     "e": 231.892
+    },
+    {
+     "w": "chilometri",
+     "s": 231.892,
+     "e": 232.512
+    },
+    {
+     "w": "da",
+     "s": 232.512,
+     "e": 232.632
+    },
+    {
+     "w": "qui",
+     "s": 232.632,
+     "e": 232.852
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tua madre vive a seicento chilometri da qui."
+  },
+  {
+   "id": 58,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 233.342,
+   "end": 237.102,
+   "dur": 3.76,
+   "file": "out/voice/lines/58.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 233.342,
+     "e": 233.502
+    },
+    {
+     "w": "tuo",
+     "s": 233.502,
+     "e": 233.682
+    },
+    {
+     "w": "occhio",
+     "s": 233.682,
+     "e": 234.142
+    },
+    {
+     "w": "e",
+     "s": 234.142,
+     "e": 234.362
+    },
+    {
+     "w": "gia",
+     "s": 234.362,
+     "e": 234.622
+    },
+    {
+     "w": "a",
+     "s": 234.622,
+     "e": 234.782
+    },
+    {
+     "w": "un",
+     "s": 234.782,
+     "e": 234.882
+    },
+    {
+     "w": "centimetro",
+     "s": 234.882,
+     "e": 235.622
+    },
+    {
+     "w": "dallo",
+     "s": 235.622,
+     "e": 235.842
+    },
+    {
+     "w": "spioncino",
+     "s": 235.842,
+     "e": 236.582
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il tuo occhio è già a un centimetro dallo spioncino."
+  },
+  {
+   "id": 59,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 237.422,
+   "end": 241.522,
+   "dur": 4.1,
+   "file": "out/voice/lines/59.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 237.422,
+     "e": 237.602
+    },
+    {
+     "w": "guardi",
+     "s": 237.602,
+     "e": 238.222
+    },
+    {
+     "w": "ti",
+     "s": 238.442,
+     "e": 238.582
+    },
+    {
+     "w": "allontani",
+     "s": 238.582,
+     "e": 239.302
+    },
+    {
+     "w": "all",
+     "s": 239.502,
+     "e": 239.822
+    },
+    {
+     "w": "indietro",
+     "s": 239.822,
+     "e": 240.482
+    },
+    {
+     "w": "piano",
+     "s": 240.862,
+     "e": 241.282
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non guardi. Ti allontani. All 'indietro. Piano."
+  },
+  {
+   "id": 60,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 241.842,
+   "end": 248.702,
+   "dur": 6.86,
+   "file": "out/voice/lines/60.wav",
+   "tokens": [
+    {
+     "w": "nello",
+     "s": 241.842,
+     "e": 242.122
+    },
+    {
+     "w": "spioncino",
+     "s": 242.122,
+     "e": 242.802
+    },
+    {
+     "w": "la",
+     "s": 242.802,
+     "e": 243.082
+    },
+    {
+     "w": "luce",
+     "s": 243.082,
+     "e": 243.342
+    },
+    {
+     "w": "cambia",
+     "s": 243.342,
+     "e": 243.982
+    },
+    {
+     "w": "come",
+     "s": 244.282,
+     "e": 244.642
+    },
+    {
+     "w": "se",
+     "s": 244.642,
+     "e": 244.802
+    },
+    {
+     "w": "dall",
+     "s": 244.802,
+     "e": 244.982
+    },
+    {
+     "w": "altra",
+     "s": 244.982,
+     "e": 245.282
+    },
+    {
+     "w": "parte",
+     "s": 245.282,
+     "e": 245.722
+    },
+    {
+     "w": "qualcuno",
+     "s": 245.722,
+     "e": 246.542
+    },
+    {
+     "w": "ci",
+     "s": 246.542,
+     "e": 246.702
+    },
+    {
+     "w": "avesse",
+     "s": 246.702,
+     "e": 247.062
+    },
+    {
+     "w": "appena",
+     "s": 247.062,
+     "e": 247.542
+    },
+    {
+     "w": "appoggiato",
+     "s": 247.542,
+     "e": 248.082
+    },
+    {
+     "w": "l",
+     "s": 248.082,
+     "e": 248.202
+    },
+    {
+     "w": "occhio",
+     "s": 248.202,
+     "e": 248.562
+    }
+   ],
+   "match": 1.0,
+   "heard": "Nello spioncino la luce cambia. Come se dall 'altra parte qualcuno ci avesse appena appoggiato l 'occhio."
+  },
+  {
+   "id": 61,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 249.022,
+   "end": 250.782,
+   "dur": 1.76,
+   "file": "out/voice/lines/61.wav",
+   "tokens": [
+    {
+     "w": "qualcuno",
+     "s": 249.022,
+     "e": 249.542
+    },
+    {
+     "w": "che",
+     "s": 249.542,
+     "e": 249.742
+    },
+    {
+     "w": "guarda",
+     "s": 249.742,
+     "e": 250.162
+    },
+    {
+     "w": "dentro",
+     "s": 250.162,
+     "e": 250.482
+    }
+   ],
+   "match": 1.0,
+   "heard": "Qualcuno che guarda dentro."
+  },
+  {
+   "id": 62,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 251.102,
+   "end": 255.362,
+   "dur": 4.26,
+   "file": "out/voice/lines/62.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 251.102,
+     "e": 251.542
+    },
+    {
+     "w": "sei",
+     "s": 251.542,
+     "e": 251.862
+    },
+    {
+     "w": "lascia",
+     "s": 252.542,
+     "e": 252.902
+    },
+    {
+     "w": "sempre",
+     "s": 252.902,
+     "e": 253.422
+    },
+    {
+     "w": "la",
+     "s": 253.422,
+     "e": 253.622
+    },
+    {
+     "w": "chiave",
+     "s": 253.622,
+     "e": 254.022
+    },
+    {
+     "w": "dentro",
+     "s": 254.022,
+     "e": 254.342
+    },
+    {
+     "w": "la",
+     "s": 254.342,
+     "e": 254.582
+    },
+    {
+     "w": "serratura",
+     "s": 254.582,
+     "e": 255.182
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola sei, lascia sempre la chiave dentro la serratura."
+  },
+  {
+   "id": 63,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 255.682,
+   "end": 259.522,
+   "dur": 3.84,
+   "file": "out/voice/lines/63.wav",
+   "tokens": [
+    {
+     "w": "te",
+     "s": 255.682,
+     "e": 255.742
+    },
+    {
+     "w": "ne",
+     "s": 255.742,
+     "e": 255.882
+    },
+    {
+     "w": "ricordi",
+     "s": 255.882,
+     "e": 256.442
+    },
+    {
+     "w": "adesso",
+     "s": 256.442,
+     "e": 256.802
+    },
+    {
+     "w": "la",
+     "s": 257.222,
+     "e": 257.402
+    },
+    {
+     "w": "chiave",
+     "s": 257.402,
+     "e": 257.822
+    },
+    {
+     "w": "e",
+     "s": 257.822,
+     "e": 258.042
+    },
+    {
+     "w": "ancora",
+     "s": 258.042,
+     "e": 258.402
+    },
+    {
+     "w": "nella",
+     "s": 258.402,
+     "e": 258.662
+    },
+    {
+     "w": "tua",
+     "s": 258.662,
+     "e": 258.882
+    },
+    {
+     "w": "tasca",
+     "s": 258.882,
+     "e": 259.362
+    }
+   ],
+   "match": 0.91,
+   "heard": "Te ne ricorghi adesso. La chiave è ancora nella tua tasca."
+  },
+  {
+   "id": 64,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 259.842,
+   "end": 263.142,
+   "dur": 3.3,
+   "file": "out/voice/lines/64.wav",
+   "tokens": [
+    {
+     "w": "corri",
+     "s": 259.842,
+     "e": 260.182
+    },
+    {
+     "w": "alla",
+     "s": 260.182,
+     "e": 260.282
+    },
+    {
+     "w": "porta",
+     "s": 260.282,
+     "e": 260.722
+    },
+    {
+     "w": "la",
+     "s": 261.082,
+     "e": 261.282
+    },
+    {
+     "w": "infili",
+     "s": 261.282,
+     "e": 261.802
+    },
+    {
+     "w": "due",
+     "s": 262.122,
+     "e": 262.402
+    },
+    {
+     "w": "mandate",
+     "s": 262.402,
+     "e": 262.722
+    }
+   ],
+   "match": 1.0,
+   "heard": "Corri alla porta. La infili. Due mandate."
+  },
+  {
+   "id": 65,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 263.462,
+   "end": 268.022,
+   "dur": 4.56,
+   "file": "out/voice/lines/65.wav",
+   "tokens": [
+    {
+     "w": "un",
+     "s": 263.462,
+     "e": 263.602
+    },
+    {
+     "w": "secondo",
+     "s": 263.602,
+     "e": 263.962
+    },
+    {
+     "w": "dopo",
+     "s": 263.962,
+     "e": 264.362
+    },
+    {
+     "w": "dall",
+     "s": 264.642,
+     "e": 264.742
+    },
+    {
+     "w": "esterno",
+     "s": 264.742,
+     "e": 265.522
+    },
+    {
+     "w": "un",
+     "s": 265.662,
+     "e": 265.822
+    },
+    {
+     "w": "altra",
+     "s": 265.822,
+     "e": 266.002
+    },
+    {
+     "w": "chiave",
+     "s": 266.002,
+     "e": 266.482
+    },
+    {
+     "w": "prova",
+     "s": 266.482,
+     "e": 266.762
+    },
+    {
+     "w": "a",
+     "s": 266.762,
+     "e": 266.982
+    },
+    {
+     "w": "entrare",
+     "s": 266.982,
+     "e": 267.462
+    }
+   ],
+   "match": 1.0,
+   "heard": "Un secondo dopo, dall 'esterno, un 'altra chiave prova a entrare."
+  },
+  {
+   "id": 66,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 268.342,
+   "end": 271.232,
+   "dur": 2.89,
+   "file": "out/voice/lines/66.wav",
+   "tokens": [
+    {
+     "w": "gratta",
+     "s": 268.342,
+     "e": 268.842
+    },
+    {
+     "w": "spinge",
+     "s": 269.242,
+     "e": 269.862
+    },
+    {
+     "w": "non",
+     "s": 270.282,
+     "e": 270.622
+    },
+    {
+     "w": "entra",
+     "s": 270.622,
+     "e": 270.982
+    }
+   ],
+   "match": 1.0,
+   "heard": "Gratta. Spinge. Non entra."
+  },
+  {
+   "id": 67,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 271.552,
+   "end": 276.332,
+   "dur": 4.78,
+   "file": "out/voice/lines/67.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 271.552,
+     "e": 271.832
+    },
+    {
+     "w": "si",
+     "s": 271.832,
+     "e": 272.152
+    },
+    {
+     "w": "ritira",
+     "s": 272.152,
+     "e": 272.652
+    },
+    {
+     "w": "e",
+     "s": 273.092,
+     "e": 273.372
+    },
+    {
+     "w": "sul",
+     "s": 273.372,
+     "e": 273.532
+    },
+    {
+     "w": "pianerottolo",
+     "s": 273.532,
+     "e": 274.392
+    },
+    {
+     "w": "una",
+     "s": 274.592,
+     "e": 274.832
+    },
+    {
+     "w": "voce",
+     "s": 274.832,
+     "e": 275.152
+    },
+    {
+     "w": "di",
+     "s": 275.152,
+     "e": 275.292
+    },
+    {
+     "w": "donna",
+     "s": 275.292,
+     "e": 275.732
+    },
+    {
+     "w": "dice",
+     "s": 275.732,
+     "e": 275.972
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi si ritira. E sul pianerottolo, una voce di donna dice"
+  },
+  {
+   "id": 68,
+   "who": "BRUNI",
+   "model": "eleven_v4",
+   "start": 276.652,
+   "end": 279.183,
+   "dur": 2.531,
+   "file": "out/voice/lines/68.wav",
+   "tokens": [
+    {
+     "w": "bravo",
+     "s": 276.652,
+     "e": 277.112
+    },
+    {
+     "w": "hai",
+     "s": 277.452,
+     "e": 277.712
+    },
+    {
+     "w": "letto",
+     "s": 277.712,
+     "e": 278.052
+    },
+    {
+     "w": "il",
+     "s": 278.052,
+     "e": 278.132
+    },
+    {
+     "w": "biglietto",
+     "s": 278.132,
+     "e": 278.732
+    }
+   ],
+   "match": 1.0,
+   "heard": "Bravo. Hai letto il biglietto."
+  },
+  {
+   "id": 69,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 279.503,
+   "end": 281.243,
+   "dur": 1.74,
+   "file": "out/voice/lines/69.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 279.503,
+     "e": 279.583
+    },
+    {
+     "w": "la",
+     "s": 279.583,
+     "e": 279.683
+    },
+    {
+     "w": "voce",
+     "s": 279.683,
+     "e": 280.023
+    },
+    {
+     "w": "della",
+     "s": 280.023,
+     "e": 280.203
+    },
+    {
+     "w": "signora",
+     "s": 280.203,
+     "e": 280.683
+    },
+    {
+     "w": "bruni",
+     "s": 280.683,
+     "e": 281.063
+    }
+   ],
+   "match": 1.0,
+   "heard": "È la voce della signora Bruni."
+  },
+  {
+   "id": 70,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 281.563,
+   "end": 287.193,
+   "dur": 5.63,
+   "file": "out/voice/lines/70.wav",
+   "tokens": [
+    {
+     "w": "sul",
+     "s": 281.563,
+     "e": 281.743
+    },
+    {
+     "w": "contratto",
+     "s": 281.743,
+     "e": 282.583
+    },
+    {
+     "w": "accanto",
+     "s": 282.683,
+     "e": 283.083
+    },
+    {
+     "w": "alla",
+     "s": 283.083,
+     "e": 283.203
+    },
+    {
+     "w": "sua",
+     "s": 283.203,
+     "e": 283.403
+    },
+    {
+     "w": "firma",
+     "s": 283.403,
+     "e": 283.943
+    },
+    {
+     "w": "c",
+     "s": 284.043,
+     "e": 284.123
+    },
+    {
+     "w": "e",
+     "s": 284.123,
+     "e": 284.183
+    },
+    {
+     "w": "una",
+     "s": 284.183,
+     "e": 284.323
+    },
+    {
+     "w": "data",
+     "s": 284.323,
+     "e": 284.643
+    },
+    {
+     "w": "millenovecentonovantotto",
+     "s": 286.423,
+     "e": 286.823
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sul contratto, accanto alla sua firma, c 'è una data. Millenovecentonovantotto."
+  },
+  {
+   "id": 71,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 287.513,
+   "end": 292.973,
+   "dur": 5.46,
+   "file": "out/voice/lines/71.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 287.513,
+     "e": 287.633
+    },
+    {
+     "w": "il",
+     "s": 287.633,
+     "e": 287.733
+    },
+    {
+     "w": "necrologio",
+     "s": 287.733,
+     "e": 288.413
+    },
+    {
+     "w": "appeso",
+     "s": 288.413,
+     "e": 288.753
+    },
+    {
+     "w": "in",
+     "s": 288.753,
+     "e": 288.893
+    },
+    {
+     "w": "portineria",
+     "s": 288.893,
+     "e": 289.593
+    },
+    {
+     "w": "dice",
+     "s": 289.593,
+     "e": 289.973
+    },
+    {
+     "w": "che",
+     "s": 289.973,
+     "e": 290.173
+    },
+    {
+     "w": "la",
+     "s": 290.173,
+     "e": 290.293
+    },
+    {
+     "w": "signora",
+     "s": 290.293,
+     "e": 290.673
+    },
+    {
+     "w": "bruni",
+     "s": 290.673,
+     "e": 291.093
+    },
+    {
+     "w": "e",
+     "s": 291.093,
+     "e": 291.333
+    },
+    {
+     "w": "morta",
+     "s": 291.333,
+     "e": 291.813
+    },
+    {
+     "w": "proprio",
+     "s": 291.813,
+     "e": 292.113
+    },
+    {
+     "w": "quell",
+     "s": 292.113,
+     "e": 292.573
+    },
+    {
+     "w": "anno",
+     "s": 292.573,
+     "e": 292.813
+    }
+   ],
+   "match": 1.0,
+   "heard": "E il necrologio appeso in portineria dice che la signora Bruni è morta proprio quell 'anno."
+  },
+  {
+   "id": 72,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 293.293,
+   "end": 297.453,
+   "dur": 4.16,
+   "file": "out/voice/lines/72.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 293.293,
+     "e": 293.433
+    },
+    {
+     "w": "tre",
+     "s": 293.433,
+     "e": 293.813
+    },
+    {
+     "w": "e",
+     "s": 293.813,
+     "e": 293.993
+    },
+    {
+     "w": "trentatre",
+     "s": 293.993,
+     "e": 294.653
+    },
+    {
+     "w": "il",
+     "s": 295.033,
+     "e": 295.693
+    },
+    {
+     "w": "citofono",
+     "s": 295.693,
+     "e": 296.313
+    },
+    {
+     "w": "suona",
+     "s": 296.313,
+     "e": 296.793
+    },
+    {
+     "w": "di",
+     "s": 296.793,
+     "e": 296.933
+    },
+    {
+     "w": "nuovo",
+     "s": 296.933,
+     "e": 297.173
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le tre e trentatré. Il citofono suona di nuovo."
+  },
+  {
+   "id": 73,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 297.773,
+   "end": 302.813,
+   "dur": 5.04,
+   "file": "out/voice/lines/73.wav",
+   "tokens": [
+    {
+     "w": "sul",
+     "s": 297.773,
+     "e": 297.973
+    },
+    {
+     "w": "biglietto",
+     "s": 297.973,
+     "e": 298.633
+    },
+    {
+     "w": "c",
+     "s": 298.633,
+     "e": 298.813
+    },
+    {
+     "w": "e",
+     "s": 298.813,
+     "e": 298.913
+    },
+    {
+     "w": "un",
+     "s": 298.913,
+     "e": 299.033
+    },
+    {
+     "w": "ultima",
+     "s": 299.033,
+     "e": 299.393
+    },
+    {
+     "w": "regola",
+     "s": 299.393,
+     "e": 299.813
+    },
+    {
+     "w": "non",
+     "s": 300.173,
+     "e": 300.333
+    },
+    {
+     "w": "l",
+     "s": 300.333,
+     "e": 300.453
+    },
+    {
+     "w": "avevi",
+     "s": 300.453,
+     "e": 300.693
+    },
+    {
+     "w": "vista",
+     "s": 300.693,
+     "e": 301.093
+    },
+    {
+     "w": "e",
+     "s": 301.453,
+     "e": 301.593
+    },
+    {
+     "w": "sul",
+     "s": 301.593,
+     "e": 301.793
+    },
+    {
+     "w": "retro",
+     "s": 301.793,
+     "e": 302.133
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sul biglietto c 'è un 'ultima regola. Non l 'avevi vista, è sul retro."
+  },
+  {
+   "id": 74,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 303.133,
+   "end": 308.903,
+   "dur": 5.77,
+   "file": "out/voice/lines/74.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 303.133,
+     "e": 303.553
+    },
+    {
+     "w": "sette",
+     "s": 303.553,
+     "e": 304.073
+    },
+    {
+     "w": "se",
+     "s": 304.373,
+     "e": 304.573
+    },
+    {
+     "w": "al",
+     "s": 304.573,
+     "e": 304.733
+    },
+    {
+     "w": "citofono",
+     "s": 304.733,
+     "e": 305.333
+    },
+    {
+     "w": "senti",
+     "s": 305.333,
+     "e": 305.793
+    },
+    {
+     "w": "la",
+     "s": 305.793,
+     "e": 305.893
+    },
+    {
+     "w": "tua",
+     "s": 305.893,
+     "e": 306.013
+    },
+    {
+     "w": "voce",
+     "s": 306.013,
+     "e": 306.513
+    },
+    {
+     "w": "rispondi",
+     "s": 306.773,
+     "e": 307.593
+    },
+    {
+     "w": "una",
+     "s": 307.733,
+     "e": 307.973
+    },
+    {
+     "w": "volta",
+     "s": 307.973,
+     "e": 308.273
+    },
+    {
+     "w": "sola",
+     "s": 308.273,
+     "e": 308.653
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola sette. Se al citofono senti la tua voce, rispondi. Una volta sola."
+  },
+  {
+   "id": 75,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 309.223,
+   "end": 312.463,
+   "dur": 3.24,
+   "file": "out/voice/lines/75.wav",
+   "tokens": [
+    {
+     "w": "sullo",
+     "s": 309.233,
+     "e": 309.483
+    },
+    {
+     "w": "schermo",
+     "s": 309.483,
+     "e": 310.063
+    },
+    {
+     "w": "davanti",
+     "s": 310.323,
+     "e": 310.643
+    },
+    {
+     "w": "al",
+     "s": 310.643,
+     "e": 310.763
+    },
+    {
+     "w": "portone",
+     "s": 310.763,
+     "e": 311.363
+    },
+    {
+     "w": "c",
+     "s": 311.603,
+     "e": 311.703
+    },
+    {
+     "w": "e",
+     "s": 311.703,
+     "e": 311.743
+    },
+    {
+     "w": "qualcuno",
+     "s": 311.743,
+     "e": 312.303
+    }
+   ],
+   "match": 0.88,
+   "heard": "Sulla schermo, davanti al portone, c 'è qualcuno."
+  },
+  {
+   "id": 76,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 312.783,
+   "end": 317.663,
+   "dur": 4.88,
+   "file": "out/voice/lines/76.wav",
+   "tokens": [
+    {
+     "w": "ha",
+     "s": 312.783,
+     "e": 312.903
+    },
+    {
+     "w": "la",
+     "s": 312.903,
+     "e": 313.023
+    },
+    {
+     "w": "tua",
+     "s": 313.023,
+     "e": 313.183
+    },
+    {
+     "w": "giacca",
+     "s": 313.183,
+     "e": 313.783
+    },
+    {
+     "w": "la",
+     "s": 314.083,
+     "e": 314.383
+    },
+    {
+     "w": "tua",
+     "s": 314.383,
+     "e": 314.563
+    },
+    {
+     "w": "sciarpa",
+     "s": 314.563,
+     "e": 315.023
+    },
+    {
+     "w": "rossa",
+     "s": 315.023,
+     "e": 315.483
+    },
+    {
+     "w": "le",
+     "s": 315.803,
+     "e": 316.063
+    },
+    {
+     "w": "tue",
+     "s": 316.063,
+     "e": 316.283
+    },
+    {
+     "w": "chiavi",
+     "s": 316.283,
+     "e": 316.603
+    },
+    {
+     "w": "in",
+     "s": 316.603,
+     "e": 316.783
+    },
+    {
+     "w": "mano",
+     "s": 316.783,
+     "e": 317.023
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ha la tua giacca. La tua sciarpa rossa. Le tue chiavi in mano."
+  },
+  {
+   "id": 77,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 317.983,
+   "end": 322.233,
+   "dur": 4.25,
+   "file": "out/voice/lines/77.wav",
+   "tokens": [
+    {
+     "w": "guarda",
+     "s": 317.983,
+     "e": 318.403
+    },
+    {
+     "w": "dritto",
+     "s": 318.403,
+     "e": 318.803
+    },
+    {
+     "w": "nella",
+     "s": 318.803,
+     "e": 319.023
+    },
+    {
+     "w": "telecamera",
+     "s": 319.023,
+     "e": 319.663
+    },
+    {
+     "w": "e",
+     "s": 319.663,
+     "e": 320.223
+    },
+    {
+     "w": "parla",
+     "s": 320.223,
+     "e": 320.783
+    },
+    {
+     "w": "con",
+     "s": 320.783,
+     "e": 321.283
+    },
+    {
+     "w": "la",
+     "s": 321.283,
+     "e": 321.463
+    },
+    {
+     "w": "tua",
+     "s": 321.463,
+     "e": 321.623
+    },
+    {
+     "w": "voce",
+     "s": 321.623,
+     "e": 322.083
+    }
+   ],
+   "match": 1.0,
+   "heard": "Guarda dritto nella telecamera e parla con la tua voce."
+  },
+  {
+   "id": 78,
+   "who": "YOU",
+   "model": "eleven_v4",
+   "start": 322.553,
+   "end": 326.391,
+   "dur": 3.838,
+   "file": "out/voice/lines/78.wav",
+   "tokens": [
+    {
+     "w": "sono",
+     "s": 322.553,
+     "e": 322.793
+    },
+    {
+     "w": "io",
+     "s": 322.793,
+     "e": 323.073
+    },
+    {
+     "w": "fammi",
+     "s": 323.453,
+     "e": 323.753
+    },
+    {
+     "w": "entrare",
+     "s": 323.753,
+     "e": 324.353
+    },
+    {
+     "w": "qui",
+     "s": 324.573,
+     "e": 324.713
+    },
+    {
+     "w": "fuori",
+     "s": 324.713,
+     "e": 325.073
+    },
+    {
+     "w": "c",
+     "s": 325.073,
+     "e": 325.233
+    },
+    {
+     "w": "e",
+     "s": 325.233,
+     "e": 325.333
+    },
+    {
+     "w": "qualcosa",
+     "s": 325.333,
+     "e": 325.553
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sono io. Fammi entrare. Qui fuori c 'è qualcosa."
+  },
+  {
+   "id": 79,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 326.711,
+   "end": 329.261,
+   "dur": 2.55,
+   "file": "out/voice/lines/79.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 326.711,
+     "e": 326.851
+    },
+    {
+     "w": "regola",
+     "s": 326.851,
+     "e": 327.171
+    },
+    {
+     "w": "sette",
+     "s": 327.171,
+     "e": 327.691
+    },
+    {
+     "w": "dice",
+     "s": 327.691,
+     "e": 327.951
+    },
+    {
+     "w": "rispondi",
+     "s": 327.951,
+     "e": 329.171
+    }
+   ],
+   "match": 1.0,
+   "heard": "La regola sette dice rispondi."
+  },
+  {
+   "id": 80,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 329.581,
+   "end": 333.401,
+   "dur": 3.82,
+   "file": "out/voice/lines/80.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 329.581,
+     "e": 329.741
+    },
+    {
+     "w": "regola",
+     "s": 329.741,
+     "e": 330.101
+    },
+    {
+     "w": "uno",
+     "s": 330.101,
+     "e": 330.421
+    },
+    {
+     "w": "dice",
+     "s": 330.421,
+     "e": 330.921
+    },
+    {
+     "w": "dopo",
+     "s": 330.921,
+     "e": 331.721
+    },
+    {
+     "w": "mezzanotte",
+     "s": 331.721,
+     "e": 332.501
+    },
+    {
+     "w": "mai",
+     "s": 332.761,
+     "e": 333.081
+    }
+   ],
+   "match": 1.0,
+   "heard": "La regola uno dice dopo mezzanotte, mai."
+  },
+  {
+   "id": 81,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 333.721,
+   "end": 336.281,
+   "dur": 2.56,
+   "file": "out/voice/lines/81.wav",
+   "tokens": [
+    {
+     "w": "due",
+     "s": 333.721,
+     "e": 333.941
+    },
+    {
+     "w": "regole",
+     "s": 333.941,
+     "e": 334.461
+    },
+    {
+     "w": "un",
+     "s": 334.741,
+     "e": 335.021
+    },
+    {
+     "w": "solo",
+     "s": 335.021,
+     "e": 335.381
+    },
+    {
+     "w": "citofono",
+     "s": 335.381,
+     "e": 336.021
+    }
+   ],
+   "match": 1.0,
+   "heard": "Due regole. Un solo citofono."
+  },
+  {
+   "id": 82,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 336.601,
+   "end": 341.841,
+   "dur": 5.24,
+   "file": "out/voice/lines/82.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 336.601,
+     "e": 336.701
+    },
+    {
+     "w": "dietro",
+     "s": 336.701,
+     "e": 337.081
+    },
+    {
+     "w": "di",
+     "s": 337.081,
+     "e": 337.221
+    },
+    {
+     "w": "te",
+     "s": 337.221,
+     "e": 337.441
+    },
+    {
+     "w": "sullo",
+     "s": 337.601,
+     "e": 338.021
+    },
+    {
+     "w": "schermo",
+     "s": 338.021,
+     "e": 338.561
+    },
+    {
+     "w": "nel",
+     "s": 338.901,
+     "e": 339.041
+    },
+    {
+     "w": "buio",
+     "s": 339.041,
+     "e": 339.401
+    },
+    {
+     "w": "del",
+     "s": 339.401,
+     "e": 339.521
+    },
+    {
+     "w": "cortile",
+     "s": 339.521,
+     "e": 340.181
+    },
+    {
+     "w": "qualcosa",
+     "s": 340.461,
+     "e": 340.801
+    },
+    {
+     "w": "si",
+     "s": 340.801,
+     "e": 341.201
+    },
+    {
+     "w": "muove",
+     "s": 341.201,
+     "e": 341.661
+    }
+   ],
+   "match": 1.0,
+   "heard": "E dietro di te, sullo schermo, nel buio del cortile, qualcosa si muove."
+  },
+  {
+   "id": 83,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 342.161,
+   "end": 343.201,
+   "dur": 1.04,
+   "file": "out/voice/lines/83.wav",
+   "tokens": [
+    {
+     "w": "si",
+     "s": 342.161,
+     "e": 342.321
+    },
+    {
+     "w": "avvicina",
+     "s": 342.321,
+     "e": 343.001
+    }
+   ],
+   "match": 1.0,
+   "heard": "Si avvicina."
+  },
+  {
+   "id": 84,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 343.521,
+   "end": 345.711,
+   "dur": 2.19,
+   "file": "out/voice/lines/84.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 343.521,
+     "e": 343.661
+    },
+    {
+     "w": "tuo",
+     "s": 343.661,
+     "e": 343.821
+    },
+    {
+     "w": "dito",
+     "s": 343.821,
+     "e": 344.201
+    },
+    {
+     "w": "e",
+     "s": 344.201,
+     "e": 344.461
+    },
+    {
+     "w": "gia",
+     "s": 344.461,
+     "e": 344.641
+    },
+    {
+     "w": "sul",
+     "s": 344.641,
+     "e": 344.841
+    },
+    {
+     "w": "pulsante",
+     "s": 344.841,
+     "e": 345.481
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il tuo dito è già sul pulsante."
+  },
+  {
+   "id": 85,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 346.031,
+   "end": 350.791,
+   "dur": 4.76,
+   "file": "out/voice/lines/85.wav",
+   "tokens": [
+    {
+     "w": "rispondi",
+     "s": 346.031,
+     "e": 346.791
+    },
+    {
+     "w": "e",
+     "s": 346.951,
+     "e": 347.031
+    },
+    {
+     "w": "infrangi",
+     "s": 347.031,
+     "e": 347.551
+    },
+    {
+     "w": "la",
+     "s": 347.551,
+     "e": 347.631
+    },
+    {
+     "w": "regola",
+     "s": 347.631,
+     "e": 347.911
+    },
+    {
+     "w": "uno",
+     "s": 347.911,
+     "e": 348.211
+    },
+    {
+     "w": "o",
+     "s": 348.671,
+     "e": 348.751
+    },
+    {
+     "w": "lasci",
+     "s": 348.751,
+     "e": 348.991
+    },
+    {
+     "w": "fuori",
+     "s": 348.991,
+     "e": 349.531
+    },
+    {
+     "w": "te",
+     "s": 349.531,
+     "e": 350.091
+    },
+    {
+     "w": "stesso",
+     "s": 350.091,
+     "e": 350.451
+    }
+   ],
+   "match": 1.0,
+   "heard": "Rispondi, e infrangi la regola uno? O lasci fuori… te stesso?"
+  },
+  {
+   "id": 86,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 351.391,
+   "end": 356.451,
+   "dur": 5.06,
+   "file": "out/voice/lines/86.wav",
+   "tokens": [
+    {
+     "w": "scrivilo",
+     "s": 351.391,
+     "e": 351.871
+    },
+    {
+     "w": "nei",
+     "s": 351.871,
+     "e": 352.031
+    },
+    {
+     "w": "commenti",
+     "s": 352.031,
+     "e": 352.931
+    },
+    {
+     "w": "e",
+     "s": 352.931,
+     "e": 353.171
+    },
+    {
+     "w": "iscriviti",
+     "s": 353.171,
+     "e": 353.831
+    },
+    {
+     "w": "la",
+     "s": 354.171,
+     "e": 354.331
+    },
+    {
+     "w": "notte",
+     "s": 354.331,
+     "e": 354.711
+    },
+    {
+     "w": "due",
+     "s": 354.711,
+     "e": 354.931
+    },
+    {
+     "w": "e",
+     "s": 354.931,
+     "e": 355.351
+    },
+    {
+     "w": "gia",
+     "s": 355.351,
+     "e": 355.531
+    },
+    {
+     "w": "cominciata",
+     "s": 355.531,
+     "e": 356.271
+    }
+   ],
+   "match": 1.0,
+   "heard": "Scrivilo nei commenti. E iscriviti. La notte due è già cominciata."
+  }
+ ]
+}
