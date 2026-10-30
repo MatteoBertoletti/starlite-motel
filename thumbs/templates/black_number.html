@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:900;src:url({{FONTS}}/montserrat/files/montserrat-latin-900-normal.woff2)}
+@font-face{font-family:J;font-weight:700;src:url({{FONTS}}/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2)}
+html,body{margin:0;background:#000}svg{display:block}
+text{font-family:M,'Montserrat',sans-serif;font-weight:900}
+.gw{filter:drop-shadow(0 0 16px rgba(255,255,255,.55))}
+.gr{filter:drop-shadow(0 0 18px rgba(255,40,50,.75))}
+.mono{font-family:J,'JetBrains Mono',monospace;font-weight:700}
+</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs><filter id="noise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0"/></filter></defs>
+<!-- Nero + numero nell'oggetto. Testi: white, red, number. Arte: videophone.png (con lo schermo trasparente). -->
+<rect width="1280" height="720" fill="#000"/>
+<text data-fit="1190" x="640" y="138" text-anchor="middle" font-size="118" fill="#fff" class="gw">{{white}} <tspan fill="#F2202F">{{red}}</tspan></text>
+<g class="gw" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round">
+  <path d="M 126 340 Q 98 410 126 480"/><path d="M 86 308 Q 38 410 86 512"/>
+  <path d="M 1124 350 Q 1152 420 1124 490"/><path d="M 1166 318 Q 1216 420 1166 522"/>
+</g>
+<rect x="346" y="236" width="540" height="330" rx="40" fill="#000"/>
+<text data-fit="480" x="616" y="456" text-anchor="middle" font-size="190" fill="#F2202F" class="gr">{{number}}</text>
+<image href="{{KIT}}/videophone.png" x="80" y="180" width="1010" height="520" class="gw"/>
+<rect width="1280" height="720" filter="url(#noise)"/>
+</svg></body></html>

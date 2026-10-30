@@ -1,0 +1,64 @@
+name: thumbs
+# Copertine YouTube: monta le varianti di un episodio, oppure chiede a Kie.ai candidati di arte per il kit.
+# Spiegazione completa: thumbs/README.md
+on:
+  workflow_dispatch:
+    inputs:
+      mode:    { description: 'compose = monta le copertine | art = candidati AI per un asset del kit | kit = rifa il kit base', default: 'compose' }
+      ep:      { description: 'compose: cartella in episodes/', default: 'ep01_citofono' }
+      asset:   { description: 'art: double_grin, double_red o you_scared', default: 'double_grin' }
+      n:       { description: 'art: quanti candidati generare', default: '2' }
+      model:   { description: 'art: modello Kie (vuoto = quello di thumbs/styles.json)', default: '' }
+      publish: { description: 'true = copia il risultato anche sul ramo thumbs-out (il repo e PUBBLICO)', default: 'false' }
+permissions:
+  contents: write
+jobs:
+  thumbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MODE: ${{ inputs.mode }}
+      EP: ${{ inputs.ep }}
+      ASSET: ${{ inputs.asset }}
+      N: ${{ inputs.n }}
+      MODEL: ${{ inputs.model }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci --no-audit --no-fund
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -q playwright pillow && python -m playwright install --with-deps chromium
+      - name: Test del client Kie (finto server, senza chiave)
+        run: python tools/test_thumb_art.py
+      - name: Monta le copertine
+        if: ${{ inputs.mode == 'compose' }}
+        run: python tools/thumb.py --ep "$EP"
+      - name: Rifa il kit base
+        if: ${{ inputs.mode == 'kit' }}
+        run: python tools/thumb_kit.py --force
+      - name: Candidati di arte con Kie.ai
+        if: ${{ inputs.mode == 'art' }}
+        env:
+          KIE_API_KEY: ${{ secrets.KIE_AI_API }}
+        run: |
+          [ -n "$KIE_API_KEY" ] || { echo "::error::manca il secret KIE_AI_API (Settings > Secrets and variables > Actions)"; exit 1; }
+          if [ -n "$MODEL" ]; then python tools/thumb_art.py --asset "$ASSET" --n "$N" --model "$MODEL"; else python tools/thumb_art.py --asset "$ASSET" --n "$N"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thumbs_${{ inputs.mode }}
+          path: |
+            out/thumbs
+            out/art
+            thumbs/kit
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Pubblica sul ramo thumbs-out (solo se richiesto)
+        if: ${{ inputs.publish == 'true' }}
+        run: |
+          mkdir -p /tmp/pub && cp -r out/* /tmp/pub/ && cd /tmp/pub
+          git init -q && git checkout -q -b thumbs-out
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "thumbs ${{ github.run_id }}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" thumbs-out

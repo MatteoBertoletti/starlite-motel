@@ -1,0 +1,7 @@
+{
+  "variants": [
+    { "id": "1_nero_numero",  "template": "black_number",  "text": { "white": "NON", "red": "RISPONDERE", "number": "00:12" } },
+    { "id": "2_rosso_freccia", "template": "red_arrow",     "text": { "big": "NON", "small": "SEI TU", "cam": "CAM 01 · PORTONE" } },
+    { "id": "3_nero_mostro",   "template": "black_monster", "text": { "white": "È LA TUA", "red": "VOCE" } }
+  ]
+}

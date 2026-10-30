@@ -1,0 +1,43 @@
+{
+  "canvas": { "w": 1280, "h": 720, "jpg_quality": 93, "max_kb": 1900 },
+  "palette": {
+    "black": "#000000", "paper": "#0B0B0C", "white": "#F2F0E8", "red": "#F2202F",
+    "red_bg": "#F4222E", "gold": "#F5C451", "green": "#27A85C", "navy": "#0C1422"
+  },
+  "fonts": { "title": "Montserrat 900 (sempre maiuscolo)", "label": "JetBrains Mono 700" },
+  "rules": [
+    "Comando di 2-3 parole, una sola parola in rosso",
+    "Un solo soggetto, grande, tagliato dal bordo",
+    "Sfondo nero puro o rosso pieno",
+    "Nessun testo piccolo: si deve leggere a 170x95 pixel",
+    "Il testo ripete il comando del titolo oppure apre una domanda, non aggiunge altre frasi"
+  ],
+  "ai": {
+    "provider": "kie",
+    "default_model": "nano-banana-2",
+    "models": {
+      "nano-banana-2": { "ref_field": "image_input", "input": { "resolution": "1K", "output_format": "png" } },
+      "google/nano-banana-edit": { "ref_field": "image_urls", "input": { "output_format": "png" } }
+    },
+    "style_prompt": "Flat 2D vector illustration for a YouTube horror thumbnail. Thick black outlines, clean solid colors, pure white characters with a soft glow, one red accent, minimal detail, very high contrast, simple rounded shapes like a motion-graphics pictogram. No text, no letters, no logo, no watermark.",
+    "background": "Isolated on a perfectly flat solid magenta (#FF00FF) background with no shadows on the background.",
+    "negative": "photo, realistic, 3D render, gradient background, text, caption, watermark, extra fingers, blood, gore",
+    "assets": {
+      "double_grin": {
+        "aspect_ratio": "3:4",
+        "refs": ["double_grin"],
+        "prompt": "Head-and-shoulders bust of a round-headed white pictogram character wearing a red scarf, but it is the evil double: glowing red eyes, angry slanted black eyebrows, a very wide grin full of square white teeth. Cropped at the bottom edge, facing the viewer."
+      },
+      "double_red": {
+        "aspect_ratio": "5:4",
+        "refs": ["double_red"],
+        "prompt": "Head-and-shoulders bust of a round-headed bright red monster with round white eyes, small black pupils, angry black eyebrows and a wide grin with white teeth, facing the viewer, cropped at the bottom."
+      },
+      "you_scared": {
+        "aspect_ratio": "1:1",
+        "refs": ["you_scared"],
+        "prompt": "Head-and-shoulders bust of a round-headed white pictogram character with a red scarf, looking worried to the right, a sweat drop on the forehead, small black dot eyes, cropped at the bottom."
+      }
+    }
+  }
+}
