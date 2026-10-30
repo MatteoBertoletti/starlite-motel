@@ -31,13 +31,13 @@ def call(method, path, key, body=None, timeout=60):
     return j['data']
 
 
-def build_request(styles, asset, model, ref_base):
+def build_request(styles, asset, model, ref_base, use_ref=True, extra=''):
     ai = styles['ai']
     a = ai['assets'][asset]
     m = ai['models'][model]
-    refs = [f'{ref_base}/{r}.png' for r in a.get('refs', [])]
+    refs = [f'{ref_base}/{r}.png' for r in a.get('refs', [])] if use_ref else []
     guide = 'Use the reference image as the design guide for the character: same proportions, same flat vector look. ' if refs else ''
-    prompt = f"{guide}{ai['style_prompt']} {a['prompt']} {ai['background']} Avoid: {ai['negative']}."
+    prompt = f"{guide}{ai['style_prompt']} {a['prompt']} {extra.strip()} {ai['background']} Avoid: {ai['negative']}."
     inp = {'prompt': prompt, 'aspect_ratio': a['aspect_ratio'], **m.get('input', {})}
     if refs: inp[m['ref_field']] = refs
     return {'model': model, 'input': inp}
@@ -106,6 +106,8 @@ def main():
     ap.add_argument('--out', default=str(ROOT / 'out' / 'art'))
     ap.add_argument('--ref-base', default='', help='URL pubblico della cartella del kit (di default raw.githubusercontent.com del repo)')
     ap.add_argument('--no-cut', action='store_true')
+    ap.add_argument('--no-ref', action='store_true', help='non passa l\'immagine del kit come riferimento (piu libertà, meno coerenza)')
+    ap.add_argument('--extra', default='', help='testo aggiunto al prompt dell\'asset')
     ap.add_argument('--dry-run', action='store_true')
     A = ap.parse_args()
 
@@ -115,7 +117,7 @@ def main():
     if model not in styles['ai']['models']: sys.exit(f"modello non configurato in thumbs/styles.json: {model}")
     repo, ref = os.environ.get('GITHUB_REPOSITORY', 'MatteoBertoletti/starlite-motel'), os.environ.get('GITHUB_REF_NAME', 'main')
     ref_base = A.ref_base or f'https://raw.githubusercontent.com/{repo}/{ref}/thumbs/kit'
-    body = build_request(styles, A.asset, model, ref_base)
+    body = build_request(styles, A.asset, model, ref_base, not A.no_ref, A.extra)
     if A.dry_run:
         print(json.dumps(body, indent=1, ensure_ascii=False)); return
 

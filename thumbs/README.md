@@ -79,6 +79,12 @@ espressivi, luce) si sostituiscono i PNG del kit con arte generata e scelta a ma
 4. Scegli il migliore, ripulisci i bordi se serve, copialo in `thumbs/kit/<asset>.png` e fai commit.
 5. Rilancia `compose`: tutte le copertine usano la nuova arte.
 
+Due leve per cambiare il risultato (anche come ingressi del workflow):
+
+- **`ref`** (`--no-ref` in locale): con `true` il kit attuale è il riferimento e i candidati gli assomigliano molto, quindi sono puliti ma
+  poco diversi; con `false` il modello ha più libertà e sono più espressivi, ma meno coerenti col personaggio.
+- **`extra`** (`--extra "..."`): testo aggiunto al prompt, per esempio `exaggerated menacing expression, huge grin`.
+
 In locale: `KIE_API_KEY=... python tools/thumb_art.py --asset double_grin --n 4`
 (con `--dry-run` stampa solo il prompt e la richiesta, senza chiamare l'API).
 
@@ -88,6 +94,7 @@ a mano e si salva nel kit, invece di rigenerare ogni volta. Per formato o propor
 
 ## Costi e limiti (Kie.ai)
 
+- Nel test con `nano-banana-2` a 1K sono stati 8 crediti per immagine.
 - Si paga a crediti per immagine; il prezzo cambia per modello, controlla [kie.ai/pricing](https://kie.ai/pricing).
   Le richieste fallite non vengono addebitate, secondo il sito.
 - Limite: 20 nuove richieste ogni 10 secondi per account. Il client ne manda una ogni 0,6 secondi.

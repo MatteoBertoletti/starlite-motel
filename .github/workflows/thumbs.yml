@@ -9,6 +9,8 @@ on:
       asset:   { description: 'art: double_grin, double_red o you_scared', default: 'double_grin' }
       n:       { description: 'art: quanti candidati generare', default: '2' }
       model:   { description: 'art: modello Kie (vuoto = quello di thumbs/styles.json)', default: '' }
+      ref:     { description: 'art: true = passa il kit attuale come riferimento, false = solo testo (piu libertà)', default: 'true' }
+      extra:   { description: 'art: testo aggiunto al prompt (es. espressione piu cattiva)', default: '' }
       publish: { description: 'true = copia il risultato anche sul ramo thumbs-out (il repo e PUBBLICO)', default: 'false' }
 permissions:
   contents: write
@@ -22,6 +24,8 @@ jobs:
       ASSET: ${{ inputs.asset }}
       N: ${{ inputs.n }}
       MODEL: ${{ inputs.model }}
+      USE_REF: ${{ inputs.ref }}
+      EXTRA: ${{ inputs.extra }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,7 +48,11 @@ jobs:
           KIE_API_KEY: ${{ secrets.KIE_AI_API }}
         run: |
           [ -n "$KIE_API_KEY" ] || { echo "::error::manca il secret KIE_AI_API (Settings > Secrets and variables > Actions)"; exit 1; }
-          if [ -n "$MODEL" ]; then python tools/thumb_art.py --asset "$ASSET" --n "$N" --model "$MODEL"; else python tools/thumb_art.py --asset "$ASSET" --n "$N"; fi
+          args=(--asset "$ASSET" --n "$N")
+          if [ -n "$MODEL" ]; then args+=(--model "$MODEL"); fi
+          if [ -n "$EXTRA" ]; then args+=(--extra "$EXTRA"); fi
+          if [ "$USE_REF" = "false" ]; then args+=(--no-ref); fi
+          python tools/thumb_art.py "${args[@]}"
       - uses: actions/upload-artifact@v4
         with:
           name: thumbs_${{ inputs.mode }}
