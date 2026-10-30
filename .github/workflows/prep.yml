@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       voice: { description: 'Run the ElevenLabs voice pick', default: 'true' }
+      cast:  { description: 'Use the fixed cast (tools/el_cast.py) instead of the automatic pick', default: 'false' }
       music: { description: 'Run the music analysis', default: 'true' }
 permissions:
   contents: write
@@ -18,7 +19,7 @@ jobs:
       - name: Voice pick
         if: ${{ inputs.voice == 'true' }}
         env: { ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}' }
-        run: python tools/el_pick.py
+        run: if [ "${{ inputs.cast }}" = "true" ]; then python tools/el_cast.py; else python tools/el_pick.py; fi
       - name: Music analysis
         if: ${{ !cancelled() && inputs.music == 'true' }}
         run: python tools/music_pick.py
