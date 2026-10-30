@@ -1,13 +1,14 @@
 {
  "ids": {
-  "N": "OLmSqlYzB06EIKJRy5b0",
-  "ADMIN": "GU8Qu28KNb4JbhQV7DX7",
-  "YOU": "OLmSqlYzB06EIKJRy5b0"
+  "N": "crp9JXf4ooIgqN7mGOp9",
+  "ADMIN": "wNIMZNAVa95a3UpgwWJr",
+  "BRUNI": "fNmw8sukfGuvWVOp33Ge",
+  "YOU": "crp9JXf4ooIgqN7mGOp9"
  },
  "roles": {
-  "N": "Murdock - Deep & commanding",
-  "ADMIN": "Mark - Deep, Serious",
-  "BRUNI": null
+  "N": "Narratore IT - Dade M Suspense",
+  "ADMIN": "Amministrazione IT - Giulio",
+  "BRUNI": "Signora Bruni IT - Tosca - Mature, Whis"
  },
  "model": "eleven_v4"
 }
