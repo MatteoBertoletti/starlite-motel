@@ -1,0 +1,9 @@
+{
+ "final_lufs": -14.2,
+ "voice_lufs": -20.6,
+ "bed_lufs": -37.1,
+ "dropouts": [
+  1.03
+ ],
+ "bed_under_voice_db": 16.5
+}
