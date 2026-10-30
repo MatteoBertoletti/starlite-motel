@@ -1,0 +1,31 @@
+name: prep
+# Voice casting (ElevenLabs) and background-music analysis. Results go to the prep-out branch.
+on:
+  workflow_dispatch:
+    inputs:
+      voice: { description: 'Run the ElevenLabs voice pick', default: 'true' }
+      music: { description: 'Run the music analysis', default: 'true' }
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy
+      - name: Voice pick
+        if: ${{ inputs.voice == 'true' }}
+        env: { ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}' }
+        run: python tools/el_pick.py
+      - name: Music analysis
+        if: ${{ inputs.music == 'true' }}
+        run: python tools/music_pick.py
+      - name: Publish
+        if: always()
+        run: |
+          mkdir -p out && rm -f out/el/prev_*.mp3 out/music/*.mp3 && mkdir -p /tmp/pub && cp -r out/* /tmp/pub/ && cd /tmp/pub
+          git init -q && git checkout -q -b prep-out
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "prep ${{ github.run_id }}" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" prep-out
