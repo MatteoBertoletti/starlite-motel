@@ -1,0 +1,73 @@
+name: render_mg
+# Motion-graphics episode: render frames on several machines, mix, encode 1920x1080.
+on:
+  workflow_dispatch:
+    inputs:
+      ep:     { description: 'Episode folder', default: 'ep01_citofono' }
+      shards: { description: 'Parallel machines', default: '10' }
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs: { matrix: '${{ steps.m.outputs.matrix }}' }
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, math
+          n = int(json.load(open('episodes/${{ inputs.ep }}/timing.json'))['duration'] * 30)
+          k = int('${{ inputs.shards }}'); step = math.ceil(n / k)
+          print('matrix=' + json.dumps([{'i': i, 'from': i * step, 'to': min(n, (i + 1) * step)} for i in range(k) if i * step < n]))
+          PY
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy: { fail-fast: false, matrix: { shard: '${{ fromJson(needs.plan.outputs.matrix) }}' } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci --no-audit --no-fund
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium && sudo apt-get install -y -qq ffmpeg
+      - run: |
+          mkdir -p out && python tools/render.py --page film_mg.html --qs "ep=${{ inputs.ep }}" --from ${{ matrix.shard.from }} --to ${{ matrix.shard.to }} \
+            --out out/seg_$(printf %02d ${{ matrix.shard.i }}).mp4 --events out/events.json
+      - uses: actions/upload-artifact@v4
+        with: { name: 'mgseg-${{ matrix.shard.i }}', path: out/, retention-days: 3 }
+  assemble:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'mgseg-*', path: segs, merge-multiple: true }
+      - name: Voice + sounds
+        run: |
+          git fetch -q --depth 1 origin +voice-${{ inputs.ep }}:refs/remotes/origin/voice-${{ inputs.ep }}
+          mkdir -p out/voice && git --work-tree=out/voice checkout origin/voice-${{ inputs.ep }} -- voice.wav report.txt && git reset -q
+          python tools/sfx_fetch.py --get
+      - name: Join, mix, encode
+        run: |
+          ls segs/seg_*.mp4 | sort | sed "s#^#file '$PWD/#; s#\$#'#" > list.txt
+          ffmpeg -hide_banner -loglevel error -y -f concat -safe 0 -i list.txt -c copy out/video.mp4
+          python tools/mix_mg.py --voice out/voice/voice.wav --events segs/events.json --sfx out/audio/sfx --out out/mix.wav
+          mkdir -p final
+          ffmpeg -hide_banner -loglevel error -y -i out/video.mp4 -i out/mix.wav -map 0:v -map 1:a -c:v libx264 -preset veryfast -crf 20 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart final/${{ inputs.ep }}.mp4
+          ffmpeg -hide_banner -loglevel error -y -i final/${{ inputs.ep }}.mp4 -vf "fps=1/4,scale=320:180,tile=6x13" -frames:v 1 final/contact_sheet.jpg
+          cp out/mix_report.json segs/events.json out/voice/report.txt final/ && ls -la final
+      - uses: actions/upload-artifact@v4
+        with: { name: '${{ inputs.ep }}', path: final/ }
+      - name: Publish
+        run: |
+          mkdir -p /tmp/pub && cp final/* /tmp/pub/ && cd /tmp/pub
+          s=$(stat -c %s ${{ inputs.ep }}.mp4); [ $s -gt 95000000 ] && rm ${{ inputs.ep }}.mp4
+          git init -q && git checkout -q -b renders-${{ inputs.ep }}
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "render ${{ github.run_id }}" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" renders-${{ inputs.ep }}

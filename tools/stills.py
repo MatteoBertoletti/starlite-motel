@@ -13,7 +13,7 @@ async def main():
             pg = await b.new_page(viewport={'width': 1920, 'height': 1920})
             pg.on('console', lambda m: print('[console]', m.type, m.text) if m.type in ('error', 'warning') else None)
             pg.on('pageerror', lambda e: print('[pageerror]', e))
-            await pg.goto('http://127.0.0.1:8765/film.html' + os.environ.get('QS',''))
+            await pg.goto('http://127.0.0.1:8765/' + os.environ.get('PAGE','film.html') + os.environ.get('QS',''))
             await pg.wait_for_function('window.ready === true', timeout=180000)
             print('shots', await pg.evaluate('JSON.stringify(window.SHOTS)'))
             for t in times:

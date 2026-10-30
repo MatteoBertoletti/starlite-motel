@@ -36,7 +36,8 @@ for path in ['/v1/user', '/v1/user/subscription', '/v1/models', '/v2/voices?page
     except urllib.error.HTTPError as e: print('ERR', path, e.code, e.read().decode()[:300])
 cands = {}
 for q in [dict(language='it', gender='male', age='middle_aged'), dict(language='it', gender='male', age='old'),
-          dict(language='it', gender='male', use_cases='narrative_story'), dict(language='it', gender='male', search='profonda')]:
+          dict(language='it', gender='male', use_cases='narrative_story'), dict(language='it', gender='male', search='profonda'),
+          dict(language='it', gender='female', age='old'), dict(language='it', gender='female', age='middle_aged')]:
     try:
         d = req('GET', '/v1/shared-voices?' + urllib.parse.urlencode({**q, 'page_size': 60}))
     except Exception as e:
@@ -69,22 +70,32 @@ def score(r):
     s += 1.0 if any(k in (str(r['descr']) + str(r['use_case']) + r['description']).lower() for k in ('deep', 'narrat', 'profond', 'calm', 'grave', 'story')) else 0
     s += 0.6 * np.log10(1 + r['usage_1y']) / 3 + 0.4 * np.log10(1 + r['cloned_by']) / 2
     return s
-rows.sort(key=score, reverse=True)
+males = sorted([r for r in rows if r['gender'] == 'male'], key=score, reverse=True)
+fem = sorted([r for r in rows if r['gender'] == 'female'], key=lambda r: (r['age'] == 'old') * 2 + 0.5 * np.log10(1 + r['usage_1y']) / 3 - abs(r['f0'] - 185) / 60, reverse=True)
+rows = males
 for r in rows[:15]: print(f"{score(r):5.2f}  f0={r['f0']:6.1f}  {r['name'][:28]:28s} {r['age']} {r['accent']} {r['descr']} {r['use_case']} usage={r['usage_1y']}")
 if not rows: print('no candidates'); json.dump(log, open(f'{OUT}/pick.json', 'w'), default=str); sys.exit(1)
 win = rows[0]; log['winner'] = win; log['top'] = rows[:6]
+# a second, clearly different male for the 'administration' (higher pitch than the narrator), an older woman for Bruni
+admin = next((r for r in males[1:] if r['f0'] - win['f0'] > 15), males[1] if len(males) > 1 else win)
+bruni = fem[0] if fem else None
+log['roles'] = {'N': win, 'ADMIN': admin, 'BRUNI': bruni}
 
 # add the winner to my library so the TTS endpoint can use it
-try:
-    mine = req('GET', '/v2/voices?page_size=100')
-    have = {v['voice_id'] for v in mine.get('voices', [])}
-    if win['voice_id'] not in have:
-        r = req('POST', f"/v1/voices/add/{win['owner']}/{win['voice_id']}", {'new_name': 'Narratore IT (profondo)'})
-        log['added'] = r
-    use_id = log.get('added', {}).get('voice_id', win['voice_id'])
-except Exception as e:
-    print('add failed', e); use_id = win['voice_id']; log['add_error'] = str(e)
-log['use_voice_id'] = use_id
+ids = {}
+mine = {}
+try: mine = {v['voice_id'] for v in req('GET', '/v2/voices?page_size=100').get('voices', [])}
+except Exception as e: print('list mine failed', e)
+for role, r, nm in [('N', win, 'Narratore IT'), ('ADMIN', admin, 'Amministrazione IT'), ('BRUNI', bruni, 'Signora Bruni IT')]:
+    if not r: continue
+    vid = r['voice_id']
+    if vid not in mine:
+        try: vid = req('POST', f"/v1/voices/add/{r['owner']}/{r['voice_id']}", {'new_name': nm}).get('voice_id', vid)
+        except urllib.error.HTTPError as e: print('add failed', role, e.code, e.read().decode()[:200])
+    ids[role] = vid
+ids['YOU'] = ids['N']
+use_id = ids['N']; log['use_voice_id'] = use_id; log['ids'] = ids
+json.dump({'ids': ids, 'roles': {k: (v['name'] if v else None) for k, v in log['roles'].items()}, 'model': 'eleven_v4'}, open(f'{OUT}/voices.json', 'w'), indent=1, ensure_ascii=False)
 
 line = "Immagina di aver appena firmato il contratto. Sono le ventitré e quaranta, ed è la tua prima notte in via dei Glicini nove."
 for model in ['eleven_v4', 'eleven_multilingual_v2']:

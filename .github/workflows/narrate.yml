@@ -1,0 +1,39 @@
+name: narrate
+# ElevenLabs narration for an episode -> episodes/<ep>/timing.json (committed) + voice on branch voice-<ep>.
+on:
+  workflow_dispatch:
+    inputs:
+      ep: { description: 'Episode folder', default: 'ep01_citofono' }
+permissions:
+  contents: write
+jobs:
+  narrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile faster-whisper
+      - name: Restore the voice cache (never pay twice for the same line)
+        run: |
+          mkdir -p cache
+          if git fetch -q --depth 1 origin +voice-cache:refs/remotes/origin/voice-cache 2>/dev/null; then git --work-tree=cache checkout origin/voice-cache -- . && git reset -q; fi
+          ls cache | wc -l
+      - name: Narrate
+        env: { ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}' }
+        run: python tools/voice_el.py episodes/${{ inputs.ep }} voices/it.json cache
+      - name: Save the cache
+        if: always()
+        run: |
+          cd cache && git init -q && git checkout -q -b voice-cache
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "voice cache ${{ github.run_id }}" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" voice-cache
+      - name: Commit the timings + publish the voice
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add episodes/${{ inputs.ep }}/timing.json && git commit -qm "Timings for ${{ inputs.ep }}" && git pull -q --rebase && git push -q
+          mkdir -p /tmp/pub && cp -r out/voice/* /tmp/pub/ && cd /tmp/pub && rm -f lines/*_clean.wav
+          git init -q && git checkout -q -b voice-${{ inputs.ep }} && git add -A && git commit -qm "voice ${{ github.run_id }}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" voice-${{ inputs.ep }}
+      - uses: actions/upload-artifact@v4
+        with: { name: 'voice_${{ inputs.ep }}', path: out/voice/ }

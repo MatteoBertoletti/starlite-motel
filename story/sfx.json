@@ -118,5 +118,49 @@
  "bed_calm": {
   "url": "https://assets.mixkit.co/music/584/584.mp3",
   "title": "Rest Now (Mixkit music) - steady pad, no hits"
+ },
+ "buzzer": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/932/932-preview.mp3",
+  "title": "Apartment buzzer bell press"
+ },
+ "static": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1041/1041-preview.mp3",
+  "title": "Radio waves glitch white noise"
+ },
+ "glitch2": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1457/1457-preview.mp3",
+  "title": "Glitch static"
+ },
+ "ding": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/112/112-preview.mp3",
+  "title": "Elevator announcement bells"
+ },
+ "tick": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2577/2577-preview.mp3",
+  "title": "Interface device click"
+ },
+ "switch": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2585/2585-preview.mp3",
+  "title": "On or off light switch tap"
+ },
+ "keys": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/2842/2842-preview.mp3",
+  "title": "Door key in door lock"
+ },
+ "lock": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/202/202-preview.mp3",
+  "title": "Locking a shop door with keys"
+ },
+ "soft_whoosh": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1471/1471-preview.mp3",
+  "title": "Cinematic wind swoosh"
+ },
+ "off": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1808/1808-preview.mp3",
+  "title": "Electric switch"
+ },
+ "paper": {
+  "url": "https://assets.mixkit.co/active_storage/sfx/1461/1461-preview.mp3",
+  "title": "Short wind swoosh"
  }
 }
