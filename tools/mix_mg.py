@@ -39,7 +39,12 @@ for e in sorted(E['ev'], key=lambda e: e['t']):
 bed = load(f'{A.sfx}/{A.bed}.mp3')
 if A.bed_lp:
     sf.write('/tmp/_b.wav', bed, SR); subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', '/tmp/_b.wav', '-af', f'lowpass=f={A.bed_lp},highpass=f=45', '/tmp/_b2.wav'], check=True); bed, _ = sf.read('/tmp/_b2.wav', dtype='float32')
-bed = np.tile(bed, int(np.ceil(N / len(bed))) + 1)[:N]; bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: 60 * SR])) / 20)
+# skip the quiet intro and the fade-out tail, then loop with a 4 s crossfade (no holes in the bed)
+bed = bed[int(6 * SR): len(bed) - int(14 * SR)]; xf = int(4 * SR); loop = bed.copy()
+while len(loop) < N + SR:
+    r = np.linspace(0, 1, xf, dtype=np.float32); head = loop[:-xf]; tail = loop[-xf:] * (1 - r) + bed[:xf] * r
+    loop = np.concatenate([head, tail, bed[xf:]])
+bed = loop[:N]; bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: 60 * SR])) / 20)
 g = np.ones(N, np.float32); g[: int(1.5 * SR)] = np.linspace(0, 1, int(1.5 * SR))
 lines = {l['id']: l for l in E['lines']}
 for lid in (79, 85):                                  # dip before the big moments
