@@ -56,7 +56,8 @@ const rulesSeen = t => Object.entries(RULE_AT).filter(([n, c]) => t >= c).map(([
 
 // ---------- one element ----------
 function drawEl(c, el, L, lt, tt) {
-  const t0 = el.at !== undefined ? at(L, el.at) : 0;
+  // an element waits for its word; but if every element on the line waits, the first one is there from the cut
+  const t0 = el.at !== undefined && !el._lead ? at(L, el.at) : 0;
   const k = lt - t0; if (k < 0) return;
   const x = (el._local ? 0 : CX) + (el.x || 0) * UX, y = (el._local ? 0 : CY) + (el.y || 0) * UY, size = US * (el.s || 1);
   let dx = 0, dy = 0, sc = 1, rot = 0, al = 1;
@@ -273,7 +274,8 @@ window.seek = (t) => {
   else if (v.t === 'clash') clash(sc, v, L, lt, t);
   else if (v.t === 'choice') choice(sc, L, lt);
   else if (v.t === 'end') endCard(sc, L, lt);
-  else for (const el of v.els || []) drawEl(sc, el, L, lt, t);
+  else { const els = v.els || []; const lead = els.length && els.every(e => e.at !== undefined);
+    els.forEach((el, i) => drawEl(sc, lead && i === 0 ? { ...el, _lead: true, a: el.a === 'shake' ? 'shake' : 'pop' } : el, L, lt, t)); }
   sc.setTransform(1, 0, 0, 1, 0, 0); sc.globalAlpha = 1;
   // blackout
   if (v.fx && v.fx.startsWith('blackout@')) { const b = clamp01((lt - at(L, v.fx.split('@')[1])) / 0.35); if (b > 0) { sc.fillStyle = `rgba(0,0,0,${b * 0.93})`; sc.fillRect(0, 0, FW, FH); } }

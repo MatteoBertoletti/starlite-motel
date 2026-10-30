@@ -44,12 +44,12 @@
 
     { "id": 8, "who": "N", "clock": "00:12", "say": "Mezzanotte e dodici. Il citofono suona.",
       "cap": "00:12. Il citofono suona.",
-      "v": { "els": [ { "i": "clock", "text": "00:12", "x": -0.45, "a": "pop" }, { "i": "intercom", "x": 0.4, "s": 1.1, "a": "ring", "at": "citofono" } ], "sfx": [["buzz", "suona"]] } },
+      "v": { "els": [ { "i": "clock", "text": "00:12", "x": -0.42, "a": "pop" }, { "i": "intercom", "x": 0.5, "s": 0.95, "a": "ring", "at": "citofono" } ], "sfx": [["buzz", "suona"]] } },
     { "id": 9, "who": "N", "rule": 1, "say": "Regola uno: se il citofono suona dopo mezzanotte, non rispondere.",
       "cap": "Regola 1. Se il citofono suona dopo mezzanotte, non rispondere.", "v": { "t": "rule", "n": 1 } },
     { "id": 10, "who": "N", "say": "Suona una volta. Due. Tre.",
       "cap": "Suona una volta. Due. Tre.",
-      "v": { "els": [ { "i": "intercom", "x": 0, "s": 1.2, "a": "ring" }, { "i": "count", "marks": [["una", "1"], ["due", "2"], ["tre", "3"]], "x": 0.55, "y": -0.3 } ], "sfx": [["buzz", "una"], ["buzz", "due"], ["buzz", "tre"]] } },
+      "v": { "els": [ { "i": "intercom", "x": 0, "s": 1.2, "a": "ring" }, { "i": "count", "marks": [["una", "1"], ["due", "2"], ["tre", "3"]], "x": 0.75, "y": -0.35 } ], "sfx": [["buzz", "una"], ["buzz", "due"], ["buzz", "tre"]] } },
     { "id": 11, "who": "N", "say": "Ti avvicini al videocitofono. Lo schermo si accende da solo.",
       "cap": "Ti avvicini al videocitofono. Lo schermo si accende da solo.",
       "v": { "els": [ { "i": "screen", "x": 0, "s": 1.4, "a": "pop", "on": "accende", "els": [ { "i": "static" } ] } ], "sfx": [["static", "accende"]] } },
@@ -230,7 +230,7 @@
 
     { "id": 72, "who": "N", "clock": "03:33", "say": "Le tre e trentatré. Il citofono suona di nuovo.",
       "cap": "03:33. Il citofono suona di nuovo.",
-      "v": { "els": [ { "i": "clock", "text": "03:33", "x": -0.4, "a": "pop", "col": "red" }, { "i": "intercom", "x": 0.4, "s": 1.1, "a": "ring", "at": "citofono" } ], "sfx": [["buzz", "suona"]] } },
+      "v": { "els": [ { "i": "clock", "text": "03:33", "x": -0.42, "a": "pop", "col": "red" }, { "i": "intercom", "x": 0.5, "s": 0.95, "a": "ring", "at": "citofono" } ], "sfx": [["buzz", "suona"]] } },
     { "id": 73, "who": "N", "say": "Sul biglietto c'è un'ultima regola. Non l'avevi vista: è sul retro.",
       "cap": "Sul biglietto c'è un'ultima regola. Non l'avevi vista: è sul retro.",
       "v": { "els": [ { "i": "note", "x": 0, "s": 1.3, "flip": "retro" } ] } },
