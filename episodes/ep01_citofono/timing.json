@@ -173,37 +173,38 @@
    "tokens": [
     {
      "w": "troppo",
-     "s": 11.62,
-     "e": 11.92
+     "s": 11.64,
+     "e": 12.07
     },
     {
      "w": "basso",
-     "s": 11.62,
-     "e": 11.92
+     "s": 12.07,
+     "e": 12.67
     },
     {
      "w": "e",
-     "s": 11.62,
-     "e": 11.92
+     "s": 13.0,
+     "e": 13.12
     },
     {
      "w": "stanotte",
-     "s": 11.62,
-     "e": 11.92
+     "s": 13.12,
+     "e": 13.72
     },
     {
      "w": "capirai",
-     "s": 11.62,
-     "e": 11.92
+     "s": 13.87,
+     "e": 14.42
     },
     {
      "w": "perche",
-     "s": 11.62,
-     "e": 11.92
+     "s": 14.47,
+     "e": 14.92
     }
    ],
    "match": 0.0,
-   "heard": "Buon appetito."
+   "heard": "Buon appetito.",
+   "match_note": "whisper hallucinated on this line; word times set from the energy envelope"
   },
   {
    "id": 4,

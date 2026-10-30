@@ -96,6 +96,11 @@ for i, L in enumerate(lines):
     if role.get('fx'): ff(['-i', clean, '-af', FX[role['fx']] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     toks = norm(L['say']); hw = heard_words(clean, L['say']); tt, score = align(toks, hw)
+    if score < 0.5:        # transcript unusable (whisper can hallucinate on short lines): spread the words over the voiced part
+        yy, _ = sf.read(clean, dtype='float32'); a0, a1 = 0.03, len(yy) / SR - 0.05
+        wts = [max(1, len(re.findall(r'[aeiou]', w))) for w in toks]; tot = sum(wts); acc = a0
+        tt = []
+        for w in wts: d = (a1 - a0) * w / tot; tt.append((acc, acc + d)); acc += d
     dur = sf.info(final).duration
     tl.append({'id': L['id'], 'who': who, 'model': model, 'start': round(t, 3), 'end': round(t + dur, 3), 'dur': round(dur, 3), 'file': final,
                'tokens': [{'w': w, 's': round(t + a, 3), 'e': round(t + b, 3)} for w, (a, b) in zip(toks, tt)], 'match': round(score, 2),
