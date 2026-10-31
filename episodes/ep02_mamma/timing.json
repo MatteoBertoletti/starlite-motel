@@ -1,0 +1,4406 @@
+{
+ "duration": 331.604,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.3,
+   "end": 4.41,
+   "dur": 4.11,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "tre",
+     "s": 0.3,
+     "e": 0.52
+    },
+    {
+     "w": "e",
+     "s": 0.52,
+     "e": 0.8
+    },
+    {
+     "w": "trentatre",
+     "s": 0.8,
+     "e": 1.4
+    },
+    {
+     "w": "sul",
+     "s": 1.72,
+     "e": 2.16
+    },
+    {
+     "w": "telefono",
+     "s": 2.16,
+     "e": 2.7
+    },
+    {
+     "w": "compare",
+     "s": 2.7,
+     "e": 3.12
+    },
+    {
+     "w": "mamma",
+     "s": 3.12,
+     "e": 4.26
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tre e trentatré. Sul telefono compare Mamma."
+  },
+  {
+   "id": 2,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 4.75,
+   "end": 6.872,
+   "dur": 2.122,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "amore",
+     "s": 4.75,
+     "e": 5.65
+    },
+    {
+     "w": "sei",
+     "s": 5.65,
+     "e": 5.91
+    },
+    {
+     "w": "sveglio",
+     "s": 5.91,
+     "e": 6.37
+    }
+   ],
+   "match": 1.0,
+   "heard": "Amore… sei sveglio?"
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 7.972,
+   "end": 11.262,
+   "dur": 3.29,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "sette",
+     "s": 7.972,
+     "e": 8.312
+    },
+    {
+     "w": "regole",
+     "s": 8.312,
+     "e": 8.792
+    },
+    {
+     "w": "la",
+     "s": 9.132,
+     "e": 9.292
+    },
+    {
+     "w": "maggior",
+     "s": 9.292,
+     "e": 9.632
+    },
+    {
+     "w": "parte",
+     "s": 9.632,
+     "e": 10.012
+    },
+    {
+     "w": "sbaglia",
+     "s": 10.012,
+     "e": 10.552
+    },
+    {
+     "w": "la",
+     "s": 10.552,
+     "e": 10.652
+    },
+    {
+     "w": "quinta",
+     "s": 10.652,
+     "e": 11.052
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sette regole. La maggior parte sbaglia la quinta."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 11.602,
+   "end": 18.242,
+   "dur": 6.64,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 11.602,
+     "e": 11.742
+    },
+    {
+     "w": "ti",
+     "s": 11.742,
+     "e": 11.882
+    },
+    {
+     "w": "sei",
+     "s": 11.882,
+     "e": 12.082
+    },
+    {
+     "w": "perso",
+     "s": 12.082,
+     "e": 12.462
+    },
+    {
+     "w": "il",
+     "s": 12.462,
+     "e": 12.582
+    },
+    {
+     "w": "caso",
+     "s": 12.582,
+     "e": 12.782
+    },
+    {
+     "w": "uno",
+     "s": 12.782,
+     "e": 13.242
+    },
+    {
+     "w": "via",
+     "s": 13.502,
+     "e": 13.902
+    },
+    {
+     "w": "dei",
+     "s": 13.902,
+     "e": 14.122
+    },
+    {
+     "w": "glicini",
+     "s": 14.122,
+     "e": 14.642
+    },
+    {
+     "w": "nove",
+     "s": 14.642,
+     "e": 14.982
+    },
+    {
+     "w": "il",
+     "s": 15.642,
+     "e": 15.862
+    },
+    {
+     "w": "citofono",
+     "s": 15.862,
+     "e": 16.522
+    },
+    {
+     "w": "ha",
+     "s": 16.522,
+     "e": 16.742
+    },
+    {
+     "w": "parlato",
+     "s": 16.742,
+     "e": 17.202
+    },
+    {
+     "w": "con",
+     "s": 17.202,
+     "e": 17.382
+    },
+    {
+     "w": "la",
+     "s": 17.382,
+     "e": 17.522
+    },
+    {
+     "w": "tua",
+     "s": 17.522,
+     "e": 17.702
+    },
+    {
+     "w": "voce",
+     "s": 17.702,
+     "e": 18.082
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se ti sei perso il caso uno, via dei Glicini nove. Il citofono ha parlato con la tua voce."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 18.582,
+   "end": 23.312,
+   "dur": 4.73,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "tua",
+     "s": 18.582,
+     "e": 18.762
+    },
+    {
+     "w": "madre",
+     "s": 18.762,
+     "e": 19.142
+    },
+    {
+     "w": "vive",
+     "s": 19.142,
+     "e": 19.502
+    },
+    {
+     "w": "a",
+     "s": 19.502,
+     "e": 19.742
+    },
+    {
+     "w": "seicento",
+     "s": 19.742,
+     "e": 20.282
+    },
+    {
+     "w": "chilometri",
+     "s": 20.282,
+     "e": 20.922
+    },
+    {
+     "w": "da",
+     "s": 20.922,
+     "e": 21.042
+    },
+    {
+     "w": "qui",
+     "s": 21.042,
+     "e": 21.322
+    },
+    {
+     "w": "e",
+     "s": 21.862,
+     "e": 21.902
+    },
+    {
+     "w": "a",
+     "s": 21.902,
+     "e": 22.002
+    },
+    {
+     "w": "quest",
+     "s": 22.002,
+     "e": 22.162
+    },
+    {
+     "w": "ora",
+     "s": 22.162,
+     "e": 22.482
+    },
+    {
+     "w": "dorme",
+     "s": 22.482,
+     "e": 23.182
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tua madre vive a seicento chilometri da qui. E a quest 'ora dorme."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.652,
+   "end": 29.742,
+   "dur": 6.09,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "notte",
+     "s": 23.652,
+     "e": 24.112
+    },
+    {
+     "w": "due",
+     "s": 24.112,
+     "e": 24.332
+    },
+    {
+     "w": "sotto",
+     "s": 24.912,
+     "e": 25.272
+    },
+    {
+     "w": "la",
+     "s": 25.272,
+     "e": 25.452
+    },
+    {
+     "w": "porta",
+     "s": 25.452,
+     "e": 25.792
+    },
+    {
+     "w": "trovi",
+     "s": 25.792,
+     "e": 26.372
+    },
+    {
+     "w": "un",
+     "s": 26.372,
+     "e": 26.472
+    },
+    {
+     "w": "biglietto",
+     "s": 26.472,
+     "e": 27.152
+    },
+    {
+     "w": "la",
+     "s": 27.452,
+     "e": 27.732
+    },
+    {
+     "w": "calligrafia",
+     "s": 27.732,
+     "e": 28.492
+    },
+    {
+     "w": "della",
+     "s": 28.492,
+     "e": 28.672
+    },
+    {
+     "w": "signora",
+     "s": 28.672,
+     "e": 29.152
+    },
+    {
+     "w": "bruni",
+     "s": 29.152,
+     "e": 29.572
+    }
+   ],
+   "match": 1.0,
+   "heard": "Notte due. Sotto la porta trovi un biglietto. La calligrafia della signora Bruni."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 30.082,
+   "end": 36.212,
+   "dur": 6.13,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 30.082,
+     "e": 30.242
+    },
+    {
+     "w": "stessa",
+     "s": 30.242,
+     "e": 30.662
+    },
+    {
+     "w": "signora",
+     "s": 30.662,
+     "e": 31.102
+    },
+    {
+     "w": "bruni",
+     "s": 31.102,
+     "e": 31.542
+    },
+    {
+     "w": "morta",
+     "s": 31.542,
+     "e": 32.182
+    },
+    {
+     "w": "nel",
+     "s": 32.182,
+     "e": 32.302
+    },
+    {
+     "w": "novantotto",
+     "s": 32.302,
+     "e": 33.062
+    },
+    {
+     "w": "sette",
+     "s": 33.762,
+     "e": 34.202
+    },
+    {
+     "w": "regole",
+     "s": 34.202,
+     "e": 34.682
+    },
+    {
+     "w": "tutte",
+     "s": 34.822,
+     "e": 35.342
+    },
+    {
+     "w": "sul",
+     "s": 35.342,
+     "e": 35.482
+    },
+    {
+     "w": "telefono",
+     "s": 35.482,
+     "e": 36.082
+    }
+   ],
+   "match": 1.0,
+   "heard": "La stessa signora Bruni morta nel novantotto. Sette regole, tutte sul telefono."
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 36.552,
+   "end": 40.662,
+   "dur": 4.11,
+   "file": "out/voice/lines/08.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 36.552,
+     "e": 36.992
+    },
+    {
+     "w": "uno",
+     "s": 36.992,
+     "e": 37.292
+    },
+    {
+     "w": "di",
+     "s": 37.792,
+     "e": 37.972
+    },
+    {
+     "w": "notte",
+     "s": 37.972,
+     "e": 38.512
+    },
+    {
+     "w": "il",
+     "s": 38.592,
+     "e": 38.792
+    },
+    {
+     "w": "telefono",
+     "s": 38.792,
+     "e": 39.312
+    },
+    {
+     "w": "sta",
+     "s": 39.312,
+     "e": 39.612
+    },
+    {
+     "w": "a",
+     "s": 39.612,
+     "e": 39.832
+    },
+    {
+     "w": "faccia",
+     "s": 39.832,
+     "e": 40.212
+    },
+    {
+     "w": "in",
+     "s": 40.212,
+     "e": 40.332
+    },
+    {
+     "w": "giu",
+     "s": 40.332,
+     "e": 40.592
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola uno, di notte, il telefono sta a faccia in giù."
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 41.002,
+   "end": 43.872,
+   "dur": 2.87,
+   "file": "out/voice/lines/09.wav",
+   "tokens": [
+    {
+     "w": "lo",
+     "s": 41.002,
+     "e": 41.142
+    },
+    {
+     "w": "giri",
+     "s": 41.142,
+     "e": 41.482
+    },
+    {
+     "w": "sul",
+     "s": 41.482,
+     "e": 41.662
+    },
+    {
+     "w": "comodino",
+     "s": 41.662,
+     "e": 42.282
+    },
+    {
+     "w": "spegni",
+     "s": 42.662,
+     "e": 43.242
+    },
+    {
+     "w": "la",
+     "s": 43.242,
+     "e": 43.362
+    },
+    {
+     "w": "luce",
+     "s": 43.362,
+     "e": 43.702
+    }
+   ],
+   "match": 1.0,
+   "heard": "Lo giri sul comodino. Spegni la luce."
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 44.212,
+   "end": 47.462,
+   "dur": 3.25,
+   "file": "out/voice/lines/10.wav",
+   "tokens": [
+    {
+     "w": "un",
+     "s": 44.212,
+     "e": 44.352
+    },
+    {
+     "w": "minuto",
+     "s": 44.352,
+     "e": 44.712
+    },
+    {
+     "w": "dopo",
+     "s": 44.712,
+     "e": 45.032
+    },
+    {
+     "w": "il",
+     "s": 45.352,
+     "e": 45.452
+    },
+    {
+     "w": "soffitto",
+     "s": 45.452,
+     "e": 46.012
+    },
+    {
+     "w": "si",
+     "s": 46.012,
+     "e": 46.252
+    },
+    {
+     "w": "illumina",
+     "s": 46.252,
+     "e": 46.732
+    },
+    {
+     "w": "di",
+     "s": 46.732,
+     "e": 46.812
+    },
+    {
+     "w": "bianco",
+     "s": 46.812,
+     "e": 47.312
+    }
+   ],
+   "match": 1.0,
+   "heard": "Un minuto dopo, il soffitto si illumina di bianco."
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 47.802,
+   "end": 49.692,
+   "dur": 1.89,
+   "file": "out/voice/lines/11.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 47.802,
+     "e": 47.942
+    },
+    {
+     "w": "telefono",
+     "s": 47.942,
+     "e": 48.542
+    },
+    {
+     "w": "e",
+     "s": 48.542,
+     "e": 48.742
+    },
+    {
+     "w": "a",
+     "s": 48.742,
+     "e": 48.862
+    },
+    {
+     "w": "faccia",
+     "s": 48.862,
+     "e": 49.222
+    },
+    {
+     "w": "in",
+     "s": 49.222,
+     "e": 49.302
+    },
+    {
+     "w": "su",
+     "s": 49.302,
+     "e": 49.522
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il telefono è a faccia in su."
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 50.992,
+   "end": 55.282,
+   "dur": 4.29,
+   "file": "out/voice/lines/12.wav",
+   "tokens": [
+    {
+     "w": "sullo",
+     "s": 51.002,
+     "e": 51.252
+    },
+    {
+     "w": "schermo",
+     "s": 51.252,
+     "e": 51.772
+    },
+    {
+     "w": "un",
+     "s": 51.952,
+     "e": 52.172
+    },
+    {
+     "w": "vocale",
+     "s": 52.172,
+     "e": 52.592
+    },
+    {
+     "w": "di",
+     "s": 52.592,
+     "e": 52.712
+    },
+    {
+     "w": "tua",
+     "s": 52.712,
+     "e": 52.912
+    },
+    {
+     "w": "madre",
+     "s": 52.912,
+     "e": 53.232
+    },
+    {
+     "w": "delle",
+     "s": 53.592,
+     "e": 54.032
+    },
+    {
+     "w": "ventuno",
+     "s": 54.032,
+     "e": 54.532
+    },
+    {
+     "w": "e",
+     "s": 54.532,
+     "e": 54.652
+    },
+    {
+     "w": "trenta",
+     "s": 54.652,
+     "e": 55.132
+    }
+   ],
+   "match": 0.91,
+   "heard": "Sulla schermo, un vocale di tua madre. Delle ventuno e trenta."
+  },
+  {
+   "id": 13,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 55.622,
+   "end": 59.624,
+   "dur": 4.002,
+   "file": "out/voice/lines/13.wav",
+   "tokens": [
+    {
+     "w": "buonanotte",
+     "s": 55.622,
+     "e": 56.202
+    },
+    {
+     "w": "amore",
+     "s": 56.202,
+     "e": 56.622
+    },
+    {
+     "w": "io",
+     "s": 57.102,
+     "e": 57.182
+    },
+    {
+     "w": "vado",
+     "s": 57.182,
+     "e": 57.402
+    },
+    {
+     "w": "a",
+     "s": 57.402,
+     "e": 57.502
+    },
+    {
+     "w": "letto",
+     "s": 57.502,
+     "e": 57.922
+    },
+    {
+     "w": "ci",
+     "s": 58.162,
+     "e": 58.342
+    },
+    {
+     "w": "sentiamo",
+     "s": 58.342,
+     "e": 58.742
+    },
+    {
+     "w": "domani",
+     "s": 58.742,
+     "e": 59.202
+    }
+   ],
+   "match": 1.0,
+   "heard": "Buonanotte amore. Io vado a letto. Ci sentiamo domani."
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 59.964,
+   "end": 64.144,
+   "dur": 4.18,
+   "file": "out/voice/lines/14.wav",
+   "tokens": [
+    {
+     "w": "voce",
+     "s": 59.964,
+     "e": 60.304
+    },
+    {
+     "w": "stanca",
+     "s": 60.304,
+     "e": 60.924
+    },
+    {
+     "w": "normale",
+     "s": 61.284,
+     "e": 61.964
+    },
+    {
+     "w": "ricordatela",
+     "s": 62.464,
+     "e": 63.204
+    },
+    {
+     "w": "questa",
+     "s": 63.344,
+     "e": 63.564
+    },
+    {
+     "w": "voce",
+     "s": 63.564,
+     "e": 64.004
+    }
+   ],
+   "match": 1.0,
+   "heard": "Voce stanca. Normale. Ricordatela, questa voce."
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 64.484,
+   "end": 68.524,
+   "dur": 4.04,
+   "file": "out/voice/lines/15.wav",
+   "tokens": [
+    {
+     "w": "ventitre",
+     "s": 64.484,
+     "e": 65.064
+    },
+    {
+     "w": "e",
+     "s": 65.064,
+     "e": 65.244
+    },
+    {
+     "w": "quaranta",
+     "s": 65.244,
+     "e": 65.784
+    },
+    {
+     "w": "un",
+     "s": 66.204,
+     "e": 66.484
+    },
+    {
+     "w": "messaggio",
+     "s": 66.484,
+     "e": 67.004
+    },
+    {
+     "w": "da",
+     "s": 67.004,
+     "e": 67.184
+    },
+    {
+     "w": "un",
+     "s": 67.184,
+     "e": 67.304
+    },
+    {
+     "w": "numero",
+     "s": 67.304,
+     "e": 67.584
+    },
+    {
+     "w": "sconosciuto",
+     "s": 67.584,
+     "e": 68.344
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ventitré e quaranta. Un messaggio da un numero sconosciuto."
+  },
+  {
+   "id": 16,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 68.864,
+   "end": 73.204,
+   "dur": 4.34,
+   "file": "out/voice/lines/16.wav",
+   "tokens": [
+    {
+     "w": "ciao",
+     "s": 68.864,
+     "e": 69.064
+    },
+    {
+     "w": "mamma",
+     "s": 69.064,
+     "e": 69.624
+    },
+    {
+     "w": "mi",
+     "s": 69.944,
+     "e": 70.064
+    },
+    {
+     "w": "e",
+     "s": 70.064,
+     "e": 70.124
+    },
+    {
+     "w": "caduto",
+     "s": 70.124,
+     "e": 70.424
+    },
+    {
+     "w": "il",
+     "s": 70.424,
+     "e": 70.544
+    },
+    {
+     "w": "telefono",
+     "s": 70.544,
+     "e": 71.104
+    },
+    {
+     "w": "questo",
+     "s": 71.424,
+     "e": 71.884
+    },
+    {
+     "w": "e",
+     "s": 71.884,
+     "e": 72.184
+    },
+    {
+     "w": "il",
+     "s": 72.184,
+     "e": 72.264
+    },
+    {
+     "w": "mio",
+     "s": 72.264,
+     "e": 72.384
+    },
+    {
+     "w": "nuovo",
+     "s": 72.384,
+     "e": 72.604
+    },
+    {
+     "w": "numero",
+     "s": 72.604,
+     "e": 72.944
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ciao mamma, mi è caduto il telefono. Questo è il mio nuovo numero."
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 73.544,
+   "end": 79.444,
+   "dur": 5.9,
+   "file": "out/voice/lines/17.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 73.544,
+     "e": 73.684
+    },
+    {
+     "w": "numero",
+     "s": 73.684,
+     "e": 74.084
+    },
+    {
+     "w": "e",
+     "s": 74.084,
+     "e": 74.364
+    },
+    {
+     "w": "identico",
+     "s": 74.364,
+     "e": 74.924
+    },
+    {
+     "w": "al",
+     "s": 74.924,
+     "e": 75.084
+    },
+    {
+     "w": "tuo",
+     "s": 75.084,
+     "e": 75.584
+    },
+    {
+     "w": "tranne",
+     "s": 75.724,
+     "e": 76.204
+    },
+    {
+     "w": "la",
+     "s": 76.204,
+     "e": 76.364
+    },
+    {
+     "w": "fine",
+     "s": 76.364,
+     "e": 76.624
+    },
+    {
+     "w": "quattordici",
+     "s": 77.104,
+     "e": 77.944
+    },
+    {
+     "w": "invece",
+     "s": 78.244,
+     "e": 78.504
+    },
+    {
+     "w": "di",
+     "s": 78.504,
+     "e": 78.804
+    },
+    {
+     "w": "tredici",
+     "s": 78.804,
+     "e": 79.304
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il numero è identico al tuo. Tranne la fine, quattordici, invece di tredici."
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 79.784,
+   "end": 87.434,
+   "dur": 7.65,
+   "file": "out/voice/lines/18.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 79.784,
+     "e": 80.204
+    },
+    {
+     "w": "due",
+     "s": 80.204,
+     "e": 80.444
+    },
+    {
+     "w": "se",
+     "s": 80.904,
+     "e": 81.064
+    },
+    {
+     "w": "un",
+     "s": 81.064,
+     "e": 81.204
+    },
+    {
+     "w": "messaggio",
+     "s": 81.204,
+     "e": 81.644
+    },
+    {
+     "w": "comincia",
+     "s": 81.644,
+     "e": 82.124
+    },
+    {
+     "w": "con",
+     "s": 82.124,
+     "e": 82.464
+    },
+    {
+     "w": "ciao",
+     "s": 82.464,
+     "e": 82.944
+    },
+    {
+     "w": "mamma",
+     "s": 82.944,
+     "e": 83.684
+    },
+    {
+     "w": "non",
+     "s": 83.724,
+     "e": 83.984
+    },
+    {
+     "w": "rispondere",
+     "s": 83.984,
+     "e": 84.704
+    },
+    {
+     "w": "cancella",
+     "s": 85.004,
+     "e": 85.524
+    },
+    {
+     "w": "la",
+     "s": 85.524,
+     "e": 85.624
+    },
+    {
+     "w": "chat",
+     "s": 85.624,
+     "e": 85.924
+    },
+    {
+     "w": "elimina",
+     "s": 86.384,
+     "e": 86.824
+    },
+    {
+     "w": "il",
+     "s": 86.824,
+     "e": 86.944
+    },
+    {
+     "w": "numero",
+     "s": 86.944,
+     "e": 87.224
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola due, se un messaggio comincia con ciao mamma, non rispondere. Cancella la chat, elimina il numero."
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 87.774,
+   "end": 92.544,
+   "dur": 4.77,
+   "file": "out/voice/lines/19.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 87.774,
+     "e": 87.874
+    },
+    {
+     "w": "lo",
+     "s": 87.874,
+     "e": 88.294
+    },
+    {
+     "w": "stesso",
+     "s": 87.874,
+     "e": 88.294
+    },
+    {
+     "w": "consiglio",
+     "s": 88.294,
+     "e": 88.874
+    },
+    {
+     "w": "della",
+     "s": 88.874,
+     "e": 89.034
+    },
+    {
+     "w": "polizia",
+     "s": 89.034,
+     "e": 89.494
+    },
+    {
+     "w": "postale",
+     "s": 89.494,
+     "e": 90.054
+    },
+    {
+     "w": "per",
+     "s": 90.274,
+     "e": 90.574
+    },
+    {
+     "w": "una",
+     "s": 90.574,
+     "e": 90.774
+    },
+    {
+     "w": "volta",
+     "s": 90.774,
+     "e": 91.174
+    },
+    {
+     "w": "un",
+     "s": 91.354,
+     "e": 91.534
+    },
+    {
+     "w": "consiglio",
+     "s": 91.534,
+     "e": 92.094
+    },
+    {
+     "w": "vero",
+     "s": 92.094,
+     "e": 92.454
+    }
+   ],
+   "match": 0.85,
+   "heard": "È l 'ultimo consiglio della Polizia Postale. Per una volta, un consiglio vero."
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 92.884,
+   "end": 97.894,
+   "dur": 5.01,
+   "file": "out/voice/lines/20.wav",
+   "tokens": [
+    {
+     "w": "cancelli",
+     "s": 92.884,
+     "e": 93.404
+    },
+    {
+     "w": "la",
+     "s": 93.404,
+     "e": 93.544
+    },
+    {
+     "w": "chat",
+     "s": 93.544,
+     "e": 93.944
+    },
+    {
+     "w": "mentre",
+     "s": 94.344,
+     "e": 94.904
+    },
+    {
+     "w": "elimini",
+     "s": 94.904,
+     "e": 95.364
+    },
+    {
+     "w": "il",
+     "s": 95.364,
+     "e": 95.524
+    },
+    {
+     "w": "numero",
+     "s": 95.524,
+     "e": 95.884
+    },
+    {
+     "w": "arriva",
+     "s": 96.224,
+     "e": 96.584
+    },
+    {
+     "w": "un",
+     "s": 96.584,
+     "e": 96.744
+    },
+    {
+     "w": "ultimo",
+     "s": 96.744,
+     "e": 97.124
+    },
+    {
+     "w": "messaggio",
+     "s": 97.124,
+     "e": 97.724
+    }
+   ],
+   "match": 1.0,
+   "heard": "Cancelli la chat. Mentre elimini il numero, arriva un ultimo messaggio."
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 98.234,
+   "end": 99.864,
+   "dur": 1.63,
+   "file": "out/voice/lines/21.wav",
+   "tokens": [
+    {
+     "w": "perche",
+     "s": 98.234,
+     "e": 98.514
+    },
+    {
+     "w": "mi",
+     "s": 98.514,
+     "e": 98.714
+    },
+    {
+     "w": "cancelli",
+     "s": 98.714,
+     "e": 99.354
+    },
+    {
+     "w": "mamma",
+     "s": 99.374,
+     "e": 99.714
+    }
+   ],
+   "match": 1.0,
+   "heard": "Perché mi cancelli, mamma?"
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 101.264,
+   "end": 108.414,
+   "dur": 7.15,
+   "file": "out/voice/lines/22.wav",
+   "tokens": [
+    {
+     "w": "un",
+     "s": 101.264,
+     "e": 101.424
+    },
+    {
+     "w": "minuto",
+     "s": 101.424,
+     "e": 101.744
+    },
+    {
+     "w": "dopo",
+     "s": 101.744,
+     "e": 102.064
+    },
+    {
+     "w": "quel",
+     "s": 102.264,
+     "e": 102.484
+    },
+    {
+     "w": "numero",
+     "s": 102.484,
+     "e": 102.764
+    },
+    {
+     "w": "ti",
+     "s": 102.764,
+     "e": 103.004
+    },
+    {
+     "w": "chiama",
+     "s": 103.004,
+     "e": 103.384
+    },
+    {
+     "w": "non",
+     "s": 103.784,
+     "e": 104.064
+    },
+    {
+     "w": "rispondi",
+     "s": 104.064,
+     "e": 104.824
+    },
+    {
+     "w": "lascia",
+     "s": 105.244,
+     "e": 105.544
+    },
+    {
+     "w": "un",
+     "s": 105.544,
+     "e": 105.644
+    },
+    {
+     "w": "vocale",
+     "s": 105.644,
+     "e": 106.144
+    },
+    {
+     "w": "dieci",
+     "s": 106.684,
+     "e": 107.044
+    },
+    {
+     "w": "secondi",
+     "s": 107.044,
+     "e": 107.624
+    },
+    {
+     "w": "di",
+     "s": 107.624,
+     "e": 107.704
+    },
+    {
+     "w": "respiro",
+     "s": 107.704,
+     "e": 108.264
+    }
+   ],
+   "match": 1.0,
+   "heard": "Un minuto dopo, quel numero ti chiama. Non rispondi. Lascia un vocale. Dieci secondi di respiro."
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 108.754,
+   "end": 113.614,
+   "dur": 4.86,
+   "file": "out/voice/lines/23.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 108.754,
+     "e": 109.154
+    },
+    {
+     "w": "tre",
+     "s": 109.154,
+     "e": 109.394
+    },
+    {
+     "w": "rispondi",
+     "s": 109.914,
+     "e": 110.674
+    },
+    {
+     "w": "sempre",
+     "s": 110.674,
+     "e": 111.074
+    },
+    {
+     "w": "a",
+     "s": 111.074,
+     "e": 111.374
+    },
+    {
+     "w": "tua",
+     "s": 111.374,
+     "e": 111.534
+    },
+    {
+     "w": "madre",
+     "s": 111.534,
+     "e": 111.934
+    },
+    {
+     "w": "al",
+     "s": 112.374,
+     "e": 112.594
+    },
+    {
+     "w": "primo",
+     "s": 112.594,
+     "e": 112.894
+    },
+    {
+     "w": "squillo",
+     "s": 112.894,
+     "e": 113.414
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola tre, rispondi sempre a tua madre. Al primo squillo."
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 113.954,
+   "end": 121.124,
+   "dur": 7.17,
+   "file": "out/voice/lines/24.wav",
+   "tokens": [
+    {
+     "w": "sotto",
+     "s": 113.954,
+     "e": 114.454
+    },
+    {
+     "w": "a",
+     "s": 114.734,
+     "e": 114.814
+    },
+    {
+     "w": "matita",
+     "s": 114.814,
+     "e": 115.234
+    },
+    {
+     "w": "la",
+     "s": 115.594,
+     "e": 115.694
+    },
+    {
+     "w": "signora",
+     "s": 115.694,
+     "e": 116.094
+    },
+    {
+     "w": "bruni",
+     "s": 116.094,
+     "e": 116.514
+    },
+    {
+     "w": "ha",
+     "s": 116.514,
+     "e": 116.734
+    },
+    {
+     "w": "aggiunto",
+     "s": 116.734,
+     "e": 117.294
+    },
+    {
+     "w": "le",
+     "s": 117.874,
+     "e": 118.074
+    },
+    {
+     "w": "madri",
+     "s": 118.074,
+     "e": 118.534
+    },
+    {
+     "w": "chiamano",
+     "s": 118.534,
+     "e": 119.074
+    },
+    {
+     "w": "di",
+     "s": 119.074,
+     "e": 119.214
+    },
+    {
+     "w": "notte",
+     "s": 119.214,
+     "e": 119.694
+    },
+    {
+     "w": "solo",
+     "s": 119.694,
+     "e": 120.094
+    },
+    {
+     "w": "quando",
+     "s": 120.094,
+     "e": 120.394
+    },
+    {
+     "w": "serve",
+     "s": 120.394,
+     "e": 120.854
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sotto, a matita, la signora Bruni ha aggiunto, le madri chiamano di notte solo quando serve."
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 121.464,
+   "end": 125.394,
+   "dur": 3.93,
+   "file": "out/voice/lines/25.wav",
+   "tokens": [
+    {
+     "w": "mezzanotte",
+     "s": 121.464,
+     "e": 122.104
+    },
+    {
+     "w": "e",
+     "s": 122.104,
+     "e": 122.284
+    },
+    {
+     "w": "mezza",
+     "s": 122.284,
+     "e": 122.764
+    },
+    {
+     "w": "il",
+     "s": 123.024,
+     "e": 123.344
+    },
+    {
+     "w": "telefono",
+     "s": 123.344,
+     "e": 123.844
+    },
+    {
+     "w": "squilla",
+     "s": 123.844,
+     "e": 124.364
+    },
+    {
+     "w": "mamma",
+     "s": 124.744,
+     "e": 125.264
+    }
+   ],
+   "match": 1.0,
+   "heard": "Mezzanotte e mezza. Il telefono squilla. Mamma."
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 125.734,
+   "end": 130.234,
+   "dur": 4.5,
+   "file": "out/voice/lines/26.wav",
+   "tokens": [
+    {
+     "w": "rispondi",
+     "s": 125.734,
+     "e": 126.314
+    },
+    {
+     "w": "al",
+     "s": 126.314,
+     "e": 126.394
+    },
+    {
+     "w": "primo",
+     "s": 126.394,
+     "e": 126.574
+    },
+    {
+     "w": "squillo",
+     "s": 126.574,
+     "e": 127.174
+    },
+    {
+     "w": "come",
+     "s": 127.474,
+     "e": 127.614
+    },
+    {
+     "w": "dice",
+     "s": 127.614,
+     "e": 127.834
+    },
+    {
+     "w": "la",
+     "s": 127.834,
+     "e": 128.034
+    },
+    {
+     "w": "regola",
+     "s": 128.034,
+     "e": 128.454
+    },
+    {
+     "w": "e",
+     "s": 128.834,
+     "e": 128.914
+    },
+    {
+     "w": "dici",
+     "s": 128.914,
+     "e": 129.294
+    },
+    {
+     "w": "pronto",
+     "s": 129.594,
+     "e": 129.834
+    }
+   ],
+   "match": 1.0,
+   "heard": "Rispondi al primo squillo, come dice la regola. E dici, pronto?"
+  },
+  {
+   "id": 27,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 130.574,
+   "end": 131.676,
+   "dur": 1.102,
+   "file": "out/voice/lines/27.wav",
+   "tokens": [
+    {
+     "w": "chi",
+     "s": 130.574,
+     "e": 130.734
+    },
+    {
+     "w": "parla",
+     "s": 130.734,
+     "e": 131.234
+    }
+   ],
+   "match": 1.0,
+   "heard": "Chi parla?"
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 133.076,
+   "end": 136.476,
+   "dur": 3.4,
+   "file": "out/voice/lines/28.wav",
+   "tokens": [
+    {
+     "w": "in",
+     "s": 133.076,
+     "e": 133.196
+    },
+    {
+     "w": "trent",
+     "s": 133.196,
+     "e": 133.496
+    },
+    {
+     "w": "anni",
+     "s": 133.496,
+     "e": 133.896
+    },
+    {
+     "w": "tua",
+     "s": 133.896,
+     "e": 134.316
+    },
+    {
+     "w": "madre",
+     "s": 134.316,
+     "e": 134.616
+    },
+    {
+     "w": "non",
+     "s": 134.616,
+     "e": 134.836
+    },
+    {
+     "w": "ti",
+     "s": 134.836,
+     "e": 135.016
+    },
+    {
+     "w": "ha",
+     "s": 135.016,
+     "e": 135.056
+    },
+    {
+     "w": "mai",
+     "s": 135.056,
+     "e": 135.236
+    },
+    {
+     "w": "chiesto",
+     "s": 135.236,
+     "e": 135.736
+    },
+    {
+     "w": "chi",
+     "s": 135.736,
+     "e": 135.856
+    },
+    {
+     "w": "parla",
+     "s": 135.856,
+     "e": 136.336
+    }
+   ],
+   "match": 1.0,
+   "heard": "In trent 'anni, tua madre non ti ha mai chiesto chi parla."
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 136.816,
+   "end": 141.396,
+   "dur": 4.58,
+   "file": "out/voice/lines/29.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 136.816,
+     "e": 137.236
+    },
+    {
+     "w": "quattro",
+     "s": 137.236,
+     "e": 137.836
+    },
+    {
+     "w": "al",
+     "s": 138.236,
+     "e": 138.416
+    },
+    {
+     "w": "telefono",
+     "s": 138.416,
+     "e": 139.076
+    },
+    {
+     "w": "non",
+     "s": 139.356,
+     "e": 139.516
+    },
+    {
+     "w": "dire",
+     "s": 139.516,
+     "e": 139.836
+    },
+    {
+     "w": "mai",
+     "s": 139.836,
+     "e": 140.376
+    },
+    {
+     "w": "il",
+     "s": 140.376,
+     "e": 140.676
+    },
+    {
+     "w": "tuo",
+     "s": 140.676,
+     "e": 140.976
+    },
+    {
+     "w": "nome",
+     "s": 140.976,
+     "e": 141.136
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola quattro, al telefono, non dire mai il tuo nome."
+  },
+  {
+   "id": 30,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 141.736,
+   "end": 145.668,
+   "dur": 3.932,
+   "file": "out/voice/lines/30.wav",
+   "tokens": [
+    {
+     "w": "dimmi",
+     "s": 141.736,
+     "e": 142.136
+    },
+    {
+     "w": "come",
+     "s": 142.136,
+     "e": 142.296
+    },
+    {
+     "w": "ti",
+     "s": 142.296,
+     "e": 142.476
+    },
+    {
+     "w": "chiami",
+     "s": 142.476,
+     "e": 142.856
+    },
+    {
+     "w": "amore",
+     "s": 142.956,
+     "e": 143.256
+    },
+    {
+     "w": "cosi",
+     "s": 143.756,
+     "e": 144.036
+    },
+    {
+     "w": "sono",
+     "s": 144.036,
+     "e": 144.216
+    },
+    {
+     "w": "sicura",
+     "s": 144.216,
+     "e": 144.676
+    },
+    {
+     "w": "che",
+     "s": 144.676,
+     "e": 144.816
+    },
+    {
+     "w": "sei",
+     "s": 144.816,
+     "e": 145.016
+    },
+    {
+     "w": "tu",
+     "s": 145.016,
+     "e": 145.256
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dimmi come ti chiami, amore. Così sono sicura che sei tu."
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 146.008,
+   "end": 150.138,
+   "dur": 4.13,
+   "file": "out/voice/lines/31.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 146.008,
+     "e": 146.148
+    },
+    {
+     "w": "dici",
+     "s": 146.148,
+     "e": 146.508
+    },
+    {
+     "w": "niente",
+     "s": 146.508,
+     "e": 146.988
+    },
+    {
+     "w": "lei",
+     "s": 147.588,
+     "e": 147.748
+    },
+    {
+     "w": "aspetta",
+     "s": 147.748,
+     "e": 148.468
+    },
+    {
+     "w": "poi",
+     "s": 148.808,
+     "e": 149.188
+    },
+    {
+     "w": "riattacca",
+     "s": 149.188,
+     "e": 149.988
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non dici niente. Lei aspetta. Poi riattacca."
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 150.478,
+   "end": 154.048,
+   "dur": 3.57,
+   "file": "out/voice/lines/32.wav",
+   "tokens": [
+    {
+     "w": "sul",
+     "s": 150.478,
+     "e": 150.678
+    },
+    {
+     "w": "registro",
+     "s": 150.678,
+     "e": 151.398
+    },
+    {
+     "w": "chiamata",
+     "s": 151.658,
+     "e": 152.238
+    },
+    {
+     "w": "durata",
+     "s": 152.238,
+     "e": 152.838
+    },
+    {
+     "w": "zero",
+     "s": 152.838,
+     "e": 153.218
+    },
+    {
+     "w": "secondi",
+     "s": 153.218,
+     "e": 153.958
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sul registro, chiamata durata zero secondi."
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 155.248,
+   "end": 160.948,
+   "dur": 5.7,
+   "file": "out/voice/lines/33.wav",
+   "tokens": [
+    {
+     "w": "scrivi",
+     "s": 155.248,
+     "e": 155.668
+    },
+    {
+     "w": "a",
+     "s": 155.668,
+     "e": 155.768
+    },
+    {
+     "w": "tua",
+     "s": 155.768,
+     "e": 155.908
+    },
+    {
+     "w": "madre",
+     "s": 155.908,
+     "e": 156.268
+    },
+    {
+     "w": "mi",
+     "s": 156.648,
+     "e": 156.808
+    },
+    {
+     "w": "hai",
+     "s": 156.808,
+     "e": 156.908
+    },
+    {
+     "w": "chiamato",
+     "s": 156.908,
+     "e": 157.368
+    },
+    {
+     "w": "una",
+     "s": 157.788,
+     "e": 158.048
+    },
+    {
+     "w": "spunta",
+     "s": 158.048,
+     "e": 158.528
+    },
+    {
+     "w": "sola",
+     "s": 158.528,
+     "e": 158.848
+    },
+    {
+     "w": "il",
+     "s": 159.368,
+     "e": 159.468
+    },
+    {
+     "w": "suo",
+     "s": 159.468,
+     "e": 159.608
+    },
+    {
+     "w": "telefono",
+     "s": 159.608,
+     "e": 160.108
+    },
+    {
+     "w": "e",
+     "s": 160.108,
+     "e": 160.248
+    },
+    {
+     "w": "spento",
+     "s": 160.248,
+     "e": 160.868
+    }
+   ],
+   "match": 1.0,
+   "heard": "Scrivi a tua madre. Mi hai chiamato? Una spunta sola. Il suo telefono è spento."
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 161.288,
+   "end": 166.488,
+   "dur": 5.2,
+   "file": "out/voice/lines/34.wav",
+   "tokens": [
+    {
+     "w": "l",
+     "s": 161.288,
+     "e": 161.448
+    },
+    {
+     "w": "una",
+     "s": 161.448,
+     "e": 161.608
+    },
+    {
+     "w": "e",
+     "s": 161.608,
+     "e": 161.728
+    },
+    {
+     "w": "cinquanta",
+     "s": 161.728,
+     "e": 162.428
+    },
+    {
+     "w": "squilla",
+     "s": 162.908,
+     "e": 163.428
+    },
+    {
+     "w": "di",
+     "s": 163.428,
+     "e": 163.568
+    },
+    {
+     "w": "nuovo",
+     "s": 163.568,
+     "e": 163.848
+    },
+    {
+     "w": "numero",
+     "s": 164.448,
+     "e": 164.908
+    },
+    {
+     "w": "sconosciuto",
+     "s": 164.908,
+     "e": 165.688
+    }
+   ],
+   "match": 1.0,
+   "heard": "L 'una e cinquanta. Squilla di nuovo. Numero sconosciuto."
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 166.828,
+   "end": 171.078,
+   "dur": 4.25,
+   "file": "out/voice/lines/35.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 166.828,
+     "e": 167.268
+    },
+    {
+     "w": "cinque",
+     "s": 167.268,
+     "e": 167.808
+    },
+    {
+     "w": "quando",
+     "s": 168.228,
+     "e": 168.468
+    },
+    {
+     "w": "rispondi",
+     "s": 168.468,
+     "e": 169.368
+    },
+    {
+     "w": "non",
+     "s": 169.468,
+     "e": 169.708
+    },
+    {
+     "w": "parlare",
+     "s": 169.708,
+     "e": 170.348
+    },
+    {
+     "w": "per",
+     "s": 170.348,
+     "e": 170.508
+    },
+    {
+     "w": "primo",
+     "s": 170.508,
+     "e": 170.888
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola cinque, quando rispondi, non parlare per primo."
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 171.418,
+   "end": 176.568,
+   "dur": 5.15,
+   "file": "out/voice/lines/36.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 171.418,
+     "e": 171.558
+    },
+    {
+     "w": "quella",
+     "s": 171.558,
+     "e": 171.798
+    },
+    {
+     "w": "che",
+     "s": 171.798,
+     "e": 171.978
+    },
+    {
+     "w": "sbagliano",
+     "s": 171.978,
+     "e": 172.478
+    },
+    {
+     "w": "quasi",
+     "s": 172.478,
+     "e": 172.818
+    },
+    {
+     "w": "tutti",
+     "s": 172.818,
+     "e": 173.298
+    },
+    {
+     "w": "perche",
+     "s": 173.598,
+     "e": 174.038
+    },
+    {
+     "w": "pronto",
+     "s": 174.038,
+     "e": 174.598
+    },
+    {
+     "w": "lo",
+     "s": 174.598,
+     "e": 174.998
+    },
+    {
+     "w": "dici",
+     "s": 174.998,
+     "e": 175.338
+    },
+    {
+     "w": "senza",
+     "s": 175.338,
+     "e": 175.538
+    },
+    {
+     "w": "pensarci",
+     "s": 175.538,
+     "e": 176.418
+    }
+   ],
+   "match": 1.0,
+   "heard": "È quella che sbagliano quasi tutti. Perché pronto lo dici senza pensarci."
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 176.908,
+   "end": 179.178,
+   "dur": 2.27,
+   "file": "out/voice/lines/37.wav",
+   "tokens": [
+    {
+     "w": "rispondi",
+     "s": 176.908,
+     "e": 177.868
+    },
+    {
+     "w": "e",
+     "s": 177.908,
+     "e": 178.248
+    },
+    {
+     "w": "stai",
+     "s": 178.248,
+     "e": 178.508
+    },
+    {
+     "w": "zitto",
+     "s": 178.508,
+     "e": 178.988
+    }
+   ],
+   "match": 1.0,
+   "heard": "Rispondi. E stai zitto."
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 179.518,
+   "end": 184.208,
+   "dur": 4.69,
+   "file": "out/voice/lines/38.wav",
+   "tokens": [
+    {
+     "w": "dall",
+     "s": 179.518,
+     "e": 179.778
+    },
+    {
+     "w": "altra",
+     "s": 179.778,
+     "e": 179.978
+    },
+    {
+     "w": "parte",
+     "s": 179.978,
+     "e": 180.458
+    },
+    {
+     "w": "un",
+     "s": 180.798,
+     "e": 180.998
+    },
+    {
+     "w": "respiro",
+     "s": 180.998,
+     "e": 181.658
+    },
+    {
+     "w": "lento",
+     "s": 182.058,
+     "e": 182.658
+    },
+    {
+     "w": "uguale",
+     "s": 182.998,
+     "e": 183.598
+    },
+    {
+     "w": "al",
+     "s": 183.598,
+     "e": 183.698
+    },
+    {
+     "w": "tuo",
+     "s": 183.698,
+     "e": 184.098
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dall 'altra parte, un respiro. Lento. Uguale al tuo."
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 184.548,
+   "end": 186.738,
+   "dur": 2.19,
+   "file": "out/voice/lines/39.wav",
+   "tokens": [
+    {
+     "w": "dieci",
+     "s": 184.548,
+     "e": 184.888
+    },
+    {
+     "w": "secondi",
+     "s": 184.888,
+     "e": 185.768
+    },
+    {
+     "w": "venti",
+     "s": 185.968,
+     "e": 186.528
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dieci secondi. Venti."
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 187.078,
+   "end": 190.508,
+   "dur": 3.43,
+   "file": "out/voice/lines/40.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 187.078,
+     "e": 187.438
+    },
+    {
+     "w": "dall",
+     "s": 187.618,
+     "e": 187.878
+    },
+    {
+     "w": "altra",
+     "s": 187.878,
+     "e": 188.138
+    },
+    {
+     "w": "parte",
+     "s": 188.138,
+     "e": 188.598
+    },
+    {
+     "w": "qualcuno",
+     "s": 188.998,
+     "e": 189.458
+    },
+    {
+     "w": "parla",
+     "s": 189.458,
+     "e": 189.798
+    },
+    {
+     "w": "per",
+     "s": 189.798,
+     "e": 189.978
+    },
+    {
+     "w": "primo",
+     "s": 189.978,
+     "e": 190.278
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi, dall 'altra parte, qualcuno parla per primo."
+  },
+  {
+   "id": 41,
+   "who": "YOU",
+   "model": "eleven_v4",
+   "start": 190.848,
+   "end": 191.69,
+   "dur": 0.842,
+   "file": "out/voice/lines/41.wav",
+   "tokens": [
+    {
+     "w": "pronto",
+     "s": 190.848,
+     "e": 191.168
+    }
+   ],
+   "match": 1.0,
+   "heard": "Pronto?"
+  },
+  {
+   "id": 42,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 192.99,
+   "end": 197.14,
+   "dur": 4.15,
+   "file": "out/voice/lines/42.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 192.99,
+     "e": 193.07
+    },
+    {
+     "w": "la",
+     "s": 193.07,
+     "e": 193.19
+    },
+    {
+     "w": "tua",
+     "s": 193.19,
+     "e": 193.33
+    },
+    {
+     "w": "voce",
+     "s": 193.33,
+     "e": 193.79
+    },
+    {
+     "w": "quella",
+     "s": 194.09,
+     "e": 194.41
+    },
+    {
+     "w": "che",
+     "s": 194.41,
+     "e": 194.55
+    },
+    {
+     "w": "il",
+     "s": 194.55,
+     "e": 194.67
+    },
+    {
+     "w": "citofono",
+     "s": 194.67,
+     "e": 195.11
+    },
+    {
+     "w": "ti",
+     "s": 195.11,
+     "e": 195.27
+    },
+    {
+     "w": "ha",
+     "s": 195.27,
+     "e": 195.35
+    },
+    {
+     "w": "preso",
+     "s": 195.35,
+     "e": 195.83
+    },
+    {
+     "w": "la",
+     "s": 195.97,
+     "e": 196.07
+    },
+    {
+     "w": "settimana",
+     "s": 196.07,
+     "e": 196.45
+    },
+    {
+     "w": "scorsa",
+     "s": 196.45,
+     "e": 196.89
+    }
+   ],
+   "match": 1.0,
+   "heard": "È la tua voce. Quella che il citofono ti ha preso, la settimana scorsa."
+  },
+  {
+   "id": 43,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 197.48,
+   "end": 201.02,
+   "dur": 3.54,
+   "file": "out/voice/lines/43.wav",
+   "tokens": [
+    {
+     "w": "aspettava",
+     "s": 197.48,
+     "e": 198.04
+    },
+    {
+     "w": "solo",
+     "s": 198.04,
+     "e": 198.32
+    },
+    {
+     "w": "che",
+     "s": 198.32,
+     "e": 198.54
+    },
+    {
+     "w": "parlassi",
+     "s": 198.54,
+     "e": 199.12
+    },
+    {
+     "w": "tu",
+     "s": 199.12,
+     "e": 199.34
+    },
+    {
+     "w": "per",
+     "s": 199.48,
+     "e": 199.82
+    },
+    {
+     "w": "prendersi",
+     "s": 199.82,
+     "e": 200.38
+    },
+    {
+     "w": "il",
+     "s": 200.38,
+     "e": 200.46
+    },
+    {
+     "w": "resto",
+     "s": 200.46,
+     "e": 200.78
+    }
+   ],
+   "match": 1.0,
+   "heard": "Aspettava solo che parlassi tu. Per prendersi il resto."
+  },
+  {
+   "id": 44,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 201.36,
+   "end": 205.4,
+   "dur": 4.04,
+   "file": "out/voice/lines/44.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 201.36,
+     "e": 201.48
+    },
+    {
+     "w": "tocchi",
+     "s": 201.48,
+     "e": 201.8
+    },
+    {
+     "w": "la",
+     "s": 201.8,
+     "e": 201.94
+    },
+    {
+     "w": "gola",
+     "s": 201.94,
+     "e": 202.3
+    },
+    {
+     "w": "la",
+     "s": 202.78,
+     "e": 203.04
+    },
+    {
+     "w": "voce",
+     "s": 203.04,
+     "e": 203.4
+    },
+    {
+     "w": "c",
+     "s": 203.4,
+     "e": 203.68
+    },
+    {
+     "w": "e",
+     "s": 203.68,
+     "e": 203.8
+    },
+    {
+     "w": "ancora",
+     "s": 203.8,
+     "e": 204.22
+    },
+    {
+     "w": "per",
+     "s": 204.66,
+     "e": 204.94
+    },
+    {
+     "w": "ora",
+     "s": 204.94,
+     "e": 205.18
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti tocchi la gola. La voce c 'è ancora. Per ora."
+  },
+  {
+   "id": 45,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 205.74,
+   "end": 210.57,
+   "dur": 4.83,
+   "file": "out/voice/lines/45.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 205.74,
+     "e": 206.16
+    },
+    {
+     "w": "sei",
+     "s": 206.16,
+     "e": 206.5
+    },
+    {
+     "w": "non",
+     "s": 206.98,
+     "e": 207.22
+    },
+    {
+     "w": "richiamare",
+     "s": 207.22,
+     "e": 207.84
+    },
+    {
+     "w": "mai",
+     "s": 207.84,
+     "e": 208.22
+    },
+    {
+     "w": "un",
+     "s": 208.22,
+     "e": 208.7
+    },
+    {
+     "w": "numero",
+     "s": 208.7,
+     "e": 209.02
+    },
+    {
+     "w": "che",
+     "s": 209.02,
+     "e": 209.22
+    },
+    {
+     "w": "ti",
+     "s": 209.22,
+     "e": 209.36
+    },
+    {
+     "w": "ha",
+     "s": 209.36,
+     "e": 209.44
+    },
+    {
+     "w": "chiamato",
+     "s": 209.44,
+     "e": 209.84
+    },
+    {
+     "w": "di",
+     "s": 209.84,
+     "e": 210.0
+    },
+    {
+     "w": "notte",
+     "s": 210.0,
+     "e": 210.46
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola sei, non richiamare mai un numero che ti ha chiamato di notte."
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 210.91,
+   "end": 215.38,
+   "dur": 4.47,
+   "file": "out/voice/lines/46.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 210.91,
+     "e": 211.07
+    },
+    {
+     "w": "due",
+     "s": 211.07,
+     "e": 211.31
+    },
+    {
+     "w": "e",
+     "s": 211.31,
+     "e": 211.43
+    },
+    {
+     "w": "quaranta",
+     "s": 211.43,
+     "e": 212.03
+    },
+    {
+     "w": "undici",
+     "s": 212.25,
+     "e": 213.01
+    },
+    {
+     "w": "chiamate",
+     "s": 213.01,
+     "e": 213.41
+    },
+    {
+     "w": "perse",
+     "s": 213.41,
+     "e": 213.81
+    },
+    {
+     "w": "tutte",
+     "s": 214.29,
+     "e": 214.69
+    },
+    {
+     "w": "da",
+     "s": 214.69,
+     "e": 214.81
+    },
+    {
+     "w": "mamma",
+     "s": 214.81,
+     "e": 215.25
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le due e quaranta. Undici chiamate perse. Tutte da Mamma."
+  },
+  {
+   "id": 47,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 215.72,
+   "end": 221.74,
+   "dur": 6.02,
+   "file": "out/voice/lines/47.wav",
+   "tokens": [
+    {
+     "w": "l",
+     "s": 215.72,
+     "e": 215.86
+    },
+    {
+     "w": "ultima",
+     "s": 215.86,
+     "e": 216.28
+    },
+    {
+     "w": "e",
+     "s": 216.28,
+     "e": 216.46
+    },
+    {
+     "w": "delle",
+     "s": 216.46,
+     "e": 216.66
+    },
+    {
+     "w": "due",
+     "s": 216.66,
+     "e": 216.98
+    },
+    {
+     "w": "e",
+     "s": 216.98,
+     "e": 217.14
+    },
+    {
+     "w": "trentanove",
+     "s": 217.14,
+     "e": 217.84
+    },
+    {
+     "w": "durata",
+     "s": 218.3,
+     "e": 218.9
+    },
+    {
+     "w": "zero",
+     "s": 218.9,
+     "e": 219.44
+    },
+    {
+     "w": "secondi",
+     "s": 219.44,
+     "e": 220.46
+    },
+    {
+     "w": "come",
+     "s": 220.46,
+     "e": 220.82
+    },
+    {
+     "w": "quella",
+     "s": 220.82,
+     "e": 221.1
+    },
+    {
+     "w": "di",
+     "s": 221.1,
+     "e": 221.24
+    },
+    {
+     "w": "prima",
+     "s": 221.24,
+     "e": 221.48
+    }
+   ],
+   "match": 1.0,
+   "heard": "L 'ultima è delle due e trentanove. Durata zero secondi. Come quella di prima."
+  },
+  {
+   "id": 48,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 222.08,
+   "end": 224.36,
+   "dur": 2.28,
+   "file": "out/voice/lines/48.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 222.08,
+     "e": 222.2
+    },
+    {
+     "w": "pollice",
+     "s": 222.2,
+     "e": 222.72
+    },
+    {
+     "w": "e",
+     "s": 222.72,
+     "e": 223.02
+    },
+    {
+     "w": "gia",
+     "s": 223.02,
+     "e": 223.18
+    },
+    {
+     "w": "sul",
+     "s": 223.18,
+     "e": 223.4
+    },
+    {
+     "w": "tasto",
+     "s": 223.4,
+     "e": 223.8
+    },
+    {
+     "w": "verde",
+     "s": 223.8,
+     "e": 224.02
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il pollice è già sul tasto verde."
+  },
+  {
+   "id": 49,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 224.7,
+   "end": 229.04,
+   "dur": 4.34,
+   "file": "out/voice/lines/49.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 224.7,
+     "e": 224.86
+    },
+    {
+     "w": "richiami",
+     "s": 224.86,
+     "e": 225.4
+    },
+    {
+     "w": "ma",
+     "s": 225.76,
+     "e": 226.04
+    },
+    {
+     "w": "lo",
+     "s": 226.04,
+     "e": 226.14
+    },
+    {
+     "w": "schermo",
+     "s": 226.14,
+     "e": 226.54
+    },
+    {
+     "w": "cambia",
+     "s": 226.54,
+     "e": 226.96
+    },
+    {
+     "w": "da",
+     "s": 226.96,
+     "e": 227.06
+    },
+    {
+     "w": "solo",
+     "s": 227.06,
+     "e": 227.46
+    },
+    {
+     "w": "chiamata",
+     "s": 227.82,
+     "e": 228.26
+    },
+    {
+     "w": "in",
+     "s": 228.26,
+     "e": 228.4
+    },
+    {
+     "w": "corso",
+     "s": 228.4,
+     "e": 228.88
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non richiami, ma lo schermo cambia da solo, chiamata in corso."
+  },
+  {
+   "id": 50,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 229.38,
+   "end": 231.8,
+   "dur": 2.42,
+   "file": "out/voice/lines/50.wav",
+   "tokens": [
+    {
+     "w": "squilla",
+     "s": 229.38,
+     "e": 229.86
+    },
+    {
+     "w": "una",
+     "s": 229.86,
+     "e": 230.02
+    },
+    {
+     "w": "volta",
+     "s": 230.02,
+     "e": 230.42
+    },
+    {
+     "w": "due",
+     "s": 230.98,
+     "e": 231.54
+    }
+   ],
+   "match": 1.0,
+   "heard": "Squilla una volta. Due."
+  },
+  {
+   "id": 51,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 232.14,
+   "end": 234.9,
+   "dur": 2.76,
+   "file": "out/voice/lines/51.wav",
+   "tokens": [
+    {
+     "w": "spegni",
+     "s": 232.14,
+     "e": 232.56
+    },
+    {
+     "w": "il",
+     "s": 232.56,
+     "e": 232.64
+    },
+    {
+     "w": "telefono",
+     "s": 232.64,
+     "e": 233.2
+    },
+    {
+     "w": "prima",
+     "s": 233.2,
+     "e": 233.56
+    },
+    {
+     "w": "del",
+     "s": 233.56,
+     "e": 233.8
+    },
+    {
+     "w": "terzo",
+     "s": 233.8,
+     "e": 234.22
+    },
+    {
+     "w": "squillo",
+     "s": 234.22,
+     "e": 234.7
+    }
+   ],
+   "match": 1.0,
+   "heard": "Spegni il telefono prima del terzo squillo."
+  },
+  {
+   "id": 52,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 235.24,
+   "end": 240.54,
+   "dur": 5.3,
+   "file": "out/voice/lines/52.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 235.24,
+     "e": 235.38
+    },
+    {
+     "w": "telefono",
+     "s": 235.38,
+     "e": 235.86
+    },
+    {
+     "w": "e",
+     "s": 235.86,
+     "e": 235.98
+    },
+    {
+     "w": "spento",
+     "s": 235.98,
+     "e": 236.68
+    },
+    {
+     "w": "ma",
+     "s": 236.9,
+     "e": 237.16
+    },
+    {
+     "w": "sullo",
+     "s": 237.16,
+     "e": 237.44
+    },
+    {
+     "w": "schermo",
+     "s": 237.44,
+     "e": 237.8
+    },
+    {
+     "w": "nero",
+     "s": 237.8,
+     "e": 238.18
+    },
+    {
+     "w": "compare",
+     "s": 238.18,
+     "e": 238.68
+    },
+    {
+     "w": "una",
+     "s": 238.68,
+     "e": 238.92
+    },
+    {
+     "w": "parola",
+     "s": 238.92,
+     "e": 239.42
+    },
+    {
+     "w": "arrivo",
+     "s": 239.82,
+     "e": 240.4
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il telefono è spento, ma sullo schermo nero compare una parola, arrivo."
+  },
+  {
+   "id": 53,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 241.94,
+   "end": 243.7,
+   "dur": 1.76,
+   "file": "out/voice/lines/53.wav",
+   "tokens": [
+    {
+     "w": "le",
+     "s": 241.94,
+     "e": 242.1
+    },
+    {
+     "w": "due",
+     "s": 242.1,
+     "e": 242.38
+    },
+    {
+     "w": "e",
+     "s": 242.38,
+     "e": 242.64
+    },
+    {
+     "w": "cinquantanove",
+     "s": 242.64,
+     "e": 243.5
+    }
+   ],
+   "match": 1.0,
+   "heard": "Le due e cinquantanove."
+  },
+  {
+   "id": 54,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 244.04,
+   "end": 249.83,
+   "dur": 5.79,
+   "file": "out/voice/lines/54.wav",
+   "tokens": [
+    {
+     "w": "regola",
+     "s": 244.04,
+     "e": 244.48
+    },
+    {
+     "w": "sette",
+     "s": 244.48,
+     "e": 245.04
+    },
+    {
+     "w": "dopo",
+     "s": 245.44,
+     "e": 245.84
+    },
+    {
+     "w": "le",
+     "s": 245.84,
+     "e": 245.92
+    },
+    {
+     "w": "tre",
+     "s": 245.92,
+     "e": 246.2
+    },
+    {
+     "w": "non",
+     "s": 246.56,
+     "e": 246.68
+    },
+    {
+     "w": "rispondere",
+     "s": 246.68,
+     "e": 247.34
+    },
+    {
+     "w": "a",
+     "s": 247.34,
+     "e": 247.5
+    },
+    {
+     "w": "nessuno",
+     "s": 247.5,
+     "e": 248.1
+    },
+    {
+     "w": "neanche",
+     "s": 248.42,
+     "e": 248.92
+    },
+    {
+     "w": "a",
+     "s": 248.92,
+     "e": 249.02
+    },
+    {
+     "w": "chi",
+     "s": 249.02,
+     "e": 249.12
+    },
+    {
+     "w": "conosci",
+     "s": 249.12,
+     "e": 249.7
+    }
+   ],
+   "match": 1.0,
+   "heard": "Regola sette. Dopo le tre, non rispondere a nessuno. Neanche a chi conosci."
+  },
+  {
+   "id": 55,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 250.17,
+   "end": 253.98,
+   "dur": 3.81,
+   "file": "out/voice/lines/55.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 250.17,
+     "e": 250.31
+    },
+    {
+     "w": "regola",
+     "s": 250.31,
+     "e": 250.65
+    },
+    {
+     "w": "tre",
+     "s": 250.65,
+     "e": 250.93
+    },
+    {
+     "w": "dice",
+     "s": 250.93,
+     "e": 251.39
+    },
+    {
+     "w": "rispondi",
+     "s": 251.39,
+     "e": 252.47
+    },
+    {
+     "w": "sempre",
+     "s": 252.47,
+     "e": 252.93
+    },
+    {
+     "w": "a",
+     "s": 252.93,
+     "e": 253.27
+    },
+    {
+     "w": "tua",
+     "s": 253.27,
+     "e": 253.41
+    },
+    {
+     "w": "madre",
+     "s": 253.41,
+     "e": 253.67
+    }
+   ],
+   "match": 1.0,
+   "heard": "La regola tre dice rispondi sempre a tua madre."
+  },
+  {
+   "id": 56,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 254.32,
+   "end": 257.94,
+   "dur": 3.62,
+   "file": "out/voice/lines/56.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 254.32,
+     "e": 254.48
+    },
+    {
+     "w": "regola",
+     "s": 254.48,
+     "e": 254.78
+    },
+    {
+     "w": "sette",
+     "s": 254.78,
+     "e": 255.32
+    },
+    {
+     "w": "dice",
+     "s": 255.32,
+     "e": 255.64
+    },
+    {
+     "w": "dopo",
+     "s": 255.64,
+     "e": 256.32
+    },
+    {
+     "w": "le",
+     "s": 256.32,
+     "e": 256.5
+    },
+    {
+     "w": "tre",
+     "s": 256.5,
+     "e": 256.78
+    },
+    {
+     "w": "a",
+     "s": 257.12,
+     "e": 257.18
+    },
+    {
+     "w": "nessuno",
+     "s": 257.18,
+     "e": 257.76
+    }
+   ],
+   "match": 1.0,
+   "heard": "La regola sette dice dopo le tre, a nessuno."
+  },
+  {
+   "id": 57,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 258.28,
+   "end": 262.21,
+   "dur": 3.93,
+   "file": "out/voice/lines/57.wav",
+   "tokens": [
+    {
+     "w": "valgono",
+     "s": 258.28,
+     "e": 258.78
+    },
+    {
+     "w": "tutte",
+     "s": 258.78,
+     "e": 259.14
+    },
+    {
+     "w": "e",
+     "s": 259.14,
+     "e": 259.18
+    },
+    {
+     "w": "due",
+     "s": 259.18,
+     "e": 259.46
+    },
+    {
+     "w": "finche",
+     "s": 259.88,
+     "e": 260.38
+    },
+    {
+     "w": "tua",
+     "s": 260.38,
+     "e": 260.58
+    },
+    {
+     "w": "madre",
+     "s": 260.58,
+     "e": 260.86
+    },
+    {
+     "w": "non",
+     "s": 260.86,
+     "e": 261.06
+    },
+    {
+     "w": "chiama",
+     "s": 261.06,
+     "e": 261.44
+    },
+    {
+     "w": "dopo",
+     "s": 261.44,
+     "e": 261.66
+    },
+    {
+     "w": "le",
+     "s": 261.66,
+     "e": 261.84
+    },
+    {
+     "w": "tre",
+     "s": 261.84,
+     "e": 262.02
+    }
+   ],
+   "match": 1.0,
+   "heard": "Valgono tutte e due. Finché tua madre non chiama dopo le tre."
+  },
+  {
+   "id": 58,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 262.55,
+   "end": 263.8,
+   "dur": 1.25,
+   "file": "out/voice/lines/58.wav",
+   "tokens": [
+    {
+     "w": "tre",
+     "s": 262.55,
+     "e": 262.77
+    },
+    {
+     "w": "e",
+     "s": 262.77,
+     "e": 263.05
+    },
+    {
+     "w": "trentatre",
+     "s": 263.05,
+     "e": 263.65
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tre e trentatré."
+  },
+  {
+   "id": 59,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 264.14,
+   "end": 267.5,
+   "dur": 3.36,
+   "file": "out/voice/lines/59.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 264.14,
+     "e": 264.3
+    },
+    {
+     "w": "telefono",
+     "s": 264.3,
+     "e": 264.78
+    },
+    {
+     "w": "spento",
+     "s": 264.78,
+     "e": 265.38
+    },
+    {
+     "w": "si",
+     "s": 265.38,
+     "e": 265.58
+    },
+    {
+     "w": "riaccende",
+     "s": 265.58,
+     "e": 266.28
+    },
+    {
+     "w": "mamma",
+     "s": 266.74,
+     "e": 267.38
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il telefono spento si riaccende. Mamma."
+  },
+  {
+   "id": 60,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 267.84,
+   "end": 272.632,
+   "dur": 4.792,
+   "file": "out/voice/lines/60.wav",
+   "tokens": [
+    {
+     "w": "amore",
+     "s": 267.84,
+     "e": 268.28
+    },
+    {
+     "w": "sono",
+     "s": 268.52,
+     "e": 268.8
+    },
+    {
+     "w": "io",
+     "s": 268.8,
+     "e": 269.1
+    },
+    {
+     "w": "sono",
+     "s": 269.48,
+     "e": 269.74
+    },
+    {
+     "w": "qui",
+     "s": 269.74,
+     "e": 269.92
+    },
+    {
+     "w": "sotto",
+     "s": 269.92,
+     "e": 270.38
+    },
+    {
+     "w": "ho",
+     "s": 270.84,
+     "e": 270.94
+    },
+    {
+     "w": "preso",
+     "s": 270.94,
+     "e": 271.26
+    },
+    {
+     "w": "il",
+     "s": 271.26,
+     "e": 271.34
+    },
+    {
+     "w": "treno",
+     "s": 271.34,
+     "e": 271.6
+    },
+    {
+     "w": "di",
+     "s": 271.6,
+     "e": 271.76
+    },
+    {
+     "w": "notte",
+     "s": 271.76,
+     "e": 272.22
+    }
+   ],
+   "match": 1.0,
+   "heard": "Amore, sono io. Sono qui sotto. Ho preso il treno di notte."
+  },
+  {
+   "id": 61,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 272.972,
+   "end": 276.902,
+   "dur": 3.93,
+   "file": "out/voice/lines/61.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 272.972,
+     "e": 273.152
+    },
+    {
+     "w": "stessa",
+     "s": 273.152,
+     "e": 273.572
+    },
+    {
+     "w": "voce",
+     "s": 273.572,
+     "e": 273.932
+    },
+    {
+     "w": "del",
+     "s": 273.932,
+     "e": 274.092
+    },
+    {
+     "w": "vocale",
+     "s": 274.092,
+     "e": 274.532
+    },
+    {
+     "w": "delle",
+     "s": 274.532,
+     "e": 274.712
+    },
+    {
+     "w": "nove",
+     "s": 274.712,
+     "e": 274.972
+    },
+    {
+     "w": "e",
+     "s": 274.972,
+     "e": 275.152
+    },
+    {
+     "w": "mezza",
+     "s": 275.152,
+     "e": 275.612
+    },
+    {
+     "w": "identica",
+     "s": 276.252,
+     "e": 276.712
+    }
+   ],
+   "match": 1.0,
+   "heard": "La stessa voce del vocale delle nove e mezza. Identica."
+  },
+  {
+   "id": 62,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 277.242,
+   "end": 280.622,
+   "dur": 3.38,
+   "file": "out/voice/lines/62.wav",
+   "tokens": [
+    {
+     "w": "ma",
+     "s": 277.242,
+     "e": 277.382
+    },
+    {
+     "w": "da",
+     "s": 277.382,
+     "e": 277.502
+    },
+    {
+     "w": "casa",
+     "s": 277.502,
+     "e": 277.702
+    },
+    {
+     "w": "sua",
+     "s": 277.702,
+     "e": 278.082
+    },
+    {
+     "w": "di",
+     "s": 278.302,
+     "e": 278.522
+    },
+    {
+     "w": "notte",
+     "s": 278.522,
+     "e": 279.022
+    },
+    {
+     "w": "non",
+     "s": 279.242,
+     "e": 279.322
+    },
+    {
+     "w": "parte",
+     "s": 279.322,
+     "e": 279.622
+    },
+    {
+     "w": "nessun",
+     "s": 279.622,
+     "e": 280.082
+    },
+    {
+     "w": "treno",
+     "s": 280.082,
+     "e": 280.542
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ma da casa sua, di notte, non parte nessun treno."
+  },
+  {
+   "id": 63,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 280.962,
+   "end": 286.142,
+   "dur": 5.18,
+   "file": "out/voice/lines/63.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 280.962,
+     "e": 281.082
+    },
+    {
+     "w": "nella",
+     "s": 281.082,
+     "e": 281.262
+    },
+    {
+     "w": "chat",
+     "s": 281.262,
+     "e": 281.742
+    },
+    {
+     "w": "sotto",
+     "s": 281.962,
+     "e": 282.202
+    },
+    {
+     "w": "il",
+     "s": 282.202,
+     "e": 282.442
+    },
+    {
+     "w": "suo",
+     "s": 282.442,
+     "e": 282.542
+    },
+    {
+     "w": "nome",
+     "s": 282.542,
+     "e": 282.842
+    },
+    {
+     "w": "ultimo",
+     "s": 283.222,
+     "e": 283.722
+    },
+    {
+     "w": "accesso",
+     "s": 283.722,
+     "e": 284.362
+    },
+    {
+     "w": "ventuno",
+     "s": 284.562,
+     "e": 285.142
+    },
+    {
+     "w": "e",
+     "s": 285.142,
+     "e": 285.402
+    },
+    {
+     "w": "trentuno",
+     "s": 285.402,
+     "e": 285.962
+    }
+   ],
+   "match": 1.0,
+   "heard": "E nella chat, sotto il suo nome, ultimo accesso, ventuno e trentuno."
+  },
+  {
+   "id": 64,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 286.482,
+   "end": 291.822,
+   "dur": 5.34,
+   "file": "out/voice/lines/64.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 286.482,
+     "e": 286.582
+    },
+    {
+     "w": "affacci",
+     "s": 286.582,
+     "e": 286.942
+    },
+    {
+     "w": "alla",
+     "s": 286.942,
+     "e": 287.122
+    },
+    {
+     "w": "finestra",
+     "s": 287.122,
+     "e": 287.802
+    },
+    {
+     "w": "sotto",
+     "s": 288.122,
+     "e": 288.482
+    },
+    {
+     "w": "il",
+     "s": 288.482,
+     "e": 288.622
+    },
+    {
+     "w": "lampione",
+     "s": 288.622,
+     "e": 289.122
+    },
+    {
+     "w": "c",
+     "s": 289.122,
+     "e": 289.402
+    },
+    {
+     "w": "e",
+     "s": 289.402,
+     "e": 289.462
+    },
+    {
+     "w": "una",
+     "s": 289.462,
+     "e": 289.602
+    },
+    {
+     "w": "donna",
+     "s": 289.602,
+     "e": 290.162
+    },
+    {
+     "w": "con",
+     "s": 290.282,
+     "e": 290.482
+    },
+    {
+     "w": "il",
+     "s": 290.482,
+     "e": 290.622
+    },
+    {
+     "w": "telefono",
+     "s": 290.622,
+     "e": 291.062
+    },
+    {
+     "w": "all",
+     "s": 291.062,
+     "e": 291.202
+    },
+    {
+     "w": "orecchio",
+     "s": 291.202,
+     "e": 291.682
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti affacci alla finestra. Sotto il lampione c 'è una donna, con il telefono all 'orecchio."
+  },
+  {
+   "id": 65,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 292.162,
+   "end": 294.292,
+   "dur": 2.13,
+   "file": "out/voice/lines/65.wav",
+   "tokens": [
+    {
+     "w": "alza",
+     "s": 292.162,
+     "e": 292.522
+    },
+    {
+     "w": "la",
+     "s": 292.522,
+     "e": 292.642
+    },
+    {
+     "w": "mano",
+     "s": 292.642,
+     "e": 292.962
+    },
+    {
+     "w": "ti",
+     "s": 293.382,
+     "e": 293.662
+    },
+    {
+     "w": "saluta",
+     "s": 293.662,
+     "e": 294.102
+    }
+   ],
+   "match": 1.0,
+   "heard": "Alza la mano. Ti saluta."
+  },
+  {
+   "id": 66,
+   "who": "MAMMA",
+   "model": "eleven_v4",
+   "start": 295.592,
+   "end": 298.964,
+   "dur": 3.372,
+   "file": "out/voice/lines/66.wav",
+   "tokens": [
+    {
+     "w": "perche",
+     "s": 295.592,
+     "e": 295.832
+    },
+    {
+     "w": "non",
+     "s": 295.832,
+     "e": 296.052
+    },
+    {
+     "w": "parli",
+     "s": 296.052,
+     "e": 296.592
+    },
+    {
+     "w": "hai",
+     "s": 296.872,
+     "e": 297.052
+    },
+    {
+     "w": "paura",
+     "s": 297.052,
+     "e": 297.412
+    },
+    {
+     "w": "di",
+     "s": 297.412,
+     "e": 297.552
+    },
+    {
+     "w": "parlare",
+     "s": 297.552,
+     "e": 297.952
+    },
+    {
+     "w": "per",
+     "s": 297.952,
+     "e": 298.112
+    },
+    {
+     "w": "primo",
+     "s": 298.112,
+     "e": 298.452
+    }
+   ],
+   "match": 1.0,
+   "heard": "Perché non parli? Hai paura di parlare per primo?"
+  },
+  {
+   "id": 67,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 300.364,
+   "end": 302.414,
+   "dur": 2.05,
+   "file": "out/voice/lines/67.wav",
+   "tokens": [
+    {
+     "w": "fuori",
+     "s": 300.364,
+     "e": 300.784
+    },
+    {
+     "w": "il",
+     "s": 301.124,
+     "e": 301.244
+    },
+    {
+     "w": "citofono",
+     "s": 301.244,
+     "e": 301.784
+    },
+    {
+     "w": "suona",
+     "s": 301.784,
+     "e": 302.264
+    }
+   ],
+   "match": 1.0,
+   "heard": "Fuori, il citofono suona."
+  },
+  {
+   "id": 68,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 302.754,
+   "end": 307.174,
+   "dur": 4.42,
+   "file": "out/voice/lines/68.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 302.754,
+     "e": 302.934
+    },
+    {
+     "w": "telefono",
+     "s": 302.934,
+     "e": 303.434
+    },
+    {
+     "w": "vibra",
+     "s": 303.434,
+     "e": 303.994
+    },
+    {
+     "w": "il",
+     "s": 304.294,
+     "e": 304.574
+    },
+    {
+     "w": "citofono",
+     "s": 304.574,
+     "e": 305.194
+    },
+    {
+     "w": "suona",
+     "s": 305.194,
+     "e": 305.774
+    },
+    {
+     "w": "insieme",
+     "s": 306.234,
+     "e": 306.974
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il telefono vibra. Il citofono suona. Insieme."
+  },
+  {
+   "id": 69,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 307.514,
+   "end": 310.264,
+   "dur": 2.75,
+   "file": "out/voice/lines/69.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 307.514,
+     "e": 307.654
+    },
+    {
+     "w": "rispondi",
+     "s": 307.654,
+     "e": 308.454
+    },
+    {
+     "w": "infrangi",
+     "s": 308.634,
+     "e": 309.234
+    },
+    {
+     "w": "la",
+     "s": 309.234,
+     "e": 309.334
+    },
+    {
+     "w": "regola",
+     "s": 309.334,
+     "e": 309.654
+    },
+    {
+     "w": "sette",
+     "s": 309.654,
+     "e": 310.134
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se rispondi, infrangi la regola sette."
+  },
+  {
+   "id": 70,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 310.604,
+   "end": 315.274,
+   "dur": 4.67,
+   "file": "out/voice/lines/70.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 310.604,
+     "e": 310.764
+    },
+    {
+     "w": "non",
+     "s": 310.764,
+     "e": 310.924
+    },
+    {
+     "w": "rispondi",
+     "s": 310.924,
+     "e": 311.784
+    },
+    {
+     "w": "infrangi",
+     "s": 311.944,
+     "e": 312.464
+    },
+    {
+     "w": "la",
+     "s": 312.464,
+     "e": 312.564
+    },
+    {
+     "w": "tre",
+     "s": 312.564,
+     "e": 312.804
+    },
+    {
+     "w": "e",
+     "s": 313.484,
+     "e": 313.584
+    },
+    {
+     "w": "lei",
+     "s": 313.584,
+     "e": 313.884
+    },
+    {
+     "w": "e",
+     "s": 313.884,
+     "e": 314.164
+    },
+    {
+     "w": "gia",
+     "s": 314.164,
+     "e": 314.364
+    },
+    {
+     "w": "sotto",
+     "s": 314.364,
+     "e": 314.644
+    },
+    {
+     "w": "casa",
+     "s": 314.644,
+     "e": 315.004
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se non rispondi, infrangi la tre. E lei è già sotto casa."
+  },
+  {
+   "id": 71,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 315.614,
+   "end": 322.844,
+   "dur": 7.23,
+   "file": "out/voice/lines/71.wav",
+   "tokens": [
+    {
+     "w": "rispondi",
+     "s": 315.614,
+     "e": 316.134
+    },
+    {
+     "w": "a",
+     "s": 316.134,
+     "e": 316.174
+    },
+    {
+     "w": "tua",
+     "s": 316.174,
+     "e": 316.294
+    },
+    {
+     "w": "madre",
+     "s": 316.294,
+     "e": 316.654
+    },
+    {
+     "w": "e",
+     "s": 317.034,
+     "e": 317.114
+    },
+    {
+     "w": "infrangi",
+     "s": 317.114,
+     "e": 317.654
+    },
+    {
+     "w": "la",
+     "s": 317.654,
+     "e": 317.734
+    },
+    {
+     "w": "regola",
+     "s": 317.734,
+     "e": 318.014
+    },
+    {
+     "w": "sette",
+     "s": 318.014,
+     "e": 318.494
+    },
+    {
+     "w": "o",
+     "s": 318.954,
+     "e": 319.074
+    },
+    {
+     "w": "la",
+     "s": 319.074,
+     "e": 319.234
+    },
+    {
+     "w": "lasci",
+     "s": 319.234,
+     "e": 319.454
+    },
+    {
+     "w": "fuori",
+     "s": 319.454,
+     "e": 320.274
+    },
+    {
+     "w": "sapendo",
+     "s": 320.274,
+     "e": 320.894
+    },
+    {
+     "w": "che",
+     "s": 320.894,
+     "e": 321.054
+    },
+    {
+     "w": "forse",
+     "s": 321.054,
+     "e": 321.654
+    },
+    {
+     "w": "e",
+     "s": 321.654,
+     "e": 321.954
+    },
+    {
+     "w": "davvero",
+     "s": 321.954,
+     "e": 322.374
+    },
+    {
+     "w": "lei",
+     "s": 322.374,
+     "e": 322.574
+    }
+   ],
+   "match": 1.0,
+   "heard": "Rispondi a tua madre, e infrangi la regola sette? O la lasci fuori… sapendo che forse è davvero lei?"
+  },
+  {
+   "id": 72,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 323.444,
+   "end": 328.604,
+   "dur": 5.16,
+   "file": "out/voice/lines/72.wav",
+   "tokens": [
+    {
+     "w": "scrivilo",
+     "s": 323.444,
+     "e": 323.924
+    },
+    {
+     "w": "nei",
+     "s": 323.924,
+     "e": 324.084
+    },
+    {
+     "w": "commenti",
+     "s": 324.084,
+     "e": 325.044
+    },
+    {
+     "w": "e",
+     "s": 325.044,
+     "e": 325.284
+    },
+    {
+     "w": "iscriviti",
+     "s": 325.284,
+     "e": 325.904
+    },
+    {
+     "w": "la",
+     "s": 326.324,
+     "e": 326.444
+    },
+    {
+     "w": "notte",
+     "s": 326.444,
+     "e": 326.784
+    },
+    {
+     "w": "tre",
+     "s": 326.784,
+     "e": 327.024
+    },
+    {
+     "w": "e",
+     "s": 327.024,
+     "e": 327.444
+    },
+    {
+     "w": "gia",
+     "s": 327.444,
+     "e": 327.664
+    },
+    {
+     "w": "cominciata",
+     "s": 327.664,
+     "e": 328.404
+    }
+   ],
+   "match": 1.0,
+   "heard": "Scrivilo nei commenti. E iscriviti. La notte tre è già cominciata."
+  }
+ ]
+}
