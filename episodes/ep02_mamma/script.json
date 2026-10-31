@@ -1,0 +1,1739 @@
+{
+ "title": "Se Sul Telefono Compare \"Mamma\" Alle 03:33… NON RISPONDERE",
+ "title_alt": "Se Tua Madre Ti Chiama Alle 03:33… NON PARLARE PER PRIMO",
+ "case": "CASO 002 // VIA DEI GLICINI 9",
+ "night": "NOTTE 2",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore (stesso del Caso 001)"
+  },
+  "MAMMA": {
+   "role": "donna italiana sui 60 anni, calda; sempre filtrata come voce al telefono",
+   "fx": "phone"
+  },
+  "YOU": {
+   "role": "la tua voce al telefono (voce del narratore)",
+   "fx": "phone",
+   "same_as": "N"
+  }
+ },
+ "rules": [
+  "Di notte, il telefono sta a faccia in giù.",
+  "Se un messaggio comincia con «Ciao mamma», non rispondere. Cancella la chat, elimina il numero.",
+  "Rispondi sempre a tua madre. Al primo squillo.",
+  "Al telefono, non dire mai il tuo nome.",
+  "Quando rispondi, non parlare per primo.",
+  "Non richiamare mai un numero che ti ha chiamato di notte.",
+  "Dopo le 3, non rispondere a nessuno. Neanche a chi conosci."
+ ],
+ "conflict": [
+  3,
+  7
+ ],
+ "choice": {
+  "title": "COSA FAI?",
+  "a": "RISPONDI",
+  "a_sub": "infrangi la regola 7",
+  "b": "NON RISPONDERE",
+  "b_sub": "e se fosse davvero lei?",
+  "cta": "SCRIVILO NEI COMMENTI"
+ },
+ "end": {
+  "title": "ISCRIVITI",
+  "sub": "LA NOTTE 3 È GIÀ COMINCIATA"
+ },
+ "chapters": [
+  [
+   1,
+   "Le 03:33 (apertura)"
+  ],
+  [
+   4,
+   "Riassunto del Caso 001"
+  ],
+  [
+   6,
+   "Il nuovo biglietto"
+  ],
+  [
+   8,
+   "Regola 1 · Faccia in giù"
+  ],
+  [
+   15,
+   "Regola 2 · «Ciao mamma»"
+  ],
+  [
+   23,
+   "Regola 3 · Rispondi sempre"
+  ],
+  [
+   29,
+   "Regola 4 · Il tuo nome"
+  ],
+  [
+   34,
+   "Regola 5 · Chi parla per primo"
+  ],
+  [
+   45,
+   "Regola 6 · Non richiamare"
+  ],
+  [
+   53,
+   "Regola 7 · Dopo le 3"
+  ],
+  [
+   58,
+   "03:33"
+  ],
+  [
+   71,
+   "Il bivio"
+  ]
+ ],
+ "start_pad": 0.3,
+ "end_pad": 3.0,
+ "default_gap": 0.34,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "clock": "03:33",
+   "say": "Tre e trentatré. Sul telefono compare: Mamma.",
+   "cap": "03:33. Sul telefono compare: «MAMMA».",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "s": 1.45,
+      "a": "ring",
+      "g": "gold"
+     }
+    ],
+    "fx": "glitch@mamma",
+    "sfx": [
+     [
+      "vibrate",
+      "tre"
+     ],
+     [
+      "hit",
+      "mamma"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "MAMMA",
+   "say": "Amore… sei sveglio?",
+   "gap": 1.1,
+   "cap": "«Amore… sei sveglio?»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "active",
+      "s": 1.6,
+      "a": "zoom",
+      "g": "red"
+     },
+     {
+      "i": "waves",
+      "x": 0.42,
+      "y": -0.1,
+      "s": 0.6,
+      "col": "red"
+     }
+    ],
+    "fx": "glitch"
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Sette regole. La maggior parte sbaglia la quinta.",
+   "cap": "7 regole. La maggior parte sbaglia la quinta.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 5,
+      "at": "sette"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "quinta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Se ti sei perso il caso uno: via dei Glicini nove. Il citofono ha parlato con la tua voce.",
+   "cap": "Se ti sei perso il Caso 001: via dei Glicini 9. Il citofono ha parlato con la tua voce.",
+   "v": {
+    "els": [
+     {
+      "i": "building",
+      "lit": 4,
+      "x": -0.5,
+      "s": 1.0,
+      "a": "rise"
+     },
+     {
+      "i": "intercom",
+      "x": 0.05,
+      "s": 0.85,
+      "a": "pop",
+      "at": "citofono"
+     },
+     {
+      "i": "you",
+      "x": 0.55,
+      "s": 0.95,
+      "a": "pop",
+      "at": "voce"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Tua madre vive a seicento chilometri da qui. E a quest'ora dorme.",
+   "cap": "Tua madre vive a 600 km da qui. E a quest'ora dorme.",
+   "v": {
+    "els": [
+     {
+      "i": "map",
+      "s": 1.4,
+      "label": "600 KM",
+      "a": "draw"
+     },
+     {
+      "i": "mother",
+      "x": 0.62,
+      "y": -0.25,
+      "s": 0.55,
+      "g": "gold",
+      "at": "dorme"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "clock": "22:50",
+   "say": "Notte due. Sotto la porta trovi un biglietto. La calligrafia della signora Bruni.",
+   "cap": "Notte 2. Sotto la porta trovi un biglietto. La calligrafia della signora Bruni.",
+   "v": {
+    "els": [
+     {
+      "i": "door",
+      "x": -0.3,
+      "s": 1.2,
+      "gap": true
+     },
+     {
+      "i": "paper",
+      "x": -0.3,
+      "y": 0.66,
+      "s": 0.45,
+      "a": "slidein",
+      "at": "biglietto"
+     },
+     {
+      "i": "bruni",
+      "x": 0.45,
+      "s": 0.95,
+      "a": "pop",
+      "at": "bruni"
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "biglietto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "La stessa signora Bruni morta nel novantotto. Sette regole, tutte sul telefono.",
+   "cap": "La stessa signora Bruni morta nel '98. 7 regole, tutte sul telefono.",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "x": -0.3,
+      "s": 1.2,
+      "lines": 7,
+      "a": "write",
+      "at": "sette"
+     },
+     {
+      "i": "phone",
+      "x": 0.4,
+      "s": 1.0,
+      "a": "pop",
+      "at": "telefono",
+      "g": "gold"
+     },
+     {
+      "i": "frame",
+      "x": -0.3,
+      "s": 1.0,
+      "text": "1998",
+      "a": "pop",
+      "at": "morta",
+      "hide": "sette"
+     }
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "rule": 1,
+   "say": "Regola uno: di notte, il telefono sta a faccia in giù.",
+   "cap": "Regola 1. Di notte, il telefono sta a faccia in giù.",
+   "v": {
+    "t": "rule",
+    "n": 1
+   }
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "say": "Lo giri sul comodino. Spegni la luce.",
+   "cap": "Lo giri sul comodino. Spegni la luce.",
+   "v": {
+    "els": [
+     {
+      "i": "phone",
+      "x": 0,
+      "s": 1.3,
+      "flipto": "giri",
+      "g": "gold"
+     }
+    ],
+    "fx": "blackout@luce",
+    "sfx": [
+     [
+      "click",
+      "luce"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "Un minuto dopo, il soffitto si illumina di bianco.",
+   "cap": "Un minuto dopo, il soffitto si illumina di bianco.",
+   "v": {
+    "els": [
+     {
+      "i": "phoneback",
+      "x": 0,
+      "y": 0.35,
+      "s": 0.9,
+      "halo": "illumina"
+     }
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "Il telefono è a faccia in su.",
+   "gap": 1.3,
+   "cap": "Il telefono è a faccia in su.",
+   "v": {
+    "els": [
+     {
+      "i": "phone",
+      "x": 0,
+      "s": 1.5,
+      "a": "slam",
+      "g": "white"
+     }
+    ],
+    "fx": "glitch",
+    "sfx": [
+     [
+      "hit",
+      "telefono"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Sullo schermo, un vocale di tua madre. Delle ventuno e trenta.",
+   "cap": "Sullo schermo, un vocale di tua madre. Delle 21:30.",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "MAMMA",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:04",
+        "time": "21:30",
+        "at": "vocale"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "who": "MAMMA",
+   "say": "Buonanotte amore. Io vado a letto. Ci sentiamo domani.",
+   "cap": "«Buonanotte amore. Io vado a letto. Ci sentiamo domani.»",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "MAMMA",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:04",
+        "time": "21:30",
+        "play": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Voce stanca. Normale. Ricordatela, questa voce.",
+   "cap": "Voce stanca. Normale. Ricordatela, questa voce.",
+   "v": {
+    "els": [
+     {
+      "i": "mother",
+      "x": -0.2,
+      "s": 1.3,
+      "g": "gold",
+      "a": "pop"
+     },
+     {
+      "i": "waves",
+      "x": 0.35,
+      "s": 0.7,
+      "soft": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "clock": "23:40",
+   "say": "Ventitré e quaranta. Un messaggio da un numero sconosciuto.",
+   "cap": "23:40. Un messaggio da un numero sconosciuto.",
+   "v": {
+    "els": [
+     {
+      "i": "clock",
+      "text": "23:40",
+      "x": -0.45,
+      "a": "pop"
+     },
+     {
+      "i": "chat",
+      "x": 0.42,
+      "s": 1.15,
+      "head": "+39 ··· 14",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "…",
+        "at": "messaggio"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "messaggio"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "who": "N",
+   "say": "Ciao mamma, mi è caduto il telefono. Questo è il mio nuovo numero.",
+   "cap": "«Ciao mamma, mi è caduto il telefono. Questo è il mio nuovo numero.»",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "+39 ··· 14",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "Ciao mamma, mi è caduto il telefono."
+       },
+       {
+        "who": "them",
+        "text": "Questo è il mio nuovo numero.",
+        "at": "questo"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Il numero è identico al tuo. Tranne la fine: quattordici, invece di tredici.",
+   "cap": "Il numero è identico al tuo. Tranne la fine: 14, invece di 13.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "··· 13",
+      "y": -0.25,
+      "s": 1.1,
+      "a": "pop"
+     },
+     {
+      "i": "text",
+      "text": "··· 14",
+      "y": 0.3,
+      "s": 1.1,
+      "col": "red",
+      "a": "pop",
+      "at": "quattordici"
+     }
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "rule": 2,
+   "say": "Regola due: se un messaggio comincia con ciao mamma, non rispondere. Cancella la chat, elimina il numero.",
+   "cap": "Regola 2. Se un messaggio comincia con «Ciao mamma», non rispondere. Cancella la chat, elimina il numero.",
+   "v": {
+    "t": "rule",
+    "n": 2
+   }
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "È lo stesso consiglio della Polizia Postale. Per una volta, un consiglio vero.",
+   "cap": "È lo stesso consiglio della Polizia Postale. Per una volta, un consiglio vero.",
+   "v": {
+    "els": [
+     {
+      "i": "shield",
+      "y": -0.1,
+      "s": 1.1,
+      "a": "pop"
+     },
+     {
+      "i": "text",
+      "text": "POLIZIA POSTALE",
+      "y": 0.62,
+      "s": 0.45,
+      "at": "polizia"
+     }
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "say": "Cancelli la chat. Mentre elimini il numero, arriva un ultimo messaggio.",
+   "cap": "Cancelli la chat. Mentre elimini il numero, arriva un ultimo messaggio.",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "+39 ··· 14",
+      "wipe": "cancelli",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "Ciao mamma, mi è caduto il telefono."
+       },
+       {
+        "who": "them",
+        "text": "Questo è il mio nuovo numero."
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "cancelli"
+     ],
+     [
+      "vibrate",
+      "arriva"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "Perché mi cancelli, mamma?",
+   "gap": 1.4,
+   "cap": "«Perché mi cancelli, mamma?»",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "+39 ··· 14",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "Perché mi cancelli, mamma?",
+        "col": "red"
+       }
+      ]
+     }
+    ],
+    "fx": "glitch",
+    "sfx": [
+     [
+      "hit",
+      "perche"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "Un minuto dopo, quel numero ti chiama. Non rispondi. Lascia un vocale: dieci secondi di respiro.",
+   "cap": "Un minuto dopo, quel numero ti chiama. Non rispondi. Lascia un vocale: 10 secondi di respiro.",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "+39 ··· 14",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "Perché mi cancelli, mamma?",
+        "col": "red"
+       },
+       {
+        "who": "them",
+        "voice": "0:10",
+        "at": "vocale"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "chiama"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "rule": 3,
+   "say": "Regola tre: rispondi sempre a tua madre. Al primo squillo.",
+   "cap": "Regola 3. Rispondi sempre a tua madre. Al primo squillo.",
+   "v": {
+    "t": "rule",
+    "n": 3
+   }
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "say": "Sotto, a matita, la signora Bruni ha aggiunto: le madri chiamano di notte solo quando serve.",
+   "cap": "Sotto, a matita, la signora Bruni ha aggiunto: «Le madri chiamano di notte solo quando serve.»",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "x": -0.35,
+      "s": 1.1
+     },
+     {
+      "i": "quote",
+      "text": "SOLO QUANDO SERVE.",
+      "x": 0.25,
+      "y": 0.0,
+      "at": "solo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "clock": "00:30",
+   "say": "Mezzanotte e mezza. Il telefono squilla. Mamma.",
+   "cap": "00:30. Il telefono squilla. «MAMMA».",
+   "v": {
+    "els": [
+     {
+      "i": "clock",
+      "text": "00:30",
+      "x": -0.45,
+      "a": "pop"
+     },
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "x": 0.42,
+      "s": 1.1,
+      "a": "ring",
+      "at": "squilla"
+     }
+    ],
+    "sfx": [
+     [
+      "ringtone",
+      "squilla"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "Rispondi al primo squillo, come dice la regola. E dici: pronto?",
+   "cap": "Rispondi al primo squillo, come dice la regola. E dici: «Pronto?»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "accept": "rispondi",
+      "s": 1.45
+     }
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "who": "MAMMA",
+   "say": "Chi parla?",
+   "gap": 1.4,
+   "cap": "«Chi parla?»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "active",
+      "x": -0.3,
+      "s": 1.25
+     },
+     {
+      "i": "text",
+      "text": "CHI PARLA?",
+      "x": 0.42,
+      "s": 0.9,
+      "col": "red",
+      "a": "slam"
+     }
+    ],
+    "fx": "glitch",
+    "sfx": [
+     [
+      "hit",
+      "chi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "In trent'anni, tua madre non ti ha mai chiesto chi parla.",
+   "cap": "In trent'anni, tua madre non ti ha mai chiesto chi parla.",
+   "v": {
+    "els": [
+     {
+      "i": "mother",
+      "x": 0,
+      "s": 1.3,
+      "g": "gold"
+     },
+     {
+      "i": "slash",
+      "x": 0,
+      "s": 1.3,
+      "at": "mai"
+     }
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "rule": 4,
+   "say": "Regola quattro: al telefono, non dire mai il tuo nome.",
+   "cap": "Regola 4. Al telefono, non dire mai il tuo nome.",
+   "v": {
+    "t": "rule",
+    "n": 4
+   }
+  },
+  {
+   "id": 30,
+   "who": "MAMMA",
+   "say": "Dimmi come ti chiami, amore. Così sono sicura che sei tu.",
+   "cap": "«Dimmi come ti chiami, amore. Così sono sicura che sei tu.»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "active",
+      "s": 1.45,
+      "g": "red"
+     }
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "say": "Non dici niente. Lei aspetta. Poi riattacca.",
+   "cap": "Non dici niente. Lei aspetta. Poi riattacca.",
+   "v": {
+    "els": [
+     {
+      "i": "you",
+      "x": -0.35,
+      "s": 1.1
+     },
+     {
+      "i": "hand",
+      "x": -0.34,
+      "y": 0.02,
+      "s": 0.4,
+      "a": "rise"
+     },
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "active",
+      "end": "riattacca",
+      "x": 0.4,
+      "s": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "say": "Sul registro: chiamata durata zero secondi.",
+   "gap": 1.2,
+   "cap": "Sul registro: chiamata durata 0 secondi.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "00:00",
+      "s": 1.8,
+      "col": "red",
+      "a": "slam"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "zero"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "say": "Scrivi a tua madre: mi hai chiamato? Una spunta sola. Il suo telefono è spento.",
+   "cap": "Scrivi a tua madre: «Mi hai chiamato?» Una spunta sola. Il suo telefono è spento.",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "MAMMA",
+      "status": "ultimo accesso 21:31",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:04",
+        "time": "21:30"
+       },
+       {
+        "who": "me",
+        "text": "Mi hai chiamato?",
+        "tick": 1,
+        "at": "chiamato"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "clock": "01:50",
+   "say": "L'una e cinquanta. Squilla di nuovo. Numero sconosciuto.",
+   "cap": "01:50. Squilla di nuovo. Numero sconosciuto.",
+   "v": {
+    "els": [
+     {
+      "i": "clock",
+      "text": "01:50",
+      "x": -0.45,
+      "a": "pop"
+     },
+     {
+      "i": "call",
+      "name": "SCONOSCIUTO",
+      "mode": "in",
+      "x": 0.42,
+      "s": 1.1,
+      "a": "ring",
+      "at": "squilla"
+     }
+    ],
+    "sfx": [
+     [
+      "ringtone",
+      "squilla"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "rule": 5,
+   "say": "Regola cinque: quando rispondi, non parlare per primo.",
+   "cap": "Regola 5. Quando rispondi, non parlare per primo.",
+   "v": {
+    "t": "rule",
+    "n": 5
+   }
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "say": "È quella che sbagliano quasi tutti. Perché pronto lo dici senza pensarci.",
+   "cap": "È quella che sbagliano quasi tutti. Perché «pronto» lo dici senza pensarci.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "PRONTO?",
+      "s": 1.4,
+      "a": "pop"
+     },
+     {
+      "i": "slash",
+      "s": 1.3,
+      "at": "senza"
+     }
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "say": "Rispondi. E stai zitto.",
+   "cap": "Rispondi. E stai zitto.",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "SCONOSCIUTO",
+      "mode": "in",
+      "accept": "rispondi",
+      "x": -0.35,
+      "s": 1.1
+     },
+     {
+      "i": "you",
+      "x": 0.42,
+      "s": 1.0,
+      "at": "zitto"
+     },
+     {
+      "i": "hand",
+      "x": 0.43,
+      "y": 0.02,
+      "s": 0.38,
+      "a": "rise",
+      "at": "zitto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "say": "Dall'altra parte, un respiro. Lento. Uguale al tuo.",
+   "cap": "Dall'altra parte, un respiro. Lento. Uguale al tuo.",
+   "v": {
+    "els": [
+     {
+      "i": "ear",
+      "x": -0.3,
+      "s": 1.1
+     },
+     {
+      "i": "waves",
+      "x": 0.3,
+      "s": 0.8,
+      "soft": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "say": "Dieci secondi. Venti.",
+   "cap": "10 secondi. 20.",
+   "v": {
+    "els": [
+     {
+      "i": "timer",
+      "marks": [
+       [
+        "dieci",
+        "10"
+       ],
+       [
+        "venti",
+        "20"
+       ]
+      ],
+      "s": 1.6
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "dieci"
+     ],
+     [
+      "tick",
+      "venti"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "say": "Poi, dall'altra parte, qualcuno parla per primo.",
+   "cap": "Poi, dall'altra parte, qualcuno parla per primo.",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "SCONOSCIUTO",
+      "mode": "active",
+      "s": 1.45
+     }
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "who": "YOU",
+   "say": "Pronto?",
+   "gap": 1.3,
+   "cap": "«Pronto?»",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "PRONTO?",
+      "s": 1.6,
+      "col": "red",
+      "a": "slam"
+     }
+    ],
+    "fx": "shake",
+    "sfx": [
+     [
+      "hit",
+      "pronto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "who": "N",
+   "say": "È la tua voce. Quella che il citofono ti ha preso, la settimana scorsa.",
+   "cap": "È la tua voce. Quella che il citofono ti ha preso, la settimana scorsa.",
+   "v": {
+    "els": [
+     {
+      "i": "intercom",
+      "x": -0.4,
+      "s": 1.0
+     },
+     {
+      "i": "you",
+      "x": 0.4,
+      "s": 1.1,
+      "at": "voce"
+     }
+    ],
+    "fx": "glitch@citofono"
+   }
+  },
+  {
+   "id": 43,
+   "who": "N",
+   "say": "Aspettava solo che parlassi tu. Per prendersi il resto.",
+   "cap": "Aspettava solo che parlassi tu. Per prendersi il resto.",
+   "v": {
+    "els": [
+     {
+      "i": "you",
+      "x": 0,
+      "s": 1.4,
+      "fadeto": "resto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "who": "N",
+   "say": "Ti tocchi la gola. La voce c'è ancora. Per ora.",
+   "cap": "Ti tocchi la gola. La voce c'è ancora. Per ora.",
+   "v": {
+    "els": [
+     {
+      "i": "you",
+      "s": 1.3
+     },
+     {
+      "i": "hand",
+      "x": 0.02,
+      "y": 0.12,
+      "s": 0.4,
+      "a": "rise",
+      "at": "gola"
+     }
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "who": "N",
+   "rule": 6,
+   "say": "Regola sei: non richiamare mai un numero che ti ha chiamato di notte.",
+   "cap": "Regola 6. Non richiamare mai un numero che ti ha chiamato di notte.",
+   "v": {
+    "t": "rule",
+    "n": 6
+   }
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "clock": "02:40",
+   "say": "Le due e quaranta. Undici chiamate perse. Tutte da Mamma.",
+   "cap": "02:40. 11 chiamate perse. Tutte da «MAMMA».",
+   "v": {
+    "els": [
+     {
+      "i": "calllog",
+      "name": "MAMMA",
+      "n": 11,
+      "s": 1.45,
+      "at": "undici"
+     }
+    ]
+   }
+  },
+  {
+   "id": 47,
+   "who": "N",
+   "say": "L'ultima è delle due e trentanove. Durata: zero secondi. Come quella di prima.",
+   "cap": "L'ultima è delle 02:39. Durata: 0 secondi. Come quella di prima.",
+   "v": {
+    "els": [
+     {
+      "i": "calllog",
+      "name": "MAMMA",
+      "n": 11,
+      "s": 1.45,
+      "hot": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 48,
+   "who": "N",
+   "say": "Il pollice è già sul tasto verde.",
+   "cap": "Il pollice è già sul tasto verde.",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "missed",
+      "s": 1.45,
+      "thumb": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 49,
+   "who": "N",
+   "say": "Non richiami. Ma lo schermo cambia da solo: chiamata in corso.",
+   "cap": "Non richiami. Ma lo schermo cambia da solo: «Chiamata in corso…»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "out",
+      "s": 1.45,
+      "at": "cambia"
+     }
+    ],
+    "fx": "glitch@cambia"
+   }
+  },
+  {
+   "id": 50,
+   "who": "N",
+   "say": "Squilla una volta. Due.",
+   "cap": "Squilla una volta. Due.",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "out",
+      "x": -0.3,
+      "s": 1.2
+     },
+     {
+      "i": "count",
+      "marks": [
+       [
+        "una",
+        "1"
+       ],
+       [
+        "due",
+        "2"
+       ]
+      ],
+      "x": 0.5
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "una"
+     ],
+     [
+      "tick",
+      "due"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 51,
+   "who": "N",
+   "say": "Spegni il telefono prima del terzo squillo.",
+   "cap": "Spegni il telefono prima del terzo squillo.",
+   "v": {
+    "els": [
+     {
+      "i": "phone",
+      "s": 1.4,
+      "off": "spegni"
+     }
+    ],
+    "sfx": [
+     [
+      "off",
+      "spegni"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 52,
+   "who": "N",
+   "say": "Il telefono è spento. Ma sullo schermo nero compare una parola: arrivo.",
+   "gap": 1.4,
+   "cap": "Il telefono è spento. Ma sullo schermo nero compare una parola: «ARRIVO».",
+   "v": {
+    "els": [
+     {
+      "i": "phone",
+      "s": 1.5,
+      "off": true,
+      "word": "ARRIVO",
+      "wordat": "arrivo"
+     }
+    ],
+    "fx": "glitch@arrivo",
+    "sfx": [
+     [
+      "hit",
+      "arrivo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 53,
+   "who": "N",
+   "clock": "02:59",
+   "say": "Le due e cinquantanove.",
+   "cap": "02:59.",
+   "v": {
+    "els": [
+     {
+      "i": "clock",
+      "text": "02:59",
+      "a": "pop"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "due"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 54,
+   "who": "N",
+   "rule": 7,
+   "say": "Regola sette: dopo le tre, non rispondere a nessuno. Neanche a chi conosci.",
+   "cap": "Regola 7. Dopo le 3, non rispondere a nessuno. Neanche a chi conosci.",
+   "v": {
+    "t": "rule",
+    "n": 7
+   }
+  },
+  {
+   "id": 55,
+   "who": "N",
+   "say": "La regola tre dice: rispondi sempre a tua madre.",
+   "cap": "La regola 3 dice: rispondi sempre a tua madre.",
+   "v": {
+    "t": "clash",
+    "focus": 3
+   }
+  },
+  {
+   "id": 56,
+   "who": "N",
+   "say": "La regola sette dice: dopo le tre, a nessuno.",
+   "cap": "La regola 7 dice: dopo le 3, a nessuno.",
+   "v": {
+    "t": "clash",
+    "focus": 7
+   }
+  },
+  {
+   "id": 57,
+   "who": "N",
+   "say": "Valgono tutte e due. Finché tua madre non chiama dopo le tre.",
+   "cap": "Valgono tutte e due. Finché tua madre non chiama dopo le 3.",
+   "v": {
+    "t": "clash",
+    "focus": 0,
+    "crack": "chiama",
+    "center": "phone"
+   }
+  },
+  {
+   "id": 58,
+   "who": "N",
+   "clock": "03:33",
+   "say": "Tre e trentatré.",
+   "cap": "03:33.",
+   "v": {
+    "els": [
+     {
+      "i": "clock",
+      "text": "03:33",
+      "col": "red",
+      "a": "slam"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "tre"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 59,
+   "who": "N",
+   "say": "Il telefono spento si riaccende. Mamma.",
+   "cap": "Il telefono spento si riaccende. «MAMMA».",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "s": 1.45,
+      "a": "ring",
+      "g": "red",
+      "on": "riaccende"
+     }
+    ],
+    "fx": "glitch@riaccende",
+    "sfx": [
+     [
+      "ringtone",
+      "riaccende"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 60,
+   "who": "MAMMA",
+   "say": "Amore, sono io. Sono qui sotto. Ho preso il treno di notte.",
+   "cap": "«Amore, sono io. Sono qui sotto. Ho preso il treno di notte.»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "x": -0.35,
+      "s": 1.2,
+      "a": "ring",
+      "g": "red"
+     },
+     {
+      "i": "building",
+      "x": 0.45,
+      "s": 1.0,
+      "lit": 4,
+      "at": "sotto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 61,
+   "who": "N",
+   "say": "La stessa voce del vocale delle nove e mezza. Identica.",
+   "cap": "La stessa voce del vocale delle 21:30. Identica.",
+   "v": {
+    "els": [
+     {
+      "i": "waveform",
+      "y": -0.28,
+      "s": 1.2,
+      "label": "21:30"
+     },
+     {
+      "i": "waveform",
+      "y": 0.28,
+      "s": 1.2,
+      "label": "03:33",
+      "col": "red",
+      "at": "identica"
+     }
+    ]
+   }
+  },
+  {
+   "id": 62,
+   "who": "N",
+   "say": "Ma da casa sua, di notte, non parte nessun treno.",
+   "cap": "Ma da casa sua, di notte, non parte nessun treno.",
+   "v": {
+    "els": [
+     {
+      "i": "map",
+      "s": 1.3,
+      "label": "NESSUN TRENO",
+      "a": "draw"
+     },
+     {
+      "i": "slash",
+      "s": 1.2,
+      "at": "nessun"
+     }
+    ]
+   }
+  },
+  {
+   "id": 63,
+   "who": "N",
+   "say": "E nella chat, sotto il suo nome: ultimo accesso, ventuno e trentuno.",
+   "cap": "E nella chat, sotto il suo nome: «ultimo accesso 21:31».",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "s": 1.45,
+      "head": "MAMMA",
+      "status": "ultimo accesso 21:31",
+      "statusat": "ultimo",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:04",
+        "time": "21:30"
+       },
+       {
+        "who": "me",
+        "text": "Mi hai chiamato?",
+        "tick": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 64,
+   "who": "N",
+   "say": "Ti affacci alla finestra. Sotto il lampione c'è una donna, con il telefono all'orecchio.",
+   "cap": "Ti affacci alla finestra. Sotto il lampione c'è una donna, con il telefono all'orecchio.",
+   "v": {
+    "els": [
+     {
+      "i": "lamp",
+      "x": 0.15,
+      "s": 1.4,
+      "g": "gold"
+     },
+     {
+      "i": "mother",
+      "x": -0.05,
+      "y": 0.25,
+      "s": 0.7,
+      "a": "fade",
+      "at": "donna"
+     }
+    ]
+   }
+  },
+  {
+   "id": 65,
+   "who": "N",
+   "say": "Alza la mano. Ti saluta.",
+   "gap": 1.3,
+   "cap": "Alza la mano. Ti saluta.",
+   "v": {
+    "els": [
+     {
+      "i": "mother",
+      "s": 1.3,
+      "g": "red",
+      "a": "zoom"
+     },
+     {
+      "i": "hand",
+      "x": 0.32,
+      "y": -0.1,
+      "s": 0.5,
+      "a": "rise",
+      "at": "alza"
+     }
+    ],
+    "fx": "glitch@saluta",
+    "sfx": [
+     [
+      "hit",
+      "saluta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 66,
+   "who": "MAMMA",
+   "say": "Perché non parli? Hai paura di parlare per primo?",
+   "gap": 1.4,
+   "cap": "«Perché non parli? Hai paura di parlare per primo?»",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "active",
+      "s": 1.6,
+      "g": "red",
+      "a": "zoom"
+     }
+    ],
+    "fx": "glitch@paura",
+    "sfx": [
+     [
+      "hit",
+      "paura"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 67,
+   "who": "N",
+   "say": "Fuori, il citofono suona.",
+   "cap": "Fuori, il citofono suona.",
+   "v": {
+    "els": [
+     {
+      "i": "intercom",
+      "s": 1.3,
+      "a": "ring",
+      "at": "suona"
+     }
+    ],
+    "sfx": [
+     [
+      "buzz",
+      "suona"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 68,
+   "who": "N",
+   "say": "Il telefono vibra. Il citofono suona. Insieme.",
+   "cap": "Il telefono vibra. Il citofono suona. Insieme.",
+   "v": {
+    "els": [
+     {
+      "i": "call",
+      "name": "MAMMA",
+      "mode": "in",
+      "x": -0.38,
+      "s": 1.15,
+      "a": "ring",
+      "g": "red"
+     },
+     {
+      "i": "intercom",
+      "x": 0.4,
+      "s": 1.0,
+      "a": "ring",
+      "at": "citofono"
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "telefono"
+     ],
+     [
+      "buzz",
+      "citofono"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 69,
+   "who": "N",
+   "say": "Se rispondi, infrangi la regola sette.",
+   "cap": "Se rispondi, infrangi la regola 7.",
+   "v": {
+    "t": "clash",
+    "focus": 7,
+    "crack": "infrangi"
+   }
+  },
+  {
+   "id": 70,
+   "who": "N",
+   "say": "Se non rispondi, infrangi la tre. E lei è già sotto casa.",
+   "cap": "Se non rispondi, infrangi la 3. E lei è già sotto casa.",
+   "v": {
+    "t": "clash",
+    "focus": 3,
+    "crack": "infrangi"
+   }
+  },
+  {
+   "id": 71,
+   "who": "N",
+   "say": "Rispondi a tua madre, e infrangi la regola sette? O la lasci fuori… sapendo che forse è davvero lei?",
+   "gap": 0.6,
+   "cap": "Rispondi a tua madre, e infrangi la regola 7? O la lasci fuori… sapendo che forse è davvero lei?",
+   "v": {
+    "t": "choice"
+   }
+  },
+  {
+   "id": 72,
+   "who": "N",
+   "say": "Scrivilo nei commenti. E iscriviti: la notte tre è già cominciata.",
+   "cap": "Scrivilo nei commenti. E iscriviti: la notte 3 è già cominciata.",
+   "v": {
+    "t": "end"
+   }
+  }
+ ],
+ "speed_N": 1.0
+}

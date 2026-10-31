@@ -69,6 +69,8 @@ def main():
         for v in variants:
             tpl = ROOT / 'thumbs' / 'templates' / f"{v['template']}.html"
             src = build_html(tpl, v['text'], kit, fonts)
+            for old, new in v.get('art', {}).items():        # same template, different art from the kit
+                src = src.replace(f'/{old}.png', f'/{new}.png')
             check_kit(src, kit)
             page_file = out / f"_{v['id']}.html"
             page_file.write_text(src)

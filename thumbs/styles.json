@@ -68,6 +68,13 @@
           "you_scared"
         ],
         "prompt": "Head-and-shoulders bust of a round-headed white pictogram character with a red scarf, looking worried to the right, a sweat drop on the forehead, small black dot eyes, cropped at the bottom."
+      },
+      "mom_grin": {
+        "aspect_ratio": "3:4",
+        "refs": [
+          "double_grin"
+        ],
+        "prompt": "Head-and-shoulders bust of a different character in the same style: a round-headed white pictogram WOMAN, a mother around sixty, with long straight white hair falling past her shoulders (thick black outline), a thin red necklace, no scarf. She is an evil impostor pretending to be the viewer's mother: glowing red eyes, angry slanted black eyebrows, a very wide unnatural grin full of square white teeth. Holding nothing. Cropped at the bottom edge, facing the viewer."
       }
     }
   }

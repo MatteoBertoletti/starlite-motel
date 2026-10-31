@@ -227,6 +227,18 @@ export const ICONS = {
   },
 };
 
+ICONS.phoneback = (c, o) => {
+  if (o.haloK) { c.save(); c.shadowColor = 'rgba(242,239,232,0.95)'; c.shadowBlur = 140 * o.haloK; c.beginPath(); c.roundRect(-0.23, -0.45, 0.46, 0.9, 0.07); c.fillStyle = `rgba(242,239,232,${0.12 * o.haloK})`; c.fill(); c.restore(); }
+  c.beginPath(); c.roundRect(-0.23, -0.45, 0.46, 0.9, 0.07); c.fillStyle = C.w; c.fill();
+  c.beginPath(); c.roundRect(-0.18, -0.4, 0.17, 0.17, 0.04); c.fillStyle = C.bg; c.fill();
+  [[-0.135, -0.355], [-0.055, -0.355], [-0.095, -0.28]].forEach(([x, y]) => { c.beginPath(); c.arc(x, y, 0.025, 0, 7); c.fillStyle = '#3a3936'; c.fill(); });
+};
+ICONS.shield = (c, o) => {
+  c.beginPath(); c.moveTo(0, -0.42); c.lineTo(0.3, -0.3); c.lineTo(0.28, 0.05); c.quadraticCurveTo(0.22, 0.3, 0, 0.42); c.quadraticCurveTo(-0.22, 0.3, -0.28, 0.05); c.lineTo(-0.3, -0.3); c.closePath(); c.fillStyle = C.w; c.fill();
+  c.beginPath(); c.roundRect(-0.13, -0.08, 0.26, 0.17, 0.02); c.fillStyle = C.bg; c.fill();          // an envelope: it's about messages
+  c.beginPath(); c.moveTo(-0.13, -0.08); c.lineTo(0, 0.02); c.lineTo(0.13, -0.08); c.lineWidth = 0.02; c.strokeStyle = C.w; c.stroke();
+};
+
 // sound arcs around a ringing thing
 export function rings(c, ph, col) {
   for (let s of [-1, 1]) for (let i = 0; i < 2; i++) {

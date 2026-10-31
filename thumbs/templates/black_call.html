@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:900;src:url({{FONTS}}/montserrat/files/montserrat-latin-900-normal.woff2)}
+html,body{margin:0;background:#000}svg{display:block}
+text{font-family:M,'Montserrat',sans-serif;font-weight:900}
+.gw{filter:drop-shadow(0 0 16px rgba(255,255,255,.55))}
+.gr{filter:drop-shadow(0 0 18px rgba(255,40,50,.75))}
+.gg{filter:drop-shadow(0 0 22px rgba(39,168,92,.9))}
+</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs><filter id="noise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0"/></filter>
+<clipPath id="av"><circle cx="640" cy="372" r="74"/></clipPath></defs>
+<!-- Nero + telefono gigante con chiamata in arrivo, tagliato in basso. Testi: white, red, caller, number. Arte: mom_grin.png nell'avatar. -->
+<rect width="1280" height="720" fill="#000"/>
+<text data-fit="1150" x="640" y="122" text-anchor="middle" font-size="116" fill="#fff" class="gw">{{white}} <tspan fill="#F2202F">{{red}}</tspan></text>
+<g class="gw" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round">
+  <path d="M 404 330 Q 372 410 404 490"/><path d="M 360 296 Q 312 410 360 524"/>
+  <path d="M 876 330 Q 908 410 876 490"/><path d="M 920 296 Q 968 410 920 524"/>
+</g>
+<g transform="rotate(-4 640 470)">
+  <rect x="452" y="160" width="376" height="720" rx="58" fill="#F2F0E8" class="gw"/>
+  <rect x="470" y="178" width="340" height="690" rx="44" fill="#070708"/>
+  <rect x="598" y="190" width="84" height="16" rx="8" fill="#F2F0E8"/>
+  <text data-fit="250" x="640" y="276" text-anchor="middle" font-size="72" fill="#F2202F" class="gr">{{number}}</text>
+  <circle cx="640" cy="372" r="78" fill="#1a1a1c" stroke="#F2202F" stroke-width="6"/>
+  <image href="{{KIT}}/mom_grin.png" x="560" y="300" width="160" height="160" preserveAspectRatio="xMidYMin slice" clip-path="url(#av)"/>
+  <text data-fit="300" x="640" y="530" text-anchor="middle" font-size="76" fill="#fff" class="gw">{{caller}}</text>
+  <circle cx="560" cy="650" r="46" fill="#F2202F"/>
+  <circle cx="720" cy="650" r="46" fill="#27A85C" class="gg"/>
+</g>
+<rect width="1280" height="720" filter="url(#noise)"/>
+</svg></body></html>

@@ -1,0 +1,7 @@
+{
+  "variants": [
+    { "id": "1_nero_chiamata", "template": "black_call",    "text": { "white": "NON", "red": "RISPONDERE", "caller": "MAMMA", "number": "03:33" } },
+    { "id": "2_rosso_freccia", "template": "red_arrow",     "text": { "big": "NON", "small": "È LEI", "cam": "CHIAMATA · 03:33" }, "art": { "double_grin": "mom_grin" } },
+    { "id": "3_nero_telefono", "template": "black_phone",   "text": { "white": "NON PARLARE", "red": "PRIMA", "caller": "MAMMA" } }
+  ]
+}
