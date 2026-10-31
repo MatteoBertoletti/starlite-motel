@@ -8,9 +8,10 @@ rate = {}
 for L, T in zip(RS['lines'], RT['lines']): rate.setdefault(L['who'], []).append(T['dur'] / max(1, len(L['say'])))
 avg = lambda w: sum(rate.get(w, rate['N'])) / len(rate.get(w, rate['N']))
 cps_n = avg('N')
+speed = 0.95 / S.get('speed_N', 0.95)       # the reference episode was narrated at speed 0.95
 t = S['start_pad']; rows = []
 for L in S['lines']:
-    who = L['who']; d = len(L['say']) * (avg(who) if who in rate else cps_n * (1.15 if who == 'MAMMA' else 1.0)) + 0.25
+    who = L['who']; d = len(L['say']) * (avg(who) if who in rate else cps_n * (1.15 if who == 'MAMMA' else 1.0)) * (speed if who in ('N', 'YOU') else 1) + 0.25
     rows.append((L['id'], who, t, t + d)); t += d + L.get('gap', S['default_gap'])
 total = t - S['default_gap'] + S['end_pad']
 words = sum(len(L['say'].split()) for L in S['lines'])
