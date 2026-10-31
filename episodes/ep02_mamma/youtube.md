@@ -11,19 +11,19 @@ Caso 002 de «Le Sette Regole». Si guarda anche da solo; se vuoi l'inizio, il C
 
 👇 Tu cosa fai: rispondi a tua madre e infrangi la regola 7, o la lasci fuori sapendo che forse è davvero lei? Scrivilo nei commenti.
 
-CAPITOLI  (stimati: si aggiornano da soli dopo la narrazione)
+CAPITOLI
 0:00 Le 03:33 (apertura)
 0:11 Riassunto del Caso 001
-0:24 Il nuovo biglietto
-0:37 Regola 1 · Faccia in giù
-1:08 Regola 2 · «Ciao mamma»
-1:56 Regola 3 · Rispondi sempre
-2:25 Regola 4 · Il tuo nome
-2:51 Regola 5 · Chi parla per primo
-3:36 Regola 6 · Non richiamare
-4:14 Regola 7 · Dopo le 3
-4:36 03:33
-5:33 Il bivio
+0:23 Il nuovo biglietto
+0:36 Regola 1 · Faccia in giù
+1:04 Regola 2 · «Ciao mamma»
+1:48 Regola 3 · Rispondi sempre
+2:16 Regola 4 · Il tuo nome
+2:41 Regola 5 · Chi parla per primo
+3:25 Regola 6 · Non richiamare
+4:01 Regola 7 · Dopo le 3
+4:22 03:33
+5:15 Il bivio
 
 📌 Il fatto vero dietro la regola 2
 La regola sui messaggi «Ciao mamma» non è inventata. Da qualche anno circolano SMS e messaggi WhatsApp da numeri sconosciuti che cominciano con «Ciao mamma» o «Ciao papà» e fingono che il figlio abbia cambiato numero. La Polizia Postale consiglia di non rispondere, cancellare la conversazione ed eliminare il numero dalla rubrica.

@@ -139,7 +139,7 @@
       "i": "call",
       "name": "MAMMA",
       "mode": "active",
-      "s": 1.6,
+      "s": 1.42,
       "a": "zoom",
       "g": "red"
      },
@@ -1621,7 +1621,7 @@
       "i": "call",
       "name": "MAMMA",
       "mode": "active",
-      "s": 1.6,
+      "s": 1.42,
       "g": "red",
       "a": "zoom"
      }
