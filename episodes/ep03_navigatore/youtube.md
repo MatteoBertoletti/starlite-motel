@@ -9,18 +9,18 @@ Sono le 03:12. Il navigatore dell'auto a noleggio dice «Sei arrivato». Davanti
 Sul cruscotto c'è un foglio che prima non c'era: sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.
 Caso 003 de «Le Sette Regole».
 
-CAPITOLI  (stimati: si aggiornano da soli dopo la narrazione)
+CAPITOLI
 0:00 Sei arrivato
-0:12 Il foglio sul cruscotto
+0:13 Il foglio sul cruscotto
 0:36 Regola 1 · Il motore
 0:59 Regola 2 · Svolta a destra
-1:29 Regola 3 · Il passeggero
-1:58 Il fascicolo 318
-2:20 Regola 4 · Non scendere
-2:53 Regola 5 · Già parcheggiata
-3:24 Regola 6 · Non rispondere
-3:56 Regola 7 · Chi legge le regole
-4:28 Scendi o riparti?
+1:31 Regola 3 · Il passeggero
+2:00 Il fascicolo 318
+2:22 Regola 4 · Non scendere
+2:56 Regola 5 · Già parcheggiata
+3:26 Regola 6 · Non rispondere
+3:58 Regola 7 · Chi legge le regole
+4:32 Scendi o riparti?
 
 📌 Il fatto vero dietro la storia
 «La chiamo morte da GPS.» Così Charlie Callagan, coordinatore delle aree selvagge del Parco nazionale della Valle della Morte, in California, descriveva nel 2011 i visitatori che noleggiano un'auto col navigatore, non sanno come funziona e si fidano a farsi portare in mezzo al nulla.
