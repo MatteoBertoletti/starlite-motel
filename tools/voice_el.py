@@ -12,13 +12,14 @@ OUT = 'out/voice'; os.makedirs(f'{OUT}/lines', exist_ok=True); os.makedirs(CACHE
 S = json.load(open(f'{EP}/script.json')); V = json.load(open(VOICES))
 KEY = os.environ['ELEVENLABS_API_KEY'].strip(); SR = 48000
 MODELS = [V.get('model', 'eleven_v4'), 'eleven_multilingual_v2']
-missing = sorted({L['who'] for L in S['lines'] if L['who'] != 'YOU'} - set(V['ids']))
+missing = sorted({S['voices'].get(L['who'], {}).get('same_as', L['who']) for L in S['lines'] if L['who'] != 'YOU'} - set(V['ids']))
 if missing: sys.exit(f'voices/it.json has no voice for {missing}: run the prep workflow with cast=true first')
 SETTINGS = {'N': dict(stability=0.55, similarity_boost=0.85, style=0.3, use_speaker_boost=True, speed=0.95),
             'ADMIN': dict(stability=0.5, similarity_boost=0.8, style=0.2, use_speaker_boost=True, speed=0.95),
             'BRUNI': dict(stability=0.45, similarity_boost=0.8, style=0.35, use_speaker_boost=True, speed=0.9),
             'YOU': dict(stability=0.4, similarity_boost=0.85, style=0.45, use_speaker_boost=True, speed=1.0),
-            'MAMMA': dict(stability=0.5, similarity_boost=0.85, style=0.35, use_speaker_boost=True, speed=0.95)}
+            'MAMMA': dict(stability=0.5, similarity_boost=0.85, style=0.35, use_speaker_boost=True, speed=0.95),
+            'NAV': dict(stability=0.9, similarity_boost=0.85, style=0.0, use_speaker_boost=True, speed=0.95)}
 if 'speed_N' in S: SETTINGS['N']['speed'] = S['speed_N']
 
 def tts(text, vid, who, prev, nxt):
@@ -85,20 +86,22 @@ def align(toks, heard):
             times[i] = (a, b)
     return times, sum(x is not None for x in [times[i] for i in known]) / max(1, len(toks))
 
-FX = {'phone': 'highpass=f=320,lowpass=f=3400,acompressor=threshold=0.12:ratio=5,aecho=0.5:0.3:12:0.15,volume=1.5',
+FX = {'nav': 'highpass=f=240,lowpass=f=5200,acompressor=threshold=0.15:ratio=4,aecho=0.6:0.35:9|17:0.22|0.12,volume=1.4',  # car speakers
+      'phone': 'highpass=f=320,lowpass=f=3400,acompressor=threshold=0.12:ratio=5,aecho=0.5:0.3:12:0.15,volume=1.5',
       'door': 'highpass=f=110,lowpass=f=1000,aecho=0.8:0.55:38|61:0.3|0.2,volume=1.9',
       'intercom': 'highpass=f=380,lowpass=f=3100,acrusher=bits=10:mix=0.25,aecho=0.6:0.4:18:0.2,volume=1.6'}
 
 lines = S['lines']; tl, t, rep, used, cached = [], S['start_pad'], [], 0, 0
 for i, L in enumerate(lines):
-    who = L['who']; role = S['voices'].get(who, {}); vid = V['ids'][role.get('same_as', who) if who == 'YOU' else who]
+    who = L['who']; role = S['voices'].get(who, {}); vid = V['ids'][role.get('same_as', who)]
     prev = ' '.join(x['say'] for x in lines[max(0, i - 2):i] if x['who'] == who)[-400:] or None
     nxt = ' '.join(x['say'] for x in lines[i + 1:i + 2] if x['who'] == who)[:300] or None
     fn, model, hit = tts(L['say'], vid, who, prev, nxt); cached += hit; used += 0 if hit else len(L['say'])
     clean = f"{OUT}/lines/{L['id']:02d}_clean.wav"; ff(['-i', fn, '-ar', str(SR), '-ac', '1', clean])
     y, _ = sf.read(clean, dtype='float32'); y = trim(y); sf.write(clean, y, SR)
     final = f"{OUT}/lines/{L['id']:02d}.wav"
-    if role.get('fx'): ff(['-i', clean, '-af', FX[role['fx']] + ',apad=pad_dur=0.25', final])
+    fx = L.get('fx', role.get('fx'))              # a line can override its speaker's filter
+    if fx: ff(['-i', clean, '-af', FX[fx] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     toks = norm(L['say']); hw = heard_words(clean, L['say']); tt, score = align(toks, hw)
     if score < 0.5:        # transcript unusable (whisper can hallucinate on short lines): spread the words over the voiced part

@@ -8,12 +8,18 @@ rate = {}
 for L, T in zip(RS['lines'], RT['lines']): rate.setdefault(L['who'], []).append(T['dur'] / max(1, len(L['say'])))
 avg = lambda w: sum(rate.get(w, rate['N'])) / len(rate.get(w, rate['N']))
 cps_n = avg('N')
-speed = 0.95 / S.get('speed_N', 0.95)       # the reference episode was narrated at speed 0.95
-t = S['start_pad']; rows = []
-for L in S['lines']:
-    who = L['who']; d = len(L['say']) * (avg(who) if who in rate else cps_n * (1.15 if who == 'MAMMA' else 1.0)) * (speed if who in ('N', 'YOU') else 1) + 0.25
-    rows.append((L['id'], who, t, t + d)); t += d + L.get('gap', S['default_gap'])
-total = t - S['default_gap'] + S['end_pad']
+speed = RS.get('speed_N', 0.95) / S.get('speed_N', 0.95)   # narrator speed relative to the reference episode
+def timeline(S, speed):
+    t = S['start_pad']; rows = []
+    for L in S['lines']:
+        who = L['who']; d = len(L['say']) * (avg(who) if who in rate else cps_n * (1.15 if who == 'MAMMA' else 1.0)) * (speed if who in ('N', 'YOU', 'NAV') else 1) + 0.25
+        rows.append((L['id'], who, t, t + d)); t += d + L.get('gap', S['default_gap'])
+    return rows, t - S['default_gap'] + S['end_pad']
+_, ref_est = timeline(RS, 1.0); K = RT['duration'] / ref_est          # calibrate: the reference must reproduce its real length
+rows, total = timeline(S, speed); rows = [(i, w, a * K, b * K) for i, w, a, b in rows]; total *= K
+if False:
+  for L in S['lines']:
+    pass
 words = sum(len(L['say'].split()) for L in S['lines'])
 fmt = lambda s: f'{int(s // 60)}:{int(s % 60):02d}'
 print(f'lines {len(rows)}  words {words}  chars {sum(len(L["say"]) for L in S["lines"])}  est. duration {fmt(total)} ({total:.0f}s)  wpm {words / (total / 60):.0f}')

@@ -47,6 +47,7 @@ export const ICONS = {
     c.save(); c.rotate(-0.04);
     rr(c, -0.32, -0.42, 0.64, 0.84, 0.03); W(c);
     if (o.back) { c.scale(-1, 1); T(c, '7.', -0.22, -0.2, 0.12, '900', C.red, 'left', 'alphabetic'); for (let i = 0; i < 3; i++) { c.beginPath(); c.moveTo(-0.22, -0.08 + i * 0.09); c.lineTo(0.2 - i * 0.06, -0.08 + i * 0.09); S(c, 0.02, C.bg); } c.restore(); return; }
+    c.save(); c.globalAlpha *= 1 - (o.blankK || 0);
     T(c, 'REGOLE', -0.25, -0.3, 0.075, '900', C.bg, 'left', 'alphabetic');
     const n = o.lines ?? 7, wk = o.write ?? 1;
     for (let i = 0; i < n; i++) {
@@ -56,7 +57,7 @@ export const ICONS = {
       T(c, String(i + 1), -0.29, y + 0.017, 0.05, '800', C.bg, 'left', 'alphabetic');
     }
     if (n === 7 && wk >= 1) { c.beginPath(); c.moveTo(-0.25, 0.4 - 0.05); c.lineTo(0.2, 0.35); S(c, 0.012, C.red); c.beginPath(); c.moveTo(-0.25, 0.38); c.lineTo(0.2, 0.375); S(c, 0.012, C.red); }
-    c.restore();
+    c.restore(); c.restore();
   },
   bruni(c, o) {
     circ(c, 0, -0.39, 0.075); W(c, o.col);                    // bun
@@ -245,3 +246,47 @@ export function rings(c, ph, col) {
     const a = (ph + i * 0.5) % 1; c.save(); c.globalAlpha *= 1 - a; c.beginPath(); c.arc(0, 0, 0.42 + a * 0.25, s > 0 ? -0.5 : Math.PI - 0.5, s > 0 ? 0.5 : Math.PI + 0.5); S(c, 0.03, col); c.restore();
   }
 }
+
+// ---- Caso 003: the car ----
+ICONS.car = (c, o) => {                                   // side view, nose to the right
+  const col = o.col || C.w;
+  if (o.lights) { c.save(); const g = c.createLinearGradient(0.42, 0, 0.95, 0); g.addColorStop(0, 'rgba(245,196,81,0.55)'); g.addColorStop(1, 'rgba(245,196,81,0)');
+    c.beginPath(); c.moveTo(0.42, 0.02); c.lineTo(0.95, -0.12); c.lineTo(0.95, 0.2); c.closePath(); c.fillStyle = g; c.fill(); c.restore(); }
+  c.beginPath(); c.moveTo(-0.46, 0.14); c.lineTo(-0.46, -0.02); c.quadraticCurveTo(-0.44, -0.07, -0.36, -0.08); c.lineTo(-0.22, -0.09);
+  c.lineTo(-0.1, -0.22); c.quadraticCurveTo(-0.07, -0.24, 0.0, -0.24); c.lineTo(0.14, -0.24); c.quadraticCurveTo(0.19, -0.24, 0.22, -0.2); c.lineTo(0.3, -0.09);
+  c.lineTo(0.4, -0.07); c.quadraticCurveTo(0.46, -0.05, 0.46, 0.02); c.lineTo(0.46, 0.14); c.closePath(); W(c, col);
+  rr(c, -0.17, -0.19, 0.15, 0.09, 0.02); B(c); rr(c, 0.0, -0.19, 0.17, 0.09, 0.02); B(c);                  // windows
+  c.beginPath(); c.moveTo(0.4, -0.02); c.lineTo(0.46, -0.02); S(c, 0.03, C.gold);                            // headlight
+  for (const x of [-0.27, 0.27]) { circ(c, x, 0.15, 0.09); B(c); circ(c, x, 0.15, 0.05); W(c, col); }
+  if (o.openK) { c.save(); c.translate(-0.02, -0.09); c.transform(1 - 0.55 * o.openK, -0.25 * o.openK, 0, 1, 0, 0);
+    rr(c, 0, 0, 0.2, 0.22, 0.02); c.fillStyle = col; c.fill(); S(c, 0.012, C.bg); rr(c, 0.02, 0.02, 0.16, 0.08, 0.015); B(c); c.restore();
+    rr(c, -0.02, -0.09, 0.2, 0.22, 0.01); c.fillStyle = 'rgba(245,196,81,0.35)'; c.fill(); }
+};
+ICONS.gauge = (c, o) => {
+  c.beginPath(); c.arc(0, 0.12, 0.4, Math.PI, 0); S(c, 0.035);
+  for (let i = 0; i <= 4; i++) { const a = Math.PI + i * Math.PI / 4; c.beginPath(); c.moveTo(Math.cos(a) * 0.33, 0.12 + Math.sin(a) * 0.33); c.lineTo(Math.cos(a) * 0.4, 0.12 + Math.sin(a) * 0.4); S(c, 0.025, i === 0 ? C.red : C.w); }
+  T(c, 'E', -0.42, 0.26, 0.1, '900', C.red); T(c, 'F', 0.42, 0.26, 0.1, '900', C.w);
+  const a = Math.PI + (o.v ?? 0.5) * Math.PI; c.beginPath(); c.moveTo(0, 0.12); c.lineTo(Math.cos(a) * 0.32, 0.12 + Math.sin(a) * 0.32); S(c, 0.03, C.red);
+  circ(c, 0, 0.12, 0.04); W(c);
+  c.save(); c.translate(0, -0.08); rr(c, -0.05, -0.06, 0.08, 0.1, 0.01); W(c); rr(c, 0.03, -0.04, 0.03, 0.02, 0.005); W(c); c.restore();   // pump
+};
+ICONS.mirror = (c, o) => {
+  rr(c, -0.04, -0.46, 0.08, 0.14, 0.02); W(c);
+  rr(c, -0.46, -0.33, 0.92, 0.42, 0.12); W(c); rr(c, -0.42, -0.29, 0.84, 0.34, 0.09); c.fillStyle = '#0b0b0d'; c.fill();
+  c.save(); rr(c, -0.42, -0.29, 0.84, 0.34, 0.09); c.clip();
+  for (const x of [-0.2, 0.2]) { rr(c, x - 0.09, -0.12, 0.18, 0.14, 0.04); c.fillStyle = '#26241f'; c.fill(); rr(c, x - 0.015, 0.02, 0.03, 0.05, 0); c.fill(); }   // rear headrests
+  if (o.ghostK) { c.globalAlpha *= o.ghostK; c.translate(0.2, -0.02); c.scale(0.36, 0.36); circ(c, 0, -0.2, 0.16); c.fillStyle = '#000'; c.fill(); S(c, 0.03, C.dim);
+    c.beginPath(); c.moveTo(-0.34, 0.46); c.bezierCurveTo(-0.34, 0.08, -0.2, 0.0, 0, 0.0); c.bezierCurveTo(0.2, 0.0, 0.34, 0.08, 0.34, 0.46); c.closePath(); c.fillStyle = '#000'; c.fill(); S(c, 0.03, C.dim);
+    c.fillStyle = C.red; circ(c, -0.055, -0.21, 0.025); c.fill(); circ(c, 0.055, -0.21, 0.025); c.fill(); }
+  c.restore();
+};
+ICONS.wheel = (c, o) => {
+  circ(c, 0, 0, 0.42); S(c, 0.07); circ(c, 0, 0.02, 0.1); W(c);
+  c.beginPath(); c.moveTo(-0.39, 0.06); c.lineTo(-0.1, 0.04); c.moveTo(0.39, 0.06); c.lineTo(0.1, 0.04); c.moveTo(0, 0.12); c.lineTo(0, 0.4); S(c, 0.06);
+  for (const s of [-1, 1]) { c.save(); c.translate(s * 0.4, -0.12); rr(c, -0.07, -0.08, 0.14, 0.18, 0.05); W(c, '#d9d5cc'); c.restore(); }   // knuckles
+};
+ICONS.padlock = (c, o) => {
+  const k = o.openK || 0; c.save(); c.translate(0.13 * k, -0.12 * k);
+  c.beginPath(); c.arc(0, -0.1, 0.17, Math.PI, 0); c.moveTo(-0.17, -0.1); c.lineTo(-0.17, 0.02); c.moveTo(0.17, -0.1); c.lineTo(0.17, 0.02 - 0.08 * k); S(c, 0.07); c.restore();
+  rr(c, -0.27, -0.02, 0.54, 0.42, 0.06); W(c); circ(c, 0, 0.15, 0.05); B(c); rr(c, -0.02, 0.15, 0.04, 0.12, 0.01); B(c);
+};

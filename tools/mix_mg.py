@@ -47,7 +47,7 @@ while len(loop) < N + SR:
 bed = loop[:N]; bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: 60 * SR])) / 20)
 g = np.ones(N, np.float32); g[: int(1.5 * SR)] = np.linspace(0, 1, int(1.5 * SR))
 lines = {l['id']: l for l in E['lines']}
-for lid in (79, 85):                                  # dip before the big moments
+for lid in (E.get('dips') if E.get('dips') is not None else (79, 85)):   # dip before the big moments
     if lid in lines: c = lines[lid]['cut']; a, b = int((c - 0.8) * SR), int(c * SR); g[a:b] = np.linspace(1, 0.15, b - a); g[b:b + int(0.6 * SR)] = np.linspace(0.15, 1.25, int(0.6 * SR)); g[b + int(0.6 * SR):] *= 1.25
 g[int((D - 2.5) * SR):] *= np.linspace(1, 0, N - int((D - 2.5) * SR))
 mix = (V + FX + bed * g)[: int(D * SR)]

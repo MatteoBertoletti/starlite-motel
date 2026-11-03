@@ -1,0 +1,1362 @@
+{
+ "title": "Se Il Navigatore Dice \"Sei Arrivato\"… NON SCENDERE",
+ "case": "LE SETTE REGOLE // IL NAVIGATORE",
+ "night": "STRADA DI CAMPAGNA",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore"
+  },
+  "NAV": {
+   "role": "il navigatore: voce del narratore, piatta, dalle casse dell'auto",
+   "fx": "nav",
+   "same_as": "N"
+  }
+ },
+ "rules": [
+  "Il motore resta acceso. Sempre.",
+  "Se dice «svolta a destra» e a destra non c'è una strada, non svoltare.",
+  "Non guardare il sedile del passeggero. Neanche nello specchietto.",
+  "Quando dice «Sei arrivato», non scendere. Neanche per guardare.",
+  "Se sulla mappa la tua auto è già parcheggiata qui, riparti. Subito.",
+  "Non rispondere al navigatore. Neanche se fa una domanda.",
+  "Non fidarti di chi ti legge queste regole."
+ ],
+ "choice": {
+  "title": "COSA FAI?",
+  "a": "SCENDI",
+  "a_sub": "come dice la voce",
+  "b": "RIPARTI",
+  "b_sub": "come dicono le regole",
+  "cta": "SCRIVILO NEI COMMENTI"
+ },
+ "end": {
+  "title": "ISCRIVITI",
+  "sub": "IL PROSSIMO CASO È GIÀ PER STRADA"
+ },
+ "dips": [
+  49,
+  52
+ ],
+ "start_pad": 0.3,
+ "end_pad": 3.0,
+ "default_gap": 0.34,
+ "speed_N": 1.0,
+ "lines": [
+  {
+   "id": 1,
+   "who": "NAV",
+   "clock": "03:12",
+   "say": "Sei arrivato.",
+   "gap": 0.6,
+   "cap": "«Sei arrivato.»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "SEI ARRIVATO",
+      "icon": "flag",
+      "map": "field",
+      "dest": "CASA · 0 m",
+      "g": "gold"
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "sei"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Davanti ai fari non c'è niente. Un campo. Un palo.",
+   "cap": "Davanti ai fari non c'è niente. Un campo. Un palo.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.08,
+      "s": 1.35,
+      "a": "fade",
+      "pole": "palo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Sono sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "cap": "7 regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 4,
+      "hot2": 7,
+      "hot2at": "settima",
+      "at": "sette"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "quarta"
+     ],
+     [
+      "tick",
+      "settima"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Auto a noleggio, ritirata all'aeroporto alle undici di sera.",
+   "cap": "Auto a noleggio, ritirata all'aeroporto alle 23:00.",
+   "v": {
+    "els": [
+     {
+      "i": "car",
+      "x": -0.4,
+      "s": 1.15,
+      "a": "slide"
+     },
+     {
+      "i": "text",
+      "text": "23:00",
+      "x": 0.45,
+      "s": 1.1,
+      "at": "undici"
+     }
+    ],
+    "sfx": [
+     [
+      "keys",
+      "auto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Telefono scarico, quindi sul navigatore hai scritto: casa.",
+   "cap": "Telefono scarico, quindi sul navigatore hai scritto: «casa».",
+   "v": {
+    "els": [
+     {
+      "i": "phone",
+      "x": -0.48,
+      "s": 0.95,
+      "off": true,
+      "word": "0%",
+      "wordat": "scarico"
+     },
+     {
+      "i": "nav",
+      "x": 0.3,
+      "s": 1.0,
+      "banner": "CASA",
+      "icon": "flag",
+      "map": "road",
+      "at": "navigatore"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "Un'ora e mezza di strada. E guidi da quattro ore.",
+   "cap": "Un'ora e mezza di strada. E guidi da 4 ore.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "1:30",
+      "x": -0.4,
+      "s": 1.4,
+      "fadeto": "guidi"
+     },
+     {
+      "i": "text",
+      "text": "4:00",
+      "x": 0.4,
+      "s": 1.4,
+      "col": "red",
+      "g": "red",
+      "at": "quattro",
+      "a": "slam"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Sul cruscotto c'è un foglio. Quando sei salito, non c'era.",
+   "gap": 1.3,
+   "cap": "Sul cruscotto c'è un foglio. Quando sei salito, non c'era.",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "s": 1.2,
+      "a": "slidein",
+      "lines": 7,
+      "at": "foglio"
+     }
+    ],
+    "fx": "glitch@era",
+    "sfx": [
+     [
+      "paper",
+      "foglio"
+     ],
+     [
+      "hit",
+      "era"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "In alto c'è scritto: uso notturno del navigatore. Sette regole.",
+   "cap": "In alto c'è scritto: «Uso notturno del navigatore». 7 regole.",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "s": 1.2,
+      "a": "write",
+      "lines": 7
+     }
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "rule": 1,
+   "say": "Regola uno: il motore resta acceso. Sempre.",
+   "cap": "Regola 1. Il motore resta acceso. Sempre.",
+   "v": {
+    "t": "rule",
+    "n": 1
+   }
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "Perché: a motore spento, il navigatore smette di guardare la strada.",
+   "cap": "Perché: a motore spento, il navigatore smette di guardare la strada.",
+   "v": {
+    "els": [
+     {
+      "i": "key",
+      "x": -0.45,
+      "s": 0.85,
+      "turn": "spento"
+     },
+     {
+      "i": "nav",
+      "x": 0.3,
+      "s": 1.05,
+      "map": "road",
+      "banner": "DRITTO",
+      "icon": "up",
+      "dimat": "smette"
+     }
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "E comincia a guardare te.",
+   "gap": 1.2,
+   "cap": "E comincia a guardare te.",
+   "v": {
+    "els": [
+     {
+      "i": "eye",
+      "s": 1.2,
+      "col": "red",
+      "g": "red",
+      "a": "slam"
+     }
+    ],
+    "fx": "glitch@guardare",
+    "sfx": [
+     [
+      "hit",
+      "guardare"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Tieni la mano lontana dalla chiave. La benzina è a un quarto.",
+   "cap": "Tieni la mano lontana dalla chiave. La benzina è a 1/4.",
+   "v": {
+    "els": [
+     {
+      "i": "key",
+      "x": -0.4,
+      "s": 0.85
+     },
+     {
+      "i": "gauge",
+      "x": 0.4,
+      "s": 1.0,
+      "v": 0.25,
+      "at": "benzina"
+     }
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "say": "Chi lo spegne diventa un punto fermo sulla mappa. E i punti fermi, il navigatore li raggiunge.",
+   "cap": "Chi lo spegne diventa un punto fermo sulla mappa. E i punti fermi, il navigatore li raggiunge.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "IN ARRIVO",
+      "icon": "none",
+      "stopdot": "punto",
+      "chase": "raggiunge"
+     }
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "rule": 2,
+   "say": "Regola due: se dice svolta a destra, e a destra non c'è una strada, non svoltare.",
+   "cap": "Regola 2. Se dice «svolta a destra» e a destra non c'è una strada, non svoltare.",
+   "v": {
+    "t": "rule",
+    "n": 2
+   }
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "Perché le strade che non vedi, sul navigatore, portano comunque da qualche parte.",
+   "cap": "Perché le strade che non vedi, sul navigatore, portano comunque da qualche parte.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "branch",
+      "banner": "DRITTO",
+      "icon": "up",
+      "ghostroad": "portano"
+     }
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "who": "NAV",
+   "say": "Tra cento metri, svolta a destra.",
+   "cap": "«Tra 100 metri, svolta a destra.»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "100 m",
+      "icon": "right",
+      "map": "branch"
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "tra"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Rallenti. A destra c'è solo un fosso, e dopo il fosso, il grano alto fino al tetto.",
+   "cap": "Rallenti. A destra c'è solo un fosso, e dopo il fosso, il grano alto fino al tetto.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.08,
+      "s": 1.35,
+      "field": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "who": "NAV",
+   "say": "Svolta a destra.",
+   "gap": 0.5,
+   "cap": "«Svolta a destra.»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "SVOLTA ORA",
+      "icon": "right",
+      "map": "branch",
+      "near": true
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "svolta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "Tiri dritto. Sullo schermo, la tua freccia svolta comunque. E sparisce nel campo.",
+   "gap": 1.3,
+   "cap": "Tiri dritto. Sullo schermo, la tua freccia svolta comunque. E sparisce nel campo.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "SVOLTA ORA",
+      "icon": "right",
+      "map": "branch",
+      "near": true,
+      "veer": "svolta",
+      "vanish": "sparisce"
+     }
+    ],
+    "fx": "glitch@sparisce",
+    "sfx": [
+     [
+      "hit",
+      "sparisce"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "rule": 3,
+   "say": "Regola tre: non guardare il sedile del passeggero. Neanche nello specchietto.",
+   "cap": "Regola 3. Non guardare il sedile del passeggero. Neanche nello specchietto.",
+   "v": {
+    "t": "rule",
+    "n": 3
+   }
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "Perché il navigatore conta le persone a bordo. E le conta bene.",
+   "cap": "Perché il navigatore conta le persone a bordo. E le conta bene.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "road",
+      "banner": "DRITTO",
+      "icon": "up",
+      "pax": [
+       [
+        "navigatore",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "In basso a sinistra c'è un numero che non avevi mai notato. Passeggeri: due.",
+   "gap": 1.3,
+   "cap": "In basso a sinistra c'è un numero che non avevi mai notato. Passeggeri: 2.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "road",
+      "banner": "DRITTO",
+      "icon": "up",
+      "pax": [
+       [
+        "basso",
+        1
+       ],
+       [
+        "due",
+        2
+       ]
+      ],
+      "paxhot": "due"
+     }
+    ],
+    "fx": "glitch@due",
+    "sfx": [
+     [
+      "hit",
+      "due"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Non ti giri. Ma a ogni buca, la fibbia della cintura accanto a te batte contro la plastica.",
+   "cap": "Non ti giri. Ma a ogni buca, la fibbia della cintura accanto a te batte contro la plastica.",
+   "v": {
+    "els": [
+     {
+      "i": "mirror",
+      "s": 1.3,
+      "ghost": "accanto"
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "batte"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "say": "Se ti giri, i passeggeri tornano uno. E non sei tu.",
+   "gap": 1.3,
+   "cap": "Se ti giri, i passeggeri tornano uno. E non sei tu.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "road",
+      "banner": "DRITTO",
+      "icon": "up",
+      "pax": [
+       [
+        "giri",
+        2
+       ],
+       [
+        "uno",
+        1
+       ]
+      ],
+      "paxhot": "uno"
+     }
+    ],
+    "fx": "glitch@tu",
+    "sfx": [
+     [
+      "hit",
+      "tu"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "clock": "03:17",
+   "say": "Dietro al foglio c'è un fascicolo graffettato. Numero trecentodiciotto.",
+   "cap": "Dietro al foglio c'è un fascicolo graffettato. Numero 318.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "a": "slidein",
+      "title": "FASCICOLO",
+      "body": "N. 318 · NOLEGGIO NOTTURNO"
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "fascicolo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "Un cliente ha seguito il navigatore fino a un campo, di notte.",
+   "cap": "Un cliente ha seguito il navigatore fino a un campo, di notte.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.08,
+      "s": 1.35,
+      "pole": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "L'auto è stata ritrovata col motore acceso e la portiera aperta.",
+   "cap": "L'auto è stata ritrovata col motore acceso e la portiera aperta.",
+   "v": {
+    "els": [
+     {
+      "i": "car",
+      "s": 1.5,
+      "open": "portiera",
+      "lights": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "E il navigatore, quando sono arrivati i soccorsi, diceva ancora: sei arrivato.",
+   "gap": 1.2,
+   "cap": "E il navigatore, quando sono arrivati i soccorsi, diceva ancora: «Sei arrivato».",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "SEI ARRIVATO",
+      "icon": "flag",
+      "map": "field",
+      "g": "red",
+      "at": "navigatore"
+     }
+    ],
+    "fx": "glitch@sei",
+    "sfx": [
+     [
+      "ding",
+      "sei"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "rule": 4,
+   "say": "Regola quattro: quando dice sei arrivato, non scendere. Neanche per guardare.",
+   "cap": "Regola 4. Quando dice «Sei arrivato», non scendere. Neanche per guardare.",
+   "v": {
+    "t": "rule",
+    "n": 4
+   }
+  },
+  {
+   "id": 30,
+   "who": "N",
+   "say": "È quella che sbagliano quasi tutti.",
+   "cap": "È quella che sbagliano quasi tutti.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "say": "Perché, dopo dieci minuti, il navigatore ti riporta al campo. Stesso palo. E a dieci metri dai fari, adesso, c'è un cartello.",
+   "cap": "Perché, dopo 10 minuti, il navigatore ti riporta al campo. Stesso palo. E a 10 metri dai fari, adesso, c'è un cartello.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.08,
+      "s": 1.35,
+      "pole": true,
+      "sign": "",
+      "signin": "cartello"
+     }
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "say": "Troppo lontano per leggerlo. Abbastanza vicino per scendere un attimo.",
+   "cap": "Troppo lontano per leggerlo. Abbastanza vicino per scendere un attimo.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.1,
+      "s": 1.2,
+      "pole": true,
+      "sign": "",
+      "a": "zoom"
+     }
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "say": "Strizzi gli occhi. Sul cartello c'è il tuo indirizzo di casa.",
+   "gap": 1.4,
+   "cap": "Strizzi gli occhi. Sul cartello c'è il tuo indirizzo di casa.",
+   "v": {
+    "els": [
+     {
+      "i": "windshield",
+      "y": 0.1,
+      "s": 1.2,
+      "pole": true,
+      "sign": "CASA TUA",
+      "signat": "indirizzo",
+      "a": "zoom"
+     }
+    ],
+    "fx": "glitch@indirizzo",
+    "sfx": [
+     [
+      "hit",
+      "indirizzo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "say": "Il cliente del fascicolo è sceso a leggerlo. Tu resti seduto.",
+   "cap": "Il cliente del fascicolo è sceso a leggerlo. Tu resti seduto.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "FASCICOLO",
+      "body": "N. 318 · NOLEGGIO NOTTURNO",
+      "date": "SCESO",
+      "circle": "sceso"
+     }
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "clock": "03:21",
+   "rule": 5,
+   "say": "Regola cinque: se sulla mappa la tua auto è già parcheggiata qui, riparti. Subito.",
+   "cap": "Regola 5. Se sulla mappa la tua auto è già parcheggiata qui, riparti. Subito.",
+   "v": {
+    "t": "rule",
+    "n": 5
+   }
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "say": "Tocchi lo schermo. Sulla bandierina c'è un'auto parcheggiata. Con la tua targa.",
+   "cap": "Tocchi lo schermo. Sulla bandierina c'è un'auto parcheggiata. Con la tua targa.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "SEI ARRIVATO",
+      "icon": "flag",
+      "parked": "parcheggiata",
+      "plate": "targa"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "tocchi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "say": "Parcheggiata dalle ventitré e zero due. A quell'ora firmavi il contratto all'aeroporto.",
+   "gap": 1.3,
+   "cap": "Parcheggiata dalle 23:02. A quell'ora firmavi il contratto all'aeroporto.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "SEI ARRIVATO",
+      "icon": "flag",
+      "parked": true,
+      "plate": true,
+      "since": "ventitre"
+     }
+    ],
+    "fx": "glitch@contratto",
+    "sfx": [
+     [
+      "hit",
+      "contratto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "say": "Perché: se la mappa ti vede già qui, una delle due auto è di troppo.",
+   "cap": "Perché: se la mappa ti vede già qui, una delle due auto è di troppo.",
+   "v": {
+    "els": [
+     {
+      "i": "car",
+      "x": -0.42,
+      "s": 1.0
+     },
+     {
+      "i": "car",
+      "x": 0.42,
+      "s": 1.0,
+      "col": "red",
+      "g": "red",
+      "at": "due"
+     }
+    ]
+   }
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "say": "Metti la retro. Cinque metri. Sulla mappa, la tua freccia non si muove.",
+   "gap": 1.2,
+   "cap": "Metti la retro. Cinque metri. Sulla mappa, la tua freccia non si muove.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "RICALCOLO…",
+      "icon": "recalc",
+      "parked": true,
+      "gear": "retro"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "retro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "rule": 6,
+   "say": "Regola sei: non rispondere al navigatore. Neanche se fa una domanda.",
+   "cap": "Regola 6. Non rispondere al navigatore. Neanche se fa una domanda.",
+   "v": {
+    "t": "rule",
+    "n": 6
+   }
+  },
+  {
+   "id": 41,
+   "who": "N",
+   "say": "Perché, per lui, una risposta vale come una firma.",
+   "cap": "Perché, per lui, una risposta vale come una firma.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "CONSENSO",
+      "body": "ACCETTO DI SCENDERE.",
+      "sign": "firma"
+     }
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "who": "NAV",
+   "say": "Vuoi scendere?",
+   "gap": 0.6,
+   "cap": "«Vuoi scendere?»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "VUOI SCENDERE?",
+      "icon": "none",
+      "vol": [
+       [
+        "vuoi",
+        0.7
+       ]
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "vuoi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "who": "N",
+   "say": "Abbassi il volume. Tutto. La barra arriva a zero.",
+   "cap": "Abbassi il volume. Tutto. La barra arriva a 0.",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "VUOI SCENDERE?",
+      "icon": "none",
+      "vol": [
+       [
+        "abbassi",
+        0.7
+       ],
+       [
+        "volume",
+        0.4
+       ],
+       [
+        "tutto",
+        0.1
+       ],
+       [
+        "zero",
+        0
+       ]
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "tutto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "who": "NAV",
+   "say": "Vuoi scendere?",
+   "gap": 1.3,
+   "cap": "«Vuoi scendere?»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "map": "field",
+      "banner": "VUOI SCENDERE?",
+      "icon": "none",
+      "vol": [
+       [
+        "vuoi",
+        0
+       ]
+      ],
+      "g": "red"
+     }
+    ],
+    "fx": "glitch",
+    "sfx": [
+     [
+      "hit",
+      "vuoi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "who": "N",
+   "say": "Stavolta la voce non esce dalle casse. Esce dal sedile accanto.",
+   "gap": 1.3,
+   "cap": "Stavolta la voce non esce dalle casse. Esce dal sedile accanto.",
+   "v": {
+    "els": [
+     {
+      "i": "mirror",
+      "s": 1.3,
+      "ghost": true
+     },
+     {
+      "i": "waves",
+      "x": 0.55,
+      "s": 0.6,
+      "col": "red",
+      "at": "sedile"
+     }
+    ],
+    "fx": "glitch@accanto",
+    "sfx": [
+     [
+      "hit",
+      "accanto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "say": "Non rispondi. Stringi il volante finché non senti più le dita.",
+   "cap": "Non rispondi. Stringi il volante finché non senti più le dita.",
+   "v": {
+    "els": [
+     {
+      "i": "wheel",
+      "s": 1.3,
+      "a": "shake"
+     }
+    ]
+   }
+  },
+  {
+   "id": 47,
+   "who": "N",
+   "say": "Scendi.",
+   "gap": 0.9,
+   "cap": "Scendi.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "SCENDI.",
+      "s": 1.3,
+      "a": "fade"
+     }
+    ]
+   }
+  },
+  {
+   "id": 48,
+   "who": "N",
+   "say": "Scusate. Poco professionale.",
+   "gap": 0.7,
+   "cap": "Scusate. Poco professionale.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "SCUSATE.",
+      "s": 0.7,
+      "col": "dim",
+      "a": "fade"
+     }
+    ]
+   }
+  },
+  {
+   "id": 49,
+   "who": "N",
+   "clock": "03:26",
+   "rule": 7,
+   "say": "Regola sette: non fidarti di chi ti legge queste regole.",
+   "cap": "Regola 7. Non fidarti di chi ti legge queste regole.",
+   "v": {
+    "t": "rule",
+    "n": 7
+   }
+  },
+  {
+   "id": 50,
+   "who": "N",
+   "say": "Guarda il foglio sul cruscotto. È bianco. È sempre stato bianco.",
+   "gap": 1.2,
+   "cap": "Guarda il foglio sul cruscotto. È bianco. È sempre stato bianco.",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "s": 1.2,
+      "lines": 7,
+      "blank": "bianco"
+     }
+    ],
+    "fx": "glitch@bianco",
+    "sfx": [
+     [
+      "hit",
+      "bianco"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 51,
+   "who": "N",
+   "fx": "nav",
+   "say": "Le regole te le ha lette una voce. Dalle casse dell'auto.",
+   "cap": "Le regole te le ha lette una voce. Dalle casse dell'auto.",
+   "v": {
+    "els": [
+     {
+      "i": "waveform",
+      "s": 1.3,
+      "col": "red",
+      "at": "voce"
+     }
+    ]
+   }
+  },
+  {
+   "id": 52,
+   "who": "NAV",
+   "say": "Abbiamo sempre saputo la strada.",
+   "gap": 1.3,
+   "cap": "«Abbiamo sempre saputo la strada.»",
+   "v": {
+    "els": [
+     {
+      "i": "quote",
+      "text": "ABBIAMO SEMPRE SAPUTO LA STRADA.",
+      "col": "red",
+      "g": "red"
+     }
+    ],
+    "fx": "glitch"
+   }
+  },
+  {
+   "id": 53,
+   "who": "NAV",
+   "say": "Sei arrivato.",
+   "gap": 0.9,
+   "cap": "«Sei arrivato.»",
+   "v": {
+    "els": [
+     {
+      "i": "nav",
+      "s": 1.45,
+      "banner": "SEI ARRIVATO",
+      "icon": "flag",
+      "map": "field",
+      "g": "red",
+      "parked": true
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "sei"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 54,
+   "who": "N",
+   "fx": "nav",
+   "say": "Il motore è acceso. La benzina è in riserva. La portiera, adesso, è sbloccata.",
+   "cap": "Il motore è acceso. La benzina è in riserva. La portiera, adesso, è sbloccata.",
+   "v": {
+    "els": [
+     {
+      "i": "padlock",
+      "s": 1.0,
+      "open": "sbloccata",
+      "g": "gold"
+     }
+    ],
+    "sfx": [
+     [
+      "lock",
+      "sbloccata"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 55,
+   "who": "N",
+   "fx": "nav",
+   "say": "Le regole dicono di ripartire. Ma le regole, te le abbiamo lette noi.",
+   "gap": 1.0,
+   "cap": "Le regole dicono di ripartire. Ma le regole, te le abbiamo lette noi.",
+   "v": {
+    "els": [
+     {
+      "i": "note",
+      "s": 1.2,
+      "blank": true
+     },
+     {
+      "i": "waveform",
+      "s": 0.9,
+      "y": 0.95,
+      "col": "red"
+     }
+    ]
+   }
+  },
+  {
+   "id": 56,
+   "who": "N",
+   "say": "Scendi, o riparti? Scrivilo nei commenti.",
+   "cap": "Scendi, o riparti? Scrivilo nei commenti.",
+   "v": {
+    "t": "choice"
+   }
+  },
+  {
+   "id": 57,
+   "who": "N",
+   "say": "Iscriviti. Il prossimo caso è già per strada.",
+   "cap": "Iscriviti. Il prossimo caso è già per strada.",
+   "v": {
+    "t": "end"
+   }
+  }
+ ],
+ "chapters": [
+  [
+   1,
+   "Sei arrivato"
+  ],
+  [
+   4,
+   "Il foglio sul cruscotto"
+  ],
+  [
+   9,
+   "Regola 1 · Il motore"
+  ],
+  [
+   14,
+   "Regola 2 · Svolta a destra"
+  ],
+  [
+   20,
+   "Regola 3 · Il passeggero"
+  ],
+  [
+   25,
+   "Il fascicolo 318"
+  ],
+  [
+   29,
+   "Regola 4 · Non scendere"
+  ],
+  [
+   35,
+   "Regola 5 · Già parcheggiata"
+  ],
+  [
+   40,
+   "Regola 6 · Non rispondere"
+  ],
+  [
+   49,
+   "Regola 7 · Chi legge le regole"
+  ],
+  [
+   56,
+   "Scendi o riparti?"
+  ]
+ ],
+ "youtube": {
+  "title": "Se Il Navigatore Dice \"Sei Arrivato\"… NON SCENDERE",
+  "publish": "18:30 (ora italiana)",
+  "intro": [
+   "Sono le 03:12. Il navigatore dell'auto a noleggio dice «Sei arrivato». Davanti ai fari c'è solo un campo.",
+   "Sul cruscotto c'è un foglio che prima non c'era: sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "Caso 003 de «Le Sette Regole»."
+  ],
+  "question": "👇 E tu cosa fai: scendi, come dice la voce, o riparti, come dicono le regole? Scrivilo nei commenti.",
+  "question_last": true,
+  "fact_title": "📌 Il fatto vero dietro la storia",
+  "fact": "«La chiamo morte da GPS.» Così Charlie Callagan, coordinatore delle aree selvagge del Parco nazionale della Valle della Morte, in California, descriveva nel 2011 i visitatori che noleggiano un'auto col navigatore, non sanno come funziona e si fidano a farsi portare in mezzo al nulla.",
+  "fact_source": "Fonte: Tom Knudson, «'Death by GPS' in desert», The Sacramento Bee, 30/01/2011 (ripubblicato da Lake Tahoe News: https://laketahoenews.net/?p=30612)",
+  "outro": [
+   "La storia è di finzione: luoghi, persone e auto sono inventati.",
+   "Voce narrante generata con sintesi vocale (ElevenLabs). Musica ed effetti: Mixkit (Mixkit License).",
+   "🔔 Iscriviti: il prossimo caso è già per strada.",
+   "#horror #storiehorror #lesetteregole"
+  ],
+  "tag_limit": 400,
+  "tags": [
+   "le sette regole",
+   "storie horror",
+   "horror italiano",
+   "regole horror",
+   "creepypasta italiana",
+   "storie di paura",
+   "navigatore",
+   "navigatore satellitare",
+   "gps",
+   "sei arrivato",
+   "non scendere",
+   "auto a noleggio",
+   "horror in auto",
+   "strada di notte",
+   "death by gps",
+   "valle della morte",
+   "storia horror italiana",
+   "horror animato",
+   "regole da seguire",
+   "motion graphics horror"
+  ]
+ }
+}
