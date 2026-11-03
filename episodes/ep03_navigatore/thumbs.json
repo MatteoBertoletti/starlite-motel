@@ -1,0 +1,3 @@
+{"variants":[
+ {"id":"1_nero_navigatore","template":"black_nav","text":{"white":"NON","red":"SCENDERE","banner":"SEI ARRIVATO","foot":""}},
+ {"id":"2_nero_passeggeri","template":"black_nav","text":{"white":"NON","red":"SCENDERE","banner":"SEI ARRIVATO","foot":"PASSEGGERI: 2"}}]}
