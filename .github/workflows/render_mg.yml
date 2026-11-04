@@ -32,7 +32,7 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
-      - name: Install browser + ffmpeg (retries: a stuck apt mirror must not hang the shard)
+      - name: Install browser and ffmpeg, with retries so a stuck apt mirror cannot hang the shard
         timeout-minutes: 15
         run: |
           pip install -q playwright
