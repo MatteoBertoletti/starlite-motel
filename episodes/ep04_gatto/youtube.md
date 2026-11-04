@@ -9,18 +9,18 @@ Sono le 03:07. Davanti alla porta della camera c'è una chiave d'ottone. La stes
 Sul retro del modulo di adozione ci sono sette avvertenze. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.
 Caso 004 de «Le Sette Regole».
 
-CAPITOLI  (stimati: si aggiornano da soli dopo la narrazione)
+CAPITOLI
 0:00 La chiave delle 03:07
 0:15 Il gatto e le avvertenze
-0:36 Regola 1 · La chiave
-0:59 Regola 2 · Dove guarda
-1:22 Regola 3 · Dopo mezzanotte
-1:55 La scheda 112
-2:13 Regola 4 · La porta della camera
-2:51 Regola 5 · La quarta porta
-3:22 Regola 6 · L'affitto scende
-3:50 Regola 7 · Affitto saldato
-4:28 Scappi o resti?
+0:35 Regola 1 · La chiave
+0:58 Regola 2 · Dove guarda
+1:21 Regola 3 · Dopo mezzanotte
+1:51 La scheda 112
+2:09 Regola 4 · La porta della camera
+2:45 Regola 5 · La quarta porta
+3:18 Regola 6 · L'affitto scende
+3:45 Regola 7 · Affitto saldato
+4:24 Scappi o resti?
 
 📌 Il fatto vero dietro la regola 3
 I «regali» dei gatti sono prede vere, e quello che mangiano conta. In uno studio dell'Università di Exeter su 355 gatti di 219 famiglie, durato 12 settimane, un cibo ricco di proteine di carne ha ridotto del 36% le prede portate a casa; 5-10 minuti di gioco al giorno, del 25%.
