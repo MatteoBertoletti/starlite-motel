@@ -1,0 +1,1122 @@
+{
+ "title": "Se Il Gatto Ti Porta Sempre Lo Stesso Regalo… NON TOCCARLO",
+ "case": "LE SETTE REGOLE // IL GATTO",
+ "night": "TORINO",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, tono burocratico"
+  }
+ },
+ "rules": [
+  "Non toccare la chiave. Neanche per spostarla.",
+  "Non guardare dove guarda il gatto.",
+  "Non dargli da mangiare dopo mezzanotte. Neanche un croccantino.",
+  "Non chiudere a chiave la porta della camera.",
+  "Non aprire la quarta porta del corridoio.",
+  "Se l'affitto scende, non chiedere perché.",
+  "Quando l'affitto è saldato, lascia la casa prima dell'alba."
+ ],
+ "choice": {
+  "title": "COSA FAI?",
+  "a": "SCAPPI",
+  "a_sub": "e il gatto resta",
+  "b": "RESTI",
+  "b_sub": "e vedi chi riscuote",
+  "cta": "SCRIVILO NEI COMMENTI"
+ },
+ "end": {
+  "title": "ISCRIVITI",
+  "sub": "IL PROSSIMO CASO È GIÀ ALLA PORTA"
+ },
+ "start_pad": 0.3,
+ "end_pad": 3.0,
+ "default_gap": 0.38,
+ "speed_N": 0.97,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "clock": "03:07",
+   "say": "Tre e zero sette. Davanti alla camera, una chiave d'ottone.",
+   "cap": "03:07. Davanti alla camera, una chiave d'ottone.",
+   "v": {
+    "els": [
+     {
+      "i": "door",
+      "x": 0,
+      "s": 1.35,
+      "gap": true
+     },
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "x": 0.05,
+      "y": 0.8,
+      "s": 0.75,
+      "a": "drop",
+      "at": "chiave"
+     }
+    ],
+    "sfx": [
+     [
+      "keys",
+      "chiave"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Sono sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "cap": "7 regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 4,
+      "hot2": 7,
+      "hot2at": "settima",
+      "at": "sette"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "quarta"
+     ],
+     [
+      "tick",
+      "settima"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "È la stessa chiave da quattordici notti.",
+   "cap": "È la stessa chiave da 14 notti.",
+   "v": {
+    "els": [
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "x": -0.42,
+      "s": 0.9,
+      "a": "pop"
+     },
+     {
+      "i": "count",
+      "x": 0.42,
+      "marks": [
+       [
+        "stessa",
+        "1"
+       ],
+       [
+        "chiave",
+        "7"
+       ],
+       [
+        "quattordici",
+        "14"
+       ]
+      ],
+      "col": "gold",
+      "g": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Bilocale in affitto a Torino. Trecentottanta euro al mese.",
+   "cap": "Bilocale in affitto a Torino. 380 € al mese.",
+   "v": {
+    "els": [
+     {
+      "i": "building",
+      "lit": 4,
+      "x": -0.45,
+      "s": 1.0,
+      "a": "rise"
+     },
+     {
+      "i": "text",
+      "text": "380 €",
+      "x": 0.4,
+      "s": 1.2,
+      "at": "trecentottanta"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Il gatto l'hai adottato due settimane fa. Nero, senza nome.",
+   "cap": "Il gatto l'hai adottato due settimane fa. Nero, senza nome.",
+   "v": {
+    "els": [
+     {
+      "i": "cat",
+      "s": 1.2,
+      "a": "pop"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "nero"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "In corridoio, una fila di impronte. Partono dal muro.",
+   "gap": 1.3,
+   "cap": "In corridoio, una fila di impronte. Partono dal muro.",
+   "v": {
+    "els": [
+     {
+      "i": "hall",
+      "y": 0.1,
+      "s": 1.2,
+      "paws": "impronte",
+      "wallmark": "muro"
+     }
+    ],
+    "fx": "glitch@muro",
+    "sfx": [
+     [
+      "hit",
+      "muro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Sul retro del modulo di adozione ci sono sette avvertenze. Non le avevi mai lette.",
+   "cap": "Sul retro del modulo di adozione ci sono sette avvertenze. Non le avevi mai lette.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "AVVERTENZE",
+      "body": "PER L'ADOTTANTE · PUNTI 1-7",
+      "a": "slidein"
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "modulo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "rule": 1,
+   "say": "Regola uno: non toccare la chiave. Neanche per spostarla.",
+   "cap": "Regola 1. Non toccare la chiave. Neanche per spostarla.",
+   "v": {
+    "t": "rule",
+    "n": 1
+   }
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "say": "Perché non è per te. Prima dell'alba, qualcuno passa a ritirarla.",
+   "cap": "Perché non è per te. Prima dell'alba, qualcuno passa a ritirarla.",
+   "v": {
+    "els": [
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "s": 1.0,
+      "a": "pop",
+      "fadeto": "ritirarla"
+     }
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "Ogni mattina, infatti, non c'è più. E la catena della porta di casa è ancora tirata.",
+   "gap": 1.3,
+   "cap": "Ogni mattina, infatti, non c'è più. E la catena della porta di casa è ancora tirata.",
+   "v": {
+    "els": [
+     {
+      "i": "chain",
+      "s": 1.2,
+      "at": "catena"
+     }
+    ],
+    "fx": "glitch@tirata",
+    "sfx": [
+     [
+      "lock",
+      "catena"
+     ],
+     [
+      "hit",
+      "tirata"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "Chi la tocca, l'ha incassata. E chi incassa, prima o poi, restituisce.",
+   "cap": "Chi la tocca, l'ha incassata. E chi incassa, prima o poi, restituisce.",
+   "v": {
+    "els": [
+     {
+      "i": "hand",
+      "x": -0.25,
+      "s": 0.9
+     },
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "x": 0.2,
+      "s": 0.7,
+      "a": "pop",
+      "at": "tocca"
+     }
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "rule": 2,
+   "say": "Regola due: non guardare dove guarda il gatto.",
+   "cap": "Regola 2. Non guardare dove guarda il gatto.",
+   "v": {
+    "t": "rule",
+    "n": 2
+   }
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "say": "Perché il gatto guarda chi aspetta la chiave.",
+   "cap": "Perché il gatto guarda chi aspetta la chiave.",
+   "v": {
+    "els": [
+     {
+      "i": "cat",
+      "s": 1.2,
+      "look": "left",
+      "eyes": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Fissa sempre lo stesso punto: il muro del corridoio, tra il bagno e la cucina. All'altezza di una maniglia.",
+   "cap": "Fissa sempre lo stesso punto: il muro del corridoio, tra il bagno e la cucina. All'altezza di una maniglia.",
+   "v": {
+    "els": [
+     {
+      "i": "hall",
+      "y": 0.1,
+      "s": 1.2,
+      "cat": true,
+      "wallmark": "maniglia"
+     }
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "Una notte hai guardato anche tu. Da quella notte, in corridoio, le porte sono quattro.",
+   "gap": 1.3,
+   "cap": "Una notte hai guardato anche tu. Da quella notte, in corridoio, le porte sono quattro.",
+   "v": {
+    "els": [
+     {
+      "i": "hall",
+      "y": 0.1,
+      "s": 1.2,
+      "cat": true,
+      "fourth": "quattro"
+     }
+    ],
+    "fx": "glitch@quattro",
+    "sfx": [
+     [
+      "hit",
+      "quattro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "who": "N",
+   "rule": 3,
+   "say": "Regola tre: non dargli da mangiare dopo mezzanotte. Neanche un croccantino.",
+   "cap": "Regola 3. Non dargli da mangiare dopo mezzanotte. Neanche un croccantino.",
+   "v": {
+    "t": "rule",
+    "n": 3
+   }
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "say": "Perché un gatto sazio non va a prendere la chiave. E la consegna, in qualche modo, va fatta.",
+   "cap": "Perché un gatto sazio non va a prendere la chiave. E la consegna, in qualche modo, va fatta.",
+   "v": {
+    "els": [
+     {
+      "i": "bowl",
+      "x": -0.35,
+      "s": 0.9
+     },
+     {
+      "i": "clock",
+      "text": "00:01",
+      "x": 0.4,
+      "s": 0.6,
+      "col": "red"
+     }
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "say": "La notte che l'hai fatto, alle tre e zero sette, davanti alla porta non c'era la chiave.",
+   "cap": "La notte che l'hai fatto, alle 03:07, davanti alla porta non c'era la chiave.",
+   "v": {
+    "els": [
+     {
+      "i": "door",
+      "s": 1.35,
+      "gap": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "C'era la tua carta d'identità. Presa dal portafoglio. Che era chiuso, nella giacca.",
+   "gap": 1.3,
+   "cap": "C'era la tua carta d'identità. Presa dal portafoglio. Che era chiuso, nella giacca.",
+   "v": {
+    "els": [
+     {
+      "i": "idcard",
+      "s": 1.2,
+      "a": "slam",
+      "g": "red"
+     }
+    ],
+    "fx": "glitch@identita",
+    "sfx": [
+     [
+      "hit",
+      "identita"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "say": "Nota a margine: è un gatto bellissimo. Non c'entra, ma andava detto.",
+   "gap": 0.7,
+   "cap": "Nota a margine: è un gatto bellissimo. Non c'entra, ma andava detto.",
+   "v": {
+    "els": [
+     {
+      "i": "cat",
+      "s": 1.0,
+      "a": "fade",
+      "eyes": "gold"
+     },
+     {
+      "i": "text",
+      "text": "N.B.",
+      "x": 0.5,
+      "y": -0.4,
+      "s": 0.6,
+      "col": "dim"
+     }
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "clock": "03:12",
+   "say": "Allegata al modulo c'è la scheda del gattile: numero centododici.",
+   "cap": "Allegata al modulo c'è la scheda del gattile: numero 112.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "SCHEDA N. 112",
+      "body": "GATTO NERO · NOME: NESSUNO",
+      "a": "slidein"
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "scheda"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "Adottato quattro volte, restituito tre.",
+   "cap": "Adottato 4 volte, restituito 3.",
+   "v": {
+    "els": [
+     {
+      "i": "count",
+      "x": -0.35,
+      "marks": [
+       [
+        "adottato",
+        "4"
+       ]
+      ],
+      "col": "gold"
+     },
+     {
+      "i": "count",
+      "x": 0.35,
+      "marks": [
+       [
+        "restituito",
+        "3"
+       ]
+      ],
+      "col": "red"
+     }
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Sempre dallo stesso indirizzo: il tuo.",
+   "cap": "Sempre dallo stesso indirizzo: il tuo.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "SCHEDA N. 112",
+      "body": "GATTO NERO · NOME: NESSUNO",
+      "date": "IL TUO",
+      "circle": "tuo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "say": "E a riportarlo, ogni volta, non era chi l'aveva adottato, ma il padrone di casa.",
+   "gap": 1.2,
+   "cap": "E a riportarlo, ogni volta, non era chi l'aveva adottato, ma il padrone di casa.",
+   "v": {
+    "els": [
+     {
+      "i": "shadow",
+      "x": -0.3,
+      "s": 1.1,
+      "at": "padrone"
+     },
+     {
+      "i": "cat",
+      "x": 0.35,
+      "s": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "rule": 4,
+   "say": "Regola quattro: non chiudere a chiave la porta della camera.",
+   "cap": "Regola 4. Non chiudere a chiave la porta della camera.",
+   "v": {
+    "t": "rule",
+    "n": 4
+   }
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "È quella che sbagliano quasi tutti. Perché quando hai paura, la prima cosa che fai è girare la chiave.",
+   "cap": "È quella che sbagliano quasi tutti. Perché quando hai paura, la prima cosa che fai è girare la chiave.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 4,
+      "y": -0.35
+     },
+     {
+      "i": "keyhole",
+      "s": 0.8,
+      "y": 0.35,
+      "at": "girare"
+     }
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "Ma il gatto deve poter lasciare la consegna sulla soglia. Se non può, la consegna la fa qualcun altro.",
+   "cap": "Ma il gatto deve poter lasciare la consegna sulla soglia. Se non può, la consegna la fa qualcun altro.",
+   "v": {
+    "els": [
+     {
+      "i": "door",
+      "s": 1.35,
+      "gap": true
+     },
+     {
+      "i": "cat",
+      "x": 0.55,
+      "y": 0.4,
+      "s": 0.6,
+      "carry": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "Chi chiude, alle tre e zero sette sente grattare. Poi più niente. Poi una chiave che gira nella serratura. Da fuori.",
+   "cap": "Chi chiude, alle 03:07 sente grattare. Poi più niente. Poi una chiave che gira nella serratura. Da fuori.",
+   "v": {
+    "els": [
+     {
+      "i": "keyhole",
+      "s": 1.0,
+      "x": -0.3
+     },
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "x": 0.3,
+      "s": 0.8,
+      "turn": "gira"
+     }
+    ],
+    "sfx": [
+     [
+      "scrape",
+      "grattare"
+     ],
+     [
+      "lock",
+      "gira"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "say": "Eppure la chiave della camera è ancora dentro, dalla tua parte. Ed è identica a quella d'ottone.",
+   "gap": 1.4,
+   "cap": "Eppure la chiave della camera è ancora dentro, dalla tua parte. Ed è identica a quella d'ottone.",
+   "v": {
+    "els": [
+     {
+      "i": "key",
+      "col": "white",
+      "g": "white",
+      "x": -0.35,
+      "s": 0.85
+     },
+     {
+      "i": "key",
+      "col": "gold",
+      "g": "gold",
+      "x": 0.35,
+      "s": 0.85,
+      "at": "identica"
+     }
+    ],
+    "fx": "glitch@identica",
+    "sfx": [
+     [
+      "hit",
+      "identica"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "who": "N",
+   "clock": "03:18",
+   "rule": 5,
+   "say": "Regola cinque: non aprire la quarta porta del corridoio.",
+   "cap": "Regola 5. Non aprire la quarta porta del corridoio.",
+   "v": {
+    "t": "rule",
+    "n": 5
+   }
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "say": "Perché nella planimetria del contratto le porte sono tre. E quello che non è nel contratto, non è in affitto a te.",
+   "cap": "Perché nella planimetria del contratto le porte sono tre. E quello che non è nel contratto, non è in affitto a te.",
+   "v": {
+    "els": [
+     {
+      "i": "plan",
+      "s": 1.1,
+      "mark": "tre"
+     }
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "say": "Eppure la bolletta della luce segna consumi ogni notte, dalle tre alle quattro. Mentre tu dormi.",
+   "cap": "Eppure la bolletta della luce segna consumi ogni notte, dalle 3 alle 4. Mentre tu dormi.",
+   "v": {
+    "els": [
+     {
+      "i": "bill",
+      "s": 1.2,
+      "spike": "tre"
+     }
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "say": "Chi la apre, finisce nell'inventario. In fondo al contratto, sotto letto, armadio e due sedie, c'è una riga cancellata a penna. È un nome.",
+   "gap": 1.3,
+   "cap": "Chi la apre, finisce nell'inventario. In fondo al contratto, sotto letto, armadio e due sedie, c'è una riga cancellata a penna. È un nome.",
+   "v": {
+    "els": [
+     {
+      "i": "inventory",
+      "s": 1.2,
+      "strike": "riga",
+      "name": "nome"
+     }
+    ],
+    "fx": "glitch@nome",
+    "sfx": [
+     [
+      "hit",
+      "nome"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "rule": 6,
+   "say": "Regola sei: se l'affitto scende, non chiedere perché.",
+   "cap": "Regola 6. Se l'affitto scende, non chiedere perché.",
+   "v": {
+    "t": "rule",
+    "n": 6
+   }
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "say": "Perché chi chiede attira l'attenzione di chi fa i conti. E chi fa i conti, poi, ricalcola anche te.",
+   "cap": "Perché chi chiede attira l'attenzione di chi fa i conti. E chi fa i conti, poi, ricalcola anche te.",
+   "v": {
+    "els": [
+     {
+      "i": "eye",
+      "s": 1.0,
+      "col": "gold",
+      "g": "gold"
+     },
+     {
+      "i": "text",
+      "text": "= ?",
+      "x": 0.5,
+      "s": 0.8,
+      "col": "red",
+      "at": "ricalcola"
+     }
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "say": "A ottobre pagavi trecentottanta euro. A novembre il padrone di casa ti ha scritto: centonovanta. Nessuna spiegazione.",
+   "cap": "A ottobre pagavi 380 €. A novembre il padrone di casa ti ha scritto: 190. Nessuna spiegazione.",
+   "v": {
+    "els": [
+     {
+      "i": "count",
+      "marks": [
+       [
+        "ottobre",
+        "380 €"
+       ],
+       [
+        "centonovanta",
+        "190 €"
+       ]
+      ],
+      "s": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "say": "Stanotte, alle tre e zero sette, è arrivato un altro messaggio. Affitto saldato.",
+   "gap": 1.3,
+   "cap": "Stanotte, alle 03:07, è arrivato un altro messaggio: «Affitto saldato».",
+   "v": {
+    "els": [
+     {
+      "i": "chat",
+      "y": 0.06,
+      "s": 1.35,
+      "head": "PADRONE",
+      "msgs": [
+       {
+        "who": "them",
+        "text": "Da novembre: 190 euro.",
+        "time": "1 nov"
+       },
+       {
+        "who": "them",
+        "text": "Affitto saldato.",
+        "time": "03:07",
+        "col": "red",
+        "at": "saldato"
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@saldato",
+    "sfx": [
+     [
+      "ding",
+      "messaggio"
+     ],
+     [
+      "hit",
+      "saldato"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "clock": "03:24",
+   "rule": 7,
+   "say": "Regola sette: quando l'affitto è saldato, lascia la casa prima dell'alba.",
+   "cap": "Regola 7. Quando l'affitto è saldato, lascia la casa prima dell'alba.",
+   "v": {
+    "t": "rule",
+    "n": 7
+   }
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "say": "Perché i gatti non portano regali. Pagano l'affitto.",
+   "gap": 0.8,
+   "cap": "Perché i gatti non portano regali. Pagano l'affitto.",
+   "v": {
+    "els": [
+     {
+      "i": "cat",
+      "x": -0.3,
+      "s": 1.0,
+      "carry": true
+     },
+     {
+      "i": "text",
+      "text": "= AFFITTO",
+      "x": 0.38,
+      "s": 0.8,
+      "col": "gold",
+      "at": "pagano"
+     }
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "say": "Una chiave a notte, per quattordici notti. E stanotte il conto è chiuso.",
+   "cap": "Una chiave a notte, per 14 notti. E stanotte il conto è chiuso.",
+   "v": {
+    "els": [
+     {
+      "i": "keys",
+      "s": 1.0,
+      "n": 14,
+      "close": "chiuso"
+     }
+    ],
+    "sfx": [
+     [
+      "keys",
+      "chiave"
+     ],
+     [
+      "lock",
+      "chiuso"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "who": "N",
+   "say": "Davanti alla camera, la chiave non c'è più. Il gatto è sul letto. Seduto sul tuo petto.",
+   "cap": "Davanti alla camera, la chiave non c'è più. Il gatto è sul letto. Seduto sul tuo petto.",
+   "v": {
+    "els": [
+     {
+      "i": "bed",
+      "s": 1.3
+     },
+     {
+      "i": "cat",
+      "x": 0.05,
+      "y": -0.22,
+      "s": 0.55,
+      "at": "gatto",
+      "eyes": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "who": "N",
+   "say": "Ti guarda come si guarda l'ultima rata.",
+   "gap": 1.4,
+   "cap": "Ti guarda come si guarda l'ultima rata.",
+   "v": {
+    "els": [
+     {
+      "i": "cat",
+      "s": 1.4,
+      "eyes": "red",
+      "g": "red",
+      "a": "zoom"
+     }
+    ],
+    "fx": "glitch@rata",
+    "sfx": [
+     [
+      "hit",
+      "rata"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "who": "N",
+   "say": "In corridoio, la quarta porta si apre. Da sola.",
+   "gap": 0.9,
+   "cap": "In corridoio, la quarta porta si apre. Da sola.",
+   "v": {
+    "els": [
+     {
+      "i": "hall",
+      "y": 0.1,
+      "s": 1.2,
+      "fourth": true,
+      "open": "apre"
+     }
+    ],
+    "sfx": [
+     [
+      "creak",
+      "apre"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "who": "N",
+   "say": "Le avvertenze dicono di andartene prima dell'alba. Senza il gatto: il gatto è della casa.",
+   "cap": "Le avvertenze dicono di andartene prima dell'alba. Senza il gatto: il gatto è della casa.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "AVVERTENZE",
+      "body": "PER L'ADOTTANTE · PUNTO 7",
+      "sign": "alba"
+     }
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "who": "N",
+   "say": "Scappi, o resti a vedere chi riscuote? Scrivilo nei commenti.",
+   "cap": "Scappi, o resti a vedere chi riscuote? Scrivilo nei commenti.",
+   "v": {
+    "t": "choice"
+   }
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "say": "Iscriviti. Il prossimo caso è già alla porta.",
+   "cap": "Iscriviti. Il prossimo caso è già alla porta.",
+   "v": {
+    "t": "end"
+   }
+  }
+ ],
+ "chapters": [
+  [
+   1,
+   "La chiave delle 03:07"
+  ],
+  [
+   4,
+   "Il gatto e le avvertenze"
+  ],
+  [
+   8,
+   "Regola 1 · La chiave"
+  ],
+  [
+   12,
+   "Regola 2 · Dove guarda"
+  ],
+  [
+   16,
+   "Regola 3 · Dopo mezzanotte"
+  ],
+  [
+   21,
+   "La scheda 112"
+  ],
+  [
+   25,
+   "Regola 4 · La porta della camera"
+  ],
+  [
+   30,
+   "Regola 5 · La quarta porta"
+  ],
+  [
+   34,
+   "Regola 6 · L'affitto scende"
+  ],
+  [
+   38,
+   "Regola 7 · Affitto saldato"
+  ],
+  [
+   45,
+   "Scappi o resti?"
+  ]
+ ],
+ "dips": [
+  38,
+  42
+ ],
+ "youtube": {
+  "title": "Se Il Gatto Ti Porta Sempre Lo Stesso Regalo… NON TOCCARLO",
+  "publish": "giovedì 5 novembre, 18:30 (ora italiana)",
+  "intro": [
+   "Sono le 03:07. Davanti alla porta della camera c'è una chiave d'ottone. La stessa da quattordici notti, da quando hai adottato un gatto nero.",
+   "Sul retro del modulo di adozione ci sono sette avvertenze. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "Caso 004 de «Le Sette Regole»."
+  ],
+  "question": "👇 E tu cosa fai: scappi prima dell'alba e lasci il gatto, o resti a vedere chi riscuote? Scrivilo nei commenti.",
+  "question_last": true,
+  "fact_title": "📌 Il fatto vero dietro la regola 3",
+  "fact": "I «regali» dei gatti sono prede vere, e quello che mangiano conta. In uno studio dell'Università di Exeter su 355 gatti di 219 famiglie, durato 12 settimane, un cibo ricco di proteine di carne ha ridotto del 36% le prede portate a casa; 5-10 minuti di gioco al giorno, del 25%.",
+  "fact_source": "Fonte: Cecchetti et al., «Provision of high meat content food and object play reduce predation of wild animals by domestic cats Felis catus», Current Biology, 11/02/2021 — DOI 10.1016/j.cub.2020.12.044",
+  "outro": [
+   "La storia è di finzione: persone, indirizzi e gatti sono inventati.",
+   "Voce narrante generata con sintesi vocale (ElevenLabs). Musica ed effetti: Mixkit (Mixkit License).",
+   "🔔 Iscriviti: il prossimo caso è già alla porta.",
+   "#horror #storiehorror #lesetteregole"
+  ],
+  "tag_limit": 400,
+  "tags": [
+   "le sette regole",
+   "storie horror",
+   "horror italiano",
+   "regole horror",
+   "creepypasta italiana",
+   "storie di paura",
+   "gatto",
+   "gatto nero",
+   "regalo del gatto",
+   "gatti horror",
+   "chiave",
+   "non toccarlo",
+   "appartamento in affitto",
+   "horror torino",
+   "ore 3 di notte",
+   "storia horror italiana",
+   "horror animato",
+   "regole da seguire",
+   "gatti misteriosi",
+   "motion graphics horror"
+  ]
+ }
+}

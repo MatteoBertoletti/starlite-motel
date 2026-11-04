@@ -102,6 +102,11 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'waveform') { c.scale(sc, sc); waveUI(c, el, L, lt, tt, size); }
   else if (i === 'nav') { c.scale(sc, sc); navUI(c, el, L, lt, tt, size); }
   else if (i === 'windshield') { c.scale(sc, sc); windUI(c, el, L, lt, tt, size); }
+  else if (i === 'hall') { c.scale(sc, sc); hallUI(c, el, L, lt, tt, size); }
+  else if (i === 'plan') { c.scale(sc, sc); planUI(c, el, L, lt, tt, size); }
+  else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
+  else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
+  else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
   else if (i === 'phone' && (el.flipto || el.off || el.word)) { c.scale(sc, sc); phoneFx(c, el, L, lt, tt, size, o); }
   else if (ICONS[i] || ['you', 'admin', 'bruni', 'mother', 'shadow'].includes(i)) {
     // per-icon live parameters
@@ -423,6 +428,77 @@ function windUI(c, el, L, lt, tt, size) {
   c.beginPath(); c.roundRect(W2 * 0.05, H2 * 0.62, u * 18, u * 7, u * 1); c.fillStyle = '#0b1016'; c.fill(); c.lineWidth = u * 0.8; c.stroke();   // the little nav screen in the dash
   c.fillStyle = C.gold; c.beginPath(); c.moveTo(W2 * 0.05 + u * 9, H2 * 0.62 + u * 1.5); c.lineTo(W2 * 0.05 + u * 10.5, H2 * 0.62 + u * 5); c.lineTo(W2 * 0.05 + u * 7.5, H2 * 0.62 + u * 5); c.closePath(); c.fill();
   c.restore();
+}
+
+
+// ---------- Caso 004: the flat ----------
+function paw(c, x, y, r, rot) { c.save(); c.translate(x, y); c.rotate(rot); c.beginPath(); c.ellipse(0, 0, r, r * 0.85, 0, 0, 7); c.fill();
+  for (const [dx, dy] of [[-0.95, -1.05], [-0.32, -1.5], [0.32, -1.5], [0.95, -1.05]]) { c.beginPath(); c.ellipse(dx * r, dy * r, r * 0.33, r * 0.4, 0, 0, 7); c.fill(); } c.restore(); }
+function hallUI(c, el, L, lt, tt, size) {
+  const w = size * 2.0, W2 = w / 2, u = w / 100, fy = u * 16, dh = u * 34, dw = u * 14;
+  const T2 = k => el[k] === true ? 0 : at(L, el[k]);
+  c.beginPath(); c.moveTo(-W2, fy); c.lineTo(W2, fy); c.lineWidth = u * 0.8; c.strokeStyle = C.w; c.stroke();            // floor
+  const door = (x, label, col = C.w, al = 1, openK = 0) => { c.save(); c.globalAlpha *= al;
+    if (openK > 0) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 60 * openK; c.fillStyle = `rgba(20,0,0,${0.9})`; c.fillRect(x - dw / 2, fy - dh, dw, dh); c.restore();
+      c.fillStyle = `rgba(229,50,45,${0.25 * openK})`; c.fillRect(x - dw / 2, fy - dh, dw, dh); }
+    c.beginPath(); c.rect(x - dw / 2, fy - dh, dw, dh); c.lineWidth = u * 0.9; c.strokeStyle = col; c.stroke();
+    const ox = x - dw / 2 + dw * (1 - 0.75 * openK); if (openK > 0) { c.beginPath(); c.moveTo(ox, fy - dh); c.lineTo(ox, fy); c.stroke(); }
+    c.beginPath(); c.arc(x + dw * 0.32 * (1 - openK), fy - dh * 0.45, u * 0.9, 0, 7); c.fillStyle = col; c.fill();
+    if (label) txt(c, label, x, fy - dh - u * 3.5, u * 3.2, '800', '#8d8981', 'center', 'middle', 3); c.restore(); };
+  const xs = { bagno: -W2 * 0.78, quarta: -W2 * 0.38, cucina: W2 * 0.12, camera: W2 * 0.6 };
+  door(xs.bagno, 'BAGNO'); door(xs.cucina, 'CUCINA');
+  c.save(); c.shadowColor = GLOW.gold; c.shadowBlur = 30; door(xs.camera, 'CAMERA'); c.restore();
+  c.save(); c.fillStyle = 'rgba(245,214,140,0.5)'; c.fillRect(xs.camera - dw / 2, fy - u * 0.6, dw, u * 0.6); c.restore();       // light under the bedroom door
+  if (el.fourth) { const k = clamp01((lt - T2('fourth')) / 0.5); const ok = el.open ? easeOut(clamp01((lt - T2('open')) / 1.2)) : 0;
+    c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30 * k; door(xs.quarta, '', C.red, k, ok); c.restore(); }
+  if (el.wallmark) { const k = clamp01((lt - T2('wallmark')) / 0.4); c.save(); c.globalAlpha *= k * (0.6 + 0.4 * Math.sin(tt * 4)); c.shadowColor = GLOW.gold; c.shadowBlur = 24;
+    c.beginPath(); c.arc(xs.quarta + dw * 0.32, fy - dh * 0.45, u * 1.4, 0, 7); c.fillStyle = C.gold; c.fill(); c.restore(); }
+  if (el.paws) { const k = clamp01((lt - T2('paws')) / 1.8), n = 10; c.fillStyle = C.w;
+    for (let j = 0; j < n * k; j++) { const t = j / (n - 1), x = xs.quarta + (xs.camera - dw * 0.7 - xs.quarta) * t; paw(c, x, fy + u * 3 + (j % 2 ? u * 2 : 0), u * 1.05, Math.PI / 2); } }
+  if (el.cat) { c.save(); c.translate(xs.cucina - u * 13, fy - u * 6.2); c.scale(u * 13, u * 13); ICONS.cat(c, { look: 'left' }); c.restore(); }
+}
+function planUI(c, el, L, lt, tt, size) {
+  const w = size * 1.6, h = size * 0.95, W2 = w / 2, H2 = h / 2, u = w / 100;
+  c.beginPath(); c.roundRect(-W2 - u * 3, -H2 - u * 6, w + u * 6, h + u * 9, u * 1.5); c.fillStyle = '#f2efe8'; c.fill(); c.shadowBlur = 0;
+  txt(c, 'PLANIMETRIA · ALLEGATO B', -W2, -H2 - u * 2.4, u * 2.8, '900', C.bg, 'left', 'middle', 2);
+  c.strokeStyle = C.bg; c.lineWidth = u * 1.1; c.strokeRect(-W2 + u * 2, -H2 + u * 3, w - u * 4, h - u * 6);
+  const cy = H2 * 0.1, ch = u * 9;                                                              // corridor band
+  c.lineWidth = u * 0.7; c.beginPath(); c.moveTo(-W2 + u * 2, cy - ch); c.lineTo(W2 - u * 2, cy - ch); c.moveTo(-W2 + u * 2, cy + ch); c.lineTo(W2 - u * 2, cy + ch);
+  c.moveTo(-W2 * 0.45, -H2 + u * 3); c.lineTo(-W2 * 0.45, cy - ch); c.moveTo(W2 * 0.3, -H2 + u * 3); c.lineTo(W2 * 0.3, cy - ch); c.moveTo(0, cy + ch); c.lineTo(0, H2 - u * 3); c.stroke();
+  txt(c, 'BAGNO', -W2 * 0.73, -H2 * 0.4, u * 3.4, '900', C.bg); txt(c, 'CUCINA', -W2 * 0.07, -H2 * 0.4, u * 3.4, '900', C.bg);
+  txt(c, 'CAMERA', W2 * 0.64, -H2 * 0.4, u * 3.4, '900', C.bg); txt(c, 'SOGGIORNO', -W2 * 0.5, H2 * 0.55, u * 3.4, '900', C.bg); txt(c, 'INGRESSO', W2 * 0.5, H2 * 0.55, u * 3.4, '900', C.bg);
+  const doors = [-W2 * 0.73, -W2 * 0.07, W2 * 0.64], mk = el.mark ? lt - at(L, el.mark) : -1;
+  doors.forEach((x, j) => { c.fillStyle = '#f2efe8'; c.fillRect(x - u * 4, cy - ch - u * 0.8, u * 8, u * 1.6); c.beginPath(); c.arc(x - u * 4, cy - ch, u * 8, -Math.PI / 2, 0); c.lineWidth = u * 0.4; c.strokeStyle = C.bg; c.stroke();
+    if (mk > j * 0.25) { c.save(); c.shadowColor = GLOW.gold; c.shadowBlur = 20; c.beginPath(); c.arc(x, cy, u * 3.2, 0, 7); c.fillStyle = C.gold; c.fill(); c.restore(); txt(c, String(j + 1), x, cy + u * 0.3, u * 3.6, '900', C.bg); } });
+  if (mk > 0.9) { c.save(); c.globalAlpha *= clamp01((mk - 0.9) / 0.4); c.setLineDash([u * 1.2, u * 1.2]); c.strokeStyle = C.red; c.lineWidth = u * 0.6; c.strokeRect(-W2 * 0.45 + u * 2, cy - ch - u * 0.6, W2 * 0.3, u * 1.2); c.restore(); }
+}
+function billUI(c, el, L, lt, tt, size) {
+  const w = size * 1.6, h = size * 0.9, W2 = w / 2, H2 = h / 2, u = w / 100;
+  c.beginPath(); c.roundRect(-W2, -H2, w, h, u * 1.5); c.fillStyle = '#f2efe8'; c.fill(); c.shadowBlur = 0;
+  txt(c, 'BOLLETTA LUCE', -W2 + u * 5, -H2 + u * 7, u * 5, '900', C.bg, 'left', 'middle'); txt(c, 'CONSUMI MEDI PER ORA · NOVEMBRE', -W2 + u * 5, -H2 + u * 12.5, u * 2.6, '800', '#6b675f', 'left', 'middle', 2);
+  const k = el.spike ? clamp01((lt - at(L, el.spike)) / 0.6) : 1, bx = -W2 + u * 6, bw = (w - u * 12) / 24, base = H2 - u * 12;
+  for (let hh = 0; hh < 24; hh++) { const day = hh >= 7 && hh <= 23 ? 0.35 + 0.35 * Math.abs(Math.sin(hh * 1.3)) : 0.06; const hot = hh === 3; const v = hot ? 0.06 + 0.9 * easeOut(k) : day;
+    c.fillStyle = hot ? C.red : '#3a3936'; c.fillRect(bx + hh * bw + bw * 0.15, base - v * (h * 0.55), bw * 0.7, v * (h * 0.55)); }
+  [0, 3, 6, 12, 18, 23].forEach(hh => txt(c, String(hh).padStart(2, '0'), bx + hh * bw + bw / 2, base + u * 4, u * 2.6, hh === 3 ? '900' : '800', hh === 3 ? C.red : '#6b675f'));
+  if (k > 0.5) { c.save(); c.globalAlpha *= clamp01((k - 0.5) * 2); txt(c, '03:00-04:00', bx + 4 * bw + u * 1, base - h * 0.47, u * 3.4, '900', C.red, 'left', 'middle'); c.restore(); }
+}
+function invUI(c, el, L, lt, tt, size) {
+  const w = size * 1.0, h = size * 1.15, W2 = w / 2, H2 = h / 2, u = w / 100;
+  c.beginPath(); c.roundRect(-W2, -H2, w, h, u * 2); c.fillStyle = '#f2efe8'; c.fill(); c.shadowBlur = 0;
+  txt(c, 'INVENTARIO', -W2 + u * 8, -H2 + u * 11, u * 8, '900', C.bg, 'left', 'middle'); txt(c, 'ARREDI CONSEGNATI', -W2 + u * 8, -H2 + u * 19, u * 4, '800', '#6b675f', 'left', 'middle', 2);
+  ['1  LETTO', '1  ARMADIO', '1  TAVOLO', '2  SEDIE'].forEach((t, j) => txt(c, t, -W2 + u * 8, -H2 + u * (33 + j * 11), u * 6, '800', C.bg, 'left', 'middle'));
+  const y = -H2 + u * 79; txt(c, '1  ', -W2 + u * 8, y, u * 6, '800', C.bg, 'left', 'middle');
+  for (let j = 0; j < 3; j++) { c.fillStyle = '#6b675f'; c.fillRect(-W2 + u * (20 + j * 22), y - u * 2.2, u * 18, u * 4.4); }
+  if (el.strike) { const k = clamp01((lt - at(L, el.strike)) / 0.5); c.save(); c.strokeStyle = C.red; c.lineWidth = u * 1.6; c.shadowColor = GLOW.red; c.shadowBlur = 16; c.beginPath();
+    for (let j = 0; j <= 20 * k; j++) { const x = -W2 + u * (18 + j * 3.4), yy = y + Math.sin(j * 1.9) * u * 2.6; j ? c.lineTo(x, yy) : c.moveTo(x, yy); } c.stroke(); c.restore(); }
+  if (el.name && lt >= at(L, el.name)) { c.save(); c.globalAlpha *= clamp01((lt - at(L, el.name)) / 0.3); txt(c, 'UN NOME', W2 - u * 8, y + u * 12, u * 5, '900', C.red, 'right', 'middle'); c.restore(); }
+}
+function keysUI(c, el, L, lt, tt, size) {
+  const n = el.n || 14, cols = 7, s = size * 0.34, gx = s * 0.9, gy = s * 0.5;
+  for (let j = 0; j < n; j++) { const k = backOut((lt - j * 0.12) / 0.3); if (k <= 0) continue; const x = (j % cols - (cols - 1) / 2) * gx, y = (Math.floor(j / cols) - 0.5) * gy;
+    c.save(); c.translate(x, y); c.scale(k * s, k * s); c.shadowColor = GLOW.gold; c.shadowBlur = 20; ICONS.key(c, { col: C.gold }); c.restore(); }
+  if (el.close && lt >= at(L, el.close)) { const k = clamp01((lt - at(L, el.close)) / 0.3); c.save(); c.globalAlpha *= k; c.rotate(-0.12); c.scale(1 + 0.4 * (1 - k), 1 + 0.4 * (1 - k));
+    c.shadowColor = GLOW.red; c.shadowBlur = 30; c.lineWidth = 10; c.strokeStyle = C.red; c.strokeRect(-size * 0.55, -size * 0.16, size * 1.1, size * 0.32); txt(c, 'SALDATO', 0, 6, size * 0.2, '900', C.red); c.restore(); }
 }
 
 // ---------- templates ----------

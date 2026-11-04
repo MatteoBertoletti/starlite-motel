@@ -290,3 +290,36 @@ ICONS.padlock = (c, o) => {
   c.beginPath(); c.arc(0, -0.1, 0.17, Math.PI, 0); c.moveTo(-0.17, -0.1); c.lineTo(-0.17, 0.02); c.moveTo(0.17, -0.1); c.lineTo(0.17, 0.02 - 0.08 * k); S(c, 0.07); c.restore();
   rr(c, -0.27, -0.02, 0.54, 0.42, 0.06); W(c); circ(c, 0, 0.15, 0.05); B(c); rr(c, -0.02, 0.15, 0.04, 0.12, 0.01); B(c);
 };
+
+// ---- Caso 004: the cat and the flat ----
+ICONS.cat = (c, o) => {                                   // a black cat sitting, white outline so it reads on black
+  const body = () => { c.beginPath(); c.moveTo(-0.2, 0.42); c.bezierCurveTo(-0.3, 0.2, -0.24, -0.02, -0.12, -0.08); c.lineTo(0.12, -0.08); c.bezierCurveTo(0.24, -0.02, 0.3, 0.2, 0.2, 0.42); c.closePath(); };
+  const head = () => { c.beginPath(); c.moveTo(-0.17, -0.12); c.lineTo(-0.19, -0.4); c.lineTo(-0.07, -0.29); c.quadraticCurveTo(0, -0.31, 0.07, -0.29); c.lineTo(0.19, -0.4); c.lineTo(0.17, -0.12);
+    c.quadraticCurveTo(0.16, 0.0, 0, 0.0); c.quadraticCurveTo(-0.16, 0.0, -0.17, -0.12); c.closePath(); };
+  c.beginPath(); c.moveTo(0.18, 0.38); c.bezierCurveTo(0.45, 0.38, 0.42, 0.1, 0.34, 0.02); S(c, 0.07);                         // tail
+  c.beginPath(); c.moveTo(0.18, 0.38); c.bezierCurveTo(0.45, 0.38, 0.42, 0.1, 0.34, 0.02); S(c, 0.04, '#0b0b0d');
+  body(); c.fillStyle = '#0b0b0d'; c.fill(); S(c, 0.025); head(); c.fillStyle = '#0b0b0d'; c.fill(); S(c, 0.025);
+  const ec = o.eyes === 'red' ? C.red : C.gold, lx = o.look === 'left' ? -0.02 : o.look === 'right' ? 0.02 : 0;
+  for (const s of [-1, 1]) { c.save(); c.shadowColor = ec; c.shadowBlur = 0.0; c.beginPath(); c.ellipse(s * 0.075, -0.16, 0.045, 0.035, 0, 0, 7); c.fillStyle = ec; c.fill();
+    c.beginPath(); c.ellipse(s * 0.075 + lx, -0.16, 0.012, 0.03, 0, 0, 7); c.fillStyle = '#000'; c.fill(); c.restore(); }
+  c.beginPath(); c.moveTo(-0.015, -0.09); c.lineTo(0.015, -0.09); c.lineTo(0, -0.07); c.closePath(); W(c, '#e8b4b0');
+  if (o.carry) { c.save(); c.translate(0.02, -0.02); c.rotate(0.15); c.scale(0.42, 0.42); ICONS.key(c, { col: C.gold }); c.restore(); }
+};
+ICONS.chain = (c, o) => {
+  rr(c, -0.46, -0.45, 0.22, 0.9, 0.02); W(c);                                // door edge
+  rr(c, 0.18, -0.12, 0.26, 0.08, 0.02); W(c); rr(c, 0.2, -0.1, 0.22, 0.04, 0.01); B(c);   // slot plate on the frame
+  for (let i = 0; i <= 12; i++) { const t = i / 12, x = -0.24 + t * 0.6, y = -0.08 + Math.sin(t * Math.PI) * 0.22; c.beginPath(); c.ellipse(x, y, 0.028, 0.018, Math.atan2(Math.cos(t * Math.PI) * 0.22 * Math.PI, 0.6), 0, 7); S(c, 0.014, C.gold); }
+  circ(c, 0.38, -0.08, 0.04); W(c, C.gold);
+};
+ICONS.bowl = (c, o) => {
+  c.beginPath(); c.moveTo(-0.4, 0.0); c.lineTo(0.4, 0.0); c.lineTo(0.3, 0.22); c.lineTo(-0.3, 0.22); c.closePath(); W(c);
+  for (let i = 0; i < 9; i++) { circ(c, -0.26 + i * 0.065, -0.03 - (i % 2) * 0.03, 0.035); W(c, C.gold); }
+};
+ICONS.idcard = (c, o) => {
+  rr(c, -0.46, -0.3, 0.92, 0.6, 0.05); W(c);
+  rr(c, -0.4, -0.18, 0.26, 0.38, 0.03); c.fillStyle = '#26241f'; c.fill();
+  c.save(); c.beginPath(); c.roundRect(-0.4, -0.18, 0.26, 0.38, 0.03); c.clip(); c.translate(-0.27, 0.06); c.scale(0.4, 0.4); c.beginPath(); c.arc(0, -0.2, 0.16, 0, 7); W(c, '#8d8981');
+  c.beginPath(); c.moveTo(-0.34, 0.46); c.bezierCurveTo(-0.34, 0.08, -0.2, 0.0, 0, 0.0); c.bezierCurveTo(0.2, 0.0, 0.34, 0.08, 0.34, 0.46); c.closePath(); W(c, '#8d8981'); c.restore();
+  T(c, "CARTA D'IDENTITÀ", -0.4, -0.22, 0.06, '900', C.bg, 'left', 'alphabetic');
+  for (let i = 0; i < 4; i++) { rr(c, -0.06, -0.12 + i * 0.09, 0.44 - (i % 2) * 0.12, 0.03, 0.01); W(c, '#9a958c'); }
+};
