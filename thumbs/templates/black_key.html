@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:900;src:url({{FONTS}}/montserrat/files/montserrat-latin-900-normal.woff2)}
+html,body{margin:0;background:#000}svg{display:block}
+text{font-family:M,'Montserrat',sans-serif;font-weight:900}
+.gw{filter:drop-shadow(0 0 16px rgba(255,255,255,.55))}
+.gr{filter:drop-shadow(0 0 24px rgba(255,40,50,.85))}
+.gy{filter:drop-shadow(0 0 28px rgba(245,196,81,.75))}
+</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs><filter id="noise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0"/></filter>
+<linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#F5C451"/><stop offset="1" stop-color="#A9761F"/></linearGradient>
+<symbol id="key" viewBox="-100 -60 520 120"><circle cx="0" cy="0" r="56" fill="url(#brass)"/><circle cx="0" cy="0" r="22" fill="#000"/>
+<rect x="44" y="-14" width="360" height="28" rx="6" fill="url(#brass)"/><rect x="300" y="10" width="26" height="46" rx="4" fill="url(#brass)"/><rect x="346" y="10" width="20" height="34" rx="4" fill="url(#brass)"/><rect x="380" y="10" width="24" height="52" rx="4" fill="url(#brass)"/>
+<rect x="60" y="-6" width="220" height="5" rx="2" fill="#FFF3C4" opacity=".7"/></symbol></defs>
+<!-- Nero. Comando in alto (bianco + rosso). Sotto: una chiave d'ottone gigante sul pavimento, tagliata a destra, con la lama di luce sotto la porta. Testi: white, red, time. -->
+<rect width="1280" height="720" fill="#000"/>
+<radialGradient id="pool" cx="50%" cy="100%" r="70%"><stop offset="0" stop-color="#F5C451" stop-opacity=".28"/><stop offset="1" stop-color="#F5C451" stop-opacity="0"/></radialGradient>
+<rect x="0" y="330" width="1280" height="390" fill="url(#pool)"/>
+<rect x="0" y="690" width="1280" height="10" fill="#F5C451" opacity=".85" class="gy"/>
+<text data-fit="1180" x="640" y="132" text-anchor="middle" font-size="128" fill="#fff" class="gw">{{white}} <tspan fill="#F2202F">{{red}}</tspan></text>
+<g class="gy" transform="translate(150 470) rotate(-8) scale(2.6)"><use href="#key" x="-100" y="-60" width="520" height="120"/></g>
+<text data-fit="300" x="1210" y="640" text-anchor="end" font-size="84" fill="#F2202F" class="gr">{{time}}</text>
+<rect width="1280" height="720" filter="url(#noise)"/>
+</svg></body></html>

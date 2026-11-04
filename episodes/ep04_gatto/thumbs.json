@@ -1,0 +1,4 @@
+{"variants":[
+ {"id":"1_nero_chiave","template":"black_key","text":{"white":"NON","red":"TOCCARLO","time":"03:07"}},
+ {"id":"2_nero_gatto","template":"black_cat","text":{"white":"NON","red":"TOCCARLO"}},
+ {"id":"3_nero_porta","template":"black_door","text":{"white":"NON","red":"TOCCARLO","time":"03:07"}}]}

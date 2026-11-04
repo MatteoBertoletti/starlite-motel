@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:M;font-weight:900;src:url({{FONTS}}/montserrat/files/montserrat-latin-900-normal.woff2)}
+html,body{margin:0;background:#000}svg{display:block}
+text{font-family:M,'Montserrat',sans-serif;font-weight:900}
+.gw{filter:drop-shadow(0 0 16px rgba(255,255,255,.55))}
+.gr{filter:drop-shadow(0 0 24px rgba(255,40,50,.85))}
+.gy{filter:drop-shadow(0 0 28px rgba(245,196,81,.75))}
+</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs><filter id="noise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0"/></filter>
+<linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#F5C451"/><stop offset="1" stop-color="#A9761F"/></linearGradient>
+<symbol id="key" viewBox="-100 -60 520 120"><circle cx="0" cy="0" r="56" fill="url(#brass)"/><circle cx="0" cy="0" r="22" fill="#000"/>
+<rect x="44" y="-14" width="360" height="28" rx="6" fill="url(#brass)"/><rect x="300" y="10" width="26" height="46" rx="4" fill="url(#brass)"/><rect x="346" y="10" width="20" height="34" rx="4" fill="url(#brass)"/><rect x="380" y="10" width="24" height="52" rx="4" fill="url(#brass)"/>
+<rect x="60" y="-6" width="220" height="5" rx="2" fill="#FFF3C4" opacity=".7"/></symbol></defs>
+<!-- Nero. Comando in alto. Sotto: porta della camera chiusa con luce sotto, la chiave d'ottone sulla soglia, due occhi d'oro nel buio a sinistra. Testi: white, red, time. -->
+<rect width="1280" height="720" fill="#000"/>
+<text data-fit="1180" x="640" y="132" text-anchor="middle" font-size="128" fill="#fff" class="gw">{{white}} <tspan fill="#F2202F">{{red}}</tspan></text>
+<rect x="700" y="200" width="380" height="560" fill="none" stroke="#F2EFE8" stroke-width="12" class="gw"/>
+<circle cx="1030" cy="480" r="14" fill="#F2EFE8"/>
+<rect x="706" y="684" width="368" height="14" fill="#F5C451" class="gy"/>
+<g class="gy" transform="translate(690 640) rotate(-4) scale(1.05)"><use href="#key" x="-100" y="-60" width="520" height="120"/></g>
+<g class="gy"><ellipse cx="270" cy="430" rx="40" ry="30" fill="#F5C451"/><ellipse cx="410" cy="430" rx="40" ry="30" fill="#F5C451"/></g>
+<ellipse cx="270" cy="430" rx="10" ry="26" fill="#000"/><ellipse cx="410" cy="430" rx="10" ry="26" fill="#000"/>
+<text data-fit="320" x="90" y="640" font-size="90" fill="#F2202F" class="gr">{{time}}</text>
+<rect width="1280" height="720" filter="url(#noise)"/>
+</svg></body></html>
