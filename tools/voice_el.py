@@ -19,6 +19,7 @@ SETTINGS = {'N': dict(stability=0.55, similarity_boost=0.85, style=0.3, use_spea
             'BRUNI': dict(stability=0.45, similarity_boost=0.8, style=0.35, use_speaker_boost=True, speed=0.9),
             'YOU': dict(stability=0.4, similarity_boost=0.85, style=0.45, use_speaker_boost=True, speed=1.0),
             'MAMMA': dict(stability=0.5, similarity_boost=0.85, style=0.35, use_speaker_boost=True, speed=0.95),
+            'ASSIST': dict(stability=0.85, similarity_boost=0.8, style=0.0, use_speaker_boost=True, speed=1.0),
             'NAV': dict(stability=0.9, similarity_boost=0.85, style=0.0, use_speaker_boost=True, speed=0.95)}
 if 'speed_N' in S: SETTINGS['N']['speed'] = S['speed_N']
 
@@ -86,7 +87,8 @@ def align(toks, heard):
             times[i] = (a, b)
     return times, sum(x is not None for x in [times[i] for i in known]) / max(1, len(toks))
 
-FX = {'slow': 'atempo=0.92',   # gentle time-stretch, pitch unchanged (reuses the cached voice)
+FX = {'speaker': 'highpass=f=200,lowpass=f=6500,acompressor=threshold=0.2:ratio=3,aecho=0.5:0.3:6:0.12,volume=1.3',   # a small smart-speaker
+      'slow': 'atempo=0.92',   # gentle time-stretch, pitch unchanged (reuses the cached voice)
       'nav': 'highpass=f=240,lowpass=f=5200,acompressor=threshold=0.15:ratio=4,aecho=0.6:0.35:9|17:0.22|0.12,volume=1.4',  # car speakers
       'phone': 'highpass=f=320,lowpass=f=3400,acompressor=threshold=0.12:ratio=5,aecho=0.5:0.3:12:0.15,volume=1.5',
       'door': 'highpass=f=110,lowpass=f=1000,aecho=0.8:0.55:38|61:0.3|0.2,volume=1.9',

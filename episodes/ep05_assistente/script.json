@@ -1,0 +1,1290 @@
+{
+ "title": "Se L'Assistente Vocale Dice «Buonanotte»… NON DIRE GRAZIE",
+ "case": "LE SETTE REGOLE // L'ASSISTENTE",
+ "night": "BOLOGNA",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, tono burocratico"
+  },
+  "ASSIST": {
+   "role": "l'assistente vocale: voce femminile neutra, da cassa piccola",
+   "same_as": "BRUNI",
+   "fx": "speaker"
+  }
+ },
+ "rules": [
+  "Non dire «grazie». Neanche per educazione.",
+  "Dopo mezzanotte, non chiedergli che ore sono.",
+  "Non spostarlo di stanza.",
+  "Non lasciargli finire la buonanotte. Fermalo prima della virgola.",
+  "Non staccare la spina.",
+  "Non contare le luci che si spengono.",
+  "Dopo il sesto «grazie», non dirne un settimo. Neanche se te lo chiede."
+ ],
+ "choice": {
+  "title": "TU QUANTE VOLTE?",
+  "a": "MAI",
+  "a_sub": "nemmeno una",
+  "b": "HO PERSO IL CONTO",
+  "b_sub": "e adesso?",
+  "cta": "SCRIVILO NEI COMMENTI"
+ },
+ "end": {
+  "title": "ISCRIVITI",
+  "sub": "IL PROSSIMO CASO È GIÀ IN ASCOLTO"
+ },
+ "start_pad": 0.3,
+ "end_pad": 3.0,
+ "default_gap": 0.38,
+ "speed_N": 0.97,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "clock": "23:51",
+   "say": "Ventitré e cinquantuno. L'anello di luce si accende da solo.",
+   "gap": 1.0,
+   "cap": "23:51. L'anello di luce si accende da solo.",
+   "v": {
+    "els": [
+     {
+      "i": "assistant",
+      "s": 1.5,
+      "a": "still",
+      "ring": "anello"
+     }
+    ],
+    "fx": "glitch@solo",
+    "sfx": [
+     [
+      "hit",
+      "solo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Sono sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "cap": "7 regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "v": {
+    "els": [
+     {
+      "i": "boxes",
+      "s": 1.0,
+      "hot": 4,
+      "hot2": 7,
+      "hot2at": "settima",
+      "at": "sette"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "quarta"
+     ],
+     [
+      "tick",
+      "settima"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Fra nove minuti l'assistente ti darà la buonanotte. Come ogni sera.",
+   "cap": "Fra 9 minuti l'assistente ti darà la buonanotte. Come ogni sera.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "clock",
+        "text": "00:00",
+        "s": 0.9,
+        "col": "red",
+        "a": "pop"
+       }
+      ]
+     },
+     {
+      "at": "buonanotte",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.3,
+        "a": "still",
+        "ring": true,
+        "x": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Trilocale a Bologna, quarto piano. Il cilindro nero sta sul mobile del salotto.",
+   "cap": "Trilocale a Bologna, quarto piano. Il cilindro nero sta sul mobile del salotto.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "building",
+        "lit": 4,
+        "s": 1.1,
+        "a": "rise"
+       }
+      ]
+     },
+     {
+      "at": "cilindro",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.4,
+        "a": "pop",
+        "ring": false
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "L'hai acceso sei sere fa. Ogni sera, a mezzanotte, senza che tu dica niente, dice buonanotte e spegne le luci.",
+   "cap": "L'hai acceso 6 sere fa. Ogni sera, a mezzanotte, senza che tu dica niente, dice «buonanotte» e spegne le luci.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "count",
+        "marks": [
+         [
+          "sei",
+          "6 SERE"
+         ]
+        ],
+        "col": "gold"
+       }
+      ]
+     },
+     {
+      "at": "mezzanotte",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.1,
+        "a": "still",
+        "ring": true,
+        "x": -0.45
+       },
+       {
+        "i": "waveform",
+        "x": 0.4,
+        "s": 0.8,
+        "at": "buonanotte"
+       }
+      ]
+     },
+     {
+      "at": "spegne",
+      "els": [
+       {
+        "i": "lights",
+        "s": 1.0,
+        "off": "luci",
+        "n": 6
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "E ogni sera tu hai risposto: grazie. Per educazione, come si fa con chiunque ti spenga la luce.",
+   "cap": "E ogni sera tu hai risposto: «grazie». Per educazione, come si fa con chiunque ti spenga la luce.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "«GRAZIE.»",
+      "s": 1.2,
+      "col": "gold",
+      "g": "gold",
+      "a": "pop"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Stasera, schiacciando la scatola per la differenziata, è caduto un foglio. Foglio di benvenuto. Sette regole.",
+   "cap": "Stasera, schiacciando la scatola per la differenziata, è caduto un foglio. «Foglio di benvenuto». 7 regole.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "box",
+        "s": 1.3,
+        "a": "pop"
+       }
+      ]
+     },
+     {
+      "at": "foglio",
+      "els": [
+       {
+        "i": "doc",
+        "s": 1.25,
+        "title": "BENVENUTO",
+        "body": "SETTE REGOLE PER UNA CASA SERENA",
+        "a": "slidein"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "foglio"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "In fondo, a penna, qualcuno ha scritto un numero. Sei.",
+   "gap": 1.3,
+   "cap": "In fondo, a penna, qualcuno ha scritto un numero: 6.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "BENVENUTO",
+      "body": "SETTE REGOLE PER UNA CASA SERENA",
+      "date": "6",
+      "circle": "sei"
+     }
+    ],
+    "fx": "glitch@sei",
+    "sfx": [
+     [
+      "hit",
+      "sei"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "who": "N",
+   "rule": 1,
+   "say": "Regola uno: non dire grazie. Neanche per educazione.",
+   "cap": "Regola 1. Non dire «grazie». Neanche per educazione.",
+   "v": {
+    "t": "rule",
+    "n": 1
+   }
+  },
+  {
+   "id": 10,
+   "who": "N",
+   "say": "Perché l'assistente non conosce la cortesia. Conosce i comandi. E grazie, per lui, vuol dire: confermo.",
+   "cap": "Perché l'assistente non conosce la cortesia. Conosce i comandi. E «grazie», per lui, vuol dire: «confermo».",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.3,
+        "a": "still",
+        "ring": true
+       }
+      ]
+     },
+     {
+      "at": "grazie",
+      "els": [
+       {
+        "i": "text",
+        "text": "GRAZIE = CONFERMO",
+        "s": 0.75,
+        "col": "gold",
+        "a": "pop"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "who": "N",
+   "say": "Apri l'app. Registro attività: sei notti, sei righe. Mezzanotte e zero due: richiesta confermata.",
+   "gap": 1.2,
+   "cap": "Apri l'app. Registro attività: 6 notti, 6 righe. 00:02: «richiesta confermata».",
+   "v": {
+    "els": [
+     {
+      "i": "applog",
+      "s": 1.0,
+      "n": 6,
+      "rows": "registro",
+      "hot": "confermata"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "registro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "who": "N",
+   "say": "Che cosa ti abbia chiesto, nel registro non c'è.",
+   "cap": "Che cosa ti abbia chiesto, nel registro non c'è.",
+   "v": {
+    "els": [
+     {
+      "i": "applog",
+      "s": 1.0,
+      "n": 6,
+      "blank": true
+     }
+    ],
+    "fx": "glitch@registro"
+   }
+  },
+  {
+   "id": 13,
+   "who": "N",
+   "rule": 2,
+   "say": "Regola due: dopo mezzanotte, non chiedergli che ore sono.",
+   "cap": "Regola 2. Dopo mezzanotte, non chiedergli che ore sono.",
+   "v": {
+    "t": "rule",
+    "n": 2
+   }
+  },
+  {
+   "id": 14,
+   "who": "N",
+   "say": "Perché dopo mezzanotte non usa l'orologio di casa. Usa il suo.",
+   "cap": "Perché dopo mezzanotte non usa l'orologio di casa. Usa il suo.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "clock",
+        "text": "00:01",
+        "s": 0.85
+       }
+      ]
+     },
+     {
+      "at": "suo",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.3,
+        "a": "still",
+        "ring": "red"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "who": "N",
+   "say": "Chi lo chiede, sente un'ora che non esiste: sono le ventiquattro e zero sette.",
+   "gap": 1.2,
+   "cap": "Chi lo chiede, sente un'ora che non esiste: «sono le 24:07».",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.1,
+        "a": "still",
+        "ring": true,
+        "x": -0.4
+       },
+       {
+        "i": "waveform",
+        "x": 0.4,
+        "s": 0.8
+       }
+      ]
+     },
+     {
+      "at": "ventiquattro",
+      "els": [
+       {
+        "i": "text",
+        "text": "24:07",
+        "s": 1.6,
+        "col": "red",
+        "g": "red",
+        "a": "slam"
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@ventiquattro",
+    "sfx": [
+     [
+      "hit",
+      "ventiquattro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "who": "N",
+   "say": "Il telefono, nello stesso momento, segna mezzanotte e sette.",
+   "cap": "Il telefono, nello stesso momento, segna 00:07.",
+   "v": {
+    "els": [
+     {
+      "i": "text",
+      "text": "24:07",
+      "x": -0.4,
+      "s": 1.0,
+      "col": "red"
+     },
+     {
+      "i": "text",
+      "text": "00:07",
+      "x": 0.4,
+      "s": 1.0,
+      "at": "telefono"
+     }
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "who": "N",
+   "rule": 3,
+   "say": "Regola tre: non spostarlo di stanza.",
+   "cap": "Regola 3. Non spostarlo di stanza.",
+   "v": {
+    "t": "rule",
+    "n": 3
+   }
+  },
+  {
+   "id": 18,
+   "who": "N",
+   "say": "Perché l'assistente impara la casa dal suono. Ogni stanza ha la sua eco, e lui le ha già misurate tutte.",
+   "cap": "Perché l'assistente impara la casa dal suono. Ogni stanza ha la sua eco, e lui le ha già misurate tutte.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.2,
+        "a": "still",
+        "ring": true
+       }
+      ]
+     },
+     {
+      "at": "stanza",
+      "els": [
+       {
+        "i": "lights",
+        "s": 1.0,
+        "echo": "eco",
+        "n": 6,
+        "nolights": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "who": "N",
+   "say": "Chi lo porta in camera, la mattina dopo lo ritrova in salotto. Con il cavo arrotolato com'era nella scatola.",
+   "gap": 1.2,
+   "cap": "Chi lo porta in camera, la mattina dopo lo ritrova in salotto. Con il cavo arrotolato com'era nella scatola.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "rooms",
+        "s": 1.0,
+        "move": "camera",
+        "back": "salotto"
+       }
+      ]
+     },
+     {
+      "at": "cavo",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.3,
+        "a": "still",
+        "ring": false,
+        "cable": true
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@scatola",
+    "sfx": [
+     [
+      "hit",
+      "scatola"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "who": "N",
+   "clock": "23:54",
+   "say": "Sul retro del foglio è stampata una pratica di reso: numero duemiladuecentodiciannove.",
+   "cap": "Sul retro del foglio è stampata una pratica di reso: numero 2219.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "RESO N. 2219",
+      "body": "ASSISTENTE · SALOTTO",
+      "a": "slidein"
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "retro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "who": "N",
+   "say": "Motivo del reso: il cliente non risponde più.",
+   "cap": "Motivo del reso: «il cliente non risponde più».",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.25,
+      "title": "RESO N. 2219",
+      "body": "NON RISPONDE PIÙ"
+     }
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "who": "N",
+   "say": "Il pacco è tornato al magazzino da solo, con il foglio di benvenuto dentro.",
+   "cap": "Il pacco è tornato al magazzino da solo, con il foglio di benvenuto dentro.",
+   "v": {
+    "els": [
+     {
+      "i": "box",
+      "s": 1.3,
+      "a": "slide"
+     }
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "who": "N",
+   "say": "Data del ritiro: sette sere dopo l'attivazione.",
+   "gap": 1.3,
+   "cap": "Data del ritiro: sette sere dopo l'attivazione.",
+   "v": {
+    "els": [
+     {
+      "i": "count",
+      "marks": [
+       [
+        "sette",
+        "7ª SERA"
+       ]
+      ],
+      "col": "red",
+      "g": "red"
+     }
+    ],
+    "fx": "glitch@attivazione",
+    "sfx": [
+     [
+      "hit",
+      "attivazione"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "who": "N",
+   "say": "Il foglio è stampato fronte e retro. Apprezziamo l'attenzione per l'ambiente.",
+   "gap": 0.7,
+   "cap": "Il foglio è stampato fronte e retro. Apprezziamo l'attenzione per l'ambiente.",
+   "v": {
+    "els": [
+     {
+      "i": "doc",
+      "s": 1.0,
+      "title": "BENVENUTO",
+      "body": "FRONTE / RETRO",
+      "a": "fade"
+     },
+     {
+      "i": "text",
+      "text": "N.B.",
+      "x": 0.55,
+      "y": -0.5,
+      "s": 0.6,
+      "col": "dim"
+     }
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "who": "N",
+   "rule": 4,
+   "say": "Regola quattro: non lasciargli finire la buonanotte. Fermalo prima della virgola.",
+   "cap": "Regola 4. Non lasciargli finire la buonanotte. Fermalo prima della virgola.",
+   "v": {
+    "t": "rule",
+    "n": 4
+   }
+  },
+  {
+   "id": 26,
+   "who": "N",
+   "say": "È quella che sbagliano quasi tutti. Perché nessuno interrompe chi gli augura la buonanotte.",
+   "cap": "È quella che sbagliano quasi tutti. Perché nessuno interrompe chi gli augura la buonanotte.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "boxes",
+        "s": 1.0,
+        "hot": 4
+       }
+      ]
+     },
+     {
+      "at": "nessuno",
+      "els": [
+       {
+        "i": "quote",
+        "text": "BUONANOTTE,",
+        "col": "gold"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "who": "N",
+   "say": "Ma dopo la virgola, l'assistente dice il nome di chi ascolta. E il tuo nome non gliel'hai mai detto.",
+   "cap": "Ma dopo la virgola, l'assistente dice il nome di chi ascolta. E il tuo nome non gliel'hai mai detto.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "quote",
+        "text": "BUONANOTTE, ■■■■■",
+        "col": "gold"
+       }
+      ]
+     },
+     {
+      "at": "tuo",
+      "els": [
+       {
+        "i": "doc",
+        "s": 1.2,
+        "title": "ACCOUNT",
+        "body": "NOME: — · SOLO EMAIL"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "who": "N",
+   "say": "Ieri sera l'hai lasciato finire. Ha detto il tuo nome. Pronunciato bene.",
+   "gap": 1.3,
+   "cap": "Ieri sera l'hai lasciato finire. Ha detto il tuo nome. Pronunciato bene.",
+   "v": {
+    "els": [
+     {
+      "i": "assistant",
+      "s": 1.1,
+      "a": "still",
+      "ring": true,
+      "x": -0.4
+     },
+     {
+      "i": "waveform",
+      "x": 0.4,
+      "s": 0.8,
+      "col": "red",
+      "at": "nome"
+     }
+    ],
+    "fx": "glitch@bene",
+    "sfx": [
+     [
+      "hit",
+      "bene"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "who": "N",
+   "say": "Chi viene chiamato per nome, nell'app passa da ospite a residente.",
+   "cap": "Chi viene chiamato per nome, nell'app passa da ospite a residente.",
+   "v": {
+    "els": [
+     {
+      "i": "devices",
+      "s": 1.0,
+      "me": "RESIDENTE",
+      "meat": "residente"
+     }
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "who": "N",
+   "clock": "23:56",
+   "rule": 5,
+   "say": "Regola cinque: non staccare la spina.",
+   "cap": "Regola 5. Non staccare la spina.",
+   "v": {
+    "t": "rule",
+    "n": 5
+   }
+  },
+  {
+   "id": 31,
+   "who": "N",
+   "say": "Perché l'anello non va a corrente. Nella foto sul foglio: spina staccata, e la luce ancora accesa.",
+   "cap": "Perché l'anello non va a corrente. Nella foto sul foglio: spina staccata, e la luce ancora accesa.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plug",
+        "s": 1.2,
+        "out": "staccata"
+       }
+      ]
+     },
+     {
+      "at": "luce",
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.3,
+        "a": "still",
+        "ring": true,
+        "unplugged": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "who": "N",
+   "say": "Chi la stacca, a mezzanotte sente la buonanotte lo stesso. Da tutte le prese della casa.",
+   "gap": 1.2,
+   "cap": "Chi la stacca, a mezzanotte sente la buonanotte lo stesso. Da tutte le prese della casa.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plug",
+        "s": 1.0,
+        "out": true
+       }
+      ]
+     },
+     {
+      "at": "prese",
+      "els": [
+       {
+        "i": "lights",
+        "s": 1.0,
+        "sockets": "prese",
+        "n": 6,
+        "nolights": true
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@casa",
+    "sfx": [
+     [
+      "hit",
+      "casa"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "who": "N",
+   "clock": "23:58",
+   "rule": 6,
+   "say": "Regola sei: non contare le luci che si spengono.",
+   "cap": "Regola 6. Non contare le luci che si spengono.",
+   "v": {
+    "t": "rule",
+    "n": 6
+   }
+  },
+  {
+   "id": 34,
+   "who": "N",
+   "say": "Perché nel trilocale ci sono sei lampadine. E a mezzanotte se ne spengono sette.",
+   "cap": "Perché nel trilocale ci sono 6 lampadine. E a mezzanotte se ne spengono 7.",
+   "v": {
+    "els": [
+     {
+      "i": "lights",
+      "s": 1.0,
+      "n": 6,
+      "seventh": "sette",
+      "count": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "who": "N",
+   "say": "Le hai contate il giorno del trasloco: due in salotto, due in camera, una in cucina, una in bagno.",
+   "cap": "Le hai contate il giorno del trasloco: due in salotto, due in camera, una in cucina, una in bagno.",
+   "v": {
+    "els": [
+     {
+      "i": "lights",
+      "s": 1.0,
+      "n": 6,
+      "tick": "salotto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "who": "N",
+   "say": "La settima è dietro la porta del ripostiglio. Il ripostiglio non ha l'impianto elettrico.",
+   "gap": 1.3,
+   "cap": "La settima è dietro la porta del ripostiglio. Il ripostiglio non ha l'impianto elettrico.",
+   "v": {
+    "els": [
+     {
+      "i": "lights",
+      "s": 1.0,
+      "n": 6,
+      "seventh": true,
+      "zoom7": true
+     }
+    ],
+    "fx": "glitch@elettrico",
+    "sfx": [
+     [
+      "hit",
+      "elettrico"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "who": "N",
+   "say": "Chi le conta, la sera dopo ne vede spegnersi otto.",
+   "cap": "Chi le conta, la sera dopo ne vede spegnersi otto.",
+   "v": {
+    "els": [
+     {
+      "i": "count",
+      "marks": [
+       [
+        "conta",
+        "7"
+       ],
+       [
+        "otto",
+        "8"
+       ]
+      ],
+      "col": "red"
+     }
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "who": "N",
+   "clock": "23:59",
+   "rule": 7,
+   "say": "Regola sette: dopo il sesto grazie, non dirne un settimo. Neanche se te lo chiede.",
+   "cap": "Regola 7. Dopo il sesto «grazie», non dirne un settimo. Neanche se te lo chiede.",
+   "v": {
+    "t": "rule",
+    "n": 7
+   }
+  },
+  {
+   "id": 39,
+   "who": "N",
+   "say": "Perché ogni grazie è un'accettazione. Sei grazie sono sei clausole. Il settimo non è una parola. È la firma.",
+   "cap": "Perché ogni «grazie» è un'accettazione. 6 «grazie» sono 6 clausole. Il settimo non è una parola. È la firma.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tally",
+        "s": 1.0,
+        "n": 6
+       }
+      ]
+     },
+     {
+      "at": "firma",
+      "els": [
+       {
+        "i": "doc",
+        "s": 1.25,
+        "title": "CONTRATTO",
+        "body": "CLAUSOLE 1-6 ACCETTATE",
+        "sign": "firma"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "who": "N",
+   "say": "Con la firma, la casa passa al sistema. Luci, porte, stanze. E chi ci abita.",
+   "cap": "Con la firma, la casa passa al sistema. Luci, porte, stanze. E chi ci abita.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lights",
+        "s": 1.0,
+        "n": 6,
+        "red": true
+       }
+      ]
+     },
+     {
+      "at": "abita",
+      "els": [
+       {
+        "i": "devices",
+        "s": 1.0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "who": "N",
+   "say": "Apri l'app, alla voce dispositivi. In fondo alla lista, in attesa di conferma, c'è il tuo nome.",
+   "gap": 1.3,
+   "cap": "Apri l'app, alla voce dispositivi. In fondo alla lista, in attesa di conferma, c'è il tuo nome.",
+   "v": {
+    "els": [
+     {
+      "i": "devices",
+      "s": 1.0,
+      "me": "IN ATTESA DI CONFERMA",
+      "meat": "nome"
+     }
+    ],
+    "fx": "glitch@nome",
+    "sfx": [
+     [
+      "hit",
+      "nome"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "who": "ASSIST",
+   "clock": "00:00",
+   "say": "Buonanotte,",
+   "gap": 0.3,
+   "cap": "«Buonanotte,»",
+   "v": {
+    "els": [
+     {
+      "i": "assistant",
+      "s": 1.5,
+      "a": "still",
+      "ring": "listen"
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "buonanotte"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "who": "N",
+   "say": "Stop. L'hai fermato prima del nome. Le luci si spengono. Non le conti.",
+   "gap": 0.6,
+   "cap": "«Stop.» L'hai fermato prima del nome. Le luci si spengono. Non le conti.",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "assistant",
+        "s": 1.5,
+        "a": "still",
+        "ring": true
+       }
+      ],
+      "shake": true
+     },
+     {
+      "at": "luci",
+      "els": [
+       {
+        "i": "lights",
+        "s": 1.0,
+        "n": 6,
+        "off": "spengono",
+        "seventh": true
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "off",
+      "spengono"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 44,
+   "who": "ASSIST",
+   "say": "Non mi ringrazi?",
+   "gap": 1.4,
+   "cap": "«Non mi ringrazi?»",
+   "v": {
+    "els": [
+     {
+      "i": "assistant",
+      "s": 1.6,
+      "a": "zoom",
+      "ring": "red",
+      "g": "red"
+     }
+    ],
+    "fx": "glitch@ringrazi",
+    "sfx": [
+     [
+      "hit",
+      "ringrazi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 45,
+   "who": "N",
+   "say": "L'anello resta acceso. Aspetta una risposta. Ha tutta la notte.",
+   "gap": 0.8,
+   "cap": "L'anello resta acceso. Aspetta una risposta. Ha tutta la notte.",
+   "v": {
+    "els": [
+     {
+      "i": "assistant",
+      "s": 1.3,
+      "a": "still",
+      "ring": "listen"
+     }
+    ]
+   }
+  },
+  {
+   "id": 46,
+   "who": "N",
+   "say": "Quante volte hai già ringraziato il tuo assistente? Scrivilo nei commenti.",
+   "cap": "Quante volte hai già ringraziato il tuo assistente? Scrivilo nei commenti.",
+   "v": {
+    "t": "choice"
+   }
+  },
+  {
+   "id": 47,
+   "who": "N",
+   "say": "Iscriviti. Il prossimo caso è già in ascolto.",
+   "cap": "Iscriviti. Il prossimo caso è già in ascolto.",
+   "v": {
+    "t": "end"
+   }
+  }
+ ],
+ "chapters": [
+  [
+   1,
+   "L'anello si accende"
+  ],
+  [
+   4,
+   "Sei sere, sei grazie"
+  ],
+  [
+   9,
+   "Regola 1 · Non dire grazie"
+  ],
+  [
+   13,
+   "Regola 2 · Che ore sono"
+  ],
+  [
+   17,
+   "Regola 3 · Non spostarlo"
+  ],
+  [
+   20,
+   "La pratica di reso 2219"
+  ],
+  [
+   25,
+   "Regola 4 · Prima della virgola"
+  ],
+  [
+   30,
+   "Regola 5 · La spina"
+  ],
+  [
+   33,
+   "Regola 6 · Le luci"
+  ],
+  [
+   38,
+   "Regola 7 · Il settimo grazie"
+  ],
+  [
+   46,
+   "Quante volte?"
+  ]
+ ],
+ "dips": [
+  38,
+  44
+ ],
+ "youtube": {
+  "title": "Se L'Assistente Vocale Dice «Buonanotte»… NON DIRE GRAZIE",
+  "publish": "venerdì 6 novembre, 18:30 (ora italiana)",
+  "intro": [
+   "Ogni notte, a mezzanotte, l'assistente vocale del salotto dice «Buonanotte» e spegne le luci. E ogni notte tu rispondi «grazie».",
+   "Nella scatola c'era un foglio di benvenuto con sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
+   "Caso 005 de «Le Sette Regole»."
+  ],
+  "question": "👇 E tu, quante volte hai già ringraziato il tuo assistente? Scrivilo nei commenti.",
+  "question_last": true,
+  "fact_title": "📌 Il fatto vero dietro la storia",
+  "fact": "Gli assistenti vocali si attivano anche quando nessuno li chiama. Un gruppo della Northeastern University e dell'Imperial College di Londra ha fatto ascoltare a cinque modelli diffusi 134 ore di serie TV: hanno registrato fino a 0,95 attivazioni accidentali all'ora (circa 1,4 ogni 10.000 parole), alcune lunghe 10 secondi o più.",
+  "fact_source": "Fonte: Dubois et al., «When Speakers Are All Ears: Characterizing Misactivations of IoT Smart Speakers», Proceedings on Privacy Enhancing Technologies (PETS), 2020 — https://petsymposium.org/popets/2020/popets-2020-0072.php",
+  "outro": [
+   "La storia è di finzione: persone, indirizzi e dispositivi sono inventati. Nessun marchio reale.",
+   "Voci generate con sintesi vocale (ElevenLabs). Musica ed effetti: Mixkit (Mixkit License).",
+   "🔔 Iscriviti: il prossimo caso è già in ascolto.",
+   "#horror #storiehorror #lesetteregole"
+  ],
+  "tag_limit": 400,
+  "tags": [
+   "le sette regole",
+   "storie horror",
+   "horror italiano",
+   "regole horror",
+   "creepypasta italiana",
+   "storie di paura",
+   "assistente vocale",
+   "smart speaker",
+   "buonanotte",
+   "non dire grazie",
+   "casa intelligente",
+   "domotica horror",
+   "horror tecnologia",
+   "mezzanotte",
+   "storia horror italiana",
+   "horror animato",
+   "regole da seguire",
+   "bologna",
+   "voce misteriosa",
+   "motion graphics horror"
+  ]
+ }
+}
