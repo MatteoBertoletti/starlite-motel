@@ -75,7 +75,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (a === 'slidein') { dy = 0; dx = -(1 - easeOut(k / 0.6)) * 260; al = clamp01(k / 0.2); }
   else if (a === 'push') { dx = (1 - easeOut(k / 0.6)) * 120; }
   else if (a === 'buzz') { const on = (k < 0.4 || (k > 0.55 && k < 0.95)) ? 1 : 0; dx = on * Math.sin(k * 140) * 14; rot = on * Math.sin(k * 110) * 0.012; }
-  else if (a === 'impact') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)); al = clamp01(k / 0.05); }
+  else if (a === 'impact') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)); }
   else if (a === 'still') { }
   else if (a === 'insert') { dx = (1 - easeOut(k / 0.5)) * -160; al = clamp01(k / 0.15); }
   const until = el.until !== undefined ? at(L, el.until) : Infinity;
@@ -94,6 +94,9 @@ function drawEl(c, el, L, lt, tt) {
   if (el.sweat) { c.save(); c.shadowBlur = 0; for (let j = 0; j < 3; j++) { const ph = (tt * 0.9 + j / 3) % 1, sx = size * (j === 1 ? 0.2 : -0.17 + j * 0.05), sy = -size * 0.36 + ph * size * 0.28;
     c.save(); c.globalAlpha *= 1 - ph; c.translate(sx, sy); c.beginPath(); c.moveTo(0, -size * 0.035); c.quadraticCurveTo(size * 0.025, 0, 0, size * 0.02); c.quadraticCurveTo(-size * 0.025, 0, 0, -size * 0.035); c.fillStyle = '#9fd3ff'; c.fill(); c.restore(); } c.restore(); }
   if (i === 'clock') { c.scale(sc, sc); txt(c, el.text, 0, 0, 250, '800', colOf(el.col), 'center', 'middle'); c.shadowBlur = 0; txt(c, SCRIPT.night, 0, -150, 34, '600', C.dim, 'center', 'middle', 10); }
+  else if (i === 'bigbubble') { c.scale(sc, sc); const ls = el.lines || [el.text], fs = 118 * (el.s || 1), w = 940 * (el.s || 1), h = (ls.length * 1.15 + 0.7) * fs;
+    c.shadowColor = GLOW.red; c.shadowBlur = 60; c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, fs * 0.5); c.fillStyle = C.red; c.fill(); c.shadowBlur = 0;
+    ls.forEach((t2, j) => txt(c, t2, 0, -h / 2 + fs * 0.35 + fs * 1.15 * (j + 0.5), fs, '900', C.w, 'center', 'middle')); }
   else if (i === 'text') { c.scale(sc, sc); txt(c, el.text, 0, 0, 120 * (el.s || 1), '900', colOf(el.col), 'center', 'middle'); }
   else if (i === 'quote') { const n = Math.floor(clamp01(k / Math.max(0.5, el.text.length * 0.028)) * el.text.length); txt(c, el.text.slice(0, n), 0, 0, 64, '900', colOf(el.col), 'center', 'middle'); }
   else if (i === 'count') { const v = markVal(el.marks, L, lt); if (v !== null) { const kk = lt - markTime(el.marks, L, lt); c.scale(1 + 0.4 * (1 - easeOut(kk / 0.2)), 1 + 0.4 * (1 - easeOut(kk / 0.2))); txt(c, v, 0, 0, 200, '900', colOf(el.col), 'center', 'middle'); } }
@@ -456,7 +459,7 @@ function vchatUI(c, el, L, lt, tt, size) {
     let text = m.text; if (m.typing && m.textat !== undefined && lt >= at(L, m.textat)) text = m.typing;   // dots, then the words
     const dots = m.typing && text === m.text && m.text === '…';
     if (m.voice) { bw = u * (m.full ? 100 : 86); bh = u * (m.full ? 24 : 19); }
-    else { c.font = `800 ${u * 6.4}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * 15; }
+    else { const fz = m.big ? 10 : 6.4; c.font = `800 ${u * fz}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * (m.big ? 21 : 15); }
     const x = me ? W2 - bw : -W2;
     c.save(); if (m.col === 'red' || m.glow) { c.shadowColor = m.col === 'red' ? GLOW.red : GLOW.white; c.shadowBlur = 36; }
     c.beginPath(); c.roundRect(x, y, bw, bh, u * 5); c.fillStyle = col; c.fill(); c.restore();
@@ -468,7 +471,7 @@ function vchatUI(c, el, L, lt, tt, size) {
       for (let j = 0; j < n; j++) { const pulse = m.pulse ? u * (0.5 + 1.1 * Math.max(0, Math.sin(tt * 7 - j * 0.35))) : u * 0.5; const hh = m.flat ? pulse : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = j / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
       txt(c, m.voice, x + bw - u * 4, cy + u * 0.3, u * 9, '900', C.bg, 'right', 'middle');
     } else if (dots) { for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + Math.sin(tt * 8 + j) * u * 0.8, u * 1.6, 0, 7); c.fillStyle = C.bg; c.fill(); } }
-    else txt(c, text, x + u * 5, cy + u * 0.3, u * 6.4, '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
+    else txt(c, text, x + u * 5, cy + u * 0.3, u * (m.big ? 10 : 6.4), '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
     if (m.strike !== undefined && lt >= at(L, m.strike) + 0.25) { const sk = clamp01((lt - at(L, m.strike) - 0.25) / 0.2); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20;
       c.beginPath(); c.moveTo(x - u * 2, cy + u * 4); c.lineTo(x - u * 2 + (bw + u * 4) * sk, cy - u * 4); c.lineWidth = u * 1.6; c.strokeStyle = C.red; c.stroke(); c.restore(); }
     if (m.time) txt(c, m.time, me ? W2 : -W2, y + bh + u * 4, u * 3.8, '800', '#8d8981', me ? 'right' : 'left', 'middle', 2);
@@ -487,8 +490,9 @@ function micUI(c, el, L, lt, tt, size) {
   if (el.thumb !== undefined) {                                   // the thumb rises from below and stops just above the button
     const k = easeOut(clamp01((lt - (el.thumb === true ? 0 : at(L, el.thumb) + (el._dt || 0))) / 0.6)); let ty = r * 2.6 - k * r * 1.75, hover = k >= 1 && pressT === null ? Math.sin(tt * 3) * 4 : 0;
     if (pressT !== null && lt >= pressT) ty -= r * 0.45 * easeOut(clamp01((lt - pressT) / 0.12));
+    if (el.pressed) { ty = r * 0.4; hover = 0; }
     c.save(); c.translate(r * 0.15, ty + hover); c.rotate(-0.18);
-    c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 1.3, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
+    c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 1.0, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
     c.beginPath(); c.roundRect(-r * 0.22, -r * 0.08, r * 0.44, r * 0.5, r * 0.14); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#9a958c'; c.stroke();
     c.restore(); }
 }

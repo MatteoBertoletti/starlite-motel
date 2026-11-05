@@ -72,6 +72,11 @@ export const ICONS = {
     c.beginPath(); c.moveTo(-0.16, 0.0); c.quadraticCurveTo(0, 0.08, 0.16, 0.0); c.lineTo(0.17, 0.07); c.quadraticCurveTo(0, 0.15, -0.17, 0.07); c.closePath(); W(c, C.red);
     rr(c, 0.06, 0.06, 0.07, 0.2, 0.03); W(c, C.red);           // scarf tail: the mark
   },
+  boss(c, o) {                                       // the boss: shirt collar and a dark tie, no hat
+    bust(c, o); eyes(c, o);
+    c.beginPath(); c.moveTo(0, 0.02); c.lineTo(-0.045, 0.08); c.lineTo(0, 0.34); c.lineTo(0.045, 0.08); c.closePath(); B(c);
+    c.beginPath(); c.moveTo(-0.12, -0.01); c.lineTo(0, 0.1); c.lineTo(0.12, -0.01); S(c, 0.025, C.bg);
+  },
   admin(c, o) {
     bust(c, o); eyes(c, o);
     rr(c, -0.24, -0.33, 0.48, 0.05, 0.02); W(c, o.col); rr(c, -0.14, -0.47, 0.28, 0.16, 0.04); W(c, o.col);  // hat

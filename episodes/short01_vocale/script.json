@@ -58,7 +58,7 @@
         "i": "text",
         "text": "0:00",
         "y": -0.75,
-        "s": 2.3,
+        "s": 2.2,
         "a": "impact"
        },
        {
@@ -124,8 +124,8 @@
       "els": [
        {
         "i": "you",
-        "s": 2.5,
-        "y": 0.3,
+        "s": 2.0,
+        "y": 0.0,
         "a": "still",
         "sweat": true
        }
@@ -153,6 +153,7 @@
          {
           "who": "me",
           "text": "Chi è?",
+          "big": true,
           "at": "chi",
           "strike": "chi"
          }
@@ -180,8 +181,8 @@
       "els": [
        {
         "i": "mic",
-        "y": -0.15,
-        "s": 2.4,
+        "y": -0.1,
+        "s": 2.0,
         "a": "still",
         "thumb": true
        }
@@ -192,8 +193,8 @@
       "els": [
        {
         "i": "mic",
-        "y": -0.15,
-        "s": 2.4,
+        "y": -0.1,
+        "s": 2.0,
         "a": "still",
         "thumb": true,
         "press": "microfono"
@@ -205,12 +206,13 @@
       "els": [
        {
         "i": "mic",
-        "y": -0.15,
-        "s": 2.2,
+        "y": -0.1,
+        "s": 2.1,
         "a": "still",
         "rec": true,
         "timer": "0:01",
-        "thumb": true
+        "thumb": true,
+        "pressed": true
        }
       ]
      }
@@ -286,8 +288,8 @@
       "els": [
        {
         "i": "you",
-        "s": 2.5,
-        "y": 0.3,
+        "s": 2.0,
+        "y": 0.0,
         "a": "still"
        },
        {
@@ -317,12 +319,13 @@
       "els": [
        {
         "i": "mic",
-        "y": -0.15,
-        "s": 2.4,
+        "y": -0.1,
+        "s": 2.0,
         "a": "still",
         "rec": true,
         "timer": "0:02",
-        "thumb": true
+        "thumb": true,
+        "pressed": true
        }
       ]
      },
@@ -331,12 +334,13 @@
       "els": [
        {
         "i": "mic",
-        "y": -0.15,
-        "s": 2.6,
+        "y": -0.1,
+        "s": 2.25,
         "a": "still",
         "rec": true,
         "timer": "0:02",
-        "thumb": true
+        "thumb": true,
+        "pressed": true
        }
       ],
       "shake": true
@@ -362,8 +366,8 @@
        {
         "i": "text",
         "text": "09:00",
-        "s": 3.0,
-        "y": -0.2,
+        "s": 2.3,
+        "y": -0.1,
         "a": "impact"
        }
       ]
@@ -372,9 +376,28 @@
       "at": "capo",
       "els": [
        {
+        "i": "boss",
+        "s": 1.7,
+        "y": 0.15,
+        "a": "still"
+       },
+       {
+        "i": "text",
+        "text": "CAPO",
+        "s": 0.8,
+        "y": -1.05,
+        "col": "dim",
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "vocale",
+      "els": [
+       {
         "i": "vchat",
         "x": 0,
-        "y": -0.45,
+        "y": -0.3,
         "s": 1.12,
         "head": "CAPO",
         "clock": "09:00",
@@ -383,8 +406,7 @@
           "who": "me",
           "voice": "0:02",
           "full": true,
-          "time": "09:00 ✓✓",
-          "at": "vocale"
+          "time": "09:00 ✓✓"
          }
         ],
         "a": "still"
@@ -481,12 +503,13 @@
       "dt": -0.08,
       "els": [
        {
-        "i": "quote",
-        "text": "PERFETTO. TI ASPETTO.",
-        "col": "red",
-        "g": "red",
-        "s": 1.35,
-        "y": -0.2,
+        "i": "bigbubble",
+        "lines": [
+         "Perfetto.",
+         "Ti aspetto."
+        ],
+        "s": 1.0,
+        "y": -0.15,
         "a": "impact"
        }
       ],
