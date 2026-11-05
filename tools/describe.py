@@ -4,6 +4,13 @@ Chapters come from timing.json once the episode is narrated; before that they ar
 import json, os, subprocess, sys
 ep = sys.argv[1]; S = json.load(open(f'{ep}/script.json')); Y = S['youtube']
 fmt = lambda s: f'{int(s // 60)}:{int(s % 60):02d}'
+if Y.get('short'):                      # Shorts: title, two lines, five tags, real length from timing.json
+    dur = json.load(open(f'{ep}/timing.json'))['duration'] if os.path.exists(f'{ep}/timing.json') else None
+    tags = ', '.join(Y['tags'])
+    md = [f"# {Y['title']}", '', f"**Titolo:** {len(Y['title'])} caratteri" + (f" · **Durata reale:** {dur:.1f} s (da timing.json)" if dur else ''), '']
+    if Y.get('publish'): md += [f"**Pubblicazione:** {Y['publish']}", '']
+    md += ['## Descrizione', '', '```', *Y['intro'], Y['question'], '```', '', f"## Tag ({len(Y['tags'])} tag, {len(tags)} caratteri)", '', '```', tags, '```', '']
+    open(f'{ep}/youtube.md', 'w').write('\n'.join(md)); print('\n'.join(md)); sys.exit()
 if os.path.exists(f'{ep}/timing.json'):
     T = {l['id']: l for l in json.load(open(f'{ep}/timing.json'))['lines']}; start = {i: (0 if i == 1 else T[i]['start'] - 0.1) for i in T}; est = False
 else:

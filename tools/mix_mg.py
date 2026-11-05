@@ -36,20 +36,28 @@ for e in sorted(E['ev'], key=lambda e: e['t']):
         if e['t'] - last_cut > 2.2: place('soft_whoosh', e['t'] - 0.12, -27); last_cut = e['t']
         continue
     for key, dt, g, dur in MAP.get(e['k'], []): place(key, e['t'] + dt, g, dur)
-bed = load(f'{A.sfx}/{A.bed}.mp3')
-if A.bed_lp:
+NOISE = E.get('bed') == 'noise'                # shorts: a low, steady room noise instead of music
+if NOISE:
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'lavfi', '-i', f'anoisesrc=color=brown:amplitude=0.5:duration={D + 2}:seed=7', '-af', 'highpass=f=60,lowpass=f=1400', '-ar', str(SR), '-ac', '1', '/tmp/_n.wav'], check=True)
+    bed, _ = sf.read('/tmp/_n.wav', dtype='float32'); bed = np.concatenate([bed, np.zeros(max(0, N - len(bed)), np.float32)])[:N]
+    bed *= 10 ** ((lufs(V) - 24 - lufs(bed)) / 20)
+else:
+  bed = load(f'{A.sfx}/{A.bed}.mp3')
+if not NOISE and A.bed_lp:
     sf.write('/tmp/_b.wav', bed, SR); subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', '/tmp/_b.wav', '-af', f'lowpass=f={A.bed_lp},highpass=f=45', '/tmp/_b2.wav'], check=True); bed, _ = sf.read('/tmp/_b2.wav', dtype='float32')
-# skip the quiet intro and the fade-out tail, then loop with a 4 s crossfade (no holes in the bed)
-bed = bed[int(6 * SR): len(bed) - int(14 * SR)]; xf = int(4 * SR); loop = bed.copy()
-while len(loop) < N + SR:
+if not NOISE:
+  # skip the quiet intro and the fade-out tail, then loop with a 4 s crossfade (no holes in the bed)
+  bed = bed[int(6 * SR): len(bed) - int(14 * SR)]; xf = int(4 * SR); loop = bed.copy()
+  while len(loop) < N + SR:
     r = np.linspace(0, 1, xf, dtype=np.float32); head = loop[:-xf]; tail = loop[-xf:] * (1 - r) + bed[:xf] * r
     loop = np.concatenate([head, tail, bed[xf:]])
-bed = loop[:N]; bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: 60 * SR])) / 20)
-g = np.ones(N, np.float32); g[: int(1.5 * SR)] = np.linspace(0, 1, int(1.5 * SR))
+  bed = loop[:N]; bed *= 10 ** ((lufs(V) - A.bed_under - lufs(bed[: 60 * SR])) / 20)
+g = np.ones(N, np.float32)
+if not NOISE: g[: int(1.5 * SR)] = np.linspace(0, 1, int(1.5 * SR))
 lines = {l['id']: l for l in E['lines']}
 for lid in (E.get('dips') if E.get('dips') is not None else (79, 85)):   # dip before the big moments
     if lid in lines: c = lines[lid]['cut']; a, b = int((c - 0.8) * SR), int(c * SR); g[a:b] = np.linspace(1, 0.15, b - a); g[b:b + int(0.6 * SR)] = np.linspace(0.15, 1.25, int(0.6 * SR)); g[b + int(0.6 * SR):] *= 1.25
-g[int((D - 2.5) * SR):] *= np.linspace(1, 0, N - int((D - 2.5) * SR))
+if not NOISE: g[int((D - 2.5) * SR):] *= np.linspace(1, 0, N - int((D - 2.5) * SR))   # shorts cut dead on the last word
 mix = (V + FX + bed * g)[: int(D * SR)]
 sf.write('/tmp/_pre.wav', np.stack([mix, mix], 1), SR)
 o = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', '/tmp/_pre.wav', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr

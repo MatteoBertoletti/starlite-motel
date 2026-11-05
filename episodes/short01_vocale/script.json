@@ -1,0 +1,280 @@
+{
+ "title": "Se Ti Arriva Un Vocale Di 0 Secondi… NON RISPONDERE",
+ "format": "vertical",
+ "bed": "noise",
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.15,
+ "end_pad": 0.12,
+ "default_gap": 0.3,
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Se ti arriva un vocale di zero secondi, non rispondere.",
+   "cap": "Se ti arriva un vocale di 0 secondi, non rispondere.",
+   "red": "rispondere",
+   "v": {
+    "els": [
+     {
+      "i": "vchat",
+      "y": -0.55,
+      "s": 1.0,
+      "head": "SCONOSCIUTO",
+      "clock": "02:47",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:00",
+        "flat": true,
+        "time": "02:47"
+       }
+      ],
+      "a": "still"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Nemmeno «chi è?».",
+   "cap": "Nemmeno «chi è?».",
+   "red": "chi",
+   "v": {
+    "els": [
+     {
+      "i": "vchat",
+      "y": -0.55,
+      "s": 1.0,
+      "head": "SCONOSCIUTO",
+      "clock": "02:47",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:00",
+        "flat": true,
+        "time": "02:47"
+       },
+       {
+        "who": "me",
+        "text": "Chi è?",
+        "at": "chi",
+        "strike": "chi"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Hai già il pollice sul microfono. Lo faresti per educazione.",
+   "cap": "Hai già il pollice sul microfono. Lo faresti per educazione.",
+   "red": "microfono",
+   "v": {
+    "els": [
+     {
+      "i": "you",
+      "x": -0.62,
+      "y": -0.75,
+      "s": 0.75
+     },
+     {
+      "i": "mic",
+      "y": 0.2,
+      "s": 1.4,
+      "thumb": "pollice"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "microfono"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
+   "cap": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
+   "red": "vuoto",
+   "v": {
+    "els": [
+     {
+      "i": "vchat",
+      "y": -0.3,
+      "s": 1.0,
+      "head": "SCONOSCIUTO",
+      "clock": "02:47",
+      "msgs": [
+       {
+        "who": "them",
+        "voice": "0:00",
+        "flat": true,
+        "time": "02:47",
+        "glow": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Gli serve la tua.",
+   "cap": "Gli serve la tua.",
+   "red": "tua",
+   "v": {
+    "els": [
+     {
+      "i": "you",
+      "s": 1.5,
+      "y": -0.2
+     },
+     {
+      "i": "waves",
+      "x": 0.55,
+      "y": -0.45,
+      "s": 0.6,
+      "col": "red",
+      "at": "tua"
+     }
+    ],
+    "fx": "glitch@tua",
+    "sfx": [
+     [
+      "hit",
+      "tua"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "Bastano due secondi.",
+   "cap": "Bastano due secondi.",
+   "red": "due",
+   "v": {
+    "els": [
+     {
+      "i": "mic",
+      "y": 0.2,
+      "s": 1.4,
+      "rec": "bastano",
+      "timer": "0:02",
+      "thumb": true
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
+   "gap": 0.5,
+   "cap": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
+   "red": "domenica",
+   "v": {
+    "els": [
+     {
+      "i": "vchat",
+      "y": -0.75,
+      "s": 1.0,
+      "head": "CAPO",
+      "clock": "09:00",
+      "msgs": [
+       {
+        "who": "me",
+        "voice": "0:02",
+        "time": "09:00 ✓✓",
+        "at": "vocale"
+       },
+       {
+        "who": "them",
+        "text": "…",
+        "typing": "Perfetto. Ti aspetto.",
+        "at": "problema"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "vocale"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "say": "Ha già risposto: «Perfetto. Ti aspetto.»",
+   "cap": "Ha già risposto: «Perfetto. Ti aspetto.»",
+   "red": "aspetto",
+   "v": {
+    "els": [
+     {
+      "i": "vchat",
+      "y": -0.75,
+      "s": 1.0,
+      "head": "CAPO",
+      "clock": "09:00",
+      "msgs": [
+       {
+        "who": "me",
+        "voice": "0:02",
+        "time": "09:00 ✓✓"
+       },
+       {
+        "who": "them",
+        "text": "…",
+        "typing": "Perfetto. Ti aspetto.",
+        "textat": "perfetto",
+        "col": "red",
+        "time": "09:00"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "perfetto"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Ti Arriva Un Vocale Di 0 Secondi… NON RISPONDERE",
+  "publish": "giovedì 5 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un vocale vuoto non vuole la sua voce. Vuole la tua."
+  ],
+  "question": "👇 Tu l'avresti fatto, il vocale «chi è?»? Scrivilo nei commenti. #Shorts",
+  "question_last": true,
+  "short": true,
+  "tags": [
+   "vocale di 0 secondi",
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "shorts"
+  ]
+ }
+}

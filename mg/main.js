@@ -4,15 +4,16 @@ import { ICONS, C, T, rings } from './icons.js';
 
 const Q = new URLSearchParams(location.search);
 const EP = Q.get('ep') || 'ep01_citofono';
-const FW = 1920, FH = 1080, FPS = 30;
-const out = document.getElementById('film'); out.width = FW; out.height = FH;
-const ctx = out.getContext('2d');
-const stage = document.createElement('canvas'); stage.width = FW; stage.height = FH; const sc = stage.getContext('2d');
 
 for (const [w, f] of [['600', 'montserrat-latin-600-normal'], ['800', 'montserrat-latin-800-normal'], ['900', 'montserrat-latin-900-normal']]) {
   const ff = new FontFace('Montserrat', `url(./node_modules/@fontsource/montserrat/files/${f}.woff2)`, { weight: w }); await ff.load(); document.fonts.add(ff);
 }
 const SCRIPT = await (await fetch(`./episodes/${EP}/script.json`)).json();
+const VERT = SCRIPT.format === 'vertical';                      // 9:16 shorts: the whole stage is drawn at 1080x1920, nothing is cropped
+const FW = VERT ? 1080 : 1920, FH = VERT ? 1920 : 1080, FPS = 30;
+const out = document.getElementById('film'); out.width = FW; out.height = FH; out.style.width = FW + 'px'; out.style.height = FH + 'px';
+const ctx = out.getContext('2d');
+const stage = document.createElement('canvas'); stage.width = FW; stage.height = FH; const sc = stage.getContext('2d');
 let TIM = null;
 try { const r = await fetch(`./episodes/${EP}/timing.json`, { cache: 'no-store' }); if (r.ok) TIM = await r.json(); } catch (e) { }
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’-]/g, ' ').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
@@ -37,7 +38,7 @@ const clamp01 = x => Math.max(0, Math.min(1, x));
 const easeOut = x => 1 - Math.pow(1 - clamp01(x), 3);
 const backOut = x => { x = clamp01(x); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
 const hash = n => { const s = Math.sin(n * 127.1 + 311.7) * 43758.5453; return s - Math.floor(s); };
-const CX = FW / 2, CY = 450, UX = 720, UY = 330, US = 430;   // stage centre and units
+const CX = FW / 2, CY = VERT ? 800 : 450, UX = VERT ? 400 : 720, UY = VERT ? 420 : 330, US = VERT ? 400 : 430;   // stage centre and units
 const GLOW = { white: 'rgba(242,239,232,0.75)', gold: 'rgba(245,196,81,0.95)', red: 'rgba(229,50,45,0.95)' };
 const colOf = n => n === 'red' ? C.red : n === 'gold' ? C.gold : n === 'green' ? C.green : n === 'dim' ? '#8d8981' : C.w;
 
@@ -102,6 +103,8 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'waveform') { c.scale(sc, sc); waveUI(c, el, L, lt, tt, size); }
   else if (i === 'nav') { c.scale(sc, sc); navUI(c, el, L, lt, tt, size); }
   else if (i === 'windshield') { c.scale(sc, sc); windUI(c, el, L, lt, tt, size); }
+  else if (i === 'vchat') { c.scale(sc, sc); vchatUI(c, el, L, lt, tt, size); }
+  else if (i === 'mic') { c.scale(sc, sc); micUI(c, el, L, lt, tt, size); }
   else if (i === 'hall') { c.scale(sc, sc); hallUI(c, el, L, lt, tt, size); }
   else if (i === 'plan') { c.scale(sc, sc); planUI(c, el, L, lt, tt, size); }
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
@@ -241,7 +244,7 @@ function bubble(c, S, y, m, u, lt, tt, L) {
   if (m.voice) {
     const cy = y + bh / 2; c.fillStyle = C.bg; c.beginPath(); c.moveTo(x + u * 5, cy - u * 3.5); c.lineTo(x + u * 11, cy); c.lineTo(x + u * 5, cy + u * 3.5); c.closePath(); c.fill();
     const n = 26, x0 = x + u * 15, x1 = x + bw - u * 14, prog = m.play ? clamp01(lt / Math.max(1, (L.next - L.cut) - 0.3)) : 0;
-    for (let k = 0; k < n; k++) { const hh = u * (1.5 + 5 * Math.abs(Math.sin(k * 1.7) * Math.cos(k * 0.6))); const xx = x0 + (x1 - x0) * k / (n - 1); c.fillStyle = k / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.6, cy - hh, u * 1.2, hh * 2); }
+    for (let k = 0; k < n; k++) { const hh = m.flat ? u * 0.6 : u * (1.5 + 5 * Math.abs(Math.sin(k * 1.7) * Math.cos(k * 0.6))); const xx = x0 + (x1 - x0) * k / (n - 1); c.fillStyle = k / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.6, cy - hh, u * 1.2, hh * 2); }
     txt(c, m.voice, x + bw - u * 3, cy, u * 4, '800', C.bg, 'right', 'middle');
   } else lines.forEach((ln, k) => txt(c, ln, x + pad, y + pad + u * 2.6 + k * u * 7.4, u * 5.6, '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle'));
   if (m.time || m.tick) txt(c, (m.time || '') + (m.tick ? (m.tick === 2 ? '  ✓✓' : '  ✓') : ''), me ? x + bw : x, y + bh + u * 3.4, u * 3.6, '600', '#8d8981', me ? 'right' : 'left', 'middle');
@@ -431,6 +434,57 @@ function windUI(c, el, L, lt, tt, size) {
 }
 
 
+
+// ---------- shorts: a big generic chat (no app, no logo) and the microphone button ----------
+function vchatUI(c, el, L, lt, tt, size) {
+  const W = size * 2.3, u = W / 100, W2 = W / 2; let y = 0;
+  if (el.head) { c.beginPath(); c.arc(-W2 + u * 5, y, u * 4.2, 0, 7); c.fillStyle = '#26241f'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();
+    c.beginPath(); c.arc(-W2 + u * 5, y - u * 1, u * 1.6, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.beginPath(); c.arc(-W2 + u * 5, y + u * 3.6, u * 2.8, Math.PI * 1.15, Math.PI * 1.85); c.fill();
+    txt(c, el.head, -W2 + u * 12, y, u * 5.2, '900', C.w, 'left', 'middle', 2);
+    if (el.clock) txt(c, el.clock, W2, y, u * 5.2, '800', '#8d8981', 'right', 'middle', 2);
+    c.fillStyle = '#26241f'; c.fillRect(-W2, y + u * 7, W, u * 0.4); y += u * 14; }
+  for (const m of el.msgs || []) {
+    if (m.at !== undefined && lt < at(L, m.at)) continue;
+    const k = m.at !== undefined ? easeOut((lt - at(L, m.at)) / 0.25) : 1, me = m.who === 'me';
+    c.save(); c.globalAlpha *= k; c.translate(0, (1 - k) * u * 5);
+    let bw, bh; const col = m.col === 'red' ? C.red : me ? C.gold : C.w;
+    let text = m.text; if (m.typing && m.textat !== undefined && lt >= at(L, m.textat)) text = m.typing;   // dots, then the words
+    const dots = m.typing && text === m.text && m.text === '…';
+    if (m.voice) { bw = u * 86; bh = u * 19; }
+    else { c.font = `800 ${u * 6.4}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * 15; }
+    const x = me ? W2 - bw : -W2;
+    c.save(); if (m.col === 'red' || m.glow) { c.shadowColor = m.col === 'red' ? GLOW.red : GLOW.white; c.shadowBlur = 36; }
+    c.beginPath(); c.roundRect(x, y, bw, bh, u * 5); c.fillStyle = col; c.fill(); c.restore();
+    const cy = y + bh / 2;
+    if (m.voice) {
+      c.fillStyle = C.bg; c.beginPath(); c.moveTo(x + u * 6, cy - u * 4); c.lineTo(x + u * 13, cy); c.lineTo(x + u * 6, cy + u * 4); c.closePath(); c.fill();
+      const n = 22, x0 = x + u * 18, x1 = x + bw - u * 26;
+      for (let j = 0; j < n; j++) { const hh = m.flat ? u * 0.5 : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
+      txt(c, m.voice, x + bw - u * 4, cy + u * 0.3, u * 9, '900', C.bg, 'right', 'middle');
+    } else if (dots) { for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + Math.sin(tt * 8 + j) * u * 0.8, u * 1.6, 0, 7); c.fillStyle = C.bg; c.fill(); } }
+    else txt(c, text, x + u * 5, cy + u * 0.3, u * 6.4, '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
+    if (m.strike !== undefined && lt >= at(L, m.strike) + 0.25) { const sk = clamp01((lt - at(L, m.strike) - 0.25) / 0.2); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20;
+      c.beginPath(); c.moveTo(x - u * 2, cy + u * 4); c.lineTo(x - u * 2 + (bw + u * 4) * sk, cy - u * 4); c.lineWidth = u * 1.6; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+    if (m.time) txt(c, m.time, me ? W2 : -W2, y + bh + u * 4, u * 3.8, '800', '#8d8981', me ? 'right' : 'left', 'middle', 2);
+    c.restore(); y += bh + u * (m.time ? 10 : 5);
+  }
+}
+function micUI(c, el, L, lt, tt, size) {
+  const r = size * 0.42, rec = el.rec !== undefined && lt >= at(L, el.rec);
+  if (rec) for (let k = 0; k < 3; k++) { const a = (tt * 1.2 + k / 3) % 1; c.save(); c.globalAlpha *= 1 - a; c.beginPath(); c.arc(0, 0, r * (1 + a * 0.9), 0, 7); c.lineWidth = 8; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+  c.save(); c.shadowColor = rec ? GLOW.red : GLOW.white; c.shadowBlur = 40; c.beginPath(); c.arc(0, 0, r, 0, 7); c.fillStyle = rec ? C.red : C.w; c.fill(); c.restore();
+  const ink = rec ? C.w : C.bg; c.fillStyle = ink; c.strokeStyle = ink; c.lineCap = 'round';
+  c.beginPath(); c.roundRect(-r * 0.17, -r * 0.5, r * 0.34, r * 0.62, r * 0.17); c.fill();
+  c.beginPath(); c.arc(0, -r * 0.08, r * 0.3, 0.15, Math.PI - 0.15); c.lineWidth = r * 0.07; c.stroke(); c.beginPath(); c.moveTo(0, r * 0.22); c.lineTo(0, r * 0.4); c.stroke();
+  if (el.timer && rec) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30; txt(c, el.timer, 0, -r * 1.55, r * 0.62, '900', C.red, 'center', 'middle'); c.restore(); }
+  if (el.thumb !== undefined) {                                   // the thumb rises from below and stops just above the button
+    const k = easeOut(clamp01((lt - (el.thumb === true ? 0 : at(L, el.thumb))) / 0.9)), ty = r * 2.6 - k * r * 1.75, hover = k >= 1 ? Math.sin(tt * 3) * 4 : 0;
+    c.save(); c.translate(r * 0.15, ty + hover); c.rotate(-0.18);
+    c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 2.2, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
+    c.beginPath(); c.roundRect(-r * 0.22, -r * 0.08, r * 0.44, r * 0.5, r * 0.14); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#9a958c'; c.stroke();
+    c.restore(); }
+}
+
 // ---------- Caso 004: the flat ----------
 function paw(c, x, y, r, rot) { c.save(); c.translate(x, y); c.rotate(rot); c.beginPath(); c.ellipse(0, 0, r, r * 0.85, 0, 0, 7); c.fill();
   for (const [dx, dy] of [[-0.95, -1.05], [-0.32, -1.5], [0.32, -1.5], [0.95, -1.05]]) { c.beginPath(); c.ellipse(dx * r, dy * r, r * 0.33, r * 0.4, 0, 0, 7); c.fill(); } c.restore(); }
@@ -582,6 +636,7 @@ function endCard(c, L, lt) {
 const GRAIN = Array.from({ length: 6 }, (_, g) => { const cv = document.createElement('canvas'); cv.width = 480; cv.height = 270; const x = cv.getContext('2d'); const im = x.createImageData(480, 270);
   for (let i = 0; i < im.data.length; i += 4) { const v = hash(i * 0.37 + g * 1013) * 255; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; } x.putImageData(im, 0, 0); return cv; });
 function hud(c, t, L) {
+  if (VERT) return;                                   // shorts: no HUD, no logo
   c.save();
   txt(c, SCRIPT.case, 70, 58, 24, '600', '#8d8981', 'left', 'middle', 6);
   const seen = rulesSeen(t); const cur = L.rule || (seen.length ? Math.max(...seen) : 0);
@@ -589,8 +644,24 @@ function hud(c, t, L) {
   txt(c, `${SCRIPT.night}  ·  ${clockAt(t)}`, FW - 70, 58, 26, '800', '#d9d5cc', 'right', 'middle', 4);
   c.restore();
 }
+function captionV(c, L, t) {                        // shorts: big burned-in words, revealed as they are spoken, one red word
+  const lt = t - L.cut; const words = L.cap.toUpperCase().split(/\s+/), toks = L.tokens, red = L.red ? norm(L.red)[0] : null;
+  const FS = 84, LH = 102, MAXW = 840, CXC = CX - 30; c.save(); c.font = `900 ${FS}px Montserrat`;   // clear of the Shorts buttons on the right and the title at the bottom
+  const rows = []; let cur = [];
+  for (const w of words) { const tst = [...cur, w].join(' '); if (c.measureText(tst).width > MAXW && cur.length) { rows.push(cur); cur = [w]; } else cur.push(w); } rows.push(cur);
+  let wi = 0; const y0 = 1300 - (rows.length - 1) * LH / 2;
+  rows.forEach((row, r) => { const full = c.measureText(row.join(' ')).width; let x = CXC - full / 2;
+    for (const w of row) { const ti = Math.min(toks.length - 1, Math.round(wi * toks.length / words.length)); const ts = toks.length ? toks[ti].s - L.cut : 0;
+      const k = clamp01((lt - ts + 0.05) / 0.12), isRed = red && norm(w)[0] === red, ww = c.measureText(w + ' ').width;
+      if (k > 0) { c.save(); c.globalAlpha = k; c.shadowColor = isRed ? GLOW.red : 'rgba(0,0,0,0.9)'; c.shadowBlur = isRed ? 30 : 16;
+        c.lineWidth = 12; c.strokeStyle = '#000'; c.lineJoin = 'round'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.strokeText(w, x, y0 + r * LH);
+        c.fillStyle = isRed ? C.red : '#f4f1ea'; c.fillText(w, x, y0 + r * LH); c.restore(); }
+      x += ww; wi++; } });
+  c.restore();
+}
 function caption(c, L, t) {
   const lt = t - L.cut; if (!L.cap || L.v?.t === 'choice' || L.v?.t === 'end') return;
+  if (VERT) return captionV(c, L, t);
   c.save(); c.globalAlpha = clamp01(lt / 0.15); c.shadowColor = 'rgba(242,239,232,0.55)'; c.shadowBlur = 18;
   wrap(c, L.cap.toUpperCase(), CX, 968, 1640, 50, '800', '#f4f1ea', 62); c.restore();
 }
@@ -601,10 +672,10 @@ window.seek = (t) => {
   const L = LINES[li], lt = t - L.cut, v = L.v || {};
   // stage (everything that can glitch / shake / zoom)
   sc.setTransform(1, 0, 0, 1, 0, 0); sc.globalAlpha = 1; sc.fillStyle = C.bg; sc.fillRect(0, 0, FW, FH);
-  const push = 1 + 0.035 * (1 - easeOut(lt / 0.5));                   // every cut lands with a small push
+  const push = 1 + 0.035 * (1 - easeOut(lt / 0.5)) * (VERT && t < 0.5 ? 0 : 1);   // every cut lands with a small push
   const dLine = L.next - L.cut, toEnd = L.next - t;
   const creep = 1 + 0.035 * clamp01(lt / Math.max(1, dLine));          // slow push-in through the line
-  const exitK = clamp01(1 - toEnd / 0.16);                             // quick scale-out into the next cut
+  const exitK = VERT && L === LINES[LINES.length - 1] ? 0 : clamp01(1 - toEnd / 0.16);   // quick scale-out into the next cut (not at the end of a short)
   const drift = creep * (1 - 0.04 * exitK) * (1 + 0.008 * Math.sin(t * 0.21));
   // dust: a few slow motes (deterministic)
   for (let i = 0; i < 40; i++) { const px = (hash(i) * FW + t * (6 + hash(i + 1) * 14)) % FW, py = (hash(i + 2) * FH - t * (3 + hash(i + 3) * 8) + FH * 10) % FH;
@@ -644,7 +715,8 @@ window.seek = (t) => {
   hud(ctx, t, L);
   caption(ctx, L, t);
   // fade in / out
-  const fade = Math.min(clamp01(t / 0.6), clamp01((DUR - t) / 1.2)); if (fade < 1) { ctx.fillStyle = `rgba(0,0,0,${1 - fade})`; ctx.fillRect(0, 0, FW, FH); }
+  const fade = VERT ? 1 : Math.min(clamp01(t / 0.6), clamp01((DUR - t) / 1.2)); if (fade < 1)   // shorts open on the object and cut dead at the end
+   { ctx.fillStyle = `rgba(0,0,0,${1 - fade})`; ctx.fillRect(0, 0, FW, FH); }
 };
 
 // events for the sound mix: one sound per beat
@@ -659,6 +731,6 @@ for (const L of LINES) {
   if (v.t === 'choice') ev.push({ t: L.cut, k: 'boom' });
   if (v.t === 'end') ev.push({ t: L.cut, k: 'end_hit' });
 }
-window.EVENTS = { dips: SCRIPT.dips, duration: DUR, estimated: !!TIM.estimated, ev, lines: LINES.map(L => ({ id: L.id, cut: L.cut, start: L.start, end: L.end })) };
+window.EVENTS = { bed: SCRIPT.bed, dips: SCRIPT.dips, width: FW, height: FH, duration: DUR, estimated: !!TIM.estimated, ev, lines: LINES.map(L => ({ id: L.id, cut: L.cut, start: L.start, end: L.end })) };
 window.SHOTS = LINES.map(L => [L.id, L.cut]);
 window.ready = true;
