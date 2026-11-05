@@ -113,6 +113,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'windshield') { c.scale(sc, sc); windUI(c, el, L, lt, tt, size); }
   else if (i === 'vchat') { c.scale(sc, sc); vchatUI(c, el, L, lt, tt, size); }
   else if (i === 'mic') { c.scale(sc, sc); micUI(c, el, L, lt, tt, size); }
+  else if (i === 'floor') { c.scale(sc, sc); floorUI(c, el, L, lt, tt, size); }
   else if (i === 'hall') { c.scale(sc, sc); hallUI(c, el, L, lt, tt, size); }
   else if (i === 'plan') { c.scale(sc, sc); planUI(c, el, L, lt, tt, size); }
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
@@ -129,6 +130,9 @@ function drawEl(c, el, L, lt, tt) {
       if (el.zoomgap) { const z = easeOut(lt / 3); c.translate(0, -size * 0.3 * z); c.scale(1 + 0.8 * z, 1 + 0.8 * z); } }
     if (i === 'elevator') { o.openK = el.open === true ? 1 : el.open ? easeOut((lt - at(L, el.open)) / 0.8) : 0; o.sinkK = el.sink ? easeOut((lt - at(L, el.sink)) / 1.5) : 0; if (el.sink) c.translate(0, o.sinkK * size * 0.04); }
     const wk = w => w === true ? 1 : w ? clamp01((lt - at(L, w)) / 0.5) : 0;
+    o.tt = tt;
+    if (i === 'shoe') { o.steamK = el.steam ? (el.steam === true ? 1 : clamp01((lt - at(L, el.steam) - (el._dt || 0)) / 0.4)) : 0; o.emptyK = el.empty ? 1 : 0; }
+    if (i === 'sofa') o.sitterK = el.sitter ? (el.sitter === true ? 1 : (lt >= at(L, el.sitter) ? 1 : 0)) : 0;
     if (i === 'car') o.openK = el.open ? easeOut(wk(el.open)) : 0;
     if (i === 'mirror') o.ghostK = el.ghost === true ? 0.85 : el.ghost ? 0.85 * clamp01((lt - at(L, el.ghost)) / 1.2) : 0;
     if (i === 'padlock') o.openK = el.open ? backOut(wk(el.open)) : 0;
@@ -494,6 +498,29 @@ function micUI(c, el, L, lt, tt, size) {
     c.save(); c.translate(r * 0.15, ty + hover); c.rotate(-0.18);
     c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 1.0, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
     c.beginPath(); c.roundRect(-r * 0.22, -r * 0.08, r * 0.44, r * 0.5, r * 0.14); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#9a958c'; c.stroke();
+    c.restore(); }
+}
+
+
+// ---------- Short 002: the floor seen from above, footprints of one foot only ----------
+function footprint(c, x, y, s, rot) { c.save(); c.translate(x, y); c.rotate(rot); c.beginPath(); c.ellipse(0, 0, s * 0.42, s, 0, 0, 7); c.fill();
+  [[-0.32, -1.25, 0.2], [-0.05, -1.38, 0.17], [0.18, -1.32, 0.15], [0.36, -1.18, 0.13], [0.48, -0.98, 0.11]].forEach(([dx, dy, r]) => { c.beginPath(); c.arc(dx * s, dy * s, r * s, 0, 7); c.fill(); }); c.restore(); }
+function floorUI(c, el, L, lt, tt, size) {
+  const w = size * 2.2, h = size * 2.6, W2 = w / 2, H2 = h / 2, u = w / 100;
+  c.fillStyle = '#121214'; c.fillRect(-W2, -H2, w, h);
+  for (let j = 1; j < 12; j++) { c.fillStyle = 'rgba(242,239,232,0.05)'; c.fillRect(-W2, -H2 + j * h / 12, w, 2); }     // floorboards
+  c.lineWidth = u * 1.4; c.strokeStyle = C.w; c.strokeRect(-W2, -H2, w, h);
+  const dx = W2 * 0.45; c.fillStyle = '#121214'; c.fillRect(dx - u * 12, -H2 - u, u * 24, u * 2.5);                   // the door, top
+  c.beginPath(); c.moveTo(dx - u * 12, -H2); c.lineTo(dx - u * 12, -H2 + u * 24); c.lineWidth = u * 1.0; c.stroke(); c.beginPath(); c.arc(dx - u * 12, -H2, u * 24, 0, Math.PI / 2); c.lineWidth = u * 0.4; c.setLineDash([u, u]); c.stroke(); c.setLineDash([]);
+  txt(c, 'PORTA', dx, -H2 + u * 5, u * 3.6, '800', '#8d8981', 'center', 'middle', 3);
+  const sx = -W2 * 0.35, sy = H2 - u * 18;                                                                               // the sofa, bottom, top-down
+  c.beginPath(); c.roundRect(sx - u * 30, sy - u * 9, u * 60, u * 22, u * 3); c.fillStyle = '#3a3936'; c.fill(); c.lineWidth = u * 0.8; c.stroke();
+  c.beginPath(); c.roundRect(sx - u * 26, sy - u * 9, u * 52, u * 14, u * 2); c.fillStyle = '#4a4844'; c.fill();
+  txt(c, 'DIVANO', sx, sy + u * 8.5, u * 3.6, '800', '#d9d5cc', 'center', 'middle', 3);
+  if (el.prints !== undefined) { const k = clamp01((lt - (el.prints === true ? -9 : at(L, el.prints) + (el._dt || 0))) / 2.0), n = 9;
+    c.save(); c.fillStyle = C.red; c.shadowColor = GLOW.red; c.shadowBlur = 16;
+    for (let j = 0; j < n * k; j++) { const t = j / (n - 1), x = dx + (sx + u * 8 - dx) * t + Math.sin(j * 2.1) * u * 1.5, y = -H2 + u * 30 + (sy - u * 16 - (-H2 + u * 30)) * t;
+      footprint(c, x, y, u * 3.3, Math.atan2(sx - dx, -(sy + H2))); }
     c.restore(); }
 }
 

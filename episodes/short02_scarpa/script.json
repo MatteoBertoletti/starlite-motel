@@ -1,0 +1,344 @@
+{
+ "title": "Se Il Cane Ti Porta Una Scarpa Non Tua… NON RESTITUIRLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "hush_before": 7,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.05,
+ "end_pad": 0.2,
+ "default_gap": 0.27,
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Se il cane ti porta una scarpa che non è tua, non restituirla.",
+   "capfull": true,
+   "cap": "Se il cane ti porta una scarpa che non è tua, non restituirla.",
+   "red": "restituirla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.3,
+        "y": -0.05,
+        "a": "buzz",
+        "shoe": true
+       }
+      ]
+     },
+     {
+      "at": "scarpa",
+      "els": [
+       {
+        "i": "shoe",
+        "s": 2.6,
+        "y": -0.1,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "tua",
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.5,
+        "y": -0.05,
+        "a": "still",
+        "shoe": true,
+        "tilt": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Ti stai già alzando dal divano, per gentilezza.",
+   "cap": "Ti stai già alzando dal divano, per gentilezza.",
+   "red": "gentilezza",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.3,
+        "y": 0.05,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.3,
+        "x": -0.35,
+        "y": -0.45,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "divano",
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.0,
+        "y": 0.25,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.4,
+        "x": -0.35,
+        "y": -0.95,
+        "a": "rise"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "Ma chi perde una scarpa non resta fuori a cercarla.",
+   "cap_pages": [
+    "Ma chi perde una scarpa",
+    "non resta fuori a cercarla."
+   ],
+   "cap": "Ma chi perde una scarpa non resta fuori a cercarla.",
+   "red": "fuori",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "shoe",
+        "s": 2.2,
+        "y": -0.1,
+        "a": "slide"
+       }
+      ]
+     },
+     {
+      "at": "fuori",
+      "els": [
+       {
+        "i": "door",
+        "s": 2.0,
+        "y": -0.05,
+        "gap": true,
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "È da uomo, numero quarantatré, ancora tiepida.",
+   "cap": "È da uomo, numero 43, ancora tiepida.",
+   "red": "43",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "shoe",
+        "s": 2.5,
+        "y": -0.1,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "numero",
+      "els": [
+       {
+        "i": "shoe",
+        "s": 3.0,
+        "y": -0.1,
+        "a": "still",
+        "x": 0.1,
+        "num": "43"
+       }
+      ]
+     },
+     {
+      "at": "tiepida",
+      "els": [
+       {
+        "i": "shoe",
+        "s": 2.5,
+        "y": -0.1,
+        "a": "still",
+        "steam": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Il cane non l'ha trovata in giardino. L'ha tolta a qualcuno.",
+   "cap_pages": [
+    "Il cane non l'ha trovata in giardino.",
+    "L'ha tolta a qualcuno."
+   ],
+   "cap": "Il cane non l'ha trovata in giardino. L'ha tolta a qualcuno.",
+   "red": "tolta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.3,
+        "y": -0.05,
+        "a": "still",
+        "guilty": true
+       }
+      ]
+     },
+     {
+      "at": "tolta",
+      "dt": -0.15,
+      "els": [
+       {
+        "i": "shoe",
+        "s": 2.8,
+        "y": -0.1,
+        "a": "still",
+        "empty": true
+       }
+      ],
+      "shake": true
+     }
+    ],
+    "fx": "glitch@qualcuno"
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "Guarda il pavimento: impronte di un piede solo, dalla porta al divano.",
+   "gap": 0.3,
+   "cap_pages": [
+    "Guarda il pavimento: impronte di un piede solo,",
+    "dalla porta al divano."
+   ],
+   "cap": "Guarda il pavimento: impronte di un piede solo, dalla porta al divano.",
+   "red": "solo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "floor",
+        "s": 1.0,
+        "y": 0.0,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "impronte",
+      "els": [
+       {
+        "i": "floor",
+        "s": 1.0,
+        "y": 0.0,
+        "prints": "impronte",
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "porta",
+      "els": [
+       {
+        "i": "floor",
+        "s": 1.25,
+        "y": -0.2,
+        "prints": true,
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Il tuo posto. Adesso è occupato.",
+   "cap": "Il tuo posto. Adesso è occupato.",
+   "red": "occupato",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.4,
+        "y": 0.05,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "occupato",
+      "dt": -0.05,
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.6,
+        "y": 0.05,
+        "a": "still",
+        "sitter": true
+       }
+      ],
+      "shake": true
+     }
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Cane Ti Porta Una Scarpa Non Tua… NON RESTITUIRLA",
+  "publish": "venerdì 6 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Il cane ti porta una scarpa da uomo, numero 43, ancora tiepida. Non è tua."
+  ],
+  "question": "👇 Tu la restituiresti? Scrivilo nei commenti. #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "cane",
+   "scarpa",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}

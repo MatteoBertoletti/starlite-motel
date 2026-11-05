@@ -328,3 +328,50 @@ ICONS.idcard = (c, o) => {
   T(c, "CARTA D'IDENTITÀ", -0.4, -0.22, 0.06, '900', C.bg, 'left', 'alphabetic');
   for (let i = 0; i < 4; i++) { rr(c, -0.06, -0.12 + i * 0.09, 0.44 - (i % 2) * 0.12, 0.03, 0.01); W(c, '#9a958c'); }
 };
+
+// ---- Short 002: the dog, the shoe, the sofa ----
+const BROWN = '#8a5a2e', SOLE = '#3b2614';
+ICONS.shoe = (c, o) => {                               // a man's brown leather shoe, side view, toe to the right
+  c.beginPath(); c.moveTo(-0.44, 0.12); c.lineTo(-0.44, -0.12); c.quadraticCurveTo(-0.43, -0.2, -0.33, -0.2); c.lineTo(-0.16, -0.2);
+  c.quadraticCurveTo(-0.05, -0.08, 0.12, -0.07); c.quadraticCurveTo(0.4, -0.06, 0.46, 0.04); c.quadraticCurveTo(0.48, 0.12, 0.4, 0.13); c.closePath();
+  c.fillStyle = BROWN; c.fill(); c.lineWidth = 0.022; c.strokeStyle = C.w; c.stroke();
+  c.beginPath(); c.moveTo(-0.45, 0.12); c.lineTo(0.42, 0.13); c.quadraticCurveTo(0.47, 0.13, 0.46, 0.18); c.lineTo(-0.45, 0.18); c.closePath(); c.fillStyle = SOLE; c.fill(); c.stroke();
+  c.beginPath(); c.moveTo(-0.44, 0.18); c.lineTo(-0.44, 0.24); c.lineTo(-0.28, 0.24); c.lineTo(-0.28, 0.18); c.closePath(); c.fillStyle = SOLE; c.fill(); c.stroke();   // heel
+  c.beginPath(); c.ellipse(-0.27, -0.2, 0.11, 0.035, 0, 0, 7); c.fillStyle = o.emptyK ? `rgba(0,0,0,1)` : '#2a1a0c'; c.fill();                                // the opening
+  if (o.emptyK) { c.save(); c.globalAlpha *= o.emptyK; c.shadowColor = 'rgba(229,50,45,0.9)'; c.shadowBlur = 0.0; c.beginPath(); c.ellipse(-0.27, -0.2, 0.11, 0.035, 0, 0, 7); c.lineWidth = 0.012; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+  for (let k = 0; k < 4; k++) { c.beginPath(); c.moveTo(-0.12 + k * 0.05, -0.15 + k * 0.022); c.lineTo(-0.07 + k * 0.05, -0.13 + k * 0.022); S(c, 0.016, '#e8d9c0'); }   // laces
+  c.beginPath(); c.moveTo(0.16, -0.06); c.quadraticCurveTo(0.2, 0.0, 0.16, 0.12); S(c, 0.012, '#5e3b1b');                                                        // toe-cap seam
+  if (o.num) { c.save(); T(c, o.num, 0.1, 0.0, 0.17, '900', C.red); c.restore(); }
+  if (o.steamK) for (let k = 0; k < 3; k++) { const ph = (o.tt * 0.6 + k / 3) % 1; c.save(); c.globalAlpha *= o.steamK * Math.sin(ph * Math.PI) * 0.8; c.beginPath();
+    for (let j = 0; j <= 10; j++) { const yy = -0.24 - ph * 0.35 - j * 0.025, xx = -0.32 + k * 0.06 + Math.sin(j * 0.9 + o.tt * 3 + k) * 0.02; j ? c.lineTo(xx, yy) : c.moveTo(xx, yy); } S(c, 0.014, '#d9d5cc'); c.restore(); }
+};
+ICONS.dog = (c, o) => {                                // a sitting dog, front view, big pleading eyes; o.shoe = shoe in its mouth
+  c.beginPath(); c.moveTo(-0.24, 0.46); c.quadraticCurveTo(-0.3, 0.12, -0.15, 0.02); c.lineTo(0.15, 0.02); c.quadraticCurveTo(0.3, 0.12, 0.24, 0.46); c.closePath(); W(c);   // body
+  rr(c, -0.16, 0.36, 0.11, 0.1, 0.04); W(c, '#e6e1d6'); rr(c, 0.05, 0.36, 0.11, 0.1, 0.04); W(c, '#e6e1d6');                                                         // paws
+  const wag = Math.sin((o.tt || 0) * 10) * 0.1; c.save(); c.translate(0.23, 0.38); c.rotate(-0.6 + wag); rr(c, 0, -0.025, 0.18, 0.05, 0.025); W(c); c.restore();     // tail
+  c.save(); c.rotate((o.tilt || 0) * 0.18);
+  c.beginPath(); c.ellipse(0, -0.17, 0.2, 0.18, 0, 0, 7); W(c);                                                                               // head
+  for (const s of [-1, 1]) { c.save(); c.translate(s * 0.18, -0.25); c.rotate(s * 0.25); c.beginPath(); c.ellipse(0, 0.08, 0.06, 0.14, 0, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.restore(); }   // floppy ears
+  c.beginPath(); c.ellipse(0, -0.08, 0.1, 0.075, 0, 0, 7); W(c, '#e6e1d6');                                                                   // snout
+  c.beginPath(); c.ellipse(0, -0.12, 0.035, 0.025, 0, 0, 7); B(c);                                                                             // nose
+  for (const s of [-1, 1]) { c.beginPath(); c.ellipse(s * 0.075, -0.21, 0.032, 0.038, 0, 0, 7); B(c); c.beginPath(); c.arc(s * 0.075 + 0.01, -0.225, 0.011, 0, 7); W(c);
+    c.beginPath(); c.moveTo(s * 0.04, -0.27); c.lineTo(s * 0.11, -0.285 + (o.guilty ? 0.02 : -0.01)); S(c, 0.018, C.bg); }                     // eyes + brows
+  if (o.shoe) { c.save(); c.translate(0.02, -0.03); c.rotate(-0.08); c.scale(0.55, 0.55); ICONS.shoe(c, { tt: o.tt }); c.restore(); }
+  else { c.beginPath(); c.moveTo(-0.04, -0.05); c.quadraticCurveTo(0, -0.02, 0.04, -0.05); S(c, 0.014, C.bg); }
+  c.restore();
+};
+ICONS.sofa = (c, o) => {                               // front view; o.sitter = a dark figure sitting, one brown shoe only
+  rr(c, -0.46, -0.2, 0.92, 0.3, 0.06); c.fillStyle = '#3a3936'; c.fill(); S(c, 0.02);                    // back
+  rr(c, -0.5, -0.02, 0.14, 0.34, 0.05); c.fillStyle = '#3a3936'; c.fill(); S(c, 0.02); rr(c, 0.36, -0.02, 0.14, 0.34, 0.05); c.fill(); S(c, 0.02);   // arms
+  rr(c, -0.36, 0.08, 0.36, 0.14, 0.03); c.fillStyle = '#4a4844'; c.fill(); S(c, 0.016); rr(c, 0.0, 0.08, 0.36, 0.14, 0.03); c.fill(); S(c, 0.016);    // cushions
+  rr(c, -0.36, 0.22, 0.72, 0.1, 0.02); c.fillStyle = '#3a3936'; c.fill(); S(c, 0.016);
+  for (const x of [-0.42, 0.38]) { rr(c, x, 0.32, 0.04, 0.06, 0.01); W(c, '#8d8981'); }
+  if (o.sitterK) { c.save(); c.globalAlpha *= o.sitterK; const bl = '#000';
+    circ(c, 0.17, -0.33, 0.085); c.fillStyle = bl; c.fill(); S(c, 0.012, C.dim);
+    c.beginPath(); c.moveTo(0.05, 0.1); c.quadraticCurveTo(0.04, -0.2, 0.17, -0.23); c.quadraticCurveTo(0.3, -0.2, 0.29, 0.1); c.closePath(); c.fillStyle = bl; c.fill(); S(c, 0.012, C.dim);
+    rr(c, 0.06, 0.06, 0.22, 0.08, 0.03); c.fillStyle = bl; c.fill();                                       // thighs
+    rr(c, 0.07, 0.12, 0.06, 0.24, 0.02); c.fill(); rr(c, 0.2, 0.12, 0.06, 0.24, 0.02); c.fill();          // shins
+    c.save(); c.translate(0.12, 0.38); c.scale(0.2, 0.2); ICONS.shoe(c, {}); c.restore();                  // one shoe
+    c.beginPath(); c.ellipse(0.25, 0.39, 0.04, 0.02, 0, 0, 7); c.fillStyle = '#26241f'; c.fill(); S(c, 0.008, C.dim);   // the other foot: a sock
+    c.fillStyle = C.red; circ(c, 0.15, -0.34, 0.012); c.fill(); circ(c, 0.19, -0.34, 0.012); c.fill(); c.restore(); }
+};

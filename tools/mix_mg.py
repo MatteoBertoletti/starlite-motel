@@ -52,7 +52,7 @@ if NOISE:
         th = (np.sin(2 * np.pi * 52 * ts) * np.exp(-ts * 14) + 0.5 * np.sin(2 * np.pi * 78 * ts) * np.exp(-ts * 22)).astype(np.float32)
         while tt < endp - 0.2:
             f = tt / endp; a = int(tt * SR); g0 = 0.35 + 0.65 * f; P[a:a + len(th)] += th[: N - a] * g0; tt += 1.15 - 0.6 * f
-        P *= 10 ** ((lufs(V) - (E.get('bed_under') or 24) + 2 - lufs(P)) / 20); bed = bed + P
+        P *= 10 ** ((lufs(V) - (E.get('bed_under') or 24) - 2 - lufs(P)) / 20); bed = bed + P   # 2 dB under the noise
 else:
   bed = load(f'{A.sfx}/{A.bed}.mp3')
 if not NOISE and A.bed_lp:
