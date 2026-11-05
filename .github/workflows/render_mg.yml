@@ -36,10 +36,8 @@ jobs:
         timeout-minutes: 15
         run: |
           pip install -q playwright
-          A="-o DPkg::Lock::Timeout=600 -o Acquire::Retries=3 -o Acquire::http::Timeout=20"
-          sudo apt-get $A update -qq || true
-          sudo apt-get $A install -y -qq ffmpeg
-          python -m playwright install --with-deps chromium || python -m playwright install chromium
+          bash tools/get_ffmpeg.sh
+          timeout 300 python -m playwright install --with-deps chromium || timeout 300 python -m playwright install chromium
       - run: |
           mkdir -p out && python tools/render.py --page film_mg.html --qs "ep=${{ inputs.ep }}" --from ${{ matrix.shard.from }} --to ${{ matrix.shard.to }} \
             --out out/seg_$(printf %02d ${{ matrix.shard.i }}).mp4 --events out/events.json
@@ -52,7 +50,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy soundfile
+      - name: ffmpeg and python packages
+        timeout-minutes: 10
+        run: bash tools/get_ffmpeg.sh && pip install -q numpy soundfile
       - uses: actions/download-artifact@v4
         with: { pattern: 'mgseg-*', path: segs, merge-multiple: true }
       - name: Voice + sounds
