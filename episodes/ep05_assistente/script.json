@@ -43,9 +43,9 @@
    "id": 1,
    "who": "N",
    "clock": "23:51",
-   "say": "Ventitré e cinquantuno. L'anello di luce si accende da solo.",
+   "say": "Sono le ventitré e cinquantuno. L'anello di luce si accende da solo.",
    "gap": 1.0,
-   "cap": "23:51. L'anello di luce si accende da solo.",
+   "cap": "Sono le 23:51. L'anello di luce si accende da solo.",
    "v": {
     "els": [
      {
