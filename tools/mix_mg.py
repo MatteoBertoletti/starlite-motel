@@ -29,9 +29,15 @@ MAP = {'rule': [('whoosh', -0.2, -17, None), ('slap', 0.0, -9, None)], 'buzz': [
        'glitch': [('glitch2', 0, -15, None)], 'hit': [('sting', 0, -8, None)], 'ding': [('ding', 0, -13, 1.6)], 'tick': [('tick', 0, -12, None)],
        'creak': [('creak_open', 0, -14, None)], 'steps': [('steps', 0, -17, 1.6)], 'click': [('switch', 0, -9, None)], 'keys': [('keys', 0, -12, 1.2)],
        'lock': [('lock', 0, -10, 1.0)], 'scrape': [('keys', 0, -11, 0.8)], 'door_shut': [('door_shut', 0, -11, None)], 'off': [('off', 0, -11, None), ('power_down', 0.05, -16, None)],
-       'knock': [('knock', 0, -6, 0.6)], 'paper': [('paper', 0, -16, None)], 'boom': [('boom', -0.05, -7, None)], 'end_hit': [('end_hit', 0, -9, None)]}
+       'knock': [('knock', 0, -6, 0.6)], 'redhit': [('slap', 0, -12, None)], 'paper': [('paper', 0, -16, None)], 'boom': [('boom', -0.05, -7, None)], 'end_hit': [('end_hit', 0, -9, None)]}
+def vibrate(t):                                 # a phone buzzing on a table: two short bursts, synthesised
+    ts = np.arange(int(0.36 * SR)) / SR; b = (np.sign(np.sin(2 * np.pi * 172 * ts)) * 0.6 + np.sin(2 * np.pi * 344 * ts) * 0.4) * (0.6 + 0.4 * np.sin(2 * np.pi * 9 * ts))
+    b = (b * np.minimum(1, ts / 0.01) * np.minimum(1, (ts[-1] - ts) / 0.03)).astype(np.float32); b *= 10 ** ((vref - 9 - act_db(b)) / 20)
+    for off in (0.0, 0.55):
+        a = int((t + off) * SR); FX[a:a + len(b)] += b[: N - a]
 last_cut = -9
 for e in sorted(E['ev'], key=lambda e: e['t']):
+    if e['k'] == 'vibrate': vibrate(e['t']); continue
     if e['k'] == 'cut':
         if e['t'] - last_cut > 2.2: place('soft_whoosh', e['t'] - 0.12, -27); last_cut = e['t']
         continue
@@ -40,7 +46,13 @@ NOISE = E.get('bed') == 'noise'                # shorts: a low, steady room nois
 if NOISE:
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'lavfi', '-i', f'anoisesrc=color=brown:amplitude=0.5:duration={D + 2}:seed=7', '-af', 'highpass=f=60,lowpass=f=1400', '-ar', str(SR), '-ac', '1', '/tmp/_n.wav'], check=True)
     bed, _ = sf.read('/tmp/_n.wav', dtype='float32'); bed = np.concatenate([bed, np.zeros(max(0, N - len(bed)), np.float32)])[:N]
-    bed *= 10 ** ((lufs(V) - 24 - lufs(bed)) / 20)
+    bed *= 10 ** ((lufs(V) - (E.get('bed_under') or 24) - lufs(bed)) / 20)
+    if E.get('pulse'):                          # a slow low thump that speeds up and grows until the last line
+        endp = [l for l in E['lines']][-1]['cut']; tt = 0.15; P = np.zeros(N, np.float32); ts = np.arange(int(0.28 * SR)) / SR
+        th = (np.sin(2 * np.pi * 52 * ts) * np.exp(-ts * 14) + 0.5 * np.sin(2 * np.pi * 78 * ts) * np.exp(-ts * 22)).astype(np.float32)
+        while tt < endp - 0.2:
+            f = tt / endp; a = int(tt * SR); g0 = 0.35 + 0.65 * f; P[a:a + len(th)] += th[: N - a] * g0; tt += 1.15 - 0.6 * f
+        P *= 10 ** ((lufs(V) - (E.get('bed_under') or 24) + 2 - lufs(P)) / 20); bed = bed + P
 else:
   bed = load(f'{A.sfx}/{A.bed}.mp3')
 if not NOISE and A.bed_lp:
@@ -58,6 +70,9 @@ lines = {l['id']: l for l in E['lines']}
 for lid in (E.get('dips') if E.get('dips') is not None else (79, 85)):   # dip before the big moments
     if lid in lines: c = lines[lid]['cut']; a, b = int((c - 0.8) * SR), int(c * SR); g[a:b] = np.linspace(1, 0.15, b - a); g[b:b + int(0.6 * SR)] = np.linspace(0.15, 1.25, int(0.6 * SR)); g[b + int(0.6 * SR):] *= 1.25
 if not NOISE: g[int((D - 2.5) * SR):] *= np.linspace(1, 0, N - int((D - 2.5) * SR))   # shorts cut dead on the last word
+if E.get('hush_before'):                        # silence under the pause before the last line, then the ding
+    lines_ = {l['id']: l for l in E['lines']}; Lh = lines_[E['hush_before']]; prev = [l for l in E['lines'] if l['id'] < E['hush_before']][-1]
+    a, b = int((prev['end'] + 0.02) * SR), int((Lh['start']) * SR); g[a:b] = 0.0; g[b:] = np.minimum(1, np.linspace(0, 1, N - b) * 6)[: N - b] * 0.7
 mix = (V + FX + bed * g)[: int(D * SR)]
 sf.write('/tmp/_pre.wav', np.stack([mix, mix], 1), SR)
 o = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', '/tmp/_pre.wav', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr

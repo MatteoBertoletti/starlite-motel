@@ -2,6 +2,10 @@
  "title": "Se Ti Arriva Un Vocale Di 0 Secondi… NON RISPONDERE",
  "format": "vertical",
  "bed": "noise",
+ "bed_under": 15,
+ "pulse": true,
+ "hush_before": 8,
+ "loop": true,
  "case": "",
  "night": "",
  "lang": "it",
@@ -10,67 +14,150 @@
    "role": "narratore, secco, senza enfasi"
   }
  },
- "start_pad": 0.15,
- "end_pad": 0.12,
- "default_gap": 0.6,
- "speed_N": 0.87,
+ "start_pad": 0.05,
+ "end_pad": 0.2,
+ "default_gap": 0.27,
+ "speed_N": 1.0,
  "dips": [],
  "lines": [
   {
    "id": 1,
    "who": "N",
-   "fx": "slow",
    "say": "Se ti arriva un vocale di zero secondi, non rispondere.",
+   "capfull": true,
    "cap": "Se ti arriva un vocale di 0 secondi, non rispondere.",
    "red": "rispondere",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "vchat",
-      "y": -0.55,
-      "s": 1.0,
-      "head": "SCONOSCIUTO",
-      "clock": "02:47",
-      "msgs": [
+      "els": [
        {
-        "who": "them",
-        "voice": "0:00",
-        "flat": true,
-        "time": "02:47"
+        "i": "vchat",
+        "x": 0,
+        "y": -0.45,
+        "s": 1.12,
+        "head": "SCONOSCIUTO",
+        "clock": "02:47",
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": "02:47"
+         }
+        ],
+        "a": "buzz"
+       }
+      ]
+     },
+     {
+      "at": "vocale",
+      "els": [
+       {
+        "i": "text",
+        "text": "0:00",
+        "y": -0.75,
+        "s": 2.3,
+        "a": "impact"
+       },
+       {
+        "i": "vchat",
+        "y": 0.12,
+        "s": 1.12,
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": null,
+          "pulse": true
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "non",
+      "els": [
+       {
+        "i": "vchat",
+        "x": 0,
+        "y": -0.35,
+        "s": 1.12,
+        "head": "SCONOSCIUTO",
+        "clock": "02:47",
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": "02:47"
+         }
+        ],
+        "a": "still"
        }
       ],
-      "a": "still"
+      "shake": true
      }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
     ]
    }
   },
   {
    "id": 2,
    "who": "N",
-   "fx": "slow",
    "say": "Nemmeno «chi è?».",
    "cap": "Nemmeno «chi è?».",
    "red": "chi",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "vchat",
-      "y": -0.55,
-      "s": 1.0,
-      "head": "SCONOSCIUTO",
-      "clock": "02:47",
-      "msgs": [
+      "els": [
        {
-        "who": "them",
-        "voice": "0:00",
-        "flat": true,
-        "time": "02:47"
-       },
+        "i": "you",
+        "s": 2.5,
+        "y": 0.3,
+        "a": "still",
+        "sweat": true
+       }
+      ]
+     },
+     {
+      "at": "chi",
+      "dt": -0.05,
+      "els": [
        {
-        "who": "me",
-        "text": "Chi è?",
-        "at": "chi",
-        "strike": "chi"
+        "i": "vchat",
+        "x": 0,
+        "y": -0.5,
+        "s": 1.12,
+        "head": "SCONOSCIUTO",
+        "clock": "02:47",
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": "02:47"
+         },
+         {
+          "who": "me",
+          "text": "Chi è?",
+          "at": "chi",
+          "strike": "chi"
+         }
+        ],
+        "a": "still"
        }
       ]
      }
@@ -80,55 +167,107 @@
   {
    "id": 3,
    "who": "N",
-   "fx": "slow",
    "say": "Hai già il pollice sul microfono. Lo faresti per educazione.",
+   "cap_pages": [
+    "Hai già il pollice sul microfono.",
+    "Lo faresti per educazione."
+   ],
    "cap": "Hai già il pollice sul microfono. Lo faresti per educazione.",
    "red": "microfono",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "you",
-      "x": -0.72,
-      "y": -1.42,
-      "s": 0.7
+      "els": [
+       {
+        "i": "mic",
+        "y": -0.15,
+        "s": 2.4,
+        "a": "still",
+        "thumb": true
+       }
+      ]
      },
      {
-      "i": "mic",
-      "y": -0.3,
-      "s": 1.4,
-      "thumb": "pollice"
+      "at": "microfono",
+      "els": [
+       {
+        "i": "mic",
+        "y": -0.15,
+        "s": 2.4,
+        "a": "still",
+        "thumb": true,
+        "press": "microfono"
+       }
+      ]
+     },
+     {
+      "at": "faresti",
+      "els": [
+       {
+        "i": "mic",
+        "y": -0.15,
+        "s": 2.2,
+        "a": "still",
+        "rec": true,
+        "timer": "0:01",
+        "thumb": true
+       }
+      ]
      }
-    ],
-    "sfx": [
-     [
-      "tick",
-      "microfono"
-     ]
     ]
    }
   },
   {
    "id": 4,
    "who": "N",
-   "fx": "slow",
    "say": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
+   "cap_pages": [
+    "Ma quel vocale è vuoto",
+    "perché non gli serve la sua voce."
+   ],
    "cap": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
    "red": "vuoto",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "vchat",
-      "y": -0.3,
-      "s": 1.0,
-      "head": "SCONOSCIUTO",
-      "clock": "02:47",
-      "msgs": [
+      "els": [
        {
-        "who": "them",
-        "voice": "0:00",
-        "flat": true,
-        "time": "02:47",
-        "glow": true
+        "i": "vchat",
+        "y": -0.2,
+        "s": 1.12,
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": null,
+          "pulse": true
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "perche",
+      "els": [
+       {
+        "i": "vchat",
+        "x": 0.35,
+        "y": -0.05,
+        "s": 1.9,
+        "msgs": [
+         {
+          "who": "them",
+          "voice": "0:00",
+          "flat": true,
+          "full": true,
+          "time": null,
+          "pulse": true
+         }
+        ],
+        "a": "still"
        }
       ]
      }
@@ -138,51 +277,69 @@
   {
    "id": 5,
    "who": "N",
-   "fx": "slow",
    "say": "Gli serve la tua.",
    "cap": "Gli serve la tua.",
    "red": "tua",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "you",
-      "s": 1.5,
-      "y": -0.35
-     },
-     {
-      "i": "waves",
-      "x": 0.55,
-      "y": -0.45,
-      "s": 0.6,
-      "col": "red",
-      "at": "tua"
+      "els": [
+       {
+        "i": "you",
+        "s": 2.5,
+        "y": 0.3,
+        "a": "still"
+       },
+       {
+        "i": "waves",
+        "x": 0.62,
+        "y": -0.62,
+        "s": 0.9,
+        "col": "red",
+        "g": "red",
+        "at": "tua"
+       }
+      ]
      }
     ],
-    "fx": "glitch@tua",
-    "sfx": [
-     [
-      "hit",
-      "tua"
-     ]
-    ]
+    "fx": "glitch@tua"
    }
   },
   {
    "id": 6,
    "who": "N",
-   "fx": "slow",
    "say": "Bastano due secondi.",
    "cap": "Bastano due secondi.",
    "red": "due",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "mic",
-      "y": -0.2,
-      "s": 1.4,
-      "rec": "bastano",
-      "timer": "0:02",
-      "thumb": true
+      "els": [
+       {
+        "i": "mic",
+        "y": -0.15,
+        "s": 2.4,
+        "a": "still",
+        "rec": true,
+        "timer": "0:02",
+        "thumb": true
+       }
+      ]
+     },
+     {
+      "at": "due",
+      "els": [
+       {
+        "i": "mic",
+        "y": -0.15,
+        "s": 2.6,
+        "a": "still",
+        "rec": true,
+        "timer": "0:02",
+        "thumb": true
+       }
+      ],
+      "shake": true
      }
     ]
    }
@@ -190,79 +347,156 @@
   {
    "id": 7,
    "who": "N",
-   "fx": "slow",
    "say": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
-   "gap": 0.5,
+   "gap": 0.3,
+   "cap_pages": [
+    "Alle nove il tuo capo riceve un tuo vocale:",
+    "«Domenica ci sono, nessun problema»."
+   ],
    "cap": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
    "red": "domenica",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "vchat",
-      "y": -0.75,
-      "s": 1.0,
-      "head": "CAPO",
-      "clock": "09:00",
-      "msgs": [
+      "els": [
        {
-        "who": "me",
-        "voice": "0:02",
-        "time": "09:00 ✓✓",
-        "at": "vocale"
-       },
+        "i": "text",
+        "text": "09:00",
+        "s": 3.0,
+        "y": -0.2,
+        "a": "impact"
+       }
+      ]
+     },
+     {
+      "at": "capo",
+      "els": [
        {
-        "who": "them",
-        "text": "…",
-        "typing": "Perfetto. Ti aspetto.",
-        "at": "problema"
+        "i": "vchat",
+        "x": 0,
+        "y": -0.45,
+        "s": 1.12,
+        "head": "CAPO",
+        "clock": "09:00",
+        "msgs": [
+         {
+          "who": "me",
+          "voice": "0:02",
+          "full": true,
+          "time": "09:00 ✓✓",
+          "at": "vocale"
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "domenica",
+      "dt": -0.1,
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.15,
+        "s": 1.12,
+        "msgs": [
+         {
+          "who": "me",
+          "voice": "0:02",
+          "full": true,
+          "time": null,
+          "play": "domenica"
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "problema",
+      "els": [
+       {
+        "i": "vchat",
+        "x": 0,
+        "y": -0.45,
+        "s": 1.12,
+        "head": "CAPO",
+        "clock": "09:00",
+        "msgs": [
+         {
+          "who": "me",
+          "voice": "0:02",
+          "full": true,
+          "time": "09:00 ✓✓"
+         },
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still"
        }
       ]
      }
-    ],
-    "sfx": [
-     [
-      "ding",
-      "vocale"
-     ]
     ]
    }
   },
   {
    "id": 8,
    "who": "N",
-   "fx": "slow",
    "say": "Ha già risposto: «Perfetto. Ti aspetto.»",
    "cap": "Ha già risposto: «Perfetto. Ti aspetto.»",
    "red": "aspetto",
    "v": {
-    "els": [
+    "shots": [
      {
-      "i": "vchat",
-      "y": -0.75,
-      "s": 1.0,
-      "head": "CAPO",
-      "clock": "09:00",
-      "msgs": [
+      "els": [
        {
-        "who": "me",
-        "voice": "0:02",
-        "time": "09:00 ✓✓"
-       },
-       {
-        "who": "them",
-        "text": "…",
-        "typing": "Perfetto. Ti aspetto.",
-        "textat": "perfetto",
-        "col": "red",
-        "time": "09:00"
+        "i": "vchat",
+        "x": 0,
+        "y": -0.45,
+        "s": 1.12,
+        "head": "CAPO",
+        "clock": "09:00",
+        "msgs": [
+         {
+          "who": "me",
+          "voice": "0:02",
+          "full": true,
+          "time": "09:00 ✓✓"
+         },
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still"
        }
       ]
+     },
+     {
+      "at": "perfetto",
+      "dt": -0.08,
+      "els": [
+       {
+        "i": "quote",
+        "text": "PERFETTO. TI ASPETTO.",
+        "col": "red",
+        "g": "red",
+        "s": 1.35,
+        "y": -0.2,
+        "a": "impact"
+       }
+      ],
+      "shake": true
      }
     ],
     "sfx": [
      [
       "ding",
-      "perfetto"
+      "ha"
      ]
     ]
    }

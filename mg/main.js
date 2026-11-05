@@ -38,7 +38,7 @@ const clamp01 = x => Math.max(0, Math.min(1, x));
 const easeOut = x => 1 - Math.pow(1 - clamp01(x), 3);
 const backOut = x => { x = clamp01(x); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
 const hash = n => { const s = Math.sin(n * 127.1 + 311.7) * 43758.5453; return s - Math.floor(s); };
-const CX = FW / 2, CY = VERT ? 800 : 450, UX = VERT ? 400 : 720, UY = VERT ? 420 : 330, US = VERT ? 400 : 430;   // stage centre and units
+const CX = FW / 2, CY = VERT ? 768 : 450, UX = VERT ? 400 : 720, UY = VERT ? 420 : 330, US = VERT ? 400 : 430;   // stage centre and units
 const GLOW = { white: 'rgba(242,239,232,0.75)', gold: 'rgba(245,196,81,0.95)', red: 'rgba(229,50,45,0.95)' };
 const colOf = n => n === 'red' ? C.red : n === 'gold' ? C.gold : n === 'green' ? C.green : n === 'dim' ? '#8d8981' : C.w;
 
@@ -58,7 +58,7 @@ const rulesSeen = t => Object.entries(RULE_AT).filter(([n, c]) => t >= c).map(([
 // ---------- one element ----------
 function drawEl(c, el, L, lt, tt) {
   // an element waits for its word; but if every element on the line waits, the first one is there from the cut
-  const t0 = el.at !== undefined && !el._lead ? at(L, el.at) : 0;
+  const t0 = el.at !== undefined && !el._lead ? at(L, el.at) + (el._dt || 0) : 0;
   const k = lt - t0; if (k < 0) return;
   const x = (el._local ? 0 : CX) + (el.x || 0) * UX, y = (el._local ? 0 : CY) + (el.y || 0) * UY, size = US * (el.s || 1);
   let dx = 0, dy = 0, sc = 1, rot = 0, al = 1;
@@ -74,6 +74,9 @@ function drawEl(c, el, L, lt, tt) {
   else if (a === 'flicker') al = k < 0.6 ? (hash(Math.floor(tt * 20)) > 0.4 ? 1 : 0.1) : 1;
   else if (a === 'slidein') { dy = 0; dx = -(1 - easeOut(k / 0.6)) * 260; al = clamp01(k / 0.2); }
   else if (a === 'push') { dx = (1 - easeOut(k / 0.6)) * 120; }
+  else if (a === 'buzz') { const on = (k < 0.4 || (k > 0.55 && k < 0.95)) ? 1 : 0; dx = on * Math.sin(k * 140) * 14; rot = on * Math.sin(k * 110) * 0.012; }
+  else if (a === 'impact') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)); al = clamp01(k / 0.05); }
+  else if (a === 'still') { }
   else if (a === 'insert') { dx = (1 - easeOut(k / 0.5)) * -160; al = clamp01(k / 0.15); }
   const until = el.until !== undefined ? at(L, el.until) : Infinity;
   if (el.hide !== undefined && lt > at(L, el.hide) + 0.15) return;
@@ -88,6 +91,8 @@ function drawEl(c, el, L, lt, tt) {
   const glow = el.g ? GLOW[el.g] : GLOW.white; c.shadowColor = glow; c.shadowBlur = el.g ? 42 : 26;
   const o = { ...el, col: el.col ? colOf(el.col) : undefined };
   const i = el.i;
+  if (el.sweat) { c.save(); c.shadowBlur = 0; for (let j = 0; j < 3; j++) { const ph = (tt * 0.9 + j / 3) % 1, sx = size * (j === 1 ? 0.2 : -0.17 + j * 0.05), sy = -size * 0.36 + ph * size * 0.28;
+    c.save(); c.globalAlpha *= 1 - ph; c.translate(sx, sy); c.beginPath(); c.moveTo(0, -size * 0.035); c.quadraticCurveTo(size * 0.025, 0, 0, size * 0.02); c.quadraticCurveTo(-size * 0.025, 0, 0, -size * 0.035); c.fillStyle = '#9fd3ff'; c.fill(); c.restore(); } c.restore(); }
   if (i === 'clock') { c.scale(sc, sc); txt(c, el.text, 0, 0, 250, '800', colOf(el.col), 'center', 'middle'); c.shadowBlur = 0; txt(c, SCRIPT.night, 0, -150, 34, '600', C.dim, 'center', 'middle', 10); }
   else if (i === 'text') { c.scale(sc, sc); txt(c, el.text, 0, 0, 120 * (el.s || 1), '900', colOf(el.col), 'center', 'middle'); }
   else if (i === 'quote') { const n = Math.floor(clamp01(k / Math.max(0.5, el.text.length * 0.028)) * el.text.length); txt(c, el.text.slice(0, n), 0, 0, 64, '900', colOf(el.col), 'center', 'middle'); }
@@ -450,7 +455,7 @@ function vchatUI(c, el, L, lt, tt, size) {
     let bw, bh; const col = m.col === 'red' ? C.red : me ? C.gold : C.w;
     let text = m.text; if (m.typing && m.textat !== undefined && lt >= at(L, m.textat)) text = m.typing;   // dots, then the words
     const dots = m.typing && text === m.text && m.text === '…';
-    if (m.voice) { bw = u * 86; bh = u * 19; }
+    if (m.voice) { bw = u * (m.full ? 100 : 86); bh = u * (m.full ? 24 : 19); }
     else { c.font = `800 ${u * 6.4}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * 15; }
     const x = me ? W2 - bw : -W2;
     c.save(); if (m.col === 'red' || m.glow) { c.shadowColor = m.col === 'red' ? GLOW.red : GLOW.white; c.shadowBlur = 36; }
@@ -459,7 +464,8 @@ function vchatUI(c, el, L, lt, tt, size) {
     if (m.voice) {
       c.fillStyle = C.bg; c.beginPath(); c.moveTo(x + u * 6, cy - u * 4); c.lineTo(x + u * 13, cy); c.lineTo(x + u * 6, cy + u * 4); c.closePath(); c.fill();
       const n = 22, x0 = x + u * 18, x1 = x + bw - u * 26;
-      for (let j = 0; j < n; j++) { const hh = m.flat ? u * 0.5 : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
+      const prog = m.play !== undefined ? clamp01((lt - at(L, m.play)) / 2.2) : 0;
+      for (let j = 0; j < n; j++) { const pulse = m.pulse ? u * (0.5 + 1.1 * Math.max(0, Math.sin(tt * 7 - j * 0.35))) : u * 0.5; const hh = m.flat ? pulse : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = j / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
       txt(c, m.voice, x + bw - u * 4, cy + u * 0.3, u * 9, '900', C.bg, 'right', 'middle');
     } else if (dots) { for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + Math.sin(tt * 8 + j) * u * 0.8, u * 1.6, 0, 7); c.fillStyle = C.bg; c.fill(); } }
     else txt(c, text, x + u * 5, cy + u * 0.3, u * 6.4, '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
@@ -470,7 +476,8 @@ function vchatUI(c, el, L, lt, tt, size) {
   }
 }
 function micUI(c, el, L, lt, tt, size) {
-  const r = size * 0.42, rec = el.rec !== undefined && lt >= at(L, el.rec);
+  const pressT = el.press !== undefined ? at(L, el.press) + (el._dt || 0) : null, r = size * 0.42, rec = (el.rec !== undefined && lt >= at(L, el.rec) + (el._dt || 0)) || el.rec === true || (pressT !== null && lt >= pressT + 0.12);
+  const squash = pressT !== null && lt >= pressT ? 1 - 0.06 * Math.sin(clamp01((lt - pressT) / 0.25) * Math.PI) : 1; c.scale(squash, squash);
   if (rec) for (let k = 0; k < 3; k++) { const a = (tt * 1.2 + k / 3) % 1; c.save(); c.globalAlpha *= 1 - a; c.beginPath(); c.arc(0, 0, r * (1 + a * 0.9), 0, 7); c.lineWidth = 8; c.strokeStyle = C.red; c.stroke(); c.restore(); }
   c.save(); c.shadowColor = rec ? GLOW.red : GLOW.white; c.shadowBlur = 40; c.beginPath(); c.arc(0, 0, r, 0, 7); c.fillStyle = rec ? C.red : C.w; c.fill(); c.restore();
   const ink = rec ? C.w : C.bg; c.fillStyle = ink; c.strokeStyle = ink; c.lineCap = 'round';
@@ -478,7 +485,8 @@ function micUI(c, el, L, lt, tt, size) {
   c.beginPath(); c.arc(0, -r * 0.08, r * 0.3, 0.15, Math.PI - 0.15); c.lineWidth = r * 0.07; c.stroke(); c.beginPath(); c.moveTo(0, r * 0.22); c.lineTo(0, r * 0.4); c.stroke();
   if (el.timer && rec) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30; txt(c, el.timer, 0, -r * 1.55, r * 0.62, '900', C.red, 'center', 'middle'); c.restore(); }
   if (el.thumb !== undefined) {                                   // the thumb rises from below and stops just above the button
-    const k = easeOut(clamp01((lt - (el.thumb === true ? 0 : at(L, el.thumb))) / 0.9)), ty = r * 2.6 - k * r * 1.75, hover = k >= 1 ? Math.sin(tt * 3) * 4 : 0;
+    const k = easeOut(clamp01((lt - (el.thumb === true ? 0 : at(L, el.thumb) + (el._dt || 0))) / 0.6)); let ty = r * 2.6 - k * r * 1.75, hover = k >= 1 && pressT === null ? Math.sin(tt * 3) * 4 : 0;
+    if (pressT !== null && lt >= pressT) ty -= r * 0.45 * easeOut(clamp01((lt - pressT) / 0.12));
     c.save(); c.translate(r * 0.15, ty + hover); c.rotate(-0.18);
     c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 1.3, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
     c.beginPath(); c.roundRect(-r * 0.22, -r * 0.08, r * 0.44, r * 0.5, r * 0.14); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#9a958c'; c.stroke();
@@ -644,18 +652,25 @@ function hud(c, t, L) {
   txt(c, `${SCRIPT.night}  ·  ${clockAt(t)}`, FW - 70, 58, 26, '800', '#d9d5cc', 'right', 'middle', 4);
   c.restore();
 }
-function captionV(c, L, t) {                        // shorts: big burned-in words, revealed as they are spoken, one red word
-  const lt = t - L.cut; const words = L.cap.toUpperCase().split(/\s+/), toks = L.tokens, red = L.red ? norm(L.red)[0] : null;
-  const FS = 84, LH = 102, MAXW = 840, CXC = CX - 30; c.save(); c.font = `900 ${FS}px Montserrat`;   // clear of the Shorts buttons on the right and the title at the bottom
-  const rows = []; let cur = [];
-  for (const w of words) { const tst = [...cur, w].join(' '); if (c.measureText(tst).width > MAXW && cur.length) { rows.push(cur); cur = [w]; } else cur.push(w); } rows.push(cur);
-  let wi = 0; const y0 = 1380 - (rows.length - 1) * LH / 2;
+const capTime = (L, wi, n) => { const toks = L.tokens; if (!toks.length) return 0; return toks[Math.min(toks.length - 1, Math.round(wi * toks.length / n))].s - L.cut; };
+function capRed(L) {                                  // seconds into the line when the red word is spoken (for the pop + hit)
+  if (!L.red || !L.cap) return null; const words = L.cap.split(/\s+/), r = norm(L.red)[0], wi = words.findIndex(w => norm(w)[0] === r); return wi < 0 ? null : capTime(L, wi, words.length);
+}
+function captionV(c, L, t) {                        // shorts: big burned-in words, revealed as spoken, max 3 rows per page, one red word that pops
+  const lt = t - L.cut, words = L.cap.toUpperCase().split(/\s+/), n = words.length, red = L.red ? norm(L.red)[0] : null;
+  const FS = 82, LH = 98, MAXW = 900, CXC = CX - 20; c.save(); c.font = `900 ${FS}px Montserrat`;
+  const pages = (L.cap_pages || [L.cap]).map(p => p.split(/\s+/).length); let w0 = 0, pi = 0;
+  const shownUpTo = L.capfull ? n : words.findLastIndex((w, i) => capTime(L, i, n) <= lt + 0.05);
+  for (let k = 0, acc = 0; k < pages.length; k++) { if (shownUpTo >= acc) { pi = k; w0 = acc; } acc += pages[k]; }
+  const pw = words.slice(w0, w0 + pages[pi]); const rows = []; let cur = [];
+  for (const w of pw) { const tst = [...cur, w].join(' '); if (c.measureText(tst).width > MAXW && cur.length) { rows.push(cur); cur = [w]; } else cur.push(w); } rows.push(cur);
+  let wi = w0; const y0 = 1430 - (rows.length - 1) * LH / 2;
   rows.forEach((row, r) => { const full = c.measureText(row.join(' ')).width; let x = CXC - full / 2;
-    for (const w of row) { const ti = Math.min(toks.length - 1, Math.round(wi * toks.length / words.length)); const ts = toks.length ? toks[ti].s - L.cut : 0;
-      const k = clamp01((lt - ts + 0.05) / 0.12), isRed = red && norm(w)[0] === red, ww = c.measureText(w + ' ').width;
-      if (k > 0) { c.save(); c.globalAlpha = k; c.shadowColor = isRed ? GLOW.red : 'rgba(0,0,0,0.9)'; c.shadowBlur = isRed ? 30 : 16;
-        c.lineWidth = 12; c.strokeStyle = '#000'; c.lineJoin = 'round'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.strokeText(w, x, y0 + r * LH);
-        c.fillStyle = isRed ? C.red : '#f4f1ea'; c.fillText(w, x, y0 + r * LH); c.restore(); }
+    for (const w of row) { const ts = L.capfull ? -1 : capTime(L, wi, n), k = clamp01((lt - ts + 0.05) / 0.08), isRed = red && norm(w)[0] === red, ww = c.measureText(w + ' ').width;
+      if (k > 0) { const pop = isRed ? 1 + 0.2 * clamp01(1 - (lt - ts) / 0.15) * (lt >= ts ? 1 : 0) : 1, wd = c.measureText(w).width;
+        c.save(); c.globalAlpha = k; c.translate(x + wd / 2, y0 + r * LH); c.scale(pop, pop);
+        c.shadowColor = isRed ? GLOW.red : 'rgba(0,0,0,0.9)'; c.shadowBlur = isRed ? 30 : 16; c.lineWidth = 12; c.strokeStyle = '#000'; c.lineJoin = 'round'; c.textAlign = 'center'; c.textBaseline = 'middle';
+        c.strokeText(w, 0, 0); c.fillStyle = isRed ? C.red : '#f4f1ea'; c.fillText(w, 0, 0); c.restore(); }
       x += ww; wi++; } });
   c.restore();
 }
@@ -669,25 +684,34 @@ function caption(c, L, t) {
 // ---------- the one entry point ----------
 window.seek = (t) => {
   let li = 0; for (let i = 0; i < LINES.length; i++) if (t >= LINES[i].cut) li = i;
+  const LOOP = VERT && SCRIPT.loop && t > LINES[LINES.length - 1].end + 0.04;   // last frames = first frame, for the loop
+  if (LOOP) t = 0;
+  if (LOOP) li = 0;
   const L = LINES[li], lt = t - L.cut, v = L.v || {};
+  let shot = null, st0 = 0, st1 = L.next - L.cut;          // current shot inside the line
+  if (v.shots) { v.shots.forEach((sh, k) => { const a0 = sh.at ? at(L, sh.at) + (sh.dt || 0) : 0; if (lt >= a0) { shot = sh; st0 = a0; } });
+    const nx = v.shots.map(sh => sh.at ? at(L, sh.at) + (sh.dt || 0) : 0).filter(a => a > st0); if (nx.length) st1 = Math.min(...nx); }
+  const slt = lt - st0;
   // stage (everything that can glitch / shake / zoom)
   sc.setTransform(1, 0, 0, 1, 0, 0); sc.globalAlpha = 1; sc.fillStyle = C.bg; sc.fillRect(0, 0, FW, FH);
-  const push = 1 + 0.035 * (1 - easeOut(lt / 0.5)) * (VERT && t < 0.5 ? 0 : 1);   // every cut lands with a small push
+  const push = 1 + 0.035 * (1 - easeOut((VERT ? slt : lt) / 0.5)) * (VERT && t < 0.5 ? 0 : 1);   // every cut lands with a small push
   const dLine = L.next - L.cut, toEnd = L.next - t;
-  const creep = 1 + 0.035 * clamp01(lt / Math.max(1, dLine));          // slow push-in through the line
-  const exitK = VERT && L === LINES[LINES.length - 1] ? 0 : clamp01(1 - toEnd / 0.16);   // quick scale-out into the next cut (not at the end of a short)
+  const creep = VERT ? 1 + 0.08 * clamp01(slt / Math.max(0.6, st1 - st0)) : 1 + 0.035 * clamp01(lt / Math.max(1, dLine));   // slow push-in (shorts: 1.00 -> 1.08 per shot)
+  const exitK = VERT ? 0 : clamp01(1 - toEnd / 0.16);   // quick scale-out into the next cut (not at the end of a short)
   const drift = creep * (1 - 0.04 * exitK) * (1 + 0.008 * Math.sin(t * 0.21));
   // dust: a few slow motes (deterministic)
   for (let i = 0; i < 40; i++) { const px = (hash(i) * FW + t * (6 + hash(i + 1) * 14)) % FW, py = (hash(i + 2) * FH - t * (3 + hash(i + 3) * 8) + FH * 10) % FH;
     sc.fillStyle = `rgba(242,239,232,${0.05 + 0.12 * hash(i + 4)})`; sc.beginPath(); sc.arc(px, py, 1 + hash(i + 5) * 1.6, 0, 7); sc.fill(); }
   let shx = 0, shy = 0;
-  if (v.fx === 'shake' && lt < 0.5) { shx = Math.sin(t * 90) * 14 * (1 - lt / 0.5); shy = Math.cos(t * 77) * 10 * (1 - lt / 0.5); }
+  const shk = shot && shot.shake ? slt : (v.fx === 'shake' ? lt : 9);
+  if (shk < 0.5) { shx = Math.sin(t * 90) * 14 * (1 - shk / 0.5); shy = Math.cos(t * 77) * 10 * (1 - shk / 0.5); }
   sc.translate(CX + shx, CY + shy); sc.scale(push * drift, push * drift); sc.translate(-CX, -CY);
   sc.globalAlpha = 1 - 0.85 * exitK;
   if (v.t === 'rule') ruleCard(sc, v.n, lt);
   else if (v.t === 'clash') clash(sc, v, L, lt, t);
   else if (v.t === 'choice') choice(sc, L, lt);
   else if (v.t === 'end') endCard(sc, L, lt);
+  else if (shot) { const sw = shot.at; (shot.els || []).forEach(el => drawEl(sc, el.at === undefined && sw ? { ...el, at: sw, _dt: shot.dt || 0 } : el, L, lt, t)); }
   else { const els = v.els || []; const lead = els.length && els.every(e => e.at !== undefined);
     els.forEach((el, i) => drawEl(sc, lead && i === 0 ? { ...el, _lead: true, a: el.a === 'shake' ? 'shake' : 'pop' } : el, L, lt, t)); }
   sc.setTransform(1, 0, 0, 1, 0, 0); sc.globalAlpha = 1;
@@ -730,7 +754,8 @@ for (const L of LINES) {
   if (v.fx && v.fx.startsWith('blackout@')) ev.push({ t: L.cut + at(L, v.fx.split('@')[1]), k: 'off' });
   if (v.t === 'choice') ev.push({ t: L.cut, k: 'boom' });
   if (v.t === 'end') ev.push({ t: L.cut, k: 'end_hit' });
+  if (VERT) { const r = capRed(L); if (r !== null) ev.push({ t: L.cut + Math.max(0, r), k: 'redhit' }); for (const sh of v.shots || []) if (sh.at) ev.push({ t: L.cut + at(L, sh.at) + (sh.dt || 0), k: 'cut' }); }
 }
-window.EVENTS = { bed: SCRIPT.bed, dips: SCRIPT.dips, width: FW, height: FH, duration: DUR, estimated: !!TIM.estimated, ev, lines: LINES.map(L => ({ id: L.id, cut: L.cut, start: L.start, end: L.end })) };
+window.EVENTS = { bed: SCRIPT.bed, bed_under: SCRIPT.bed_under, pulse: SCRIPT.pulse, hush_before: SCRIPT.hush_before, dips: SCRIPT.dips, width: FW, height: FH, duration: DUR, estimated: !!TIM.estimated, ev, lines: LINES.map(L => ({ id: L.id, cut: L.cut, start: L.start, end: L.end })) };
 window.SHOTS = LINES.map(L => [L.id, L.cut]);
 window.ready = true;
