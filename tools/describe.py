@@ -12,7 +12,7 @@ if Y.get('short'):                      # Shorts: title, two lines, five tags, r
     md += ['## Descrizione', '', '```', *Y['intro'], Y['question'], '```', '', f"## Tag ({len(Y['tags'])} tag, {len(tags)} caratteri)", '', '```', tags, '```', '']
     open(f'{ep}/youtube.md', 'w').write('\n'.join(md)); print('\n'.join(md)); sys.exit()
 if os.path.exists(f'{ep}/timing.json'):
-    T = {l['id']: l for l in json.load(open(f'{ep}/timing.json'))['lines']}; start = {i: (0 if i == 1 else T[i]['start'] - 0.1) for i in T}; est = False
+    T = {l['id']: l for l in json.load(open(f'{ep}/timing.json'))['lines']}; start = {i: (0 if i == 1 else T[i]['start']) for i in T}; est = False
 else:
     out = subprocess.run([sys.executable, 'tools/estimate.py', ep], capture_output=True, text=True).stdout
     start = {}; est = True
