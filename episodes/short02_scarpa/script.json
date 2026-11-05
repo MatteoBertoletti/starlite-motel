@@ -136,7 +136,7 @@
       ]
      },
      {
-      "at": "fuori",
+      "at": "non",
       "els": [
        {
         "i": "door",
@@ -146,6 +146,19 @@
         "a": "still"
        }
       ]
+     },
+     {
+      "at": "cercarla",
+      "els": [
+       {
+        "i": "door",
+        "s": 2.4,
+        "y": -0.05,
+        "gap": true,
+        "a": "still"
+       }
+      ],
+      "shake": true
      }
     ]
    }
@@ -220,6 +233,19 @@
       ]
      },
      {
+      "at": "giardino",
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.7,
+        "y": -0.05,
+        "a": "still",
+        "guilty": true,
+        "tilt": -1
+       }
+      ]
+     },
+     {
       "at": "tolta",
       "dt": -0.15,
       "els": [
@@ -253,7 +279,7 @@
      {
       "els": [
        {
-        "i": "floor",
+        "i": "topfloor",
         "s": 1.0,
         "y": 0.0,
         "a": "still"
@@ -264,7 +290,7 @@
       "at": "impronte",
       "els": [
        {
-        "i": "floor",
+        "i": "topfloor",
         "s": 1.0,
         "y": 0.0,
         "prints": "impronte",
@@ -273,12 +299,25 @@
       ]
      },
      {
+      "at": "solo",
+      "els": [
+       {
+        "i": "topfloor",
+        "s": 1.6,
+        "x": -0.25,
+        "y": 0.55,
+        "prints": true,
+        "a": "still"
+       }
+      ]
+     },
+     {
       "at": "porta",
       "els": [
        {
-        "i": "floor",
-        "s": 1.25,
-        "y": -0.2,
+        "i": "topfloor",
+        "s": 1.1,
+        "y": -0.1,
         "prints": true,
         "a": "still"
        }

@@ -355,8 +355,8 @@ ICONS.dog = (c, o) => {                                // a sitting dog, front v
   c.beginPath(); c.ellipse(0, -0.08, 0.1, 0.075, 0, 0, 7); W(c, '#e6e1d6');                                                                   // snout
   c.beginPath(); c.ellipse(0, -0.12, 0.035, 0.025, 0, 0, 7); B(c);                                                                             // nose
   for (const s of [-1, 1]) { c.beginPath(); c.ellipse(s * 0.075, -0.21, 0.032, 0.038, 0, 0, 7); B(c); c.beginPath(); c.arc(s * 0.075 + 0.01, -0.225, 0.011, 0, 7); W(c);
-    c.beginPath(); c.moveTo(s * 0.04, -0.27); c.lineTo(s * 0.11, -0.285 + (o.guilty ? 0.02 : -0.01)); S(c, 0.018, C.bg); }                     // eyes + brows
-  if (o.shoe) { c.save(); c.translate(0.02, -0.03); c.rotate(-0.08); c.scale(0.55, 0.55); ICONS.shoe(c, { tt: o.tt }); c.restore(); }
+    c.beginPath(); c.moveTo(s * 0.04, -0.3); c.lineTo(s * 0.11, -0.272 + (o.guilty ? 0.012 : 0)); S(c, 0.018, C.bg); }   // inner ends up: pleading, not angry                     // eyes + brows
+  if (o.shoe) { c.save(); c.translate(0.03, 0.0); c.rotate(-0.06); c.scale(0.44, 0.44); ICONS.shoe(c, { tt: o.tt }); c.restore(); }
   else { c.beginPath(); c.moveTo(-0.04, -0.05); c.quadraticCurveTo(0, -0.02, 0.04, -0.05); S(c, 0.014, C.bg); }
   c.restore();
 };
@@ -371,7 +371,7 @@ ICONS.sofa = (c, o) => {                               // front view; o.sitter =
     c.beginPath(); c.moveTo(0.05, 0.1); c.quadraticCurveTo(0.04, -0.2, 0.17, -0.23); c.quadraticCurveTo(0.3, -0.2, 0.29, 0.1); c.closePath(); c.fillStyle = bl; c.fill(); S(c, 0.012, C.dim);
     rr(c, 0.06, 0.06, 0.22, 0.08, 0.03); c.fillStyle = bl; c.fill();                                       // thighs
     rr(c, 0.07, 0.12, 0.06, 0.24, 0.02); c.fill(); rr(c, 0.2, 0.12, 0.06, 0.24, 0.02); c.fill();          // shins
-    c.save(); c.translate(0.12, 0.38); c.scale(0.2, 0.2); ICONS.shoe(c, {}); c.restore();                  // one shoe
+    c.save(); c.translate(0.11, 0.37); c.scale(0.27, 0.27); ICONS.shoe(c, {}); c.restore();                  // one shoe
     c.beginPath(); c.ellipse(0.25, 0.39, 0.04, 0.02, 0, 0, 7); c.fillStyle = '#26241f'; c.fill(); S(c, 0.008, C.dim);   // the other foot: a sock
     c.fillStyle = C.red; circ(c, 0.15, -0.34, 0.012); c.fill(); circ(c, 0.19, -0.34, 0.012); c.fill(); c.restore(); }
 };

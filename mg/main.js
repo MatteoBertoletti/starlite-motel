@@ -113,7 +113,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'windshield') { c.scale(sc, sc); windUI(c, el, L, lt, tt, size); }
   else if (i === 'vchat') { c.scale(sc, sc); vchatUI(c, el, L, lt, tt, size); }
   else if (i === 'mic') { c.scale(sc, sc); micUI(c, el, L, lt, tt, size); }
-  else if (i === 'floor') { c.scale(sc, sc); floorUI(c, el, L, lt, tt, size); }
+  else if (i === 'topfloor') { c.scale(sc, sc); floorUI(c, el, L, lt, tt, size); }
   else if (i === 'hall') { c.scale(sc, sc); hallUI(c, el, L, lt, tt, size); }
   else if (i === 'plan') { c.scale(sc, sc); planUI(c, el, L, lt, tt, size); }
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
@@ -517,10 +517,10 @@ function floorUI(c, el, L, lt, tt, size) {
   c.beginPath(); c.roundRect(sx - u * 30, sy - u * 9, u * 60, u * 22, u * 3); c.fillStyle = '#3a3936'; c.fill(); c.lineWidth = u * 0.8; c.stroke();
   c.beginPath(); c.roundRect(sx - u * 26, sy - u * 9, u * 52, u * 14, u * 2); c.fillStyle = '#4a4844'; c.fill();
   txt(c, 'DIVANO', sx, sy + u * 8.5, u * 3.6, '800', '#d9d5cc', 'center', 'middle', 3);
-  if (el.prints !== undefined) { const k = clamp01((lt - (el.prints === true ? -9 : at(L, el.prints) + (el._dt || 0))) / 2.0), n = 9;
+  if (el.prints !== undefined) { const k = clamp01((lt - (el.prints === true ? -9 : at(L, el.prints) + (el._dt || 0))) / 2.0), n = 6;
     c.save(); c.fillStyle = C.red; c.shadowColor = GLOW.red; c.shadowBlur = 16;
     for (let j = 0; j < n * k; j++) { const t = j / (n - 1), x = dx + (sx + u * 8 - dx) * t + Math.sin(j * 2.1) * u * 1.5, y = -H2 + u * 30 + (sy - u * 16 - (-H2 + u * 30)) * t;
-      footprint(c, x, y, u * 3.3, Math.atan2(sx - dx, -(sy + H2))); }
+      footprint(c, x, y, u * 5.2, Math.atan2(sx - dx, -(sy + H2))); }
     c.restore(); }
 }
 
