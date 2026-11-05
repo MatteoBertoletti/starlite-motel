@@ -41,7 +41,9 @@ jobs:
                timeout 300 python -m playwright install --with-deps chromium && \
                timeout 240 sudo apt-get -o Acquire::Retries=3 install -y -qq ffmpeg; then exit 0; fi
             echo "install attempt $k failed, retrying"; sleep 10
-          done; exit 1
+          done
+          # fallback: the runner image already has chromium's system libraries; install the browser alone
+          timeout 300 python -m playwright install chromium && (command -v ffmpeg || timeout 240 sudo apt-get install -y -qq ffmpeg)
       - run: |
           mkdir -p out && python tools/render.py --page film_mg.html --qs "ep=${{ inputs.ep }}" --from ${{ matrix.shard.from }} --to ${{ matrix.shard.to }} \
             --out out/seg_$(printf %02d ${{ matrix.shard.i }}).mp4 --events out/events.json
