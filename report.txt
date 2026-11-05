@@ -1,0 +1,11 @@
+  1 N         0.05-   3.71 match=1.00 eleven_v4 (cache) | Se ti arriva un vocale di zero secondi, non rispondere.
+  2 N         3.98-   5.43 match=1.00 eleven_v4 (cache) | Nemmeno «chi è ?»
+  3 N         5.70-   9.35 match=0.90 eleven_v4 (cache) | E' già il pollice sul microfono. Lo faresti per educazione.
+  4 N         9.62-  13.26 match=1.00 eleven_v4 (cache) | Ma quel vocale è vuoto perché non gli serve la sua voce.
+  5 N        13.53-  14.73 match=1.00 eleven_v4 (cache) | Gli serve la tua.
+  6 N        15.00-  16.41 match=1.00 eleven_v4 (cache) | Bastano due secondi.
+  7 N        16.68-  21.60 match=1.00 eleven_v4 (cache) | Alle nove il tuo capo riceve un tuo vocale, «Domenica ci sono, nessun problema».
+  8 N        21.90-  24.80 match=1.00 eleven_v4 (cache) | Ha già risposto. «Perfetto. Ti aspetto.»
+
+TOTAL 25.0s  new characters billed ~0  cached lines 8
+low match lines: []
