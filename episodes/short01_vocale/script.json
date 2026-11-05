@@ -12,8 +12,8 @@
  },
  "start_pad": 0.15,
  "end_pad": 0.12,
- "default_gap": 0.3,
- "speed_N": 1.0,
+ "default_gap": 0.42,
+ "speed_N": 0.87,
  "dips": [],
  "lines": [
   {
