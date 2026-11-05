@@ -1,0 +1,419 @@
+{
+ "duration": 25.4,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.15,
+   "end": 3.81,
+   "dur": 3.66,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.15,
+     "e": 0.31
+    },
+    {
+     "w": "ti",
+     "s": 0.31,
+     "e": 0.45
+    },
+    {
+     "w": "arriva",
+     "s": 0.45,
+     "e": 0.81
+    },
+    {
+     "w": "un",
+     "s": 0.81,
+     "e": 0.93
+    },
+    {
+     "w": "vocale",
+     "s": 0.93,
+     "e": 1.31
+    },
+    {
+     "w": "di",
+     "s": 1.31,
+     "e": 1.47
+    },
+    {
+     "w": "zero",
+     "s": 1.47,
+     "e": 1.75
+    },
+    {
+     "w": "secondi",
+     "s": 1.75,
+     "e": 2.53
+    },
+    {
+     "w": "non",
+     "s": 2.71,
+     "e": 2.89
+    },
+    {
+     "w": "rispondere",
+     "s": 2.89,
+     "e": 3.57
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se ti arriva un vocale di zero secondi, non rispondere."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.11,
+   "end": 5.56,
+   "dur": 1.45,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "nemmeno",
+     "s": 4.11,
+     "e": 4.73
+    },
+    {
+     "w": "chi",
+     "s": 4.73,
+     "e": 5.19
+    },
+    {
+     "w": "e",
+     "s": 5.19,
+     "e": 5.35
+    }
+   ],
+   "match": 1.0,
+   "heard": "Nemmeno «chi è ?»"
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 5.86,
+   "end": 9.51,
+   "dur": 3.65,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "hai",
+     "s": 5.79,
+     "e": 6.04
+    },
+    {
+     "w": "gia",
+     "s": 6.04,
+     "e": 6.16
+    },
+    {
+     "w": "il",
+     "s": 6.16,
+     "e": 6.32
+    },
+    {
+     "w": "pollice",
+     "s": 6.32,
+     "e": 6.68
+    },
+    {
+     "w": "sul",
+     "s": 6.68,
+     "e": 6.86
+    },
+    {
+     "w": "microfono",
+     "s": 6.86,
+     "e": 7.5
+    },
+    {
+     "w": "lo",
+     "s": 7.76,
+     "e": 8.0
+    },
+    {
+     "w": "faresti",
+     "s": 8.0,
+     "e": 8.42
+    },
+    {
+     "w": "per",
+     "s": 8.42,
+     "e": 8.62
+    },
+    {
+     "w": "educazione",
+     "s": 8.62,
+     "e": 9.28
+    }
+   ],
+   "match": 0.9,
+   "heard": "E' già il pollice sul microfono. Lo faresti per educazione."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.81,
+   "end": 13.45,
+   "dur": 3.64,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "ma",
+     "s": 9.81,
+     "e": 9.93
+    },
+    {
+     "w": "quel",
+     "s": 9.93,
+     "e": 10.13
+    },
+    {
+     "w": "vocale",
+     "s": 10.13,
+     "e": 10.69
+    },
+    {
+     "w": "e",
+     "s": 10.69,
+     "e": 10.89
+    },
+    {
+     "w": "vuoto",
+     "s": 10.89,
+     "e": 11.41
+    },
+    {
+     "w": "perche",
+     "s": 11.41,
+     "e": 11.81
+    },
+    {
+     "w": "non",
+     "s": 11.81,
+     "e": 12.05
+    },
+    {
+     "w": "gli",
+     "s": 12.05,
+     "e": 12.21
+    },
+    {
+     "w": "serve",
+     "s": 12.21,
+     "e": 12.55
+    },
+    {
+     "w": "la",
+     "s": 12.55,
+     "e": 12.75
+    },
+    {
+     "w": "sua",
+     "s": 12.75,
+     "e": 12.91
+    },
+    {
+     "w": "voce",
+     "s": 12.91,
+     "e": 13.29
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ma quel vocale è vuoto perché non gli serve la sua voce."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.75,
+   "end": 14.95,
+   "dur": 1.2,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "gli",
+     "s": 13.75,
+     "e": 13.93
+    },
+    {
+     "w": "serve",
+     "s": 13.93,
+     "e": 14.21
+    },
+    {
+     "w": "la",
+     "s": 14.21,
+     "e": 14.43
+    },
+    {
+     "w": "tua",
+     "s": 14.43,
+     "e": 14.75
+    }
+   ],
+   "match": 1.0,
+   "heard": "Gli serve la tua."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 15.25,
+   "end": 16.66,
+   "dur": 1.41,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "bastano",
+     "s": 15.25,
+     "e": 15.71
+    },
+    {
+     "w": "due",
+     "s": 15.71,
+     "e": 15.97
+    },
+    {
+     "w": "secondi",
+     "s": 15.97,
+     "e": 16.61
+    }
+   ],
+   "match": 1.0,
+   "heard": "Bastano due secondi."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 16.96,
+   "end": 21.88,
+   "dur": 4.92,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "alle",
+     "s": 16.96,
+     "e": 17.16
+    },
+    {
+     "w": "nove",
+     "s": 17.16,
+     "e": 17.48
+    },
+    {
+     "w": "il",
+     "s": 17.48,
+     "e": 17.8
+    },
+    {
+     "w": "tuo",
+     "s": 17.8,
+     "e": 18.06
+    },
+    {
+     "w": "capo",
+     "s": 18.06,
+     "e": 18.34
+    },
+    {
+     "w": "riceve",
+     "s": 18.34,
+     "e": 18.72
+    },
+    {
+     "w": "un",
+     "s": 18.72,
+     "e": 18.84
+    },
+    {
+     "w": "tuo",
+     "s": 18.84,
+     "e": 19.08
+    },
+    {
+     "w": "vocale",
+     "s": 19.08,
+     "e": 19.54
+    },
+    {
+     "w": "domenica",
+     "s": 19.8,
+     "e": 20.3
+    },
+    {
+     "w": "ci",
+     "s": 20.3,
+     "e": 20.44
+    },
+    {
+     "w": "sono",
+     "s": 20.44,
+     "e": 20.74
+    },
+    {
+     "w": "nessun",
+     "s": 20.98,
+     "e": 21.28
+    },
+    {
+     "w": "problema",
+     "s": 21.28,
+     "e": 21.86
+    }
+   ],
+   "match": 1.0,
+   "heard": "Alle nove il tuo capo riceve un tuo vocale, «Domenica ci sono, nessun problema»."
+  },
+  {
+   "id": 8,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 22.38,
+   "end": 25.28,
+   "dur": 2.9,
+   "file": "out/voice/lines/08.wav",
+   "tokens": [
+    {
+     "w": "ha",
+     "s": 22.38,
+     "e": 22.52
+    },
+    {
+     "w": "gia",
+     "s": 22.52,
+     "e": 22.62
+    },
+    {
+     "w": "risposto",
+     "s": 22.62,
+     "e": 23.24
+    },
+    {
+     "w": "perfetto",
+     "s": 23.56,
+     "e": 24.2
+    },
+    {
+     "w": "ti",
+     "s": 24.54,
+     "e": 24.66
+    },
+    {
+     "w": "aspetto",
+     "s": 24.66,
+     "e": 25.26
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ha già risposto. «Perfetto. Ti aspetto.»"
+  }
+ ]
+}
