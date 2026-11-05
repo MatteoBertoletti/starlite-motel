@@ -86,7 +86,8 @@ def align(toks, heard):
             times[i] = (a, b)
     return times, sum(x is not None for x in [times[i] for i in known]) / max(1, len(toks))
 
-FX = {'nav': 'highpass=f=240,lowpass=f=5200,acompressor=threshold=0.15:ratio=4,aecho=0.6:0.35:9|17:0.22|0.12,volume=1.4',  # car speakers
+FX = {'slow': 'atempo=0.92',   # gentle time-stretch, pitch unchanged (reuses the cached voice)
+      'nav': 'highpass=f=240,lowpass=f=5200,acompressor=threshold=0.15:ratio=4,aecho=0.6:0.35:9|17:0.22|0.12,volume=1.4',  # car speakers
       'phone': 'highpass=f=320,lowpass=f=3400,acompressor=threshold=0.12:ratio=5,aecho=0.5:0.3:12:0.15,volume=1.5',
       'door': 'highpass=f=110,lowpass=f=1000,aecho=0.8:0.55:38|61:0.3|0.2,volume=1.9',
       'intercom': 'highpass=f=380,lowpass=f=3100,acrusher=bits=10:mix=0.25,aecho=0.6:0.4:18:0.2,volume=1.6'}

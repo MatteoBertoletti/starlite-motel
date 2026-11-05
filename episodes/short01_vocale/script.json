@@ -12,13 +12,14 @@
  },
  "start_pad": 0.15,
  "end_pad": 0.12,
- "default_gap": 0.42,
+ "default_gap": 0.6,
  "speed_N": 0.87,
  "dips": [],
  "lines": [
   {
    "id": 1,
    "who": "N",
+   "fx": "slow",
    "say": "Se ti arriva un vocale di zero secondi, non rispondere.",
    "cap": "Se ti arriva un vocale di 0 secondi, non rispondere.",
    "red": "rispondere",
@@ -46,6 +47,7 @@
   {
    "id": 2,
    "who": "N",
+   "fx": "slow",
    "say": "Nemmeno «chi è?».",
    "cap": "Nemmeno «chi è?».",
    "red": "chi",
@@ -78,6 +80,7 @@
   {
    "id": 3,
    "who": "N",
+   "fx": "slow",
    "say": "Hai già il pollice sul microfono. Lo faresti per educazione.",
    "cap": "Hai già il pollice sul microfono. Lo faresti per educazione.",
    "red": "microfono",
@@ -107,6 +110,7 @@
   {
    "id": 4,
    "who": "N",
+   "fx": "slow",
    "say": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
    "cap": "Ma quel vocale è vuoto perché non gli serve la sua voce.",
    "red": "vuoto",
@@ -134,6 +138,7 @@
   {
    "id": 5,
    "who": "N",
+   "fx": "slow",
    "say": "Gli serve la tua.",
    "cap": "Gli serve la tua.",
    "red": "tua",
@@ -165,6 +170,7 @@
   {
    "id": 6,
    "who": "N",
+   "fx": "slow",
    "say": "Bastano due secondi.",
    "cap": "Bastano due secondi.",
    "red": "due",
@@ -184,6 +190,7 @@
   {
    "id": 7,
    "who": "N",
+   "fx": "slow",
    "say": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
    "gap": 0.5,
    "cap": "Alle nove il tuo capo riceve un tuo vocale: «Domenica ci sono, nessun problema».",
@@ -223,6 +230,7 @@
   {
    "id": 8,
    "who": "N",
+   "fx": "slow",
    "say": "Ha già risposto: «Perfetto. Ti aspetto.»",
    "cap": "Ha già risposto: «Perfetto. Ti aspetto.»",
    "red": "aspetto",
