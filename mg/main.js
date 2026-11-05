@@ -480,7 +480,7 @@ function micUI(c, el, L, lt, tt, size) {
   if (el.thumb !== undefined) {                                   // the thumb rises from below and stops just above the button
     const k = easeOut(clamp01((lt - (el.thumb === true ? 0 : at(L, el.thumb))) / 0.9)), ty = r * 2.6 - k * r * 1.75, hover = k >= 1 ? Math.sin(tt * 3) * 4 : 0;
     c.save(); c.translate(r * 0.15, ty + hover); c.rotate(-0.18);
-    c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 2.2, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
+    c.beginPath(); c.roundRect(-r * 0.36, -r * 0.2, r * 0.72, r * 1.3, r * 0.36); c.fillStyle = '#d9d5cc'; c.fill(); c.lineWidth = 6; c.strokeStyle = C.bg; c.stroke();
     c.beginPath(); c.roundRect(-r * 0.22, -r * 0.08, r * 0.44, r * 0.5, r * 0.14); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#9a958c'; c.stroke();
     c.restore(); }
 }
@@ -649,7 +649,7 @@ function captionV(c, L, t) {                        // shorts: big burned-in wor
   const FS = 84, LH = 102, MAXW = 840, CXC = CX - 30; c.save(); c.font = `900 ${FS}px Montserrat`;   // clear of the Shorts buttons on the right and the title at the bottom
   const rows = []; let cur = [];
   for (const w of words) { const tst = [...cur, w].join(' '); if (c.measureText(tst).width > MAXW && cur.length) { rows.push(cur); cur = [w]; } else cur.push(w); } rows.push(cur);
-  let wi = 0; const y0 = 1300 - (rows.length - 1) * LH / 2;
+  let wi = 0; const y0 = 1380 - (rows.length - 1) * LH / 2;
   rows.forEach((row, r) => { const full = c.measureText(row.join(' ')).width; let x = CXC - full / 2;
     for (const w of row) { const ti = Math.min(toks.length - 1, Math.round(wi * toks.length / words.length)); const ts = toks.length ? toks[ti].s - L.cut : 0;
       const k = clamp01((lt - ts + 0.05) / 0.12), isRed = red && norm(w)[0] === red, ww = c.measureText(w + ' ').width;
