@@ -1,6 +1,6 @@
 # Se Ti Arriva Un Vocale Di 0 Secondi… NON RISPONDERE
 
-**Titolo:** 51 caratteri · **Durata reale:** 31.3 s (da timing.json)
+**Titolo:** 51 caratteri · **Durata reale:** 25.0 s (da timing.json)
 
 **Pubblicazione:** giovedì 5 novembre, 12:30 (ora italiana)
 
