@@ -1,0 +1,507 @@
+{
+ "title": "Se Su WhatsApp Compare «Sta Scrivendo…» Nella Chat Con Te Stesso… NON ASPETTARE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "hush_before": 7,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.05,
+ "end_pad": 0.2,
+ "default_gap": 0.27,
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "say": "Se nella chat con te stesso compare «sta scrivendo…», non aspettare.",
+   "capfull": true,
+   "cap": "Se nella chat con te stesso compare «sta scrivendo…», non aspettare.",
+   "red": "aspettare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "buzz",
+        "status": "sta scrivendo…"
+       }
+      ]
+     },
+     {
+      "at": "compare",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.75,
+        "s": 1.3,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still",
+        "status": "sta scrivendo…"
+       }
+      ]
+     },
+     {
+      "at": "non",
+      "dt": 0.15,
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still",
+        "status": "sta scrivendo…"
+       }
+      ],
+      "shake": true
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "say": "Quella chat l'hai aperta solo tu. Non c'è nessun altro dentro.",
+   "cap": "Quella chat l'hai aperta solo tu. Non c'è nessun altro dentro.",
+   "red": "nessun",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "solo tu",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "non",
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.2,
+        "y": 0.12,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.25,
+        "x": -0.3,
+        "y": -0.5,
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "say": "I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole.",
+   "cap": "I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole.",
+   "red": "qualcuno",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.7,
+        "s": 1.25,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x",
+          "stop": "fermano",
+          "restart": "ricominciano"
+         }
+        ],
+        "a": "still",
+        "status": "sta scrivendo…",
+        "statusoff": "fermano",
+        "statuson": "ricominciano"
+       }
+      ]
+     },
+     {
+      "at": "ricominciano",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still",
+        "status": "sta scrivendo…"
+       }
+      ]
+     },
+     {
+      "at": "qualcuno",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.2,
+        "s": 1.6,
+        "x": -0.25,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "say": "Poi arriva un solo messaggio, dal tuo numero: «Sono a casa.»",
+   "cap_pages": [
+    "Poi arriva un solo messaggio, dal tuo numero:",
+    "«Sono a casa.»"
+   ],
+   "cap": "Poi arriva un solo messaggio, dal tuo numero: «Sono a casa.»",
+   "red": "casa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "…",
+          "typing": "x"
+         }
+        ],
+        "a": "still",
+        "status": "sta scrivendo…"
+       }
+      ]
+     },
+     {
+      "at": "messaggio",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "Sono a casa.",
+          "big": true,
+          "from": "+39 3•• ••• ••47",
+          "time": "23:41"
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "sono",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.3,
+        "s": 1.15,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "Sono a casa.",
+          "big": true,
+          "from": "+39 3•• ••• ••47",
+          "col": "red"
+         }
+        ],
+        "a": "impact"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "ding",
+      "messaggio"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "say": "Tu sei sul divano. Sei a casa da ore.",
+   "cap": "Tu sei sul divano. Sei a casa da ore.",
+   "red": "ore",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.2,
+        "y": 0.12,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.25,
+        "x": -0.3,
+        "y": -0.5,
+        "a": "still"
+       },
+       {
+        "i": "lamp",
+        "x": 0.75,
+        "y": -0.3,
+        "s": 1.3,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "casa",
+      "els": [
+       {
+        "i": "wallclock",
+        "s": 1.6,
+        "y": -0.15,
+        "time": "23:41",
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "say": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
+   "gap": 0.3,
+   "cap": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
+   "red": "ingresso",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.62,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "phone": true,
+        "phoneh": 92,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "Sono a casa.",
+          "big": true,
+          "from": "+39 3•• ••• ••47"
+         }
+        ],
+        "a": "buzz"
+       }
+      ]
+     },
+     {
+      "at": "vibrazione",
+      "els": [
+       {
+        "i": "entry",
+        "s": 1.0,
+        "y": 0.0,
+        "buzz": "vibrazione",
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "ingresso",
+      "els": [
+       {
+        "i": "entry",
+        "s": 1.35,
+        "y": -0.35,
+        "buzz": true,
+        "a": "still"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "vibrazione"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "say": "Ha già la tua chiave.",
+   "cap": "Ha già la tua chiave.",
+   "red": "chiave",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "keyhole",
+        "s": 1.9,
+        "x": -0.2,
+        "a": "still"
+       },
+       {
+        "i": "key",
+        "s": 1.3,
+        "x": 0.38,
+        "y": 0.02,
+        "turn": "la",
+        "a": "still"
+       }
+      ],
+      "shake": true
+     },
+     {
+      "at": "chiave",
+      "dt": 0.12,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "lock",
+      "tua"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Su WhatsApp Compare «Sta Scrivendo…» Nella Chat Con Te Stesso… NON ASPETTARE",
+  "publish": "sabato 7 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un messaggio dal tuo stesso numero non è un errore."
+  ],
+  "question": "👇 Tu avresti aspettato i puntini? Scrivilo nei commenti. #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Tu avresti aspettato i puntini o avresti chiuso la chat? 👇 Ogni sera alle 18:30 un caso completo con le 7 regole, qui sul canale.",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "whatsapp",
+   "chat con te stesso",
+   "sta scrivendo",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}

@@ -121,6 +121,9 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'plug') { c.scale(sc, sc); plugUI(c, el, L, lt, tt, size); }
   else if (i === 'tally') { c.scale(sc, sc); tallyUI(c, el, L, lt, tt, size); }
   else if (i === 'box') { c.scale(sc, sc); boxUI(c, el, L, lt, tt, size); }
+  else if (i === 'entry') { c.scale(sc, sc); entryUI(c, el, L, lt, tt, size); }
+  else if (i === 'wallclock') { c.scale(sc, sc); wallclockUI(c, el, L, lt, tt, size); }
+  else if (i === 'blackout') { }
   else if (i === 'topfloor') { c.scale(sc, sc); floorUI(c, el, L, lt, tt, size); }
   else if (i === 'hall') { c.scale(sc, sc); hallUI(c, el, L, lt, tt, size); }
   else if (i === 'plan') { c.scale(sc, sc); planUI(c, el, L, lt, tt, size); }
@@ -458,9 +461,13 @@ function windUI(c, el, L, lt, tt, size) {
 // ---------- shorts: a big generic chat (no app, no logo) and the microphone button ----------
 function vchatUI(c, el, L, lt, tt, size) {
   const W = size * 2.3, u = W / 100, W2 = W / 2; let y = 0;
+  if (el.phone) { c.save(); c.beginPath(); c.roundRect(-W2 - u * 5, -u * 12, W + u * 10, u * (el.phoneh || 150), u * 9); c.lineWidth = u * 1.2; c.strokeStyle = '#8d8981'; c.stroke(); c.restore(); }
   if (el.head) { c.beginPath(); c.arc(-W2 + u * 5, y, u * 4.2, 0, 7); c.fillStyle = '#26241f'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();
     c.beginPath(); c.arc(-W2 + u * 5, y - u * 1, u * 1.6, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.beginPath(); c.arc(-W2 + u * 5, y + u * 3.6, u * 2.8, Math.PI * 1.15, Math.PI * 1.85); c.fill();
-    txt(c, el.head, -W2 + u * 12, y, u * 5.2, '900', C.w, 'left', 'middle', 2);
+    const st = el.status && (el.statusat === undefined || lt >= at(L, el.statusat) + (el._dt || 0)) && !(el.statusoff !== undefined && lt >= at(L, el.statusoff) + (el._dt || 0) && !(el.statuson !== undefined && lt >= at(L, el.statuson) + (el._dt || 0)));
+    txt(c, el.head, -W2 + u * 12, el.sub || st ? y - u * 2.4 : y, u * 5.2, '900', C.w, 'left', 'middle', 2);
+    if (st) txt(c, el.status, -W2 + u * 12, y + u * 3.4, u * 3.4, '800', '#7fd9a0', 'left', 'middle', 1);
+    else if (el.sub) txt(c, el.sub, -W2 + u * 12, y + u * 3.4, u * 3.4, '800', '#8d8981', 'left', 'middle', 1);
     if (el.clock) txt(c, el.clock, W2, y, u * 5.2, '800', '#8d8981', 'right', 'middle', 2);
     c.fillStyle = '#26241f'; c.fillRect(-W2, y + u * 7, W, u * 0.4); y += u * 14; }
   for (const m of el.msgs || []) {
@@ -470,6 +477,8 @@ function vchatUI(c, el, L, lt, tt, size) {
     let bw, bh; const col = m.col === 'red' ? C.red : me ? C.gold : C.w;
     let text = m.text; if (m.typing && m.textat !== undefined && lt >= at(L, m.textat)) text = m.typing;   // dots, then the words
     const dots = m.typing && text === m.text && m.text === '…';
+    if (m.from) txt(c, m.from, me ? W2 : -W2, y - u * 0.5, u * 3.2, '800', '#8d8981', me ? 'right' : 'left', 'alphabetic', 1);
+    if (m.from) { y += u * 2; }
     if (m.voice) { bw = u * (m.full ? 100 : 86); bh = u * (m.full ? 24 : 19); }
     else { const fz = m.big ? 10 : 6.4; c.font = `800 ${u * fz}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * (m.big ? 21 : 15); }
     const x = me ? W2 - bw : -W2;
@@ -482,7 +491,8 @@ function vchatUI(c, el, L, lt, tt, size) {
       const prog = m.play !== undefined ? clamp01((lt - at(L, m.play)) / 2.2) : 0;
       for (let j = 0; j < n; j++) { const pulse = m.pulse ? u * (0.5 + 1.1 * Math.max(0, Math.sin(tt * 7 - j * 0.35))) : u * 0.5; const hh = m.flat ? pulse : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = j / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
       txt(c, m.voice, x + bw - u * 4, cy + u * 0.3, u * 9, '900', C.bg, 'right', 'middle');
-    } else if (dots) { for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + Math.sin(tt * 8 + j) * u * 0.8, u * 1.6, 0, 7); c.fillStyle = C.bg; c.fill(); } }
+    } else if (dots) { const off = m.stop !== undefined && lt >= at(L, m.stop) + (el._dt || 0) && !(m.restart !== undefined && lt >= at(L, m.restart) + (el._dt || 0));
+      for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + (off ? 0 : Math.sin(tt * 8 - j * 0.9) * u * 1.2), u * 1.6, 0, 7); c.fillStyle = off ? '#9a958c' : C.bg; c.fill(); } }
     else txt(c, text, x + u * 5, cy + u * 0.3, u * (m.big ? 10 : 6.4), '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
     if (m.strike !== undefined && lt >= at(L, m.strike) + 0.25) { const sk = clamp01((lt - at(L, m.strike) - 0.25) / 0.2); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20;
       c.beginPath(); c.moveTo(x - u * 2, cy + u * 4); c.lineTo(x - u * 2 + (bw + u * 4) * sk, cy - u * 4); c.lineWidth = u * 1.6; c.strokeStyle = C.red; c.stroke(); c.restore(); }
@@ -625,6 +635,31 @@ function boxUI(c, el, L, lt, tt, size) {
   c.beginPath(); c.moveTo(-u * 40, -u * 10); c.lineTo(-u * 52, -u * 30); c.lineTo(u * 0, -u * 30); c.lineTo(u * 12, -u * 10); c.closePath(); c.fillStyle = '#7d6140'; c.fill(); c.stroke();
   c.beginPath(); c.moveTo(u * 40, -u * 10); c.lineTo(u * 52, -u * 30); c.lineTo(u * 4, -u * 30); c.lineTo(-u * 8, -u * 10); c.closePath(); c.fill(); c.stroke();
   c.fillStyle = 'rgba(242,239,232,0.85)'; c.fillRect(-u * 6, u * 5, u * 12, u * 3); c.fillRect(-u * 20, u * 14, u * 40, u * 2);
+}
+
+
+// ---------- Short 003: the entrance in the dark, a phone buzzing on the floor; a wall clock ----------
+function entryUI(c, el, L, lt, tt, size) {
+  const w = size * 2.4, h = size * 3.0, W2 = w / 2, H2 = h / 2, u = w / 100, vx = 0, vy = -H2 * 0.15;
+  const dw = u * 26, dh = u * 52, dx0 = vx - dw / 2, dy0 = vy - dh * 0.55;
+  c.lineWidth = u * 0.8; c.strokeStyle = 'rgba(242,239,232,0.55)';
+  [[-W2, -H2, dx0, dy0], [W2, -H2, dx0 + dw, dy0], [-W2, H2, dx0, dy0 + dh], [W2, H2, dx0 + dw, dy0 + dh]].forEach(([a, b, x2, y2]) => { c.beginPath(); c.moveTo(a, b); c.lineTo(x2, y2); c.stroke(); });
+  c.fillStyle = '#0d0d0f'; c.fillRect(dx0, dy0, dw, dh); c.lineWidth = u * 1.0; c.strokeStyle = C.w; c.strokeRect(dx0, dy0, dw, dh);       // the front door
+  c.beginPath(); c.arc(dx0 + dw * 0.82, dy0 + dh * 0.52, u * 1.2, 0, 7); c.fillStyle = C.w; c.fill();
+  c.beginPath(); c.roundRect(dx0 + dw * 0.77, dy0 + dh * 0.58, u * 2.2, u * 3.2, u * 0.5); c.fillStyle = '#5a5852'; c.fill();             // the lock
+  const p0 = el.buzz === undefined ? null : (el.buzz === true ? -99 : at(L, el.buzz) + (el._dt || 0)); const on = p0 !== null && lt >= p0;
+  const bz = on ? Math.sin(tt * 90) * u * 0.5 * (Math.sin(tt * 6) > -0.2 ? 1 : 0) : 0, px = vx + u * 3 + bz, py = dy0 + dh + u * 18;
+  if (on) { const g = c.createRadialGradient(px, py, 2, px, py, u * 26); g.addColorStop(0, 'rgba(143,211,255,0.35)'); g.addColorStop(1, 'rgba(143,211,255,0)'); c.fillStyle = g; c.fillRect(px - u * 30, py - u * 30, u * 60, u * 60); }
+  c.save(); c.translate(px, py); c.transform(1, 0, -0.5, 0.45, 0, 0); c.beginPath(); c.roundRect(-u * 5, -u * 9, u * 10, u * 18, u * 1.6); c.fillStyle = on ? '#bfe6ff' : '#2a2a2e'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = C.w; c.stroke(); c.restore();
+  if (on) for (const s of [-1, 1]) for (let k = 1; k <= 2; k++) { c.beginPath(); c.arc(px, py, u * (8 + k * 4), s > 0 ? -0.5 : Math.PI - 0.5 + 1, s > 0 ? 0.5 : Math.PI + 0.5 + 0); c.lineWidth = u * 0.6; c.strokeStyle = `rgba(143,211,255,${0.7 - k * 0.25})`; c.stroke(); }
+}
+function wallclockUI(c, el, L, lt, tt, size) {
+  const r = size * 0.42; c.beginPath(); c.arc(0, 0, r, 0, 7); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = r * 0.08; c.strokeStyle = '#3a3936'; c.stroke();
+  for (let j = 0; j < 12; j++) { const a = j * Math.PI / 6; c.beginPath(); c.moveTo(Math.cos(a) * r * 0.82, Math.sin(a) * r * 0.82); c.lineTo(Math.cos(a) * r * 0.92, Math.sin(a) * r * 0.92); c.lineWidth = r * 0.04; c.strokeStyle = C.bg; c.stroke(); }
+  const [hh, mm] = (el.time || '23:40').split(':').map(Number), sec = (tt % 60);
+  const hand = (a, l, wdt, col) => { c.beginPath(); c.moveTo(0, 0); c.lineTo(Math.cos(a - Math.PI / 2) * l, Math.sin(a - Math.PI / 2) * l); c.lineWidth = wdt; c.strokeStyle = col; c.lineCap = 'round'; c.stroke(); };
+  hand(((hh % 12) + mm / 60) * Math.PI / 6, r * 0.5, r * 0.08, C.bg); hand(mm * Math.PI / 30, r * 0.75, r * 0.05, C.bg); hand(sec * Math.PI / 30, r * 0.8, r * 0.02, C.red);
+  c.beginPath(); c.arc(0, 0, r * 0.05, 0, 7); c.fillStyle = C.red; c.fill();
 }
 
 // ---------- Caso 004: the flat ----------
