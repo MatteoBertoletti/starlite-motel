@@ -29,6 +29,9 @@
   "title": "ISCRIVITI",
   "sub": "IL PROSSIMO CASO È GIÀ IN CLASSE"
  },
+ "creep_shot": 0.08,
+ "pan": 90,
+ "alive": 0.04,
  "start_pad": 0.3,
  "end_pad": 3.0,
  "default_gap": 0.36,
@@ -102,7 +105,7 @@
         "i": "text",
         "text": "4",
         "s": 2.6,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -115,7 +118,7 @@
         "i": "text",
         "text": "7",
         "s": 2.8,
-        "a": "slam",
+        "a": "surge",
         "col": "red",
         "g": "red"
        }
@@ -208,7 +211,7 @@
         "i": "text",
         "text": "23",
         "s": 2.8,
-        "a": "zoom",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -404,12 +407,12 @@
       "at": "sbiadito",
       "els": [
        {
-        "i": "text",
-        "text": "?",
-        "s": 2.4,
-        "a": "flicker",
-        "col": "red",
-        "g": "red"
+        "i": "backpack",
+        "a": "approach",
+        "s": 2.6,
+        "x": -0.9,
+        "y": 1.2,
+        "label": true
        }
       ]
      }
@@ -427,8 +430,9 @@
       "els": [
        {
         "i": "classroom",
-        "a": "zoom",
-        "you": true
+        "a": "approach",
+        "you": true,
+        "x": -0.3
        }
       ]
      },
@@ -553,12 +557,26 @@
        {
         "i": "text",
         "text": "«…»",
-        "s": 2.0,
-        "a": "pop",
+        "s": 2.6,
+        "a": "surge",
         "col": "red",
         "g": "red"
        }
       ]
+     },
+     {
+      "at": "lingua",
+      "els": [
+       {
+        "i": "register",
+        "a": "approach",
+        "s": 2.4,
+        "extra": true,
+        "x": -0.9,
+        "y": -1.7
+       }
+      ],
+      "dt": 0.3
      }
     ]
    }
@@ -574,10 +592,13 @@
      {
       "els": [
        {
-        "i": "hand",
-        "s": 1.1,
-        "a": "rise",
-        "col": "gold"
+        "i": "classroom",
+        "a": "approach",
+        "you": true,
+        "s": 2.0,
+        "x": 0.48,
+        "y": -0.4,
+        "myhand": true
        }
       ]
      },
@@ -693,9 +714,13 @@
       "at": "occupare",
       "els": [
        {
-        "i": "shadow",
-        "s": 1.1,
-        "a": "fade"
+        "i": "classroom",
+        "a": "approach",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "ghost": "occupare"
        }
       ]
      }
@@ -731,22 +756,10 @@
       "els": [
        {
         "i": "register",
-        "a": "still",
+        "a": "approach",
         "s": 0.95,
-        "read": true,
-        "readdur": 2.0
-       }
-      ]
-     },
-     {
-      "at": "nomi",
-      "els": [
-       {
-        "i": "text",
-        "text": "24 NOMI",
-        "s": 1.0,
-        "a": "slam",
-        "col": "w"
+        "read": "conta",
+        "readdur": 3.0
        }
       ]
      },
@@ -804,7 +817,7 @@
         "i": "text",
         "text": "23",
         "s": 2.8,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -904,7 +917,7 @@
         "i": "text",
         "text": "1ª B",
         "s": 1.6,
-        "a": "pop",
+        "a": "surge",
         "col": "w"
        }
       ]
@@ -997,7 +1010,7 @@
         "i": "text",
         "text": "200",
         "s": 2.4,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -1009,12 +1022,28 @@
        {
         "i": "text",
         "text": "ASSENTE GIUSTIFICATO",
-        "s": 0.62,
-        "a": "slam",
+        "s": 0.8,
+        "a": "surge",
         "col": "red",
         "g": "red"
        }
       ]
+     },
+     {
+      "at": "giustificato",
+      "els": [
+       {
+        "i": "register",
+        "a": "approach",
+        "s": 2.6,
+        "old": true,
+        "erased": true,
+        "ag": true,
+        "x": -1.35,
+        "y": -1.8
+       }
+      ],
+      "dt": 0.3
      }
     ]
    }
@@ -1032,8 +1061,8 @@
        {
         "i": "doc",
         "s": 1.3,
-        "title": "GIUSTIFICAZIONE",
-        "body": "ASSENZA DEL GIORNO",
+        "title": "ASSENZA",
+        "body": "GIUSTIFICATA · FIRMA DEL DOCENTE",
         "sign": "firmata",
         "a": "slidein"
        }
@@ -1046,8 +1075,8 @@
         "i": "doc",
         "s": 2.0,
         "y": -0.62,
-        "title": "GIUSTIFICAZIONE",
-        "body": "",
+        "title": "ASSENZA",
+        "body": "GIUSTIFICATA",
         "sign": true,
         "a": "still"
        }
@@ -1070,8 +1099,8 @@
         "i": "doc",
         "s": 2.0,
         "y": -0.62,
-        "title": "GIUSTIFICAZIONE",
-        "body": "",
+        "title": "ASSENZA",
+        "body": "GIUSTIFICATA",
         "sign": true,
         "a": "still"
        }
@@ -1084,7 +1113,7 @@
         "i": "text",
         "text": "BELLA CALLIGRAFIA.",
         "s": 0.6,
-        "a": "pop",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -1118,19 +1147,20 @@
         "i": "text",
         "text": "4",
         "s": 2.6,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
       ]
      },
      {
-      "at": "lavagna",
+      "at": "tutti",
       "els": [
        {
         "i": "board",
-        "a": "zoom",
-        "s": 0.95
+        "a": "approach",
+        "s": 1.0,
+        "x": -0.2
        }
       ]
      },
@@ -1264,7 +1294,7 @@
         "i": "text",
         "text": "LA TUA.",
         "s": 1.4,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -1303,7 +1333,8 @@
       "els": [
        {
         "i": "corridor",
-        "a": "still",
+        "a": "approach",
+        "x": -0.2,
         "count": "sempre",
         "step": 0.06
        }
@@ -1314,11 +1345,11 @@
       "els": [
        {
         "i": "corridor",
-        "a": "still",
+        "a": "approach",
         "count": true,
         "bidello": "23",
         "s": 1.5,
-        "x": 0.55,
+        "x": -0.75,
         "y": -0.25
        }
       ]
@@ -1329,8 +1360,8 @@
        {
         "i": "text",
         "text": "23",
-        "s": 2.6,
-        "a": "slam",
+        "s": 3.0,
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -1357,10 +1388,39 @@
       "els": [
        {
         "i": "corridor",
-        "a": "still",
+        "a": "approach",
         "count": "conta",
         "stop": 23,
-        "step": 0.13
+        "step": 0.13,
+        "x": -0.2
+       }
+      ]
+     },
+     {
+      "at": "arriva",
+      "els": [
+       {
+        "i": "corridor",
+        "a": "approach",
+        "count": "conta",
+        "stop": 23,
+        "step": 0.13,
+        "s": 1.7,
+        "x": -0.1,
+        "y": 0.05
+       }
+      ]
+     },
+     {
+      "at": "ferma",
+      "els": [
+       {
+        "i": "text",
+        "text": "23",
+        "s": 3.0,
+        "a": "surge",
+        "col": "gold",
+        "g": "gold"
        }
       ]
      },
@@ -1369,11 +1429,12 @@
       "els": [
        {
         "i": "corridor",
-        "a": "zoom",
+        "a": "approach",
         "count": "conta",
         "stop": 23,
         "last": "ventiquattro",
         "s": 2.4,
+        "x": -0.25,
         "y": 0.1
        }
       ]
@@ -1385,7 +1446,7 @@
         "i": "text",
         "text": "24",
         "s": 2.6,
-        "a": "slam",
+        "a": "surge",
         "col": "red",
         "g": "red"
        }
@@ -1513,24 +1574,24 @@
       ]
      },
      {
-      "at": "ritardo",
+      "at": "secondo",
       "els": [
        {
         "i": "text",
         "text": "+1 s",
-        "s": 1.6,
-        "a": "slam",
+        "s": 2.4,
+        "a": "surge",
         "col": "red",
         "g": "red"
        }
       ]
      },
      {
-      "at": "fondo",
+      "at": "Da",
       "els": [
        {
         "i": "classroom",
-        "a": "still",
+        "a": "approach",
         "you": true,
         "s": 2.0,
         "x": -1.1,
@@ -1803,7 +1864,7 @@
         "i": "text",
         "text": "TUO.",
         "s": 2.2,
-        "a": "slam",
+        "a": "surge",
         "col": "gold",
         "g": "gold"
        }
@@ -1864,8 +1925,20 @@
       "els": [
        {
         "i": "corridor",
-        "a": "zoom",
-        "count": true
+        "a": "approach",
+        "count": true,
+        "x": -0.2
+       }
+      ]
+     },
+     {
+      "at": "proteggere",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "approach",
+        "you": true,
+        "x": -0.2
        }
       ]
      },
@@ -1874,7 +1947,7 @@
       "els": [
        {
         "i": "classroom",
-        "a": "still",
+        "a": "approach",
         "you": true,
         "s": 2.0,
         "x": -1.1,
@@ -2050,7 +2123,7 @@
   "question": "👇 Tu avresti alzato la mano? Scrivilo nei commenti.",
   "hashtags": "#horror #storiehorror #lesetteregole",
   "fact_title": "📌 Il fatto vero dietro la storia",
-  "fact": "Nelle superiori italiane una classe non resta in piedi con qualsiasi numero di alunni. Il regolamento sulla formazione delle classi (DPR 20 marzo 2009, n. 81) prevede che le classi intermedie siano confermate solo se la media è di almeno 22 alunni per classe; sotto quella soglia vengono ricomposte, cioè accorpate. Le prime si formano di norma con almeno 27 alunni, le quinte con almeno 10. Per questo una terza da 23 vive a un alunno dal limite.",
+  "fact": "Nelle superiori italiane una classe non resta in piedi con qualsiasi numero di alunni. Il regolamento sulla formazione delle classi (DPR 20 marzo 2009, n. 81) prevede che le classi intermedie siano confermate solo se la media è di almeno 22 alunni per classe; sotto quella soglia vengono ricomposte, cioè accorpate. Le prime si formano di norma con almeno 27 alunni, le quinte con almeno 10. Una terza da 23 alunni è appena sopra quella media.",
   "fact_source": "Fonte: DPR 20 marzo 2009, n. 81 (G.U. n. 151 del 2 luglio 2009), riassunto in «Organico secondaria secondo grado per il 2021/22, quanti alunni per classe», Orizzonte Scuola — https://www.orizzontescuola.it/organico-secondaria-secondo-grado-per-il-2021-22-quanti-alunni-per-classe/",
   "outro": [
    "Caso 006 de «Le Sette Regole».",
