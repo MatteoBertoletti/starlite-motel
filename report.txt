@@ -1,0 +1,10 @@
+  1 N         0.05-   4.91 match=1.00 eleven_v4 (cache) | Se nella chat con te stesso compare «sta scrivendo…», non aspettare.
+  2 N         5.11-   9.03 match=1.00 eleven_v4 (cache) | Quella chat l 'hai aperta solo tu. Non c 'è nessun altro dentro.
+  3 N         9.23-  14.08 match=1.00 eleven_v4 (cache) | I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole.
+  4 N        14.28-  18.60 match=1.00 eleven_v4 (cache) | Poi arriva un solo messaggio, dal tuo numero «Sono a casa.»
+  5 N        18.80-  21.42 match=1.00 eleven_v4 (cache) | Tu sei sul divano. Sei a casa da ore.
+  6 N        21.62-  25.33 match=1.00 eleven_v4 (cache) | Non rispondere. La vibrazione la sentiresti dall 'ingresso.
+  7 N        25.58-  26.79 match=1.00 eleven_v4 (cache) | Ha già la tua chiave.
+
+TOTAL 27.0s  new characters billed ~0  cached lines 7
+low match lines: []
