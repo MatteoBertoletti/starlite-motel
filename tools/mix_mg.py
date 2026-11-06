@@ -78,8 +78,11 @@ sf.write('/tmp/_pre.wav', np.stack([mix, mix], 1), SR)
 o = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', '/tmp/_pre.wav', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
 m = json.loads(o[o.rfind('{'): o.rfind('}') + 1])
 subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', '/tmp/_pre.wav', '-af', f"loudnorm=I=-14:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true", '-ar', str(SR), A.out], check=True)
+def lufs_file(path):                              # loudness of the stereo file as players and YouTube measure it (dual mono = mono + 3 dB)
+    o = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', path, '-af', 'ebur128', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    return float(o.split('Integrated loudness:')[1].split('I:')[1].split('LUFS')[0])
 for _ in range(3):
-    y, _ = sf.read(A.out, dtype='float32'); cur = lufs(y.mean(1))
+    cur = lufs_file(A.out)
     if abs(cur + 14) <= 0.5: break
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', A.out, '-af', f'volume={-14 - cur:.2f}dB,alimiter=limit=0.84:attack=3:release=60:level=false', '-ar', str(SR), '/tmp/_lim.wav'], check=True); subprocess.run(['cp', '/tmp/_lim.wav', A.out])
 y, _ = sf.read(A.out, dtype='float32'); y = y.mean(1); w = SR // 100; n = len(y) // w
@@ -87,5 +90,5 @@ db = 20 * np.log10(np.sqrt(np.mean(y[: n * w].reshape(n, w) ** 2, 1)) + 1e-9); d
 for i, q in enumerate(db < -55):
     run = run + 1 if q else 0
     if run == 25 and 0.5 < i / 100 < D - 1.5: drops.append(round((i - 24) / 100, 2))
-rep = {'final_lufs': lufs(y), 'voice_lufs': lufs(V), 'bed_lufs': lufs((bed * g)[int(5 * SR): int(120 * SR)]), 'dropouts': drops}
+rep = {'final_lufs': lufs_file(A.out), 'voice_lufs': lufs(V), 'bed_lufs': lufs((bed * g)[int(5 * SR): int(120 * SR)]), 'dropouts': drops}
 rep['bed_under_voice_db'] = round(rep['voice_lufs'] - rep['bed_lufs'], 1); print(json.dumps(rep, indent=1)); json.dump(rep, open(A.out.replace('.wav', '_report.json'), 'w'), indent=1)
