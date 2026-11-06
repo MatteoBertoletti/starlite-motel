@@ -34,18 +34,20 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.7,
         "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
         "a": "buzz",
@@ -58,18 +60,20 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.75,
-        "s": 1.3,
+        "y": -0.55,
+        "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
         "a": "still",
@@ -88,13 +92,15 @@
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
         "a": "still",
@@ -125,13 +131,32 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.7,
         "s": 1.05,
         "head": "TU",
         "sub": "solo tu",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
+        "msgs": [],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "aperta",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.45,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "solo tu",
+        "clock": "23:41",
+        "bighead": true,
+        "phone": true,
+        "phoneh": 66,
         "msgs": [],
         "a": "still"
        }
@@ -172,17 +197,19 @@
        {
         "i": "vchat",
         "y": -0.7,
-        "s": 1.25,
+        "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
           "typing": "x",
+          "big": true,
           "stop": "fermano",
           "restart": "ricominciano"
          }
@@ -199,18 +226,20 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.5,
         "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
         "a": "still",
@@ -223,16 +252,24 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.2,
-        "s": 1.6,
-        "x": -0.25,
+        "y": -0.75,
+        "s": 1.05,
+        "x": 0.75,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.15,
+        "x": -0.65,
+        "y": 0.1,
         "a": "still"
        }
       ]
@@ -257,18 +294,20 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.7,
         "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
           "text": "…",
-          "typing": "x"
+          "typing": "x",
+          "big": true
          }
         ],
         "a": "still",
@@ -281,13 +320,40 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.7,
         "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
+        "msgs": [
+         {
+          "who": "them",
+          "text": "Sono a casa.",
+          "big": true,
+          "from": "+39 3•• ••• ••47",
+          "time": "23:41"
+         }
+        ],
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "tuo",
+      "els": [
+       {
+        "i": "vchat",
+        "y": -0.5,
+        "s": 1.05,
+        "head": "TU",
+        "sub": "+39 3•• ••• ••47",
+        "clock": "23:41",
+        "bighead": true,
+        "phone": true,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",
@@ -364,6 +430,31 @@
       ]
      },
      {
+      "at": "divano",
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.6,
+        "y": 0.3,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.5,
+        "x": -0.35,
+        "y": -0.45,
+        "a": "still"
+       },
+       {
+        "i": "lamp",
+        "x": 0.85,
+        "y": -0.35,
+        "s": 1.5,
+        "a": "still"
+       }
+      ]
+     },
+     {
       "at": "casa",
       "els": [
        {
@@ -392,13 +483,14 @@
       "els": [
        {
         "i": "vchat",
-        "y": -0.62,
+        "y": -0.7,
         "s": 1.05,
         "head": "TU",
         "sub": "+39 3•• ••• ••47",
         "clock": "23:41",
+        "bighead": true,
         "phone": true,
-        "phoneh": 92,
+        "phoneh": 66,
         "msgs": [
          {
           "who": "them",

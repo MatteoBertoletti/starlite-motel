@@ -465,11 +465,12 @@ function vchatUI(c, el, L, lt, tt, size) {
   if (el.head) { c.beginPath(); c.arc(-W2 + u * 5, y, u * 4.2, 0, 7); c.fillStyle = '#26241f'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();
     c.beginPath(); c.arc(-W2 + u * 5, y - u * 1, u * 1.6, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.beginPath(); c.arc(-W2 + u * 5, y + u * 3.6, u * 2.8, Math.PI * 1.15, Math.PI * 1.85); c.fill();
     const st = el.status && (el.statusat === undefined || lt >= at(L, el.statusat) + (el._dt || 0)) && !(el.statusoff !== undefined && lt >= at(L, el.statusoff) + (el._dt || 0) && !(el.statuson !== undefined && lt >= at(L, el.statuson) + (el._dt || 0)));
-    txt(c, el.head, -W2 + u * 12, el.sub || st ? y - u * 2.4 : y, u * 5.2, '900', C.w, 'left', 'middle', 2);
-    if (st) txt(c, el.status, -W2 + u * 12, y + u * 3.4, u * 3.4, '800', '#7fd9a0', 'left', 'middle', 1);
-    else if (el.sub) txt(c, el.sub, -W2 + u * 12, y + u * 3.4, u * 3.4, '800', '#8d8981', 'left', 'middle', 1);
+    const hf = el.bighead ? 1.6 : 1;
+    txt(c, el.head, -W2 + u * 12, el.sub || st ? y - u * 2.6 * hf : y, u * 5.2 * hf, '900', C.w, 'left', 'middle', 2);
+    if (st) txt(c, el.status, -W2 + u * 12, y + u * 3.6 * hf, u * 3.4 * hf, '800', '#7fd9a0', 'left', 'middle', 1);
+    else if (el.sub) txt(c, el.sub, -W2 + u * 12, y + u * 3.6 * hf, u * 3.4 * hf, '800', '#8d8981', 'left', 'middle', 1);
     if (el.clock) txt(c, el.clock, W2, y, u * 5.2, '800', '#8d8981', 'right', 'middle', 2);
-    c.fillStyle = '#26241f'; c.fillRect(-W2, y + u * 7, W, u * 0.4); y += u * 14; }
+    c.fillStyle = '#26241f'; c.fillRect(-W2, y + u * 7 * (el.bighead ? 1.6 : 1), W, u * 0.4); y += u * 14 * (el.bighead ? 1.5 : 1); }
   for (const m of el.msgs || []) {
     if (m.at !== undefined && lt < at(L, m.at)) continue;
     const k = m.at !== undefined ? easeOut((lt - at(L, m.at)) / 0.25) : 1, me = m.who === 'me';
@@ -480,7 +481,7 @@ function vchatUI(c, el, L, lt, tt, size) {
     if (m.from) txt(c, m.from, me ? W2 : -W2, y - u * 0.5, u * 3.2, '800', '#8d8981', me ? 'right' : 'left', 'alphabetic', 1);
     if (m.from) { y += u * 2; }
     if (m.voice) { bw = u * (m.full ? 100 : 86); bh = u * (m.full ? 24 : 19); }
-    else { const fz = m.big ? 10 : 6.4; c.font = `800 ${u * fz}px Montserrat`; bw = dots ? u * 24 : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * (m.big ? 21 : 15); }
+    else { const fz = m.big ? 10 : 6.4; c.font = `800 ${u * fz}px Montserrat`; bw = dots ? u * (m.big ? 40 : 24) : Math.min(u * 86, c.measureText(text).width + u * 10); bh = u * (m.big ? 21 : 15); }
     const x = me ? W2 - bw : -W2;
     c.save(); if (m.col === 'red' || m.glow) { c.shadowColor = m.col === 'red' ? GLOW.red : GLOW.white; c.shadowBlur = 36; }
     c.beginPath(); c.roundRect(x, y, bw, bh, u * 5); c.fillStyle = col; c.fill(); c.restore();
@@ -492,7 +493,7 @@ function vchatUI(c, el, L, lt, tt, size) {
       for (let j = 0; j < n; j++) { const pulse = m.pulse ? u * (0.5 + 1.1 * Math.max(0, Math.sin(tt * 7 - j * 0.35))) : u * 0.5; const hh = m.flat ? pulse : u * (1.2 + 5.5 * Math.abs(Math.sin(j * 1.7) * Math.cos(j * 0.6))); const xx = x0 + (x1 - x0) * j / (n - 1); c.fillStyle = j / n < prog ? C.red : C.bg; c.fillRect(xx - u * 0.7, cy - hh, u * 1.4, hh * 2); }
       txt(c, m.voice, x + bw - u * 4, cy + u * 0.3, u * 9, '900', C.bg, 'right', 'middle');
     } else if (dots) { const off = m.stop !== undefined && lt >= at(L, m.stop) + (el._dt || 0) && !(m.restart !== undefined && lt >= at(L, m.restart) + (el._dt || 0));
-      for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6), cy + (off ? 0 : Math.sin(tt * 8 - j * 0.9) * u * 1.2), u * 1.6, 0, 7); c.fillStyle = off ? '#9a958c' : C.bg; c.fill(); } }
+      const dz = m.big ? 1.7 : 1; for (let j = 0; j < 3; j++) { c.beginPath(); c.arc(x + u * (6 + j * 6) * dz, cy + (off ? 0 : Math.sin(tt * 8 - j * 0.9) * u * 1.2 * dz), u * 1.6 * dz, 0, 7); c.fillStyle = off ? '#9a958c' : C.bg; c.fill(); } }
     else txt(c, text, x + u * 5, cy + u * 0.3, u * (m.big ? 10 : 6.4), '800', m.col === 'red' ? C.w : C.bg, 'left', 'middle');
     if (m.strike !== undefined && lt >= at(L, m.strike) + 0.25) { const sk = clamp01((lt - at(L, m.strike) - 0.25) / 0.2); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20;
       c.beginPath(); c.moveTo(x - u * 2, cy + u * 4); c.lineTo(x - u * 2 + (bw + u * 4) * sk, cy - u * 4); c.lineWidth = u * 1.6; c.strokeStyle = C.red; c.stroke(); c.restore(); }
@@ -827,7 +828,10 @@ function capRed(L) {                                  // seconds into the line w
 }
 function captionV(c, L, t) {                        // shorts: big burned-in words, revealed as spoken, max 3 rows per page, one red word that pops
   const lt = t - L.cut, words = L.cap.toUpperCase().split(/\s+/), n = words.length, red = L.red ? norm(L.red)[0] : null;
-  const FS = 82, LH = 98, MAXW = 900, CXC = CX - 20; c.save(); c.font = `900 ${FS}px Montserrat`;
+  let FS = 82; const MAXW = 900, CXC = CX - 20; c.save();
+  const nrows = f => { c.font = `900 ${f}px Montserrat`; let n2 = 1, cur2 = ''; for (const w of words) { const t2 = cur2 ? cur2 + ' ' + w : w; if (c.measureText(t2).width > MAXW && cur2) { n2++; cur2 = w; } else cur2 = t2; } return n2; };
+  if (L.capfull && !L.cap_pages) while (FS > 68 && nrows(FS) > 4) FS -= 2;
+  const LH = FS * 1.2; c.font = `900 ${FS}px Montserrat`;
   const pages = (L.cap_pages || [L.cap]).map(p => p.split(/\s+/).length); let w0 = 0, pi = 0;
   const shownUpTo = L.capfull ? n : words.findLastIndex((w, i) => capTime(L, i, n) <= lt + 0.05);
   for (let k = 0, acc = 0; k < pages.length; k++) { if (shownUpTo >= acc) { pi = k; w0 = acc; } acc += pages[k]; }
