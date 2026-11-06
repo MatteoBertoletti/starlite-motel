@@ -93,6 +93,7 @@ function drawEl(c, el, L, lt, tt) {
   const glow = el.g ? GLOW[el.g] : GLOW.white; c.shadowColor = glow; c.shadowBlur = el.g ? 42 : 26;
   const o = { ...el, col: el.col ? colOf(el.col) : undefined };
   const i = el.i;
+  if (!VERT && (i === 'classroom' || i === 'corridor')) { c.beginPath(); c.rect(-(x + dx) - 600, -(y + dy) - 600, FW + 1200, 600 + 835); c.clip(); }
   if (el.sweat) { c.save(); c.shadowBlur = 0; for (let j = 0; j < 3; j++) { const ph = (tt * 0.9 + j / 3) % 1, sx = size * (j === 1 ? 0.2 : -0.17 + j * 0.05), sy = -size * 0.36 + ph * size * 0.28;
     c.save(); c.globalAlpha *= 1 - ph; c.translate(sx, sy); c.beginPath(); c.moveTo(0, -size * 0.035); c.quadraticCurveTo(size * 0.025, 0, 0, size * 0.02); c.quadraticCurveTo(-size * 0.025, 0, 0, -size * 0.035); c.fillStyle = '#9fd3ff'; c.fill(); c.restore(); } c.restore(); }
   if (i === 'clock') { c.scale(sc, sc); txt(c, el.text, 0, 0, 250, '800', colOf(el.col), 'center', 'middle'); c.shadowBlur = 0; txt(c, SCRIPT.night, 0, -150, 34, '600', C.dim, 'center', 'middle', 10); }
@@ -132,11 +133,11 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
-  else if (i === 'classroom') { c.scale(sc, sc); classroomUI(c, el, L, lt, tt, size); }
+  else if (i === 'classroom' || i === 'corridor') { c.save(); c.scale(sc, sc); (i === 'classroom' ? classroomUI : corridorUI)(c, el, L, lt, tt, size); c.restore();
+    if (!VERT) { const g = c.createLinearGradient(0, 715 - (y + dy), 0, 835 - (y + dy)); g.addColorStop(0, 'rgba(5,5,6,0)'); g.addColorStop(1, 'rgba(5,5,6,1)'); c.shadowBlur = 0; c.fillStyle = g; c.fillRect(-(x + dx) - 600, 715 - (y + dy), FW + 1200, 121); } }
   else if (i === 'register') { c.scale(sc, sc); registerUI(c, el, L, lt, tt, size); }
   else if (i === 'board') { c.scale(sc, sc); boardUI(c, el, L, lt, tt, size); }
   else if (i === 'notebook') { c.scale(sc, sc); notebookUI(c, el, L, lt, tt, size); }
-  else if (i === 'corridor') { c.scale(sc, sc); corridorUI(c, el, L, lt, tt, size); }
   else if (i === 'backpack') { c.scale(sc, sc); backpackUI(c, el, L, lt, tt, size); }
   else if (i === 'phone' && (el.flipto || el.off || el.word)) { c.scale(sc, sc); phoneFx(c, el, L, lt, tt, size, o); }
   else if (ICONS[i] || ['you', 'admin', 'bruni', 'mother', 'shadow'].includes(i)) {
@@ -752,8 +753,8 @@ function scrib(c, seed, x0, y0, w, h, k, col, lw) {          // a handwritten na
   c.lineWidth = lw; c.strokeStyle = col; c.lineCap = 'round'; c.lineJoin = 'round'; c.stroke();
 }
 function pupil(c, x, y, f, u, col, hand, handK) {            // a pupil seen from behind: shoulders + head; optional raised hand
-  if (hand && handK > 0) { const hk = easeOut(handK / 0.25), hx = x + u * 2.6 * f, top = y - u * (4 + 6 * hk) * f;
-    c.beginPath(); c.moveTo(hx, y - u * 1.2 * f); c.lineTo(hx + u * 0.6 * f, top); c.lineWidth = u * 1.1 * f; c.strokeStyle = col; c.lineCap = 'round'; c.stroke();
+  if (hand && handK > 0) { const hk = easeOut(handK / 0.25), hx = x + u * 2.4 * f, top = y - u * (2.5 + 4.2 * hk) * f;
+    c.beginPath(); c.moveTo(hx, y - u * 1.2 * f); c.lineTo(hx + u * 0.5 * f, top); c.lineWidth = u * 0.9 * f; c.strokeStyle = col; c.lineCap = 'round'; c.stroke();
     c.beginPath(); c.ellipse(hx + u * 0.65 * f, top - u * 0.6 * f, u * 0.75 * f, u * 1.0 * f, 0.1, 0, 7); c.fillStyle = col; c.fill(); }
   c.beginPath(); c.ellipse(x, y, u * 3.0 * f, u * 1.7 * f, 0, Math.PI, 0); c.fillStyle = col; c.fill();
   c.beginPath(); c.arc(x, y - u * 2.6 * f, u * 1.75 * f, 0, 7); c.fillStyle = col; c.fill();
@@ -824,7 +825,8 @@ function registerUI(c, el, L, lt, tt, size) {
   if (ag !== null && lt >= ag) { const [x, y] = pos(23); for (let j = 0; j < 8; j++) { const k = lt - ag - j * 0.12; if (k < 0) break; txt(c, 'AG', x + u * 22 + j * u * 3, y - rh * 0.05, u * 1.6, '900', C.red, 'center', 'middle'); } }
   if (tw !== null && lt >= tw) { const k = clamp01((lt - tw) / 0.3); c.save(); c.globalAlpha *= k; for (const i of [8, 23]) { const [x, y] = pos(i); c.save(); c.shadowColor = GLOW.gold; c.shadowBlur = 24; c.lineWidth = u * 0.4; c.strokeStyle = C.gold; c.strokeRect(x - u, y - rh * 0.55, W2 - u * 6, rh * 1.1); c.restore(); scrib(c, 77, x + u * 4.5, y + u * 0.8, u * 20, u * 1.4, 1, '#b5821c', u * 0.32); } c.restore(); }
   if (rd !== null && lt >= rd) { const dur = el.readdur || 3, i = Math.min(23, Math.floor(clamp01((lt - rd) / dur) * 24)), [x, y] = pos(i); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 16; c.fillStyle = C.red; c.beginPath(); c.moveTo(x - u * 2.6, y - u * 0.9); c.lineTo(x - u * 1.2, y); c.lineTo(x - u * 2.6, y + u * 0.9); c.closePath(); c.fill(); c.restore(); }
-  if (el.close !== undefined) { const k = clamp01((lt - W_(L, el, 'close')) / 0.4); if (k > 0) { c.fillStyle = '#3a2f24'; c.fillRect(W2 - w * k, -H2, w * k, h); c.lineWidth = u * 0.4; c.strokeStyle = C.w; c.strokeRect(W2 - w * k, -H2, w * k, h); } }
+  if (el.close !== undefined) { const k = clamp01((lt - W_(L, el, 'close')) / 0.4); if (k > 0) { c.fillStyle = '#3a2f24'; c.fillRect(W2 - w * k, -H2, w * k, h); c.lineWidth = u * 0.4; c.strokeStyle = C.w; c.strokeRect(W2 - w * k, -H2, w * k, h);
+    if (k > 0.7) { c.globalAlpha *= (k - 0.7) / 0.3; c.fillStyle = '#e6e1d6'; c.fillRect(-u * 22, -u * 9, u * 44, u * 18); txt(c, 'REGISTRO DI CLASSE', 0, -u * 3, u * 3.4, '900', C.bg, 'center', 'middle', 2); txt(c, '3ª B', 0, u * 4, u * 4, '900', '#9a2a22', 'center', 'middle'); } } }
   c.restore();
 }
 function boardUI(c, el, L, lt, tt, size) {
@@ -932,7 +934,7 @@ function clash(c, v, L, lt, tt) {
 function choice(c, L, lt) {
   c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 30;
   const CH = { title: 'COSA FAI?', a: 'RISPONDI', a_sub: 'infrangi la regola 1', b: 'NON RISPONDERE', b_sub: 'lasci fuori te stesso', cta: 'SCRIVILO NEI COMMENTI', ...(SCRIPT.choice || {}) };
-  txt(c, CH.title, CX, 230, 110, '900', C.w, 'center', 'middle');
+  c.font = '900 110px Montserrat'; const tf = Math.min(110, 110 * 1700 / c.measureText(CH.title).width); txt(c, CH.title, CX, 230, tf, '900', C.w, 'center', 'middle');
   const cbtn = (x, col, a, b, d) => { const k = backOut((lt - d) / 0.35); c.save(); c.translate(x, 520); c.scale(k, k);
     c.shadowColor = col === C.red ? GLOW.red : 'rgba(39,168,92,0.9)'; c.beginPath(); c.roundRect(-380, -140, 760, 280, 30); c.fillStyle = col; c.fill(); c.shadowBlur = 0;
     c.font = '900 84px Montserrat'; const fs = Math.min(1, 680 / c.measureText(a).width); c.save(); c.scale(fs, fs); txt(c, a, 0, -20 / fs, 84, '900', C.w, 'center', 'middle'); c.restore(); txt(c, b, 0, 70, 34, '600', 'rgba(255,255,255,0.85)', 'center', 'middle'); c.restore(); };

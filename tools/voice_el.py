@@ -72,13 +72,19 @@ def heard_words(path, prompt):
     segs, _ = wm.transcribe(path, word_timestamps=True, language='it', initial_prompt=prompt, beam_size=5)
     return [(w.word.strip(), w.start, w.end) for s in segs for w in s.words]
 def align(toks, heard):
-    ht = []
+    ht = []; heard = list(heard)
+    for j in range(1, len(heard)):          # whisper writes a spoken time as "8 .10": that is "otto e dieci"
+        if re.fullmatch(r'\d{1,2}', heard[j - 1][0]) and re.fullmatch(r'[.:]\d\d\.?', heard[j][0]): heard[j] = ('e ' + heard[j][0][1:3], *heard[j][1:])
     for w, a, b in heard:
         tt = norm(w) or ['_']
         for i, x in enumerate(tt): ht.append((x, a + (b - a) * i / len(tt), a + (b - a) * (i + 1) / len(tt)))
     sm = difflib.SequenceMatcher(a=toks, b=[x for x, _, _ in ht], autojunk=False); times = [None] * len(toks)
     for bl in sm.get_matching_blocks():
         for k in range(bl.size): times[bl.a + k] = ht[bl.b + k][1:]
+    for op, a1, a2, b1, b2 in sm.get_opcodes():   # same word, different spelling ("suplente", "all'undici"): it was said
+        if op == 'replace' and a2 - a1 == b2 - b1:
+            for k in range(a2 - a1):
+                if difflib.SequenceMatcher(a=toks[a1 + k], b=ht[b1 + k][0]).ratio() >= 0.75: times[a1 + k] = ht[b1 + k][1:]
     known = [i for i, x in enumerate(times) if x]
     for i in range(len(times)):
         if times[i] is None:

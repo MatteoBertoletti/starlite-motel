@@ -1044,8 +1044,8 @@
       "els": [
        {
         "i": "doc",
-        "s": 2.4,
-        "y": -0.9,
+        "s": 2.0,
+        "y": -0.62,
         "title": "GIUSTIFICAZIONE",
         "body": "",
         "sign": true,
@@ -1068,8 +1068,8 @@
       "els": [
        {
         "i": "doc",
-        "s": 2.4,
-        "y": -0.9,
+        "s": 2.0,
+        "y": -0.62,
         "title": "GIUSTIFICAZIONE",
         "body": "",
         "sign": true,
@@ -1553,8 +1553,8 @@
    "id": 36,
    "who": "N",
    "clock": "12:55",
-   "say": "Ultima ora. Il supplente rifà l'appello un'ultima volta, prima di firmare il registro.",
-   "cap": "Ultima ora. Il supplente rifà l'appello un'ultima volta, prima di firmare il registro.",
+   "say": "All'ultima ora il supplente rifà l'appello, prima di firmare il registro.",
+   "cap": "All'ultima ora il supplente rifà l'appello, prima di firmare il registro.",
    "v": {
     "shots": [
      {
@@ -1700,10 +1700,10 @@
       "els": [
        {
         "i": "note",
-        "s": 2.0,
+        "s": 1.55,
         "flip": true,
-        "y": 0.4,
-        "a": "still"
+        "y": 0.12,
+        "a": "zoom"
        }
       ]
      }
