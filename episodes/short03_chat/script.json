@@ -16,7 +16,7 @@
  },
  "start_pad": 0.05,
  "end_pad": 0.2,
- "default_gap": 0.25,
+ "default_gap": 0.2,
  "speed_N": 1.0,
  "dips": [],
  "lines": [
@@ -383,7 +383,7 @@
    "who": "N",
    "fx": "tight",
    "say": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
-   "gap": 0.3,
+   "gap": 0.25,
    "cap": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
    "red": "ingresso",
    "v": {

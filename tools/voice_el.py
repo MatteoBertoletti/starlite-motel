@@ -87,6 +87,23 @@ def align(toks, heard):
             times[i] = (a, b)
     return times, sum(x is not None for x in [times[i] for i in known]) / max(1, len(toks))
 
+def tighten(src, dst, cap=0.25, longer=0.3, db=-45):
+    import numpy as np, soundfile as sf
+    y, sr = sf.read(src, dtype='float32'); mono = y if y.ndim == 1 else y.mean(1); w = int(sr * 0.02); n = len(mono) // w
+    quiet = 20 * np.log10(np.sqrt((mono[: n * w].reshape(n, w) ** 2).mean(1)) + 1e-9) < db
+    keep = np.ones(len(y), bool); j = 0
+    voiced = np.where(~quiet)[0]; first, last = (voiced[0], voiced[-1]) if len(voiced) else (0, n - 1)
+    while j < n:
+        if quiet[j]:
+            k = j
+            while k < n and quiet[k]: k += 1
+            if j > first and k <= last and (k - j) * 0.02 > longer:      # an inner pause: keep its first and last cap/2
+                h = int(cap / 2 * sr); a, b = j * w + h, k * w - h
+                if b > a: keep[a:b] = False
+            j = k
+        else: j += 1
+    edge = int(0.05 * sr); keep[: max(0, first * w - edge)] = False; keep[min(len(y), (last + 1) * w + edge):] = False   # 50 ms of air at each end
+    sf.write(dst, y[keep], sr)
 FX = {'tight': 'silenceremove=start_periods=0:stop_periods=-1:stop_duration=0.3:stop_threshold=-42dB:stop_silence=0.25',   # pauses inside a line capped at 0.25 s; speed untouched
       'speaker': 'highpass=f=200,lowpass=f=6500,acompressor=threshold=0.2:ratio=3,aecho=0.5:0.3:6:0.12,volume=1.3',   # a small smart-speaker
       'slow': 'atempo=0.92',   # gentle time-stretch, pitch unchanged (reuses the cached voice)
@@ -105,7 +122,8 @@ for i, L in enumerate(lines):
     y, _ = sf.read(clean, dtype='float32'); y = trim(y); sf.write(clean, y, SR)
     final = f"{OUT}/lines/{L['id']:02d}.wav"
     fx = L.get('fx', role.get('fx'))              # a line can override its speaker's filter
-    if fx: ff(['-i', clean, '-af', FX[fx] + ',apad=pad_dur=0.25', final])
+    if fx == 'tight': tighten(clean, final)                  # shorter inner pauses only; speed and pitch untouched
+    elif fx: ff(['-i', clean, '-af', FX[fx] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     toks = norm(L['say']); hw = heard_words(clean, L['say']); tt, score = align(toks, hw)
     if score < 0.5:        # transcript unusable (whisper can hallucinate on short lines): spread the words over the voiced part
