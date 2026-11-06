@@ -28,9 +28,12 @@ chap_block = ['CAPITOLI' + ('  (stimati: si aggiornano da soli dopo la narrazion
 fact = [Y['fact_title'], Y['fact'], Y['fact_source'], '']
 if Y.get('question_last'):            # the description ends with the question for the comments
     body = [*Y['intro'], '', *chap_block, *fact, *Y['outro'], '', Y['question']]
+    if Y.get('hashtags'): body += ['', Y['hashtags']]
 else:
     body = [*Y['intro'], '', Y['question'], '', *chap_block, *fact, *Y['outro']]
 lim = Y.get('tag_limit', 500)
+if Y.get('title_chars'): head.insert(2, f"**Titolo:** {len(Y['title'])} caratteri"); head.insert(3, '')
 md = [*head, '## Descrizione', '', '```', *body, '```', '', f"## Tag ({len(Y['tags'])} tag, {len(tags)} caratteri su {lim})", '', '```', tags, '```', '']
+if Y.get('pinned'): md += ['## Commento fissato', '', '```', Y['pinned'], '```', '']
 assert len(tags) <= lim, f'tags too long: {len(tags)}'
 open(f'{ep}/youtube.md', 'w').write('\n'.join(md)); print('\n'.join(md))
