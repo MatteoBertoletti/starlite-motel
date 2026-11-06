@@ -1,0 +1,431 @@
+{
+ "duration": 28.97,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.05,
+   "end": 5.15,
+   "dur": 5.1,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.05,
+     "e": 0.23
+    },
+    {
+     "w": "nella",
+     "s": 0.23,
+     "e": 0.43
+    },
+    {
+     "w": "chat",
+     "s": 0.43,
+     "e": 0.71
+    },
+    {
+     "w": "con",
+     "s": 0.71,
+     "e": 0.99
+    },
+    {
+     "w": "te",
+     "s": 0.99,
+     "e": 1.11
+    },
+    {
+     "w": "stesso",
+     "s": 1.11,
+     "e": 1.51
+    },
+    {
+     "w": "compare",
+     "s": 1.51,
+     "e": 2.09
+    },
+    {
+     "w": "sta",
+     "s": 2.09,
+     "e": 2.69
+    },
+    {
+     "w": "scrivendo",
+     "s": 2.69,
+     "e": 3.97
+    },
+    {
+     "w": "non",
+     "s": 3.97,
+     "e": 4.31
+    },
+    {
+     "w": "aspettare",
+     "s": 4.31,
+     "e": 4.99
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se nella chat con te stesso compare «sta scrivendo…», non aspettare."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 5.42,
+   "end": 9.51,
+   "dur": 4.09,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "quella",
+     "s": 5.42,
+     "e": 5.7
+    },
+    {
+     "w": "chat",
+     "s": 5.7,
+     "e": 5.98
+    },
+    {
+     "w": "l",
+     "s": 5.98,
+     "e": 6.38
+    },
+    {
+     "w": "hai",
+     "s": 6.38,
+     "e": 6.46
+    },
+    {
+     "w": "aperta",
+     "s": 6.46,
+     "e": 6.88
+    },
+    {
+     "w": "solo",
+     "s": 6.88,
+     "e": 7.18
+    },
+    {
+     "w": "tu",
+     "s": 7.18,
+     "e": 7.56
+    },
+    {
+     "w": "non",
+     "s": 7.82,
+     "e": 8.04
+    },
+    {
+     "w": "c",
+     "s": 8.04,
+     "e": 8.16
+    },
+    {
+     "w": "e",
+     "s": 8.16,
+     "e": 8.24
+    },
+    {
+     "w": "nessun",
+     "s": 8.24,
+     "e": 8.6
+    },
+    {
+     "w": "altro",
+     "s": 8.6,
+     "e": 8.84
+    },
+    {
+     "w": "dentro",
+     "s": 8.84,
+     "e": 9.22
+    }
+   ],
+   "match": 1.0,
+   "heard": "Quella chat l 'hai aperta solo tu. Non c 'è nessun altro dentro."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.78,
+   "end": 15.31,
+   "dur": 5.53,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "i",
+     "s": 9.78,
+     "e": 9.9
+    },
+    {
+     "w": "puntini",
+     "s": 9.9,
+     "e": 10.36
+    },
+    {
+     "w": "si",
+     "s": 10.36,
+     "e": 10.52
+    },
+    {
+     "w": "fermano",
+     "s": 10.52,
+     "e": 11.08
+    },
+    {
+     "w": "ricominciano",
+     "s": 11.7,
+     "e": 12.48
+    },
+    {
+     "w": "qualcuno",
+     "s": 13.08,
+     "e": 13.74
+    },
+    {
+     "w": "sta",
+     "s": 13.74,
+     "e": 14.06
+    },
+    {
+     "w": "scegliendo",
+     "s": 14.06,
+     "e": 14.62
+    },
+    {
+     "w": "le",
+     "s": 14.62,
+     "e": 14.74
+    },
+    {
+     "w": "parole",
+     "s": 14.74,
+     "e": 15.06
+    }
+   ],
+   "match": 1.0,
+   "heard": "I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 15.58,
+   "end": 20.25,
+   "dur": 4.67,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 15.58,
+     "e": 15.86
+    },
+    {
+     "w": "arriva",
+     "s": 15.86,
+     "e": 16.38
+    },
+    {
+     "w": "un",
+     "s": 16.38,
+     "e": 16.5
+    },
+    {
+     "w": "solo",
+     "s": 16.5,
+     "e": 16.78
+    },
+    {
+     "w": "messaggio",
+     "s": 16.78,
+     "e": 17.48
+    },
+    {
+     "w": "dal",
+     "s": 17.74,
+     "e": 17.96
+    },
+    {
+     "w": "tuo",
+     "s": 17.96,
+     "e": 18.26
+    },
+    {
+     "w": "numero",
+     "s": 18.26,
+     "e": 18.46
+    },
+    {
+     "w": "sono",
+     "s": 18.46,
+     "e": 19.52
+    },
+    {
+     "w": "a",
+     "s": 19.52,
+     "e": 19.68
+    },
+    {
+     "w": "casa",
+     "s": 19.68,
+     "e": 20.22
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi arriva un solo messaggio, dal tuo numero «Sono a casa.»"
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.52,
+   "end": 23.23,
+   "dur": 2.71,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "tu",
+     "s": 20.52,
+     "e": 20.64
+    },
+    {
+     "w": "sei",
+     "s": 20.64,
+     "e": 20.8
+    },
+    {
+     "w": "sul",
+     "s": 20.8,
+     "e": 20.98
+    },
+    {
+     "w": "divano",
+     "s": 20.98,
+     "e": 21.5
+    },
+    {
+     "w": "sei",
+     "s": 22.0,
+     "e": 22.08
+    },
+    {
+     "w": "a",
+     "s": 22.08,
+     "e": 22.26
+    },
+    {
+     "w": "casa",
+     "s": 22.26,
+     "e": 22.5
+    },
+    {
+     "w": "da",
+     "s": 22.5,
+     "e": 22.7
+    },
+    {
+     "w": "ore",
+     "s": 22.7,
+     "e": 23.02
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tu sei sul divano. Sei a casa da ore."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.5,
+   "end": 27.23,
+   "dur": 3.73,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 23.5,
+     "e": 23.64
+    },
+    {
+     "w": "rispondere",
+     "s": 23.64,
+     "e": 24.28
+    },
+    {
+     "w": "la",
+     "s": 24.66,
+     "e": 24.84
+    },
+    {
+     "w": "vibrazione",
+     "s": 24.84,
+     "e": 25.5
+    },
+    {
+     "w": "la",
+     "s": 25.5,
+     "e": 25.64
+    },
+    {
+     "w": "sentiresti",
+     "s": 25.64,
+     "e": 26.24
+    },
+    {
+     "w": "dall",
+     "s": 26.24,
+     "e": 26.4
+    },
+    {
+     "w": "ingresso",
+     "s": 26.4,
+     "e": 26.98
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non rispondere. La vibrazione la sentiresti dall 'ingresso."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 27.53,
+   "end": 28.77,
+   "dur": 1.24,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "ha",
+     "s": 27.53,
+     "e": 27.67
+    },
+    {
+     "w": "gia",
+     "s": 27.67,
+     "e": 27.85
+    },
+    {
+     "w": "la",
+     "s": 27.85,
+     "e": 27.95
+    },
+    {
+     "w": "tua",
+     "s": 27.95,
+     "e": 28.13
+    },
+    {
+     "w": "chiave",
+     "s": 28.13,
+     "e": 28.57
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ha già la tua chiave."
+  }
+ ]
+}
