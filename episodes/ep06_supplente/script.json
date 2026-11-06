@@ -41,42 +41,334 @@
    "say": "Lunedì, otto e dieci. Il supplente fa l'appello e legge ventiquattro nomi.",
    "gap": 0.9,
    "cap": "Lunedì, 8:10. Il supplente fa l'appello e legge 24 nomi.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "clock",
+        "text": "08:10",
+        "a": "zoom"
+       }
+      ]
+     },
+     {
+      "at": "supplente",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72
+       }
+      ]
+     },
+     {
+      "at": "ventiquattro",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "read": "ventiquattro",
+        "readdur": 1.6
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 2,
    "who": "N",
    "say": "Sono sette regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
    "cap": "7 regole. Quasi tutti sbagliano la quarta. Nessuno doveva aver bisogno della settima.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "note",
+        "s": 1.1,
+        "a": "write"
+       }
+      ]
+     },
+     {
+      "at": "quarta",
+      "els": [
+       {
+        "i": "text",
+        "text": "4",
+        "s": 2.6,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     },
+     {
+      "at": "settima",
+      "els": [
+       {
+        "i": "text",
+        "text": "7",
+        "s": 2.8,
+        "a": "slam",
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@settima",
+    "sfx": [
+     [
+      "hit",
+      "settima"
+     ]
+    ]
+   }
   },
   {
    "id": 3,
    "who": "N",
    "say": "Nella tua classe siete in ventitré. Lo dice il registro elettronico. Lo dice il cartello sulla porta: terza B, ventitré alunni.",
    "cap": "Nella tua classe siete in 23. Lo dice il registro elettronico. Lo dice il cartello sulla porta: 3ª B, 23 alunni.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "registro",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "title": "REGISTRO ELETTRONICO · 3ª B",
+        "sub": "23 ALUNNI",
+        "n": 23,
+        "rows": true
+       }
+      ]
+     },
+     {
+      "at": "cartello",
+      "els": [
+       {
+        "i": "door",
+        "s": 1.1,
+        "x": -0.45,
+        "a": "still"
+       },
+       {
+        "i": "text",
+        "text": "3ª B",
+        "s": 1.3,
+        "a": "pop",
+        "x": 0.4,
+        "y": -0.2,
+        "col": "w"
+       },
+       {
+        "i": "text",
+        "text": "23 ALUNNI",
+        "s": 0.6,
+        "a": "pop",
+        "x": 0.4,
+        "y": 0.3,
+        "at": "ventitré",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 4,
    "who": "N",
    "say": "Ventitré non è un numero a caso: sotto una media di ventidue alunni, le terze vengono accorpate.",
    "cap": "Ventitré non è un numero a caso: sotto una media di 22 alunni, le terze vengono accorpate.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "text",
+        "text": "23",
+        "s": 2.8,
+        "a": "zoom",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     },
+     {
+      "at": "media",
+      "els": [
+       {
+        "i": "text",
+        "text": "MEDIA MINIMA",
+        "s": 0.55,
+        "a": "pop",
+        "y": -0.75,
+        "col": "w"
+       },
+       {
+        "i": "text",
+        "text": "22",
+        "s": 2.6,
+        "a": "slam",
+        "col": "w"
+       }
+      ]
+     },
+     {
+      "at": "accorpate",
+      "els": [
+       {
+        "i": "text",
+        "text": "3ª A",
+        "s": 0.9,
+        "a": "slide",
+        "x": -0.5,
+        "col": "w"
+       },
+       {
+        "i": "text",
+        "text": "3ª B",
+        "s": 0.9,
+        "a": "slide",
+        "x": 0.5,
+        "col": "w"
+       },
+       {
+        "i": "text",
+        "text": "ACCORPATE",
+        "s": 0.75,
+        "a": "slam",
+        "y": 0.6,
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 5,
    "who": "N",
    "say": "Il ventiquattresimo nome non lo conosce nessuno. Nessuno risponde.",
    "cap": "Il 24° nome non lo conosce nessuno. Nessuno risponde.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "read": true,
+        "readdur": 0.01,
+        "x": -0.47,
+        "y": -1.38,
+        "extra": "ventiquattresimo"
+       }
+      ]
+     },
+     {
+      "at": "conosce",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "risponde",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72,
+        "tgaze": "risponde"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "risponde"
+     ]
+    ]
+   }
   },
   {
    "id": 6,
    "who": "N",
    "say": "In fondo, vicino alla finestra, c'è un banco con uno zaino. Nessuno ricorda di averlo mai visto occupato.",
    "cap": "In fondo, vicino alla finestra, c'è un banco con uno zaino. Nessuno ricorda di averlo mai visto occupato.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "finestra",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "hot": "zaino"
+       }
+      ]
+     },
+     {
+      "at": "ricorda",
+      "els": [
+       {
+        "i": "backpack",
+        "a": "zoom",
+        "s": 1.0
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "zaino"
+     ]
+    ],
+    "fx": "glitch@zaino"
+   }
   },
   {
    "id": 7,
@@ -84,14 +376,90 @@
    "say": "Lo zaino è chiuso. Sull'etichetta c'è un nome scritto a penna, troppo sbiadito per leggerlo.",
    "gap": 1.3,
    "cap": "Lo zaino è chiuso. Sull'etichetta c'è un nome scritto a penna, troppo sbiadito per leggerlo.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "backpack",
+        "a": "zoom",
+        "s": 1.0
+       }
+      ]
+     },
+     {
+      "at": "etichetta",
+      "els": [
+       {
+        "i": "backpack",
+        "a": "still",
+        "s": 2.2,
+        "x": -0.55,
+        "y": 1.05,
+        "label": "etichetta"
+       }
+      ]
+     },
+     {
+      "at": "sbiadito",
+      "els": [
+       {
+        "i": "text",
+        "text": "?",
+        "s": 2.4,
+        "a": "flicker",
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 8,
    "who": "N",
    "say": "Dal banco davanti ti arriva un foglio piegato in quattro. Sette righe a matita, scritte in fretta.",
    "cap": "Dal banco davanti ti arriva un foglio piegato in quattro. Sette righe a matita, scritte in fretta.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "foglio",
+      "els": [
+       {
+        "i": "paper",
+        "s": 1.4,
+        "a": "slidein"
+       }
+      ]
+     },
+     {
+      "at": "Sette",
+      "els": [
+       {
+        "i": "note",
+        "s": 1.15,
+        "a": "write"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "foglio"
+     ]
+    ]
+   }
   },
   {
    "id": 9,
@@ -109,14 +477,91 @@
    "who": "N",
    "say": "Perché il supplente non sta controllando chi c'è. Sta controllando chi risponde.",
    "cap": "Perché il supplente non sta controllando chi c'è. Sta controllando chi risponde.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72
+       }
+      ]
+     },
+     {
+      "at": "controllando",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "read": "controllando",
+        "readdur": 2.5
+       }
+      ]
+     },
+     {
+      "at": "risponde",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 11,
    "who": "N",
    "say": "E quel nome, in effetti, ti suona familiare. Come una parola che hai sulla punta della lingua.",
    "cap": "E quel nome, in effetti, ti suona familiare. Come una parola che hai sulla punta della lingua.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "extra": true,
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "familiare",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 3.0,
+        "extra": true,
+        "x": -0.95,
+        "y": -2.1
+       }
+      ]
+     },
+     {
+      "at": "punta",
+      "els": [
+       {
+        "i": "text",
+        "text": "«…»",
+        "s": 2.0,
+        "a": "pop",
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 12,
@@ -124,7 +569,37 @@
    "say": "Chi alza la mano, da quel giorno, sul registro compare due volte.",
    "gap": 1.2,
    "cap": "Chi alza la mano, da quel giorno, sul registro compare due volte.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hand",
+        "s": 1.1,
+        "a": "rise",
+        "col": "gold"
+       }
+      ]
+     },
+     {
+      "at": "registro",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "twice": "due"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "due"
+     ]
+    ]
+   }
   },
   {
    "id": 13,
@@ -142,7 +617,46 @@
    "who": "N",
    "say": "Perché il supplente guarda dove guardi tu. Se ti volti, gli indichi un posto libero.",
    "cap": "Perché il supplente guarda dove guardi tu. Se ti volti, gli indichi un posto libero.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "tgaze": "guarda"
+       }
+      ]
+     },
+     {
+      "at": "guardi",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "look": "guardi",
+        "tgaze": true
+       }
+      ]
+     },
+     {
+      "at": "volti",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "hot": "libero"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 15,
@@ -150,7 +664,49 @@
    "say": "E un posto libero, in una classe dove siete tutti, qualcuno lo deve occupare.",
    "gap": 1.2,
    "cap": "E un posto libero, in una classe dove siete tutti, qualcuno lo deve occupare.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "hot": true
+       }
+      ]
+     },
+     {
+      "at": "tutti",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "occupare",
+      "els": [
+       {
+        "i": "shadow",
+        "s": 1.1,
+        "a": "fade"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "occupare"
+     ]
+    ]
+   }
   },
   {
    "id": 16,
@@ -169,7 +725,58 @@
    "who": "N",
    "say": "Perché la sua conta è l'unica che torna. Ventiquattro nomi, ventiquattro sedie, ventiquattro libri sulla cattedra.",
    "cap": "Perché la sua conta è l'unica che torna. 24 nomi, 24 sedie, 24 libri sulla cattedra.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "read": true,
+        "readdur": 2.0
+       }
+      ]
+     },
+     {
+      "at": "nomi",
+      "els": [
+       {
+        "i": "text",
+        "text": "24 NOMI",
+        "s": 1.0,
+        "a": "slam",
+        "col": "w"
+       }
+      ]
+     },
+     {
+      "at": "sedie",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "num": "sedie",
+        "numstep": 0.03
+       }
+      ]
+     },
+     {
+      "at": "libri",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72,
+        "books": "libri"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 18,
@@ -177,14 +784,87 @@
    "say": "Le sedie le hai contate tu, all'inizio dell'anno. Erano ventitré.",
    "gap": 1.3,
    "cap": "Le sedie le hai contate tu, all'inizio dell'anno. Erano 23.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true,
+        "num": true,
+        "numstop": 23
+       }
+      ]
+     },
+     {
+      "at": "Erano",
+      "els": [
+       {
+        "i": "text",
+        "text": "23",
+        "s": 2.8,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 19,
    "who": "N",
    "say": "Chi lo corregge, alla lezione dopo, trova la propria sedia già occupata.",
    "cap": "Chi lo corregge, alla lezione dopo, trova la propria sedia già occupata.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true
+       }
+      ]
+     },
+     {
+      "at": "lezione",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": 0.48,
+        "y": -0.4
+       }
+      ]
+     },
+     {
+      "at": "sedia",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": 0.48,
+        "y": -0.4,
+        "taken": "sedia"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "occupata"
+     ]
+    ],
+    "fx": "glitch@occupata"
+   }
   },
   {
    "id": 20,
@@ -192,21 +872,152 @@
    "clock": "08:50",
    "say": "Sotto il foglio c'è una fotocopia: la pagina delle presenze di due anni fa, quando eravate in prima.",
    "cap": "Sotto il foglio c'è una fotocopia: la pagina delle presenze di due anni fa, quando eravate in prima.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "paper",
+        "s": 1.4,
+        "a": "slidein"
+       }
+      ]
+     },
+     {
+      "at": "presenze",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "old": true,
+        "title": "PRESENZE · 1ª B",
+        "sub": "DUE ANNI FA",
+        "rows": "presenze"
+       }
+      ]
+     },
+     {
+      "at": "prima",
+      "els": [
+       {
+        "i": "text",
+        "text": "1ª B",
+        "s": 1.6,
+        "a": "pop",
+        "col": "w"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "fotocopia"
+     ]
+    ]
+   }
   },
   {
    "id": 21,
    "who": "N",
    "say": "Ventiquattro righe. L'ultima è cancellata con la gomma, ma si legge ancora.",
    "cap": "24 righe. L'ultima è cancellata con la gomma, ma si legge ancora.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "old": true,
+        "title": "PRESENZE · 1ª B",
+        "sub": "DUE ANNI FA"
+       }
+      ]
+     },
+     {
+      "at": "ultima",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "old": true,
+        "erased": true,
+        "title": "PRESENZE · 1ª B",
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "legge",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 3.0,
+        "old": true,
+        "erased": true,
+        "x": -0.95,
+        "y": -2.1
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 22,
    "who": "N",
    "say": "Accanto al nome, la stessa sigla per duecento giorni: assente giustificato.",
    "cap": "Accanto al nome, la stessa sigla per 200 giorni: «assente giustificato».",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "old": true,
+        "erased": true,
+        "ag": "sigla",
+        "x": -0.75,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "duecento",
+      "els": [
+       {
+        "i": "text",
+        "text": "200",
+        "s": 2.4,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     },
+     {
+      "at": "assente",
+      "els": [
+       {
+        "i": "text",
+        "text": "ASSENTE GIUSTIFICATO",
+        "s": 0.62,
+        "a": "slam",
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 23,
@@ -214,7 +1025,36 @@
    "say": "Ogni giustificazione è firmata da un supplente.",
    "gap": 1.2,
    "cap": "Ogni giustificazione è firmata da un supplente.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doc",
+        "s": 1.3,
+        "title": "GIUSTIFICAZIONE",
+        "body": "ASSENZA DEL GIORNO",
+        "sign": "firmata",
+        "a": "slidein"
+       }
+      ]
+     },
+     {
+      "at": "supplente",
+      "els": [
+       {
+        "i": "doc",
+        "s": 2.4,
+        "y": -0.9,
+        "title": "GIUSTIFICAZIONE",
+        "body": "",
+        "sign": true,
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 24,
@@ -222,7 +1062,36 @@
    "say": "Il supplente, comunque, ha una bella calligrafia. Lo segnaliamo.",
    "gap": 0.7,
    "cap": "Il supplente, comunque, ha una bella calligrafia. Lo segnaliamo.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doc",
+        "s": 2.4,
+        "y": -0.9,
+        "title": "GIUSTIFICAZIONE",
+        "body": "",
+        "sign": true,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "segnaliamo",
+      "els": [
+       {
+        "i": "text",
+        "text": "BELLA CALLIGRAFIA.",
+        "s": 0.6,
+        "a": "pop",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 25,
@@ -241,14 +1110,93 @@
    "who": "N",
    "say": "È quella che sbagliano quasi tutti. Perché quello che c'è alla lavagna, a scuola, si copia senza pensarci.",
    "cap": "È quella che sbagliano quasi tutti. Perché quello che c'è alla lavagna, a scuola, si copia senza pensarci.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "text",
+        "text": "4",
+        "s": 2.6,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     },
+     {
+      "at": "lavagna",
+      "els": [
+       {
+        "i": "board",
+        "a": "zoom",
+        "s": 0.95
+       }
+      ]
+     },
+     {
+      "at": "copia",
+      "els": [
+       {
+        "i": "notebook",
+        "s": 1.0,
+        "a": "still",
+        "write": "copia",
+        "pen": true
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 27,
    "who": "N",
    "say": "Il supplente lo scrive in alto a destra, sotto la data. Per chi è assente, dice.",
    "cap": "Il supplente lo scrive in alto a destra, sotto la data. Per chi è assente, dice.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "board",
+        "a": "still",
+        "s": 0.95,
+        "write": "scrive",
+        "wdur": 2.0
+       }
+      ]
+     },
+     {
+      "at": "data",
+      "els": [
+       {
+        "i": "board",
+        "a": "still",
+        "s": 1.8,
+        "x": -0.78,
+        "y": 0.2,
+        "write": true
+       }
+      ]
+     },
+     {
+      "at": "assente",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "hot": "assente",
+        "boardname": true
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 28,
@@ -256,7 +1204,81 @@
    "say": "Ma chi lo copia, lo scrive con la propria mano. E sul quaderno il nome viene uguale alla lavagna. Stessa calligrafia. La tua.",
    "gap": 1.3,
    "cap": "Ma chi lo copia, lo scrive con la propria mano. E sul quaderno il nome viene uguale alla lavagna. Stessa calligrafia. La tua.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "notebook",
+        "s": 1.0,
+        "a": "still",
+        "write": "scrive",
+        "pen": true
+       }
+      ]
+     },
+     {
+      "at": "quaderno",
+      "els": [
+       {
+        "i": "board",
+        "a": "still",
+        "s": 0.55,
+        "x": -0.55,
+        "write": true
+       },
+       {
+        "i": "notebook",
+        "a": "still",
+        "s": 0.62,
+        "x": 0.6,
+        "write": true
+       }
+      ]
+     },
+     {
+      "at": "Stessa",
+      "els": [
+       {
+        "i": "board",
+        "a": "still",
+        "s": 0.55,
+        "x": -0.55,
+        "write": true,
+        "red": true
+       },
+       {
+        "i": "notebook",
+        "a": "still",
+        "s": 0.62,
+        "x": 0.6,
+        "write": true,
+        "red": true
+       }
+      ]
+     },
+     {
+      "at": "tua",
+      "els": [
+       {
+        "i": "text",
+        "text": "LA TUA.",
+        "s": 1.4,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "Stessa"
+     ]
+    ],
+    "fx": "glitch@Stessa"
+   }
   },
   {
    "id": 29,
@@ -275,7 +1297,53 @@
    "who": "N",
    "say": "Perché sono sempre ventiquattro. Il bidello, che conta per mestiere, ne segna ventitré.",
    "cap": "Perché sono sempre 24. Il bidello, che conta per mestiere, ne segna 23.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "corridor",
+        "a": "still",
+        "count": "sempre",
+        "step": 0.06
+       }
+      ]
+     },
+     {
+      "at": "bidello",
+      "els": [
+       {
+        "i": "corridor",
+        "a": "still",
+        "count": true,
+        "bidello": "23",
+        "s": 1.5,
+        "x": 0.55,
+        "y": -0.25
+       }
+      ]
+     },
+     {
+      "at": "segna",
+      "els": [
+       {
+        "i": "text",
+        "text": "23",
+        "s": 2.6,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "buzz",
+      "Perché"
+     ]
+    ]
+   }
   },
   {
    "id": 31,
@@ -283,7 +1351,56 @@
    "say": "Chi conta ad alta voce, arriva a ventitré e si ferma. E qualcuno, dietro di lui, dice: ventiquattro.",
    "gap": 1.3,
    "cap": "Chi conta ad alta voce, arriva a 23 e si ferma. E qualcuno, dietro di lui, dice: «24».",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "corridor",
+        "a": "still",
+        "count": "conta",
+        "stop": 23,
+        "step": 0.13
+       }
+      ]
+     },
+     {
+      "at": "dietro",
+      "els": [
+       {
+        "i": "corridor",
+        "a": "zoom",
+        "count": "conta",
+        "stop": 23,
+        "last": "ventiquattro",
+        "s": 2.4,
+        "y": 0.1
+       }
+      ]
+     },
+     {
+      "at": "ventiquattro",
+      "els": [
+       {
+        "i": "text",
+        "text": "24",
+        "s": 2.6,
+        "a": "slam",
+        "col": "red",
+        "g": "red"
+       }
+      ],
+      "dt": 0.35
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "ventiquattro"
+     ]
+    ],
+    "fx": "glitch@ventiquattro"
+   }
   },
   {
    "id": 32,
@@ -302,14 +1419,80 @@
    "who": "N",
    "say": "Alle undici il supplente rifà l'appello. Al ventiquattresimo nome, ventitré voci dicono: presente.",
    "cap": "Alle 11 il supplente rifà l'appello. Al 24° nome, 23 voci dicono: «presente».",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "read": "appello",
+        "readdur": 2.2
+       }
+      ]
+     },
+     {
+      "at": "ventiquattresimo",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "extra": "ventiquattresimo",
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "voci",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "chorus": "presente"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 34,
    "who": "N",
    "say": "Perché il coro serve a coprire una voce che non deve sentirsi.",
    "cap": "Perché il coro serve a coprire una voce che non deve sentirsi.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "chorus": true
+       }
+      ]
+     },
+     {
+      "at": "voce",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "chorus": true,
+        "hot": "voce"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 35,
@@ -317,7 +1500,54 @@
    "say": "Chi si unisce, sente la propria voce uscire con un secondo di ritardo. Da in fondo, vicino alla finestra.",
    "gap": 1.3,
    "cap": "Chi si unisce, sente la propria voce uscire con un secondo di ritardo. Da in fondo, vicino alla finestra.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true,
+        "chorus": true
+       }
+      ]
+     },
+     {
+      "at": "ritardo",
+      "els": [
+       {
+        "i": "text",
+        "text": "+1 s",
+        "s": 1.6,
+        "a": "slam",
+        "col": "red",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "at": "fondo",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "chorus": true,
+        "echo": "finestra"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "finestra"
+     ]
+    ]
+   }
   },
   {
    "id": 36,
@@ -325,14 +1555,87 @@
    "clock": "12:55",
    "say": "Ultima ora. Il supplente rifà l'appello un'ultima volta, prima di firmare il registro.",
    "cap": "Ultima ora. Il supplente rifà l'appello un'ultima volta, prima di firmare il registro.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "clock",
+        "text": "12:55",
+        "a": "zoom"
+       }
+      ]
+     },
+     {
+      "at": "supplente",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72
+       }
+      ]
+     },
+     {
+      "at": "firmare",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "read": "firmare",
+        "readdur": 1.5
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 37,
    "who": "N",
    "say": "Legge il ventiquattresimo nome. Ventitré mani si alzano insieme, senza un rumore.",
    "cap": "Legge il 24° nome. 23 mani si alzano insieme, senza un rumore.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "extra": true,
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "Ventitré",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "hands": "alzano"
+       }
+      ]
+     },
+     {
+      "at": "rumore",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true,
+        "hands": true
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 38,
@@ -340,14 +1643,78 @@
    "say": "La tua no. È l'unica, in tutta la classe.",
    "gap": 1.4,
    "cap": "La tua no. È l'unica, in tutta la classe.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": 0.48,
+        "y": -0.4,
+        "hands": true
+       }
+      ]
+     },
+     {
+      "at": "unica",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "hands": true
+       }
+      ]
+     }
+    ],
+    "fx": "glitch@no",
+    "sfx": [
+     [
+      "hit",
+      "no"
+     ]
+    ]
+   }
   },
   {
    "id": 39,
    "who": "N",
    "say": "Allora giri il foglio. La settima riga era sul retro.",
    "cap": "Allora giri il foglio. La 7ª riga era sul retro.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "note",
+        "s": 1.15,
+        "flip": "giri"
+       }
+      ]
+     },
+     {
+      "at": "settima",
+      "els": [
+       {
+        "i": "note",
+        "s": 2.0,
+        "flip": true,
+        "y": 0.4,
+        "a": "still"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "paper",
+      "giri"
+     ]
+    ]
+   }
   },
   {
    "id": 40,
@@ -366,14 +1733,103 @@
    "say": "Perché all'ultimo appello non conta chi risponde. Conta chi resta giù.",
    "gap": 1.2,
    "cap": "Perché all'ultimo appello non conta chi risponde. Conta chi resta giù.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "hands": true
+       }
+      ]
+     },
+     {
+      "at": "risponde",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "read": true,
+        "readdur": 0.01,
+        "extra": true,
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "resta",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": 0.48,
+        "y": -0.4,
+        "hands": true
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 42,
    "who": "N",
    "say": "Il nome in più era il tuo. Gli altri ventitré lo sapevano da sempre.",
    "cap": "Il nome in più era il tuo. Gli altri 23 lo sapevano da sempre.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 2.0,
+        "extra": true,
+        "x": -0.47,
+        "y": -1.38
+       }
+      ]
+     },
+     {
+      "at": "tuo",
+      "els": [
+       {
+        "i": "text",
+        "text": "TUO.",
+        "s": 2.2,
+        "a": "slam",
+        "col": "gold",
+        "g": "gold"
+       }
+      ]
+     },
+     {
+      "at": "altri",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "num": "altri",
+        "numstep": 0.03,
+        "youout": "altri"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "tuo"
+     ]
+    ]
+   }
   },
   {
    "id": 43,
@@ -381,7 +1837,54 @@
    "say": "Il foglio, il coro, la fila. Non servivano a proteggere loro. Servivano a coprire te.",
    "gap": 1.2,
    "cap": "Il foglio, il coro, la fila. Non servivano a proteggere loro. Servivano a coprire te.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "note",
+        "s": 1.15,
+        "a": "pop"
+       }
+      ]
+     },
+     {
+      "at": "coro",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "chorus": true
+       }
+      ]
+     },
+     {
+      "at": "fila",
+      "els": [
+       {
+        "i": "corridor",
+        "a": "zoom",
+        "count": true
+       }
+      ]
+     },
+     {
+      "at": "coprire",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "mine": "coprire"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 44,
@@ -389,7 +1892,39 @@
    "say": "Il supplente ti guarda e chiude il registro.",
    "gap": 0.8,
    "cap": "Il supplente ti guarda e chiude il registro.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 1.6,
+        "y": 0.72,
+        "tgaze": "guarda"
+       }
+      ]
+     },
+     {
+      "at": "chiude",
+      "els": [
+       {
+        "i": "register",
+        "a": "still",
+        "s": 0.95,
+        "close": "chiude"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "door_shut",
+      "chiude"
+     ]
+    ]
+   }
   },
   {
    "id": 45,
@@ -397,7 +1932,42 @@
    "say": "Il banco vicino alla finestra è tuo.",
    "gap": 1.3,
    "cap": "Il banco vicino alla finestra è tuo.",
-   "v": {}
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "classroom",
+        "a": "zoom",
+        "you": true,
+        "mine": "finestra",
+        "youout": "finestra"
+       }
+      ]
+     },
+     {
+      "at": "tuo",
+      "els": [
+       {
+        "i": "classroom",
+        "a": "still",
+        "you": true,
+        "s": 2.0,
+        "x": -1.1,
+        "y": -1.55,
+        "mine": true,
+        "youout": true
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "tuo"
+     ]
+    ]
+   }
   },
   {
    "id": 46,

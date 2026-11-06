@@ -126,6 +126,10 @@ for i, L in enumerate(lines):
     elif fx: ff(['-i', clean, '-af', FX[fx] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     toks = norm(L['say']); hw = heard_words(clean, L['say']); tt, score = align(toks, hw)
+    if score < 0.95:       # with the line itself as prompt whisper sometimes skips the opening words as 'already said': listen again without it
+        for pr in (None, 'Trascrizione di una narrazione in italiano.'):
+            hw2 = heard_words(clean, pr); tt2, s2 = align(toks, hw2)
+            if s2 > score: hw, tt, score = hw2, tt2, s2
     if score < 0.5:        # transcript unusable (whisper can hallucinate on short lines): spread the words over the voiced part
         yy, _ = sf.read(clean, dtype='float32'); a0, a1 = 0.03, len(yy) / SR - 0.05
         wts = [max(1, len(re.findall(r'[aeiou]', w))) for w in toks]; tot = sum(wts); acc = a0
