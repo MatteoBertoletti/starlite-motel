@@ -16,13 +16,14 @@
  },
  "start_pad": 0.05,
  "end_pad": 0.2,
- "default_gap": 0.27,
+ "default_gap": 0.25,
  "speed_N": 1.0,
  "dips": [],
  "lines": [
   {
    "id": 1,
    "who": "N",
+   "fx": "tight",
    "say": "Se nella chat con te stesso compare «sta scrivendo…», non aspettare.",
    "capfull": true,
    "cap": "Se nella chat con te stesso compare «sta scrivendo…», non aspettare.",
@@ -114,6 +115,7 @@
   {
    "id": 2,
    "who": "N",
+   "fx": "tight",
    "say": "Quella chat l'hai aperta solo tu. Non c'è nessun altro dentro.",
    "cap": "Quella chat l'hai aperta solo tu. Non c'è nessun altro dentro.",
    "red": "nessun",
@@ -159,6 +161,7 @@
   {
    "id": 3,
    "who": "N",
+   "fx": "tight",
    "say": "I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole.",
    "cap": "I puntini si fermano. Ricominciano. Qualcuno sta scegliendo le parole.",
    "red": "qualcuno",
@@ -240,6 +243,7 @@
   {
    "id": 4,
    "who": "N",
+   "fx": "tight",
    "say": "Poi arriva un solo messaggio, dal tuo numero: «Sono a casa.»",
    "cap_pages": [
     "Poi arriva un solo messaggio, dal tuo numero:",
@@ -329,6 +333,7 @@
   {
    "id": 5,
    "who": "N",
+   "fx": "tight",
    "say": "Tu sei sul divano. Sei a casa da ore.",
    "cap": "Tu sei sul divano. Sei a casa da ore.",
    "red": "ore",
@@ -376,6 +381,7 @@
   {
    "id": 6,
    "who": "N",
+   "fx": "tight",
    "say": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
    "gap": 0.3,
    "cap": "Non rispondere. La vibrazione la sentiresti dall'ingresso.",
@@ -441,6 +447,7 @@
   {
    "id": 7,
    "who": "N",
+   "fx": "tight",
    "say": "Ha già la tua chiave.",
    "cap": "Ha già la tua chiave.",
    "red": "chiave",
