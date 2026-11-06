@@ -76,6 +76,8 @@ function drawEl(c, el, L, lt, tt) {
   else if (a === 'push') { dx = (1 - easeOut(k / 0.6)) * 120; }
   else if (a === 'buzz') { const on = (k < 0.4 || (k > 0.55 && k < 0.95)) ? 1 : 0; dx = on * Math.sin(k * 140) * 14; rot = on * Math.sin(k * 110) * 0.012; }
   else if (a === 'impact') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)); }
+  else if (a === 'impactdrift') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)) + 0.06 * k; dx = k * 45; rot = Math.sin(k * 2.2) * 0.015; }
+  else if (a === 'buzzdrift') { const ph = k % 1.1, on = ph < 0.45 ? 1 : 0; dx = on * Math.sin(k * 140) * 14 + k * 30; dy = -k * 18; rot = on * Math.sin(k * 110) * 0.012; }
   else if (a === 'still') { }
   else if (a === 'insert') { dx = (1 - easeOut(k / 0.5)) * -160; al = clamp01(k / 0.15); }
   const until = el.until !== undefined ? at(L, el.until) : Infinity;
