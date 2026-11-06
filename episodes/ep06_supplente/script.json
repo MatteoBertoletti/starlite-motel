@@ -29,6 +29,7 @@
   "title": "ISCRIVITI",
   "sub": "IL PROSSIMO CASO È GIÀ IN CLASSE"
  },
+ "end_beats": true,
  "creep_shot": 0.08,
  "pan": 90,
  "alive": 0.04,
@@ -473,7 +474,13 @@
    "cap": "Regola 1. Non alzare la mano al nome in più. Anche se ti sembra familiare.",
    "v": {
     "t": "rule",
-    "n": 1
+    "n": 1,
+    "beats": [
+     {
+      "at": "Anche",
+      "text": "Anche se ti sembra familiare."
+     }
+    ]
    }
   },
   {
@@ -630,7 +637,18 @@
    "cap": "Regola 2. Non voltarti verso il banco in fondo, vicino alla finestra.",
    "v": {
     "t": "rule",
-    "n": 2
+    "n": 2,
+    "beats": [
+     {
+      "at": "banco",
+      "text": "Non voltarti.",
+      "col": "red"
+     },
+     {
+      "at": "vicino",
+      "text": "Vicino alla finestra."
+     }
+    ]
    }
   },
   {
@@ -742,7 +760,14 @@
    "cap": "Regola 3. Se il supplente dice «siamo tutti», non correggerlo.",
    "v": {
     "t": "rule",
-    "n": 3
+    "n": 3,
+    "beats": [
+     {
+      "at": "non",
+      "text": "Non correggerlo.",
+      "col": "red"
+     }
+    ]
    }
   },
   {
@@ -760,6 +785,21 @@
         "s": 0.95,
         "read": "conta",
         "readdur": 3.0
+       }
+      ]
+     },
+     {
+      "at": "nomi",
+      "els": [
+       {
+        "i": "register",
+        "a": "approach",
+        "s": 2.0,
+        "read": true,
+        "readdur": 0.01,
+        "extra": true,
+        "x": -0.6,
+        "y": -1.3
        }
       ]
      },
@@ -1131,7 +1171,14 @@
    "cap": "Regola 4. Non copiare sul quaderno il nome scritto alla lavagna.",
    "v": {
     "t": "rule",
-    "n": 4
+    "n": 4,
+    "beats": [
+     {
+      "at": "nome",
+      "text": "Non copiare il nome.",
+      "col": "red"
+     }
+    ]
    }
   },
   {
@@ -1319,7 +1366,14 @@
    "cap": "Regola 5. All'intervallo, in corridoio, non contare la fila.",
    "v": {
     "t": "rule",
-    "n": 5
+    "n": 5,
+    "beats": [
+     {
+      "at": "non",
+      "text": "Non contare la fila.",
+      "col": "red"
+     }
+    ]
    }
   },
   {
@@ -1472,7 +1526,23 @@
    "cap": "Regola 6. Se la classe risponde «presente» in coro al nome in più, non unirti. Nemmeno a labbra chiuse.",
    "v": {
     "t": "rule",
-    "n": 6
+    "n": 6,
+    "beats": [
+     {
+      "at": "coro",
+      "text": "«Presente» in coro"
+     },
+     {
+      "at": "non",
+      "text": "Non unirti.",
+      "col": "red"
+     },
+     {
+      "at": "Nemmeno",
+      "text": "Nemmeno a labbra chiuse.",
+      "col": "red"
+     }
+    ]
    }
   },
   {
@@ -1785,7 +1855,18 @@
    "cap": "Regola 7. All'ultimo appello, alza la mano. A qualunque nome.",
    "v": {
     "t": "rule",
-    "n": 7
+    "n": 7,
+    "beats": [
+     {
+      "at": "alza",
+      "text": "Alza la mano.",
+      "col": "red"
+     },
+     {
+      "at": "qualunque",
+      "text": "A qualunque nome."
+     }
+    ]
    }
   },
   {
@@ -2057,7 +2138,18 @@
    "say": "Iscriviti. Il prossimo caso è già in classe.",
    "cap": "Iscriviti. Il prossimo caso è già in classe.",
    "v": {
-    "t": "end"
+    "t": "end",
+    "beats": [
+     {
+      "at": "prossimo",
+      "mode": "full"
+     },
+     {
+      "at": "classe",
+      "dt": 1.6,
+      "mode": "logo"
+     }
+    ]
    }
   }
  ],

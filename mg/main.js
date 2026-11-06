@@ -901,6 +901,18 @@ function ruleCard(c, n, lt) {
   c.restore();
   progress(c, CX, 690, 52, n, clamp01((lt - 0.6) / 0.3));
 }
+function ruleBeat(c, n, b, lt) {                      // a second (third) angle on the rule card: the words that matter, close
+  const text = b.text.toUpperCase(), g = 1 + (SCRIPT.alive ? 0.03 * lt : 0);
+  c.save(); c.translate(CX, 460); c.scale(g, g); c.rotate(Math.sin(lt * 1.3) * 0.01); c.shadowColor = GLOW.gold; c.shadowBlur = 24;
+  let fsz = 150; const nl = f => { c.font = `900 ${f}px Montserrat`; let k = 1, cur = ''; for (const w of text.split(' ')) { const t2 = cur ? cur + ' ' + w : w; if (c.measureText(t2).width > 1560 && cur) { k++; cur = w; } else cur = t2; } return k; };
+  while (fsz > 70 && nl(fsz) > 2) fsz -= 4; if (nl(fsz) > 1) fsz = Math.min(fsz, 124);
+  const lines = nl(fsz); txt(c, 'REGOLA ' + n, 0, -lines * fsz * 0.55 - 70, 58, '900', C.gold, 'center', 'middle', 6);
+  const pk = 1 + 0.25 * (1 - easeOut(lt / 0.2)); c.scale(pk, pk);
+  c.shadowColor = b.col === 'red' ? GLOW.red : GLOW.white; c.shadowBlur = 34;
+  wrap(c, text, 0, 10, 1560, fsz, '900', b.col === 'red' ? C.red : C.w, fsz * 1.1);
+  c.restore();
+  progress(c, CX, 760, 44, n, 1);
+}
 function progress(c, x, y, s, cur, al = 1) {
   const seen = new Set(Object.keys(RULE_AT).map(Number).filter(n => n <= cur)); const gap = 12, tot = 7 * s + 6 * gap;
   c.save(); c.globalAlpha *= al;
@@ -949,7 +961,11 @@ function choice(c, L, lt) {
   c.globalAlpha = clamp01((lt - 1.2) / 0.4); txt(c, CH.cta, CX, 780, 54, '900', C.gold, 'center', 'middle', 4);
   c.restore();
 }
-function endCard(c, L, lt) {
+function endCard(c, L, lt, mode = 'full', blt = lt) {
+  if (mode === 'title') { c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 40; const g = 1.15 + 0.06 * blt; c.translate(CX, 450); c.scale(g, g); c.rotate(Math.sin(blt * 1.4) * 0.012); txt(c, 'ISCRIVITI', 0, 0, 220, '900', C.w, 'center', 'middle'); c.restore(); return; }
+  if (mode === 'logo') { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30; const g = 1 + 0.05 * blt; c.translate(CX, 420); c.scale(g, g); txt(c, 'LE SETTE REGOLE', 0, 0, 120, '900', C.w, 'center', 'middle', 6); c.shadowBlur = 0;
+    txt(c, (SCRIPT.case || '').split('//').pop().trim(), 0, 110, 46, '800', C.red, 'center', 'middle', 10); c.restore(); progress(c, CX, 680, 44, 8, 1); return; }
+  if (SCRIPT.end_beats) lt = blt;
   c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 30; const k = easeOut(lt / 0.5);
   const EN = { title: 'ISCRIVITI', sub: 'LA NOTTE 2 È GIÀ COMINCIATA', ...(SCRIPT.end || {}) };
   if (SCRIPT.alive) c.translate(0, -28 * lt); c.globalAlpha = k; const br = 1 + 0.035 * Math.sin(lt * 2.4) + (SCRIPT.alive ? 0.035 * lt : 0); c.save(); c.translate(CX, 380); c.scale(br, br); txt(c, EN.title, 0, 0, 170, '900', C.w, 'center', 'middle'); c.restore();
@@ -1010,8 +1026,10 @@ window.seek = (t) => {
   if (LOOP) li = 0;
   const L = LINES[li], lt = t - L.cut, v = L.v || {};
   let shot = null, st0 = 0, st1 = L.next - L.cut;          // current shot inside the line
-  let shotK = 0; if (v.shots) { v.shots.forEach((sh, k) => { const a0 = sh.at ? at(L, sh.at) + (sh.dt || 0) : 0; if (lt >= a0) { shot = sh; st0 = a0; shotK = k; } });
-    const nx = v.shots.map(sh => sh.at ? at(L, sh.at) + (sh.dt || 0) : 0).filter(a => a > st0); if (nx.length) st1 = Math.min(...nx); }
+  const SHOTS = v.shots || (v.beats ? [{}, ...v.beats] : null);
+  let shotK = 0; if (SHOTS) { SHOTS.forEach((sh, k) => { const a0 = sh.at ? at(L, sh.at) + (sh.dt || 0) : 0; if (lt >= a0) { shot = sh; st0 = a0; shotK = k; } });
+    const nx = SHOTS.map(sh => sh.at ? at(L, sh.at) + (sh.dt || 0) : 0).filter(a => a > st0); if (nx.length) st1 = Math.min(...nx); }
+  if (!v.shots) shot = null;
   const slt = lt - st0;
   // stage (everything that can glitch / shake / zoom)
   sc.setTransform(1, 0, 0, 1, 0, 0); sc.globalAlpha = 1; sc.fillStyle = C.bg; sc.fillRect(0, 0, FW, FH);
@@ -1030,10 +1048,10 @@ window.seek = (t) => {
     shx += SCRIPT.pan * pk * [1, -1, 0.6, -0.6][m]; shy += SCRIPT.pan * 0.45 * pk * [0.4, 0.5, -1, -0.8][m]; }
   sc.translate(CX + shx, CY + shy); sc.scale(push * drift, push * drift); sc.translate(-CX, -CY);
   sc.globalAlpha = 1 - 0.85 * exitK;
-  if (v.t === 'rule') ruleCard(sc, v.n, lt);
+  if (v.t === 'rule') { if (v.beats && shotK > 0) ruleBeat(sc, v.n, v.beats[shotK - 1], slt); else ruleCard(sc, v.n, lt); }
   else if (v.t === 'clash') clash(sc, v, L, lt, t);
   else if (v.t === 'choice') choice(sc, L, lt);
-  else if (v.t === 'end') endCard(sc, L, lt);
+  else if (v.t === 'end') endCard(sc, L, lt, v.beats ? (shotK ? v.beats[shotK - 1].mode : 'title') : 'full', slt);
   else if (shot) { const sw = shot.at; (shot.els || []).forEach(el => drawEl(sc, el.at === undefined && sw ? { ...el, at: sw, _dt: shot.dt || 0 } : el, L, lt, t)); }
   else { const els = v.els || []; const lead = els.length && els.every(e => e.at !== undefined);
     els.forEach((el, i) => drawEl(sc, lead && i === 0 ? { ...el, _lead: true, a: el.a === 'shake' ? 'shake' : 'pop' } : el, L, lt, t)); }
