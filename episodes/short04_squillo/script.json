@@ -59,6 +59,20 @@
        }
       ],
       "shake": true
+     },
+     {
+      "at": "non",
+      "els": [
+       {
+        "i": "call",
+        "y": -1.3,
+        "s": 3.0,
+        "name": "Numero sconosciuto",
+        "mode": "missed",
+        "thumb": true,
+        "a": "impactdrift"
+       }
+      ]
      }
     ],
     "sfx": [
@@ -93,6 +107,18 @@
       ]
      },
      {
+      "at": "prefisso",
+      "els": [
+       {
+        "i": "recenti",
+        "y": 0.75,
+        "x": 0.45,
+        "s": 3.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
       "at": "durata",
       "els": [
        {
@@ -100,7 +126,21 @@
         "y": 0.8,
         "x": -0.2,
         "s": 3.4,
-        "hot": "zero",
+        "hot": true,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "zero",
+      "els": [
+       {
+        "i": "text",
+        "text": "0:00",
+        "s": 2.3,
+        "y": -0.25,
+        "col": "red",
+        "g": "red",
         "a": "impactdrift"
        }
       ]
