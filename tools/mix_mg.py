@@ -35,9 +35,14 @@ def vibrate(t):                                 # a phone buzzing on a table: tw
     b = (b * np.minimum(1, ts / 0.01) * np.minimum(1, (ts[-1] - ts) / 0.03)).astype(np.float32); b *= 10 ** ((vref - 9 - act_db(b)) / 20)
     for off in (0.0, 0.55):
         a = int((t + off) * SR); FX[a:a + len(b)] += b[: N - a]
+def ring(t):                                    # one ring of a mobile: a two-tone trill, ~0.9 s, synthesised
+    ts = np.arange(int(0.9 * SR)) / SR; f = np.where(np.sin(2 * np.pi * 18 * ts) > 0, 1320, 1580)
+    b = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.minimum(1, ts / 0.01) * np.minimum(1, (ts[-1] - ts) / 0.06)
+    b = b.astype(np.float32); b *= 10 ** ((vref - 15 - act_db(b)) / 20); a = int(t * SR); FX[a:a + len(b)] += b[: N - a]
 last_cut = -9
 for e in sorted(E['ev'], key=lambda e: e['t']):
     if e['k'] == 'vibrate': vibrate(e['t']); continue
+    if e['k'] == 'ring': ring(e['t']); continue
     if e['k'] == 'cut':
         if e['t'] - last_cut > 2.2: place('soft_whoosh', e['t'] - 0.12, -27); last_cut = e['t']
         continue

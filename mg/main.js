@@ -136,6 +136,10 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
+  else if (i === 'tablephone') { c.scale(sc, sc); tablephoneUI(c, el, L, lt, tt, size); }
+  else if (i === 'calllog') { c.scale(sc, sc); calllogUI(c, el, L, lt, tt, size); }
+  else if (i === 'lamp2') { c.scale(sc, sc); lampUI(c, el, L, lt, tt, size); }
+  else if (i === 'stairwell') { c.scale(sc, sc); stairwellUI(c, el, L, lt, tt, size); }
   else if (i === 'classroom' || i === 'corridor') { c.save(); c.scale(sc, sc); (i === 'classroom' ? classroomUI : corridorUI)(c, el, L, lt, tt, size); c.restore();
     if (!VERT) { const g = c.createLinearGradient(0, 715 - (y + dy), 0, 835 - (y + dy)); g.addColorStop(0, 'rgba(5,5,6,0)'); g.addColorStop(1, 'rgba(5,5,6,1)'); c.shadowBlur = 0; c.fillStyle = g; c.fillRect(-(x + dx) - 600, 715 - (y + dy), FW + 1200, 121); } }
   else if (i === 'register') { c.scale(sc, sc); registerUI(c, el, L, lt, tt, size); }
@@ -669,7 +673,7 @@ function entryUI(c, el, L, lt, tt, size) {
 function wallclockUI(c, el, L, lt, tt, size) {
   const r = size * 0.42; c.beginPath(); c.arc(0, 0, r, 0, 7); c.fillStyle = '#f2efe8'; c.fill(); c.lineWidth = r * 0.08; c.strokeStyle = '#3a3936'; c.stroke();
   for (let j = 0; j < 12; j++) { const a = j * Math.PI / 6; c.beginPath(); c.moveTo(Math.cos(a) * r * 0.82, Math.sin(a) * r * 0.82); c.lineTo(Math.cos(a) * r * 0.92, Math.sin(a) * r * 0.92); c.lineWidth = r * 0.04; c.strokeStyle = C.bg; c.stroke(); }
-  const [hh, mm] = (el.time || '23:40').split(':').map(Number), sec = (tt % 60);
+  const [hh, mm0] = (el.time || '23:40').split(':').map(Number), tk = el.tick !== undefined ? W_el(L, el, 'tick') : null, mm = mm0 + (tk !== null ? easeOut(clamp01((lt - tk) / 0.6)) : 0), sec = tk !== null ? 45 + clamp01((lt - tk + 0.6) / 1.2) * 15 : (tt % 60);
   const hand = (a, l, wdt, col) => { c.beginPath(); c.moveTo(0, 0); c.lineTo(Math.cos(a - Math.PI / 2) * l, Math.sin(a - Math.PI / 2) * l); c.lineWidth = wdt; c.strokeStyle = col; c.lineCap = 'round'; c.stroke(); };
   hand(((hh % 12) + mm / 60) * Math.PI / 6, r * 0.5, r * 0.08, C.bg); hand(mm * Math.PI / 30, r * 0.75, r * 0.05, C.bg); hand(sec * Math.PI / 30, r * 0.8, r * 0.02, C.red);
   c.beginPath(); c.arc(0, 0, r * 0.05, 0, 7); c.fillStyle = C.red; c.fill();
@@ -881,6 +885,63 @@ function backpackUI(c, el, L, lt, tt, size) {
   const zk = lab !== null && lt >= lab ? easeOut((lt - lab) / 0.5) : 0; c.translate(0, s * 0.14); c.scale(1 + zk * 0.6, 1 + zk * 0.6);
   c.beginPath(); c.roundRect(-s * 0.13, 0, s * 0.26, s * 0.15, s * 0.02); c.fillStyle = '#e6e1d6'; c.fill();
   scrib(c, 24, -s * 0.1, s * 0.1, s * 0.2, s * 0.035, 1, 'rgba(40,38,35,0.28)', s * 0.006); c.restore();
+}
+// ---------- Short 004: the ring ----------
+function tablephoneUI(c, el, L, lt, tt, size) {          // a phone lying on a table, seen from above at an angle
+  const u = size / 50, W_ = (k) => W_el(L, el, k), on = W_('on'), ring = W_('ring'), dark = el.dark;
+  const lit = on === null ? !!el.lit : lt >= on, rk = ring !== null && lt >= ring;
+  // table top
+  c.beginPath(); c.moveTo(-u * 60, -u * 22); c.lineTo(u * 60, -u * 22); c.lineTo(u * 90, u * 62); c.lineTo(-u * 90, u * 62); c.closePath();
+  c.fillStyle = dark ? '#0c0b0a' : '#2a2119'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = dark ? 'rgba(242,239,232,0.12)' : 'rgba(242,239,232,0.45)'; c.stroke();
+  const bz = rk ? Math.sin(tt * 95) * u * 0.9 * (Math.sin(tt * 7) > -0.1 ? 1 : 0) : 0;
+  c.save(); c.translate(bz, u * 18); c.transform(1, 0, -0.18, 0.62, 0, 0); c.rotate(el.rot ?? -0.08);
+  if (lit) { const g = c.createRadialGradient(0, 0, u * 4, 0, 0, u * 60); g.addColorStop(0, 'rgba(160,215,255,0.32)'); g.addColorStop(1, 'rgba(160,215,255,0)'); c.fillStyle = g; c.fillRect(-u * 70, -u * 80, u * 140, u * 160); }
+  c.beginPath(); c.roundRect(-u * 17, -u * 34, u * 34, u * 68, u * 5); c.fillStyle = '#1a1a1d'; c.fill(); c.lineWidth = u * 1.0; c.strokeStyle = '#d9d5cc'; c.stroke();
+  c.beginPath(); c.roundRect(-u * 15, -u * 31.5, u * 30, u * 63, u * 3.5); c.fillStyle = lit ? '#0e1b26' : '#050506'; c.fill();
+  c.restore();
+  if (rk && el.waves !== false) for (let k = 0; k < 3; k++) { const a = (tt * 1.6 + k / 3) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.8; c.beginPath(); c.ellipse(bz, u * 18, u * (24 + a * 36), u * (24 + a * 36) * 0.62, 0, 0, 7); c.lineWidth = u * 0.8; c.strokeStyle = el.red ? C.red : '#a0d7ff'; c.stroke(); c.restore(); }
+  if (lit) {            // the screen text, upright so it reads
+    c.save(); c.translate(bz, u * 18); c.shadowColor = GLOW.white; c.shadowBlur = 18;
+    if (el.q) { const qk = el.qat === undefined ? 1 : clamp01((lt - at(L, el.qat)) / 0.25); c.globalAlpha *= qk; c.shadowColor = GLOW.red; wrap(c, el.q, 0, -u * 2, u * 30, u * 6.2, '900', C.red, u * 7.2); }
+    else { txt(c, el.top || 'CHIAMATA IN ARRIVO', 0, -u * 13, u * 2.6, '700', '#9fb6c8', 'center', 'middle', 2);
+      txt(c, el.name || 'Numero sconosciuto', 0, -u * 4, u * 5.4, '900', C.w, 'center', 'middle'); txt(c, el.num || '+39 0•• ••• ••••', 0, u * 3, u * 3.2, '700', '#cfcac0', 'center', 'middle', 1); }
+    if (el.badge) { c.shadowColor = GLOW.red; c.shadowBlur = 24; c.beginPath(); c.arc(u * 15, -u * 22, u * 6, 0, 7); c.fillStyle = C.red; c.fill(); c.shadowBlur = 0; txt(c, el.badge, u * 15, -u * 21.6, u * 7, '900', C.w); }
+    c.restore(); }
+}
+function W_el(L, el, k) { const v = el[k]; if (v === undefined) return null; if (v === true) return -99; return at(L, v) + (el._dt || 0); }
+function calllogUI(c, el, L, lt, tt, size) {
+  const h = size * 1.12, S = frame(c, h), u = S.w / 86, hot = W_el(L, el, 'hot');
+  txt(c, 'RECENTI', S.x + u * 7, S.y + S.h * 0.1, u * 6, '900', C.w, 'left', 'middle');
+  const rows = [['Numero sconosciuto', '23:41', '0:00', true], ['Mamma', '20:12', '4:37'], ['Ufficio', '17:55', '1:02'], ['Numero sconosciuto', '23:40', '0:00', true], ['Giulia', '13:08', '0:48'], ['Farmacia', '10:21', '0:31']];
+  rows.forEach(([n, t, d, unk], k) => { const y = S.y + S.h * 0.2 + k * S.h * 0.11; if (lt < k * 0.08) return;
+    const h1 = k === 0 && hot !== null && lt >= hot;
+    if (h1) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 22; c.beginPath(); c.roundRect(S.x + u * 3, y - S.h * 0.045, S.w - u * 6, S.h * 0.09, u * 2); c.lineWidth = u * 0.9; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+    txt(c, n, S.x + u * 7, y - S.h * 0.012, u * 4.6, '800', unk ? C.red : C.w, 'left', 'middle'); txt(c, t, S.x + u * 7, y + S.h * 0.025, u * 3.4, '600', '#8d8981', 'left', 'middle');
+    c.save(); if (h1) { c.shadowColor = GLOW.red; c.shadowBlur = 20; } txt(c, d, S.x + S.w - u * 7, y, h1 ? u * 8 : u * 4.4, '900', d === '0:00' ? C.red : '#cfcac0', 'right', 'middle'); c.restore(); });
+}
+function lampUI(c, el, L, lt, tt, size) {                // a table lamp and a hand on its switch
+  const u = size / 50, off = W_el(L, el, 'off'), k = off === null ? 0 : clamp01((lt - off) / 0.12), on = 1 - k;
+  if (on > 0) { c.save(); c.globalAlpha *= on; const g = c.createRadialGradient(0, -u * 18, u * 4, 0, u * 10, u * 70); g.addColorStop(0, 'rgba(245,196,81,0.45)'); g.addColorStop(1, 'rgba(245,196,81,0)'); c.fillStyle = g; c.fillRect(-u * 80, -u * 60, u * 160, u * 130); c.restore(); }
+  c.beginPath(); c.moveTo(-u * 12, -u * 30); c.lineTo(u * 12, -u * 30); c.lineTo(u * 20, -u * 12); c.lineTo(-u * 20, -u * 12); c.closePath(); c.fillStyle = on > 0.5 ? '#f5c451' : '#2a2a2e'; c.fill(); c.lineWidth = u * 0.6; c.strokeStyle = C.w; c.stroke();
+  c.fillStyle = '#d9d5cc'; c.fillRect(-u * 1, -u * 12, u * 2, u * 30); c.beginPath(); c.ellipse(0, u * 19, u * 11, u * 3, 0, 0, 7); c.fill();
+  c.beginPath(); c.moveTo(u * 6, u * 6); c.quadraticCurveTo(u * 18, u * 14, u * 22, u * 22); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();     // cord
+  c.beginPath(); c.roundRect(u * 19, u * 20, u * 7, u * 4, u * 1); c.fillStyle = '#e6e1d6'; c.fill();                                                  // switch
+  const hk = off === null ? 0 : easeOut(clamp01((lt - off + 0.35) / 0.35)); c.save(); c.translate(u * (40 - 16 * hk), u * (30 - 6 * hk)); c.rotate(-0.9); c.scale(u * 22, u * 22); ICONS.hand(c, {}); c.restore();
+}
+function stairwellUI(c, el, L, lt, tt, size) {           // a dark stairwell from the bottom floor; a phone light climbing
+  const u = size / 50, F = 5, fh = u * 26, x0 = -u * 22, x1 = u * 22, top = -fh * F / 2;
+  c.lineWidth = u * 0.5; c.strokeStyle = 'rgba(242,239,232,0.28)'; c.strokeRect(x0 - u * 6, top - u * 4, x1 - x0 + u * 12, fh * F + u * 8);
+  for (let f = 0; f < F; f++) { const yb = top + fh * (F - f), ym = yb - fh / 2;
+    c.beginPath(); c.moveTo(x0, yb); c.lineTo(x1, ym); c.moveTo(x1, ym); c.lineTo(x0, yb - fh); c.lineWidth = u * 0.9; c.strokeStyle = 'rgba(242,239,232,0.35)'; c.stroke();
+    c.beginPath(); c.moveTo(x0 - u * 6, yb); c.lineTo(x0 + u * 4, yb); c.moveTo(x1 - u * 4, ym); c.lineTo(x1 + u * 6, ym); c.lineWidth = u * 1.4; c.stroke();
+    txt(c, String(f === 0 ? 'T' : f), x0 - u * 11, yb - u * 3, u * 3.4, '800', 'rgba(242,239,232,0.35)', 'center', 'middle');
+    if (f === (el.yours ?? 4)) { c.save(); c.shadowColor = GLOW.gold; c.shadowBlur = 20; c.fillStyle = C.gold; c.fillRect(x0 - u * 5, yb - u * 14, u * 4, u * 11); c.restore(); } }
+  const c0 = W_el(L, el, 'climb'), p = c0 === null ? 0 : Math.max(0, lt - c0) * (el.speed || 1.1);        // half-floors climbed
+  const seg = Math.floor(p), fr = p - seg, f = Math.floor(seg / 2), up = seg % 2 === 0;
+  const yb = top + fh * (F - f), ya = up ? yb : yb - fh / 2, yz = up ? yb - fh / 2 : yb - fh, xa = up ? x0 : x1, xz = up ? x1 : x0;
+  const px = xa + (xz - xa) * fr, py = ya + (yz - ya) * fr - u * 3;
+  const g = c.createRadialGradient(px, py, 1, px, py, u * 18); g.addColorStop(0, 'rgba(170,220,255,0.75)'); g.addColorStop(1, 'rgba(170,220,255,0)'); c.fillStyle = g; c.fillRect(px - u * 20, py - u * 20, u * 40, u * 40);
+  c.beginPath(); c.arc(px, py, u * 1.3, 0, 7); c.fillStyle = '#e8f5ff'; c.fill();
 }
 function ruleCard(c, n, lt) {
   const text = SCRIPT.rules[n - 1].toUpperCase();

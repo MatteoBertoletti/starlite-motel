@@ -1,0 +1,373 @@
+{
+ "title": "Se Il Telefono Squilla Una Volta E Riattacca… NON RICHIAMARE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.05,
+ "end_pad": 0.2,
+ "default_gap": 0.27,
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il telefono squilla una volta e riattacca, non richiamare.",
+   "capfull": true,
+   "cap": "Se il telefono squilla una volta e riattacca, non richiamare.",
+   "red": "richiamare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tablephone",
+        "s": 1.0,
+        "y": 0.05,
+        "a": "buzz",
+        "lit": true,
+        "ring": true
+       }
+      ]
+     },
+     {
+      "at": "riattacca",
+      "els": [
+       {
+        "i": "call",
+        "y": -0.1,
+        "s": 1.0,
+        "name": "Numero sconosciuto",
+        "mode": "missed",
+        "thumb": true,
+        "a": "still"
+       }
+      ],
+      "shake": true
+     }
+    ],
+    "sfx": [
+     [
+      "ring",
+      null
+     ],
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Numero sconosciuto, prefisso italiano. Durata della chiamata: zero secondi.",
+   "cap": "Numero sconosciuto, prefisso italiano. Durata della chiamata: zero secondi.",
+   "red": "zero",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "calllog",
+        "y": -0.1,
+        "s": 1.0,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "durata",
+      "els": [
+       {
+        "i": "calllog",
+        "y": 0.95,
+        "x": -0.55,
+        "s": 2.0,
+        "hot": "zero",
+        "a": "still"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Uno squillo non è mai uno sbaglio. È una domanda: c'è qualcuno in casa?",
+   "cap": "Uno squillo non è mai uno sbaglio. È una domanda: c'è qualcuno in casa?",
+   "red": "qualcuno",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tablephone",
+        "s": 1.15,
+        "y": 0.05,
+        "a": "still",
+        "lit": true,
+        "ring": true
+       }
+      ]
+     },
+     {
+      "at": "domanda",
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.2,
+        "y": 0.12,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.25,
+        "x": -0.3,
+        "y": -0.5,
+        "a": "still"
+       },
+       {
+        "i": "tablephone",
+        "s": 0.45,
+        "y": -0.45,
+        "a": "still",
+        "lit": true,
+        "x": 0.62,
+        "q": "C'è qualcuno in casa?",
+        "qat": "qualcuno"
+       }
+      ]
+     },
+     {
+      "at": "qualcuno",
+      "els": [
+       {
+        "i": "tablephone",
+        "s": 1.45,
+        "y": 0.1,
+        "a": "impactdrift",
+        "lit": true,
+        "q": "C'è qualcuno in casa?",
+        "rot": 0.0
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "ring",
+      "squillo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se non rispondi, il secondo squillo arriva dopo un minuto. Vuol dire: è da solo.",
+   "cap": "Se non rispondi, il secondo squillo arriva dopo un minuto. Vuol dire: è da solo.",
+   "red": "solo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "sofa",
+        "s": 2.6,
+        "y": 0.3,
+        "a": "still"
+       },
+       {
+        "i": "you",
+        "s": 1.5,
+        "x": -0.35,
+        "y": -0.45,
+        "a": "still"
+       },
+       {
+        "i": "tablephone",
+        "s": 0.45,
+        "y": -0.5,
+        "a": "still",
+        "lit": false,
+        "x": 0.62
+       }
+      ]
+     },
+     {
+      "at": "secondo",
+      "els": [
+       {
+        "i": "wallclock",
+        "s": 1.6,
+        "y": -0.15,
+        "time": "23:41",
+        "tick": "minuto",
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "vuol",
+      "els": [
+       {
+        "i": "tablephone",
+        "s": 1.2,
+        "y": 0.05,
+        "a": "still",
+        "lit": true,
+        "ring": true,
+        "badge": "2",
+        "red": true
+       }
+      ],
+      "shake": true
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "minuto"
+     ],
+     [
+      "ring",
+      "vuol"
+     ],
+     [
+      "vibrate",
+      "vuol"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se spegni la luce, il terzo arriva subito.",
+   "cap": "Se spegni la luce, il terzo arriva subito.",
+   "red": "subito",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lamp2",
+        "s": 1.4,
+        "y": -0.1,
+        "off": "luce",
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "terzo",
+      "els": [
+       {
+        "i": "tablephone",
+        "s": 1.25,
+        "y": 0.05,
+        "a": "still",
+        "lit": true,
+        "ring": true,
+        "dark": true,
+        "badge": "3",
+        "red": true
+       }
+      ],
+      "shake": true
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "luce"
+     ],
+     [
+      "ring",
+      "terzo"
+     ],
+     [
+      "vibrate",
+      "terzo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tre squilli vuol dire: sto salendo.",
+   "cap": "Tre squilli vuol dire: sto salendo.",
+   "red": "salendo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "stairwell",
+        "s": 1.5,
+        "y": -0.05,
+        "climb": true,
+        "speed": 1.3,
+        "a": "still"
+       }
+      ]
+     },
+     {
+      "at": "salendo",
+      "dt": 0.55,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "steps",
+      "tre"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Telefono Squilla Una Volta E Riattacca… NON RICHIAMARE",
+  "publish": "domenica 8 novembre, 18:30 (ora italiana)",
+  "intro": [
+   "Una chiamata di zero secondi non è uno sbaglio."
+  ],
+  "question": "👇 Ti è mai successo? Scrivi a che ora ti ha chiamato. #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "A che ora è squillato il tuo? Scrivilo qui sotto 👇 Il caso completo con le 7 regole: Se L'Assistente Vocale Dice «Buonanotte»… NON DIRE GRAZIE https://youtu.be/F5uJplYl7f4",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "numero sconosciuto",
+   "squillo",
+   "chiamata persa",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}
