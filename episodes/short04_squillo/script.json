@@ -416,7 +416,7 @@
      },
      {
       "at": "salendo",
-      "dt": 0.55,
+      "dt": 0.3,
       "els": [
        {
         "i": "blackout"

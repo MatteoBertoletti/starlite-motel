@@ -1082,7 +1082,7 @@ function caption(c, L, t) {
 // ---------- the one entry point ----------
 window.seek = (t) => {
   let li = 0; for (let i = 0; i < LINES.length; i++) if (t >= LINES[i].cut) li = i;
-  const LOOP = VERT && SCRIPT.loop && t > LINES[LINES.length - 1].end + 0.04;   // last frames = first frame, for the loop
+  const LOOP = VERT && SCRIPT.loop && t > Math.min(LINES[LINES.length - 1].end + 0.04, DUR - 2 / 30);   // last frames = first frame, for the loop
   if (LOOP) t = 0;
   if (LOOP) li = 0;
   const L = LINES[li], lt = t - L.cut, v = L.v || {};
