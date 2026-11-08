@@ -1,0 +1,9 @@
+  1 N         0.03-   3.96 match=1.00 eleven_v4 (cache) | Se il telefono squilla una volta e riattacca, non richiamare.
+  2 N         4.21-   9.49 match=1.00 eleven_v4 (cache) | Numero sconosciuto, prefisso italiano. Durata della chiamata, zero secondi.
+  3 N         9.74-  14.57 match=1.00 eleven_v4 (cache) | uno squillo non è mai uno sbaglio, è una domanda, c 'è qualcuno in casa?
+  4 N        14.82-  20.52 match=1.00 eleven_v4 (cache) | Se non rispondi, il secondo squillo arriva dopo un minuto. Vuol dire è da solo.
+  5 N        20.77-  23.92 match=1.00 eleven_v4 (cache) | Se spegni la luce, il terzo arriva subito.
+  6 N        24.17-  26.94 match=1.00 eleven_v4 (cache) | Tre squilli vuol dire sto salendo.
+
+TOTAL 27.0s  new characters billed ~0  cached lines 6
+low match lines: []
