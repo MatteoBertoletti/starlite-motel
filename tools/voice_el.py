@@ -128,7 +128,7 @@ for i, L in enumerate(lines):
     y, _ = sf.read(clean, dtype='float32'); y = trim(y); sf.write(clean, y, SR)
     final = f"{OUT}/lines/{L['id']:02d}.wav"
     fx = L.get('fx', role.get('fx'))              # a line can override its speaker's filter
-    if fx == 'tight': tighten(clean, final)                  # shorter inner pauses only; speed and pitch untouched
+    if fx == 'tight': tighten(clean, final, **S.get('tight', {}))                  # shorter inner pauses only; speed and pitch untouched
     elif fx: ff(['-i', clean, '-af', FX[fx] + ',apad=pad_dur=0.25', final])
     else: ff(['-i', clean, '-c', 'copy', final])
     toks = norm(L['say']); hw = heard_words(clean, L['say']); tt, score = align(toks, hw)
