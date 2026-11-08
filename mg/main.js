@@ -137,7 +137,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
   else if (i === 'tablephone') { c.scale(sc, sc); tablephoneUI(c, el, L, lt, tt, size); }
-  else if (i === 'calllog') { c.scale(sc, sc); calllogUI(c, el, L, lt, tt, size); }
+  else if (i === 'recenti') { c.scale(sc, sc); calllogUI(c, el, L, lt, tt, size); }
   else if (i === 'lamp2') { c.scale(sc, sc); lampUI(c, el, L, lt, tt, size); }
   else if (i === 'stairwell') { c.scale(sc, sc); stairwellUI(c, el, L, lt, tt, size); }
   else if (i === 'classroom' || i === 'corridor') { c.save(); c.scale(sc, sc); (i === 'classroom' ? classroomUI : corridorUI)(c, el, L, lt, tt, size); c.restore();
@@ -888,23 +888,23 @@ function backpackUI(c, el, L, lt, tt, size) {
 }
 // ---------- Short 004: the ring ----------
 function tablephoneUI(c, el, L, lt, tt, size) {          // a phone lying on a table, seen from above at an angle
-  const u = size / 50, W_ = (k) => W_el(L, el, k), on = W_('on'), ring = W_('ring'), dark = el.dark;
+  const u = size / 28, W_ = (k) => W_el(L, el, k), on = W_('on'), ring = W_('ring'), dark = el.dark;
   const lit = on === null ? !!el.lit : lt >= on, rk = ring !== null && lt >= ring;
   // table top
-  c.beginPath(); c.moveTo(-u * 60, -u * 22); c.lineTo(u * 60, -u * 22); c.lineTo(u * 90, u * 62); c.lineTo(-u * 90, u * 62); c.closePath();
+  c.beginPath(); c.moveTo(-u * 40, -u * 30); c.lineTo(u * 40, -u * 30); c.lineTo(u * 60, u * 27); c.lineTo(-u * 60, u * 27); c.closePath();
   c.fillStyle = dark ? '#0c0b0a' : '#2a2119'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = dark ? 'rgba(242,239,232,0.12)' : 'rgba(242,239,232,0.45)'; c.stroke();
   const bz = rk ? Math.sin(tt * 95) * u * 0.9 * (Math.sin(tt * 7) > -0.1 ? 1 : 0) : 0;
-  c.save(); c.translate(bz, u * 18); c.transform(1, 0, -0.18, 0.62, 0, 0); c.rotate(el.rot ?? -0.08);
+  c.save(); c.translate(bz, 0); c.transform(1, 0, -0.12, 0.8, 0, 0); c.rotate(el.rot ?? -0.06);
   if (lit) { const g = c.createRadialGradient(0, 0, u * 4, 0, 0, u * 60); g.addColorStop(0, 'rgba(160,215,255,0.32)'); g.addColorStop(1, 'rgba(160,215,255,0)'); c.fillStyle = g; c.fillRect(-u * 70, -u * 80, u * 140, u * 160); }
   c.beginPath(); c.roundRect(-u * 17, -u * 34, u * 34, u * 68, u * 5); c.fillStyle = '#1a1a1d'; c.fill(); c.lineWidth = u * 1.0; c.strokeStyle = '#d9d5cc'; c.stroke();
   c.beginPath(); c.roundRect(-u * 15, -u * 31.5, u * 30, u * 63, u * 3.5); c.fillStyle = lit ? '#0e1b26' : '#050506'; c.fill();
   c.restore();
-  if (rk && el.waves !== false) for (let k = 0; k < 3; k++) { const a = (tt * 1.6 + k / 3) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.8; c.beginPath(); c.ellipse(bz, u * 18, u * (24 + a * 36), u * (24 + a * 36) * 0.62, 0, 0, 7); c.lineWidth = u * 0.8; c.strokeStyle = el.red ? C.red : '#a0d7ff'; c.stroke(); c.restore(); }
+  if (rk && el.waves !== false) for (let k = 0; k < 3; k++) { const a = (tt * 1.6 + k / 3) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.8; c.beginPath(); c.ellipse(bz, 0, u * (26 + a * 22), u * (26 + a * 22) * 0.8, 0, 0, 7); c.lineWidth = u * 0.8; c.strokeStyle = el.red ? C.red : '#a0d7ff'; c.stroke(); c.restore(); }
   if (lit) {            // the screen text, upright so it reads
-    c.save(); c.translate(bz, u * 18); c.shadowColor = GLOW.white; c.shadowBlur = 18;
-    if (el.q) { const qk = el.qat === undefined ? 1 : clamp01((lt - at(L, el.qat)) / 0.25); c.globalAlpha *= qk; c.shadowColor = GLOW.red; wrap(c, el.q, 0, -u * 2, u * 30, u * 6.2, '900', C.red, u * 7.2); }
-    else { txt(c, el.top || 'CHIAMATA IN ARRIVO', 0, -u * 13, u * 2.6, '700', '#9fb6c8', 'center', 'middle', 2);
-      txt(c, el.name || 'Numero sconosciuto', 0, -u * 4, u * 5.4, '900', C.w, 'center', 'middle'); txt(c, el.num || '+39 0•• ••• ••••', 0, u * 3, u * 3.2, '700', '#cfcac0', 'center', 'middle', 1); }
+    c.save(); c.translate(bz, 0); c.shadowColor = GLOW.white; c.shadowBlur = 18;
+    if (el.q) { const qk = el.qat === undefined ? 1 : clamp01((lt - at(L, el.qat)) / 0.25); c.globalAlpha *= qk; c.shadowColor = GLOW.red; wrap(c, el.q.toUpperCase(), 0, -u * 2, u * 27, u * 5.6, '900', C.red, u * 6.6); }
+    else { txt(c, el.top || 'CHIAMATA IN ARRIVO', 0, -u * 13, u * 2.4, '700', el.top ? C.red : '#9fb6c8', 'center', 'middle', 2);
+      txt(c, el.name || 'Numero sconosciuto', 0, -u * 4, u * 3.7, '900', C.w, 'center', 'middle'); txt(c, el.num || '+39 0•• ••• ••••', 0, u * 3, u * 3.2, '700', '#cfcac0', 'center', 'middle', 1); }
     if (el.badge) { c.shadowColor = GLOW.red; c.shadowBlur = 24; c.beginPath(); c.arc(u * 15, -u * 22, u * 6, 0, 7); c.fillStyle = C.red; c.fill(); c.shadowBlur = 0; txt(c, el.badge, u * 15, -u * 21.6, u * 7, '900', C.w); }
     c.restore(); }
 }
