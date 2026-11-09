@@ -1,0 +1,426 @@
+{
+ "duration": 26.52,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.03,
+   "end": 4.58,
+   "dur": 4.55,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.03,
+     "e": 0.19
+    },
+    {
+     "w": "trovi",
+     "s": 0.19,
+     "e": 0.51
+    },
+    {
+     "w": "davanti",
+     "s": 0.51,
+     "e": 0.89
+    },
+    {
+     "w": "alla",
+     "s": 0.89,
+     "e": 1.01
+    },
+    {
+     "w": "porta",
+     "s": 1.01,
+     "e": 1.43
+    },
+    {
+     "w": "un",
+     "s": 1.43,
+     "e": 1.69
+    },
+    {
+     "w": "pacco",
+     "s": 1.69,
+     "e": 2.13
+    },
+    {
+     "w": "che",
+     "s": 2.13,
+     "e": 2.29
+    },
+    {
+     "w": "non",
+     "s": 2.29,
+     "e": 2.45
+    },
+    {
+     "w": "hai",
+     "s": 2.45,
+     "e": 2.61
+    },
+    {
+     "w": "ordinato",
+     "s": 2.61,
+     "e": 3.27
+    },
+    {
+     "w": "non",
+     "s": 3.49,
+     "e": 3.79
+    },
+    {
+     "w": "aprirlo",
+     "s": 3.79,
+     "e": 4.41
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se trovi davanti alla porta un pacco che non hai ordinato, non aprirlo."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.83,
+   "end": 8.77,
+   "dur": 3.94,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "sulla",
+     "s": 4.83,
+     "e": 5.13
+    },
+    {
+     "w": "notifica",
+     "s": 5.13,
+     "e": 5.61
+    },
+    {
+     "w": "del",
+     "s": 5.61,
+     "e": 5.79
+    },
+    {
+     "w": "corriere",
+     "s": 5.79,
+     "e": 6.35
+    },
+    {
+     "w": "consegnato",
+     "s": 6.87,
+     "e": 7.65
+    },
+    {
+     "w": "a",
+     "s": 7.65,
+     "e": 7.75
+    },
+    {
+     "w": "mano",
+     "s": 7.75,
+     "e": 8.07
+    },
+    {
+     "w": "e",
+     "s": 8.07,
+     "e": 8.33
+    },
+    {
+     "w": "firmato",
+     "s": 8.33,
+     "e": 9.03
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sulla notifica del corriere, «Consegnato a mano e firmato»."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.02,
+   "end": 13.18,
+   "dur": 4.16,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 9.02,
+     "e": 9.16
+    },
+    {
+     "w": "firma",
+     "s": 9.16,
+     "e": 9.68
+    },
+    {
+     "w": "e",
+     "s": 9.68,
+     "e": 9.84
+    },
+    {
+     "w": "la",
+     "s": 9.84,
+     "e": 9.96
+    },
+    {
+     "w": "tua",
+     "s": 9.96,
+     "e": 10.18
+    },
+    {
+     "w": "con",
+     "s": 10.5,
+     "e": 10.78
+    },
+    {
+     "w": "la",
+     "s": 10.78,
+     "e": 10.94
+    },
+    {
+     "w": "stessa",
+     "s": 10.94,
+     "e": 11.4
+    },
+    {
+     "w": "sbavatura",
+     "s": 11.4,
+     "e": 11.98
+    },
+    {
+     "w": "sull",
+     "s": 11.98,
+     "e": 12.34
+    },
+    {
+     "w": "ultima",
+     "s": 12.34,
+     "e": 12.66
+    },
+    {
+     "w": "lettera",
+     "s": 12.66,
+     "e": 13.14
+    }
+   ],
+   "match": 1.0,
+   "heard": "La firma è la tua, con la stessa sbavatura sull 'ultima lettera."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.43,
+   "end": 17.48,
+   "dur": 4.05,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "ma",
+     "s": 13.43,
+     "e": 13.59
+    },
+    {
+     "w": "tu",
+     "s": 13.59,
+     "e": 13.81
+    },
+    {
+     "w": "eri",
+     "s": 13.81,
+     "e": 14.15
+    },
+    {
+     "w": "al",
+     "s": 14.15,
+     "e": 14.27
+    },
+    {
+     "w": "lavoro",
+     "s": 14.27,
+     "e": 14.63
+    },
+    {
+     "w": "casa",
+     "s": 15.15,
+     "e": 15.41
+    },
+    {
+     "w": "vuota",
+     "s": 15.41,
+     "e": 15.91
+    },
+    {
+     "w": "porta",
+     "s": 16.23,
+     "e": 16.55
+    },
+    {
+     "w": "chiusa",
+     "s": 16.55,
+     "e": 17.09
+    },
+    {
+     "w": "a",
+     "s": 17.09,
+     "e": 17.13
+    },
+    {
+     "w": "chiave",
+     "s": 17.13,
+     "e": 17.59
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ma tu eri al lavoro. Casa vuota, porta chiusa a chiave."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 17.73,
+   "end": 21.62,
+   "dur": 3.89,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "dentro",
+     "s": 17.73,
+     "e": 18.21
+    },
+    {
+     "w": "qualcosa",
+     "s": 18.21,
+     "e": 18.61
+    },
+    {
+     "w": "si",
+     "s": 18.61,
+     "e": 18.91
+    },
+    {
+     "w": "sposta",
+     "s": 18.91,
+     "e": 19.57
+    },
+    {
+     "w": "piano",
+     "s": 19.79,
+     "e": 20.27
+    },
+    {
+     "w": "quando",
+     "s": 20.53,
+     "e": 20.77
+    },
+    {
+     "w": "lo",
+     "s": 20.77,
+     "e": 20.95
+    },
+    {
+     "w": "inclini",
+     "s": 20.95,
+     "e": 21.41
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dentro qualcosa si sposta, piano, quando lo incline."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 21.87,
+   "end": 25.13,
+   "dur": 3.26,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 21.87,
+     "e": 22.01
+    },
+    {
+     "w": "aprirlo",
+     "s": 22.01,
+     "e": 22.67
+    },
+    {
+     "w": "qualcuno",
+     "s": 22.97,
+     "e": 23.43
+    },
+    {
+     "w": "ha",
+     "s": 23.43,
+     "e": 23.61
+    },
+    {
+     "w": "aperto",
+     "s": 23.61,
+     "e": 23.99
+    },
+    {
+     "w": "la",
+     "s": 23.99,
+     "e": 24.11
+    },
+    {
+     "w": "porta",
+     "s": 24.11,
+     "e": 24.35
+    },
+    {
+     "w": "al",
+     "s": 24.35,
+     "e": 24.49
+    },
+    {
+     "w": "corriere",
+     "s": 24.49,
+     "e": 24.99
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non aprirlo. Qualcuno ha aperto la porta al corriere."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 25.38,
+   "end": 26.47,
+   "dur": 1.09,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 25.38,
+     "e": 25.52
+    },
+    {
+     "w": "non",
+     "s": 25.52,
+     "e": 25.64
+    },
+    {
+     "w": "e",
+     "s": 25.64,
+     "e": 25.82
+    },
+    {
+     "w": "uscito",
+     "s": 25.82,
+     "e": 26.28
+    }
+   ],
+   "match": 1.0,
+   "heard": "E non è uscito."
+  }
+ ]
+}
