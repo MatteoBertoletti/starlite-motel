@@ -136,6 +136,11 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
+  else if (i === 'delchat') { c.scale(sc, sc); delchatUI(c, el, L, lt, tt, size); }
+  else if (i === 'lockphone') { c.scale(sc, sc); lockUI(c, el, L, lt, tt, size); }
+  else if (i === 'house') { c.scale(sc, sc); houseUI(c, el, L, lt, tt, size); }
+  else if (i === 'doorlight') { c.scale(sc, sc); doorlightUI(c, el, L, lt, tt, size); }
+  else if (i === 'youface') { c.scale(sc, sc); youfaceUI(c, el, L, lt, tt, size); }
   else if (i === 'tablephone') { c.scale(sc, sc); tablephoneUI(c, el, L, lt, tt, size); }
   else if (i === 'recenti') { c.scale(sc, sc); calllogUI(c, el, L, lt, tt, size); }
   else if (i === 'lamp2') { c.scale(sc, sc); lampUI(c, el, L, lt, tt, size); }
@@ -942,6 +947,89 @@ function stairwellUI(c, el, L, lt, tt, size) {           // a dark stairwell fro
   const px = xa + (xz - xa) * fr, py = ya + (yz - ya) * fr - u * 3;
   const g = c.createRadialGradient(px, py, 1, px, py, u * 18); g.addColorStop(0, 'rgba(170,220,255,0.75)'); g.addColorStop(1, 'rgba(170,220,255,0)'); c.fillStyle = g; c.fillRect(px - u * 20, py - u * 20, u * 40, u * 40);
   c.beginPath(); c.arc(px, py, u * 1.3, 0, 7); c.fillStyle = '#e8f5ff'; c.fill();
+}
+// ---------- Short 005: the deleted message ----------
+function delBubble(c, x, y, bw, bh, u, big) {           // WhatsApp-style "this message was deleted"
+  c.beginPath(); c.roundRect(x, y, bw, bh, u * 5); c.fillStyle = '#1d1d21'; c.fill(); c.lineWidth = u * 0.6; c.strokeStyle = '#8d8981'; c.stroke();
+  const cy = y + bh / 2, r = u * (big ? 3.4 : 2.4), ix = x + u * 4 + r; c.beginPath(); c.arc(ix, cy, r, 0, 7); c.moveTo(ix - r * 0.7, cy + r * 0.7); c.lineTo(ix + r * 0.7, cy - r * 0.7); c.lineWidth = u * 0.6; c.strokeStyle = '#9a958c'; c.stroke();
+  txt(c, 'Questo messaggio è stato eliminato', ix + r + u * 2.5, cy + u * 0.3, u * (big ? 6.2 : 4.6), 'italic 600', '#b5b0a6', 'left', 'middle');
+}
+function delchatUI(c, el, L, lt, tt, size) {             // a chat with "Mamma": bubbles that turn into "deleted"
+  const W = size * 2.3, u = W / 100, W2 = W / 2; let y = 0;
+  c.beginPath(); c.roundRect(-W2 - u * 5, -u * 12, W + u * 10, u * (el.phoneh || 150), u * 9); c.lineWidth = u * 1.2; c.strokeStyle = '#8d8981'; c.stroke();
+  c.beginPath(); c.arc(-W2 + u * 5, y, u * 4.2, 0, 7); c.fillStyle = '#26241f'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();
+  c.beginPath(); c.arc(-W2 + u * 5, y - u * 1, u * 1.6, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.beginPath(); c.arc(-W2 + u * 5, y + u * 3.6, u * 2.8, Math.PI * 1.15, Math.PI * 1.85); c.fill();
+  txt(c, 'Mamma', -W2 + u * 12, y - u * 2.6, u * 6.4, '900', C.w, 'left', 'middle', 2);
+  const tw = el.typingat !== undefined && lt >= W_el(L, el, 'typingat') && !(el.typingoff !== undefined && lt >= W_el(L, el, 'typingoff'));
+  txt(c, tw ? 'sta scrivendo…' : (el.sub || 'online'), -W2 + u * 12, y + u * 3.8, u * 3.8, '800', tw || !el.sub ? '#7fd9a0' : '#8d8981', 'left', 'middle', 1);
+  txt(c, el.clock || '03:12', W2, y, u * 5.2, '800', '#8d8981', 'right', 'middle', 2);
+  c.fillStyle = '#26241f'; c.fillRect(-W2, y + u * 8, W, u * 0.4); y += u * 18;
+  for (const m of el.msgs || []) {
+    if (m.at !== undefined && lt < W_el(L, m, 'at')) continue;
+    const k = m.at !== undefined ? easeOut((lt - W_el(L, m, 'at')) / 0.25) : 1, big = !!m.big, bh = u * (big ? 21 : 15);
+    const dl = m.del === true || (m.del !== undefined && lt >= W_el(L, m, 'del'));
+    c.save(); c.globalAlpha *= k; c.translate(0, (1 - k) * u * 5);
+    if (dl) { const dk = m.del === true ? 1 : clamp01((lt - W_el(L, m, 'del')) / 0.18); c.font = `italic 600 ${u * (big ? 6.2 : 4.6)}px Montserrat`;
+      const bw = c.measureText('Questo messaggio è stato eliminato').width + u * (big ? 18 : 14); c.save(); c.globalAlpha *= dk; delBubble(c, -W2, y, Math.min(bw, W + u * 4), bh, u, big); c.restore();
+      if (dk < 1) { c.save(); c.globalAlpha *= 1 - dk; c.shadowColor = GLOW.red; c.shadowBlur = 40; c.beginPath(); c.roundRect(-W2, y, bw, bh, u * 5); c.fillStyle = C.red; c.fill(); c.restore(); } }
+    else { c.font = `800 ${u * (big ? 10 : 6.4)}px Montserrat`; const bw = c.measureText(m.text).width + u * 10; c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 24; c.beginPath(); c.roundRect(-W2, y, bw, bh, u * 5); c.fillStyle = C.w; c.fill(); c.restore();
+      txt(c, m.text, -W2 + u * 5, y + bh / 2 + u * 0.3, u * (big ? 10 : 6.4), '800', C.bg, 'left', 'middle'); }
+    txt(c, m.time || '03:12', -W2, y + bh + u * 4, u * 3.8, '800', '#8d8981', 'left', 'middle', 2);
+    c.restore(); y += bh + u * 11;
+  }
+}
+function lockUI(c, el, L, lt, tt, size) {                // phone lock screen: off / on, the time big, one notification
+  const h = size * 2.2, w = h * 0.49, u = w / 50, off = W_el(L, el, 'off'), on = W_el(L, el, 'on');
+  const lit = !(off !== null && lt >= off && !(on !== null && lt >= on));
+  c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, u * 7); c.fillStyle = '#111114'; c.fill(); c.lineWidth = u * 1.1; c.strokeStyle = '#d9d5cc'; c.stroke();
+  if (!lit) return;
+  const fk = on !== null && lt >= on ? easeOut((lt - on) / 0.25) : 1; c.save(); c.globalAlpha *= fk;
+  const g = c.createLinearGradient(0, -h / 2, 0, h / 2); g.addColorStop(0, '#152434'); g.addColorStop(1, '#07090d'); c.beginPath(); c.roundRect(-w / 2 + u * 2, -h / 2 + u * 2, w - u * 4, h - u * 4, u * 5.5); c.fillStyle = g; c.fill();
+  c.shadowColor = GLOW.white; c.shadowBlur = 30; txt(c, el.time || '03:12', 0, -h * 0.26, u * 15, '800', C.w, 'center', 'middle'); c.shadowBlur = 0;
+  txt(c, el.date || 'notte', 0, -h * 0.36, u * 3.6, '700', '#9fb6c8', 'center', 'middle', 2);
+  if (el.notif) { const y0 = -h * 0.08; c.beginPath(); c.roundRect(-w / 2 + u * 5, y0, w - u * 10, u * 16, u * 3); c.fillStyle = 'rgba(242,239,232,0.14)'; c.fill();
+    txt(c, 'WHATSAPP · MAMMA', -w / 2 + u * 9, y0 + u * 5, u * 2.8, '800', '#cfcac0', 'left', 'middle', 1); txt(c, el.notif, -w / 2 + u * 9, y0 + u * 11, u * 3.4, 'italic 600', C.w, 'left', 'middle'); }
+  c.restore();
+}
+function houseUI(c, el, L, lt, tt, size) {               // the flat from above: mum's room, kitchen, your room
+  const u = size / 40, hot = el.hot, hk = el.hotat === undefined ? 1 : clamp01((lt - W_el(L, el, 'hotat')) / 0.25);
+  const R = { mom: [-36, -46, 34, 40, 'MAMMA'], kit: [2, -46, 34, 40, 'CUCINA'], me: [-36, -2, 72, 40, 'TU'] };
+  for (const [key, [x, y, w, h, lab]] of Object.entries(R)) { c.save(); if (hot === key) { c.globalAlpha *= 1; c.shadowColor = key === 'me' ? GLOW.gold : GLOW.red; c.shadowBlur = 36 * hk; }
+    c.lineWidth = u * 0.9; c.strokeStyle = hot === key ? (key === 'me' ? C.gold : C.red) : 'rgba(242,239,232,0.7)'; c.strokeRect(x * u, y * u, w * u, h * u); c.restore();
+    txt(c, lab, (x + 2) * u, (y + 4) * u, u * 3.2, '900', hot === key ? (key === 'me' ? C.gold : C.red) : '#8d8981', 'left', 'middle', 3); }
+  // doors: mum's closed (a solid bar), the kitchen open (an arc)
+  c.fillStyle = C.w; c.fillRect(-26 * u, -7 * u, 12 * u, 1.6 * u); c.beginPath(); c.arc(8 * u, -6 * u, 10 * u, Math.PI, Math.PI * 1.5); c.lineWidth = u * 0.4; c.strokeStyle = 'rgba(242,239,232,0.5)'; c.stroke();
+  // mum asleep: bed + head
+  c.save(); c.translate(-20 * u, -26 * u); c.beginPath(); c.roundRect(-9 * u, -12 * u, 18 * u, 26 * u, u * 2); c.fillStyle = '#2a2a2e'; c.fill(); c.strokeStyle = 'rgba(242,239,232,0.5)'; c.lineWidth = u * 0.4; c.stroke();
+  c.beginPath(); c.arc(0, -7 * u, 3 * u, 0, 7); c.fillStyle = '#cfcac0'; c.fill(); c.fillStyle = '#3a3a40'; c.fillRect(-8 * u, -2 * u, 16 * u, 14 * u); c.restore();
+  if (lt % 2.4 < 1.2) txt(c, 'z', -11 * u, -38 * u, u * 3.4, '800', '#8d8981');
+  // kitchen counter + phone charging
+  c.fillStyle = '#3a2f24'; c.fillRect(20 * u, -46 * u, 16 * u, 40 * u); c.save(); c.translate(28 * u, -26 * u); const pg = 0.5 + 0.5 * Math.sin(tt * 2.2);
+  c.shadowColor = 'rgba(127,217,160,0.9)'; c.shadowBlur = 20 + 14 * pg; c.beginPath(); c.roundRect(-3 * u, -6 * u, 6 * u, 12 * u, u * 1.2); c.fillStyle = '#0e1b26'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#d9d5cc'; c.stroke(); c.shadowBlur = 0;
+  c.fillStyle = '#7fd9a0'; c.fillRect(-1.2 * u, -2 * u, 2.4 * u, 4 * u * (0.4 + 0.6 * pg)); c.beginPath(); c.moveTo(0, 6 * u); c.quadraticCurveTo(4 * u, 12 * u, 8 * u, 14 * u); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke(); c.restore();
+  // you in bed with your phone lit
+  c.save(); c.translate(14 * u, 20 * u); c.rotate(Math.PI / 2); c.beginPath(); c.roundRect(-9 * u, -14 * u, 18 * u, 28 * u, u * 2); c.fillStyle = '#2a2a2e'; c.fill(); c.strokeStyle = 'rgba(242,239,232,0.5)'; c.lineWidth = u * 0.4; c.stroke();
+  c.beginPath(); c.arc(0, -9 * u, 3 * u, 0, 7); c.fillStyle = C.gold; c.fill(); c.restore();
+  const gg = c.createRadialGradient(4 * u, 22 * u, 1, 4 * u, 22 * u, 10 * u); gg.addColorStop(0, 'rgba(160,215,255,0.7)'); gg.addColorStop(1, 'rgba(160,215,255,0)'); c.fillStyle = gg; c.fillRect(-6 * u, 12 * u, 20 * u, 20 * u);
+  c.fillStyle = '#a0d7ff'; c.fillRect(2.5 * u, 20 * u, 3 * u, 5 * u);
+}
+function doorlightUI(c, el, L, lt, tt, size) {           // a closed door, a line of light under it
+  const u = size / 40, off = W_el(L, el, 'off'), lk = off === null ? 1 : lt < off ? 1 : 0, fl = el.flicker ? (Math.sin(tt * 23) > 0.85 ? 0.6 : 1) : 1;
+  c.fillStyle = '#121214'; c.fillRect(-60 * u, -60 * u, 120 * u, 120 * u);
+  c.fillStyle = '#1b1b1f'; c.fillRect(-17 * u, -44 * u, 34 * u, 74 * u); c.lineWidth = u * 0.8; c.strokeStyle = 'rgba(242,239,232,0.75)'; c.strokeRect(-19 * u, -46 * u, 38 * u, 76 * u);
+  for (const [y, h] of [[-38, 30], [-2, 26]]) { c.lineWidth = u * 0.35; c.strokeStyle = 'rgba(242,239,232,0.3)'; c.strokeRect(-12 * u, y * u, 24 * u, h * u); }
+  c.beginPath(); c.arc(12 * u, -6 * u, 1.4 * u, 0, 7); c.fillStyle = '#cfcac0'; c.fill();
+  c.fillStyle = 'rgba(242,239,232,0.25)'; c.fillRect(-60 * u, 30 * u, 120 * u, 0.4 * u);
+  if (lk > 0) { c.save(); c.globalAlpha *= lk * fl; const g = c.createLinearGradient(0, 30 * u, 0, 44 * u); g.addColorStop(0, 'rgba(245,196,81,0.55)'); g.addColorStop(1, 'rgba(245,196,81,0)');
+    c.fillStyle = g; c.beginPath(); c.moveTo(-17 * u, 30 * u); c.lineTo(17 * u, 30 * u); c.lineTo(30 * u, 44 * u); c.lineTo(-30 * u, 44 * u); c.closePath(); c.fill();
+    c.shadowColor = GLOW.gold; c.shadowBlur = 30; c.fillStyle = '#f5c451'; c.fillRect(-17 * u, 29 * u, 34 * u, 1.2 * u); c.restore(); }
+}
+function youfaceUI(c, el, L, lt, tt, size) {             // you, still, the phone lighting your face from below
+  const u = size / 40;
+  c.save(); c.scale(u * 70, u * 70); c.translate(0, -0.05); ICONS.you(c, {}); c.restore();
+  c.save(); c.globalCompositeOperation = 'lighter'; const fl = 0.85 + 0.15 * Math.sin(tt * 9) * Math.sin(tt * 3.1);
+  const g = c.createRadialGradient(0, 30 * u, 2 * u, 0, 0, 46 * u); g.addColorStop(0, `rgba(120,190,255,${0.55 * fl})`); g.addColorStop(1, 'rgba(120,190,255,0)'); c.fillStyle = g; c.fillRect(-50 * u, -50 * u, 100 * u, 100 * u); c.restore();
+  c.save(); c.translate(0, 34 * u); c.rotate(-0.1); c.shadowColor = 'rgba(160,215,255,0.9)'; c.shadowBlur = 40; c.beginPath(); c.roundRect(-7 * u, -11 * u, 14 * u, 22 * u, u * 2); c.fillStyle = '#cfe8ff'; c.fill(); c.restore();
 }
 function ruleCard(c, n, lt) {
   const text = SCRIPT.rules[n - 1].toUpperCase();

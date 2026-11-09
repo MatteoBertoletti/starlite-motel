@@ -1,0 +1,370 @@
+{
+ "title": "Se Su WhatsApp Compare «Messaggio Eliminato» Da Tua Madre… NON CHIEDERE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.03,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se su WhatsApp compare «messaggio eliminato» da tua madre, non chiedere.",
+   "capfull": true,
+   "cap": "Se su WhatsApp compare «messaggio eliminato» da tua madre, non chiedere.",
+   "red": "chiedere",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "delchat",
+        "s": 0.95,
+        "y": -0.75,
+        "msgs": [
+         {
+          "del": true
+         }
+        ],
+        "phoneh": 120,
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "madre",
+      "els": [
+       {
+        "i": "delchat",
+        "s": 1.55,
+        "y": -0.65,
+        "msgs": [
+         {
+          "del": true,
+          "big": true
+         }
+        ],
+        "phoneh": 120,
+        "a": "impactdrift",
+        "x": 0.25
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il messaggio è sparito. Sono le tre e dodici.",
+   "cap": "Il messaggio è sparito. Sono le tre e dodici.",
+   "red": "dodici",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lockphone",
+        "s": 0.95,
+        "y": -0.2,
+        "notif": "Questo messaggio è stato eliminato",
+        "off": "sparito",
+        "on": "sono",
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "sono",
+      "dt": 0.25,
+      "els": [
+       {
+        "i": "lockphone",
+        "s": 1.7,
+        "y": 0.2,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "sparito"
+     ],
+     [
+      "tick",
+      "dodici"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tua madre dorme nella stanza accanto. Il suo telefono è in carica in cucina.",
+   "cap": "Tua madre dorme nella stanza accanto. Il suo telefono è in carica in cucina.",
+   "red": "cucina",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "house",
+        "s": 1.0,
+        "y": -0.2,
+        "hot": "mom",
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "il",
+      "els": [
+       {
+        "i": "house",
+        "s": 2.3,
+        "x": -1.45,
+        "y": 0.85,
+        "hot": "kit",
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "carica",
+      "els": [
+       {
+        "i": "house",
+        "s": 1.8,
+        "x": -0.5,
+        "y": -0.8,
+        "hot": "me",
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Dalla sua camera non arriva nessun rumore.",
+   "cap": "Dalla sua camera non arriva nessun rumore.",
+   "red": "rumore",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 1.15,
+        "y": -0.15,
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "arriva",
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 2.2,
+        "y": -1.0,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Un secondo messaggio: «Sei sveglio?» Eliminato anche quello.",
+   "cap": "Un secondo messaggio: «Sei sveglio?» Eliminato anche quello.",
+   "red": "eliminato",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "delchat",
+        "s": 0.95,
+        "y": -0.75,
+        "msgs": [
+         {
+          "del": true
+         },
+         {
+          "text": "Sei sveglio?",
+          "at": "sei",
+          "del": "eliminato"
+         }
+        ],
+        "phoneh": 120,
+        "a": "buzzdrift",
+        "typingat": true,
+        "typingoff": "sei"
+       }
+      ]
+     },
+     {
+      "at": "eliminato",
+      "dt": -0.1,
+      "els": [
+       {
+        "i": "delchat",
+        "s": 1.45,
+        "y": -0.95,
+        "msgs": [
+         {
+          "del": true
+         },
+         {
+          "text": "Sei sveglio?",
+          "big": true,
+          "del": "eliminato"
+         }
+        ],
+        "phoneh": 120,
+        "a": "impactdrift",
+        "x": 0.2
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "sei"
+     ],
+     [
+      "hit",
+      "eliminato"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Chi cancella un messaggio vuole solo sapere chi lo legge.",
+   "cap": "Chi cancella un messaggio vuole solo sapere chi lo legge.",
+   "red": "legge",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "youface",
+        "s": 1.0,
+        "y": -0.25,
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "sapere",
+      "els": [
+       {
+        "i": "youface",
+        "s": 1.9,
+        "y": 0.15,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Adesso sa che ci sei.",
+   "cap": "Adesso sa che ci sei.",
+   "red": "sei",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 1.5,
+        "y": -0.5,
+        "a": "impactdrift",
+        "off": "ci"
+       }
+      ]
+     },
+     {
+      "at": "sei",
+      "dt": 0.3,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "ci"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Su WhatsApp Compare «Messaggio Eliminato» Da Tua Madre… NON CHIEDERE",
+  "publish": "lunedì 9 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un messaggio eliminato è un messaggio che qualcuno non voleva farti leggere."
+  ],
+  "question": "👇 A te è mai arrivato? Scrivi a che ora. #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "A che ora ti è arrivato il tuo? Scrivilo qui sotto 👇 Il caso completo con le 7 regole: Se Sul Telefono Compare \"Mamma\" Alle 03:33… NON RISPONDERE https://youtu.be/dmGwzyCxLI4",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "whatsapp",
+   "messaggio eliminato",
+   "mamma",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}
