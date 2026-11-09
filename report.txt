@@ -1,0 +1,10 @@
+  1 N         0.03-   4.58 match=1.00 eleven_v4 (cache) | Se trovi davanti alla porta un pacco che non hai ordinato, non aprirlo.
+  2 N         4.83-   8.77 match=1.00 eleven_v4 (cache) | Sulla notifica del corriere, «Consegnato a mano e firmato».
+  3 N         9.02-  13.18 match=1.00 eleven_v4 (cache) | La firma è la tua, con la stessa sbavatura sull 'ultima lettera.
+  4 N        13.43-  17.48 match=1.00 eleven_v4 (cache) | Ma tu eri al lavoro. Casa vuota, porta chiusa a chiave.
+  5 N        17.73-  21.66 match=1.00 eleven_v4 | Dentro qualcosa si sposta, piano, quando lo inclini.
+  6 N        21.91-  25.17 match=1.00 eleven_v4 (cache) | Non aprirlo. Qualcuno ha aperto la porta al corriere.
+  7 N        25.42-  26.51 match=1.00 eleven_v4 (cache) | E non è uscito.
+
+TOTAL 26.6s  new characters billed ~52  cached lines 6
+low match lines: []
