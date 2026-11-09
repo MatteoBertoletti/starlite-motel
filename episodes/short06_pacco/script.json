@@ -1,0 +1,379 @@
+{
+ "title": "Se Arriva Un Pacco Con Il Tuo Nome Che Non Hai Ordinato… NON APRIRLO",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.03,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se trovi davanti alla porta un pacco che non hai ordinato, non aprirlo.",
+   "capfull": true,
+   "cap": "Se trovi davanti alla porta un pacco che non hai ordinato, non aprirlo.",
+   "red": "aprirlo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "landing",
+        "s": 1.15,
+        "y": -0.25,
+        "a": "buzzdrift"
+       }
+      ]
+     },
+     {
+      "at": "pacco",
+      "els": [
+       {
+        "i": "landing",
+        "s": 2.4,
+        "y": -1.15,
+        "a": "impactdrift",
+        "x": -0.3,
+        "hot": "pacco"
+       }
+      ]
+     },
+     {
+      "at": "non",
+      "els": [
+       {
+        "i": "tilt",
+        "s": 1.0,
+        "y": -0.15,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "keys",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sulla notifica del corriere: «Consegnato a mano e firmato».",
+   "cap": "Sulla notifica del corriere: «Consegnato a mano e firmato».",
+   "red": "firmato",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lockphone",
+        "s": 0.95,
+        "y": -0.2,
+        "a": "buzzdrift",
+        "notif": "Consegnato a mano e firmato",
+        "app": "CORRIERE · CONSEGNA",
+        "nsz": 3.6,
+        "date": "oggi, 14:12",
+        "time": "14:12"
+       }
+      ]
+     },
+     {
+      "at": "consegnato",
+      "els": [
+       {
+        "i": "lockphone",
+        "s": 2.2,
+        "y": 0.55,
+        "a": "impactdrift",
+        "hl": "firmato",
+        "notif": "Consegnato a mano e firmato",
+        "app": "CORRIERE · CONSEGNA",
+        "nsz": 3.6,
+        "date": "oggi, 14:12",
+        "time": "14:12"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "La firma è la tua, con la stessa sbavatura sull'ultima lettera.",
+   "cap": "La firma è la tua, con la stessa sbavatura sull'ultima lettera.",
+   "red": "lettera",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "sig",
+        "s": 1.2,
+        "y": -0.25,
+        "a": "buzzdrift",
+        "write": true
+       }
+      ]
+     },
+     {
+      "at": "stessa",
+      "els": [
+       {
+        "i": "sig",
+        "s": 2.6,
+        "y": -0.4,
+        "a": "impactdrift",
+        "x": -1.2,
+        "ring": "sbavatura"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "sbavatura"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ma tu eri al lavoro. Casa vuota, porta chiusa a chiave.",
+   "cap": "Ma tu eri al lavoro. Casa vuota, porta chiusa a chiave.",
+   "red": "chiave",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "flat",
+        "s": 1.1,
+        "y": -0.25,
+        "a": "buzzdrift",
+        "empty": false
+       }
+      ]
+     },
+     {
+      "at": "casa",
+      "els": [
+       {
+        "i": "flat",
+        "s": 1.1,
+        "y": -0.25,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "porta",
+      "els": [
+       {
+        "i": "flat",
+        "s": 2.4,
+        "y": -1.55,
+        "a": "impactdrift",
+        "hotdoor": true
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "chiave"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Dentro qualcosa si sposta, piano, quando lo inclini.",
+   "cap": "Dentro qualcosa si sposta, piano, quando lo inclini.",
+   "red": "sposta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tilt",
+        "s": 1.1,
+        "y": -0.2,
+        "a": "impactdrift",
+        "tilt": true
+       }
+      ]
+     },
+     {
+      "at": "piano",
+      "els": [
+       {
+        "i": "tilt",
+        "s": 1.7,
+        "y": -0.15,
+        "a": "impactdrift",
+        "tilt": "piano",
+        "dir": -1
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "scrape",
+      "sposta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non aprirlo. Qualcuno ha aperto la porta al corriere.",
+   "cap": "Non aprirlo. Qualcuno ha aperto la porta al corriere.",
+   "red": "aperto",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tilt",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "qualcuno",
+      "els": [
+       {
+        "i": "doorgap",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "open": "aperto"
+       }
+      ]
+     },
+     {
+      "at": "corriere",
+      "els": [
+       {
+        "i": "doorgap",
+        "s": 2.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "x": -0.55,
+        "ajar": 1
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "creak",
+      "aperto"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "E non è uscito.",
+   "cap": "E non è uscito.",
+   "red": "uscito",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doorgap",
+        "s": 1.5,
+        "y": -0.25,
+        "a": "impactdrift",
+        "ajar": 1,
+        "close": true,
+        "cdur": 1.3
+       }
+      ]
+     },
+     {
+      "at": "uscito",
+      "dt": 0.35,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "door_shut",
+      "uscito"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Arriva Un Pacco Con Il Tuo Nome Che Non Hai Ordinato… NON APRIRLO",
+  "publish": "lunedì 9 novembre, 18:30 (ora italiana)",
+  "intro": [
+   "Se qualcuno ha firmato per te, è entrato."
+  ],
+  "question": "👇 Ti è mai arrivato un pacco che non avevi ordinato? Cosa c'era dentro? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Cosa c'era nel pacco che non avevi ordinato? Scrivilo qui sotto 👇 Il caso completo con le 7 regole: Se Il Gatto Ti Porta Sempre Lo Stesso Regalo… NON TOCCARLO https://youtu.be/ZPtEjfndNaw",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "pacco non ordinato",
+   "corriere",
+   "consegna",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}
