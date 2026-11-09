@@ -1,0 +1,10 @@
+  1 N         0.03-   4.70 match=1.00 eleven_v4 | Se su WhatsApp compare «messaggio eliminato da tua madre», non chiedere.
+  2 N         4.95-   7.95 match=1.00 eleven_v4 | Il messaggio è sparito. Sono le tre e dodici.
+  3 N         8.20-  13.04 match=1.00 eleven_v4 | Tua madre dorme nella stanza accanto. Il suo telefono è in carica in cucina.
+  4 N        13.29-  15.90 match=1.00 eleven_v4 | Dalla sua camera non arriva nessun rumore.
+  5 N        16.15-  20.06 match=1.00 eleven_v4 | Un secondo messaggio. «Sei sveglio ?» Eliminato anche quello.
+  6 N        20.31-  23.78 match=1.00 eleven_v4 | Chi cancella un messaggio vuole solo sapere chi lo legge.
+  7 N        24.03-  25.60 match=1.00 eleven_v4 | Adesso sa che ci sei.
+
+TOTAL 25.6s  new characters billed ~373  cached lines 0
+low match lines: []
