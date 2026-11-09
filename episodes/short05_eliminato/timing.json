@@ -1,0 +1,416 @@
+{
+ "duration": 25.65,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.03,
+   "end": 4.7,
+   "dur": 4.67,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.03,
+     "e": 0.21
+    },
+    {
+     "w": "su",
+     "s": 0.21,
+     "e": 0.43
+    },
+    {
+     "w": "whatsapp",
+     "s": 0.43,
+     "e": 0.81
+    },
+    {
+     "w": "compare",
+     "s": 0.81,
+     "e": 1.39
+    },
+    {
+     "w": "messaggio",
+     "s": 1.39,
+     "e": 2.21
+    },
+    {
+     "w": "eliminato",
+     "s": 2.21,
+     "e": 2.75
+    },
+    {
+     "w": "da",
+     "s": 2.75,
+     "e": 2.87
+    },
+    {
+     "w": "tua",
+     "s": 2.87,
+     "e": 3.01
+    },
+    {
+     "w": "madre",
+     "s": 3.01,
+     "e": 3.67
+    },
+    {
+     "w": "non",
+     "s": 3.67,
+     "e": 3.99
+    },
+    {
+     "w": "chiedere",
+     "s": 3.99,
+     "e": 4.55
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se su WhatsApp compare «messaggio eliminato da tua madre», non chiedere."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.95,
+   "end": 7.95,
+   "dur": 3.0,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 4.95,
+     "e": 5.09
+    },
+    {
+     "w": "messaggio",
+     "s": 5.09,
+     "e": 5.55
+    },
+    {
+     "w": "e",
+     "s": 5.55,
+     "e": 5.69
+    },
+    {
+     "w": "sparito",
+     "s": 5.69,
+     "e": 6.15
+    },
+    {
+     "w": "sono",
+     "s": 6.45,
+     "e": 6.85
+    },
+    {
+     "w": "le",
+     "s": 6.85,
+     "e": 7.03
+    },
+    {
+     "w": "tre",
+     "s": 7.03,
+     "e": 7.27
+    },
+    {
+     "w": "e",
+     "s": 7.27,
+     "e": 7.37
+    },
+    {
+     "w": "dodici",
+     "s": 7.37,
+     "e": 7.85
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il messaggio è sparito. Sono le tre e dodici."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.2,
+   "end": 13.04,
+   "dur": 4.84,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "tua",
+     "s": 8.2,
+     "e": 8.38
+    },
+    {
+     "w": "madre",
+     "s": 8.38,
+     "e": 8.76
+    },
+    {
+     "w": "dorme",
+     "s": 8.76,
+     "e": 9.32
+    },
+    {
+     "w": "nella",
+     "s": 9.32,
+     "e": 9.48
+    },
+    {
+     "w": "stanza",
+     "s": 9.48,
+     "e": 9.92
+    },
+    {
+     "w": "accanto",
+     "s": 9.92,
+     "e": 10.48
+    },
+    {
+     "w": "il",
+     "s": 11.0,
+     "e": 11.08
+    },
+    {
+     "w": "suo",
+     "s": 11.08,
+     "e": 11.22
+    },
+    {
+     "w": "telefono",
+     "s": 11.22,
+     "e": 11.82
+    },
+    {
+     "w": "e",
+     "s": 11.82,
+     "e": 11.96
+    },
+    {
+     "w": "in",
+     "s": 11.96,
+     "e": 12.08
+    },
+    {
+     "w": "carica",
+     "s": 12.08,
+     "e": 12.44
+    },
+    {
+     "w": "in",
+     "s": 12.44,
+     "e": 12.54
+    },
+    {
+     "w": "cucina",
+     "s": 12.54,
+     "e": 13.04
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tua madre dorme nella stanza accanto. Il suo telefono è in carica in cucina."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.29,
+   "end": 15.9,
+   "dur": 2.61,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "dalla",
+     "s": 13.29,
+     "e": 13.55
+    },
+    {
+     "w": "sua",
+     "s": 13.55,
+     "e": 13.73
+    },
+    {
+     "w": "camera",
+     "s": 13.73,
+     "e": 14.15
+    },
+    {
+     "w": "non",
+     "s": 14.15,
+     "e": 14.45
+    },
+    {
+     "w": "arriva",
+     "s": 14.45,
+     "e": 14.85
+    },
+    {
+     "w": "nessun",
+     "s": 14.85,
+     "e": 15.29
+    },
+    {
+     "w": "rumore",
+     "s": 15.29,
+     "e": 15.73
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dalla sua camera non arriva nessun rumore."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 16.15,
+   "end": 20.06,
+   "dur": 3.91,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "un",
+     "s": 16.15,
+     "e": 16.29
+    },
+    {
+     "w": "secondo",
+     "s": 16.29,
+     "e": 16.61
+    },
+    {
+     "w": "messaggio",
+     "s": 16.61,
+     "e": 17.31
+    },
+    {
+     "w": "sei",
+     "s": 17.69,
+     "e": 18.17
+    },
+    {
+     "w": "sveglio",
+     "s": 18.17,
+     "e": 18.59
+    },
+    {
+     "w": "eliminato",
+     "s": 19.07,
+     "e": 19.73
+    },
+    {
+     "w": "anche",
+     "s": 19.73,
+     "e": 19.95
+    },
+    {
+     "w": "quello",
+     "s": 19.95,
+     "e": 20.21
+    }
+   ],
+   "match": 1.0,
+   "heard": "Un secondo messaggio. «Sei sveglio ?» Eliminato anche quello."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.31,
+   "end": 23.78,
+   "dur": 3.47,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "chi",
+     "s": 20.31,
+     "e": 20.43
+    },
+    {
+     "w": "cancella",
+     "s": 20.43,
+     "e": 20.89
+    },
+    {
+     "w": "un",
+     "s": 20.89,
+     "e": 20.99
+    },
+    {
+     "w": "messaggio",
+     "s": 20.99,
+     "e": 21.61
+    },
+    {
+     "w": "vuole",
+     "s": 21.61,
+     "e": 22.13
+    },
+    {
+     "w": "solo",
+     "s": 22.13,
+     "e": 22.45
+    },
+    {
+     "w": "sapere",
+     "s": 22.45,
+     "e": 22.95
+    },
+    {
+     "w": "chi",
+     "s": 22.95,
+     "e": 23.09
+    },
+    {
+     "w": "lo",
+     "s": 23.09,
+     "e": 23.23
+    },
+    {
+     "w": "legge",
+     "s": 23.23,
+     "e": 23.65
+    }
+   ],
+   "match": 1.0,
+   "heard": "Chi cancella un messaggio vuole solo sapere chi lo legge."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 24.03,
+   "end": 25.6,
+   "dur": 1.57,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "adesso",
+     "s": 24.03,
+     "e": 24.47
+    },
+    {
+     "w": "sa",
+     "s": 24.47,
+     "e": 24.81
+    },
+    {
+     "w": "che",
+     "s": 24.81,
+     "e": 24.95
+    },
+    {
+     "w": "ci",
+     "s": 24.95,
+     "e": 25.11
+    },
+    {
+     "w": "sei",
+     "s": 25.11,
+     "e": 25.37
+    }
+   ],
+   "match": 1.0,
+   "heard": "Adesso sa che ci sei."
+  }
+ ]
+}
