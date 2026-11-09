@@ -23,13 +23,14 @@ SETTINGS = {'N': dict(stability=0.55, similarity_boost=0.85, style=0.3, use_spea
             'NAV': dict(stability=0.9, similarity_boost=0.85, style=0.0, use_speaker_boost=True, speed=0.95)}
 if 'speed_N' in S: SETTINGS['N']['speed'] = S['speed_N']
 
-def tts(text, vid, who, prev, nxt):
+def tts(text, vid, who, prev, nxt, take=None):
     for model in MODELS:
         body = {'text': text, 'model_id': model, 'voice_settings': SETTINGS[who]}
+        if take: body['seed'] = take          # a new take of the same line
         if model != 'eleven_multilingual_v2': body['language_code'] = 'it'
         for ctx in (True, False):
             b = dict(body, **({'previous_text': prev, 'next_text': nxt} if ctx else {}))
-            key = hashlib.sha1(json.dumps([text, vid, model, SETTINGS[who], ctx and prev, ctx and nxt]).encode()).hexdigest()[:16]
+            key = hashlib.sha1(json.dumps([text, vid, model, SETTINGS[who], ctx and prev, ctx and nxt] + ([take] if take else [])).encode()).hexdigest()[:16]
             fn = f'{CACHE}/{key}.mp3'
             if os.path.exists(fn): return fn, model, True
             r = urllib.request.Request(f'https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_192', method='POST',
@@ -123,7 +124,7 @@ for i, L in enumerate(lines):
     who = L['who']; role = S['voices'].get(who, {}); vid = V['ids'][role.get('same_as', who)]
     prev = ' '.join(x['say'] for x in lines[max(0, i - 2):i] if x['who'] == who)[-400:] or None
     nxt = ' '.join(x['say'] for x in lines[i + 1:i + 2] if x['who'] == who)[:300] or None
-    fn, model, hit = tts(L['say'], vid, who, prev, nxt); cached += hit; used += 0 if hit else len(L['say'])
+    fn, model, hit = tts(L['say'], vid, who, prev, nxt, L.get('take')); cached += hit; used += 0 if hit else len(L['say'])
     clean = f"{OUT}/lines/{L['id']:02d}_clean.wav"; ff(['-i', fn, '-ar', str(SR), '-ac', '1', clean])
     y, _ = sf.read(clean, dtype='float32'); y = trim(y); sf.write(clean, y, SR)
     final = f"{OUT}/lines/{L['id']:02d}.wav"

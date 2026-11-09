@@ -225,6 +225,7 @@
    "who": "N",
    "fx": "tight",
    "say": "Dentro qualcosa si sposta, piano, quando lo inclini.",
+   "take": 7,
    "cap": "Dentro qualcosa si sposta, piano, quando lo inclini.",
    "red": "sposta",
    "v": {
