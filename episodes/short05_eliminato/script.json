@@ -37,7 +37,7 @@
       "els": [
        {
         "i": "delchat",
-        "s": 0.95,
+        "s": 1.45,
         "y": -0.75,
         "msgs": [
          {
@@ -50,21 +50,38 @@
       ]
      },
      {
+      "at": "messaggio",
+      "dt": 0.2,
+      "els": [
+       {
+        "i": "delchat",
+        "s": 1.62,
+        "y": -1.15,
+        "msgs": [
+         {
+          "del": true
+         }
+        ],
+        "phoneh": 120,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
       "at": "madre",
       "els": [
        {
         "i": "delchat",
-        "s": 1.55,
-        "y": -0.65,
+        "s": 2.4,
+        "y": -0.6,
         "msgs": [
          {
-          "del": true,
-          "big": true
+          "del": true
          }
         ],
         "phoneh": 120,
         "a": "impactdrift",
-        "x": 0.25
+        "x": 0.55
        }
       ]
      }
@@ -145,7 +162,20 @@
       ]
      },
      {
-      "at": "il",
+      "at": "stanza",
+      "els": [
+       {
+        "i": "house",
+        "s": 2.3,
+        "x": 1.05,
+        "y": 0.85,
+        "hot": "mom",
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "telefono",
       "els": [
        {
         "i": "house",
@@ -153,19 +183,6 @@
         "x": -1.45,
         "y": 0.85,
         "hot": "kit",
-        "a": "impactdrift"
-       }
-      ]
-     },
-     {
-      "at": "carica",
-      "els": [
-       {
-        "i": "house",
-        "s": 1.8,
-        "x": -0.5,
-        "y": -0.8,
-        "hot": "me",
         "a": "impactdrift"
        }
       ]
@@ -219,8 +236,26 @@
       "els": [
        {
         "i": "delchat",
-        "s": 0.95,
+        "s": 1.45,
         "y": -0.75,
+        "msgs": [
+         {
+          "del": true
+         }
+        ],
+        "phoneh": 120,
+        "a": "buzzdrift",
+        "typingat": true
+       }
+      ]
+     },
+     {
+      "at": "sei",
+      "els": [
+       {
+        "i": "delchat",
+        "s": 1.55,
+        "y": -1.05,
         "msgs": [
          {
           "del": true
@@ -232,9 +267,7 @@
          }
         ],
         "phoneh": 120,
-        "a": "buzzdrift",
-        "typingat": true,
-        "typingoff": "sei"
+        "a": "impactdrift"
        }
       ]
      },
@@ -244,21 +277,19 @@
       "els": [
        {
         "i": "delchat",
-        "s": 1.45,
-        "y": -0.95,
+        "s": 1.62,
+        "y": -1.35,
         "msgs": [
          {
           "del": true
          },
          {
           "text": "Sei sveglio?",
-          "big": true,
           "del": "eliminato"
          }
         ],
         "phoneh": 120,
-        "a": "impactdrift",
-        "x": 0.2
+        "a": "impactdrift"
        }
       ]
      }
@@ -295,12 +326,24 @@
       ]
      },
      {
+      "at": "vuole",
+      "els": [
+       {
+        "i": "youface",
+        "s": 1.45,
+        "y": -0.1,
+        "x": 0.1,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
       "at": "sapere",
       "els": [
        {
         "i": "youface",
-        "s": 1.9,
-        "y": 0.15,
+        "s": 2.1,
+        "y": 0.25,
         "a": "impactdrift"
        }
       ]

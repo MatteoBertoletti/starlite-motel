@@ -952,10 +952,10 @@ function stairwellUI(c, el, L, lt, tt, size) {           // a dark stairwell fro
 function delBubble(c, x, y, bw, bh, u, big) {           // WhatsApp-style "this message was deleted"
   c.beginPath(); c.roundRect(x, y, bw, bh, u * 5); c.fillStyle = '#1d1d21'; c.fill(); c.lineWidth = u * 0.6; c.strokeStyle = '#8d8981'; c.stroke();
   const cy = y + bh / 2, r = u * (big ? 3.4 : 2.4), ix = x + u * 4 + r; c.beginPath(); c.arc(ix, cy, r, 0, 7); c.moveTo(ix - r * 0.7, cy + r * 0.7); c.lineTo(ix + r * 0.7, cy - r * 0.7); c.lineWidth = u * 0.6; c.strokeStyle = '#9a958c'; c.stroke();
-  txt(c, 'Questo messaggio è stato eliminato', ix + r + u * 2.5, cy + u * 0.3, u * (big ? 6.2 : 4.6), 'italic 600', '#b5b0a6', 'left', 'middle');
+  txt(c, 'Questo messaggio è stato eliminato', ix + r + u * 2.5, cy + u * 0.3, u * (big ? 6.2 : 4.2), 'italic 600', '#b5b0a6', 'left', 'middle');
 }
 function delchatUI(c, el, L, lt, tt, size) {             // a chat with "Mamma": bubbles that turn into "deleted"
-  const W = size * 2.3, u = W / 100, W2 = W / 2; let y = 0;
+  const W = size * 1.6, u = W / 100, W2 = W / 2; let y = 0;
   c.beginPath(); c.roundRect(-W2 - u * 5, -u * 12, W + u * 10, u * (el.phoneh || 150), u * 9); c.lineWidth = u * 1.2; c.strokeStyle = '#8d8981'; c.stroke();
   c.beginPath(); c.arc(-W2 + u * 5, y, u * 4.2, 0, 7); c.fillStyle = '#26241f'; c.fill(); c.lineWidth = u * 0.5; c.strokeStyle = '#8d8981'; c.stroke();
   c.beginPath(); c.arc(-W2 + u * 5, y - u * 1, u * 1.6, 0, 7); c.fillStyle = '#8d8981'; c.fill(); c.beginPath(); c.arc(-W2 + u * 5, y + u * 3.6, u * 2.8, Math.PI * 1.15, Math.PI * 1.85); c.fill();
@@ -969,11 +969,11 @@ function delchatUI(c, el, L, lt, tt, size) {             // a chat with "Mamma":
     const k = m.at !== undefined ? easeOut((lt - W_el(L, m, 'at')) / 0.25) : 1, big = !!m.big, bh = u * (big ? 21 : 15);
     const dl = m.del === true || (m.del !== undefined && lt >= W_el(L, m, 'del'));
     c.save(); c.globalAlpha *= k; c.translate(0, (1 - k) * u * 5);
-    if (dl) { const dk = m.del === true ? 1 : clamp01((lt - W_el(L, m, 'del')) / 0.18); c.font = `italic 600 ${u * (big ? 6.2 : 4.6)}px Montserrat`;
+    if (dl) { const dk = m.del === true ? 1 : clamp01((lt - W_el(L, m, 'del')) / 0.18); c.font = `italic 600 ${u * (big ? 6.2 : 4.2)}px Montserrat`;
       const bw = c.measureText('Questo messaggio è stato eliminato').width + u * (big ? 18 : 14); c.save(); c.globalAlpha *= dk; delBubble(c, -W2, y, Math.min(bw, W + u * 4), bh, u, big); c.restore();
       if (dk < 1) { c.save(); c.globalAlpha *= 1 - dk; c.shadowColor = GLOW.red; c.shadowBlur = 40; c.beginPath(); c.roundRect(-W2, y, bw, bh, u * 5); c.fillStyle = C.red; c.fill(); c.restore(); } }
-    else { c.font = `800 ${u * (big ? 10 : 6.4)}px Montserrat`; const bw = c.measureText(m.text).width + u * 10; c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 24; c.beginPath(); c.roundRect(-W2, y, bw, bh, u * 5); c.fillStyle = C.w; c.fill(); c.restore();
-      txt(c, m.text, -W2 + u * 5, y + bh / 2 + u * 0.3, u * (big ? 10 : 6.4), '800', C.bg, 'left', 'middle'); }
+    else { c.font = `800 ${u * (big ? 10 : 8)}px Montserrat`; const bw = c.measureText(m.text).width + u * 10; c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 24; c.beginPath(); c.roundRect(-W2, y, bw, bh, u * 5); c.fillStyle = C.w; c.fill(); c.restore();
+      txt(c, m.text, -W2 + u * 5, y + bh / 2 + u * 0.3, u * (big ? 10 : 8), '800', C.bg, 'left', 'middle'); }
     txt(c, m.time || '03:12', -W2, y + bh + u * 4, u * 3.8, '800', '#8d8981', 'left', 'middle', 2);
     c.restore(); y += bh + u * 11;
   }
