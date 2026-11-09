@@ -58,7 +58,8 @@
       ]
      },
      {
-      "at": "non",
+      "at": "aprirlo",
+      "dt": -0.3,
       "els": [
        {
         "i": "tilt",
@@ -148,15 +149,28 @@
       ]
      },
      {
-      "at": "stessa",
+      "at": "con",
+      "els": [
+       {
+        "i": "sig",
+        "s": 1.9,
+        "y": -0.3,
+        "a": "impactdrift",
+        "x": -0.55,
+        "ring": "sbavatura"
+       }
+      ]
+     },
+     {
+      "at": "sull",
       "els": [
        {
         "i": "sig",
         "s": 2.6,
-        "y": -0.4,
+        "y": -0.5,
         "a": "impactdrift",
-        "x": -1.2,
-        "ring": "sbavatura"
+        "x": -1.37,
+        "ring": true
        }
       ]
      }
@@ -243,14 +257,14 @@
       ]
      },
      {
-      "at": "piano",
+      "at": "sposta",
       "els": [
        {
         "i": "tilt",
         "s": 1.7,
         "y": -0.15,
         "a": "impactdrift",
-        "tilt": "piano",
+        "tilt": "sposta",
         "dir": -1
        }
       ]
