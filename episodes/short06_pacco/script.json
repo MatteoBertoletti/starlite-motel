@@ -37,9 +37,10 @@
       "els": [
        {
         "i": "landing",
-        "s": 1.15,
-        "y": -0.25,
-        "a": "buzzdrift"
+        "s": 1.5,
+        "y": -0.1,
+        "a": "buzzdrift",
+        "x": 0.1
        }
       ]
      },
@@ -48,10 +49,10 @@
       "els": [
        {
         "i": "landing",
-        "s": 2.4,
-        "y": -1.15,
+        "s": 2.6,
+        "y": -1.25,
         "a": "impactdrift",
-        "x": -0.3,
+        "x": -0.45,
         "hot": "pacco"
        }
       ]
@@ -94,7 +95,7 @@
         "a": "buzzdrift",
         "notif": "Consegnato a mano e firmato",
         "app": "CORRIERE · CONSEGNA",
-        "nsz": 3.6,
+        "nsz": 3.0,
         "date": "oggi, 14:12",
         "time": "14:12"
        }
@@ -105,13 +106,13 @@
       "els": [
        {
         "i": "lockphone",
-        "s": 2.2,
-        "y": 0.55,
+        "s": 1.75,
+        "y": 0.3,
         "a": "impactdrift",
         "hl": "firmato",
         "notif": "Consegnato a mano e firmato",
         "app": "CORRIERE · CONSEGNA",
-        "nsz": 3.6,
+        "nsz": 3.0,
         "date": "oggi, 14:12",
         "time": "14:12"
        }
@@ -225,7 +226,7 @@
    "who": "N",
    "fx": "tight",
    "say": "Dentro qualcosa si sposta, piano, quando lo inclini.",
-   "take": 7,
+   "take": 23,
    "cap": "Dentro qualcosa si sposta, piano, quando lo inclini.",
    "red": "sposta",
    "v": {
@@ -251,6 +252,18 @@
         "a": "impactdrift",
         "tilt": "piano",
         "dir": -1
+       }
+      ]
+     },
+     {
+      "at": "quando",
+      "els": [
+       {
+        "i": "tilt",
+        "s": 2.3,
+        "y": -0.05,
+        "a": "impactdrift",
+        "tilt": "quando"
        }
       ]
      }

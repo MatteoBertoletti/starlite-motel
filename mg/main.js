@@ -1061,7 +1061,10 @@ function sigUI(c, el, L, lt, tt, size) {                  // the signature on th
   c.save(); c.rotate(-0.03); c.beginPath(); c.roundRect(-34 * u, -22 * u, 68 * u, 44 * u, u * 1.2); c.fillStyle = '#f2efe8'; c.fill();
   txt(c, 'FIRMA DEL DESTINATARIO', -30 * u, -16 * u, 2.6 * u, '900', '#6b675f', 'left', 'middle', 2);
   c.beginPath(); c.moveTo(-30 * u, 10 * u); c.lineTo(30 * u, 10 * u); c.lineWidth = u * 0.25; c.strokeStyle = '#a8a397'; c.stroke();
-  const k = wr === null ? 1 : clamp01((lt - wr) / 1.0); scrib(c, 31, -26 * u, 6 * u, 44 * u, 7 * u, k, '#1d2a6b', u * 0.65);
+  const k = wr === null ? 1 : clamp01((lt - wr) / 1.0), n = 6, w = 44 * u, steps = 220, m = Math.floor(steps * k);     // a looping cursive hand
+  c.beginPath(); for (let i = 0; i <= m; i++) { const t = i / steps, ph = t * n * Math.PI * 2, g = Math.floor(t * n), a = (2.2 + 2.4 * hash(31 + g * 7)) * u * (g === 0 ? 1.7 : 1);
+    const x = -26 * u + t * w + Math.sin(ph) * w / (n * 2.4), y = 6 * u - (1 - Math.cos(ph)) * a * 0.5 - Math.sin(t * 3.1) * u * 1.2; i ? c.lineTo(x, y) : c.moveTo(x, y); }
+  c.lineWidth = u * 0.6; c.strokeStyle = '#1d2a6b'; c.lineCap = 'round'; c.lineJoin = 'round'; c.stroke();
   if (k >= 1) { c.save(); c.globalAlpha *= 0.55; c.beginPath(); c.ellipse(20.5 * u, 4.5 * u, 3.4 * u, 1.3 * u, -0.35, 0, 7); c.fillStyle = '#1d2a6b'; c.fill();
     c.beginPath(); c.moveTo(19 * u, 5 * u); c.quadraticCurveTo(24 * u, 6.5 * u, 26.5 * u, 4 * u); c.lineWidth = u * 0.5; c.strokeStyle = '#1d2a6b'; c.stroke(); c.restore(); }
   if (ring !== null && lt >= ring) { const rk = clamp01((lt - ring) / 0.35); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20; c.beginPath(); c.ellipse(21 * u, 3.5 * u, 8.5 * u, 6 * u, -0.2, -1.2, -1.2 + Math.PI * 2.1 * rk); c.lineWidth = u * 0.9; c.strokeStyle = C.red; c.stroke(); c.restore(); }
