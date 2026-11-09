@@ -37,10 +37,10 @@
       "els": [
        {
         "i": "landing",
-        "s": 1.5,
-        "y": -0.1,
+        "s": 1.25,
+        "y": 0.02,
         "a": "buzzdrift",
-        "x": 0.1
+        "x": 0.14
        }
       ]
      },
@@ -95,7 +95,7 @@
         "a": "buzzdrift",
         "notif": "Consegnato a mano e firmato",
         "app": "CORRIERE · CONSEGNA",
-        "nsz": 3.0,
+        "nsz": 2.45,
         "date": "oggi, 14:12",
         "time": "14:12"
        }
@@ -112,7 +112,7 @@
         "hl": "firmato",
         "notif": "Consegnato a mano e firmato",
         "app": "CORRIERE · CONSEGNA",
-        "nsz": 3.0,
+        "nsz": 2.45,
         "date": "oggi, 14:12",
         "time": "14:12"
        }
