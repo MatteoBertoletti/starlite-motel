@@ -1,0 +1,370 @@
+{
+ "title": "Se Ascolti Un Vocale Vuoto Con Le Cuffie… NON TOGLIERLE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.03,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se ascolti un vocale vuoto con le cuffie, non toglierle.",
+   "capfull": true,
+   "cap": "Se ascolti un vocale vuoto con le cuffie, non toglierle.",
+   "red": "toglierle",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "youhp",
+        "s": 1.05,
+        "y": -0.3,
+        "a": "buzzdrift",
+        "x": -0.35,
+        "bed": true,
+        "phone": true
+       },
+       {
+        "i": "vnote",
+        "s": 0.6,
+        "y": -0.5,
+        "a": "buzzdrift",
+        "x": 0.6
+       }
+      ]
+     },
+     {
+      "at": "vuoto",
+      "els": [
+       {
+        "i": "vnote",
+        "s": 1.0,
+        "y": -0.2,
+        "a": "impactdrift",
+        "play": "vuoto"
+       }
+      ]
+     },
+     {
+      "at": "non",
+      "els": [
+       {
+        "i": "youhp",
+        "s": 1.7,
+        "y": 0.2,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tre secondi di niente. Poi il frigorifero e l'orologio della cucina.",
+   "cap": "Tre secondi di niente. Poi il frigorifero e l'orologio della cucina.",
+   "red": "cucina",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vnote",
+        "s": 1.6,
+        "y": 0.35,
+        "a": "buzzdrift",
+        "play": true
+       }
+      ]
+     },
+     {
+      "at": "poi",
+      "els": [
+       {
+        "i": "kitchen",
+        "s": 1.1,
+        "y": -0.15,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "orologio",
+      "els": [
+       {
+        "i": "kitchen",
+        "s": 2.3,
+        "y": 1.15,
+        "a": "impactdrift",
+        "x": -1.15
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "orologio"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Mittente sconosciuto. Il suono è quello di casa tua, registrato da dentro.",
+   "cap": "Mittente sconosciuto. Il suono è quello di casa tua, registrato da dentro.",
+   "red": "dentro",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "vnote",
+        "s": 1.0,
+        "y": -0.2,
+        "a": "buzzdrift",
+        "from_": "?"
+       }
+      ]
+     },
+     {
+      "at": "suono",
+      "els": [
+       {
+        "i": "micplan",
+        "s": 1.05,
+        "y": -0.15,
+        "a": "impactdrift",
+        "micat": "casa"
+       }
+      ]
+     },
+     {
+      "at": "registrato",
+      "els": [
+       {
+        "i": "micplan",
+        "s": 2.3,
+        "y": 1.0,
+        "a": "impactdrift",
+        "x": -0.9
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Poi un respiro, a un metro dal microfono.",
+   "cap": "Poi un respiro, a un metro dal microfono.",
+   "red": "respiro",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "wavebump",
+        "s": 1.1,
+        "y": -0.2,
+        "a": "buzzdrift",
+        "bump": "respiro"
+       }
+      ]
+     },
+     {
+      "at": "metro",
+      "els": [
+       {
+        "i": "wavebump",
+        "s": 1.6,
+        "y": -0.1,
+        "a": "impactdrift",
+        "x": 0.15,
+        "bump": true,
+        "dot": "metro"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "respiro"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ti viene voglia di toglierle, per capire.",
+   "cap": "Ti viene voglia di toglierle, per capire.",
+   "red": "toglierle",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "youhp",
+        "s": 1.2,
+        "y": -0.15,
+        "a": "buzzdrift",
+        "hand": "voglia"
+       }
+      ]
+     },
+     {
+      "at": "toglierle",
+      "els": [
+       {
+        "i": "youhp",
+        "s": 2.0,
+        "y": 0.45,
+        "a": "impactdrift",
+        "x": -0.2,
+        "hand": "voglia"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non farlo. Finché le cuffie sono su, il respiro è solo nel vocale.",
+   "cap": "Non farlo. Finché le cuffie sono su, il respiro è solo nel vocale.",
+   "red": "vocale",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "youhp",
+        "s": 1.2,
+        "y": -0.15,
+        "a": "buzzdrift",
+        "hand": true,
+        "stop": "non"
+       }
+      ]
+     },
+     {
+      "at": "cuffie",
+      "els": [
+       {
+        "i": "youhp",
+        "s": 2.6,
+        "y": 0.9,
+        "a": "impactdrift",
+        "hand": true,
+        "stop": true,
+        "glow": "cuffie"
+       }
+      ]
+     },
+     {
+      "at": "respiro",
+      "els": [
+       {
+        "i": "wavebump",
+        "s": 1.3,
+        "y": -0.15,
+        "a": "impactdrift",
+        "bump": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Toglile, e sarà nella stanza.",
+   "cap": "Toglile, e sarà nella stanza.",
+   "red": "stanza",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "youhp",
+        "s": 1.3,
+        "y": -0.1,
+        "a": "impactdrift",
+        "hand": true,
+        "off": true
+       }
+      ]
+     },
+     {
+      "at": "stanza",
+      "dt": 0.35,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      null
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Ascolti Un Vocale Vuoto Con Le Cuffie… NON TOGLIERLE",
+  "publish": "martedì 10 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un vocale vuoto non è vuoto: ha il suono di casa tua."
+  ],
+  "question": "👇 Hai mai sentito in un vocale qualcosa che non dovevi? Cosa? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Cosa hai sentito nell'ultimo vocale che ti ha fatto paura? Scrivilo qui sotto 👇 Il caso completo con le 7 regole: Se Il Supplente Fa L'Appello E Dice Un Nome In Più… NON ALZARE LA MANO https://youtu.be/7iWRZOicb8Q",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "vocale",
+   "vocale vuoto",
+   "cuffie",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}

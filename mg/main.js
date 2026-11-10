@@ -136,6 +136,11 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
+  else if (i === 'youhp') { c.scale(sc, sc); youhpUI(c, el, L, lt, tt, size); }
+  else if (i === 'vnote') { c.scale(sc, sc); vnoteUI(c, el, L, lt, tt, size); }
+  else if (i === 'kitchen') { c.scale(sc, sc); kitchenUI(c, el, L, lt, tt, size); }
+  else if (i === 'micplan') { c.scale(sc, sc); micplanUI(c, el, L, lt, tt, size); }
+  else if (i === 'wavebump') { c.scale(sc, sc); wavebumpUI(c, el, L, lt, tt, size); }
   else if (i === 'landing') { c.scale(sc, sc); landingUI(c, el, L, lt, tt, size); }
   else if (i === 'sig') { c.scale(sc, sc); sigUI(c, el, L, lt, tt, size); }
   else if (i === 'flat') { c.scale(sc, sc); flatUI(c, el, L, lt, tt, size); }
@@ -1100,6 +1105,79 @@ function doorgapUI(c, el, L, lt, tt, size) {              // your door, from the
   c.fillStyle = 'rgba(242,239,232,0.5)'; c.fillRect(17 * u - gap - 0.5 * u, -44 * u, 0.5 * u, 74 * u);
   c.beginPath(); c.arc(12 * u - gap, -6 * u, 1.4 * u, 0, 7); c.fillStyle = '#cfcac0'; c.fill();
   if (el.key !== false) { c.save(); c.translate(12 * u - gap, 0); c.shadowColor = GLOW.gold; c.shadowBlur = 14; c.scale(u * 7, u * 7); ICONS.key(c, { col: C.gold }); c.restore(); }
+}
+// ---------- Short 007: the headphones ----------
+function micIcon(c, x, y, s, col, on, tt) {
+  c.save(); c.translate(x, y); if (on) { c.shadowColor = GLOW.red; c.shadowBlur = 24; }
+  c.beginPath(); c.roundRect(-s * 0.3, -s, s * 0.6, s * 1.1, s * 0.3); c.fillStyle = col; c.fill();
+  c.beginPath(); c.arc(0, -s * 0.2, s * 0.5, 0.15, Math.PI - 0.15); c.lineWidth = s * 0.12; c.strokeStyle = col; c.stroke();
+  c.fillRect(-s * 0.06, s * 0.3, s * 0.12, s * 0.35); c.fillRect(-s * 0.3, s * 0.62, s * 0.6, s * 0.1); c.restore();
+  if (on) for (let k = 0; k < 2; k++) { const a = (tt * 0.9 + k / 2) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.7; c.beginPath(); c.arc(x, y - s * 0.3, s * (0.9 + a * 1.8), 0, 7); c.lineWidth = s * 0.08; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+}
+function youhpUI(c, el, L, lt, tt, size) {              // you with headphones on; your hand; the headphones coming off
+  const K = size * 0.95, hand = W_el(L, el, 'hand'), stop = W_el(L, el, 'stop'), off = W_el(L, el, 'off'), glow = W_el(L, el, 'glow');
+  const ok = off !== null && lt >= off ? easeOut(clamp01((lt - off) / 0.35)) : 0;
+  if (off !== null && lt >= off) for (let k = 0; k < 4; k++) { const a = ((lt - off) * 0.9 + k / 4) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.85; c.shadowColor = GLOW.red; c.shadowBlur = 20;
+    c.beginPath(); c.arc(0, -0.2 * K, K * (0.3 + a * 0.75), Math.PI * 0.95, Math.PI * 2.05); c.lineWidth = K * 0.025; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+  if (el.bed) { c.fillStyle = '#2a2a2e'; c.beginPath(); c.roundRect(-0.7 * K, 0.3 * K, 1.4 * K, 0.4 * K, 0.05 * K); c.fill(); c.fillStyle = '#d9d5cc'; c.beginPath(); c.roundRect(-0.45 * K, -0.05 * K, 0.9 * K, 0.22 * K, 0.08 * K); c.fill(); }
+  c.save(); c.scale(K, K); ICONS.you(c, {}); c.restore();
+  // headphones
+  c.save(); c.translate(ok * 0.55 * K, -ok * 0.35 * K); c.rotate(ok * 0.5); const g = glow !== null && lt >= glow;
+  if (g) { c.shadowColor = 'rgba(160,215,255,0.95)'; c.shadowBlur = 30 + 12 * Math.sin(tt * 6); }
+  c.beginPath(); c.arc(0, -0.2 * K, 0.215 * K, Math.PI + 0.35, -0.35); c.lineWidth = 0.045 * K; c.strokeStyle = g ? '#cfe8ff' : '#3a3a40'; c.stroke();
+  c.lineWidth = 0.012 * K; c.strokeStyle = C.w; c.stroke();
+  for (const sd of [-1, 1]) { c.beginPath(); c.roundRect(sd * 0.2 * K - 0.045 * K, -0.27 * K, 0.09 * K, 0.15 * K, 0.035 * K); c.fillStyle = g ? '#a0d7ff' : '#26262b'; c.fill(); c.lineWidth = 0.012 * K; c.strokeStyle = C.w; c.stroke(); }
+  c.restore();
+  // the hand going up to the headphones
+  if (hand !== null) { let hk = easeOut(clamp01((lt - hand) / 0.9)); if (stop !== null && lt >= stop) hk = Math.min(hk, easeOut(clamp01((stop - hand) / 0.9))) - 0.06 * Math.min(1, (lt - stop) / 0.3);
+    if (ok) hk = 1; const tr = stop !== null && lt >= stop && !ok ? Math.sin(tt * 40) * 0.006 * K : 0;
+    c.save(); c.translate(0.46 * K - 0.18 * K * hk + tr, 0.62 * K - 0.78 * hk * K); c.rotate(-0.25 - 0.3 * hk); c.scale(0.42 * K, 0.42 * K); ICONS.hand(c, {}); c.restore(); }
+  if (el.phone) { c.save(); c.translate(-0.3 * K, 0.36 * K); c.rotate(0.15); c.shadowColor = 'rgba(160,215,255,0.9)'; c.shadowBlur = 26; c.beginPath(); c.roundRect(-0.06 * K, -0.1 * K, 0.12 * K, 0.2 * K, 0.02 * K); c.fillStyle = '#cfe8ff'; c.fill(); c.restore(); }
+}
+function vnoteUI(c, el, L, lt, tt, size) {              // a voice message on the phone: 0:03, a flat waveform (and a bump)
+  const h = size * 2.0, w = h * 0.5, u = w / 50, bump = W_el(L, el, 'bump'), bk = bump === null ? 0 : easeOut(clamp01((lt - bump) / 0.4));
+  c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, u * 7); c.fillStyle = '#111114'; c.fill(); c.lineWidth = u * 1.1; c.strokeStyle = '#d9d5cc'; c.stroke();
+  txt(c, el.from || 'Sconosciuto', -w / 2 + u * 6, -h / 2 + u * 10, u * 4.2, '900', C.w, 'left', 'middle'); txt(c, '03:12', w / 2 - u * 6, -h / 2 + u * 10, u * 3.2, '800', '#8d8981', 'right', 'middle');
+  c.fillStyle = '#26241f'; c.fillRect(-w / 2 + u * 3, -h / 2 + u * 16, w - u * 6, u * 0.4);
+  const by = -u * 6, bw = w - u * 8; c.beginPath(); c.roundRect(-bw / 2, by - u * 9, bw, u * 18, u * 5); c.fillStyle = '#1d2a22'; c.fill();
+  c.beginPath(); c.moveTo(-bw / 2 + u * 4, by - u * 3.5); c.lineTo(-bw / 2 + u * 4, by + u * 3.5); c.lineTo(-bw / 2 + u * 10, by); c.closePath(); c.fillStyle = C.w; c.fill();
+  const n = 26, x0 = -bw / 2 + u * 14, x1 = bw / 2 - u * 10, pk = el.play === undefined ? 0 : clamp01((lt - W_el(L, el, 'play')) / 3);
+  for (let i = 0; i < n; i++) { const x = x0 + (x1 - x0) * i / (n - 1), d = (i - n * 0.62) / 2.2, a = u * (0.5 + 0.35 * hash(i * 1.7 + Math.floor(tt * 8))) + bk * u * 6 * Math.exp(-d * d);
+    c.fillStyle = i / n < pk ? '#7fd9a0' : (bk && Math.abs(d) < 2 ? C.red : '#cfcac0'); c.fillRect(x - u * 0.4, by - a, u * 0.8, a * 2); }
+  txt(c, '0:03', -bw / 2 + u * 14, by + u * 6.5, u * 3.2, '800', '#8d8981', 'left', 'middle');
+  c.save(); c.translate(w / 2 - u * 9, by); c.beginPath(); c.arc(0, 0, u * 3, 0, 7); c.fillStyle = '#26241f'; c.fill(); micIcon(c, 0, u * 0.6, u * 2, '#cfcac0', false, tt); c.restore();
+}
+function kitchenUI(c, el, L, lt, tt, size) {            // the kitchen in the half-dark: fridge hum, wall clock tick
+  const u = size / 40;
+  const g = c.createRadialGradient(0, -20 * u, 2 * u, 0, 0, 60 * u); g.addColorStop(0, 'rgba(120,150,190,0.12)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(-60 * u, -60 * u, 120 * u, 110 * u);
+  c.fillStyle = 'rgba(242,239,232,0.25)'; c.fillRect(-60 * u, 30 * u, 120 * u, 0.4 * u);
+  c.save(); c.translate(-14 * u, 6 * u); c.scale(u * 50, u * 50); ICONS.fridge(c, {}); c.restore();
+  c.fillStyle = '#3a2f24'; c.fillRect(6 * u, 8 * u, 30 * u, 22 * u); c.lineWidth = u * 0.5; c.strokeStyle = 'rgba(242,239,232,0.5)'; c.strokeRect(6 * u, 8 * u, 30 * u, 22 * u);
+  const cx = 22 * u, cy = -22 * u, r = 8 * u; c.beginPath(); c.arc(cx, cy, r, 0, 7); c.fillStyle = '#e6e1d6'; c.fill(); c.lineWidth = u * 0.6; c.strokeStyle = C.w; c.stroke();
+  for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; c.fillStyle = '#1a1917'; c.fillRect(cx + Math.sin(a) * r * 0.82 - u * 0.2, cy - Math.cos(a) * r * 0.82 - u * 0.2, u * 0.4, u * 0.4); }
+  const sec = Math.floor(tt) / 60 * Math.PI * 2; for (const [a, l, wd, col] of [[3.2 / 12 * Math.PI * 2, 0.45, 0.6, '#1a1917'], [12 / 60 * Math.PI * 2, 0.7, 0.45, '#1a1917'], [sec, 0.78, 0.2, C.red]]) {
+    c.beginPath(); c.moveTo(cx, cy); c.lineTo(cx + Math.sin(a) * r * l, cy - Math.cos(a) * r * l); c.lineWidth = u * wd; c.strokeStyle = col; c.stroke(); }
+  if (el.waves !== false) for (const [x, y] of [[-14 * u, -12 * u], [cx, cy]]) for (let k = 0; k < 3; k++) { const a = (tt * 0.7 + k / 3) % 1; c.save(); c.globalAlpha *= (1 - a) * 0.35; c.beginPath(); c.arc(x, y, u * (6 + a * 18), -0.6, 0.6); c.lineWidth = u * 0.4; c.strokeStyle = '#a0d7ff'; c.stroke(); c.beginPath(); c.arc(x, y, u * (6 + a * 18), Math.PI - 0.6, Math.PI + 0.6); c.stroke(); c.restore(); }
+}
+function micplanUI(c, el, L, lt, tt, size) {            // the flat from above: you in the bedroom, a microphone on in the kitchen
+  const u = size / 40;
+  c.lineWidth = u * 0.9; c.strokeStyle = 'rgba(242,239,232,0.75)'; c.strokeRect(-34 * u, -44 * u, 68 * u, 74 * u);
+  c.lineWidth = u * 0.5; c.beginPath(); c.moveTo(-34 * u, -6 * u); c.lineTo(-6 * u, -6 * u); c.moveTo(6 * u, -6 * u); c.lineTo(34 * u, -6 * u); c.moveTo(0, -44 * u); c.lineTo(0, -16 * u); c.stroke();
+  for (const [x, y, t] of [[-32, -40, 'CAMERA'], [2, -40, 'CUCINA'], [-32, -2, 'SOGGIORNO']]) txt(c, t, x * u, y * u, u * 2.8, '900', '#6b675f', 'left', 'middle', 3);
+  c.save(); c.translate(-17 * u, -26 * u); c.fillStyle = '#2a2a2e'; c.beginPath(); c.roundRect(-9 * u, -10 * u, 18 * u, 24 * u, u * 2); c.fill(); c.strokeStyle = 'rgba(242,239,232,0.5)'; c.lineWidth = u * 0.4; c.stroke();
+  c.beginPath(); c.arc(0, -5 * u, 3 * u, 0, 7); c.fillStyle = C.gold; c.fill(); c.beginPath(); c.arc(0, -5 * u, 3.6 * u, Math.PI + 0.3, -0.3); c.lineWidth = u * 0.8; c.strokeStyle = '#a0d7ff'; c.stroke(); c.restore();
+  const mk = el.micat === undefined ? 1 : clamp01((lt - W_el(L, el, 'micat')) / 0.25); c.save(); c.globalAlpha *= mk; micIcon(c, 17 * u, -22 * u, 4 * u, C.red, true, tt);
+  txt(c, 'REC', 17 * u, -12 * u, u * 2.6, '900', C.red, 'center', 'middle', 2); c.restore();
+  c.fillStyle = 'rgba(242,239,232,0.35)'; c.fillRect(26 * u, -40 * u, 6 * u, 10 * u); c.beginPath(); c.arc(8 * u, -38 * u, 2.5 * u, 0, 7); c.strokeStyle = 'rgba(242,239,232,0.5)'; c.lineWidth = u * 0.4; c.stroke();
+}
+function wavebumpUI(c, el, L, lt, tt, size) {            // the recording: flat noise, then a breath, a metre from the microphone
+  const u = size / 40, bump = W_el(L, el, 'bump'), bk = bump === null ? 0 : easeOut(clamp01((lt - bump) / 0.5)), dot = W_el(L, el, 'dot');
+  micIcon(c, -30 * u, -2 * u, 4 * u, '#cfcac0', false, tt);
+  c.beginPath(); for (let i = 0; i <= 120; i++) { const x = -22 * u + i * 0.44 * u, d = (i - 70) / 9, a = (0.6 + 0.5 * hash(i * 3.1 + Math.floor(tt * 10))) * u * 0.7 + bk * 9 * u * Math.exp(-d * d) * (0.8 + 0.2 * Math.sin(tt * 9 + i));
+    const y = (i % 2 ? -a : a); i ? c.lineTo(x, y - 2 * u) : c.moveTo(x, y - 2 * u); }
+  c.lineWidth = u * 0.35; c.strokeStyle = bk ? '#f2efe8' : '#8d8981'; c.stroke();
+  if (dot !== null && lt >= dot) { const k = clamp01((lt - dot) / 0.4); c.save(); c.setLineDash([u, u]); c.beginPath(); c.moveTo(-26 * u, 14 * u); c.lineTo(-26 * u + 30 * u * k, 14 * u); c.lineWidth = u * 0.35; c.strokeStyle = C.red; c.stroke(); c.restore();
+    txt(c, '1 m', -11 * u, 18 * u, u * 3, '900', C.red, 'center', 'middle'); if (k >= 1) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30; c.beginPath(); c.arc(4 * u, 14 * u, u * (1.6 + 0.3 * Math.sin(tt * 8)), 0, 7); c.fillStyle = C.red; c.fill(); c.restore(); } }
 }
 function ruleCard(c, n, lt) {
   const text = SCRIPT.rules[n - 1].toUpperCase();
