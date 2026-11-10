@@ -1,0 +1,431 @@
+{
+ "duration": 27.19,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.03,
+   "end": 3.62,
+   "dur": 3.59,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.03,
+     "e": 0.19
+    },
+    {
+     "w": "ascolti",
+     "s": 0.19,
+     "e": 0.67
+    },
+    {
+     "w": "un",
+     "s": 0.67,
+     "e": 0.75
+    },
+    {
+     "w": "vocale",
+     "s": 0.75,
+     "e": 1.09
+    },
+    {
+     "w": "vuoto",
+     "s": 1.09,
+     "e": 1.43
+    },
+    {
+     "w": "con",
+     "s": 1.43,
+     "e": 1.59
+    },
+    {
+     "w": "le",
+     "s": 1.59,
+     "e": 1.71
+    },
+    {
+     "w": "cuffie",
+     "s": 1.71,
+     "e": 2.27
+    },
+    {
+     "w": "non",
+     "s": 2.53,
+     "e": 2.71
+    },
+    {
+     "w": "toglierle",
+     "s": 2.71,
+     "e": 3.49
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se ascolti un vocale vuoto con le cuffie, non toglierle."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 3.87,
+   "end": 8.25,
+   "dur": 4.38,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "tre",
+     "s": 3.87,
+     "e": 4.03
+    },
+    {
+     "w": "secondi",
+     "s": 4.03,
+     "e": 4.57
+    },
+    {
+     "w": "di",
+     "s": 4.57,
+     "e": 4.69
+    },
+    {
+     "w": "niente",
+     "s": 4.69,
+     "e": 5.21
+    },
+    {
+     "w": "poi",
+     "s": 5.59,
+     "e": 5.97
+    },
+    {
+     "w": "il",
+     "s": 5.97,
+     "e": 6.25
+    },
+    {
+     "w": "frigorifero",
+     "s": 6.25,
+     "e": 6.99
+    },
+    {
+     "w": "e",
+     "s": 6.99,
+     "e": 7.17
+    },
+    {
+     "w": "l",
+     "s": 7.17,
+     "e": 7.27
+    },
+    {
+     "w": "orologio",
+     "s": 7.27,
+     "e": 7.71
+    },
+    {
+     "w": "della",
+     "s": 7.71,
+     "e": 7.81
+    },
+    {
+     "w": "cucina",
+     "s": 7.81,
+     "e": 8.35
+    }
+   ],
+   "match": 1.0,
+   "heard": "3 secondi di niente, poi il frigorifero e l 'orologio della cucina."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.5,
+   "end": 13.68,
+   "dur": 5.18,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "mittente",
+     "s": 8.5,
+     "e": 9.0
+    },
+    {
+     "w": "sconosciuto",
+     "s": 9.0,
+     "e": 9.84
+    },
+    {
+     "w": "il",
+     "s": 10.42,
+     "e": 10.94
+    },
+    {
+     "w": "suono",
+     "s": 10.94,
+     "e": 11.4
+    },
+    {
+     "w": "e",
+     "s": 11.4,
+     "e": 11.62
+    },
+    {
+     "w": "quello",
+     "s": 11.62,
+     "e": 11.88
+    },
+    {
+     "w": "di",
+     "s": 11.88,
+     "e": 12.1
+    },
+    {
+     "w": "casa",
+     "s": 12.1,
+     "e": 12.28
+    },
+    {
+     "w": "tua",
+     "s": 12.28,
+     "e": 12.58
+    },
+    {
+     "w": "registrato",
+     "s": 12.98,
+     "e": 13.54
+    },
+    {
+     "w": "da",
+     "s": 13.54,
+     "e": 13.72
+    },
+    {
+     "w": "dentro",
+     "s": 13.72,
+     "e": 14.12
+    }
+   ],
+   "match": 1.0,
+   "heard": "mittente sconosciuto. Il suono è quello di casa tua, registrato da dentro."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.93,
+   "end": 16.94,
+   "dur": 3.01,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 13.93,
+     "e": 14.23
+    },
+    {
+     "w": "un",
+     "s": 14.23,
+     "e": 14.49
+    },
+    {
+     "w": "respiro",
+     "s": 14.49,
+     "e": 15.25
+    },
+    {
+     "w": "a",
+     "s": 15.37,
+     "e": 15.63
+    },
+    {
+     "w": "un",
+     "s": 15.63,
+     "e": 15.79
+    },
+    {
+     "w": "metro",
+     "s": 15.79,
+     "e": 16.03
+    },
+    {
+     "w": "dal",
+     "s": 16.03,
+     "e": 16.21
+    },
+    {
+     "w": "microfono",
+     "s": 16.21,
+     "e": 16.81
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi un respiro, a un metro dal microfono."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 17.19,
+   "end": 19.68,
+   "dur": 2.49,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 17.19,
+     "e": 17.31
+    },
+    {
+     "w": "viene",
+     "s": 17.31,
+     "e": 17.49
+    },
+    {
+     "w": "voglia",
+     "s": 17.49,
+     "e": 17.83
+    },
+    {
+     "w": "di",
+     "s": 17.83,
+     "e": 17.93
+    },
+    {
+     "w": "toglierle",
+     "s": 17.93,
+     "e": 18.65
+    },
+    {
+     "w": "per",
+     "s": 18.95,
+     "e": 19.07
+    },
+    {
+     "w": "capire",
+     "s": 19.07,
+     "e": 19.53
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti viene voglia di toglierle, per capire."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 19.93,
+   "end": 24.71,
+   "dur": 4.78,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 19.93,
+     "e": 20.11
+    },
+    {
+     "w": "farlo",
+     "s": 20.11,
+     "e": 20.65
+    },
+    {
+     "w": "finche",
+     "s": 20.95,
+     "e": 21.33
+    },
+    {
+     "w": "le",
+     "s": 21.33,
+     "e": 21.45
+    },
+    {
+     "w": "cuffie",
+     "s": 21.45,
+     "e": 21.79
+    },
+    {
+     "w": "sono",
+     "s": 21.79,
+     "e": 21.99
+    },
+    {
+     "w": "su",
+     "s": 21.99,
+     "e": 22.29
+    },
+    {
+     "w": "il",
+     "s": 22.63,
+     "e": 22.77
+    },
+    {
+     "w": "respiro",
+     "s": 22.77,
+     "e": 23.35
+    },
+    {
+     "w": "e",
+     "s": 23.35,
+     "e": 23.57
+    },
+    {
+     "w": "solo",
+     "s": 23.57,
+     "e": 23.93
+    },
+    {
+     "w": "nel",
+     "s": 23.93,
+     "e": 24.15
+    },
+    {
+     "w": "vocale",
+     "s": 24.15,
+     "e": 24.65
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non farlo. Finché le cuffie sono su, il respiro è solo nel vocale."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 24.96,
+   "end": 27.14,
+   "dur": 2.18,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "toglile",
+     "s": 24.96,
+     "e": 25.52
+    },
+    {
+     "w": "e",
+     "s": 25.52,
+     "e": 25.98
+    },
+    {
+     "w": "sara",
+     "s": 25.98,
+     "e": 26.22
+    },
+    {
+     "w": "nella",
+     "s": 26.22,
+     "e": 26.48
+    },
+    {
+     "w": "stanza",
+     "s": 26.48,
+     "e": 27.04
+    }
+   ],
+   "match": 1.0,
+   "heard": "Toglile e sarà nella stanza."
+  }
+ ]
+}
