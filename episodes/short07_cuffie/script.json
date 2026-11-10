@@ -15,7 +15,7 @@
  },
  "start_pad": 0.03,
  "end_pad": 0.05,
- "default_gap": 0.25,
+ "default_gap": 0.2,
  "tight": {
   "cap": 0.25,
   "longer": 0.26
@@ -146,8 +146,7 @@
         "i": "vnote",
         "s": 1.0,
         "y": -0.2,
-        "a": "buzzdrift",
-        "from_": "?"
+        "a": "buzzdrift"
        }
       ]
      },
