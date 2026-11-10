@@ -1129,7 +1129,7 @@ function youhpUI(c, el, L, lt, tt, size) {              // you with headphones o
   for (const sd of [-1, 1]) { c.beginPath(); c.roundRect(sd * 0.2 * K - 0.045 * K, -0.27 * K, 0.09 * K, 0.15 * K, 0.035 * K); c.fillStyle = g ? '#a0d7ff' : '#26262b'; c.fill(); c.lineWidth = 0.012 * K; c.strokeStyle = C.w; c.stroke(); }
   c.restore();
   // the hand going up to the headphones
-  if (hand !== null) { let hk = easeOut(clamp01((lt - hand) / 0.9)); if (stop !== null && lt >= stop) hk = Math.min(hk, easeOut(clamp01((stop - hand) / 0.9))) - 0.06 * Math.min(1, (lt - stop) / 0.3);
+  if (hand !== null) { let hk = easeOut(clamp01((lt - hand) / 0.9)); if (stop !== null && lt >= stop) hk = Math.min(hk, hand === -99 ? 1 : easeOut(clamp01((stop - hand) / 0.9))) - 0.06 * Math.min(1, Math.max(0, lt - stop) / 0.3);
     if (ok) hk = 1; const tr = stop !== null && lt >= stop && !ok ? Math.sin(tt * 40) * 0.006 * K : 0;
     c.save(); c.translate(0.46 * K - 0.18 * K * hk + tr, 0.62 * K - 0.78 * hk * K); c.rotate(-0.25 - 0.3 * hk); c.scale(0.42 * K, 0.42 * K); ICONS.hand(c, {}); c.restore(); }
   if (el.phone) { c.save(); c.translate(-0.3 * K, 0.36 * K); c.rotate(0.15); c.shadowColor = 'rgba(160,215,255,0.9)'; c.shadowBlur = 26; c.beginPath(); c.roundRect(-0.06 * K, -0.1 * K, 0.12 * K, 0.2 * K, 0.02 * K); c.fillStyle = '#cfe8ff'; c.fill(); c.restore(); }
