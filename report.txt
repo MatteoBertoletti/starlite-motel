@@ -1,0 +1,10 @@
+  1 N         0.03-   3.62 match=1.00 eleven_v4 (cache) | Se ascolti un vocale vuoto con le cuffie, non toglierle.
+  2 N         3.82-   8.20 match=1.00 eleven_v4 (cache) | 3 secondi di niente, poi il frigorifero e l 'orologio della cucina.
+  3 N         8.40-  13.58 match=1.00 eleven_v4 (cache) | mittente sconosciuto. Il suono è quello di casa tua, registrato da dentro.
+  4 N        13.78-  16.79 match=1.00 eleven_v4 (cache) | Poi un respiro, a un metro dal microfono.
+  5 N        16.99-  19.48 match=1.00 eleven_v4 (cache) | Ti viene voglia di toglierle, per capire.
+  6 N        19.68-  24.46 match=1.00 eleven_v4 (cache) | Non farlo. Finché le cuffie sono su, il respiro è solo nel vocale.
+  7 N        24.66-  26.84 match=1.00 eleven_v4 (cache) | Toglile e sarà nella stanza.
+
+TOTAL 26.9s  new characters billed ~0  cached lines 7
+low match lines: []
