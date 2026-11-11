@@ -1,0 +1,10 @@
+  1 N         0.00-   6.05 match=1.00 eleven_v4 | Se il telefono ti mostra «tre anni fa oggi» con una foto che non è tua, non aprirla.
+  2 N         6.30-   7.86 match=1.00 eleven_v4 | Sei tu, che dormi.
+  3 N         8.11-  12.00 match=1.00 eleven_v4 | La foto è scattata dall 'alto, dall 'angolo della stanza.
+  4 N        12.25-  17.31 match=1.00 eleven_v4 | La stanza è questa, il tuo letto, la sveglia sulle tre e quarantasette.
+  5 N        17.56-  19.63 match=1.00 eleven_v4 | Ma questa casa l 'hai presa un anno fa.
+  6 N        19.88-  23.45 match=1.00 eleven_v4 | Non aprirla, ogni volta il ricordo si aggiorna.
+  7 N        23.70-  25.49 match=1.00 eleven_v4 | Adesso hai gli occhi aperti.
+
+TOTAL 25.5s  new characters billed ~341  cached lines 0
+low match lines: []
