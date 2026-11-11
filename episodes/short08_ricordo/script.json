@@ -37,15 +37,15 @@
       "els": [
        {
         "i": "ricordo",
-        "s": 1.0,
-        "y": -0.62,
+        "s": 1.15,
+        "y": -0.16,
         "a": "still",
         "title": "FOTO NON TUA"
        }
       ]
      },
      {
-      "at": "anni",
+      "at": "mostra",
       "els": [
        {
         "i": "ricordo",
@@ -57,7 +57,7 @@
       ]
      },
      {
-      "at": "foto",
+      "at": "oggi",
       "els": [
        {
         "i": "ricordo",
@@ -65,7 +65,7 @@
         "y": -0.75,
         "a": "impactdrift",
         "x": -0.25,
-        "thumb": "foto"
+        "thumb": "con"
        }
       ]
      },
@@ -74,10 +74,10 @@
       "els": [
        {
         "i": "ricordo",
-        "s": 2.4,
-        "y": -1.5,
+        "s": 2.2,
+        "y": -1.24,
         "a": "impactdrift",
-        "x": -0.75,
+        "x": -1.54,
         "thumb": true
        }
       ]
@@ -139,7 +139,7 @@
       ]
      },
      {
-      "at": "angolo",
+      "at": "alto",
       "els": [
        {
         "i": "foto",
@@ -187,7 +187,8 @@
       ]
      },
      {
-      "at": "letto",
+      "at": "questa",
+      "dt": 0.5,
       "els": [
        {
         "i": "foto",
@@ -208,6 +209,20 @@
         "a": "impactdrift",
         "frame": false,
         "x": -1.35,
+        "clockhot": true
+       }
+      ]
+     },
+     {
+      "at": "quarantasette",
+      "els": [
+       {
+        "i": "foto",
+        "s": 4.0,
+        "y": 1.05,
+        "a": "impactdrift",
+        "frame": false,
+        "x": -2.1,
         "clockhot": true
        }
       ]
@@ -281,6 +296,17 @@
       ]
      },
      {
+      "at": "ogni",
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.8,
+        "y": -0.1,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
       "at": "ricordo",
       "els": [
        {
@@ -340,7 +366,7 @@
      },
      {
       "at": "aperti",
-      "dt": 0.55,
+      "dt": 0.45,
       "els": [
        {
         "i": "blackout"
