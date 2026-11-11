@@ -1,0 +1,380 @@
+{
+ "title": "Se Il Telefono Ti Mostra «3 Anni Fa Oggi» Con Una Foto Non Tua… NON APRIRLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il telefono ti mostra «tre anni fa oggi» con una foto che non è tua, non aprirla.",
+   "capfull": true,
+   "cap": "Se il telefono ti mostra «tre anni fa oggi» con una foto che non è tua, non aprirla.",
+   "red": "aprirla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "ricordo",
+        "s": 1.0,
+        "y": -0.62,
+        "a": "still",
+        "title": "FOTO NON TUA"
+       }
+      ]
+     },
+     {
+      "at": "anni",
+      "els": [
+       {
+        "i": "ricordo",
+        "s": 1.55,
+        "y": -0.35,
+        "a": "impactdrift",
+        "x": 0.35
+       }
+      ]
+     },
+     {
+      "at": "foto",
+      "els": [
+       {
+        "i": "ricordo",
+        "s": 1.25,
+        "y": -0.75,
+        "a": "impactdrift",
+        "x": -0.25,
+        "thumb": "foto"
+       }
+      ]
+     },
+     {
+      "at": "tua",
+      "els": [
+       {
+        "i": "ricordo",
+        "s": 2.4,
+        "y": -1.5,
+        "a": "impactdrift",
+        "x": -0.75,
+        "thumb": true
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sei tu, che dormi.",
+   "cap": "Sei tu, che dormi.",
+   "red": "dormi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.0,
+        "y": -0.35,
+        "a": "impactdrift"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "La foto è scattata dall'alto, dall'angolo della stanza.",
+   "cap": "La foto è scattata dall'alto, dall'angolo della stanza.",
+   "red": "angolo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.4,
+        "y": -0.25,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "angolo",
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.0,
+        "y": -0.35,
+        "a": "impactdrift",
+        "corner": "angolo"
+       }
+      ]
+     },
+     {
+      "at": "stanza",
+      "els": [
+       {
+        "i": "foto",
+        "s": 2.3,
+        "y": 1.6,
+        "a": "impactdrift",
+        "x": 1.35,
+        "corner": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "La stanza è questa: il tuo letto, la sveglia sulle tre e quarantasette.",
+   "cap": "La stanza è questa: il tuo letto, la sveglia sulle 03:47.",
+   "red": "tre",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.1,
+        "y": -0.3,
+        "a": "impactdrift",
+        "frame": false
+       }
+      ]
+     },
+     {
+      "at": "letto",
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.8,
+        "y": -0.15,
+        "a": "impactdrift",
+        "frame": false
+       }
+      ]
+     },
+     {
+      "at": "sveglia",
+      "els": [
+       {
+        "i": "foto",
+        "s": 2.6,
+        "y": 0.5,
+        "a": "impactdrift",
+        "frame": false,
+        "x": -1.35,
+        "clockhot": true
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "quarantasette"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ma questa casa l'hai presa un anno fa.",
+   "cap": "Ma questa casa l'hai presa un anno fa.",
+   "red": "anno",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "cal",
+        "s": 1.25,
+        "y": -0.4,
+        "a": "buzzdrift",
+        "scroll": true,
+        "strike": "casa",
+        "hl": "presa"
+       }
+      ]
+     },
+     {
+      "at": "anno",
+      "els": [
+       {
+        "i": "cal",
+        "s": 1.9,
+        "y": -0.6,
+        "a": "impactdrift",
+        "x": 0.2,
+        "scroll": -99,
+        "strike": true,
+        "hl": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non aprirla: ogni volta il ricordo si aggiorna.",
+   "cap": "Non aprirla: ogni volta il ricordo si aggiorna.",
+   "red": "aggiorna",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.15,
+        "y": -0.35,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "at": "ricordo",
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.15,
+        "y": -0.35,
+        "a": "impactdrift",
+        "posechange": "aggiorna",
+        "datechange": "aggiorna"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "glitch",
+      "aggiorna"
+     ]
+    ],
+    "fx": "glitch@aggiorna"
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Adesso hai gli occhi aperti.",
+   "cap": "Adesso hai gli occhi aperti.",
+   "red": "aperti",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "foto",
+        "s": 1.4,
+        "y": -0.25,
+        "a": "impactdrift",
+        "pose": 1,
+        "datechange": true
+       }
+      ]
+     },
+     {
+      "at": "occhi",
+      "els": [
+       {
+        "i": "foto",
+        "s": 4.2,
+        "y": 1.15,
+        "a": "impactdrift",
+        "x": -0.05,
+        "pose": 1,
+        "eyes": "aperti"
+       }
+      ]
+     },
+     {
+      "at": "aperti",
+      "dt": 0.55,
+      "els": [
+       {
+        "i": "blackout"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "aperti"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Telefono Ti Mostra «3 Anni Fa Oggi» Con Una Foto Non Tua… NON APRIRLA",
+  "publish": "giovedì 12 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un ricordo di tre anni fa, in una casa che hai da uno."
+  ],
+  "question": "👇 Qual è la foto più strana che ti è mai comparsa nei Ricordi? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Qual è la foto più strana che ti è comparsa nei Ricordi? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "ricordi foto",
+   "tre anni fa oggi",
+   "foto del telefono",
+   "le sette regole",
+   "creepy"
+  ]
+ }
+}

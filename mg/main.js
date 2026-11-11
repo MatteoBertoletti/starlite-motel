@@ -136,6 +136,9 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'bill') { c.scale(sc, sc); billUI(c, el, L, lt, tt, size); }
   else if (i === 'inventory') { c.scale(sc, sc); invUI(c, el, L, lt, tt, size); }
   else if (i === 'keys') { c.scale(sc, sc); keysUI(c, el, L, lt, tt, size); }
+  else if (i === 'foto') { c.scale(sc, sc); fotoUI(c, el, L, lt, tt, size); }
+  else if (i === 'ricordo') { c.scale(sc, sc); ricordoUI(c, el, L, lt, tt, size); }
+  else if (i === 'cal') { c.scale(sc, sc); calUI(c, el, L, lt, tt, size); }
   else if (i === 'youhp') { c.scale(sc, sc); youhpUI(c, el, L, lt, tt, size); }
   else if (i === 'vnote') { c.scale(sc, sc); vnoteUI(c, el, L, lt, tt, size); }
   else if (i === 'kitchen') { c.scale(sc, sc); kitchenUI(c, el, L, lt, tt, size); }
@@ -1178,6 +1181,60 @@ function wavebumpUI(c, el, L, lt, tt, size) {            // the recording: flat 
   c.lineWidth = u * 0.35; c.strokeStyle = bk ? '#f2efe8' : '#8d8981'; c.stroke();
   if (dot !== null && lt >= dot) { const k = clamp01((lt - dot) / 0.4); c.save(); c.setLineDash([u, u]); c.beginPath(); c.moveTo(-26 * u, 14 * u); c.lineTo(-26 * u + 30 * u * k, 14 * u); c.lineWidth = u * 0.35; c.strokeStyle = C.red; c.stroke(); c.restore();
     txt(c, '1 m', -11 * u, 18 * u, u * 3, '900', C.red, 'center', 'middle'); if (k >= 1) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 30; c.beginPath(); c.arc(4 * u, 14 * u, u * (1.6 + 0.3 * Math.sin(tt * 8)), 0, 7); c.fillStyle = C.red; c.fill(); c.restore(); } }
+}
+// ---------- Short 008: the memory ----------
+function roomTop(c, u, o, lt, L, el, tt) {               // a bedroom seen from above, the photo's content (centred, ~64u x 80u)
+  c.fillStyle = o.dark ? '#0b0d12' : '#151922'; c.fillRect(-32 * u, -40 * u, 64 * u, 80 * u);
+  c.lineWidth = u * 0.5; c.strokeStyle = 'rgba(242,239,232,0.25)'; c.strokeRect(-30 * u, -38 * u, 60 * u, 76 * u);
+  c.fillStyle = '#2a2a33'; c.fillRect(-14 * u, -18 * u, 28 * u, 44 * u); c.fillStyle = '#d9d5cc'; c.beginPath(); c.roundRect(-11 * u, -16 * u, 22 * u, 8 * u, 2 * u); c.fill();
+  const pose = o.pose ?? 0, hx = pose ? 4 * u : 0, hy = -11.5 * u;
+  c.save(); c.translate(0, 6 * u); c.rotate(pose ? 0.18 : 0); c.fillStyle = '#5a6b7d'; c.beginPath(); c.roundRect(-12 * u, -10 * u, 24 * u, 28 * u, 3 * u); c.fill(); c.restore();
+  if (pose) { c.save(); c.translate(9 * u, -4 * u); c.rotate(-0.6); c.fillStyle = C.w; c.fillRect(-1.2 * u, 0, 2.4 * u, 11 * u); c.restore(); }
+  c.beginPath(); c.arc(hx, hy, 4.2 * u, 0, 7); c.fillStyle = C.w; c.fill(); c.fillStyle = C.red; c.fillRect(hx - 4 * u, hy + 3.3 * u, 8 * u, 1.6 * u);
+  const ek = o.eyes === undefined ? 0 : o.eyes === true ? 1 : clamp01((lt - at(L, o.eyes)) / 0.25);
+  for (const sd of [-1, 1]) { const ex = hx + sd * 1.6 * u, ey = hy - 0.6 * u;
+    if (ek > 0) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 16 * ek; c.beginPath(); c.ellipse(ex, ey, 1.05 * u, 1.05 * u * ek, 0, 0, 7); c.fillStyle = C.bg; c.fill(); c.beginPath(); c.arc(ex - 0.35 * u, ey - 0.35 * u * ek, 0.35 * u * ek, 0, 7); c.fillStyle = C.red; c.fill(); c.restore(); }
+    else { c.beginPath(); c.moveTo(ex - 0.9 * u, ey); c.quadraticCurveTo(ex, ey + 0.6 * u, ex + 0.9 * u, ey); c.lineWidth = u * 0.4; c.strokeStyle = C.bg; c.stroke(); } }
+  c.fillStyle = '#3a2f24'; c.fillRect(16 * u, -18 * u, 10 * u, 10 * u); const ch = o.clockhot;
+  c.save(); if (ch) { c.shadowColor = GLOW.red; c.shadowBlur = 20; } c.fillStyle = '#0a0a0a'; c.fillRect(16.8 * u, -15.6 * u, 8.4 * u, 5 * u); txt(c, '03:47', 21 * u, -13 * u, u * 2.9, '900', C.red, 'center', 'middle'); c.restore();
+  if (ch) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 20; c.beginPath(); c.arc(21 * u, -13 * u, 7.5 * u, 0, 7); c.lineWidth = u * 0.6; c.strokeStyle = C.red; c.stroke(); c.restore(); }
+}
+function fotoUI(c, el, L, lt, tt, size) {                // the memory photo, gallery style, its date; a red circle where it was taken from
+  const u = size / 40, cr = W_el(L, el, 'corner'), dch = W_el(L, el, 'datechange'), pz = W_el(L, el, 'posechange');
+  const pose = pz === null ? (el.pose || 0) : lt >= pz ? 1 : 0;
+  if (el.frame !== false) { c.fillStyle = '#000'; c.fillRect(-36 * u, -50 * u, 72 * u, 104 * u); txt(c, '‹  Ricordi', -32 * u, -46 * u, u * 2.6, '800', '#cfcac0', 'left', 'middle'); }
+  const fl = pz !== null && Math.abs(lt - pz) < 0.12 ? 0.4 : 1; c.save(); c.globalAlpha *= fl;
+  roomTop(c, u, { pose, eyes: el.eyes, clockhot: el.clockhot, dark: el.dark }, lt, L, el, tt); c.restore();
+  if (el.frame !== false) { const nd = dch !== null && lt >= dch; const g = nd && lt - dch < 0.3 && Math.sin(lt * 80) > 0;
+    c.save(); if (nd) { c.shadowColor = GLOW.red; c.shadowBlur = 18; } txt(c, g ? '▒▒ ▒▒▒ ▒▒▒▒' : nd ? 'oggi · 03:52' : '12 novembre 2023', -28 * u, 44 * u, u * 3, '800', nd ? C.red : C.w, 'left', 'middle'); c.restore();
+    txt(c, nd ? 'aggiornato adesso' : '3 anni fa oggi', 28 * u, 44 * u, u * 2.4, '700', '#8d8981', 'right', 'middle'); }
+  if (cr !== null && lt >= cr) { const k = clamp01((lt - cr) / 0.35); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 22; c.beginPath(); c.arc(-27 * u, -35 * u, 7 * u, -1.2, -1.2 + Math.PI * 2.1 * k); c.lineWidth = u * 0.8; c.strokeStyle = C.red; c.stroke();
+    if (k >= 1) { c.beginPath(); c.arc(-27 * u, -35 * u, 1.3 * u * (1 + 0.2 * Math.sin(tt * 8)), 0, 7); c.fillStyle = C.red; c.fill(); } c.restore(); }
+}
+function ricordoUI(c, el, L, lt, tt, size) {             // frame 0: a huge "memory" notification, a dark thumbnail; the thumb comes in
+  const u = size / 40, th = W_el(L, el, 'thumb'), W2 = 46 * u, top = -32 * u, H = 66 * u;
+  if (el.title) { c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 24; txt(c, el.title, 0, top - 14 * u, u * 6.4, '900', C.red, 'center', 'middle', 3); c.restore(); }
+  c.save(); c.shadowColor = GLOW.white; c.shadowBlur = 40; c.beginPath(); c.roundRect(-W2, top, 2 * W2, H, 5 * u); c.fillStyle = '#1f1f24'; c.fill(); c.restore();
+  c.lineWidth = u * 0.5; c.strokeStyle = 'rgba(242,239,232,0.6)'; c.beginPath(); c.roundRect(-W2, top, 2 * W2, H, 5 * u); c.stroke();
+  c.beginPath(); c.roundRect(-W2 + 4 * u, top + 4 * u, 6 * u, 6 * u, 1.5 * u); c.fillStyle = '#f5c451'; c.fill(); txt(c, 'RICORDI · ORA', -W2 + 12 * u, top + 7 * u, u * 3, '900', '#cfcac0', 'left', 'middle', 2);
+  txt(c, 'RICORDO', -W2 + 4 * u, top + 17 * u, u * 5.4, '900', C.gold, 'left', 'middle', 3);
+  txt(c, '3 ANNI FA', -W2 + 4 * u, top + 28 * u, u * 11.5, '900', C.w, 'left', 'middle');
+  txt(c, 'OGGI', -W2 + 4 * u, top + 41 * u, u * 11.5, '900', C.w, 'left', 'middle');
+  c.save(); c.translate(W2 - 18 * u, top + 48 * u); c.beginPath(); c.roundRect(-14 * u, -14 * u, 28 * u, 28 * u, 2 * u); c.clip(); c.scale(0.42, 0.42); roomTop(c, u, { dark: true }, lt, L, el, tt);
+  c.fillStyle = 'rgba(0,0,0,0.45)'; c.fillRect(-40 * u, -50 * u, 80 * u, 100 * u); c.restore();
+  c.lineWidth = u * 0.4; c.strokeStyle = 'rgba(242,239,232,0.5)'; c.strokeRect(W2 - 32 * u, top + 34 * u, 28 * u, 28 * u);
+  txt(c, 'Tocca per aprire', -W2 + 4 * u, top + 56 * u, u * 3.2, '700', '#8d8981', 'left', 'middle');
+  if (th !== null) { const k = easeOut(clamp01((lt - th) / 0.9)); c.save(); c.translate(W2 - 10 * u + (1 - k) * 20 * u, top + 70 * u - k * 14 * u + (1 - k) * 30 * u); c.rotate(-0.5); c.scale(u * 26, u * 26); ICONS.hand(c, {}); c.restore(); }
+}
+function calUI(c, el, L, lt, tt, size) {                 // a calendar scrolling: 3 years ago struck out, 1 year ago, new house
+  const u = size / 40, s0 = W_el(L, el, 'scroll') ?? -99, k = easeOut(clamp01((lt - s0) / 1.0)), st = W_el(L, el, 'strike'), hl = W_el(L, el, 'hl');
+  const rows = [['NOV 2023', '3 ANNI FA', 'red'], ['NOV 2024', '2 ANNI FA', null], ['NOV 2025', '1 ANNO FA — NUOVA CASA', 'gold'], ['NOV 2026', 'OGGI', null]];
+  c.save(); c.translate(0, (1 - k) * 30 * u - k * 6 * u);
+  rows.forEach(([y, t, m], i) => { const yy = -30 * u + i * 20 * u; c.beginPath(); c.roundRect(-40 * u, yy - 7 * u, 80 * u, 14 * u, 3 * u); c.fillStyle = '#1c1c21'; c.fill();
+    const hot = (m === 'gold' && hl !== null && lt >= hl); c.save(); if (hot) { c.shadowColor = GLOW.gold; c.shadowBlur = 28; c.lineWidth = u * 0.7; c.strokeStyle = C.gold; c.stroke(); } c.restore();
+    txt(c, y, -36 * u, yy - 2.4 * u, u * 3, '800', '#8d8981', 'left', 'middle', 2); txt(c, t, -36 * u, yy + 2.8 * u, u * (t.length > 12 ? 3.6 : 4.4), '900', hot ? C.gold : C.w, 'left', 'middle');
+    if (m === 'red' && st !== null && lt >= st) { const sk = clamp01((lt - st) / 0.3); c.save(); c.shadowColor = GLOW.red; c.shadowBlur = 16; c.beginPath(); c.moveTo(-37 * u, yy + 2.8 * u); c.lineTo(-37 * u + 34 * u * sk, yy + 2.8 * u); c.lineWidth = u * 0.9; c.strokeStyle = C.red; c.stroke(); c.restore(); } });
+  c.restore();
 }
 function ruleCard(c, n, lt) {
   const text = SCRIPT.rules[n - 1].toUpperCase();
