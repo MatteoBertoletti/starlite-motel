@@ -1,0 +1,386 @@
+{
+ "duration": 24.94,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 3.95,
+   "dur": 3.95,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "il",
+     "s": 0.18,
+     "e": 0.32
+    },
+    {
+     "w": "cane",
+     "s": 0.32,
+     "e": 0.54
+    },
+    {
+     "w": "si",
+     "s": 0.54,
+     "e": 0.72
+    },
+    {
+     "w": "mette",
+     "s": 0.72,
+     "e": 1.0
+    },
+    {
+     "w": "davanti",
+     "s": 1.0,
+     "e": 1.36
+    },
+    {
+     "w": "alla",
+     "s": 1.36,
+     "e": 1.5
+    },
+    {
+     "w": "porta",
+     "s": 1.5,
+     "e": 1.78
+    },
+    {
+     "w": "mentre",
+     "s": 1.78,
+     "e": 2.04
+    },
+    {
+     "w": "esci",
+     "s": 2.04,
+     "e": 2.7
+    },
+    {
+     "w": "resta",
+     "s": 2.9,
+     "e": 3.3
+    },
+    {
+     "w": "in",
+     "s": 3.3,
+     "e": 3.38
+    },
+    {
+     "w": "casa",
+     "s": 3.38,
+     "e": 3.66
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se il cane si mette davanti alla porta mentre esci, resta in casa."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.2,
+   "end": 7.91,
+   "dur": 3.71,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 4.2,
+     "e": 4.38
+    },
+    {
+     "w": "abbaia",
+     "s": 4.38,
+     "e": 4.98
+    },
+    {
+     "w": "non",
+     "s": 5.48,
+     "e": 5.56
+    },
+    {
+     "w": "ringhia",
+     "s": 5.56,
+     "e": 6.22
+    },
+    {
+     "w": "ti",
+     "s": 6.42,
+     "e": 6.62
+    },
+    {
+     "w": "guarda",
+     "s": 6.62,
+     "e": 7.22
+    },
+    {
+     "w": "e",
+     "s": 7.22,
+     "e": 7.36
+    },
+    {
+     "w": "basta",
+     "s": 7.36,
+     "e": 7.64
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non abbaia. Non ringhia. Ti guarda e basta."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.16,
+   "end": 11.74,
+   "dur": 3.58,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "lo",
+     "s": 8.16,
+     "e": 8.3
+    },
+    {
+     "w": "scosti",
+     "s": 8.3,
+     "e": 8.78
+    },
+    {
+     "w": "con",
+     "s": 8.78,
+     "e": 8.92
+    },
+    {
+     "w": "la",
+     "s": 8.92,
+     "e": 9.06
+    },
+    {
+     "w": "mano",
+     "s": 9.06,
+     "e": 9.38
+    },
+    {
+     "w": "torna",
+     "s": 9.62,
+     "e": 10.16
+    },
+    {
+     "w": "esattamente",
+     "s": 10.16,
+     "e": 10.98
+    },
+    {
+     "w": "dove",
+     "s": 10.98,
+     "e": 11.3
+    },
+    {
+     "w": "era",
+     "s": 11.3,
+     "e": 11.62
+    }
+   ],
+   "match": 1.0,
+   "heard": "Lo scosti con la mano, torna esattamente dove era."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 11.99,
+   "end": 15.42,
+   "dur": 3.43,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 11.99,
+     "e": 12.21
+    },
+    {
+     "w": "scodinzola",
+     "s": 12.21,
+     "e": 12.89
+    },
+    {
+     "w": "piano",
+     "s": 12.89,
+     "e": 13.29
+    },
+    {
+     "w": "come",
+     "s": 13.61,
+     "e": 13.91
+    },
+    {
+     "w": "quando",
+     "s": 13.91,
+     "e": 14.19
+    },
+    {
+     "w": "riconosce",
+     "s": 14.19,
+     "e": 14.75
+    },
+    {
+     "w": "qualcuno",
+     "s": 14.75,
+     "e": 15.27
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi scodinzola piano, come quando riconosce qualcuno."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 15.67,
+   "end": 18.13,
+   "dur": 2.46,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "nessun",
+     "s": 15.67,
+     "e": 16.13
+    },
+    {
+     "w": "citofono",
+     "s": 16.13,
+     "e": 16.77
+    },
+    {
+     "w": "nessun",
+     "s": 17.19,
+     "e": 17.63
+    },
+    {
+     "w": "passo",
+     "s": 17.63,
+     "e": 17.91
+    }
+   ],
+   "match": 1.0,
+   "heard": "Nessun citofono. Nessun passo."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 18.38,
+   "end": 22.19,
+   "dur": 3.81,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 18.38,
+     "e": 18.54
+    },
+    {
+     "w": "cane",
+     "s": 18.54,
+     "e": 18.88
+    },
+    {
+     "w": "ha",
+     "s": 18.88,
+     "e": 19.14
+    },
+    {
+     "w": "sentito",
+     "s": 19.14,
+     "e": 19.62
+    },
+    {
+     "w": "qualcuno",
+     "s": 19.62,
+     "e": 20.12
+    },
+    {
+     "w": "che",
+     "s": 20.12,
+     "e": 20.26
+    },
+    {
+     "w": "conosce",
+     "s": 20.26,
+     "e": 20.94
+    },
+    {
+     "w": "fuori",
+     "s": 20.94,
+     "e": 21.4
+    },
+    {
+     "w": "dalla",
+     "s": 21.4,
+     "e": 21.56
+    },
+    {
+     "w": "porta",
+     "s": 21.56,
+     "e": 21.86
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il cane ha sentito qualcuno che conosce fuori dalla porta."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 22.44,
+   "end": 24.89,
+   "dur": 2.45,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 22.44,
+     "e": 22.56
+    },
+    {
+     "w": "tu",
+     "s": 22.56,
+     "e": 22.82
+    },
+    {
+     "w": "stai",
+     "s": 22.82,
+     "e": 23.28
+    },
+    {
+     "w": "ancora",
+     "s": 23.28,
+     "e": 23.62
+    },
+    {
+     "w": "cercando",
+     "s": 23.62,
+     "e": 24.2
+    },
+    {
+     "w": "le",
+     "s": 24.2,
+     "e": 24.32
+    },
+    {
+     "w": "chiavi",
+     "s": 24.32,
+     "e": 24.74
+    }
+   ],
+   "match": 1.0,
+   "heard": "E tu stai ancora cercando le chiavi."
+  }
+ ]
+}
