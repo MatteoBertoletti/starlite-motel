@@ -1,0 +1,10 @@
+  1 N         0.00-   4.47 match=1.00 eleven_v4 | Se la domenica a pranzo c 'è un posto in più apparecchiato, non sederti.
+  2 N         4.67-   9.12 match=1.00 eleven_v4 | Siete in cinque. I piatti sono sei. Tua nonna dice che è un errore.
+  3 N         9.32-  13.41 match=1.00 eleven_v4 | ha messo anche bicchiere e tovagliolo. La sedia è già scostata.
+  4 N        13.61-  16.82 match=1.00 eleven_v4 | Tutti guardano il posto in più, nessuno parla.
+  5 N        17.02-  20.87 match=1.00 eleven_v4 | Tua madre ti passa il pane. Sottovoce lascia stare.
+  6 N        21.07-  23.04 match=1.00 eleven_v4 | Le posate sono incrociate.
+  7 N        23.24-  25.03 match=1.00 eleven_v4 | Qualcuno ha già mangiato.
+
+TOTAL 25.1s  new characters billed ~352  cached lines 0
+low match lines: []
