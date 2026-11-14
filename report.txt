@@ -1,0 +1,10 @@
+  1 N         0.00-   4.35 match=1.00 eleven_v4 (cache) | Se nel gruppo famiglia compare un partecipante in più, non salutare.
+  2 N         4.55-   8.28 match=1.00 eleven_v4 (cache) | Siete in quattro, tu, mamma, papà e tua sorella.
+  3 N         8.48-  13.39 match=1.00 eleven_v4 (cache) | Il gruppo ne segna cinque. Il nuovo ha solo un numero, nessun nome.
+  4 N        13.59-  17.00 match=1.00 eleven_v4 (cache) | Tutti scrivono «chi sei ?». Lui non risponde.
+  5 N        17.20-  21.87 match=1.00 eleven_v4 (cache) | Finché mamma, che ha il telefono spento, mette un cuore sotto il suo messaggio.
+  6 N        22.07-  24.84 match=1.00 eleven_v4 (cache) | Non salutare. Chi lo fa viene contato.
+  7 N        25.04-  26.67 match=1.00 eleven_v4 (cache) | Adesso siete in sei.
+
+TOTAL 26.7s  new characters billed ~0  cached lines 7
+low match lines: []
