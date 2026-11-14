@@ -1,0 +1,458 @@
+{
+ "title": "Se Il Cane Si Mette Davanti Alla Porta Mentre Esci… RESTA IN CASA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il cane si mette davanti alla porta mentre esci, resta in casa.",
+   "capfull": true,
+   "cap": "Se il cane si mette davanti alla porta mentre esci, resta in casa.",
+   "red": "casa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "INGRESSO · 23:10",
+        "tag": "IL CANE",
+        "lines": [
+         {
+          "t": "BLOCCA",
+          "s": 14
+         },
+         {
+          "t": "LA PORTA",
+          "s": 14,
+          "col": "red"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "cane"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "dog",
+        "s": 0.9,
+        "y": 0.45,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "porta"
+     },
+     {
+      "els": [
+       {
+        "i": "padlock",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "resta"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non abbaia. Non ringhia. Ti guarda e basta.",
+   "cap": "Non abbaia. Non ringhia. Ti guarda e basta.",
+   "red": "basta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.8,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "ringhia"
+     },
+     {
+      "els": [
+       {
+        "i": "eye",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "guarda"
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.6,
+        "y": 0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "basta"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Lo scosti con la mano: torna esattamente dove era.",
+   "cap": "Lo scosti con la mano: torna esattamente dove era.",
+   "red": "era",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "hand",
+        "s": 0.9,
+        "y": -0.2,
+        "a": "impactdrift",
+        "x": 0.6,
+        "tilt": -0.5
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "buzzdrift",
+        "x": -0.5
+       },
+       {
+        "i": "hand",
+        "s": 0.9,
+        "y": -0.2,
+        "a": "impactdrift",
+        "x": 0.9,
+        "tilt": -0.5
+       }
+      ],
+      "at": "scosti"
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "torna"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "dog",
+        "s": 0.9,
+        "y": 0.45,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "esattamente"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Poi scodinzola piano, come quando riconosce qualcuno.",
+   "cap": "Poi scodinzola piano, come quando riconosce qualcuno.",
+   "red": "riconosce",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift",
+        "sway": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.8,
+        "y": -0.3,
+        "a": "impactdrift",
+        "sway": true
+       }
+      ],
+      "at": "piano"
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 2.4,
+        "y": 0.2,
+        "a": "impactdrift",
+        "sway": true
+       }
+      ],
+      "at": "riconosce"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Nessun citofono. Nessun passo.",
+   "cap": "Nessun citofono. Nessun passo.",
+   "red": "passo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "intercom",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "steps",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "passo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il cane ha sentito qualcuno che conosce, fuori dalla porta.",
+   "cap": "Il cane ha sentito qualcuno che conosce, fuori dalla porta.",
+   "red": "fuori",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glass": true,
+        "sil": "qualcuno"
+       }
+      ],
+      "at": "qualcuno"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.5,
+        "y": -0.1,
+        "a": "impactdrift",
+        "glass": true,
+        "sil": true,
+        "knock": "fuori"
+       }
+      ],
+      "at": "fuori"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "E tu stai ancora cercando le chiavi.",
+   "cap": "E tu stai ancora cercando le chiavi.",
+   "red": "chiavi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glass": true,
+        "sil": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "key",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "buzzdrift"
+       }
+      ],
+      "at": "cercando"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glass": true,
+        "sil": true
+       },
+       {
+        "i": "key",
+        "s": 0.8,
+        "y": 0.6,
+        "a": "buzzdrift"
+       }
+      ],
+      "at": "chiavi"
+     }
+    ],
+    "sfx": [
+     [
+      "keys",
+      "chiavi"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Cane Si Mette Davanti Alla Porta Mentre Esci… RESTA IN CASA",
+  "publish": "venerdì 20 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Il cane non lascia passare nessuno. Neanche te."
+  ],
+  "question": "👇 Come si comporta il tuo cane quando senti qualcuno fuori? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Come si comporta il tuo cane quando senti qualcuno fuori? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "cane",
+   "cane davanti alla porta",
+   "animali horror"
+  ]
+ }
+}

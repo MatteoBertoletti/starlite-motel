@@ -1,0 +1,485 @@
+{
+ "title": "Se Il Frigo Suona «Porta Aperta» Con La Porta Chiusa… NON APRIRLO",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.2,
+ "tight": {
+  "cap": 0.2,
+  "longer": 0.21000000000000002
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il frigo suona «porta aperta» con la porta chiusa, non aprirlo.",
+   "capfull": true,
+   "cap": "Se il frigo suona «porta aperta» con la porta chiusa, non aprirlo.",
+   "red": "aprirlo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "FRIGO · 03:00",
+        "bc": "red",
+        "tag": "ALLARME",
+        "lines": [
+         {
+          "t": "«PORTA APERTA»",
+          "s": 10,
+          "col": "red"
+         },
+         {
+          "t": "PORTA CHIUSA",
+          "s": 12
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "beeps": [
+         "frigo"
+        ],
+        "beep": true
+       }
+      ],
+      "at": "frigo"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 3.0,
+        "y": 1.1,
+        "a": "impactdrift",
+        "x": 0.2
+       }
+      ],
+      "at": "porta"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "frigo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sono le tre. Il beep ripete ogni dieci secondi.",
+   "cap": "Sono le tre. Il beep ripete ogni dieci secondi.",
+   "red": "dieci",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 30,
+        "col": "white",
+        "v": "03:00",
+        "label": "ORA"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "beeps": [
+         "beep",
+         "ripete"
+        ],
+        "beep": true
+       }
+      ],
+      "at": "beep"
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.4,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "red",
+        "label": "BEEP OGNI",
+        "unit": "SECONDI",
+        "down": {
+         "from": 10,
+         "to": 0,
+         "at": "ogni",
+         "dur": 2.0
+        }
+       }
+      ],
+      "at": "ogni"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "beep"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Controlli: la porta è chiusa, la guarnizione è a posto.",
+   "cap": "Controlli: la porta è chiusa, la guarnizione è a posto.",
+   "red": "chiusa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 2.6,
+        "y": 0.7,
+        "a": "impactdrift",
+        "x": -0.3
+       }
+      ],
+      "at": "porta"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 3.0,
+        "y": 0.3,
+        "a": "impactdrift",
+        "x": -0.7
+       }
+      ],
+      "at": "guarnizione"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "off": true
+       }
+      ],
+      "at": "posto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il beep smette solo se la luce interna viene premuta. Da dentro.",
+   "cap": "Il beep smette solo se la luce interna viene premuta. Da dentro.",
+   "red": "dentro",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "beeps": [
+         "beep"
+        ],
+        "beep": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "luce"
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "press": "premuta",
+        "lit": "premuta",
+        "num": "LUCE"
+       }
+      ],
+      "at": "premuta"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "dentro"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Dentro, la plastica dei ripiani si piega.",
+   "cap": "Dentro, la plastica dei ripiani si piega.",
+   "red": "piega",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.8,
+        "y": -0.2,
+        "a": "impactdrift",
+        "bend": "ripiani"
+       }
+      ],
+      "at": "ripiani"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 2.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "bend": "ripiani"
+       }
+      ],
+      "at": "piega"
+     }
+    ],
+    "sfx": [
+     [
+      "creak",
+      "piega"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non aprirlo: quel frigo ha un ripiano in meno da stasera.",
+   "cap": "Non aprirlo: quel frigo ha un ripiano in meno da stasera.",
+   "red": "meno",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "bend": true
+       }
+      ],
+      "at": "ripiano"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "bend": true,
+        "gone": "meno"
+       }
+      ],
+      "at": "meno"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Qualcuno ha fatto spazio.",
+   "cap": "Qualcuno ha fatto spazio.",
+   "red": "spazio",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "bend": true,
+        "gone": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "handle": "fatto"
+       }
+      ],
+      "at": "fatto"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 3.0,
+        "y": 1.84,
+        "a": "impactdrift",
+        "x": -0.675,
+        "handle": "fatto"
+       }
+      ],
+      "at": "spazio"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "spazio"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Frigo Suona «Porta Aperta» Con La Porta Chiusa… NON APRIRLO",
+  "publish": "sabato 21 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Il frigo dice «aperto». Tu lo vedi chiuso."
+  ],
+  "question": "👇 Il tuo frigo fa rumori strani di notte? Quali? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Il tuo frigo fa rumori strani di notte? Quali? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "frigo",
+   "allarme porta aperta",
+   "cucina di notte"
+  ]
+ }
+}

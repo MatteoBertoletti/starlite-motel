@@ -219,7 +219,7 @@ export const SCN = {
   },
   // ---------- the video seen from the floor, rising towards the bed ----------
   vidUI(c, el, L, lt, tt, size) {
-    const u = size / 40, k = lt - t0Of(L, el), p = cl(k / (el.dur || 7)), off = (1 - H.easeOut(p)) * 34;
+    const u = size / 40, k = lt - t0Of(L, el), ld = Math.max(0.5, (L.next ?? (L.cut + 4)) - L.cut), p = el.p0 !== undefined ? (el.p0 + (el.p1 - el.p0) * cl(lt / ld)) : cl(k / (el.dur || 7)), off = (1 - H.easeOut(p)) * 34;
     c.save(); RR(c, -32 * u, -46 * u, 64 * u, 92 * u, 3 * u); c.clip(); c.fillStyle = '#0c0f14'; c.fillRect(-34 * u, -48 * u, 68 * u, 96 * u);
     c.fillStyle = '#161b22'; c.fillRect(-34 * u, (30 + off) * u, 68 * u, 30 * u); for (let j = 0; j < 5; j++) { c.fillStyle = 'rgba(242,239,232,0.06)'; c.fillRect(-34 * u, (34 + off + j * 6) * u, 68 * u, 0.4 * u); }
     c.fillStyle = '#26303c'; c.fillRect(-34 * u, (-6 + off) * u, 68 * u, 36 * u); c.fillStyle = '#2f3b4a'; RR(c, -30 * u, (-14 + off) * u, 60 * u, 14 * u, 6 * u); c.fill();
@@ -228,7 +228,7 @@ export const SCN = {
     const ek = el.eyes === undefined ? 0 : cl((lt - T_(L, el, el.eyes)) / 0.25);
     for (const sd of [-1, 1]) { const ex = sd * 2.6 * u, ey = hy - 0.6 * u; if (ek > 0) { c.save(); GL(c, 'red', 14 * ek); c.fillStyle = '#050506'; c.beginPath(); c.ellipse(ex, ey, 1.5 * u, 1.5 * u * ek, 0, 0, 7); c.fill(); c.fillStyle = C.red; c.beginPath(); c.arc(ex, ey, 0.5 * u * ek, 0, 7); c.fill(); c.restore(); } else { c.beginPath(); c.moveTo(ex - 1.3 * u, ey); c.quadraticCurveTo(ex, ey + 0.8 * u, ex + 1.3 * u, ey); c.lineWidth = u * 0.5; c.strokeStyle = '#050506'; c.stroke(); } }
     c.restore(); c.lineWidth = u * 0.5; c.strokeStyle = 'rgba(242,239,232,0.5)'; RR(c, -32 * u, -46 * u, 64 * u, 92 * u, 3 * u); c.stroke();
-    const sec = Math.min(7, Math.floor(k)); c.fillStyle = 'rgba(242,239,232,0.25)'; c.fillRect(-26 * u, 38 * u, 52 * u, 0.8 * u); c.fillStyle = C.red; c.fillRect(-26 * u, 38 * u, 52 * u * p, 0.8 * u); TX(c, `0:0${sec}`, -26 * u, 42 * u, u * 3, '900', C.w, 'left'); TX(c, '0:07', 26 * u, 42 * u, u * 3, '800', DIM, 'right');
+    const sec = Math.min(7, Math.floor(p * 7.4)); c.fillStyle = 'rgba(242,239,232,0.25)'; c.fillRect(-26 * u, 38 * u, 52 * u, 0.8 * u); c.fillStyle = C.red; c.fillRect(-26 * u, 38 * u, 52 * u * p, 0.8 * u); TX(c, `0:0${sec}`, -26 * u, 42 * u, u * 3, '900', C.w, 'left'); TX(c, '0:07', 26 * u, 42 * u, u * 3, '800', DIM, 'right');
   },
   // ---------- two big eyes that open and look at the lens ----------
   eyesBig(c, el, L, lt, tt, size) {

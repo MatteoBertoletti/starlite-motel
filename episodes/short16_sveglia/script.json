@@ -1,0 +1,523 @@
+{
+ "title": "Se La Sveglia Suona Alle 04:04 Senza Averla Impostata… NON SPEGNERLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la sveglia suona alle 04:04 e tu non l'hai impostata, non spegnerla.",
+   "capfull": true,
+   "cap": "Se la sveglia suona alle 04:04 e tu non l'hai impostata, non spegnerla.",
+   "red": "spegnerla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "SVEGLIA",
+        "bc": "red",
+        "tag": "SVEGLIA",
+        "lines": [
+         {
+          "t": "04:04",
+          "s": 26,
+          "col": "red"
+         },
+         {
+          "t": "NON IMPOSTATA",
+          "s": 10
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "ring": true
+       }
+      ],
+      "at": "sveglia"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.7,
+        "y": -0.3,
+        "a": "impactdrift",
+        "time": "04:04",
+        "ring": true,
+        "red": true
+       }
+      ],
+      "at": "impostata"
+     },
+     {
+      "els": [
+       {
+        "i": "switch",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ],
+    "sfx": [
+     [
+      "ring",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Controlli l'app: la sveglia esiste, è attiva tutti i giorni.",
+   "cap": "Controlli l'app: la sveglia esiste, è attiva tutti i giorni.",
+   "red": "giorni",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Sveglie",
+        "rows": [
+         {
+          "t": "04:04",
+          "sub": "ogni giorno",
+          "sz": 7,
+          "hot": "sveglia"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04"
+       }
+      ],
+      "at": "esiste"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 2.3,
+        "y": -0.6,
+        "a": "impactdrift",
+        "time": "04:04"
+       }
+      ],
+      "at": "attiva"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "red": true
+       }
+      ],
+      "at": "giorni"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Etichetta: «Alzati». Creata ieri, alle 04:04.",
+   "cap": "Etichetta: «Alzati». Creata ieri, alle 04:04.",
+   "red": "alzati",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "label": "Alzati",
+        "labelat": "alzati"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 2.0,
+        "y": -0.35,
+        "a": "impactdrift",
+        "time": "04:04",
+        "label": "Alzati",
+        "labelat": "alzati",
+        "made": "Creata ieri · 04:04",
+        "madeat": "creata"
+       }
+      ],
+      "at": "creata"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 2.0,
+        "y": -0.35,
+        "a": "impactdrift",
+        "time": "04:04",
+        "label": "Alzati",
+        "made": "Creata ieri · 04:04",
+        "red": true
+       }
+      ],
+      "at": "ieri"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Creata da questo telefono, mentre dormivi.",
+   "cap": "Creata da questo telefono, mentre dormivi.",
+   "red": "dormivi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "label": "Alzati",
+        "made": "Creata da questo telefono"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "phone",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "telefono"
+     },
+     {
+      "els": [
+       {
+        "i": "bed",
+        "s": 1.6,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "dormivi"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la spegni, ne crea un'altra. Etichetta: «Apri la porta».",
+   "cap": "Se la spegni, ne crea un'altra. Etichetta: «Apri la porta».",
+   "red": "porta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Sveglie",
+        "rows": [
+         {
+          "t": "04:04",
+          "sub": "Alzati",
+          "sz": 7
+         },
+         {
+          "t": "04:04",
+          "sub": "Apri la porta",
+          "sz": 7,
+          "at": "altra",
+          "hot": "altra"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.2,
+        "y": -0.55,
+        "a": "impactdrift",
+        "title": "Sveglie",
+        "rows": [
+         {
+          "t": "04:04",
+          "sub": "Alzati",
+          "sz": 7
+         },
+         {
+          "t": "04:04",
+          "sub": "Apri la porta",
+          "sz": 7,
+          "hot": true
+         }
+        ]
+       }
+      ],
+      "at": "etichetta"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.7,
+        "y": -0.3,
+        "a": "impactdrift",
+        "time": "04:04",
+        "label": "Apri la porta",
+        "ring": true
+       }
+      ],
+      "at": "apri"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Lascia suonare. Dura trenta secondi, poi smette da sola.",
+   "cap": "Lascia suonare. Dura trenta secondi, poi smette da sola.",
+   "red": "sola",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "ring": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "red",
+        "label": "SVEGLIA",
+        "unit": "SECONDI",
+        "down": {
+         "from": 30,
+         "to": 0,
+         "at": "trenta",
+         "dur": 3.5
+        }
+       }
+      ],
+      "at": "dura"
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.7,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "red",
+        "label": "SVEGLIA",
+        "unit": "SECONDI",
+        "down": {
+         "from": 30,
+         "to": 0,
+         "at": "trenta",
+         "dur": 3.5
+        }
+       }
+      ],
+      "at": "poi"
+     },
+     {
+      "els": [
+       {
+        "i": "alarmUI",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "time": "04:04",
+        "ring": true,
+        "stop": "sola"
+       }
+      ],
+      "at": "sola"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Dopo trenta secondi, qualcuno bussa.",
+   "cap": "Dopo trenta secondi, qualcuno bussa.",
+   "red": "bussa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "red",
+        "label": "SVEGLIA",
+        "unit": "SECONDI",
+        "down": {
+         "from": 30,
+         "to": 0,
+         "at": "dopo",
+         "dur": 2.2
+        }
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.15,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "qualcuno"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "knock": "bussa"
+       }
+      ],
+      "at": "bussa"
+     }
+    ],
+    "sfx": [
+     [
+      "knock",
+      "bussa"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se La Sveglia Suona Alle 04:04 Senza Averla Impostata… NON SPEGNERLA",
+  "publish": "giovedì 19 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "La sveglia l'ha impostata qualcuno. Non sei stato tu."
+  ],
+  "question": "👇 Hai mai trovato una sveglia che non avevi impostato? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Hai mai trovato una sveglia che non avevi impostato? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "sveglia",
+   "04:04",
+   "telefono"
+  ]
+ }
+}

@@ -1,0 +1,440 @@
+{
+ "title": "Se Un Gatto Miagola Sotto Casa Ma Il Tuo È Sul Letto… NON RISPONDERGLI",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.2,
+ "tight": {
+  "cap": 0.2,
+  "longer": 0.21000000000000002
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se un gatto miagola sotto casa ma il tuo è sul letto, non rispondergli.",
+   "capfull": true,
+   "cap": "Se un gatto miagola sotto casa ma il tuo è sul letto, non rispondergli.",
+   "red": "rispondergli",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "SUONO · 02:00",
+        "tag": "MIAGOLA SOTTO CASA",
+        "lines": [
+         {
+          "t": "IL TUO",
+          "s": 14
+         },
+         {
+          "t": "È SUL LETTO",
+          "s": 12.5,
+          "col": "red"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "app": "SUONO · 02:00",
+        "tag": "MIAGOLA SOTTO CASA",
+        "lines": [
+         {
+          "t": "IL TUO",
+          "s": 14
+         },
+         {
+          "t": "È SUL LETTO",
+          "s": 12.5,
+          "col": "red"
+         }
+        ]
+       }
+      ],
+      "at": "gatto"
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": "miagola"
+       }
+      ],
+      "at": "miagola"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "tuo"
+     },
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sono le due, e vivi al quarto piano. Il miagolio arriva dal davanzale.",
+   "cap": "Sono le due, e vivi al quarto piano. Il miagolio arriva dal davanzale.",
+   "red": "davanzale",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 30,
+        "col": "white",
+        "v": "02:00",
+        "label": "ORA"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "quarto"
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": "miagolio"
+       }
+      ],
+      "at": "miagolio"
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 2.4,
+        "y": -1.55,
+        "a": "impactdrift",
+        "waves": "miagolio"
+       }
+      ],
+      "at": "davanzale"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il tuo gatto è sul letto, con le orecchie dritte verso la finestra.",
+   "cap": "Il tuo gatto è sul letto, con le orecchie dritte verso la finestra.",
+   "red": "finestra",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.6,
+        "y": -0.25,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          "orecchie",
+          1.2,
+          -1
+         ]
+        ]
+       }
+      ],
+      "at": "orecchie"
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": "finestra"
+       }
+      ],
+      "at": "finestra"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il miagolio è identico al suo, quando chiede da mangiare.",
+   "cap": "Il miagolio è identico al suo, quando chiede da mangiare.",
+   "red": "mangiare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": "miagolio"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.5,
+        "y": -0.25,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "identico"
+     },
+     {
+      "els": [
+       {
+        "i": "bowl",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "chiede"
+     },
+     {
+      "els": [
+       {
+        "i": "bowl",
+        "s": 2.2,
+        "y": -0.4,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "mangiare"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non rispondere: quello che ha fuori impara dalle voci di casa.",
+   "cap": "Non rispondere: quello che ha fuori impara dalle voci di casa.",
+   "red": "impara",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": "quello"
+       }
+      ],
+      "at": "quello"
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "impara"
+     },
+     {
+      "els": [
+       {
+        "i": "swYou",
+        "s": 1.2,
+        "y": -0.25,
+        "a": "impactdrift",
+        "waves": "voci"
+       }
+      ],
+      "at": "voci"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ha già imparato la tua.",
+   "cap": "Ha già imparato la tua.",
+   "red": "tua",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "waves": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "swYou",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "waves": "imparato"
+       }
+      ],
+      "at": "imparato"
+     },
+     {
+      "els": [
+       {
+        "i": "swYou",
+        "s": 2.2,
+        "y": -0.35,
+        "a": "impactdrift",
+        "waves": "imparato"
+       }
+      ],
+      "at": "tua"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "tua"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Un Gatto Miagola Sotto Casa Ma Il Tuo È Sul Letto… NON RISPONDERGLI",
+  "publish": "mercoledì 18 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Lo sentirai anche dal quarto piano."
+  ],
+  "question": "👇 Il tuo gatto ti sveglia di notte? A che ora? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Il tuo gatto ti sveglia di notte? A che ora? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "gatto",
+   "miagolio",
+   "notte"
+  ]
+ }
+}

@@ -1,0 +1,435 @@
+{
+ "title": "Se Il Cane Del Vicino Smette Di Abbaiare Dopo Anni… NON ANDARE A VEDERE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.2,
+ "tight": {
+  "cap": 0.2,
+  "longer": 0.21000000000000002
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il cane del vicino smette di abbaiare dopo anni, non andare a vedere.",
+   "capfull": true,
+   "cap": "Se il cane del vicino smette di abbaiare dopo anni, non andare a vedere.",
+   "red": "vedere",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "PIANEROTTOLO",
+        "tag": "IL CANE DEL VICINO",
+        "lines": [
+         {
+          "t": "SILENZIO",
+          "s": 15
+         },
+         {
+          "t": "DA 3 GIORNI",
+          "s": 12.5,
+          "col": "red"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "cane"
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.9,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "smette"
+     },
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Per sei anni ha abbaiato a ogni passo sul pianerottolo.",
+   "cap": "Per sei anni ha abbaiato a ogni passo sul pianerottolo.",
+   "red": "pianerottolo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift",
+        "sway": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "white",
+        "v": "6",
+        "unit": "ANNI",
+        "label": "HA ABBAIATO PER"
+       }
+      ],
+      "at": "sei"
+     },
+     {
+      "els": [
+       {
+        "i": "steps",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "passo"
+     },
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "pianerottolo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Da tre giorni, silenzio. Il vicino non si vede.",
+   "cap": "Da tre giorni, silenzio. Il vicino non si vede.",
+   "red": "vede",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "red",
+        "v": "3",
+        "unit": "GIORNI",
+        "label": "SILENZIO DA"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "silenzio"
+     },
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "vicino"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sulla porta, la ciotola è piena e il guinzaglio è appeso.",
+   "cap": "Sulla porta, la ciotola è piena e il guinzaglio è appeso.",
+   "red": "appeso",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 2.4,
+        "y": -1.99,
+        "a": "impactdrift",
+        "x": 1.2
+       }
+      ],
+      "at": "ciotola"
+     },
+     {
+      "els": [
+       {
+        "i": "landing2",
+        "s": 2.4,
+        "y": 0.98,
+        "a": "impactdrift",
+        "x": 0.48
+       }
+      ],
+      "at": "guinzaglio"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ieri notte, però, hai sentito grattare. Alla tua porta.",
+   "cap": "Ieri notte, però, hai sentito grattare. Alla tua porta.",
+   "red": "porta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "scratch": "grattare"
+       }
+      ],
+      "at": "grattare"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 2.2,
+        "y": -1.0,
+        "a": "impactdrift",
+        "scratch": "grattare"
+       }
+      ],
+      "at": "tua"
+     }
+    ],
+    "sfx": [
+     [
+      "scrape",
+      "grattare"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il cane non c'entra: lui abbaiava per avvisarti.",
+   "cap": "Il cane non c'entra: lui abbaiava per avvisarti.",
+   "red": "avvisarti",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift",
+        "sway": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "dog",
+        "s": 1.9,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "abbaiava"
+     },
+     {
+      "els": [
+       {
+        "i": "shield",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "avvisarti"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ora nessuno ti avvisa.",
+   "cap": "Ora nessuno ti avvisa.",
+   "red": "avvisa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.4,
+        "y": -0.25,
+        "a": "impactdrift",
+        "scratch": "nessuno"
+       }
+      ],
+      "at": "nessuno"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 2.6,
+        "y": -1.0,
+        "a": "impactdrift",
+        "scratch": "nessuno"
+       }
+      ],
+      "at": "avvisa"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "avvisa"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Cane Del Vicino Smette Di Abbaiare Dopo Anni… NON ANDARE A VEDERE",
+  "publish": "domenica 22 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Il cane abbaiava per avvisarti."
+  ],
+  "question": "👇 Il cane del tuo vicino abbaia ancora? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Il cane del tuo vicino abbaia ancora? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "cane del vicino",
+   "condominio",
+   "pianerottolo"
+  ]
+ }
+}

@@ -1,0 +1,479 @@
+{
+ "title": "Se La Fotocamera Si Accende Da Sola Con Il Pallino Verde… NON COPRIRLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la fotocamera si accende da sola con il pallino verde, non coprirla.",
+   "capfull": true,
+   "cap": "Se la fotocamera si accende da sola con il pallino verde, non coprirla.",
+   "red": "coprirla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "SISTEMA",
+        "dot": "green",
+        "tag": "● FOTOCAMERA",
+        "lines": [
+         {
+          "t": "IN USO",
+          "s": 22
+         }
+        ],
+        "foot": "(pallino verde)",
+        "fcol": "green"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 1.4,
+        "y": 0.9,
+        "a": "impactdrift",
+        "pill": "FOTOCAMERA IN USO"
+       }
+      ],
+      "at": "fotocamera"
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 3.0,
+        "y": 2.52,
+        "a": "impactdrift",
+        "x": -1.1
+       }
+      ],
+      "at": "pallino"
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 1.4,
+        "y": 0.9,
+        "a": "impactdrift",
+        "cover": "non"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il pallino resta acceso, anche se lo schermo è fermo sulla home.",
+   "cap": "Il pallino resta acceso, anche se lo schermo è fermo sulla home.",
+   "red": "acceso",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 1.4,
+        "y": 0.9,
+        "a": "impactdrift",
+        "pill": "FOTOCAMERA IN USO"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 3.0,
+        "y": 2.52,
+        "a": "impactdrift",
+        "x": -1.1
+       }
+      ],
+      "at": "resta"
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 1.4,
+        "y": 0.9,
+        "a": "impactdrift",
+        "pill": "FOTOCAMERA IN USO"
+       }
+      ],
+      "at": "schermo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Nell'elenco delle app: nessuna la sta usando. Solo «Sistema».",
+   "cap": "Nell'elenco delle app: nessuna la sta usando. Solo «Sistema».",
+   "red": "sistema",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Fotocamera",
+        "sub": "App che la usano",
+        "rows": [
+         {
+          "t": "Messaggi",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Mappe",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Foto",
+          "sub": "non in uso",
+          "col": "dim"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "title": "Fotocamera",
+        "sub": "App che la usano",
+        "rows": [
+         {
+          "t": "Messaggi",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Mappe",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Foto",
+          "sub": "non in uso",
+          "col": "dim"
+         }
+        ]
+       }
+      ],
+      "at": "nessuna"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "title": "Fotocamera",
+        "sub": "App che la usano",
+        "rows": [
+         {
+          "t": "Messaggi",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Mappe",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Foto",
+          "sub": "non in uso",
+          "col": "dim"
+         },
+         {
+          "t": "Sistema",
+          "sub": "in uso ora",
+          "at": "solo",
+          "hot": "solo"
+         }
+        ]
+       }
+      ],
+      "at": "solo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se copri l'obiettivo, il pallino diventa arancione.",
+   "cap": "Se copri l'obiettivo, il pallino diventa arancione.",
+   "red": "arancione",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 1.4,
+        "y": 0.9,
+        "a": "impactdrift",
+        "pill": "FOTOCAMERA IN USO"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 2.4,
+        "y": 1.99,
+        "a": "impactdrift",
+        "cover": "copri",
+        "pill": "FOTOCAMERA IN USO"
+       }
+      ],
+      "at": "copri"
+     },
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 3.0,
+        "y": 2.52,
+        "a": "impactdrift",
+        "x": -1.1,
+        "cover": "copri",
+        "orange": "arancione"
+       }
+      ],
+      "at": "pallino"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "arancione"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Arancione vuol dire microfono.",
+   "cap": "Arancione vuol dire microfono.",
+   "red": "microfono",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "camUI",
+        "s": 3.0,
+        "y": 2.52,
+        "a": "impactdrift",
+        "x": -1.1,
+        "orange": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "vuol"
+     },
+     {
+      "els": [
+       {
+        "i": "text",
+        "s": 1.0,
+        "y": -0.3,
+        "a": "impactdrift",
+        "text": "MICROFONO",
+        "col": "gold"
+       }
+      ],
+      "at": "microfono"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ti stava guardando. Adesso ti ascolta.",
+   "cap": "Ti stava guardando. Adesso ti ascolta.",
+   "red": "ascolta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "eye",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "adesso"
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 2.2,
+        "y": -0.3,
+        "a": "surge"
+       }
+      ],
+      "at": "ascolta"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "ascolta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non parlare di cosa hai visto.",
+   "cap": "Non parlare di cosa hai visto.",
+   "red": "visto",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "hand",
+        "s": 0.4,
+        "y": -0.5,
+        "a": "still",
+        "x": 0.0
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.9,
+        "y": -0.55,
+        "a": "impactdrift"
+       },
+       {
+        "i": "hand",
+        "s": 0.6,
+        "y": -0.88,
+        "a": "still",
+        "x": 0.0
+       }
+      ],
+      "at": "parlare"
+     }
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se La Fotocamera Si Accende Da Sola Con Il Pallino Verde… NON COPRIRLA",
+  "publish": "venerdì 20 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Il pallino verde non si accende da solo."
+  ],
+  "question": "👇 Copri la fotocamera del telefono o del computer? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Copri la fotocamera del telefono o del computer? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "fotocamera",
+   "pallino verde",
+   "privacy"
+  ]
+ }
+}

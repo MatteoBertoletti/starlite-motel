@@ -1,0 +1,410 @@
+{
+ "title": "Se La Domenica A Pranzo C'è Un Posto In Più Apparecchiato… NON SEDERTI",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.2,
+ "tight": {
+  "cap": 0.2,
+  "longer": 0.21000000000000002
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la domenica a pranzo c'è un posto in più apparecchiato, non sederti.",
+   "capfull": true,
+   "cap": "Se la domenica a pranzo c'è un posto in più apparecchiato, non sederti.",
+   "red": "sederti",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "PRANZO · DOMENICA",
+        "tag": "POSTI APPARECCHIATI",
+        "lines": [
+         {
+          "t": "6",
+          "s": 22,
+          "col": "red"
+         },
+         {
+          "t": "SIETE IN 5",
+          "s": 12.5
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "domenica"
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": "posto"
+       }
+      ],
+      "at": "posto"
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": true
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Siete in cinque. I piatti sono sei. Tua nonna dice che è un errore.",
+   "cap": "Siete in cinque. I piatti sono sei. Tua nonna dice che è un errore.",
+   "red": "errore",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.6,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": "piatti"
+       }
+      ],
+      "at": "piatti"
+     },
+     {
+      "els": [
+       {
+        "i": "mother",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "nonna"
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.6,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": true
+       }
+      ],
+      "at": "errore"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Ha messo anche bicchiere e tovagliolo. La sedia è già scostata.",
+   "cap": "Ha messo anche bicchiere e tovagliolo. La sedia è già scostata.",
+   "red": "scostata",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 2.4,
+        "y": -1.7,
+        "a": "impactdrift",
+        "six": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 3.0,
+        "y": -2.2,
+        "a": "impactdrift",
+        "six": true
+       }
+      ],
+      "at": "bicchiere"
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 2.6,
+        "y": -2.0,
+        "a": "impactdrift",
+        "x": 0.0,
+        "six": true
+       }
+      ],
+      "at": "sedia"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tutti guardano il posto in più, nessuno parla.",
+   "cap": "Tutti guardano il posto in più, nessuno parla.",
+   "red": "parla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 1.7,
+        "y": -0.2,
+        "a": "impactdrift",
+        "six": true
+       }
+      ],
+      "at": "nessuno"
+     },
+     {
+      "els": [
+       {
+        "i": "eye",
+        "s": 1.5,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "parla"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tua madre ti passa il pane. Sottovoce: «Lascia stare».",
+   "cap": "Tua madre ti passa il pane. Sottovoce: «Lascia stare».",
+   "red": "stare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mother",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "sottovoce"
+     },
+     {
+      "els": [
+       {
+        "i": "text",
+        "s": 0.9,
+        "y": -0.3,
+        "a": "impactdrift",
+        "text": "LASCIA STARE",
+        "col": "red"
+       }
+      ],
+      "at": "lascia"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Le posate sono incrociate.",
+   "cap": "Le posate sono incrociate.",
+   "red": "incrociate",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 2.4,
+        "y": -1.7,
+        "a": "impactdrift",
+        "six": true,
+        "cross": "incrociate"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 3.4,
+        "y": -2.4,
+        "a": "impactdrift",
+        "six": true,
+        "cross": "incrociate"
+       }
+      ],
+      "at": "incrociate"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "incrociate"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Qualcuno ha già mangiato.",
+   "cap": "Qualcuno ha già mangiato.",
+   "red": "mangiato",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 2.4,
+        "y": -1.7,
+        "a": "impactdrift",
+        "six": true,
+        "cross": true,
+        "steam": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tableTop",
+        "s": 3.4,
+        "y": -2.4,
+        "a": "impactdrift",
+        "six": true,
+        "cross": true,
+        "steam": true
+       }
+      ],
+      "at": "mangiato"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "mangiato"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se La Domenica A Pranzo C'è Un Posto In Più Apparecchiato… NON SEDERTI",
+  "publish": "sabato 21 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Il sesto piatto non l'ha messo nessuno."
+  ],
+  "question": "👇 Quanti siete a tavola la domenica a casa tua? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Quanti siete a tavola la domenica a casa tua? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "pranzo della domenica",
+   "famiglia",
+   "posto a tavola"
+  ]
+ }
+}

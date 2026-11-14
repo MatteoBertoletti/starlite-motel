@@ -1,0 +1,491 @@
+{
+ "title": "Se Papà Ti Scrive «Scendi, Sono Sotto» Ma Dorme In Camera… NON SCENDERE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se papà ti scrive «scendi, sono sotto» ma dorme in camera, non scendere.",
+   "capfull": true,
+   "cap": "Se papà ti scrive «scendi, sono sotto» ma dorme in camera, non scendere.",
+   "red": "scendere",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "MESSAGGI · PAPÀ",
+        "tag": "23:48",
+        "lines": [
+         {
+          "t": "«SCENDI,",
+          "s": 15
+         },
+         {
+          "t": "SONO QUI SOTTO»",
+          "s": 10,
+          "col": "red"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "app": "MESSAGGI · PAPÀ",
+        "tag": "23:48",
+        "lines": [
+         {
+          "t": "«SCENDI,",
+          "s": 15
+         },
+         {
+          "t": "SONO QUI SOTTO»",
+          "s": 10,
+          "col": "red"
+         }
+        ]
+       }
+      ],
+      "at": "papà"
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": "scrive"
+         }
+        ]
+       }
+      ],
+      "at": "scrive"
+     },
+     {
+      "els": [
+       {
+        "i": "bed",
+        "s": 1.6,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "dorme"
+     },
+     {
+      "els": [
+       {
+        "i": "stairs",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il messaggio arriva dal suo numero. Tu vai alla finestra.",
+   "cap": "Il messaggio arriva dal suo numero. Tu vai alla finestra.",
+   "red": "finestra",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": null
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 2.2,
+        "y": -0.8,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": null
+         }
+        ]
+       }
+      ],
+      "at": "numero"
+     },
+     {
+      "els": [
+       {
+        "i": "winK",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "finestra"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sotto c'è la sua macchina, con i fari accesi.",
+   "cap": "Sotto c'è la sua macchina, con i fari accesi.",
+   "red": "accesi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 1.25,
+        "y": 0.0,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 2.2,
+        "y": -0.5,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "macchina"
+     },
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 2.2,
+        "y": -0.5,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "fari"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Sul sedile del guidatore, una sagoma ferma.",
+   "cap": "Sul sedile del guidatore, una sagoma ferma.",
+   "red": "ferma",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 2.2,
+        "y": -0.5,
+        "a": "impactdrift",
+        "fig": "sedile"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 3.2,
+        "y": -0.9,
+        "a": "impactdrift",
+        "x": 0.27,
+        "fig": "sedile"
+       }
+      ],
+      "at": "sagoma"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "sagoma"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il telefono vibra: «Dai, che ho freddo.»",
+   "cap": "Il telefono vibra: «Dai, che ho freddo.»",
+   "red": "freddo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": "scrive"
+         },
+         {
+          "n": "Papà",
+          "t": "Dai, che ho freddo.",
+          "at": "dai",
+          "col": "red"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 2.0,
+        "y": -0.8,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": "scrive"
+         },
+         {
+          "n": "Papà",
+          "t": "Dai, che ho freddo.",
+          "col": "red"
+         }
+        ]
+       }
+      ],
+      "at": "dai"
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Papà",
+        "msgs": [
+         {
+          "n": "Papà",
+          "t": "scendi, sono sotto",
+          "at": "scrive"
+         },
+         {
+          "n": "Papà",
+          "t": "Dai, che ho freddo.",
+          "col": "red"
+         }
+        ]
+       }
+      ],
+      "at": "freddo"
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Dalla stanza accanto senti papà che russa.",
+   "cap": "Dalla stanza accanto senti papà che russa.",
+   "red": "russa",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "ear",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "bed",
+        "s": 1.6,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "papà"
+     },
+     {
+      "els": [
+       {
+        "i": "bed",
+        "s": 1.6,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "text",
+        "s": 1.0,
+        "y": -0.9,
+        "a": "impactdrift",
+        "text": "ZZZ",
+        "col": "white"
+       }
+      ],
+      "at": "russa"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il portone si è appena aperto.",
+   "cap": "Il portone si è appena aperto.",
+   "red": "aperto",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 1.25,
+        "y": 0.0,
+        "a": "impactdrift",
+        "door": "aperto"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "carTop",
+        "s": 2.2,
+        "y": 1.6,
+        "a": "impactdrift",
+        "x": -1.35,
+        "door": "aperto"
+       }
+      ],
+      "at": "appena"
+     }
+    ],
+    "sfx": [
+     [
+      "creak",
+      "aperto"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Papà Ti Scrive «Scendi, Sono Sotto» Ma Dorme In Camera… NON SCENDERE",
+  "publish": "giovedì 19 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Il numero è quello di papà. Il resto no."
+  ],
+  "question": "👇 Ti è mai arrivato un messaggio da un parente che non poteva averlo scritto? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Ti è mai arrivato un messaggio da un parente che non poteva averlo scritto? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "papà",
+   "messaggio",
+   "sotto casa"
+  ]
+ }
+}
