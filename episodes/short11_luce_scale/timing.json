@@ -1,0 +1,426 @@
+{
+ "duration": 25.72,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.85,
+   "dur": 4.85,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "la",
+     "s": 0.18,
+     "e": 0.32
+    },
+    {
+     "w": "luce",
+     "s": 0.32,
+     "e": 0.54
+    },
+    {
+     "w": "delle",
+     "s": 0.54,
+     "e": 0.74
+    },
+    {
+     "w": "scale",
+     "s": 0.74,
+     "e": 1.1
+    },
+    {
+     "w": "si",
+     "s": 1.1,
+     "e": 1.28
+    },
+    {
+     "w": "spegne",
+     "s": 1.28,
+     "e": 1.96
+    },
+    {
+     "w": "e",
+     "s": 1.96,
+     "e": 2.18
+    },
+    {
+     "w": "i",
+     "s": 2.18,
+     "e": 2.28
+    },
+    {
+     "w": "passi",
+     "s": 2.28,
+     "e": 2.64
+    },
+    {
+     "w": "continuano",
+     "s": 2.64,
+     "e": 3.3
+    },
+    {
+     "w": "non",
+     "s": 3.68,
+     "e": 3.88
+    },
+    {
+     "w": "riaccenderla",
+     "s": 3.88,
+     "e": 4.76
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se la luce delle scale si spegne e i passi continuano, non riaccenderla."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 5.05,
+   "end": 8.84,
+   "dur": 3.79,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 5.05,
+     "e": 5.21
+    },
+    {
+     "w": "timer",
+     "s": 5.21,
+     "e": 5.61
+    },
+    {
+     "w": "dura",
+     "s": 5.61,
+     "e": 6.01
+    },
+    {
+     "w": "trenta",
+     "s": 6.01,
+     "e": 6.43
+    },
+    {
+     "w": "secondi",
+     "s": 6.43,
+     "e": 7.19
+    },
+    {
+     "w": "li",
+     "s": 7.49,
+     "e": 7.57
+    },
+    {
+     "w": "conti",
+     "s": 7.57,
+     "e": 7.97
+    },
+    {
+     "w": "dallo",
+     "s": 7.97,
+     "e": 8.15
+    },
+    {
+     "w": "spioncino",
+     "s": 8.15,
+     "e": 8.77
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il timer dura 30 secondi. Li conti dallo spioncino."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.04,
+   "end": 12.67,
+   "dur": 3.63,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "passi",
+     "s": 9.04,
+     "e": 9.38
+    },
+    {
+     "w": "al",
+     "s": 9.38,
+     "e": 9.48
+    },
+    {
+     "w": "secondo",
+     "s": 9.48,
+     "e": 9.82
+    },
+    {
+     "w": "piano",
+     "s": 9.82,
+     "e": 10.28
+    },
+    {
+     "w": "terzo",
+     "s": 10.8,
+     "e": 11.38
+    },
+    {
+     "w": "quarto",
+     "s": 11.82,
+     "e": 12.28
+    },
+    {
+     "w": "il",
+     "s": 12.78,
+     "e": 12.88
+    },
+    {
+     "w": "tuo",
+     "s": 12.88,
+     "e": 13.22
+    }
+   ],
+   "match": 1.0,
+   "heard": "Passi al secondo piano. Terzo. Quarto, il tuo."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 12.87,
+   "end": 15.24,
+   "dur": 2.37,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "poi",
+     "s": 12.87,
+     "e": 13.17
+    },
+    {
+     "w": "si",
+     "s": 13.17,
+     "e": 13.43
+    },
+    {
+     "w": "fermano",
+     "s": 13.43,
+     "e": 13.89
+    },
+    {
+     "w": "davanti",
+     "s": 13.89,
+     "e": 14.33
+    },
+    {
+     "w": "alla",
+     "s": 14.33,
+     "e": 14.47
+    },
+    {
+     "w": "tua",
+     "s": 14.47,
+     "e": 14.65
+    },
+    {
+     "w": "porta",
+     "s": 14.65,
+     "e": 15.01
+    }
+   ],
+   "match": 1.0,
+   "heard": "Poi si fermano davanti alla tua porta."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 15.44,
+   "end": 19.53,
+   "dur": 4.09,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "nessun",
+     "s": 15.44,
+     "e": 15.92
+    },
+    {
+     "w": "rumore",
+     "s": 15.92,
+     "e": 16.3
+    },
+    {
+     "w": "di",
+     "s": 16.3,
+     "e": 16.44
+    },
+    {
+     "w": "chiavi",
+     "s": 16.44,
+     "e": 16.88
+    },
+    {
+     "w": "solo",
+     "s": 17.08,
+     "e": 17.48
+    },
+    {
+     "w": "il",
+     "s": 17.48,
+     "e": 17.64
+    },
+    {
+     "w": "pulsante",
+     "s": 17.64,
+     "e": 18.14
+    },
+    {
+     "w": "della",
+     "s": 18.14,
+     "e": 18.38
+    },
+    {
+     "w": "luce",
+     "s": 18.38,
+     "e": 18.7
+    },
+    {
+     "w": "che",
+     "s": 18.7,
+     "e": 18.84
+    },
+    {
+     "w": "si",
+     "s": 18.84,
+     "e": 18.98
+    },
+    {
+     "w": "accende",
+     "s": 18.98,
+     "e": 19.46
+    }
+   ],
+   "match": 1.0,
+   "heard": "Nessun rumore di chiavi. Solo il pulsante della luce che si accende."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 19.73,
+   "end": 23.52,
+   "dur": 3.79,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 19.73,
+     "e": 19.87
+    },
+    {
+     "w": "riaccenderla",
+     "s": 19.87,
+     "e": 20.79
+    },
+    {
+     "w": "la",
+     "s": 21.05,
+     "e": 21.17
+    },
+    {
+     "w": "luce",
+     "s": 21.17,
+     "e": 21.49
+    },
+    {
+     "w": "serve",
+     "s": 21.49,
+     "e": 21.79
+    },
+    {
+     "w": "a",
+     "s": 21.79,
+     "e": 22.01
+    },
+    {
+     "w": "chi",
+     "s": 22.01,
+     "e": 22.11
+    },
+    {
+     "w": "e",
+     "s": 22.11,
+     "e": 22.23
+    },
+    {
+     "w": "fuori",
+     "s": 22.23,
+     "e": 22.71
+    },
+    {
+     "w": "non",
+     "s": 22.93,
+     "e": 23.03
+    },
+    {
+     "w": "a",
+     "s": 23.03,
+     "e": 23.23
+    },
+    {
+     "w": "te",
+     "s": 23.23,
+     "e": 23.39
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non riaccenderla, la luce serve a chi è fuori, non a te."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.72,
+   "end": 25.67,
+   "dur": 1.95,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "per",
+     "s": 23.72,
+     "e": 23.86
+    },
+    {
+     "w": "questo",
+     "s": 23.86,
+     "e": 24.26
+    },
+    {
+     "w": "premono",
+     "s": 24.26,
+     "e": 24.8
+    },
+    {
+     "w": "il",
+     "s": 24.8,
+     "e": 24.88
+    },
+    {
+     "w": "pulsante",
+     "s": 24.88,
+     "e": 25.42
+    }
+   ],
+   "match": 1.0,
+   "heard": "Per questo premono il pulsante."
+  }
+ ]
+}
