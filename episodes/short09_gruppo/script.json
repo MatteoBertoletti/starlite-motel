@@ -1,0 +1,767 @@
+{
+ "title": "Se Nel Gruppo Famiglia Compare Un Partecipante In Più… NON SALUTARE",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se nel gruppo famiglia compare un partecipante in più, non salutare.",
+   "capfull": true,
+   "cap": "Se nel gruppo famiglia compare un partecipante in più, non salutare.",
+   "red": "salutare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "WHATSAPP · ORA",
+        "tag": "GRUPPO FAMIGLIA",
+        "lines": [
+         {
+          "t": "5",
+          "s": 24
+         },
+         {
+          "t": "PARTECIPANTI",
+          "s": 11
+         }
+        ],
+        "foot": "(siete in 4)",
+        "fcol": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.7,
+        "y": -0.45,
+        "a": "impactdrift",
+        "app": "WHATSAPP · ORA",
+        "tag": "GRUPPO FAMIGLIA",
+        "lines": [
+         {
+          "t": "5",
+          "s": 24
+         },
+         {
+          "t": "PARTECIPANTI",
+          "s": 11
+         }
+        ],
+        "foot": "(siete in 4)",
+        "fcol": "red"
+       }
+      ],
+      "at": "gruppo"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "at": "compare"
+         }
+        ]
+       }
+      ],
+      "at": "compare"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.3,
+        "y": -1.0,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "at": null
+         }
+        ],
+        "x": 0.0
+       }
+      ],
+      "at": "partecipante"
+     },
+     {
+      "els": [
+       {
+        "i": "hand",
+        "s": 0.9,
+        "y": -0.35,
+        "a": "impactdrift",
+        "tilt": -0.2
+       },
+       {
+        "i": "slash",
+        "s": 1.0,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Siete in quattro: tu, mamma, papà e tua sorella.",
+   "cap": "Siete in quattro: tu, mamma, papà e tua sorella.",
+   "red": "quattro",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "fam",
+        "s": 1.1,
+        "y": -0.15,
+        "a": "impactdrift",
+        "ats": [
+         "tu",
+         "mamma",
+         "papà",
+         "sorella"
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "fam",
+        "s": 1.9,
+        "y": -0.25,
+        "a": "impactdrift",
+        "ats": [
+         "tu",
+         "mamma",
+         "papà",
+         "sorella"
+        ],
+        "x": 0.35
+       }
+      ],
+      "at": "mamma"
+     },
+     {
+      "els": [
+       {
+        "i": "fam",
+        "s": 1.9,
+        "y": -0.25,
+        "a": "impactdrift",
+        "ats": [
+         "tu",
+         "mamma",
+         "papà",
+         "sorella"
+        ],
+        "x": -0.45
+       }
+      ],
+      "at": "sorella"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il gruppo ne segna cinque. Il nuovo ha solo un numero, nessun nome.",
+   "cap": "Il gruppo ne segna cinque. Il nuovo ha solo un numero, nessun nome.",
+   "red": "nessun",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "fam",
+        "s": 1.1,
+        "y": -0.15,
+        "a": "impactdrift",
+        "ats": [
+         "il",
+         "il",
+         "il",
+         "il"
+        ],
+        "ghost": "cinque"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": "nuovo",
+          "at": null
+         }
+        ]
+       }
+      ],
+      "at": "nuovo"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.4,
+        "y": -1.05,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "at": null
+         }
+        ]
+       }
+      ],
+      "at": "numero"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 3.4,
+        "y": -1.55,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "at": null
+         }
+        ],
+        "x": 0.75
+       }
+      ],
+      "at": "nessun"
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tutti scrivono «chi sei?». Lui non risponde.",
+   "cap": "Tutti scrivono «chi sei?». Lui non risponde.",
+   "red": "risponde",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "msgs": [
+         {
+          "n": "Sorella",
+          "t": "chi sei?",
+          "at": "scrivono"
+         },
+         {
+          "n": "Papà",
+          "t": "chi sei?",
+          "at": "chi"
+         },
+         {
+          "n": "Tu",
+          "who": "me",
+          "t": "chi sei?",
+          "at": "sei"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "msgs": [
+         {
+          "n": "Sorella",
+          "t": "chi sei?"
+         },
+         {
+          "n": "Papà",
+          "t": "chi sei?"
+         },
+         {
+          "n": "Tu",
+          "who": "me",
+          "t": "chi sei?"
+         }
+        ],
+        "typing": "lui"
+       }
+      ],
+      "at": "lui"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.0,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "r": "visto"
+         }
+        ]
+       }
+      ],
+      "at": "risponde"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "risponde"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Finché mamma, che ha il telefono spento, mette un cuore sotto il suo messaggio.",
+   "cap": "Finché mamma, che ha il telefono spento, mette un cuore sotto il suo messaggio.",
+   "red": "cuore",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "momoff",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "label": "MAMMA"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "momoff",
+        "s": 1.55,
+        "y": -0.05,
+        "a": "impactdrift",
+        "label": "TELEFONO SPENTO"
+       }
+      ],
+      "at": "telefono"
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "msgs": [
+         {
+          "n": "+39 ••• 2291",
+          "t": ".",
+          "col": "red"
+         }
+        ]
+       }
+      ],
+      "at": "mette"
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 2.6,
+        "y": -0.95,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "msgs": [
+         {
+          "n": "+39 ••• 2291",
+          "t": ".",
+          "col": "red",
+          "react": true
+         }
+        ],
+        "x": 0.2
+       }
+      ],
+      "at": "cuore"
+     },
+     {
+      "els": [
+       {
+        "i": "chatg",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "msgs": [
+         {
+          "n": "+39 ••• 2291",
+          "t": ".",
+          "col": "red",
+          "react": true
+         }
+        ]
+       }
+      ],
+      "at": "messaggio"
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "cuore"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non salutare. Chi lo fa viene contato.",
+   "cap": "Non salutare. Chi lo fa viene contato.",
+   "red": "contato",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hand",
+        "s": 0.9,
+        "y": -0.35,
+        "a": "impactdrift",
+        "tilt": -0.2
+       },
+       {
+        "i": "slash",
+        "s": 1.0,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Gruppo famiglia",
+        "sub": "5 partecipanti",
+        "rows": [
+         {
+          "t": "Tu",
+          "av": "T",
+          "r": "admin"
+         },
+         {
+          "t": "Mamma",
+          "av": "M"
+         },
+         {
+          "t": "Papà",
+          "av": "P"
+         },
+         {
+          "t": "Sorella",
+          "av": "S"
+         },
+         {
+          "t": "+39 347 ••• 2291",
+          "av": "?",
+          "sub": "nessun nome",
+          "hot": true,
+          "at": null
+         }
+        ]
+       }
+      ],
+      "at": "chi"
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.0,
+        "y": -0.2,
+        "a": "impactdrift",
+        "label": "PARTECIPANTI",
+        "v": "5",
+        "sz": 26,
+        "col": "red"
+       }
+      ],
+      "at": "contato"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Adesso siete in sei.",
+   "cap": "Adesso siete in sei.",
+   "red": "sei",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.0,
+        "y": -0.2,
+        "a": "impactdrift",
+        "label": "PARTECIPANTI",
+        "vals": [
+         [
+          "5",
+          true
+         ],
+         [
+          "6",
+          "sei"
+         ]
+        ],
+        "sz": 30,
+        "col": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "label": "PARTECIPANTI",
+        "vals": [
+         [
+          "6",
+          true
+         ]
+        ],
+        "sz": 34,
+        "col": "red"
+       }
+      ],
+      "at": "sei"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "sei"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Nel Gruppo Famiglia Compare Un Partecipante In Più… NON SALUTARE",
+  "publish": "lunedì 16 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Un numero senza nome, in un gruppo che conosci a memoria."
+  ],
+  "question": "👇 Chi ti ha scritto per ultimo nel gruppo famiglia? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Chi ti ha scritto per ultimo nel gruppo famiglia? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "gruppo famiglia",
+   "whatsapp",
+   "partecipante in più"
+  ]
+ }
+}

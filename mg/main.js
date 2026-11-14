@@ -1,6 +1,7 @@
 // Motion-graphics film: black stage, glowing flat pictograms, rule cards, full-sentence captions.
 // window.seek(t) draws frame t and is a pure function of time; every beat is keyed to word times.
 import { ICONS, C, T, rings } from './icons.js';
+import { SCN, setH } from './kit.js';
 
 const Q = new URLSearchParams(location.search);
 const EP = Q.get('ep') || 'ep01_citofono';
@@ -38,6 +39,7 @@ const clamp01 = x => Math.max(0, Math.min(1, x));
 const easeOut = x => 1 - Math.pow(1 - clamp01(x), 3);
 const backOut = x => { x = clamp01(x); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
 const hash = n => { const s = Math.sin(n * 127.1 + 311.7) * 43758.5453; return s - Math.floor(s); };
+setH({ txt: (...a) => txt(...a), W_el: (...a) => W_el(...a), at: (...a) => at(...a), easeOut, backOut, hash, get GLOW() { return GLOW; } });
 const CX = FW / 2, CY = VERT ? 768 : 450, UX = VERT ? 400 : 720, UY = VERT ? 420 : 330, US = VERT ? 400 : 430;   // stage centre and units
 const GLOW = { white: 'rgba(242,239,232,0.75)', gold: 'rgba(245,196,81,0.95)', red: 'rgba(229,50,45,0.95)' };
 const colOf = n => n === 'red' ? C.red : n === 'gold' ? C.gold : n === 'green' ? C.green : n === 'dim' ? '#8d8981' : C.w;
@@ -158,6 +160,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (i === 'recenti') { c.scale(sc, sc); calllogUI(c, el, L, lt, tt, size); }
   else if (i === 'lamp2') { c.scale(sc, sc); lampUI(c, el, L, lt, tt, size); }
   else if (i === 'stairwell') { c.scale(sc, sc); stairwellUI(c, el, L, lt, tt, size); }
+  else if (SCN[i]) { c.scale(sc, sc); SCN[i](c, el, L, lt, tt, size); }
   else if (i === 'classroom' || i === 'corridor') { c.save(); c.scale(sc, sc); (i === 'classroom' ? classroomUI : corridorUI)(c, el, L, lt, tt, size); c.restore();
     if (!VERT) { const g = c.createLinearGradient(0, 715 - (y + dy), 0, 835 - (y + dy)); g.addColorStop(0, 'rgba(5,5,6,0)'); g.addColorStop(1, 'rgba(5,5,6,1)'); c.shadowBlur = 0; c.fillStyle = g; c.fillRect(-(x + dx) - 600, 715 - (y + dy), FW + 1200, 121); } }
   else if (i === 'register') { c.scale(sc, sc); registerUI(c, el, L, lt, tt, size); }
