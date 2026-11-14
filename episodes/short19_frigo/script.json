@@ -62,6 +62,21 @@
       "els": [
        {
         "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "drift2",
+        "beeps": [
+         "frigo"
+        ],
+        "beep": true
+       }
+      ],
+      "at": "frigo"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
         "s": 3.0,
         "y": 2.34,
         "a": "drift2",
@@ -123,6 +138,22 @@
      {
       "els": [
        {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "drift2",
+        "beeps": [
+         "beep",
+         "ripete"
+        ],
+        "beep": true
+       }
+      ],
+      "at": "beep"
+     },
+     {
+      "els": [
+       {
         "i": "counter",
         "s": 1.4,
         "y": -0.25,
@@ -148,7 +179,8 @@
       "beep"
      ]
     ]
-   }
+   },
+   "take": 2
   },
   {
    "id": 3,
@@ -192,6 +224,18 @@
        }
       ],
       "at": "guarnizione"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "drift2",
+        "off": true
+       }
+      ],
+      "at": "posto"
      }
     ]
    }
@@ -243,6 +287,17 @@
        }
       ],
       "at": "premuta"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "drift2"
+       }
+      ],
+      "at": "dentro"
      }
     ]
    }
@@ -265,6 +320,30 @@
         "a": "drift2"
        }
       ]
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.8,
+        "y": -0.2,
+        "a": "drift2",
+        "bend": "ripiani"
+       }
+      ],
+      "at": "ripiani"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 2.3,
+        "y": -0.2,
+        "a": "drift2",
+        "bend": "ripiani"
+       }
+      ],
+      "at": "piega"
      }
     ],
     "sfx": [
@@ -308,6 +387,18 @@
         "s": 1.5,
         "y": -0.2,
         "a": "drift2",
+        "bend": true
+       }
+      ],
+      "at": "ripiano"
+     },
+     {
+      "els": [
+       {
+        "i": "shelves",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "drift2",
         "bend": true,
         "gone": "meno"
        }
@@ -337,6 +428,31 @@
         "gone": true
        }
       ]
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "drift2",
+        "handle": "fatto"
+       }
+      ],
+      "at": "fatto"
+     },
+     {
+      "els": [
+       {
+        "i": "fridgeK",
+        "s": 3.0,
+        "y": 1.84,
+        "a": "drift2",
+        "x": -0.675,
+        "handle": "fatto"
+       }
+      ],
+      "at": "spazio"
      }
     ],
     "sfx": [
