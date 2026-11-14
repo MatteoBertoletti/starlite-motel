@@ -15,10 +15,10 @@
  },
  "start_pad": 0.0,
  "end_pad": 0.05,
- "default_gap": 0.25,
+ "default_gap": 0.1,
  "tight": {
-  "cap": 0.25,
-  "longer": 0.26
+  "cap": 0.1,
+  "longer": 0.11
  },
  "speed_N": 1.0,
  "sweep": true,
@@ -178,8 +178,7 @@
       "at": "giorni"
      }
     ]
-   },
-   "take": 2
+   }
   },
   {
    "id": 3,
@@ -235,8 +234,7 @@
       "at": "ieri"
      }
     ]
-   },
-   "take": 2
+   }
   },
   {
    "id": 4,
@@ -359,8 +357,7 @@
       "at": "apri"
      }
     ]
-   },
-   "take": 2
+   }
   },
   {
    "id": 6,
@@ -440,8 +437,7 @@
       "at": "sola"
      }
     ]
-   },
-   "take": 2
+   }
   },
   {
    "id": 7,
