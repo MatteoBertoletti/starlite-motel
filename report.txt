@@ -1,0 +1,10 @@
+  1 N         0.00-   5.37 match=1.00 eleven_v4 | Se papà ti scrive «scendi, sono sotto» ma dorme in camera, non scendere.
+  2 N         5.62-   9.50 match=1.00 eleven_v4 | Il messaggio arriva dal suo numero. Tu vai alla finestra.
+  3 N         9.75-  12.76 match=1.00 eleven_v4 | Sotto c 'è la sua macchina, con i fari accesi.
+  4 N        13.01-  15.90 match=1.00 eleven_v4 | Sul sedile del guidatore, una sagoma ferma.
+  5 N        16.15-  19.25 match=1.00 eleven_v4 | Il telefono vibra. «Dai, che ho freddo.»
+  6 N        19.50-  22.33 match=1.00 eleven_v4 | Dalla stanza accanto senti papà che russa.
+  7 N        22.58-  24.63 match=1.00 eleven_v4 | Il portone si è appena aperto.
+
+TOTAL 24.7s  new characters billed ~329  cached lines 0
+low match lines: []
