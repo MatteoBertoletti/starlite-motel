@@ -14,11 +14,11 @@
   }
  },
  "start_pad": 0.0,
- "end_pad": 0.05,
- "default_gap": 0.2,
+ "end_pad": 0.2,
+ "default_gap": 0.3,
  "tight": {
-  "cap": 0.2,
-  "longer": 0.21000000000000002
+  "cap": 0.3,
+  "longer": 0.31
  },
  "speed_N": 1.0,
  "dips": [],

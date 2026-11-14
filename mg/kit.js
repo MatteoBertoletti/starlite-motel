@@ -286,17 +286,9 @@ export const SCN = {
   },
   // ---------- mum's phone, off ----------
   momoff(c, el, L, lt, tt, size) {
-    const h = size * 2.2 * (el.hs || 0.8), w = h * 0.49, u = w / 50; phone(c, w, h, u, false); c.beginPath(); c.arc(0, 0, u * 6, -1.2, 1.2 + Math.PI); c.lineWidth = u * 1; c.strokeStyle = '#3a3a40'; c.stroke(); c.beginPath(); c.moveTo(0, -u * 8); c.lineTo(0, -u * 2); c.stroke();
-    TX(c, el.label || 'MAMMA · SPENTO', 0, h * 0.3, u * 3.6, '900', DIM, 'center', 3);
-  },
-
-  // ---------- a row of family members (dim until named), and an extra, red one ----------
-  fam(c, el, L, lt, tt, size) {
-    const u = size / 40, names = el.names || ['TU', 'MAMMA', 'PAPÀ', 'SORELLA'], ats = el.ats || [], n = names.length + (el.ghost !== undefined ? 1 : 0), sp = el.sp || 17, x0 = -(n - 1) * sp / 2;
-    names.forEach((nm, i) => { const t = ats[i] === undefined ? -99 : T_(L, el, ats[i]), on = t !== null && lt >= t, k = on ? H.backOut(cl((lt - t) / 0.35)) : 0, x = (x0 + i * sp) * u;
-      c.save(); c.globalAlpha *= on ? 1 : 0.22; c.translate(x, 0); c.scale(0.8 + 0.2 * k, 0.8 + 0.2 * k); person(c, 0, -4 * u, 4.4 * u, i === 0 ? C.gold : C.w, on ? glowOf(i === 0 ? 'gold' : 'white') : null); TX(c, nm, 0, 18 * u, u * 2.9, '900', i === 0 ? C.gold : on ? C.w : DIM, 'center', 2); c.restore(); });
-    if (el.ghost !== undefined) { const t = T_(L, el, el.ghost), on = t !== null && lt >= t; if (on) { const k = H.backOut(cl((lt - t) / 0.4)), x = (x0 + names.length * sp) * u; c.save(); c.translate(x, 0); c.scale(k, k); c.globalAlpha *= 0.55 + 0.45 * Math.abs(Math.sin(tt * 5));
-      GL(c, 'red', 28); person(c, 0, -4 * u, 4.4 * u, C.red, 'rgba(229,50,45,0.9)'); NG(c); TX(c, '?', 0, 1 * u, u * 5, '900', '#050506'); TX(c, el.gname || 'NESSUN NOME', 0, 18 * u, u * 2.9, '900', C.red, 'center', 2); c.restore(); } }
+    const h = size * 2.2 * (el.hs || 0.8), w = h * 0.49, u = w / 50, pu = 0.5 + 0.5 * Math.sin(tt * 2.4); c.save(); GL(c, 'red', 8 + 26 * pu); phone(c, w, h, u, false); c.restore();
+    c.beginPath(); c.arc(0, -u * 4, u * 8, -1.2, 1.2 + Math.PI); c.lineWidth = u * 1.6; c.strokeStyle = '#5a5a62'; c.stroke(); c.beginPath(); c.moveTo(0, -u * 13); c.lineTo(0, -u * 5); c.stroke();
+    c.save(); GL(c, 'red', 18); TF(c, el.label || 'SPENTO', 0, u * 12, u * 6.4, w - u * 8, '900', C.red, 'center', 2); c.restore(); if (el.sub) TF(c, el.sub, 0, u * 20, u * 3.4, w - u * 10, '800', DIM, 'center', 2);
   },
   // ---------- any ICON with a gentle sway / pulse and a coloured glow ----------
   ic(c, el, L, lt, tt, size) {
