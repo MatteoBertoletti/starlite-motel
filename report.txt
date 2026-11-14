@@ -1,0 +1,10 @@
+  1 N         0.00-   4.85 match=1.00 eleven_v4 | Se la luce delle scale si spegne e i passi continuano, non riaccenderla.
+  2 N         5.05-   8.84 match=1.00 eleven_v4 | Il timer dura 30 secondi. Li conti dallo spioncino.
+  3 N         9.04-  12.67 match=1.00 eleven_v4 | Passi al secondo piano. Terzo. Quarto, il tuo.
+  4 N        12.87-  15.24 match=1.00 eleven_v4 | Poi si fermano davanti alla tua porta.
+  5 N        15.44-  19.53 match=1.00 eleven_v4 | Nessun rumore di chiavi. Solo il pulsante della luce che si accende.
+  6 N        19.73-  23.52 match=1.00 eleven_v4 | Non riaccenderla, la luce serve a chi è fuori, non a te.
+  7 N        23.72-  25.67 match=1.00 eleven_v4 | Per questo premono il pulsante.
+
+TOTAL 25.7s  new characters billed ~366  cached lines 0
+low match lines: []
