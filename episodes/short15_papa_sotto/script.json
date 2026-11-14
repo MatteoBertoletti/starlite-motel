@@ -157,17 +157,6 @@
        }
       ],
       "at": "numero"
-     },
-     {
-      "els": [
-       {
-        "i": "winK",
-        "s": 1.15,
-        "y": -0.05,
-        "a": "drift2"
-       }
-      ],
-      "at": "finestra"
      }
     ]
    }
@@ -312,29 +301,6 @@
        }
       ],
       "at": "dai"
-     },
-     {
-      "els": [
-       {
-        "i": "chatg",
-        "s": 1.25,
-        "y": -0.2,
-        "a": "drift2",
-        "title": "Papà",
-        "msgs": [
-         {
-          "n": "Papà",
-          "t": "scendi, sono sotto"
-         },
-         {
-          "n": "Papà",
-          "t": "Dai, che ho freddo.",
-          "col": "red"
-         }
-        ]
-       }
-      ],
-      "at": "freddo"
      }
     ],
     "sfx": [
@@ -363,36 +329,6 @@
         "a": "drift2"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "bed",
-        "s": 1.6,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "papà"
-     },
-     {
-      "els": [
-       {
-        "i": "bed",
-        "s": 1.6,
-        "y": -0.2,
-        "a": "drift2"
-       },
-       {
-        "i": "text",
-        "s": 1.0,
-        "y": -0.9,
-        "a": "drift2",
-        "text": "ZZZ",
-        "col": "white"
-       }
-      ],
-      "at": "russa"
      }
     ]
    }

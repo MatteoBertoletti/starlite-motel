@@ -59,29 +59,6 @@
      {
       "els": [
        {
-        "i": "hook",
-        "s": 1.8,
-        "y": -0.45,
-        "a": "drift2",
-        "app": "IMPOSTAZIONI · WI-FI",
-        "bars": 4,
-        "tag": "«LA TUA RETE»",
-        "lines": [
-         {
-          "t": "2ª COPIA",
-          "s": 16,
-          "col": "red"
-         }
-        ],
-        "foot": "SEGNALE MASSIMO",
-        "fcol": "red"
-       }
-      ],
-      "at": "compare"
-     },
-     {
-      "els": [
-       {
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
@@ -189,26 +166,6 @@
      {
       "els": [
        {
-        "i": "mapz",
-        "s": 2.3,
-        "y": 0.1,
-        "a": "drift2",
-        "x": -0.05,
-        "router": true,
-        "dots": [
-         {
-          "n": "TU",
-          "c": "gold",
-          "at": "camera"
-         }
-        ]
-       }
-      ],
-      "at": "router"
-     },
-     {
-      "els": [
-       {
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
@@ -297,37 +254,6 @@
        {
         "i": "mapz",
         "s": 1.8,
-        "y": 0.3,
-        "a": "drift2",
-        "x": -0.3,
-        "router": true,
-        "dots": [
-         {
-          "n": "TU",
-          "c": "gold",
-          "at": "camera",
-          "path": [
-           [
-            "cucina",
-            "cucina"
-           ],
-           [
-            "bagno",
-            "bagno"
-           ]
-          ],
-          "sig": true
-         }
-        ]
-       }
-      ],
-      "at": "cucina"
-     },
-     {
-      "els": [
-       {
-        "i": "mapz",
-        "s": 1.8,
         "y": -0.3,
         "a": "drift2",
         "x": -0.3,
@@ -392,17 +318,6 @@
      {
       "els": [
        {
-        "i": "shadow",
-        "s": 1.3,
-        "y": -0.2,
-        "a": "drift2"
-       }
-      ],
-      "at": "meno"
-     },
-     {
-      "els": [
-       {
         "i": "phone",
         "s": 1.3,
         "y": -0.3,
@@ -447,36 +362,6 @@
         "g": "red"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "you",
-        "s": 1.2,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "aspetta"
-     },
-     {
-      "els": [
-       {
-        "i": "plist",
-        "s": 2.2,
-        "y": 1.28,
-        "a": "drift2",
-        "title": "Wi-Fi",
-        "rows": [
-         {
-          "t": "LA TUA RETE",
-          "bars": 4,
-          "hot": true
-         }
-        ]
-       }
-      ],
-      "at": "stanchi"
      }
     ]
    }
@@ -527,26 +412,6 @@
        }
       ],
       "at": "dietro"
-     },
-     {
-      "els": [
-       {
-        "i": "mapz",
-        "s": 3.0,
-        "y": -0.8,
-        "a": "drift2",
-        "x": 0.7,
-        "dots": [
-         {
-          "n": "TU",
-          "c": "gold",
-          "at": "camera",
-          "ring": "dietro"
-         }
-        ]
-       }
-      ],
-      "at": "te"
      }
     ],
     "sfx": [

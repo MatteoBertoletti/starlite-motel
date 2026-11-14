@@ -65,7 +65,8 @@
         "pill": "FOTOCAMERA IN USO"
        }
       ],
-      "at": "fotocamera"
+      "at": "fotocamera",
+      "dt": 0.82
      },
      {
       "els": [
@@ -120,18 +121,6 @@
         "pill": "FOTOCAMERA IN USO"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "camUI",
-        "s": 3.0,
-        "y": 2.52,
-        "a": "drift2",
-        "x": -1.1
-       }
-      ],
-      "at": "resta"
      },
      {
       "els": [
@@ -279,19 +268,6 @@
       "els": [
        {
         "i": "camUI",
-        "s": 2.4,
-        "y": 1.99,
-        "a": "drift2",
-        "cover": "copri",
-        "pill": "FOTOCAMERA IN USO"
-       }
-      ],
-      "at": "copri"
-     },
-     {
-      "els": [
-       {
-        "i": "camUI",
         "s": 3.0,
         "y": 2.52,
         "a": "drift2",
@@ -335,17 +311,6 @@
      {
       "els": [
        {
-        "i": "ear",
-        "s": 1.4,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "vuol"
-     },
-     {
-      "els": [
-       {
         "i": "text",
         "s": 1.0,
         "y": -0.3,
@@ -377,28 +342,6 @@
         "a": "drift2"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "ear",
-        "s": 1.4,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "adesso"
-     },
-     {
-      "els": [
-       {
-        "i": "ear",
-        "s": 2.2,
-        "y": -0.3,
-        "a": "surge"
-       }
-      ],
-      "at": "ascolta"
      }
     ],
     "sfx": [
@@ -436,26 +379,6 @@
         "g": "red"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "you",
-        "s": 1.9,
-        "y": -0.55,
-        "a": "drift2"
-       },
-       {
-        "i": "hand",
-        "s": 0.6,
-        "y": -0.88,
-        "a": "still",
-        "x": 0.0,
-        "col": "red",
-        "g": "red"
-       }
-      ],
-      "at": "parlare"
      }
     ]
    }
