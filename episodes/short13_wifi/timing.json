@@ -1,0 +1,408 @@
+{
+ "duration": 23.46,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.83,
+   "dur": 4.83,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.16
+    },
+    {
+     "w": "compare",
+     "s": 0.16,
+     "e": 0.56
+    },
+    {
+     "w": "una",
+     "s": 0.56,
+     "e": 0.76
+    },
+    {
+     "w": "rete",
+     "s": 0.76,
+     "e": 1.04
+    },
+    {
+     "w": "wi",
+     "s": 1.04,
+     "e": 1.24
+    },
+    {
+     "w": "fi",
+     "s": 1.24,
+     "e": 1.62
+    },
+    {
+     "w": "con",
+     "s": 1.62,
+     "e": 1.84
+    },
+    {
+     "w": "lo",
+     "s": 1.84,
+     "e": 1.98
+    },
+    {
+     "w": "stesso",
+     "s": 1.98,
+     "e": 2.28
+    },
+    {
+     "w": "nome",
+     "s": 2.28,
+     "e": 2.66
+    },
+    {
+     "w": "di",
+     "s": 2.66,
+     "e": 2.8
+    },
+    {
+     "w": "casa",
+     "s": 2.8,
+     "e": 2.96
+    },
+    {
+     "w": "tua",
+     "s": 2.96,
+     "e": 3.28
+    },
+    {
+     "w": "non",
+     "s": 3.64,
+     "e": 3.86
+    },
+    {
+     "w": "collegarti",
+     "s": 3.86,
+     "e": 4.6
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se compare una rete Wi -Fi con lo stesso nome di casa tua, non collegarti."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 5.03,
+   "end": 10.33,
+   "dur": 5.3,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 5.03,
+     "e": 5.19
+    },
+    {
+     "w": "tuo",
+     "s": 5.19,
+     "e": 5.33
+    },
+    {
+     "w": "router",
+     "s": 5.33,
+     "e": 5.71
+    },
+    {
+     "w": "e",
+     "s": 5.71,
+     "e": 5.97
+    },
+    {
+     "w": "in",
+     "s": 5.97,
+     "e": 6.07
+    },
+    {
+     "w": "corridoio",
+     "s": 6.07,
+     "e": 6.73
+    },
+    {
+     "w": "quello",
+     "s": 6.97,
+     "e": 7.41
+    },
+    {
+     "w": "nuovo",
+     "s": 7.41,
+     "e": 7.71
+    },
+    {
+     "w": "ha",
+     "s": 7.71,
+     "e": 8.03
+    },
+    {
+     "w": "il",
+     "s": 8.03,
+     "e": 8.13
+    },
+    {
+     "w": "segnale",
+     "s": 8.13,
+     "e": 8.57
+    },
+    {
+     "w": "al",
+     "s": 8.57,
+     "e": 8.69
+    },
+    {
+     "w": "massimo",
+     "s": 8.69,
+     "e": 9.27
+    },
+    {
+     "w": "anche",
+     "s": 9.43,
+     "e": 9.65
+    },
+    {
+     "w": "in",
+     "s": 9.65,
+     "e": 9.81
+    },
+    {
+     "w": "camera",
+     "s": 9.81,
+     "e": 10.13
+    }
+   ],
+   "match": 1.0,
+   "heard": "il tuo router è in corridoio. Quello nuovo ha il segnale al massimo, anche in camera."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 10.53,
+   "end": 14.06,
+   "dur": 3.53,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "vai",
+     "s": 10.53,
+     "e": 10.73
+    },
+    {
+     "w": "in",
+     "s": 10.73,
+     "e": 10.87
+    },
+    {
+     "w": "cucina",
+     "s": 10.87,
+     "e": 11.39
+    },
+    {
+     "w": "massimo",
+     "s": 11.81,
+     "e": 12.57
+    },
+    {
+     "w": "in",
+     "s": 12.81,
+     "e": 13.07
+    },
+    {
+     "w": "bagno",
+     "s": 13.07,
+     "e": 13.55
+    },
+    {
+     "w": "massimo",
+     "s": 13.83,
+     "e": 14.51
+    }
+   ],
+   "match": 1.0,
+   "heard": "Vai in cucina, massimo. In bagno, massimo."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 14.26,
+   "end": 17.95,
+   "dur": 3.69,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "una",
+     "s": 14.26,
+     "e": 14.48
+    },
+    {
+     "w": "rete",
+     "s": 14.48,
+     "e": 14.78
+    },
+    {
+     "w": "non",
+     "s": 14.78,
+     "e": 14.96
+    },
+    {
+     "w": "cammina",
+     "s": 14.96,
+     "e": 15.64
+    },
+    {
+     "w": "a",
+     "s": 15.88,
+     "e": 15.98
+    },
+    {
+     "w": "meno",
+     "s": 15.98,
+     "e": 16.14
+    },
+    {
+     "w": "che",
+     "s": 16.14,
+     "e": 16.38
+    },
+    {
+     "w": "non",
+     "s": 16.38,
+     "e": 16.56
+    },
+    {
+     "w": "sia",
+     "s": 16.56,
+     "e": 16.78
+    },
+    {
+     "w": "in",
+     "s": 16.78,
+     "e": 16.9
+    },
+    {
+     "w": "tasca",
+     "s": 16.9,
+     "e": 17.24
+    },
+    {
+     "w": "a",
+     "s": 17.24,
+     "e": 17.32
+    },
+    {
+     "w": "qualcuno",
+     "s": 17.32,
+     "e": 17.82
+    }
+   ],
+   "match": 1.0,
+   "heard": "Una rete non cammina, a meno che non sia in tasca a qualcuno."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 18.15,
+   "end": 20.82,
+   "dur": 2.67,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 18.15,
+     "e": 18.33
+    },
+    {
+     "w": "collegarti",
+     "s": 18.33,
+     "e": 19.07
+    },
+    {
+     "w": "aspetta",
+     "s": 19.49,
+     "e": 19.93
+    },
+    {
+     "w": "che",
+     "s": 19.93,
+     "e": 20.03
+    },
+    {
+     "w": "si",
+     "s": 20.03,
+     "e": 20.19
+    },
+    {
+     "w": "stanchi",
+     "s": 20.19,
+     "e": 20.79
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non collegarti. Aspetta che si stanchi."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 21.02,
+   "end": 23.41,
+   "dur": 2.39,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 21.02,
+     "e": 21.14
+    },
+    {
+     "w": "segnale",
+     "s": 21.14,
+     "e": 21.72
+    },
+    {
+     "w": "si",
+     "s": 21.72,
+     "e": 21.98
+    },
+    {
+     "w": "e",
+     "s": 21.98,
+     "e": 22.04
+    },
+    {
+     "w": "spostato",
+     "s": 22.04,
+     "e": 22.56
+    },
+    {
+     "w": "dietro",
+     "s": 22.56,
+     "e": 22.96
+    },
+    {
+     "w": "di",
+     "s": 22.96,
+     "e": 23.08
+    },
+    {
+     "w": "te",
+     "s": 23.08,
+     "e": 23.24
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il segnale si è spostato dietro di te."
+  }
+ ]
+}
