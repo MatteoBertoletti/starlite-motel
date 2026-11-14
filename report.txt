@@ -1,0 +1,10 @@
+  1 N         0.00-   5.31 match=1.00 eleven_v4 | Se la posizione di mamma dice «casa tua» ma lei è in viaggio, non chiamarla.
+  2 N         5.51-   9.80 match=1.00 eleven_v4 | Lei è a Napoli da tre giorni. Il puntino blu è in salotto.
+  3 N        10.00-  14.31 match=1.00 eleven_v4 | Si sposta, cucina, corridoio, davanti alla tua camera.
+  4 N        14.51-  15.32 match=1.00 eleven_v4 | Si ferma.
+  5 N        15.52-  19.73 match=1.00 eleven_v4 | Se la chiami, il suo telefono vibra sul pavimento, oltre la porta.
+  6 N        19.93-  22.90 match=1.00 eleven_v4 | Se vibra, qualcuno ha preso il suo telefono.
+  7 N        23.10-  24.89 match=1.00 eleven_v4 | E sa già dov 'è la tua camera.
+
+TOTAL 24.9s  new characters billed ~336  cached lines 0
+low match lines: []
