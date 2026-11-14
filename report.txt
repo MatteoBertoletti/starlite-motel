@@ -1,0 +1,10 @@
+  1 N         0.00-   3.95 match=1.00 eleven_v4 | Se il cane si mette davanti alla porta mentre esci, resta in casa.
+  2 N         4.20-   7.91 match=1.00 eleven_v4 | Non abbaia. Non ringhia. Ti guarda e basta.
+  3 N         8.16-  11.74 match=1.00 eleven_v4 | Lo scosti con la mano, torna esattamente dove era.
+  4 N        11.99-  15.42 match=1.00 eleven_v4 | Poi scodinzola piano, come quando riconosce qualcuno.
+  5 N        15.67-  18.13 match=1.00 eleven_v4 | Nessun citofono. Nessun passo.
+  6 N        18.38-  22.19 match=1.00 eleven_v4 | Il cane ha sentito qualcuno che conosce fuori dalla porta.
+  7 N        22.44-  24.89 match=1.00 eleven_v4 | E tu stai ancora cercando le chiavi.
+
+TOTAL 24.9s  new characters billed ~337  cached lines 0
+low match lines: []
