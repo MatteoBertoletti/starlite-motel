@@ -69,21 +69,8 @@
         "ring": true
        }
       ],
-      "at": "sveglia"
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 1.7,
-        "y": -0.3,
-        "a": "drift2",
-        "time": "04:04",
-        "ring": true,
-        "red": true
-       }
-      ],
-      "at": "impostata"
+      "at": "sveglia",
+      "dt": 0.84
      },
      {
       "els": [
@@ -151,31 +138,6 @@
        }
       ],
       "at": "esiste"
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 2.3,
-        "y": -0.6,
-        "a": "drift2",
-        "time": "04:04"
-       }
-      ],
-      "at": "attiva"
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 1.25,
-        "y": -0.2,
-        "a": "drift2",
-        "time": "04:04",
-        "red": true
-       }
-      ],
-      "at": "giorni"
      }
     ]
    }
@@ -201,22 +163,6 @@
         "labelat": "alzati"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 2.0,
-        "y": -0.35,
-        "a": "drift2",
-        "time": "04:04",
-        "label": "Alzati",
-        "labelat": "alzati",
-        "made": "Creata ieri · 04:04",
-        "madeat": "creata"
-       }
-      ],
-      "at": "creata"
      },
      {
       "els": [
@@ -257,28 +203,6 @@
         "made": "Creata da questo telefono"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "phone",
-        "s": 1.3,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "telefono"
-     },
-     {
-      "els": [
-       {
-        "i": "bed",
-        "s": 1.6,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "dormivi"
      }
     ]
    }
@@ -341,20 +265,6 @@
        }
       ],
       "at": "etichetta"
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 1.7,
-        "y": -0.3,
-        "a": "drift2",
-        "time": "04:04",
-        "label": "Apri la porta",
-        "ring": true
-       }
-      ],
-      "at": "apri"
      }
     ]
    }
@@ -400,41 +310,6 @@
        }
       ],
       "at": "dura"
-     },
-     {
-      "els": [
-       {
-        "i": "counter",
-        "s": 1.7,
-        "y": -0.25,
-        "a": "drift2",
-        "sz": 34,
-        "col": "red",
-        "label": "SVEGLIA",
-        "unit": "SECONDI",
-        "down": {
-         "from": 30,
-         "to": 0,
-         "at": "trenta",
-         "dur": 3.5
-        }
-       }
-      ],
-      "at": "poi"
-     },
-     {
-      "els": [
-       {
-        "i": "alarmUI",
-        "s": 1.25,
-        "y": -0.2,
-        "a": "drift2",
-        "time": "04:04",
-        "ring": true,
-        "stop": "sola"
-       }
-      ],
-      "at": "sola"
      }
     ]
    }
@@ -467,29 +342,6 @@
         }
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "doorin",
-        "s": 1.15,
-        "y": -0.2,
-        "a": "drift2"
-       }
-      ],
-      "at": "qualcuno"
-     },
-     {
-      "els": [
-       {
-        "i": "doorin",
-        "s": 1.3,
-        "y": -0.2,
-        "a": "drift2",
-        "knock": "bussa"
-       }
-      ],
-      "at": "bussa"
      }
     ],
     "sfx": [
