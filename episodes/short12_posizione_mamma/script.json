@@ -62,32 +62,6 @@
      {
       "els": [
        {
-        "i": "hook",
-        "s": 1.8,
-        "y": -0.5,
-        "a": "drift2",
-        "app": "POSIZIONE · ORA",
-        "bc": "blue",
-        "tag": "MAMMA",
-        "lines": [
-         {
-          "t": "POSIZIONE:",
-          "s": 9.5
-         },
-         {
-          "t": "CASA TUA",
-          "s": 15,
-          "col": "red"
-         }
-        ],
-        "foot": "(lei è a Napoli)"
-       }
-      ],
-      "at": "posizione"
-     },
-     {
-      "els": [
-       {
         "i": "mapz",
         "s": 1.05,
         "y": -0.05,
@@ -104,17 +78,6 @@
        }
       ],
       "at": "mamma"
-     },
-     {
-      "els": [
-       {
-        "i": "car",
-        "s": 1.4,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "viaggio"
      },
      {
       "els": [
@@ -191,27 +154,6 @@
        }
       ],
       "at": "puntino"
-     },
-     {
-      "els": [
-       {
-        "i": "mapz",
-        "s": 2.2,
-        "y": 0.45,
-        "a": "drift2",
-        "x": 0.7,
-        "head": "MAMMA · CASA TUA",
-        "dots": [
-         {
-          "n": "MAMMA",
-          "c": "blue",
-          "at": "salotto"
-         }
-        ],
-        "hot": "salotto"
-       }
-      ],
-      "at": "salotto"
      }
     ]
    }
@@ -291,40 +233,6 @@
        }
       ],
       "at": "cucina"
-     },
-     {
-      "els": [
-       {
-        "i": "mapz",
-        "s": 1.7,
-        "y": -0.2,
-        "a": "drift2",
-        "x": 0.0,
-        "head": "MAMMA · CASA TUA",
-        "dots": [
-         {
-          "n": "MAMMA",
-          "c": "blue",
-          "at": "salotto",
-          "path": [
-           [
-            "cucina",
-            "cucina"
-           ],
-           [
-            "corridoio",
-            "corridoio"
-           ],
-           [
-            "porta",
-            "davanti"
-           ]
-          ]
-         }
-        ]
-       }
-      ],
-      "at": "corridoio"
      },
      {
       "els": [
@@ -457,18 +365,6 @@
      {
       "els": [
        {
-        "i": "doorlight",
-        "s": 2.4,
-        "y": -1.3,
-        "a": "shake",
-        "flicker": true
-       }
-      ],
-      "at": "pavimento"
-     },
-     {
-      "els": [
-       {
         "i": "mapz",
         "s": 1.7,
         "y": -0.2,
@@ -532,17 +428,6 @@
      {
       "els": [
        {
-        "i": "shadow",
-        "s": 1.3,
-        "y": -0.2,
-        "a": "drift2"
-       }
-      ],
-      "at": "qualcuno"
-     },
-     {
-      "els": [
-       {
         "i": "hand",
         "s": 1.2,
         "y": -0.3,
@@ -590,31 +475,6 @@
         "hot": "camera"
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "doorlight",
-        "s": 1.3,
-        "y": -0.2,
-        "a": "shake",
-        "flicker": true
-       }
-      ],
-      "at": "camera"
-     },
-     {
-      "els": [
-       {
-        "i": "doorlight",
-        "s": 2.4,
-        "y": -1.3,
-        "a": "shake",
-        "flicker": true
-       }
-      ],
-      "at": "camera",
-      "dt": 0.7
      }
     ],
     "sfx": [

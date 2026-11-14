@@ -62,32 +62,6 @@
      {
       "els": [
        {
-        "i": "hook",
-        "s": 1.8,
-        "y": -0.5,
-        "a": "drift2",
-        "app": "SCALE · 23:40",
-        "bc": "orange",
-        "tag": "LUCE SCALE",
-        "lines": [
-         {
-          "t": "30 SECONDI",
-          "s": 13
-         },
-         {
-          "t": "PASSI",
-          "s": 17,
-          "col": "red"
-         }
-        ],
-        "foot": "(la luce si è spenta)"
-       }
-      ],
-      "at": "luce"
-     },
-     {
-      "els": [
-       {
         "i": "tower",
         "s": 1.15,
         "y": -0.1,
@@ -100,7 +74,8 @@
         ]
        }
       ],
-      "at": "spegne"
+      "at": "spegne",
+      "dt": -0.16
      },
      {
       "els": [
@@ -180,38 +155,6 @@
        }
       ],
       "at": "trenta"
-     },
-     {
-      "els": [
-       {
-        "i": "counter",
-        "s": 1.7,
-        "y": -0.25,
-        "a": "drift2",
-        "sz": 34,
-        "col": "orange",
-        "label": "LUCE DELLE SCALE",
-        "unit": "SECONDI",
-        "down": {
-         "from": 30,
-         "to": 0,
-         "at": "trenta",
-         "dur": 4.0
-        }
-       }
-      ],
-      "at": "conti"
-     },
-     {
-      "els": [
-       {
-        "i": "peephole",
-        "s": 1.3,
-        "y": -0.3,
-        "a": "drift2"
-       }
-      ],
-      "at": "spioncino"
      }
     ]
    }
@@ -258,35 +201,6 @@
        {
         "i": "tower",
         "s": 1.6,
-        "y": 0.0,
-        "a": "drift2",
-        "path": [
-         [
-          1,
-          true
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
-          4,
-          "quarto"
-         ]
-        ]
-       }
-      ],
-      "at": "secondo"
-     },
-     {
-      "els": [
-       {
-        "i": "tower",
-        "s": 1.6,
         "y": 0.61,
         "a": "drift2",
         "path": [
@@ -310,35 +224,6 @@
        }
       ],
       "at": "terzo"
-     },
-     {
-      "els": [
-       {
-        "i": "tower",
-        "s": 1.6,
-        "y": 1.22,
-        "a": "drift2",
-        "path": [
-         [
-          1,
-          true
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
-          4,
-          "quarto"
-         ]
-        ]
-       }
-      ],
-      "at": "quarto"
      }
     ],
     "sfx": [
@@ -384,19 +269,6 @@
        }
       ],
       "at": "davanti"
-     },
-     {
-      "els": [
-       {
-        "i": "doorin",
-        "s": 1.15,
-        "y": -0.2,
-        "a": "drift2",
-        "glass": true,
-        "sil": "porta"
-       }
-      ],
-      "at": "porta"
      }
     ],
     "sfx": [
@@ -437,17 +309,6 @@
       "els": [
        {
         "i": "lbtn",
-        "s": 1.2,
-        "y": -0.2,
-        "a": "drift2"
-       }
-      ],
-      "at": "solo"
-     },
-     {
-      "els": [
-       {
-        "i": "lbtn",
         "s": 1.8,
         "y": -0.2,
         "a": "drift2",
@@ -455,18 +316,6 @@
        }
       ],
       "at": "pulsante"
-     },
-     {
-      "els": [
-       {
-        "i": "lbtn",
-        "s": 2.2,
-        "y": -0.2,
-        "a": "drift2",
-        "lit": "accende"
-       }
-      ],
-      "at": "accende"
      }
     ],
     "sfx": [
@@ -504,35 +353,12 @@
         "s": 1.2,
         "y": -0.2,
         "a": "drift2",
-        "glow": true
-       }
-      ],
-      "at": "serve"
-     },
-     {
-      "els": [
-       {
-        "i": "doorin",
-        "s": 1.2,
-        "y": -0.2,
-        "a": "drift2",
         "glow": true,
         "glass": true,
         "sil": "fuori"
        }
       ],
       "at": "fuori"
-     },
-     {
-      "els": [
-       {
-        "i": "you",
-        "s": 1.1,
-        "y": -0.3,
-        "a": "buzzdrift"
-       }
-      ],
-      "at": "te"
      }
     ]
    }
@@ -567,19 +393,6 @@
         ]
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "lbtn",
-        "s": 2.3,
-        "y": -0.2,
-        "a": "drift2",
-        "press": "pulsante",
-        "lit": "pulsante"
-       }
-      ],
-      "at": "pulsante"
      }
     ],
     "sfx": [

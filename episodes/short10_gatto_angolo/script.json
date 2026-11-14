@@ -59,29 +59,6 @@
       "els": [
        {
         "i": "catface",
-        "s": 1.35,
-        "y": -0.25,
-        "a": "drift2",
-        "gaze": [
-         [
-          true,
-          0,
-          0
-         ],
-         [
-          "angolo",
-          1.1,
-          -0.9
-         ]
-        ]
-       }
-      ],
-      "at": "gatto"
-     },
-     {
-      "els": [
-       {
-        "i": "catface",
         "s": 1.9,
         "y": -0.1,
         "a": "drift2",
@@ -210,20 +187,6 @@
        }
       ],
       "at": "occhi"
-     },
-     {
-      "els": [
-       {
-        "i": "bedtop",
-        "s": 1.25,
-        "y": -0.2,
-        "a": "drift2",
-        "cat": false,
-        "dash": "muove",
-        "dur": 1.2
-       }
-      ],
-      "at": "muove"
      }
     ]
    }
@@ -264,21 +227,6 @@
        }
       ],
       "at": "verso"
-     },
-     {
-      "els": [
-       {
-        "i": "bedtop",
-        "s": 2.6,
-        "y": -0.3,
-        "a": "drift2",
-        "x": -0.3,
-        "cat": false,
-        "dash": "lentamente",
-        "dur": 2.6
-       }
-      ],
-      "at": "letto"
      }
     ],
     "sfx": [
@@ -344,21 +292,6 @@
        }
       ],
       "at": "siede"
-     },
-     {
-      "els": [
-       {
-        "i": "bedtop",
-        "s": 2.1,
-        "y": -0.5,
-        "a": "drift2",
-        "x": -0.1,
-        "dash": "soffia",
-        "dur": 0.1,
-        "dip": "spazio"
-       }
-      ],
-      "at": "spazio"
      }
     ]
    }
@@ -446,20 +379,6 @@
        }
       ],
       "at": "gatti"
-     },
-     {
-      "els": [
-       {
-        "i": "bedtop",
-        "s": 1.5,
-        "y": -0.2,
-        "a": "drift2",
-        "dash": "non",
-        "dur": 0.1,
-        "dip": true
-       }
-      ],
-      "at": "conoscono"
      }
     ]
    }
@@ -487,23 +406,6 @@
         "catto": 15
        }
       ]
-     },
-     {
-      "els": [
-       {
-        "i": "bedtop",
-        "s": 2.8,
-        "y": -0.6,
-        "a": "drift2",
-        "x": 0.55,
-        "dash": "lui",
-        "dur": 0.1,
-        "dip": true,
-        "catmove": "lui",
-        "catto": 15
-       }
-      ],
-      "at": "sì"
      }
     ],
     "sfx": [
