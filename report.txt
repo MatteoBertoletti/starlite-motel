@@ -1,0 +1,10 @@
+  1 N         0.00-   4.99 match=1.00 eleven_v4 (cache) | Se la sveglia suona alle 4 .4 e tu non l 'hai impostata, non spegnerla.
+  2 N         5.09-   9.02 match=1.00 eleven_v4 (cache) | Controlli l 'app, la sveglia esiste, è attiva tutti i giorni.
+  3 N         9.12-  13.03 match=1.00 eleven_v4 (cache) | Etichetta, «Alzati». Creata ieri, alle 04 e 04.
+  4 N        13.13-  15.70 match=1.00 eleven_v4 (cache) | Creata da questo telefono mentre dormivi.
+  5 N        15.80-  19.75 match=1.00 eleven_v4 (cache) | Se la spegni, ne crea un 'altra. Etichetta, apri la porta.
+  6 N        19.85-  23.66 match=1.00 eleven_v4 (cache) | Lascia suonare. Dura trenta secondi, poi smette da sola.
+  7 N        23.76-  26.25 match=1.00 eleven_v4 (cache) | Dopo trenta secondi, qualcuno bussa.
+
+TOTAL 26.3s  new characters billed ~0  cached lines 7
+low match lines: []
