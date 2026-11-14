@@ -1,0 +1,421 @@
+{
+ "duration": 27.23,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.35,
+   "dur": 4.35,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "nel",
+     "s": 0.18,
+     "e": 0.34
+    },
+    {
+     "w": "gruppo",
+     "s": 0.34,
+     "e": 0.72
+    },
+    {
+     "w": "famiglia",
+     "s": 0.72,
+     "e": 1.26
+    },
+    {
+     "w": "compare",
+     "s": 1.26,
+     "e": 1.68
+    },
+    {
+     "w": "un",
+     "s": 1.68,
+     "e": 1.84
+    },
+    {
+     "w": "partecipante",
+     "s": 1.84,
+     "e": 2.56
+    },
+    {
+     "w": "in",
+     "s": 2.56,
+     "e": 2.72
+    },
+    {
+     "w": "piu",
+     "s": 2.72,
+     "e": 3.0
+    },
+    {
+     "w": "non",
+     "s": 3.4,
+     "e": 3.56
+    },
+    {
+     "w": "salutare",
+     "s": 3.56,
+     "e": 4.2
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se nel gruppo famiglia compare un partecipante in più, non salutare."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.6,
+   "end": 8.38,
+   "dur": 3.78,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "siete",
+     "s": 4.6,
+     "e": 4.88
+    },
+    {
+     "w": "in",
+     "s": 4.88,
+     "e": 5.06
+    },
+    {
+     "w": "quattro",
+     "s": 5.06,
+     "e": 5.6
+    },
+    {
+     "w": "tu",
+     "s": 6.0,
+     "e": 6.24
+    },
+    {
+     "w": "mamma",
+     "s": 6.56,
+     "e": 7.02
+    },
+    {
+     "w": "papa",
+     "s": 7.16,
+     "e": 7.64
+    },
+    {
+     "w": "e",
+     "s": 7.64,
+     "e": 7.76
+    },
+    {
+     "w": "tua",
+     "s": 7.76,
+     "e": 7.94
+    },
+    {
+     "w": "sorella",
+     "s": 7.94,
+     "e": 8.4
+    }
+   ],
+   "match": 1.0,
+   "heard": "Siete in quattro, tu, mamma, papà e tua sorella."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.63,
+   "end": 13.63,
+   "dur": 5.0,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 8.63,
+     "e": 8.79
+    },
+    {
+     "w": "gruppo",
+     "s": 8.79,
+     "e": 9.29
+    },
+    {
+     "w": "ne",
+     "s": 9.29,
+     "e": 9.49
+    },
+    {
+     "w": "segna",
+     "s": 9.49,
+     "e": 9.89
+    },
+    {
+     "w": "cinque",
+     "s": 9.89,
+     "e": 10.41
+    },
+    {
+     "w": "il",
+     "s": 10.91,
+     "e": 11.13
+    },
+    {
+     "w": "nuovo",
+     "s": 11.13,
+     "e": 11.43
+    },
+    {
+     "w": "ha",
+     "s": 11.43,
+     "e": 11.79
+    },
+    {
+     "w": "solo",
+     "s": 11.79,
+     "e": 12.09
+    },
+    {
+     "w": "un",
+     "s": 12.09,
+     "e": 12.31
+    },
+    {
+     "w": "numero",
+     "s": 12.31,
+     "e": 12.67
+    },
+    {
+     "w": "nessun",
+     "s": 13.05,
+     "e": 13.43
+    },
+    {
+     "w": "nome",
+     "s": 13.43,
+     "e": 13.73
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il gruppo ne segna cinque. Il nuovo ha solo un numero, nessun nome."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.88,
+   "end": 17.34,
+   "dur": 3.46,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "tutti",
+     "s": 13.88,
+     "e": 14.16
+    },
+    {
+     "w": "scrivono",
+     "s": 14.16,
+     "e": 14.7
+    },
+    {
+     "w": "chi",
+     "s": 14.7,
+     "e": 15.2
+    },
+    {
+     "w": "sei",
+     "s": 15.2,
+     "e": 15.52
+    },
+    {
+     "w": "lui",
+     "s": 16.24,
+     "e": 16.64
+    },
+    {
+     "w": "non",
+     "s": 16.64,
+     "e": 16.92
+    },
+    {
+     "w": "risponde",
+     "s": 16.92,
+     "e": 17.5
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tutti scrivono «chi sei ?». Lui non risponde."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 17.59,
+   "end": 22.26,
+   "dur": 4.67,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "finche",
+     "s": 17.59,
+     "e": 17.93
+    },
+    {
+     "w": "mamma",
+     "s": 17.93,
+     "e": 18.59
+    },
+    {
+     "w": "che",
+     "s": 18.65,
+     "e": 18.73
+    },
+    {
+     "w": "ha",
+     "s": 18.73,
+     "e": 18.83
+    },
+    {
+     "w": "il",
+     "s": 18.83,
+     "e": 18.91
+    },
+    {
+     "w": "telefono",
+     "s": 18.91,
+     "e": 19.31
+    },
+    {
+     "w": "spento",
+     "s": 19.31,
+     "e": 19.97
+    },
+    {
+     "w": "mette",
+     "s": 20.11,
+     "e": 20.41
+    },
+    {
+     "w": "un",
+     "s": 20.41,
+     "e": 20.53
+    },
+    {
+     "w": "cuore",
+     "s": 20.53,
+     "e": 20.93
+    },
+    {
+     "w": "sotto",
+     "s": 20.93,
+     "e": 21.19
+    },
+    {
+     "w": "il",
+     "s": 21.19,
+     "e": 21.39
+    },
+    {
+     "w": "suo",
+     "s": 21.39,
+     "e": 21.51
+    },
+    {
+     "w": "messaggio",
+     "s": 21.51,
+     "e": 22.09
+    }
+   ],
+   "match": 1.0,
+   "heard": "Finché mamma, che ha il telefono spento, mette un cuore sotto il suo messaggio."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 22.51,
+   "end": 25.3,
+   "dur": 2.79,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 22.51,
+     "e": 22.71
+    },
+    {
+     "w": "salutare",
+     "s": 22.71,
+     "e": 23.35
+    },
+    {
+     "w": "chi",
+     "s": 23.61,
+     "e": 23.79
+    },
+    {
+     "w": "lo",
+     "s": 23.79,
+     "e": 23.93
+    },
+    {
+     "w": "fa",
+     "s": 23.93,
+     "e": 24.15
+    },
+    {
+     "w": "viene",
+     "s": 24.15,
+     "e": 24.47
+    },
+    {
+     "w": "contato",
+     "s": 24.47,
+     "e": 25.13
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non salutare. Chi lo fa viene contato."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 25.55,
+   "end": 27.18,
+   "dur": 1.63,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "adesso",
+     "s": 25.55,
+     "e": 26.07
+    },
+    {
+     "w": "siete",
+     "s": 26.07,
+     "e": 26.45
+    },
+    {
+     "w": "in",
+     "s": 26.45,
+     "e": 26.67
+    },
+    {
+     "w": "sei",
+     "s": 26.67,
+     "e": 26.95
+    }
+   ],
+   "match": 1.0,
+   "heard": "Adesso siete in sei."
+  }
+ ]
+}
