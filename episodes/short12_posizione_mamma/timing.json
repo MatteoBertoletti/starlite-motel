@@ -1,0 +1,426 @@
+{
+ "duration": 24.94,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 5.31,
+   "dur": 5.31,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.16
+    },
+    {
+     "w": "la",
+     "s": 0.16,
+     "e": 0.26
+    },
+    {
+     "w": "posizione",
+     "s": 0.26,
+     "e": 0.78
+    },
+    {
+     "w": "di",
+     "s": 0.78,
+     "e": 0.94
+    },
+    {
+     "w": "mamma",
+     "s": 0.94,
+     "e": 1.3
+    },
+    {
+     "w": "dice",
+     "s": 1.3,
+     "e": 1.58
+    },
+    {
+     "w": "casa",
+     "s": 1.58,
+     "e": 2.2
+    },
+    {
+     "w": "tua",
+     "s": 2.2,
+     "e": 2.98
+    },
+    {
+     "w": "ma",
+     "s": 2.98,
+     "e": 3.06
+    },
+    {
+     "w": "lei",
+     "s": 3.06,
+     "e": 3.3
+    },
+    {
+     "w": "e",
+     "s": 3.3,
+     "e": 3.38
+    },
+    {
+     "w": "in",
+     "s": 3.38,
+     "e": 3.5
+    },
+    {
+     "w": "viaggio",
+     "s": 3.5,
+     "e": 3.94
+    },
+    {
+     "w": "non",
+     "s": 4.22,
+     "e": 4.52
+    },
+    {
+     "w": "chiamarla",
+     "s": 4.52,
+     "e": 5.08
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se la posizione di mamma dice «casa tua» ma lei è in viaggio, non chiamarla."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 5.51,
+   "end": 9.8,
+   "dur": 4.29,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "lei",
+     "s": 5.51,
+     "e": 5.85
+    },
+    {
+     "w": "e",
+     "s": 5.85,
+     "e": 6.11
+    },
+    {
+     "w": "a",
+     "s": 6.11,
+     "e": 6.27
+    },
+    {
+     "w": "napoli",
+     "s": 6.27,
+     "e": 6.67
+    },
+    {
+     "w": "da",
+     "s": 6.67,
+     "e": 6.79
+    },
+    {
+     "w": "tre",
+     "s": 6.79,
+     "e": 7.03
+    },
+    {
+     "w": "giorni",
+     "s": 7.03,
+     "e": 7.71
+    },
+    {
+     "w": "il",
+     "s": 8.11,
+     "e": 8.71
+    },
+    {
+     "w": "puntino",
+     "s": 8.71,
+     "e": 9.15
+    },
+    {
+     "w": "blu",
+     "s": 9.15,
+     "e": 9.59
+    },
+    {
+     "w": "e",
+     "s": 9.59,
+     "e": 9.71
+    },
+    {
+     "w": "in",
+     "s": 9.71,
+     "e": 9.83
+    },
+    {
+     "w": "salotto",
+     "s": 9.83,
+     "e": 10.37
+    }
+   ],
+   "match": 1.0,
+   "heard": "Lei è a Napoli da tre giorni. Il puntino blu è in salotto."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 10.0,
+   "end": 14.31,
+   "dur": 4.31,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "si",
+     "s": 10.0,
+     "e": 10.16
+    },
+    {
+     "w": "sposta",
+     "s": 10.16,
+     "e": 10.78
+    },
+    {
+     "w": "cucina",
+     "s": 11.12,
+     "e": 11.86
+    },
+    {
+     "w": "corridoio",
+     "s": 12.18,
+     "e": 12.84
+    },
+    {
+     "w": "davanti",
+     "s": 13.06,
+     "e": 13.56
+    },
+    {
+     "w": "alla",
+     "s": 13.56,
+     "e": 13.74
+    },
+    {
+     "w": "tua",
+     "s": 13.74,
+     "e": 13.96
+    },
+    {
+     "w": "camera",
+     "s": 13.96,
+     "e": 14.24
+    }
+   ],
+   "match": 1.0,
+   "heard": "Si sposta, cucina, corridoio, davanti alla tua camera."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 14.51,
+   "end": 15.32,
+   "dur": 0.81,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "si",
+     "s": 14.51,
+     "e": 14.71
+    },
+    {
+     "w": "ferma",
+     "s": 14.71,
+     "e": 15.23
+    }
+   ],
+   "match": 1.0,
+   "heard": "Si ferma."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 15.52,
+   "end": 19.73,
+   "dur": 4.21,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 15.52,
+     "e": 15.68
+    },
+    {
+     "w": "la",
+     "s": 15.68,
+     "e": 15.8
+    },
+    {
+     "w": "chiami",
+     "s": 15.8,
+     "e": 16.26
+    },
+    {
+     "w": "il",
+     "s": 16.42,
+     "e": 16.58
+    },
+    {
+     "w": "suo",
+     "s": 16.58,
+     "e": 16.72
+    },
+    {
+     "w": "telefono",
+     "s": 16.72,
+     "e": 17.22
+    },
+    {
+     "w": "vibra",
+     "s": 17.22,
+     "e": 17.66
+    },
+    {
+     "w": "sul",
+     "s": 17.66,
+     "e": 17.8
+    },
+    {
+     "w": "pavimento",
+     "s": 17.8,
+     "e": 18.48
+    },
+    {
+     "w": "oltre",
+     "s": 18.76,
+     "e": 19.06
+    },
+    {
+     "w": "la",
+     "s": 19.06,
+     "e": 19.18
+    },
+    {
+     "w": "porta",
+     "s": 19.18,
+     "e": 19.42
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se la chiami, il suo telefono vibra sul pavimento, oltre la porta."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 19.93,
+   "end": 22.9,
+   "dur": 2.97,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 19.93,
+     "e": 20.13
+    },
+    {
+     "w": "vibra",
+     "s": 20.13,
+     "e": 20.63
+    },
+    {
+     "w": "qualcuno",
+     "s": 20.85,
+     "e": 21.47
+    },
+    {
+     "w": "ha",
+     "s": 21.47,
+     "e": 21.65
+    },
+    {
+     "w": "preso",
+     "s": 21.65,
+     "e": 22.01
+    },
+    {
+     "w": "il",
+     "s": 22.01,
+     "e": 22.07
+    },
+    {
+     "w": "suo",
+     "s": 22.07,
+     "e": 22.21
+    },
+    {
+     "w": "telefono",
+     "s": 22.21,
+     "e": 22.77
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se vibra, qualcuno ha preso il suo telefono."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.1,
+   "end": 24.89,
+   "dur": 1.79,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 23.1,
+     "e": 23.22
+    },
+    {
+     "w": "sa",
+     "s": 23.22,
+     "e": 23.4
+    },
+    {
+     "w": "gia",
+     "s": 23.4,
+     "e": 23.66
+    },
+    {
+     "w": "dov",
+     "s": 23.66,
+     "e": 23.86
+    },
+    {
+     "w": "e",
+     "s": 23.86,
+     "e": 24.04
+    },
+    {
+     "w": "la",
+     "s": 24.04,
+     "e": 24.06
+    },
+    {
+     "w": "tua",
+     "s": 24.06,
+     "e": 24.22
+    },
+    {
+     "w": "camera",
+     "s": 24.22,
+     "e": 24.58
+    }
+   ],
+   "match": 1.0,
+   "heard": "E sa già dov 'è la tua camera."
+  }
+ ]
+}
