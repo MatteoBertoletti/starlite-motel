@@ -1,0 +1,421 @@
+{
+ "duration": 26.02,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.05,
+   "dur": 4.05,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "il",
+     "s": 0.18,
+     "e": 0.32
+    },
+    {
+     "w": "gatto",
+     "s": 0.32,
+     "e": 0.6
+    },
+    {
+     "w": "fissa",
+     "s": 0.6,
+     "e": 0.96
+    },
+    {
+     "w": "un",
+     "s": 0.96,
+     "e": 1.1
+    },
+    {
+     "w": "angolo",
+     "s": 1.1,
+     "e": 1.4
+    },
+    {
+     "w": "vuoto",
+     "s": 1.4,
+     "e": 1.74
+    },
+    {
+     "w": "della",
+     "s": 1.74,
+     "e": 1.96
+    },
+    {
+     "w": "stanza",
+     "s": 1.96,
+     "e": 2.62
+    },
+    {
+     "w": "non",
+     "s": 2.92,
+     "e": 3.14
+    },
+    {
+     "w": "guardare",
+     "s": 3.14,
+     "e": 3.72
+    },
+    {
+     "w": "li",
+     "s": 3.72,
+     "e": 3.98
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se il gatto fissa un angolo vuoto della stanza, non guardare lì."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.25,
+   "end": 9.46,
+   "dur": 5.21,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 4.25,
+     "e": 4.43
+    },
+    {
+     "w": "e",
+     "s": 4.43,
+     "e": 4.63
+    },
+    {
+     "w": "un",
+     "s": 4.63,
+     "e": 4.75
+    },
+    {
+     "w": "ragno",
+     "s": 4.75,
+     "e": 5.27
+    },
+    {
+     "w": "non",
+     "s": 5.65,
+     "e": 5.71
+    },
+    {
+     "w": "e",
+     "s": 5.71,
+     "e": 5.93
+    },
+    {
+     "w": "una",
+     "s": 5.93,
+     "e": 6.09
+    },
+    {
+     "w": "mosca",
+     "s": 6.09,
+     "e": 6.57
+    },
+    {
+     "w": "i",
+     "s": 6.93,
+     "e": 7.01
+    },
+    {
+     "w": "suoi",
+     "s": 7.01,
+     "e": 7.27
+    },
+    {
+     "w": "occhi",
+     "s": 7.27,
+     "e": 7.67
+    },
+    {
+     "w": "seguono",
+     "s": 7.67,
+     "e": 8.15
+    },
+    {
+     "w": "qualcosa",
+     "s": 8.15,
+     "e": 8.39
+    },
+    {
+     "w": "che",
+     "s": 8.39,
+     "e": 8.83
+    },
+    {
+     "w": "si",
+     "s": 8.83,
+     "e": 9.03
+    },
+    {
+     "w": "muove",
+     "s": 9.03,
+     "e": 9.43
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non è un ragno. Non è una mosca. I suoi occhi seguono qualcosa che si muove."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.66,
+   "end": 12.77,
+   "dur": 3.11,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "lentamente",
+     "s": 9.66,
+     "e": 10.54
+    },
+    {
+     "w": "dall",
+     "s": 10.76,
+     "e": 11.06
+    },
+    {
+     "w": "angolo",
+     "s": 11.06,
+     "e": 11.66
+    },
+    {
+     "w": "verso",
+     "s": 11.66,
+     "e": 12.0
+    },
+    {
+     "w": "il",
+     "s": 12.0,
+     "e": 12.3
+    },
+    {
+     "w": "letto",
+     "s": 12.3,
+     "e": 12.7
+    }
+   ],
+   "match": 1.0,
+   "heard": "Lentamente, dall 'angolo verso il letto."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 12.97,
+   "end": 18.22,
+   "dur": 5.25,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 12.97,
+     "e": 13.15
+    },
+    {
+     "w": "gatto",
+     "s": 13.15,
+     "e": 13.59
+    },
+    {
+     "w": "non",
+     "s": 13.59,
+     "e": 13.93
+    },
+    {
+     "w": "soffia",
+     "s": 13.93,
+     "e": 14.65
+    },
+    {
+     "w": "non",
+     "s": 15.13,
+     "e": 15.23
+    },
+    {
+     "w": "scappa",
+     "s": 15.23,
+     "e": 15.81
+    },
+    {
+     "w": "si",
+     "s": 16.27,
+     "e": 16.53
+    },
+    {
+     "w": "siede",
+     "s": 16.53,
+     "e": 17.13
+    },
+    {
+     "w": "come",
+     "s": 17.27,
+     "e": 17.51
+    },
+    {
+     "w": "per",
+     "s": 17.51,
+     "e": 17.73
+    },
+    {
+     "w": "fare",
+     "s": 17.73,
+     "e": 17.93
+    },
+    {
+     "w": "spazio",
+     "s": 17.93,
+     "e": 18.61
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il gatto non soffia. Non scappa. Si siede, come per fare spazio."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 18.42,
+   "end": 20.61,
+   "dur": 2.19,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "tu",
+     "s": 18.42,
+     "e": 18.56
+    },
+    {
+     "w": "senti",
+     "s": 18.56,
+     "e": 19.0
+    },
+    {
+     "w": "il",
+     "s": 19.0,
+     "e": 19.1
+    },
+    {
+     "w": "materasso",
+     "s": 19.1,
+     "e": 19.66
+    },
+    {
+     "w": "abbassarsi",
+     "s": 19.66,
+     "e": 20.34
+    }
+   ],
+   "match": 1.0,
+   "heard": "Tu senti il materasso abbassarsi."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.81,
+   "end": 24.92,
+   "dur": 4.11,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 20.81,
+     "e": 20.95
+    },
+    {
+     "w": "girarti",
+     "s": 20.95,
+     "e": 21.57
+    },
+    {
+     "w": "i",
+     "s": 21.95,
+     "e": 22.03
+    },
+    {
+     "w": "gatti",
+     "s": 22.03,
+     "e": 22.47
+    },
+    {
+     "w": "non",
+     "s": 22.47,
+     "e": 22.67
+    },
+    {
+     "w": "fanno",
+     "s": 22.67,
+     "e": 23.09
+    },
+    {
+     "w": "spazio",
+     "s": 23.09,
+     "e": 23.77
+    },
+    {
+     "w": "a",
+     "s": 23.77,
+     "e": 23.93
+    },
+    {
+     "w": "chi",
+     "s": 23.93,
+     "e": 24.07
+    },
+    {
+     "w": "non",
+     "s": 24.07,
+     "e": 24.19
+    },
+    {
+     "w": "conoscono",
+     "s": 24.19,
+     "e": 24.81
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non girarti. I gatti non fanno spazio a chi non conoscono."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 25.12,
+   "end": 25.97,
+   "dur": 0.85,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "a",
+     "s": 25.12,
+     "e": 25.26
+    },
+    {
+     "w": "lui",
+     "s": 25.26,
+     "e": 25.5
+    },
+    {
+     "w": "si",
+     "s": 25.5,
+     "e": 25.76
+    }
+   ],
+   "match": 1.0,
+   "heard": "A lui sì."
+  }
+ ]
+}
