@@ -1,0 +1,10 @@
+  1 N         0.00-   4.05 match=1.00 eleven_v4 | Se il gatto fissa un angolo vuoto della stanza, non guardare lì.
+  2 N         4.25-   9.46 match=1.00 eleven_v4 | Non è un ragno. Non è una mosca. I suoi occhi seguono qualcosa che si muove.
+  3 N         9.66-  12.77 match=1.00 eleven_v4 | Lentamente, dall 'angolo verso il letto.
+  4 N        12.97-  18.22 match=1.00 eleven_v4 | Il gatto non soffia. Non scappa. Si siede, come per fare spazio.
+  5 N        18.42-  20.61 match=1.00 eleven_v4 | Tu senti il materasso abbassarsi.
+  6 N        20.81-  24.92 match=1.00 eleven_v4 | Non girarti. I gatti non fanno spazio a chi non conoscono.
+  7 N        25.12-  25.97 match=1.00 eleven_v4 | A lui sì.
+
+TOTAL 26.0s  new characters billed ~343  cached lines 0
+low match lines: []
