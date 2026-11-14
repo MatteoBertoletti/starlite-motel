@@ -1,0 +1,421 @@
+{
+ "duration": 26.08,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.75,
+   "dur": 4.75,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.2
+    },
+    {
+     "w": "il",
+     "s": 0.2,
+     "e": 0.34
+    },
+    {
+     "w": "frigo",
+     "s": 0.34,
+     "e": 0.66
+    },
+    {
+     "w": "suona",
+     "s": 0.66,
+     "e": 1.16
+    },
+    {
+     "w": "porta",
+     "s": 1.16,
+     "e": 1.74
+    },
+    {
+     "w": "aperta",
+     "s": 1.74,
+     "e": 2.5
+    },
+    {
+     "w": "con",
+     "s": 2.5,
+     "e": 2.6
+    },
+    {
+     "w": "la",
+     "s": 2.6,
+     "e": 2.76
+    },
+    {
+     "w": "porta",
+     "s": 2.76,
+     "e": 2.98
+    },
+    {
+     "w": "chiusa",
+     "s": 2.98,
+     "e": 3.58
+    },
+    {
+     "w": "non",
+     "s": 3.86,
+     "e": 4.02
+    },
+    {
+     "w": "aprirlo",
+     "s": 4.02,
+     "e": 4.64
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se il frigo suona «porta aperta» con la porta chiusa, non aprirlo."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.95,
+   "end": 8.3,
+   "dur": 3.35,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "sono",
+     "s": 4.95,
+     "e": 5.21
+    },
+    {
+     "w": "le",
+     "s": 5.21,
+     "e": 5.37
+    },
+    {
+     "w": "tre",
+     "s": 5.37,
+     "e": 5.61
+    },
+    {
+     "w": "il",
+     "s": 5.61,
+     "e": 6.13
+    },
+    {
+     "w": "beep",
+     "s": 6.13,
+     "e": 6.35
+    },
+    {
+     "w": "ripete",
+     "s": 6.35,
+     "e": 7.03
+    },
+    {
+     "w": "ogni",
+     "s": 7.03,
+     "e": 7.27
+    },
+    {
+     "w": "dieci",
+     "s": 7.27,
+     "e": 7.73
+    },
+    {
+     "w": "secondi",
+     "s": 7.73,
+     "e": 8.37
+    }
+   ],
+   "match": 0.89,
+   "heard": "sono le tre, i beep ripete ogni dieci secondi."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.5,
+   "end": 12.45,
+   "dur": 3.95,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "controlli",
+     "s": 8.5,
+     "e": 9.18
+    },
+    {
+     "w": "la",
+     "s": 9.44,
+     "e": 9.7
+    },
+    {
+     "w": "porta",
+     "s": 9.7,
+     "e": 9.96
+    },
+    {
+     "w": "e",
+     "s": 9.96,
+     "e": 10.16
+    },
+    {
+     "w": "chiusa",
+     "s": 10.16,
+     "e": 10.68
+    },
+    {
+     "w": "la",
+     "s": 10.98,
+     "e": 11.06
+    },
+    {
+     "w": "guarnizione",
+     "s": 11.06,
+     "e": 11.7
+    },
+    {
+     "w": "e",
+     "s": 11.7,
+     "e": 12.02
+    },
+    {
+     "w": "a",
+     "s": 12.02,
+     "e": 12.14
+    },
+    {
+     "w": "posto",
+     "s": 12.14,
+     "e": 12.6
+    }
+   ],
+   "match": 1.0,
+   "heard": "Controlli. La porta è chiusa, la guarnizione è a posto."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 12.65,
+   "end": 17.2,
+   "dur": 4.55,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 12.65,
+     "e": 12.81
+    },
+    {
+     "w": "beep",
+     "s": 12.81,
+     "e": 13.05
+    },
+    {
+     "w": "smette",
+     "s": 13.05,
+     "e": 13.77
+    },
+    {
+     "w": "solo",
+     "s": 13.77,
+     "e": 14.17
+    },
+    {
+     "w": "se",
+     "s": 14.17,
+     "e": 14.39
+    },
+    {
+     "w": "la",
+     "s": 14.39,
+     "e": 14.53
+    },
+    {
+     "w": "luce",
+     "s": 14.53,
+     "e": 14.77
+    },
+    {
+     "w": "interna",
+     "s": 14.77,
+     "e": 15.37
+    },
+    {
+     "w": "viene",
+     "s": 15.37,
+     "e": 15.55
+    },
+    {
+     "w": "premuta",
+     "s": 15.55,
+     "e": 16.21
+    },
+    {
+     "w": "da",
+     "s": 16.97,
+     "e": 17.37
+    },
+    {
+     "w": "dentro",
+     "s": 17.37,
+     "e": 17.73
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il beep smette solo se la luce interna viene premuta. Da dentro."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 17.4,
+   "end": 20.19,
+   "dur": 2.79,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "dentro",
+     "s": 17.4,
+     "e": 17.94
+    },
+    {
+     "w": "la",
+     "s": 18.26,
+     "e": 18.38
+    },
+    {
+     "w": "plastica",
+     "s": 18.38,
+     "e": 18.84
+    },
+    {
+     "w": "dei",
+     "s": 18.84,
+     "e": 18.98
+    },
+    {
+     "w": "ripiani",
+     "s": 18.98,
+     "e": 19.4
+    },
+    {
+     "w": "si",
+     "s": 19.4,
+     "e": 19.6
+    },
+    {
+     "w": "piega",
+     "s": 19.6,
+     "e": 20.04
+    }
+   ],
+   "match": 1.0,
+   "heard": "Dentro, la plastica dei ripiani si piega."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.39,
+   "end": 24.02,
+   "dur": 3.63,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 20.39,
+     "e": 20.53
+    },
+    {
+     "w": "aprirlo",
+     "s": 20.53,
+     "e": 21.13
+    },
+    {
+     "w": "quel",
+     "s": 21.41,
+     "e": 21.61
+    },
+    {
+     "w": "frigo",
+     "s": 21.61,
+     "e": 22.09
+    },
+    {
+     "w": "ha",
+     "s": 22.09,
+     "e": 22.33
+    },
+    {
+     "w": "un",
+     "s": 22.33,
+     "e": 22.45
+    },
+    {
+     "w": "ripiano",
+     "s": 22.45,
+     "e": 22.83
+    },
+    {
+     "w": "in",
+     "s": 22.83,
+     "e": 22.99
+    },
+    {
+     "w": "meno",
+     "s": 22.99,
+     "e": 23.23
+    },
+    {
+     "w": "da",
+     "s": 23.23,
+     "e": 23.41
+    },
+    {
+     "w": "stasera",
+     "s": 23.41,
+     "e": 23.89
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non aprirlo, quel frigo ha un ripiano in meno da stasera."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 24.22,
+   "end": 26.03,
+   "dur": 1.81,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "qualcuno",
+     "s": 24.22,
+     "e": 24.74
+    },
+    {
+     "w": "ha",
+     "s": 24.74,
+     "e": 24.98
+    },
+    {
+     "w": "fatto",
+     "s": 24.98,
+     "e": 25.26
+    },
+    {
+     "w": "spazio",
+     "s": 25.26,
+     "e": 25.92
+    }
+   ],
+   "match": 1.0,
+   "heard": "Qualcuno ha fatto spazio."
+  }
+ ]
+}
