@@ -1,0 +1,456 @@
+{
+ "duration": 26.3,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.71,
+   "dur": 4.71,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "in",
+     "s": 0.18,
+     "e": 0.32
+    },
+    {
+     "w": "galleria",
+     "s": 0.32,
+     "e": 0.74
+    },
+    {
+     "w": "c",
+     "s": 0.74,
+     "e": 0.88
+    },
+    {
+     "w": "e",
+     "s": 0.88,
+     "e": 0.98
+    },
+    {
+     "w": "un",
+     "s": 0.98,
+     "e": 1.1
+    },
+    {
+     "w": "video",
+     "s": 1.1,
+     "e": 1.32
+    },
+    {
+     "w": "di",
+     "s": 1.32,
+     "e": 1.48
+    },
+    {
+     "w": "sette",
+     "s": 1.48,
+     "e": 1.9
+    },
+    {
+     "w": "secondi",
+     "s": 1.9,
+     "e": 2.42
+    },
+    {
+     "w": "che",
+     "s": 2.42,
+     "e": 2.5
+    },
+    {
+     "w": "non",
+     "s": 2.5,
+     "e": 2.66
+    },
+    {
+     "w": "hai",
+     "s": 2.66,
+     "e": 2.78
+    },
+    {
+     "w": "girato",
+     "s": 2.78,
+     "e": 3.32
+    },
+    {
+     "w": "non",
+     "s": 3.58,
+     "e": 3.86
+    },
+    {
+     "w": "guardarlo",
+     "s": 3.86,
+     "e": 4.5
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se in galleria c 'è un video di sette secondi che non hai girato, non guardarlo."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.91,
+   "end": 9.54,
+   "dur": 4.63,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "la",
+     "s": 4.91,
+     "e": 5.05
+    },
+    {
+     "w": "miniatura",
+     "s": 5.05,
+     "e": 5.65
+    },
+    {
+     "w": "e",
+     "s": 5.65,
+     "e": 5.85
+    },
+    {
+     "w": "nera",
+     "s": 5.85,
+     "e": 6.29
+    },
+    {
+     "w": "l",
+     "s": 6.75,
+     "e": 7.01
+    },
+    {
+     "w": "orario",
+     "s": 7.01,
+     "e": 7.41
+    },
+    {
+     "w": "e",
+     "s": 7.41,
+     "e": 7.71
+    },
+    {
+     "w": "le",
+     "s": 7.71,
+     "e": 7.79
+    },
+    {
+     "w": "tre",
+     "s": 7.79,
+     "e": 8.07
+    },
+    {
+     "w": "quaranta",
+     "s": 8.07,
+     "e": 8.49
+    },
+    {
+     "w": "di",
+     "s": 9.07,
+     "e": 9.19
+    },
+    {
+     "w": "stanotte",
+     "s": 9.19,
+     "e": 9.71
+    }
+   ],
+   "match": 1.0,
+   "heard": "La miniatura è nera. L 'orario è le 03 .40, di stanotte."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.74,
+   "end": 13.61,
+   "dur": 3.87,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "lo",
+     "s": 9.74,
+     "e": 9.9
+    },
+    {
+     "w": "apri",
+     "s": 9.9,
+     "e": 10.34
+    },
+    {
+     "w": "un",
+     "s": 10.7,
+     "e": 10.88
+    },
+    {
+     "w": "respiro",
+     "s": 10.88,
+     "e": 11.32
+    },
+    {
+     "w": "vicino",
+     "s": 11.32,
+     "e": 11.9
+    },
+    {
+     "w": "e",
+     "s": 11.9,
+     "e": 12.22
+    },
+    {
+     "w": "il",
+     "s": 12.22,
+     "e": 12.32
+    },
+    {
+     "w": "fruscio",
+     "s": 12.32,
+     "e": 12.82
+    },
+    {
+     "w": "di",
+     "s": 12.82,
+     "e": 12.96
+    },
+    {
+     "w": "una",
+     "s": 12.96,
+     "e": 13.08
+    },
+    {
+     "w": "coperta",
+     "s": 13.08,
+     "e": 13.56
+    }
+   ],
+   "match": 1.0,
+   "heard": "Lo apri, un respiro vicino e il fruscio di una coperta."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 13.81,
+   "end": 16.24,
+   "dur": 2.43,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "e",
+     "s": 13.81,
+     "e": 13.89
+    },
+    {
+     "w": "la",
+     "s": 13.89,
+     "e": 14.01
+    },
+    {
+     "w": "tua",
+     "s": 14.01,
+     "e": 14.25
+    },
+    {
+     "w": "coperta",
+     "s": 14.25,
+     "e": 14.85
+    },
+    {
+     "w": "e",
+     "s": 15.23,
+     "e": 15.53
+    },
+    {
+     "w": "la",
+     "s": 15.53,
+     "e": 15.65
+    },
+    {
+     "w": "tua",
+     "s": 15.65,
+     "e": 15.83
+    },
+    {
+     "w": "camera",
+     "s": 15.83,
+     "e": 16.21
+    }
+   ],
+   "match": 1.0,
+   "heard": "È la tua coperta. È la tua camera."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 16.44,
+   "end": 20.31,
+   "dur": 3.87,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "l",
+     "s": 16.44,
+     "e": 16.56
+    },
+    {
+     "w": "inquadratura",
+     "s": 16.56,
+     "e": 17.22
+    },
+    {
+     "w": "sale",
+     "s": 17.22,
+     "e": 17.54
+    },
+    {
+     "w": "piano",
+     "s": 17.54,
+     "e": 18.0
+    },
+    {
+     "w": "dal",
+     "s": 18.28,
+     "e": 18.52
+    },
+    {
+     "w": "pavimento",
+     "s": 18.52,
+     "e": 19.14
+    },
+    {
+     "w": "verso",
+     "s": 19.14,
+     "e": 19.56
+    },
+    {
+     "w": "il",
+     "s": 19.56,
+     "e": 19.86
+    },
+    {
+     "w": "letto",
+     "s": 19.86,
+     "e": 20.22
+    }
+   ],
+   "match": 1.0,
+   "heard": "L 'inquadratura sale piano, dal pavimento verso il letto."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.51,
+   "end": 24.16,
+   "dur": 3.65,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "al",
+     "s": 20.51,
+     "e": 20.63
+    },
+    {
+     "w": "secondo",
+     "s": 20.63,
+     "e": 20.93
+    },
+    {
+     "w": "sette",
+     "s": 20.93,
+     "e": 21.75
+    },
+    {
+     "w": "apri",
+     "s": 21.75,
+     "e": 22.07
+    },
+    {
+     "w": "gli",
+     "s": 22.07,
+     "e": 22.21
+    },
+    {
+     "w": "occhi",
+     "s": 22.21,
+     "e": 22.67
+    },
+    {
+     "w": "e",
+     "s": 22.93,
+     "e": 22.99
+    },
+    {
+     "w": "guardi",
+     "s": 22.99,
+     "e": 23.39
+    },
+    {
+     "w": "l",
+     "s": 23.39,
+     "e": 23.43
+    },
+    {
+     "w": "obiettivo",
+     "s": 23.43,
+     "e": 24.01
+    }
+   ],
+   "match": 1.0,
+   "heard": "Al secondo sette apri gli occhi, e guardi l 'obiettivo."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 24.36,
+   "end": 26.25,
+   "dur": 1.89,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 24.36,
+     "e": 24.5
+    },
+    {
+     "w": "ti",
+     "s": 24.5,
+     "e": 24.66
+    },
+    {
+     "w": "ricordi",
+     "s": 24.66,
+     "e": 25.24
+    },
+    {
+     "w": "di",
+     "s": 25.24,
+     "e": 25.34
+    },
+    {
+     "w": "averlo",
+     "s": 25.34,
+     "e": 25.66
+    },
+    {
+     "w": "fatto",
+     "s": 25.66,
+     "e": 25.96
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non ti ricordi di averlo fatto."
+  }
+ ]
+}
