@@ -21,6 +21,7 @@
   "longer": 0.26
  },
  "speed_N": 1.0,
+ "sweep": true,
  "dips": [],
  "lines": [
   {
@@ -62,7 +63,7 @@
         "i": "dog",
         "s": 1.5,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "cane"
@@ -73,13 +74,13 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "dog",
         "s": 0.9,
         "y": 0.45,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "porta"
@@ -90,7 +91,7 @@
         "i": "padlock",
         "s": 1.4,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "resta"
@@ -113,7 +114,7 @@
         "i": "dog",
         "s": 1.5,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ]
      },
@@ -123,7 +124,7 @@
         "i": "dog",
         "s": 1.8,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "ringhia"
@@ -134,7 +135,7 @@
         "i": "eye",
         "s": 1.5,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "guarda"
@@ -145,7 +146,7 @@
         "i": "dog",
         "s": 2.6,
         "y": 0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "basta"
@@ -168,13 +169,13 @@
         "i": "dog",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "hand",
         "s": 0.9,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": 0.6,
         "tilt": -0.5
        }
@@ -193,7 +194,7 @@
         "i": "hand",
         "s": 0.9,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": 0.9,
         "tilt": -0.5
        }
@@ -206,7 +207,7 @@
         "i": "dog",
         "s": 1.4,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "torna"
@@ -217,13 +218,13 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "dog",
         "s": 0.9,
         "y": 0.45,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "esattamente"
@@ -246,7 +247,7 @@
         "i": "dog",
         "s": 1.5,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "sway": true
        }
       ]
@@ -257,7 +258,7 @@
         "i": "dog",
         "s": 1.8,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "sway": true
        }
       ],
@@ -269,7 +270,7 @@
         "i": "dog",
         "s": 2.4,
         "y": 0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "sway": true
        }
       ],
@@ -293,13 +294,13 @@
         "i": "intercom",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -310,13 +311,13 @@
         "i": "steps",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ],
@@ -340,7 +341,7 @@
         "i": "ear",
         "s": 1.4,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ]
      },
@@ -350,7 +351,7 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glass": true,
         "sil": "qualcuno"
        }
@@ -363,7 +364,7 @@
         "i": "doorin",
         "s": 1.5,
         "y": -0.1,
-        "a": "impactdrift",
+        "a": "drift2",
         "glass": true,
         "sil": true,
         "knock": "fuori"
@@ -389,7 +390,7 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glass": true,
         "sil": true
        }
@@ -412,7 +413,7 @@
         "i": "doorin",
         "s": 1.4,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glass": true,
         "sil": true
        },

@@ -21,6 +21,7 @@
   "longer": 0.31
  },
  "speed_N": 1.0,
+ "sweep": true,
  "dips": [],
  "lines": [
   {
@@ -61,7 +62,7 @@
         "i": "hook",
         "s": 1.8,
         "y": -0.45,
-        "a": "impactdrift",
+        "a": "drift2",
         "app": "IMPOSTAZIONI · WI-FI",
         "bars": 4,
         "tag": "«LA TUA RETE»",
@@ -84,7 +85,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Wi-Fi",
         "sub": "Reti disponibili",
         "rows": [
@@ -109,8 +110,8 @@
        {
         "i": "plist",
         "s": 2.2,
-        "y": -0.9,
-        "a": "impactdrift",
+        "y": 0.65,
+        "a": "drift2",
         "title": "Wi-Fi",
         "sub": "Reti disponibili",
         "rows": [
@@ -122,8 +123,7 @@
          {
           "t": "LA TUA RETE",
           "bars": 4,
-          "hot": "compare",
-          "at": "compare"
+          "hot": true
          }
         ]
        }
@@ -135,8 +135,8 @@
        {
         "i": "plist",
         "s": 1.8,
-        "y": -0.5,
-        "a": "impactdrift",
+        "y": 1.0,
+        "a": "drift2",
         "title": "Wi-Fi",
         "rows": [
          {
@@ -150,7 +150,7 @@
         "i": "slash",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ],
@@ -172,9 +172,9 @@
       "els": [
        {
         "i": "mapz",
-        "s": 1.3,
-        "y": -0.15,
-        "a": "impactdrift",
+        "s": 1.05,
+        "y": -0.05,
+        "a": "drift2",
         "router": true,
         "dots": [
          {
@@ -192,7 +192,7 @@
         "i": "mapz",
         "s": 2.3,
         "y": 0.1,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": -0.05,
         "router": true,
         "dots": [
@@ -212,7 +212,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Wi-Fi",
         "sub": "Reti disponibili",
         "rows": [
@@ -224,8 +224,7 @@
          {
           "t": "LA TUA RETE",
           "bars": 4,
-          "hot": "compare",
-          "at": "compare"
+          "hot": true
          }
         ]
        }
@@ -238,7 +237,7 @@
         "i": "mapz",
         "s": 1.6,
         "y": 0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "router": true,
         "dots": [
          {
@@ -268,9 +267,9 @@
       "els": [
        {
         "i": "mapz",
-        "s": 1.3,
-        "y": -0.15,
-        "a": "impactdrift",
+        "s": 1.05,
+        "y": -0.05,
+        "a": "drift2",
         "router": true,
         "dots": [
          {
@@ -299,7 +298,7 @@
         "i": "mapz",
         "s": 1.8,
         "y": 0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": -0.3,
         "router": true,
         "dots": [
@@ -330,7 +329,7 @@
         "i": "mapz",
         "s": 1.8,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": -0.3,
         "router": true,
         "dots": [
@@ -379,13 +378,13 @@
         "i": "steps",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -396,7 +395,7 @@
         "i": "shadow",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "meno"
@@ -430,7 +429,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Wi-Fi",
         "rows": [
          {
@@ -444,7 +443,7 @@
         "i": "slash",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -455,7 +454,7 @@
         "i": "you",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "aspetta"
@@ -465,8 +464,8 @@
        {
         "i": "plist",
         "s": 2.2,
-        "y": -0.7,
-        "a": "impactdrift",
+        "y": 1.28,
+        "a": "drift2",
         "title": "Wi-Fi",
         "rows": [
          {
@@ -495,9 +494,9 @@
       "els": [
        {
         "i": "mapz",
-        "s": 1.4,
-        "y": -0.2,
-        "a": "impactdrift",
+        "s": 1.1,
+        "y": -0.05,
+        "a": "drift2",
         "dots": [
          {
           "n": "TU",
@@ -515,7 +514,7 @@
         "i": "mapz",
         "s": 2.2,
         "y": -0.55,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": 0.7,
         "dots": [
          {
@@ -535,7 +534,7 @@
         "i": "mapz",
         "s": 3.0,
         "y": -0.8,
-        "a": "impactdrift",
+        "a": "drift2",
         "x": 0.7,
         "dots": [
          {

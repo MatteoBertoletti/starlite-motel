@@ -21,6 +21,7 @@
   "longer": 0.21000000000000002
  },
  "speed_N": 1.0,
+ "sweep": true,
  "dips": [],
  "lines": [
   {
@@ -64,7 +65,7 @@
         "i": "hook",
         "s": 1.8,
         "y": -0.5,
-        "a": "impactdrift",
+        "a": "drift2",
         "app": "SCALE · 23:40",
         "bc": "orange",
         "tag": "LUCE SCALE",
@@ -90,26 +91,13 @@
         "i": "tower",
         "s": 1.15,
         "y": -0.1,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
-          1,
-          "passi"
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
-          4,
-          "quarto"
+          0,
+          true
          ]
-        ],
-        "lit": []
+        ]
        }
       ],
       "at": "spegne"
@@ -120,23 +108,11 @@
         "i": "tower",
         "s": 1.5,
         "y": 0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
           1,
           "passi"
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
-          4,
-          "quarto"
          ]
         ]
        }
@@ -149,13 +125,13 @@
         "i": "lbtn",
         "s": 1.4,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.4,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ],
@@ -179,7 +155,7 @@
         "i": "lbtn",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "num": "30\""
        }
       ]
@@ -190,7 +166,7 @@
         "i": "counter",
         "s": 1.2,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "sz": 34,
         "col": "orange",
         "label": "LUCE DELLE SCALE",
@@ -211,7 +187,7 @@
         "i": "counter",
         "s": 1.7,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "sz": 34,
         "col": "orange",
         "label": "LUCE DELLE SCALE",
@@ -232,7 +208,7 @@
         "i": "peephole",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "spioncino"
@@ -255,11 +231,11 @@
         "i": "tower",
         "s": 1.3,
         "y": 0.35,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
           1,
-          "passi"
+          true
          ],
          [
           2,
@@ -283,11 +259,11 @@
         "i": "tower",
         "s": 1.6,
         "y": 0.0,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
           1,
-          "passi"
+          true
          ],
          [
           2,
@@ -312,11 +288,11 @@
         "i": "tower",
         "s": 1.6,
         "y": 0.61,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
           1,
-          "passi"
+          true
          ],
          [
           2,
@@ -341,11 +317,11 @@
         "i": "tower",
         "s": 1.6,
         "y": 1.22,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
           1,
-          "passi"
+          true
          ],
          [
           2,
@@ -388,23 +364,11 @@
         "i": "tower",
         "s": 2.0,
         "y": 1.55,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
-          1,
-          "passi"
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
           4,
-          "quarto"
+          true
          ]
         ]
        }
@@ -416,7 +380,7 @@
         "i": "doorin",
         "s": 1.15,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "davanti"
@@ -427,7 +391,7 @@
         "i": "doorin",
         "s": 1.15,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glass": true,
         "sil": "porta"
        }
@@ -458,13 +422,13 @@
         "i": "key",
         "s": 1.0,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -475,7 +439,7 @@
         "i": "lbtn",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "solo"
@@ -486,7 +450,7 @@
         "i": "lbtn",
         "s": 1.8,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "lit": "accende"
        }
       ],
@@ -498,7 +462,7 @@
         "i": "lbtn",
         "s": 2.2,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "lit": "accende"
        }
       ],
@@ -528,7 +492,7 @@
         "i": "lbtn",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "lit": true
        }
       ]
@@ -539,7 +503,7 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glow": true
        }
       ],
@@ -551,7 +515,7 @@
         "i": "doorin",
         "s": 1.2,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "glow": true,
         "glass": true,
         "sil": "fuori"
@@ -588,23 +552,11 @@
         "i": "tower",
         "s": 1.5,
         "y": 1.22,
-        "a": "impactdrift",
+        "a": "drift2",
         "path": [
          [
-          1,
-          "passi"
-         ],
-         [
-          2,
-          "secondo"
-         ],
-         [
-          3,
-          "terzo"
-         ],
-         [
           4,
-          "quarto"
+          true
          ]
         ],
         "lit": [
@@ -622,7 +574,7 @@
         "i": "lbtn",
         "s": 2.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "press": "pulsante",
         "lit": "pulsante"
        }

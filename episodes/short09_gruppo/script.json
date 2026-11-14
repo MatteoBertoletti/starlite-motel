@@ -21,6 +21,7 @@
   "longer": 0.21000000000000002
  },
  "speed_N": 1.0,
+ "sweep": true,
  "dips": [],
  "lines": [
   {
@@ -63,7 +64,7 @@
         "i": "hook",
         "s": 1.7,
         "y": -0.45,
-        "a": "impactdrift",
+        "a": "drift2",
         "app": "WHATSAPP · ORA",
         "tag": "GRUPPO FAMIGLIA",
         "lines": [
@@ -88,7 +89,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -126,8 +127,8 @@
        {
         "i": "plist",
         "s": 2.3,
-        "y": -1.0,
-        "a": "impactdrift",
+        "y": -0.87,
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -167,14 +168,14 @@
         "i": "hand",
         "s": 0.9,
         "y": -0.35,
-        "a": "impactdrift",
+        "a": "drift2",
         "tilt": -0.2
        },
        {
         "i": "slash",
         "s": 1.0,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ],
@@ -204,7 +205,7 @@
         "i": "fam",
         "s": 1.5,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "ats": [
          "tu",
          "mamma",
@@ -220,7 +221,7 @@
         "i": "fam",
         "s": 1.9,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "ats": [
          "tu",
          "mamma",
@@ -238,7 +239,7 @@
         "i": "fam",
         "s": 1.9,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "ats": [
          "tu",
          "mamma",
@@ -268,7 +269,7 @@
         "i": "fam",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "ats": [
          "il",
          "il",
@@ -285,7 +286,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -324,7 +325,7 @@
         "i": "plist",
         "s": 2.4,
         "y": -1.05,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -362,8 +363,8 @@
        {
         "i": "plist",
         "s": 3.4,
-        "y": -1.55,
-        "a": "impactdrift",
+        "y": -1.2,
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -392,7 +393,7 @@
           "at": null
          }
         ],
-        "x": 0.75
+        "x": 1.0
        }
       ],
       "at": "nessun"
@@ -415,7 +416,7 @@
         "i": "chatg",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "msgs": [
          {
@@ -443,7 +444,7 @@
         "i": "chatg",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "msgs": [
          {
@@ -471,7 +472,7 @@
         "i": "plist",
         "s": 2.0,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -511,7 +512,7 @@
         "i": "momoff",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "label": "SPENTO",
         "sub": "MAMMA"
        }
@@ -523,7 +524,7 @@
         "i": "momoff",
         "s": 1.9,
         "y": -0.05,
-        "a": "impactdrift",
+        "a": "drift2",
         "label": "SPENTO",
         "sub": "TELEFONO DI MAMMA"
        }
@@ -536,7 +537,7 @@
         "i": "chatg",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "msgs": [
          {
@@ -554,8 +555,8 @@
        {
         "i": "chatg",
         "s": 2.6,
-        "y": 2.16,
-        "a": "impactdrift",
+        "y": 1.16,
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "msgs": [
          {
@@ -565,7 +566,7 @@
           "react": true
          }
         ],
-        "x": 1.07
+        "x": 0.94
        }
       ],
       "at": "cuore"
@@ -576,7 +577,7 @@
         "i": "chatg",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "msgs": [
          {
@@ -614,14 +615,14 @@
         "i": "hand",
         "s": 0.9,
         "y": -0.35,
-        "a": "impactdrift",
+        "a": "drift2",
         "tilt": -0.2
        },
        {
         "i": "slash",
         "s": 1.0,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -632,7 +633,7 @@
         "i": "plist",
         "s": 1.25,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "title": "Gruppo famiglia",
         "sub": "5 partecipanti",
         "rows": [
@@ -671,7 +672,7 @@
         "i": "counter",
         "s": 1.0,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "label": "PARTECIPANTI",
         "v": "5",
         "sz": 26,
@@ -698,7 +699,7 @@
         "i": "counter",
         "s": 1.0,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "label": "PARTECIPANTI",
         "vals": [
          [
@@ -721,7 +722,7 @@
         "i": "counter",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "label": "PARTECIPANTI",
         "vals": [
          [

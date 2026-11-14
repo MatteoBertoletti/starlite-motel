@@ -111,11 +111,12 @@ export const SCN = {
     const u = size / 40; let gx = 0, gy = 0, pts = el.gaze || [[true, 0, 0]], px = 0, py = 0, pt = -99;
     for (const [w, x, y] of pts) { const t = T_(L, el, w); if (t === null) continue; if (lt >= t) { const k = H.easeOut(cl((lt - t) / 0.9)); gx = px + (x - px) * k; gy = py + (y - py) * k; px = x; py = y; } }
     if (pts.length) { /* resolve: last reached target blended */ let lastT = -99, lx = 0, ly = 0, fx = 0, fy = 0; for (const [w, x, y] of pts) { const t = T_(L, el, w); if (t !== null && lt >= t) { fx = lx; fy = ly; lastT = t; lx = x; ly = y; } } const k = H.easeOut(cl((lt - lastT) / 0.9)); gx = fx + (lx - fx) * k; gy = fy + (ly - fy) * k; }
-    c.save(); c.fillStyle = C.w; GL(c, 'white', 30);
+    gx += 0.22 * Math.sin(tt * 1.7); gy += 0.14 * Math.sin(tt * 2.3); const blink = (tt % 3.1) < 0.12 ? 0.15 : 1;
+    c.save(); c.rotate(Math.sin(tt * 1.1) * 0.035); c.fillStyle = C.w; GL(c, 'white', 30);
     for (const sd of [-1, 1]) { c.beginPath(); c.moveTo(sd * 8 * u, -10 * u); c.lineTo(sd * 18 * u, -26 * u); c.lineTo(sd * 20 * u, -4 * u); c.closePath(); c.fill(); }
     c.beginPath(); c.ellipse(0, 0, 21 * u, 17 * u, 0, 0, 7); c.fill(); NG(c);
-    for (const sd of [-1, 1]) { const ex = sd * 9 * u, ey = -2 * u; c.fillStyle = '#0b0b0d'; c.beginPath(); c.ellipse(ex, ey, 5.6 * u, 6.2 * u, 0, 0, 7); c.fill(); c.save(); GL(c, el.eye || 'gold', 18); c.fillStyle = colOf(el.eye || 'gold'); c.beginPath(); c.ellipse(ex, ey, 4.6 * u, 5.2 * u, 0, 0, 7); c.fill(); c.restore();
-      c.fillStyle = '#050506'; c.beginPath(); c.ellipse(ex + gx * u * 2.6, ey + gy * u * 2.2, 1.1 * u, 4.2 * u, 0, 0, 7); c.fill(); }
+    for (const sd of [-1, 1]) { const ex = sd * 9 * u, ey = -2 * u; c.fillStyle = '#0b0b0d'; c.beginPath(); c.ellipse(ex, ey, 5.6 * u, 6.2 * u * blink, 0, 0, 7); c.fill(); c.save(); GL(c, el.eye || 'gold', 18); c.fillStyle = colOf(el.eye || 'gold'); c.beginPath(); c.ellipse(ex, ey, 4.6 * u, 5.2 * u * blink, 0, 0, 7); c.fill(); c.restore();
+      c.fillStyle = '#050506'; c.beginPath(); c.ellipse(ex + gx * u * 2.6, ey + gy * u * 2.2, 1.1 * u, 4.2 * u * blink, 0, 0, 7); c.fill(); }
     c.fillStyle = '#e58c8c'; c.beginPath(); c.moveTo(-1.6 * u, 6 * u); c.lineTo(1.6 * u, 6 * u); c.lineTo(0, 8 * u); c.closePath(); c.fill();
     c.strokeStyle = '#2a2a2e'; c.lineWidth = u * 0.4; for (const sd of [-1, 1]) for (const dy of [-1, 1]) { c.beginPath(); c.moveTo(sd * 6 * u, (8 + dy) * u); c.lineTo(sd * 20 * u, (8 + dy * 3) * u); c.stroke(); }
     c.restore();

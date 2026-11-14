@@ -21,6 +21,7 @@
   "longer": 0.21000000000000002
  },
  "speed_N": 1.0,
+ "sweep": true,
  "dips": [],
  "lines": [
   {
@@ -62,7 +63,7 @@
         "i": "hook",
         "s": 1.8,
         "y": -0.5,
-        "a": "impactdrift",
+        "a": "drift2",
         "app": "SUONO · 02:00",
         "tag": "MIAGOLA SOTTO CASA",
         "lines": [
@@ -86,7 +87,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "miagola"
        }
       ],
@@ -98,7 +99,7 @@
         "i": "bedtop",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "tuo"
@@ -109,13 +110,13 @@
         "i": "you",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ],
@@ -139,7 +140,7 @@
         "i": "counter",
         "s": 1.3,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "sz": 30,
         "col": "white",
         "v": "02:00",
@@ -153,7 +154,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "quarto"
@@ -164,7 +165,7 @@
         "i": "winK",
         "s": 1.5,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "miagolio"
        }
       ],
@@ -176,7 +177,7 @@
         "i": "winK",
         "s": 2.4,
         "y": -1.55,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "miagolio"
        }
       ],
@@ -206,7 +207,7 @@
         "i": "bedtop",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ]
      },
@@ -216,7 +217,7 @@
         "i": "catface",
         "s": 1.6,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "gaze": [
          [
           "orecchie",
@@ -234,7 +235,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "finestra"
        }
       ],
@@ -258,7 +259,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "miagolio"
        }
       ]
@@ -269,7 +270,7 @@
         "i": "catface",
         "s": 1.5,
         "y": -0.25,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "identico"
@@ -280,7 +281,7 @@
         "i": "bowl",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "chiede"
@@ -291,7 +292,7 @@
         "i": "bowl",
         "s": 2.2,
         "y": -0.4,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "mangiare"
@@ -314,13 +315,13 @@
         "i": "you",
         "s": 1.2,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        },
        {
         "i": "slash",
         "s": 1.3,
         "y": -0.3,
-        "a": "impactdrift",
+        "a": "drift2",
         "g": "red"
        }
       ]
@@ -331,7 +332,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "quello"
        }
       ],
@@ -343,7 +344,7 @@
         "i": "ear",
         "s": 1.4,
         "y": -0.3,
-        "a": "impactdrift"
+        "a": "drift2"
        }
       ],
       "at": "impara"
@@ -354,7 +355,7 @@
         "i": "swYou",
         "s": 1.2,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "voci"
        }
       ],
@@ -378,7 +379,7 @@
         "i": "winK",
         "s": 1.3,
         "y": -0.2,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": true
        }
       ]
@@ -389,7 +390,7 @@
         "i": "swYou",
         "s": 1.3,
         "y": -0.25,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "imparato"
        }
       ],
@@ -401,7 +402,7 @@
         "i": "swYou",
         "s": 2.2,
         "y": -0.35,
-        "a": "impactdrift",
+        "a": "drift2",
         "waves": "imparato"
        }
       ],

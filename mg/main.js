@@ -79,6 +79,7 @@ function drawEl(c, el, L, lt, tt) {
   else if (a === 'buzz') { const on = (k < 0.4 || (k > 0.55 && k < 0.95)) ? 1 : 0; dx = on * Math.sin(k * 140) * 14; rot = on * Math.sin(k * 110) * 0.012; }
   else if (a === 'impact') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)); }
   else if (a === 'impactdrift') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)) + 0.06 * k; dx = k * 45; rot = Math.sin(k * 2.2) * 0.015; }
+  else if (a === 'drift2') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)) + 0.11 * k; dx = k * 60; dy = -k * 22; rot = Math.sin(k * 2.2) * 0.025; }
   else if (a === 'buzzdrift') { const ph = k % 1.1, on = ph < 0.45 ? 1 : 0; dx = on * Math.sin(k * 140) * 14 + k * 30; dy = -k * 18; rot = on * Math.sin(k * 110) * 0.012; }
   else if (a === 'surge') { sc = 1 + 0.35 * (1 - easeOut(k / 0.22)) + (SCRIPT.surge || 0.14) * k; dy = -k * 34; rot = Math.sin(k * 2.0) * 0.035; }   // a word that keeps coming at you
   else if (a === 'still') { }
@@ -1398,6 +1399,8 @@ window.seek = (t) => {
   // dust: a few slow motes (deterministic)
   for (let i = 0; i < 40; i++) { const px = (hash(i) * FW + t * (6 + hash(i + 1) * 14)) % FW, py = (hash(i + 2) * FH - t * (3 + hash(i + 3) * 8) + FH * 10) % FH;
     sc.fillStyle = `rgba(242,239,232,${0.05 + 0.12 * hash(i + 4)})`; sc.beginPath(); sc.arc(px, py, 1 + hash(i + 5) * 1.6, 0, 7); sc.fill(); }
+  if (VERT && SCRIPT.sweep) { const sx = FW * (0.5 + 0.42 * Math.sin(t * 1.15)), sy = CY + 360 * Math.sin(t * 0.83 + 1), g = sc.createRadialGradient(sx, sy, 20, sx, sy, 780);   // a cold light slowly crossing the dark: the stage is never dead
+    g.addColorStop(0, 'rgba(190,205,225,0.10)'); g.addColorStop(1, 'rgba(190,205,225,0)'); sc.save(); sc.globalCompositeOperation = 'lighter'; sc.fillStyle = g; sc.fillRect(0, 0, FW, FH); sc.restore(); }
   let shx = 0, shy = 0;
   const shk = shot && shot.shake ? slt : (v.fx === 'shake' ? lt : 9);
   if (shk < 0.5) { shx = Math.sin(t * 90) * 14 * (1 - shk / 0.5); shy = Math.cos(t * 77) * 10 * (1 - shk / 0.5); }
