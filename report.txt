@@ -1,0 +1,10 @@
+  1 N         0.00-   4.75 match=1.00 eleven_v4 (cache) | Se il frigo suona «porta aperta» con la porta chiusa, non aprirlo.
+  2 N         4.95-   8.40 match=1.00 eleven_v4 | Sono le tre. Il beep ripete ogni dieci secondi.
+  3 N         8.60-  12.55 match=1.00 eleven_v4 (cache) | Controlli, la porta è chiusa, la guarnizione è a posto.
+  4 N        12.75-  17.30 match=1.00 eleven_v4 (cache) | Il beep smette solo se la luce interna viene premuta. Da dentro.
+  5 N        17.50-  20.29 match=1.00 eleven_v4 (cache) | Dentro, la plastica dei ripiani si piega.
+  6 N        20.49-  24.12 match=1.00 eleven_v4 (cache) | Non aprirlo, quel frigo ha un ripiano in meno da stasera.
+  7 N        24.32-  26.13 match=1.00 eleven_v4 (cache) | Qualcuno ha fatto spazio.
+
+TOTAL 26.2s  new characters billed ~47  cached lines 6
+low match lines: []
