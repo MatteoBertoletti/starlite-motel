@@ -1,0 +1,582 @@
+{
+ "title": "Se Compare Una Rete Wi-Fi Con Il Nome Di Casa Tua… NON COLLEGARTI",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se compare una rete Wi-Fi con lo stesso nome di casa tua, non collegarti.",
+   "capfull": true,
+   "cap": "Se compare una rete Wi-Fi con lo stesso nome di casa tua, non collegarti.",
+   "red": "collegarti",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "IMPOSTAZIONI · WI-FI",
+        "bars": 4,
+        "tag": "«LA TUA RETE»",
+        "lines": [
+         {
+          "t": "2ª COPIA",
+          "s": 16,
+          "col": "red"
+         }
+        ],
+        "foot": "SEGNALE MASSIMO",
+        "fcol": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.8,
+        "y": -0.45,
+        "a": "impactdrift",
+        "app": "IMPOSTAZIONI · WI-FI",
+        "bars": 4,
+        "tag": "«LA TUA RETE»",
+        "lines": [
+         {
+          "t": "2ª COPIA",
+          "s": 16,
+          "col": "red"
+         }
+        ],
+        "foot": "SEGNALE MASSIMO",
+        "fcol": "red"
+       }
+      ],
+      "at": "compare"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "sub": "Reti disponibili",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 2,
+          "r": "la tua"
+         },
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": "compare",
+          "at": "compare"
+         }
+        ]
+       }
+      ],
+      "at": "rete"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.2,
+        "y": -0.9,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "sub": "Reti disponibili",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 2,
+          "r": "la tua"
+         },
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": "compare",
+          "at": "compare"
+         }
+        ]
+       }
+      ],
+      "at": "stesso"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": true
+         }
+        ]
+       },
+       {
+        "i": "slash",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il tuo router è in corridoio. Quello nuovo ha il segnale al massimo, anche in camera.",
+   "cap": "Il tuo router è in corridoio. Quello nuovo ha il segnale al massimo, anche in camera.",
+   "red": "camera",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.3,
+        "y": -0.15,
+        "a": "impactdrift",
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 2.3,
+        "y": 0.1,
+        "a": "impactdrift",
+        "x": -0.05,
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera"
+         }
+        ]
+       }
+      ],
+      "at": "router"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "sub": "Reti disponibili",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 2,
+          "r": "la tua"
+         },
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": "compare",
+          "at": "compare"
+         }
+        ]
+       }
+      ],
+      "at": "nuovo"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.6,
+        "y": 0.3,
+        "a": "impactdrift",
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "sig": "massimo"
+         }
+        ]
+       }
+      ],
+      "at": "massimo"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Vai in cucina: massimo. In bagno: massimo.",
+   "cap": "Vai in cucina: massimo. In bagno: massimo.",
+   "red": "massimo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.3,
+        "y": -0.15,
+        "a": "impactdrift",
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "bagno",
+            "bagno"
+           ]
+          ],
+          "sig": true
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.8,
+        "y": 0.3,
+        "a": "impactdrift",
+        "x": -0.3,
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "bagno",
+            "bagno"
+           ]
+          ],
+          "sig": true
+         }
+        ]
+       }
+      ],
+      "at": "cucina"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.8,
+        "y": -0.3,
+        "a": "impactdrift",
+        "x": -0.3,
+        "router": true,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "bagno",
+            "bagno"
+           ]
+          ],
+          "sig": true
+         }
+        ]
+       }
+      ],
+      "at": "bagno"
+     }
+    ],
+    "sfx": [
+     [
+      "tick",
+      "cucina"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Una rete non cammina, a meno che non sia in tasca a qualcuno.",
+   "cap": "Una rete non cammina, a meno che non sia in tasca a qualcuno.",
+   "red": "tasca",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "steps",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "shadow",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "meno"
+     },
+     {
+      "els": [
+       {
+        "i": "phone",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "shake"
+       }
+      ],
+      "at": "tasca"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non collegarti. Aspetta che si stanchi.",
+   "cap": "Non collegarti. Aspetta che si stanchi.",
+   "red": "stanchi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": true
+         }
+        ]
+       },
+       {
+        "i": "slash",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "aspetta"
+     },
+     {
+      "els": [
+       {
+        "i": "plist",
+        "s": 2.2,
+        "y": -0.7,
+        "a": "impactdrift",
+        "title": "Wi-Fi",
+        "rows": [
+         {
+          "t": "LA TUA RETE",
+          "bars": 4,
+          "hot": true
+         }
+        ]
+       }
+      ],
+      "at": "stanchi"
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il segnale si è spostato dietro di te.",
+   "cap": "Il segnale si è spostato dietro di te.",
+   "red": "te",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "ring": "segnale"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 2.2,
+        "y": -0.55,
+        "a": "impactdrift",
+        "x": 0.7,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "ring": "dietro"
+         }
+        ]
+       }
+      ],
+      "at": "dietro"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 3.0,
+        "y": -0.8,
+        "a": "impactdrift",
+        "x": 0.7,
+        "dots": [
+         {
+          "n": "TU",
+          "c": "gold",
+          "at": "camera",
+          "ring": "dietro"
+         }
+        ]
+       }
+      ],
+      "at": "te"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "te"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Compare Una Rete Wi-Fi Con Il Nome Di Casa Tua… NON COLLEGARTI",
+  "publish": "mercoledì 18 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Una rete con il nome di casa tua, un metro dietro di te."
+  ],
+  "question": "👇 Come si chiama il Wi-Fi di casa tua? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Come si chiama il Wi-Fi di casa tua? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "wifi",
+   "rete wifi",
+   "router"
+  ]
+ }
+}

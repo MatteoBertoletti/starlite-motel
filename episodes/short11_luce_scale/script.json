@@ -1,0 +1,662 @@
+{
+ "title": "Se La Luce Delle Scale Si Spegne E I Passi Continuano… NON RIACCENDERLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la luce delle scale si spegne e i passi continuano, non riaccenderla.",
+   "capfull": true,
+   "cap": "Se la luce delle scale si spegne e i passi continuano, non riaccenderla.",
+   "red": "riaccenderla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "SCALE · 23:40",
+        "bc": "orange",
+        "tag": "LUCE SCALE",
+        "lines": [
+         {
+          "t": "30 SECONDI",
+          "s": 13
+         },
+         {
+          "t": "PASSI",
+          "s": 17,
+          "col": "red"
+         }
+        ],
+        "foot": "(la luce si è spenta)"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "app": "SCALE · 23:40",
+        "bc": "orange",
+        "tag": "LUCE SCALE",
+        "lines": [
+         {
+          "t": "30 SECONDI",
+          "s": 13
+         },
+         {
+          "t": "PASSI",
+          "s": 17,
+          "col": "red"
+         }
+        ],
+        "foot": "(la luce si è spenta)"
+       }
+      ],
+      "at": "luce"
+     },
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.15,
+        "y": -0.1,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ],
+        "lit": []
+       }
+      ],
+      "at": "spegne"
+     },
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.5,
+        "y": 0.2,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ],
+      "at": "passi"
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.4,
+        "y": -0.2,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il timer dura trenta secondi. Li conti dallo spioncino.",
+   "cap": "Il timer dura trenta secondi. Li conti dallo spioncino.",
+   "red": "spioncino",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "num": "30\""
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.2,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "orange",
+        "label": "LUCE DELLE SCALE",
+        "unit": "SECONDI",
+        "down": {
+         "from": 30,
+         "to": 0,
+         "at": "trenta",
+         "dur": 4.0
+        }
+       }
+      ],
+      "at": "trenta"
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.7,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "orange",
+        "label": "LUCE DELLE SCALE",
+        "unit": "SECONDI",
+        "down": {
+         "from": 30,
+         "to": 0,
+         "at": "trenta",
+         "dur": 4.0
+        }
+       }
+      ],
+      "at": "conti"
+     },
+     {
+      "els": [
+       {
+        "i": "peephole",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "spioncino"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Passi al secondo piano. Terzo. Quarto, il tuo.",
+   "cap": "Passi al secondo piano. Terzo. Quarto, il tuo.",
+   "red": "tuo",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.3,
+        "y": 0.35,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.6,
+        "y": 0.0,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ],
+      "at": "secondo"
+     },
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.6,
+        "y": 0.61,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ],
+      "at": "terzo"
+     },
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.6,
+        "y": 1.22,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ],
+      "at": "quarto"
+     }
+    ],
+    "sfx": [
+     [
+      "steps",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Poi si fermano davanti alla tua porta.",
+   "cap": "Poi si fermano davanti alla tua porta.",
+   "red": "porta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 2.0,
+        "y": 1.55,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.15,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "davanti"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.15,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glass": true,
+        "sil": "porta"
+       }
+      ],
+      "at": "porta"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "porta"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Nessun rumore di chiavi. Solo il pulsante della luce che si accende.",
+   "cap": "Nessun rumore di chiavi. Solo il pulsante della luce che si accende.",
+   "red": "accende",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "key",
+        "s": 1.0,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "solo"
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.8,
+        "y": -0.2,
+        "a": "impactdrift",
+        "lit": "accende"
+       }
+      ],
+      "at": "pulsante"
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 2.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "lit": "accende"
+       }
+      ],
+      "at": "accende"
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "accende"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non riaccenderla: la luce serve a chi è fuori, non a te.",
+   "cap": "Non riaccenderla: la luce serve a chi è fuori, non a te.",
+   "red": "fuori",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "lit": true
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glow": true
+       }
+      ],
+      "at": "serve"
+     },
+     {
+      "els": [
+       {
+        "i": "doorin",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "glow": true,
+        "glass": true,
+        "sil": "fuori"
+       }
+      ],
+      "at": "fuori"
+     },
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.1,
+        "y": -0.3,
+        "a": "buzzdrift"
+       }
+      ],
+      "at": "te"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "Per questo premono il pulsante.",
+   "cap": "Per questo premono il pulsante.",
+   "red": "premono",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "tower",
+        "s": 1.5,
+        "y": 1.22,
+        "a": "impactdrift",
+        "path": [
+         [
+          1,
+          "passi"
+         ],
+         [
+          2,
+          "secondo"
+         ],
+         [
+          3,
+          "terzo"
+         ],
+         [
+          4,
+          "quarto"
+         ]
+        ],
+        "lit": [
+         [
+          4,
+          "premono"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "lbtn",
+        "s": 2.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "press": "pulsante",
+        "lit": "pulsante"
+       }
+      ],
+      "at": "pulsante"
+     }
+    ],
+    "sfx": [
+     [
+      "click",
+      "pulsante"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se La Luce Delle Scale Si Spegne E I Passi Continuano… NON RIACCENDERLA",
+  "publish": "martedì 17 novembre, 12:30 (ora italiana)",
+  "intro": [
+   "Il timer delle scale non si ferma da solo."
+  ],
+  "question": "👇 Quanto dura la luce delle scale nel tuo condominio? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Quanto dura la luce delle scale nel tuo condominio? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "luce delle scale",
+   "condominio",
+   "spioncino"
+  ]
+ }
+}

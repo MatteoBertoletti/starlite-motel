@@ -1,0 +1,526 @@
+{
+ "title": "Se Il Gatto Fissa Un Angolo Vuoto Della Stanza… NON GUARDARE LÌ",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se il gatto fissa un angolo vuoto della stanza, non guardare lì.",
+   "capfull": true,
+   "cap": "Se il gatto fissa un angolo vuoto della stanza, non guardare lì.",
+   "red": "guardare",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "STANZA · 03:12",
+        "tag": "IL GATTO FISSA L'ANGOLO",
+        "lines": [
+         {
+          "t": "DA 3 ORE",
+          "s": 17,
+          "col": "red"
+         }
+        ],
+        "foot": "(non c'è niente)",
+        "fcol": "dim"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.35,
+        "y": -0.25,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          true,
+          0,
+          0
+         ],
+         [
+          "angolo",
+          1.1,
+          -0.9
+         ]
+        ]
+       }
+      ],
+      "at": "gatto"
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.9,
+        "y": -0.1,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          true,
+          0,
+          0
+         ],
+         [
+          "angolo",
+          1.1,
+          -0.9
+         ]
+        ]
+       }
+      ],
+      "at": "angolo"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "cat": false
+       }
+      ],
+      "at": "vuoto"
+     },
+     {
+      "els": [
+       {
+        "i": "eye",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "guardare"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non è un ragno. Non è una mosca. I suoi occhi seguono qualcosa che si muove.",
+   "cap": "Non è un ragno. Non è una mosca. I suoi occhi seguono qualcosa che si muove.",
+   "red": "muove",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.35,
+        "y": -0.25,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          true,
+          1,
+          -0.6
+         ],
+         [
+          "mosca",
+          -1,
+          -0.4
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.7,
+        "y": -0.2,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          true,
+          -1,
+          -0.4
+         ]
+        ]
+       }
+      ],
+      "at": "mosca"
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 2.7,
+        "y": -0.3,
+        "a": "impactdrift",
+        "gaze": [
+         [
+          "seguono",
+          1,
+          0.4
+         ],
+         [
+          "qualcosa",
+          0,
+          0.9
+         ],
+         [
+          "muove",
+          -1,
+          0.5
+         ]
+        ]
+       }
+      ],
+      "at": "occhi"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.25,
+        "y": -0.2,
+        "a": "impactdrift",
+        "cat": false,
+        "dash": "muove",
+        "dur": 1.2
+       }
+      ],
+      "at": "muove"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Lentamente, dall'angolo verso il letto.",
+   "cap": "Lentamente, dall'angolo verso il letto.",
+   "red": "letto",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "cat": false,
+        "dash": "lentamente",
+        "dur": 2.6
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 2.0,
+        "y": -0.55,
+        "a": "impactdrift",
+        "x": -0.25,
+        "cat": false,
+        "dash": "lentamente",
+        "dur": 2.6
+       }
+      ],
+      "at": "verso"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 2.6,
+        "y": -0.3,
+        "a": "impactdrift",
+        "x": -0.3,
+        "cat": false,
+        "dash": "lentamente",
+        "dur": 2.6
+       }
+      ],
+      "at": "letto"
+     }
+    ],
+    "sfx": [
+     [
+      "steps",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Il gatto non soffia. Non scappa. Si siede, come per fare spazio.",
+   "cap": "Il gatto non soffia. Non scappa. Si siede, come per fare spazio.",
+   "red": "spazio",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.35,
+        "y": -0.25,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "cat",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "scappa"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "dash": "soffia",
+        "dur": 0.1,
+        "catx": 9,
+        "caty": 20
+       }
+      ],
+      "at": "siede"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 2.1,
+        "y": -0.5,
+        "a": "impactdrift",
+        "x": -0.1,
+        "dash": "soffia",
+        "dur": 0.1,
+        "dip": "spazio"
+       }
+      ],
+      "at": "spazio"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Tu senti il materasso abbassarsi.",
+   "cap": "Tu senti il materasso abbassarsi.",
+   "red": "abbassarsi",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift",
+        "dash": "tu",
+        "dur": 0.1,
+        "dip": "materasso"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 2.5,
+        "y": -0.62,
+        "a": "impactdrift",
+        "x": 0.62,
+        "dash": "tu",
+        "dur": 0.1,
+        "dip": true
+       }
+      ],
+      "at": "abbassarsi"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "abbassarsi"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Non girarti. I gatti non fanno spazio a chi non conoscono.",
+   "cap": "Non girarti. I gatti non fanno spazio a chi non conoscono.",
+   "red": "conoscono",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "you",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "catface",
+        "s": 1.5,
+        "y": -0.25,
+        "a": "impactdrift",
+        "eye": "red"
+       }
+      ],
+      "at": "gatti"
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "dash": "non",
+        "dur": 0.1,
+        "dip": true
+       }
+      ],
+      "at": "conoscono"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "A lui sì.",
+   "cap": "A lui sì.",
+   "red": "sì",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "dash": "lui",
+        "dur": 0.1,
+        "dip": true,
+        "catmove": "lui",
+        "catto": 15
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "bedtop",
+        "s": 2.8,
+        "y": -0.6,
+        "a": "impactdrift",
+        "x": 0.55,
+        "dash": "lui",
+        "dur": 0.1,
+        "dip": true,
+        "catmove": "lui",
+        "catto": 15
+       }
+      ],
+      "at": "sì"
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "sì"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se Il Gatto Fissa Un Angolo Vuoto Della Stanza… NON GUARDARE LÌ",
+  "publish": "lunedì 16 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Il gatto sa chi è. Tu no."
+  ],
+  "question": "👇 Dove fissa il tuo gatto quando non c'è niente? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Dove fissa il tuo gatto quando non c'è niente? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "gatto",
+   "gatto che fissa",
+   "animali horror"
+  ]
+ }
+}

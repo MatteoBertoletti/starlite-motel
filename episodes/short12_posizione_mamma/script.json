@@ -1,0 +1,648 @@
+{
+ "title": "Se La Posizione Di Mamma Dice «Casa Tua» Ma Lei È In Viaggio… NON CHIAMARLA",
+ "format": "vertical",
+ "bed": "noise",
+ "bed_under": 17,
+ "pulse": true,
+ "loop": true,
+ "case": "",
+ "night": "",
+ "lang": "it",
+ "voices": {
+  "N": {
+   "role": "narratore, secco, senza enfasi"
+  }
+ },
+ "start_pad": 0.0,
+ "end_pad": 0.05,
+ "default_gap": 0.25,
+ "tight": {
+  "cap": 0.25,
+  "longer": 0.26
+ },
+ "speed_N": 1.0,
+ "dips": [],
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la posizione di mamma dice «casa tua» ma lei è in viaggio, non chiamarla.",
+   "capfull": true,
+   "cap": "Se la posizione di mamma dice «casa tua» ma lei è in viaggio, non chiamarla.",
+   "red": "chiamarla",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.15,
+        "y": -0.16,
+        "a": "still",
+        "app": "POSIZIONE · ORA",
+        "bc": "blue",
+        "tag": "MAMMA",
+        "lines": [
+         {
+          "t": "POSIZIONE:",
+          "s": 9.5
+         },
+         {
+          "t": "CASA TUA",
+          "s": 15,
+          "col": "red"
+         }
+        ],
+        "foot": "(lei è a Napoli)"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "hook",
+        "s": 1.8,
+        "y": -0.5,
+        "a": "impactdrift",
+        "app": "POSIZIONE · ORA",
+        "bc": "blue",
+        "tag": "MAMMA",
+        "lines": [
+         {
+          "t": "POSIZIONE:",
+          "s": 9.5
+         },
+         {
+          "t": "CASA TUA",
+          "s": 15,
+          "col": "red"
+         }
+        ],
+        "foot": "(lei è a Napoli)"
+       }
+      ],
+      "at": "posizione"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.25,
+        "y": -0.1,
+        "a": "impactdrift",
+        "x": 0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto"
+         }
+        ]
+       }
+      ],
+      "at": "mamma"
+     },
+     {
+      "els": [
+       {
+        "i": "car",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "viaggio"
+     },
+     {
+      "els": [
+       {
+        "i": "handset",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift"
+       },
+       {
+        "i": "slash",
+        "s": 1.3,
+        "y": -0.3,
+        "a": "impactdrift",
+        "g": "red"
+       }
+      ],
+      "at": "non"
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "fx": "tight",
+   "say": "Lei è a Napoli da tre giorni. Il puntino blu è in salotto.",
+   "cap": "Lei è a Napoli da tre giorni. Il puntino blu è in salotto.",
+   "red": "salotto",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "map",
+        "s": 1.4,
+        "y": -0.3,
+        "a": "impactdrift"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "counter",
+        "s": 1.2,
+        "y": -0.25,
+        "a": "impactdrift",
+        "sz": 34,
+        "col": "white",
+        "v": "3",
+        "unit": "GIORNI",
+        "label": "A NAPOLI DA"
+       }
+      ],
+      "at": "tre"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.25,
+        "y": -0.1,
+        "a": "impactdrift",
+        "x": 0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto"
+         }
+        ]
+       }
+      ],
+      "at": "puntino"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 2.2,
+        "y": 0.45,
+        "a": "impactdrift",
+        "x": 0.7,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto"
+         }
+        ],
+        "hot": "salotto"
+       }
+      ],
+      "at": "salotto"
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "fx": "tight",
+   "say": "Si sposta: cucina, corridoio, davanti alla tua camera.",
+   "cap": "Si sposta: cucina, corridoio, davanti alla tua camera.",
+   "red": "camera",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.25,
+        "y": -0.1,
+        "a": "impactdrift",
+        "x": 0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.7,
+        "y": 0.2,
+        "a": "impactdrift",
+        "x": -0.4,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ]
+       }
+      ],
+      "at": "cucina"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.7,
+        "y": -0.2,
+        "a": "impactdrift",
+        "x": 0.0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ]
+       }
+      ],
+      "at": "corridoio"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 2.2,
+        "y": -0.45,
+        "a": "impactdrift",
+        "x": 0.6,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ],
+        "hot": "camera"
+       }
+      ],
+      "at": "davanti"
+     }
+    ],
+    "sfx": [
+     [
+      "steps",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "fx": "tight",
+   "say": "Si ferma.",
+   "cap": "Si ferma.",
+   "red": "ferma",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 2.6,
+        "y": -0.4,
+        "a": "impactdrift",
+        "x": 1.0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ],
+        "hot": "camera"
+       }
+      ]
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "ferma"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se la chiami, il suo telefono vibra sul pavimento, oltre la porta.",
+   "cap": "Se la chiami, il suo telefono vibra sul pavimento, oltre la porta.",
+   "red": "porta",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "handset",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "shake",
+        "until": "chiami"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 1.2,
+        "y": -0.2,
+        "a": "impactdrift",
+        "flicker": true
+       }
+      ],
+      "at": "telefono"
+     },
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 2.4,
+        "y": -1.3,
+        "a": "shake",
+        "flicker": true
+       }
+      ],
+      "at": "pavimento"
+     },
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.7,
+        "y": -0.2,
+        "a": "impactdrift",
+        "x": 0.5,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "salotto",
+          "path": [
+           [
+            "cucina",
+            "cucina"
+           ],
+           [
+            "corridoio",
+            "corridoio"
+           ],
+           [
+            "porta",
+            "davanti"
+           ]
+          ]
+         }
+        ],
+        "hot": "camera"
+       }
+      ],
+      "at": "oltre"
+     }
+    ],
+    "sfx": [
+     [
+      "vibrate",
+      "telefono"
+     ]
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "fx": "tight",
+   "say": "Se vibra, qualcuno ha preso il suo telefono.",
+   "cap": "Se vibra, qualcuno ha preso il suo telefono.",
+   "red": "preso",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "phone",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "shake"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "shadow",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "impactdrift"
+       }
+      ],
+      "at": "qualcuno"
+     },
+     {
+      "els": [
+       {
+        "i": "hand",
+        "s": 1.2,
+        "y": -0.3,
+        "a": "impactdrift",
+        "tilt": 0.3
+       },
+       {
+        "i": "phone",
+        "s": 0.7,
+        "y": -0.5,
+        "a": "impactdrift",
+        "x": 0.2
+       }
+      ],
+      "at": "preso"
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "fx": "tight",
+   "say": "E sa già dov'è la tua camera.",
+   "cap": "E sa già dov'è la tua camera.",
+   "red": "camera",
+   "v": {
+    "shots": [
+     {
+      "els": [
+       {
+        "i": "mapz",
+        "s": 1.5,
+        "y": -0.2,
+        "a": "impactdrift",
+        "x": 0,
+        "head": "MAMMA · CASA TUA",
+        "dots": [
+         {
+          "n": "MAMMA",
+          "c": "blue",
+          "at": "porta"
+         }
+        ],
+        "hot": "camera"
+       }
+      ]
+     },
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 1.3,
+        "y": -0.2,
+        "a": "shake",
+        "flicker": true
+       }
+      ],
+      "at": "camera"
+     },
+     {
+      "els": [
+       {
+        "i": "doorlight",
+        "s": 2.4,
+        "y": -1.3,
+        "a": "shake",
+        "flicker": true
+       }
+      ],
+      "at": "camera",
+      "dt": 0.7
+     }
+    ],
+    "sfx": [
+     [
+      "hit",
+      "camera"
+     ]
+    ]
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Se La Posizione Di Mamma Dice «Casa Tua» Ma Lei È In Viaggio… NON CHIAMARLA",
+  "publish": "martedì 17 novembre, 21:00 (ora italiana)",
+  "intro": [
+   "Il puntino blu non sbaglia posizione."
+  ],
+  "question": "👇 Condividi la posizione con la tua famiglia? #Shorts #horror #storiehorror",
+  "question_last": true,
+  "short": true,
+  "pinned": "Condividi la posizione con la tua famiglia? Scrivilo qui sotto 👇",
+  "tags": [
+   "storie horror",
+   "horror italiano",
+   "le sette regole",
+   "creepy",
+   "posizione",
+   "mamma",
+   "condividi posizione"
+  ]
+ }
+}
