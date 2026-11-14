@@ -25,6 +25,7 @@ jobs:
         run: python tools/voice_el.py episodes/${{ inputs.ep }} voices/it.json cache
       - name: Save the cache
         if: always()
+        continue-on-error: true
         run: |
           cd cache && git init -q && git checkout -q -b voice-cache
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
