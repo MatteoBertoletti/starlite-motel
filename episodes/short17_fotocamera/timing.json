@@ -1,0 +1,391 @@
+{
+ "duration": 25.36,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.49,
+   "dur": 4.49,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "la",
+     "s": 0.18,
+     "e": 0.3
+    },
+    {
+     "w": "fotocamera",
+     "s": 0.3,
+     "e": 0.88
+    },
+    {
+     "w": "si",
+     "s": 0.88,
+     "e": 1.02
+    },
+    {
+     "w": "accende",
+     "s": 1.02,
+     "e": 1.38
+    },
+    {
+     "w": "da",
+     "s": 1.38,
+     "e": 1.54
+    },
+    {
+     "w": "sola",
+     "s": 1.54,
+     "e": 1.84
+    },
+    {
+     "w": "con",
+     "s": 1.84,
+     "e": 2.08
+    },
+    {
+     "w": "il",
+     "s": 2.08,
+     "e": 2.22
+    },
+    {
+     "w": "pallino",
+     "s": 2.22,
+     "e": 2.6
+    },
+    {
+     "w": "verde",
+     "s": 2.6,
+     "e": 3.02
+    },
+    {
+     "w": "non",
+     "s": 3.34,
+     "e": 3.62
+    },
+    {
+     "w": "coprirla",
+     "s": 3.62,
+     "e": 4.36
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se la fotocamera si accende da sola con il pallino verde, non coprirla."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.74,
+   "end": 8.89,
+   "dur": 4.15,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 4.74,
+     "e": 4.9
+    },
+    {
+     "w": "pallino",
+     "s": 4.9,
+     "e": 5.4
+    },
+    {
+     "w": "resta",
+     "s": 5.4,
+     "e": 5.88
+    },
+    {
+     "w": "acceso",
+     "s": 5.88,
+     "e": 6.32
+    },
+    {
+     "w": "anche",
+     "s": 6.7,
+     "e": 6.86
+    },
+    {
+     "w": "se",
+     "s": 6.86,
+     "e": 7.06
+    },
+    {
+     "w": "lo",
+     "s": 7.06,
+     "e": 7.18
+    },
+    {
+     "w": "schermo",
+     "s": 7.18,
+     "e": 7.56
+    },
+    {
+     "w": "e",
+     "s": 7.56,
+     "e": 7.72
+    },
+    {
+     "w": "fermo",
+     "s": 7.72,
+     "e": 8.14
+    },
+    {
+     "w": "sulla",
+     "s": 8.14,
+     "e": 8.32
+    },
+    {
+     "w": "home",
+     "s": 8.32,
+     "e": 8.68
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il pallino resta acceso, anche se lo schermo è fermo sulla home."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 9.14,
+   "end": 13.8,
+   "dur": 4.66,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "nell",
+     "s": 9.14,
+     "e": 9.4
+    },
+    {
+     "w": "elenco",
+     "s": 9.4,
+     "e": 9.78
+    },
+    {
+     "w": "delle",
+     "s": 9.78,
+     "e": 9.96
+    },
+    {
+     "w": "app",
+     "s": 9.96,
+     "e": 10.36
+    },
+    {
+     "w": "nessuna",
+     "s": 10.82,
+     "e": 11.38
+    },
+    {
+     "w": "la",
+     "s": 11.38,
+     "e": 11.52
+    },
+    {
+     "w": "sta",
+     "s": 11.52,
+     "e": 11.68
+    },
+    {
+     "w": "usando",
+     "s": 11.68,
+     "e": 12.16
+    },
+    {
+     "w": "solo",
+     "s": 12.5,
+     "e": 12.88
+    },
+    {
+     "w": "sistema",
+     "s": 12.88,
+     "e": 13.82
+    }
+   ],
+   "match": 1.0,
+   "heard": "Nell 'elenco delle app, nessuna la sta usando. Solo «Sistema»."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 14.05,
+   "end": 17.38,
+   "dur": 3.33,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 14.05,
+     "e": 14.23
+    },
+    {
+     "w": "copri",
+     "s": 14.23,
+     "e": 14.57
+    },
+    {
+     "w": "l",
+     "s": 14.57,
+     "e": 14.67
+    },
+    {
+     "w": "obiettivo",
+     "s": 14.67,
+     "e": 15.31
+    },
+    {
+     "w": "il",
+     "s": 15.59,
+     "e": 15.69
+    },
+    {
+     "w": "pallino",
+     "s": 15.69,
+     "e": 16.17
+    },
+    {
+     "w": "diventa",
+     "s": 16.17,
+     "e": 16.59
+    },
+    {
+     "w": "arancione",
+     "s": 16.59,
+     "e": 17.21
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se copri l 'obiettivo, il pallino diventa arancione."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 17.63,
+   "end": 19.98,
+   "dur": 2.35,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "arancione",
+     "s": 17.63,
+     "e": 18.35
+    },
+    {
+     "w": "vuol",
+     "s": 18.35,
+     "e": 18.79
+    },
+    {
+     "w": "dire",
+     "s": 18.79,
+     "e": 19.01
+    },
+    {
+     "w": "microfono",
+     "s": 19.01,
+     "e": 19.83
+    }
+   ],
+   "match": 1.0,
+   "heard": "Arancione vuol dire microfono."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.23,
+   "end": 23.19,
+   "dur": 2.96,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "ti",
+     "s": 20.23,
+     "e": 20.35
+    },
+    {
+     "w": "stava",
+     "s": 20.35,
+     "e": 20.67
+    },
+    {
+     "w": "guardando",
+     "s": 20.67,
+     "e": 21.33
+    },
+    {
+     "w": "adesso",
+     "s": 21.73,
+     "e": 22.27
+    },
+    {
+     "w": "ti",
+     "s": 22.27,
+     "e": 22.51
+    },
+    {
+     "w": "ascolta",
+     "s": 22.51,
+     "e": 23.11
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ti stava guardando. Adesso ti ascolta."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.44,
+   "end": 25.31,
+   "dur": 1.87,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "non",
+     "s": 23.44,
+     "e": 23.64
+    },
+    {
+     "w": "parlare",
+     "s": 23.64,
+     "e": 24.22
+    },
+    {
+     "w": "di",
+     "s": 24.22,
+     "e": 24.36
+    },
+    {
+     "w": "cosa",
+     "s": 24.36,
+     "e": 24.56
+    },
+    {
+     "w": "hai",
+     "s": 24.56,
+     "e": 24.76
+    },
+    {
+     "w": "visto",
+     "s": 24.76,
+     "e": 25.08
+    }
+   ],
+   "match": 1.0,
+   "heard": "Non parlare di cosa hai visto."
+  }
+ ]
+}
