@@ -1,0 +1,426 @@
+{
+ "duration": 25.66,
+ "lines": [
+  {
+   "id": 1,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 0.0,
+   "end": 4.67,
+   "dur": 4.67,
+   "file": "out/voice/lines/01.wav",
+   "tokens": [
+    {
+     "w": "se",
+     "s": 0.0,
+     "e": 0.18
+    },
+    {
+     "w": "il",
+     "s": 0.18,
+     "e": 0.32
+    },
+    {
+     "w": "cane",
+     "s": 0.32,
+     "e": 0.52
+    },
+    {
+     "w": "del",
+     "s": 0.52,
+     "e": 0.7
+    },
+    {
+     "w": "vicino",
+     "s": 0.7,
+     "e": 1.2
+    },
+    {
+     "w": "smette",
+     "s": 1.2,
+     "e": 1.64
+    },
+    {
+     "w": "di",
+     "s": 1.64,
+     "e": 1.78
+    },
+    {
+     "w": "abbaiare",
+     "s": 1.78,
+     "e": 2.32
+    },
+    {
+     "w": "dopo",
+     "s": 2.32,
+     "e": 2.52
+    },
+    {
+     "w": "anni",
+     "s": 2.52,
+     "e": 2.98
+    },
+    {
+     "w": "non",
+     "s": 3.22,
+     "e": 3.56
+    },
+    {
+     "w": "andare",
+     "s": 3.56,
+     "e": 3.96
+    },
+    {
+     "w": "a",
+     "s": 3.96,
+     "e": 4.12
+    },
+    {
+     "w": "vedere",
+     "s": 4.12,
+     "e": 4.32
+    }
+   ],
+   "match": 1.0,
+   "heard": "Se il cane del vicino smette di abbaiare dopo anni, non andare a vedere."
+  },
+  {
+   "id": 2,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 4.87,
+   "end": 8.52,
+   "dur": 3.65,
+   "file": "out/voice/lines/02.wav",
+   "tokens": [
+    {
+     "w": "per",
+     "s": 4.87,
+     "e": 5.03
+    },
+    {
+     "w": "sei",
+     "s": 5.03,
+     "e": 5.31
+    },
+    {
+     "w": "anni",
+     "s": 5.31,
+     "e": 5.69
+    },
+    {
+     "w": "ha",
+     "s": 5.69,
+     "e": 5.99
+    },
+    {
+     "w": "abbaiato",
+     "s": 5.99,
+     "e": 6.59
+    },
+    {
+     "w": "a",
+     "s": 6.59,
+     "e": 6.71
+    },
+    {
+     "w": "ogni",
+     "s": 6.71,
+     "e": 6.97
+    },
+    {
+     "w": "passo",
+     "s": 6.97,
+     "e": 7.39
+    },
+    {
+     "w": "sul",
+     "s": 7.39,
+     "e": 7.65
+    },
+    {
+     "w": "pianerottolo",
+     "s": 7.65,
+     "e": 8.37
+    }
+   ],
+   "match": 1.0,
+   "heard": "Per sei anni ha abbaiato a ogni passo sul pianerottolo."
+  },
+  {
+   "id": 3,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 8.72,
+   "end": 12.09,
+   "dur": 3.37,
+   "file": "out/voice/lines/03.wav",
+   "tokens": [
+    {
+     "w": "da",
+     "s": 8.72,
+     "e": 8.88
+    },
+    {
+     "w": "tre",
+     "s": 8.88,
+     "e": 9.1
+    },
+    {
+     "w": "giorni",
+     "s": 9.1,
+     "e": 9.66
+    },
+    {
+     "w": "silenzio",
+     "s": 9.78,
+     "e": 10.5
+    },
+    {
+     "w": "il",
+     "s": 10.88,
+     "e": 11.16
+    },
+    {
+     "w": "vicino",
+     "s": 11.16,
+     "e": 11.58
+    },
+    {
+     "w": "non",
+     "s": 11.58,
+     "e": 11.76
+    },
+    {
+     "w": "si",
+     "s": 11.76,
+     "e": 11.96
+    },
+    {
+     "w": "vede",
+     "s": 11.96,
+     "e": 12.28
+    }
+   ],
+   "match": 1.0,
+   "heard": "Da tre giorni, silenzio. Il vicino non si vede."
+  },
+  {
+   "id": 4,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 12.29,
+   "end": 16.22,
+   "dur": 3.93,
+   "file": "out/voice/lines/04.wav",
+   "tokens": [
+    {
+     "w": "sulla",
+     "s": 12.29,
+     "e": 12.57
+    },
+    {
+     "w": "porta",
+     "s": 12.57,
+     "e": 13.03
+    },
+    {
+     "w": "la",
+     "s": 13.33,
+     "e": 13.43
+    },
+    {
+     "w": "ciotola",
+     "s": 13.43,
+     "e": 13.83
+    },
+    {
+     "w": "e",
+     "s": 13.83,
+     "e": 13.91
+    },
+    {
+     "w": "piena",
+     "s": 13.91,
+     "e": 14.49
+    },
+    {
+     "w": "e",
+     "s": 14.49,
+     "e": 14.75
+    },
+    {
+     "w": "il",
+     "s": 14.75,
+     "e": 14.85
+    },
+    {
+     "w": "guinzaglio",
+     "s": 14.85,
+     "e": 15.49
+    },
+    {
+     "w": "e",
+     "s": 15.49,
+     "e": 15.59
+    },
+    {
+     "w": "appeso",
+     "s": 15.59,
+     "e": 16.03
+    }
+   ],
+   "match": 1.0,
+   "heard": "Sulla porta, la ciotola è piena e il guinzaglio è appeso."
+  },
+  {
+   "id": 5,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 16.42,
+   "end": 20.21,
+   "dur": 3.79,
+   "file": "out/voice/lines/05.wav",
+   "tokens": [
+    {
+     "w": "ieri",
+     "s": 16.42,
+     "e": 16.64
+    },
+    {
+     "w": "notte",
+     "s": 16.64,
+     "e": 17.16
+    },
+    {
+     "w": "pero",
+     "s": 17.16,
+     "e": 17.42
+    },
+    {
+     "w": "hai",
+     "s": 17.74,
+     "e": 17.86
+    },
+    {
+     "w": "sentito",
+     "s": 17.86,
+     "e": 18.32
+    },
+    {
+     "w": "grattare",
+     "s": 18.32,
+     "e": 19.0
+    },
+    {
+     "w": "alla",
+     "s": 19.22,
+     "e": 19.7
+    },
+    {
+     "w": "tua",
+     "s": 19.7,
+     "e": 19.82
+    },
+    {
+     "w": "porta",
+     "s": 19.82,
+     "e": 20.12
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ieri notte, però, hai sentito grattare. Alla tua porta."
+  },
+  {
+   "id": 6,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 20.41,
+   "end": 23.7,
+   "dur": 3.29,
+   "file": "out/voice/lines/06.wav",
+   "tokens": [
+    {
+     "w": "il",
+     "s": 20.41,
+     "e": 20.57
+    },
+    {
+     "w": "cane",
+     "s": 20.57,
+     "e": 20.81
+    },
+    {
+     "w": "non",
+     "s": 20.81,
+     "e": 21.01
+    },
+    {
+     "w": "c",
+     "s": 21.01,
+     "e": 21.23
+    },
+    {
+     "w": "entra",
+     "s": 21.23,
+     "e": 21.65
+    },
+    {
+     "w": "lui",
+     "s": 21.95,
+     "e": 22.11
+    },
+    {
+     "w": "abbaiava",
+     "s": 22.11,
+     "e": 22.71
+    },
+    {
+     "w": "per",
+     "s": 22.71,
+     "e": 22.87
+    },
+    {
+     "w": "avvisarti",
+     "s": 22.87,
+     "e": 23.53
+    }
+   ],
+   "match": 1.0,
+   "heard": "Il cane non c 'entra, lui abbaiava per avvisarti."
+  },
+  {
+   "id": 7,
+   "who": "N",
+   "model": "eleven_v4",
+   "start": 23.9,
+   "end": 25.61,
+   "dur": 1.71,
+   "file": "out/voice/lines/07.wav",
+   "tokens": [
+    {
+     "w": "ora",
+     "s": 23.9,
+     "e": 24.14
+    },
+    {
+     "w": "nessuno",
+     "s": 24.14,
+     "e": 24.84
+    },
+    {
+     "w": "ti",
+     "s": 24.84,
+     "e": 24.98
+    },
+    {
+     "w": "avvisa",
+     "s": 24.98,
+     "e": 25.44
+    }
+   ],
+   "match": 1.0,
+   "heard": "Ora nessuno ti avvisa."
+  }
+ ]
+}
